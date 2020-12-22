@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Središče za pomoč za Dynamics 365 Customer Insights
+  author: m-hartmann
+  description: Poiščite ustrezne članke in začnite z vsebino s pomočjo.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: sl-SI
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4407000"
+title: Dokumentacija za Dynamics 365 Customer Insights
+summary: Poiščite koristne vire za začetek ter se seznanite s funkcijami in zmožnostmi storitve Customer Insights.
+landingContent:
+- title: Predstavitev storitve Customer Insights
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Pregled storitve Customer Insights
+      url: overview.md
+    - text: Načrti izdaje
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Dostop do okolja
+      url: https://home.ci.ai.dynamics.com/
+- title: Začetek uporabe vpogledov v občinstvo
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Prijava za preskusno različico
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Novosti
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Dokumentacija vpogledov v občinstvo
+      url: audience-insights/index.yml
+- title: Stopite v stik
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Pridružite se skupnosti Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Delite zamisli
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Prijavi težavo
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Vadnice za vpoglede v občinstvo
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Ustvarite novo okolje
+      url: audience-insights/home.md
+    - text: Ustvarite poenoten profil stranke
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Delo z aplikacijo
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Izvoz podatkov o vpogledih v občinstvo
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Nastavitev ciljev za izvoz
+      url: audience-insights/export-destinations.md
+    - text: Kartice strank v aplikacijah Dynamics 365
+      url: audience-insights/customer-card-add-in.md
+    - text: Povezovalnik Power BI
+      url: audience-insights/export-power-bi.md
+- title: Skrbništvo vpogledov v občinstvo
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfiguracija sistema
+      url: audience-insights/system.md
+    - text: Določanje uporabniških dovoljenj
+      url: audience-insights/permissions.md
+    - text: Upravljanje več okolij
+      url: audience-insights/manage-environments.md
+- title: O vpogledih v interakcijo (predogled)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Pregled zmogljivosti
+      url: engagement-insights/overview.md
+    - text: Pogoji in koncepti
+      url: engagement-insights/glossary.md
+    - text: Uvod
+      url: engagement-insights/get-started.md
+- title: Poročila za vpoglede v interakcijo (predogled)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ogled poročil
+      url: engagement-insights/view-reports.md
+    - text: Ustvarjanje poročil po meri
+      url: engagement-insights/custom-reports.md
+    - text: Ogled poročila o poenotenih profilih
+      url: engagement-insights/profile-reports.md
+- title: Dogodki za vpoglede v interakcijo (predogled)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ustvarjanje izpopolnjenih dogodkov
+      url: engagement-insights/refined-events.md
+    - text: Izvoz dogodkov
+      url: engagement-insights/export-events.md
+    - text: Brisanje in izvoz osebnih podatkov
+      url: engagement-insights/delete-export-personal-data.md
