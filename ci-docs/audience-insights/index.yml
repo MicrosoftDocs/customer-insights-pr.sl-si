@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Zmogljivost vpogledov v občinstvo v storitvi Dynamics 365 Customer Insights
+summary: Zaužijte, poenotite in organizirajte podatke o strankah iz več virov. Ustvarite in upravljajte profile strank in segmentacijo v realnem času. Integrirajte podatke o strankah z drugimi sistemi, da bo mogoče ustreznejše ukrepanje.
+metadata:
+  title: Dokumentacija vpogledov v občinstvo
+  description: Središče za pomoč s ključnimi povezavami za vpoglede v občinstvo.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: sl-SI
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406983"
+landingContent:
+- title: O vpogledih v občinstvo
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Pregled izdelka
+      url: overview.md
+    - text: Nove in posodobljene funkcije
+      url: whats-new-audience-insights.md
+    - text: Spletno mesto skupnosti
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Vključitev virov podatkov
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Dodajanje virov podatkov
+      url: data-sources.md
+    - text: Postopno osveževanje
+      url: incremental-refresh-data-sources.md
+    - text: Razumevanje entitet
+      url: entities.md
+- title: Poenotenje podatkov
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Preslikava
+      url: map-entities.md
+    - text: Povezovanje
+      url: match-entities.md
+    - text: Spajanje
+      url: merge-entities.md
+- title: Natančnejša določitev profilov strank
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfiguriranje odnosov
+      url: relationships.md
+    - text: Seznam dejavnosti strank
+      url: activities.md
+    - text: Uporaba lastnih modelov strojnega učenja
+      url: custom-models.md
+- title: Izvoz podatkov o stranki
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Nastavitev ciljev za izvoz
+      url: export-destinations.md
+    - text: Kartice strank v aplikacijah Dynamics 365
+      url: customer-card-add-in.md
+    - text: Povezovalnik Power BI
+      url: export-power-bi.md
+- title: Upravljanje aplikacije
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Konfiguracija sistema
+      url: system.md
+    - text: Določanje uporabniških dovoljenj
+      url: permissions.md
+    - text: Upravljanje več okolij
+      url: manage-environments.md
