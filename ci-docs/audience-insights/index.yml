@@ -6,16 +6,16 @@ metadata:
   description: Središče za pomoč s ključnimi povezavami za vpoglede v občinstvo.
   ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
   ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
   ms.translationtype: HT
   ms.contentlocale: sl-SI
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4406983"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745741"
 landingContent:
 - title: O vpogledih v občinstvo
   linkLists:
@@ -27,36 +27,36 @@ landingContent:
       url: whats-new-audience-insights.md
     - text: Spletno mesto skupnosti
       url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Vključitev virov podatkov
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Dodajanje virov podatkov
-      url: data-sources.md
-    - text: Postopno osveževanje
-      url: incremental-refresh-data-sources.md
-    - text: Razumevanje entitet
-      url: entities.md
 - title: Poenotenje podatkov
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Preslikava
-      url: map-entities.md
-    - text: Povezovanje
-      url: match-entities.md
-    - text: Spajanje
-      url: merge-entities.md
-- title: Natančnejša določitev profilov strank
+    - text: Pregled virov podatkov
+      url: data-sources.md
+    - text: Pregled poenotenja
+      url: data-unification.md
+    - text: Razumevanje entitet
+      url: entities.md
+- title: Obogatitev in natančnejša določitev podatkov
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Obogatitev profilov strank
+      url: enrichment-hub.md
     - text: Konfiguriranje odnosov
       url: relationships.md
     - text: Seznam dejavnosti strank
       url: activities.md
-    - text: Uporaba lastnih modelov strojnega učenja
-      url: custom-models.md
+- title: Pridobi vpoglede
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Ustvari segmente
+      url: segments.md
+    - text: Ustvari ukrepe
+      url: measures.md
+    - text: Izpolni podatke s predvidevanji
+      url: predictions.md
 - title: Izvoz podatkov o stranki
   linkLists:
   - linkListType: how-to-guide
