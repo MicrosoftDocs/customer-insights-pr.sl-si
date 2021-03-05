@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643613"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269810"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube glede transakcij (predogled)
 
@@ -49,7 +49,7 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
    [!div class="mx-imgBorder"]
    ![Spremeni datum rojstva v datum](media/ecommerce-dob-date.PNG "Spremeni datum rojstva v datum")
 
-1. V polju »Ime« v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **StikiEPoslovanja**.
+1. V polju **Ime** v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **StikiEPoslovanja**
 
 1. Shranite vir podatkov.
 
@@ -66,7 +66,7 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
    - **PurchasedOn**: datum/čas
    - **TotalPrice**: valuta
    
-1. V polju »Ime« v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **NakupiEPoslovanja**.
+1. V desnem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **NakupiEPoslovanja**.
 
 1. Shranite vir podatkov.
 
@@ -84,7 +84,7 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
    - **RewardsPoints**: celo število
    - **CreatedOn**: datum/čas
 
-1. V polju »Ime« v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **zvesteStranke**.
+1. V desnem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **zvesteStranke**.
 
 1. Shranite vir podatkov.
 
@@ -166,7 +166,7 @@ Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje 
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Izberite časovno obdobje za predvidevanje modela in opredelitev izgube.":::
 
-1. Izberite **Zgodovina nakupov (obvezno)** in izberite **Dodajanje podatkov** za zgodovino naročnin.
+1. Za zgodovino nakupov izberite **Zgodovina nakupov (priporočeno)** in nato **Dodajanje podatkov**.
 
 1. Dodajte entiteto **NakupiEPoslovanja: EPoslovanje** in preslikajte polja iz elektronskega poslovanja v ustrezna polja, ki jih zahteva model.
 
@@ -204,3 +204,6 @@ Na podlagi entitete, ki jo je ustvaril model, lahko ustvarite nov segment.
 Zdaj imate segment, ki se dinamično posodablja, v katerem so prepoznane stranke z visokim tveganjem izgube za to naročniško dejavnost.
 
 Za več informacij glejte [Ustvarjanje in upravljanje segmentov](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

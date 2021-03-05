@@ -4,17 +4,17 @@ description: Uvozite podatke iz upravljanega jezera podatkov Common Data Service
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643418"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267834"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Povezovanje s podatki v upravljanem jezeru podatkov Common Data Service
 
@@ -34,7 +34,10 @@ Lokacija za shranjevanje podatkov, shranjenih v spletnih storitvah, kot je Azure
 
 3. Izberite **Vzpostavi povezavo z Common Data Service** in izberite **Naprej**.
 
-4. Vnesite **ime** za vir podatkov in izberite **Naprej**.
+4. Vnesite **ime** za vir podatkov in izberite **Naprej**. Smernice za poimenovanje: 
+   - Začnite s črko.
+   - Uporabljajte samo črke in številke. Posebni znaki in presledki niso dovoljeni.
+   - Uporabite od 3 do 64 znakov.
 
 5. Navedite **Naslov strežnika** za svojo organizacijo Common Data Service in izberite **Vpis**.
 
@@ -65,3 +68,6 @@ Izbor entitet uredite šele po ustvarjanju vira podatkov. Če bi bili na primer 
 3. Na seznamu izberite možnost **Uredi**.
 
 4. Izberite dodatne entitete z razpoložljivega seznama entitet in izberite **Shrani**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

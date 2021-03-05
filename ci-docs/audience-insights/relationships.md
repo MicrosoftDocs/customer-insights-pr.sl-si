@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406993"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269901"
 ---
 # <a name="relationships-between-entities"></a>Odnosi med entitetami
 
@@ -28,8 +28,8 @@ Med postopki ujemanja in spajanja so sistemski odnosi ustvarjeni v ozadju na osn
 > ![Ustvarjanje odnosa](media/relationships-entities-merge.png "Ustvarjanje odnosa")
 
 - **Odnos *CustomerToContact*** je bil ustvarjen med entiteto stranke in entiteto stika. Za entiteto stranke se uporabi polje ključa **Contact_contactId** za povezovanje s poljem ključa entitete stika **contactId**.
-- **Odnos _CustomerToAccount_** je bil ustvarjen med entiteto stranke in entiteto kupca. Za entiteto stranke se uporabi polje ključa **Account_accountId** za povezovanje s poljem ključa entitete kupca **accountId**.
-- **Odnos _CustomerToWebAccount_** je bil ustvarjen med entiteto stranke in entiteto spletnega kupca. Za entiteto stranke se uporabi polje ključa **WebAccount_webaccountId** za povezovanje s poljem ključa entitete spletnega kupca **webaccountId**.
+- **Odnos *CustomerToAccount*** je bil ustvarjen med entiteto stranke in entiteto kupca. Za entiteto stranke se uporabi polje ključa **Account_accountId** za povezovanje s poljem ključa entitete kupca **accountId**.
+- **Odnos *CustomerToWebAccount*** je bil ustvarjen med entiteto stranke in entiteto spletnega kupca. Za entiteto stranke se uporabi polje ključa **WebAccount_webaccountId** za povezovanje s poljem ključa entitete spletnega kupca **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Ustvarjanje odnosa
 
@@ -69,3 +69,6 @@ Na strani **Odnosi** določite odnose po meri. Vsak odnos je sestavljen iz izvor
 ## <a name="next-step"></a>Naslednji korak
 
 Sistemski odnosi in odnosi po meri se uporabljajo za ustvarjanje segmentov na podlagi več virov podatkov, ki niso več ločeni. Če želite več informacij, glejte [Segmenti](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

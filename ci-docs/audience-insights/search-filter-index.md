@@ -1,7 +1,7 @@
 ---
 title: Iskanje in filtriranje profilov strank
 description: Hitro poiščite informacije o poenotenih profilih strank in filtrirajte za določene atribute.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406994"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270086"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili strank: Kazalo za iskanje in filtre
 
@@ -28,14 +28,6 @@ Rezultat poenotenja podatkov strank je vnos profila stranke, ki zagotavlja poeno
 Če kot skrbnik prvikrat določate atribute, po katerih je mogoče iskati, morate najprej določiti indeksirana polja. Predlagamo, da izberete vse atribute, po katerih lahko uporabniki iščejo in filtrirajo stranke na strani **Stranke**. Določite lahko samo atribute, ki obstajajo v entiteti profila stranke, ki ste jo ustvarili med postopkom poenotenja.
 
 1. Odprite stran **Stranke** in izberite **Kazalo za iskanje in filtre**.
-
-> [!NOTE]
-> Ustvarimo privzeto konfiguracijo kazala za iskanje v razpoložljivih atributih v entiteti stranke iz naslednjih semantičnih vrst, kot so opredeljene na strani s preslikavo.
-> - Ime, priimek, drugo ime, polno ime osebe
-> - Ime organizacije
-> - E-poštni naslov
-> - Telefon
-> - Informacije o mestu
 
 2. Izberite **+ Dodaj**, da določite indeksirana polja.
 
@@ -65,3 +57,10 @@ Meni **Filter** na strani **Stranke** lahko vključuje različno število ravni 
 2. Če želite uporabiti spremembe, izberite **Shrani**.
 
 3. Izberite **Zaženi**, ko ste pripravljeni na uveljavljanje nastavitev.
+
+## <a name="next-steps"></a>Naslednji koraki
+
+Če želite poiskati profile strank, pojdite na stran **Uporabniki**, ali pa za prikaz podmnožice vseh profilov strank uporabite indeksirana polja.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

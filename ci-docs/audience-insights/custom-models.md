@@ -4,16 +4,16 @@ description: Uporabite modele po meri iz rešitve za strojno učenje Azure v apl
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668923"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267254"
 ---
 # <a name="custom-machine-learning-models"></a>Modeli strojnega učenja po meri
 
@@ -46,15 +46,15 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 
 1. Izberite spletno storitev studia za strojno učenje (klasični način) ali prodajni lijak za strojno učenje Azure na spustnem seznamu **Spletna storitev, ki vsebuje vaš model**. Nato izberite **Naprej**.
    - Preberite več o [objavi spletne storitve studia za strojno učenje (klasični način)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service).
-   - Preberite več o [objavi prodajnega lijaka v storitvi Strojno učenje Azure z uporabo oblikovalnika](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ali [SDK-jem](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Vaš prodajni lijak mora biti objavljen v okviru [končne točke prodajnega lijaka](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Preberite več o [objavi prodajnega lijaka v storitvi Strojno učenje Azure z uporabo oblikovalnika](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ali [SDK-jem](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš prodajni lijak mora biti objavljen v okviru [končne točke prodajnega lijaka](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za vsak **vnos spletne storitve** izberite ujemajočo se **entiteto** iz vpogledov v občinstvo in izberite **Naprej**.
+   > [!NOTE]
+   > Potek dela po meri modela uporablja hevristiko za preslikavo vnosnih polj spletnih storitev v atribute entitete na podlagi imena in podatkovne vrste polja. Napaka bo prikazana, če polja spletne storitve ni mogoče preslikati v entiteto.
 
    > [!div class="mx-imgBorder"]
    > ![Konfiguriranje poteka dela](media/intelligence-screen2-updated.png "Konfiguriranje poteka dela")
-
+   
 1. Pri koraku **Parametri izhodnih podatkov modela** nastavite naslednje lastnosti:
    - Studio za strojno učenje (klasični način)
       1. Vnesite izhodno **ime entitete**, v katero želite, da se stekajo izhodni rezultati spletne storitve.
@@ -112,3 +112,6 @@ Z vsakim načrtovanim osveževanjem se samodejno zažene tudi vaš potek dela. P
 1. Izberite možnost **Izbriši** in nato potrdite izbris.
 
 Vaš potek dela bo izbrisan. [Entiteta](entities.md), ki je bila ustvarjena, ko ste ustvarili potek dela, se ohrani in si jo lahko ogledate na strani **Entitete**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

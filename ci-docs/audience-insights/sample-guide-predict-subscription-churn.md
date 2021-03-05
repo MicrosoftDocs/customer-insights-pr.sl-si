@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4654000"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269867"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube naročnin (predogled)
 
@@ -46,10 +46,9 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
    - **DateOfBirth**: datum
    - **CreatedOn**: datum/čas/časovni pas
 
-   [!div class="mx-imgBorder"]
-   ![Spremeni datum rojstva v datum](media/ecommerce-dob-date.PNG "Spremeni datum rojstva v datum")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Pretvorite datum rojstva v datum.":::
 
-1. V polju »Ime« v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **StikiEPoslovanja**.
+1. V polju **Ime** v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **StikiEPoslovanja**
 
 1. Shranite vir podatkov.
 
@@ -67,7 +66,7 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
    - **RewardsPoints**: celo število
    - **CreatedOn**: datum/čas
 
-1. V polju »Ime« v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **zvesteStranke**.
+1. V desnem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **zvesteStranke**.
 
 1. Shranite vir podatkov.
 
@@ -90,7 +89,7 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
    - **Is_auto_renew**: True/False
    - **RecurringFrequencyInMonths**: celo število
 
-1. V polju »Ime« v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **ZgodovinaNaročnin**.
+1. V desnem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **SubscriptionHistory**.
 
 1. Shranite vir podatkov.
 
@@ -230,3 +229,6 @@ Na podlagi entitete, ki jo je ustvaril model, lahko ustvarite nov segment.
 Zdaj imate segment, ki se dinamično posodablja, v katerem so prepoznane stranke z visokim tveganjem izgube za to naročniško dejavnost.
 
 Za več informacij glejte [Ustvarjanje in upravljanje segmentov](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

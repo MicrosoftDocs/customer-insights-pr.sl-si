@@ -1,7 +1,7 @@
 ---
 title: Domača stran pri vpogledih v občinstvo
 description: Začnite raziskovati aplikacijo na domači strani.
-ms.date: 09/30/2020
+ms.date: 01/07/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: bd16966eabb126d9c9945ededc53273df02c3369
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 7cc767f5d80b213a4c1bb5b2e8062bd44c15279b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406977"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477061"
 ---
 # <a name="create-a-new-environment"></a>Ustvarite novo okolje
 
@@ -29,6 +29,8 @@ Za preskusno različico se lahko prijavite na [stran za prijavo za preskusno raz
 
 1. Navedite službeni ali šolski e-poštni naslov, povejte nam več o sebi in izberite **Naprej**.
 
+   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Pogovorno okno za prijavo za preskusni primerek":::
+
 1. Določite **ime** za novo okolje. 
 
 1. Izberite vrsto preskusne različice.
@@ -41,34 +43,34 @@ Za preskusno različico se lahko prijavite na [stran za prijavo za preskusno raz
 
 Ko je okolje ustvarjeno, boste videli **predstavitveno** okolje, ki vam omogoča raziskovanje aplikacije z izmišljenimi podatki. Vzorčne podatke lahko spremenite tako, da ustrezajo vaši panogi. Izberite ikono **Nastavitve** v glavi in izberite **Nastavitve predstavitve**. Poleg tega lahko spremenite vizualno temo. 
 
-[Preklopite na okolje](#change-between-environments), ki ste ga ustvarili med postopkom prijave, in delajte z lastnimi podatki.
+[Preklopite na okolje](#switch-environments), ki ste ga ustvarili med postopkom prijave, in delajte z lastnimi podatki.
 
 ## <a name="create-a-new-production-or-sandbox-environment"></a>Ustvarite novo produkcijsko ali preizkusno okolje
 
-V svojem okolju v glavi izberite ikono **Nastavitve** in izberite **Novo okolje**.
+V svojem okolju v glavi aplikacije izberite izbirnik za **Okolja** in izberite možnost **Novo**.
 
-Sledite korakom, kot da [ustvarjate poskusno okolje](#create-a-trial-environment). Če izberete **Napredne nastavitve**, dobite dodatno možnost za shranjevanje podatkov v svoj račun Azure Data Lake. Navedite ime računa in ključ računa, da vzpostavite povezavo z vašim računom Azure Data Lake. Podatki so privzeto shranjeni v jezeru podatkov, ki ga upravlja aplikacija Customer Insights.
+Sledite korakom, kot da [ustvarjate poskusno okolje](#create-a-trial-environment). Podatki so privzeto shranjeni v jezeru podatkov, ki ga upravlja aplikacija Customer Insights. Če izberete **Napredne nastavitve**, dobite dodatno možnost za shranjevanje podatkov v svoj račun Azure Data Lake. Navedite ime računa in ključ računa, da vzpostavite povezavo z vašim računom Azure Data Lake. 
 
 > [!IMPORTANT]
 > Če shranite podatke v storitev Azure Data Lake Storage, se strinjate, da bodo podatki preneseni na ustrezno geografsko lokacijo za ta račun za shrambo Azure in tam shranjeni. Ta lokacija se lahko razlikuje od lokacije, kjer so shranjeni podatki v storitvi Dynamics 365 Customer Insights. [Več o tem preberite v Microsoftovem središču zaupanja.](https://www.microsoft.com/trust-center)
 
 ## <a name="explore-the-home-page"></a>Raziskujte domačo stran
 
-[Do okolja Customer Insights lahko dostopate](https://home.ci.ai.dynamics.com/) prek naslednjega URL-ja: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
-**Domača stran** prikazuje pregled vaše baze strank in ključne meritve za sledenje zdravju vašega podjetja.
+Do [vpogledov v občinstvo iz storitve Dynamics 365 Customer Insights lahko dostopate](https://home.ci.ai.dynamics.com/) na naslednjem URL-ju: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+Stran **Osnovno** prikazuje pregled segmentov, ukrepov in podatkov o obogatitvi (če so konfigurirani) po koncu faz [preslikave](map-entities.md), [ujemanja](match-entities.md) in [združevanja](merge-entities.md).
 
 > [!div class="mx-imgBorder"] 
 > ![Vpogledi na domači strani](media/home-page-insights.png "Vpogledi na domači strani")
 
-V razdelku **Nedavni segmenti** vidite skupine strank na podlagi demografskih, vedenjskih ali transakcijskih atributov, ki ste jih določili. [Ustvarjanje segmentov](segments.md) vam pomaga bolje usmeriti svoje poslovne dejavnosti.
+V razdelku **Nedavni segmenti** vidite skupine strank na podlagi demografskih, vedenjskih ali transakcijskih atributov, ki ste jih določili. [Ustvarjanje segmentov](segments.md) vam pomaga razvrstiti bazo strank in bolje usmeriti poslovna opravila.
 
-**Nedavne meritve** prikazujejo ploščice z [meritvami](measures.md). Ukrepi so ključni kazalnik učinkovitosti (KPI), ki ste jih določili. Na primer, povprečna verjetnost izgube strank ali povprečna spletna poraba na stranko.
+**Najnovejši ukrepi** prikazujejo ploščice s [ključnimi kazalniki uspešnosti (KPI-ji)](measures.md), ki ste jih določili. Na primer, povprečna verjetnost za izgubo stranki ali povprečna spletna poraba na stranko.
 
-V razdelku **Nedavne obogatitve** so navedeni rezultati obogatitve, ki so se pred kratkim zaključili. Izboljšave dodajajo podatke o vaši bazi strank. Podatke dodajo tako, da na primer preučijo katere vsebine in blagovne znamke zanimajo stranko. Te podatke je mogoče odkleniti s pomočjo zmogljivosti za [obogatitev](enrichment-microsoft-graph.md), ko dokončate faze [preslikave](map-entities.md), [ujemanja](match-entities.md) in [združevanja](merge-entities.md).
+V razdelku **Nedavne obogatitve** so navedeni rezultati obogatitve, ki so se pred kratkim zaključili. [Obogatitve](enrichment-hub.md) dodajajo podatke o vaši bazi strank. Podatke dodajo tako, da na primer preučijo katere vsebine in blagovne znamke zanimajo stranko.
 
-## <a name="change-between-environments"></a>Preklop med okolji
+## <a name="switch-environments"></a>Zamenjava okolja
 
-Ko nastavite in konfigurirate [vire podatkov](data-sources.md), boste želeli preklopiti iz predstavitvenega okolja v okolje v živo. Uporaba produkcijskega okolja vam omogoča, da delate z lastnimi podatki o strankah. V zgornjem desnem kotu strani izberite kontrolnik **Okolje**, če želite spremeniti okolje.
+V zgornjem desnem kotu strani izberite kontrolnik **Okolje**, če želite spremeniti okolje.
 
 > [!div class="mx-imgBorder"] 
 > ![Zamenjava okolja](media/home-page-environment-switcher.png "Zamenjava okolja")
@@ -78,3 +80,6 @@ Skrbniki lahko ustvarjajo in upravljajo [več okolij](manage-environments.md). V
 ## <a name="next-step"></a>Naslednji korak
 
 Če želite na začetni strani prikazati svoje vpoglede, morate najprej [dodati vire podatkov](data-sources.md) in [poenotiti](data-unification.md) podatke za oblikovanje profilov strank.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

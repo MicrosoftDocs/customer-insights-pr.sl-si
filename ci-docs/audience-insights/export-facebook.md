@@ -5,16 +5,16 @@ ms.date: 06/05/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8260e3b5e529f3d54678d9d6e11aebb2795e27fd
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643703"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269994"
 ---
 # <a name="connector-for-facebook-ads-manager-preview"></a>Povezovalnik za Upravitelja oglasov za Facebook (predogled)
 
@@ -62,7 +62,16 @@ Izvozite segmente poenotenih profilov strank v Upravitelja oglasov za Facebook z
 
 Lahko [izvozite podatke na zahtevo](export-destinations.md). Izvoz se bo zagnal tudi z vsakim [načrtovanim osveževanjem](system.md#schedule-tab).
 
+## <a name="known-limitations"></a>Znane omejitve
+
+- Do 10 milijonov profilov strank na posamezen izvoz v upravitelja oglasov za Facebook 
+- Izvoz v upravitelja oglasov za Facebook je omejen na segmente
+- Izvoz segmentov s skupno 10 milijonom profilov lahko traja do 90 minut
+
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 
 Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v Upravitelja oglasov za Facebook, dovoljujete prenos podatkov izven meje zagotavljanja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da Upravitelj oglasov za Facebook izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš skrbnik za Dynamics 365 Customer Insights lahko kadar koli odstrani ta cilj izvoza in s tem prekine uporabljati to funkcijo.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

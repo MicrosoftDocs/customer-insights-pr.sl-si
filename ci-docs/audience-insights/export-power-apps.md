@@ -1,20 +1,20 @@
 ---
 title: Povezovalnik Power Apps
 description: Povezava s storitvama Power Apps in Power Automate.
-ms.date: 08/21/2020
+ms.date: 01/19/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406949"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268936"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Povezovalnik storitve Microsoft Power Apps (predogled)
 
@@ -31,7 +31,7 @@ Oglejte si dokumentacijo za Power Apps, če želite izvedeti več o [dodajanju p
 Ko dodate storitev Customer Insights kot podatkovno povezavo, lahko v storitvi Power Apps izberete naslednje entitete:
 
 - Stranka: uporaba podatkov iz [poenotenega profila stranke](customer-profiles.md).
-- Poenotena dejavnost stranke: prikaz [časovnice dejavnosti](activities.md) v aplikaciji.
+- UnifiedActivity: prikaz [časovnice dejavnosti](activities.md) v aplikaciji
 
 ## <a name="limitations"></a>Omejitve
 
@@ -72,3 +72,6 @@ Profile strank na primer dodate v [kontrolnik galerije](https://docs.microsoft.c
 1. Če želite prikazati poenoteno časovnico za stranko, dodajte element galerije in lastnost »Elementi«: **('UnifiedActivity', CustomerId = {Customer_Id})**
 
     Primer: Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Konfiguracija sistema pri vpogledih v občinstvo
 description: Preberite več o sistemskih nastavitvah pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406991"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267360"
 ---
 # <a name="system-configuration"></a>Konfiguracija sistema
 
-Stran **Sistem** vključuje štiri zavihke: **Stanje**, **Razpored**, **Vizitka** in **Splošno**.
+Stran **Sistem** vključuje naslednje zavihke:
+- [Stanje](#status-tab)
+- [Urnik](#schedule-tab)
+- [Uporaba API-ja](#api-usage-tab)
+- [Vizitka](#about-tab)
+- [Splošno](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Stran sistema](media/system-tabs.png "Stran sistema")
 
 ## <a name="status-tab"></a>Zavihek stanja
 
-**Zavihek stanja** omogoča spremljanje napredka uvoza podatkov, izvozov podatkov in več pomembnih procesov izdelkov. Preglejte informacije na tem zavihku, da zagotovite popolnost aktivnih procesov.
+**Zavihek Stanje** omogoča sledenje napredku uvoza podatkov, izvoza podatkov in številnih drugih pomembnih procesih izdelkov. Preglejte informacije na tem zavihku, da zagotovite popolnost aktivnih procesov.
 
-Ta zavihek vključuje tabele stanja za **Vire podatkov**, **Sistemske procese** in **Pripravo podatkov**. Vsaka tabela spremlja **Ime** opravila in njegove ustrezne entitete, **Stanje** njegovega zadnjega izvajanja in datum **Zadnje posodobitve**.
+Ta zavihek vključuje tabele s podatki o stanju in obdelavi za različne procese. Vsaka tabela spremlja **Ime** opravila in njegove ustrezne entitete, **Stanje** njegovega zadnjega izvajanja in datum **Zadnje posodobitve**.
 
 Oglejte si podrobnosti o zadnjih nekaj izvedbah opravila tako, da izberete njegovo ime.
 
@@ -40,7 +45,7 @@ Na voljo je šest vrst stanja za opravila. Na straneh *Ujemanje*, *Spajanje*, *V
 - **Preskočeno:** opravilo je bilo preskočeno. Eden ali več nadaljnjih postopkov, od katerih je odvisno opravilo, ne uspe ali ste jih preskočili.
 - **Neuspešno:** obdelava opravila ni uspela.
 - **Preklicano:** uporabnik je obdelavo preklical, še preden se je končala.
-- **V čakalni vrsti:** obdelava je v čakalni vrsti in se bo začela, ko bodo dokončana vsa nadaljnja opravila. Če želite več informacij, si oglejte [pravilnike o osveževanju](#refresh-policies).
+- **V čakalni vrsti:** obdelovanje je v čakalni vrsti in se bo začelo, ko bodo dokončana vsa predhodna opravila. Če želite več informacij, si oglejte [pravilnike o osveževanju](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Pravilniki osveževanja
 
@@ -89,4 +94,17 @@ Izberite **Shrani**, da potrdite izbiro.
 
 ## <a name="api-usage-tab"></a>Zavihek uporabe API-ja
 
-Poiščite podrobnosti o uporabi API-ja v realnem času in si oglejte, kateri dogodki so se zgodili v določenem časovnem obdobju. Za več informacij glejte [Uvoz podatkov v realnem času](real-time-data-ingestion.md).
+Poiščite podrobnosti sprotne uporabe API-ja in si oglejte dogodke, ki so se zgodili v danem časovnem okvirju. V spustnem meniju **Izberi časovni okvir** izberete časovni okvir. 
+
+Razdelek **Uporaba API-ja** vsebuje tri razdelke: 
+- **Klici API** – grafikon, ki prikazuje skupno število klicev API-ja v izbranem časovnem okviru.
+
+- **Prenos podatkov** – grafikon, ki prikazuje količino podatkov, ki so bili preneseni prek API-ja v izbranem časovnem okviru.
+
+-  **Postopki** – tabela z vrsticami za vsak razpoložljiv postopek API-ja in podrobnosti o uporabi postopkov. Izberete lahko ime postopka, da obiščete [sklice API-ja](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Postopki, ki uporabljajo [uvoz podatkov v realnem času](real-time-data-ingestion.md), vsebujejo gumb s simbolom daljnogleda za ogled sprotne uporabe API-ja. Izberite gumb, da odprete stransko podokno s podrobnostmi o uporabi za sprotno uporabo API-ja v trenutnem okolju.   
+   V podoknu **Sprotna uporaba API-ja** uporabite polje **Združi po**, da izberete, kako najbolje predstaviti svoje interakcije v realnem času. Podatke lahko združite po metodi API-ja, določenem imenu entitete (uvožena entiteta), avtorju ustvarjanja (vir dogodka), rezultatu (uspeh ali neuspeh) ali kodah napak. Podatki so na voljo kot grafikon zgodovine in kot tabela.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

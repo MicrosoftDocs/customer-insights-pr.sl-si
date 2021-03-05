@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689195"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270300"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Uvoz podatkov v realnem času (predogled)
 
@@ -83,6 +83,7 @@ Podrobnosti tega API-ja, vključno s parametri in odzivi, najdete v razdelku **E
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Razumevanje uporabe v realnem času s telemetrijo
 
-Pridobite pregled obsega zahtev za API v realnem času in informacije o težavah, s katerimi se sistem lahko srečuje. [Dostopate lahko do telemetrije v realnem času](system.md#api-usage-tab) tako, da se pomaknete v razdelek **Skrbnik** > **Sistem** > **Uporaba API-ja**. V tabeli **Postopki** vrstice za postopke API, ki uporabljajo metode v realnem času, vsebujejo gumb za ogled uporabe API-ja v realnem času. Gumb je vizualiziran s simbolom daljnogleda. Izberite gumb, da odprete stransko podokno s podrobnostmi o uporabi za sprotno uporabo API-ja v trenutnem okolju.
+Pridobite pregled obsega zahtev za API v realnem času in informacije o težavah, s katerimi se sistem lahko srečuje. Lahko [dostopate do telemetrije v realnem času](system.md#api-usage-tab). 
 
-Uporabite izbirnik **Združi po**, da izberete, kako najbolje predstaviti interakcije v realnem času na časovnici z obsegom od zadnjih 24 ur do zadnjih 30 dni. Podatke lahko združite po metodi API-ja, določenem imenu entitete (uvožena entiteta), avtorju ustvarjanja (vir dogodka), rezultatu (uspeh ali neuspeh) ali kodah napak. Podatki so na voljo kot grafikon zgodovine in kot tabela.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

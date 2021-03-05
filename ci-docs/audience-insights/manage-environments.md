@@ -1,20 +1,20 @@
 ---
 title: Ustvarjanje in upravljanje okolij
 description: Naučite se, kako se prijaviti za storitev in kako upravljati okolja.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644153"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270132"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
 
@@ -46,9 +46,9 @@ Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfi
 
 Če želite ustvariti okolje:
 
-1. Izberite simbol za **Nastavitve** v glavi aplikacije.
+1. V glavi aplikacije izberite izbirnik **Okolje**.
 
-1. Izberite **Novo okolje**.
+1. Izberite **Novo**.
 
    > [!div class="mx-imgBorder"]
    > ![Nastavitve okolja](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfi
 
    - Za možnost Azure Data Lake Storage Gen2 lahko izbirate med možnostjo, ki temelji na viru, in možnostjo preverjanja pristnosti, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Imena **Vsebnik** ni mogoče spremeniti in bo naslednji: customerinsights.
    
-   - Če želite uporabiti [predvidevanja](predictions.md), vnesite URL primerka za Common Data Service v polje **Naslov strežnika** pod možnostjo **Uporaba napovedi**.
+   - Če želite uporabiti [predvidevanja](predictions.md) ali konfigurirati skupno rabo podatkov z aplikacijami in rešitvami, ki temeljijo na storitvi Microsoft Dataverse, navedite URL okolja Microsoft Dataverse pod razdelkom **Konfigurirajte skupno rabo podatkov z Microsoft Dataverse in omogočite dodatne zmogljivosti**. Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Microsoft Dataverse Managed Data Lake.
+
+     > [!NOTE]
+     > - Skupna raba podatkov s storitvijo Microsoft Dataverse Managed Data Lake trenutno ni podprta, če vse podatke shranjujete v shrambi Azure Data Lake Storage.
+     > - [Predvidevanje manjkajočih vrednosti v entiteti](predictions.md) trenutno ni podprto, če je omogočena skupna rabo podatkov s storitvijo Microsoft Dataverse Managed Data Lake.
+
+     > [!div class="mx-imgBorder"]
+     > ![Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Ko zaženete postopke, na primer uvoz podatkov ali ustvarjanje segmenta, bodo v zgoraj navedenem računu za shranjevanje ustvarjene ustrezne mape. Podatkovne datoteke in datoteke model.json bodo ustvarjene in dodane v zadevne podmape na podlagi procesa, ki ga izvajate.
 
@@ -86,7 +93,7 @@ Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfi
 Kopirane so naslednje konfiguracijske nastavitve:
 
 - Konfiguracije funkcije
-- Vneseni/uvoženi viri podatkov
+- Vključeni/uvoženi viri podatkov
 - Konfiguracija poenotenja podatkov (preslikava, ujemanje, spajanje)
 - Segmenti
 - Mere
@@ -120,11 +127,11 @@ Ko je poenotenje podatkov dokončano, odprite možnost **Mere** in **Segmenti**,
 
 Uredite lahko določene podatke obstoječih okolij.
 
-1. Odprite **Skrbnik** > **Sistem** > **O**.
+1.  V glavi aplikacije izberite izbirnik **Okolje**.
 
-2. Izberite **Uredi**.
+2.  Izberite ikono za **urejanje**.
 
-3. Lahko posodobite možnost **Prikazno ime** okolja, vendar ne morete spremeniti možnosti **Območje** ali **Vrsta**.
+3. V polju **Uredi okolje** lahko posodobite **prikazno ime** okolja, vendar pa ne morete spremeniti **regije** ali **tipa**.
 
 4. Če je okolje konfigurirano za shranjevanje podatkov v shrambi Azure Data Lake Storage Gen2, lahko posodobite **ključ računa**. Vendar pa ne morete spremeniti možnosti **Ime računa** ali imena razdelka **Vsebnik**.
 
@@ -132,19 +139,27 @@ Uredite lahko določene podatke obstoječih okolij.
 
 ## <a name="reset-an-existing-environment"></a>Ponastavitev obstoječega okolja
 
-Če želite izbrisati vse konfiguracije in odstraniti uvožene podatke, lahko okolje ponastavite v prazno stanje.
+Če želite izbrisati vse konfiguracije in odstraniti vključene podatke, lahko kot administrator okolje ponastavite v prazno stanje.
 
-1.  Odprite **Skrbnik** > **Sistem** > **O**.
+1.  V glavi aplikacije izberite izbirnik **Okolje**. 
 
-2.  Izberite **Ponastavi**. 
+2.  Izberite okolje, ki ga želite ponastaviti, in izberite tri pike **...**. 
 
-3.  Če želite potrditi brisanje, vnesite ime okolja in izberite **Ponastavi**.
+3. Izberite možnost **Ponastavi**. 
+
+4.  Če želite potrditi brisanje, vnesite ime okolja in izberite **Ponastavi**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Izbris obstoječega okolja (na voljo samo za skrbnike)
+
+Kot skrbnik lahko izbrišete okolja, katerih skrbnik ste.
+
+1.  V glavi aplikacije izberite izbirnik **Okolje**.
+
+2.  Izberite okolje, ki ga želite ponastaviti, in izberite tri pike **...**. 
+
+3. Izberite možnost **Izbriši**. 
+
+4.  Če želite potrditi izbris, vnesite ime okolja in izberite **Izbriši**.
 
 
-## <a name="delete-an-existing-environment"></a>Brisanje obstoječega okolja
-
-1. Odprite **Skrbnik** > **Sistem** > **O**.
-
-1. Izberite **Izbriši**.
-
-1. Če želite potrditi izbris, vnesite ime okolja in izberite **Izbriši**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

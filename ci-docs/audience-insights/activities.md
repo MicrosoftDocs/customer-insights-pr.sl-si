@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667249"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267452"
 ---
 # <a name="customer-activities"></a>Dejavnosti stranke
 
@@ -44,13 +44,13 @@ Vaši viri podatkov vključujejo entitete s transakcijskimi podatki in podatki o
 
 1. V razdelku **Nastavitev odnosa** konfigurirajte podrobnosti, da podatke o dejavnosti povežete z ustrezno stranko.
 
-   > [!div class="mx-imgBorder"]
-   > ![Določanje odnosa entitete](media/activities-entities-define.png "Določanje odnosa entitete")
-
     - **Polje entitete dejavnosti** : Izberite polje v svoji entiteti dejavnosti, ki bo uporabljeno za vzpostavitev odnosa z drugo entiteto.
     - **Entiteta stranke** : Izberite ustrezno izvorno entiteto stranke, s katero bo vaša entiteta dejavnosti v odnosu. Odnose lahko vzpostavite le s tistimi izvornimi entitetami strank, ki so uporabljene v postopku poenotenja podatkov.
     - **Polje entitete stranke**: V tem polju je prikazan primarni ključ izvorne entitete stranke, ki je bil izbran v postopku preslikave. To polje primarnega ključa v izvorni entiteti stranke se uporablja za vzpostavitev odnosa z entiteto dejavnosti.
     - **Ime**: Če odnos med to entiteto dejavnosti in izbrano izvorno entiteto stranke že obstaja, bo ime odnosa na voljo v načinu samo za branje. Če odnos ne obstaja, se ustvari nov odnos s tukaj navedenim imenom.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Določanje odnosa entitete](media/activities-entities-define.png "Določanje odnosa entitete")
 
 1. Če želite uporabiti spremembe, izberite **Shrani**.
 
@@ -82,3 +82,6 @@ Vaši viri podatkov vključujejo entitete s transakcijskimi podatki in podatki o
 3. Izberite ikono **Izbriši**.
 
 4. Potrdite izbris.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

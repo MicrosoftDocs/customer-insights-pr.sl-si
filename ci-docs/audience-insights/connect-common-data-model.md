@@ -4,17 +4,17 @@ description: Delo s podatki Common Data Model z uporabo storitve Azure Data Lake
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643478"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267880"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povezava z mapo Common Data Model z uporabo računa Azure Data Lake
 
@@ -38,17 +38,25 @@ V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z 
 
 1. Izberite **Dodaj vir podatkov**.
 
-1. Izberite **Vzpostavitev povezave z mapo Common Data Model**, vnesite **ime** za vir podatkov in izberite **Naprej**.
+1. Izberite **Vzpostavitev povezave z mapo Common Data Model**, vnesite **ime** za vir podatkov in izberite **Naprej**. Smernice za poimenovanje: 
+   - Začnite s črko.
+   - Uporabljajte samo črke in številke. Posebni znaki in presledki niso dovoljeni.
+   - Uporabite od 3 do 64 znakov.
 
 1. Izbirate lahko med možnostjo, ki temelji na viru, in možnostjo preverjanja pristnosti, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Vnesite podatke **vsebnika** in izberite **Naprej**.
    > [!div class="mx-imgBorder"]
-   > ![Pogovorno okno za vnos podrobnosti o povezavi za Azure Data Lake](media/enter-new-storage-details.png)
-
-1. V pogovornem oknu **Izberite mapo Common Data Model** izberite datoteko model.json, iz katere želite uvoziti podatke, in izberite **Naprej**.
+   > ![Pogovorno okno za vnos novih podrobnosti povezave za Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Vsaka datoteka model.json, povezana z drugim virom podatkov v okolju, ne bo prikazana na seznamu.
+   > Za povezavo in ustvarjanje vira podatkov potrebujete eno od naslednjih vlog bodisi zgoraj omenjenemu vsebniku ali računu za shranjevanje:
+   >  - Bralnik podatkov shrambe zbirke dvojiških podatkov
+   >  - Lastnik podatkov shrambe zbirke dvojiških podatkov
+   >  - Sodelujoči v shrambi zbirke dvojiških podatkov
 
-1. V izbrani datoteki model.json boste prejeli seznam razpoložljivih entitet. Oglejte si ga in izberite možnost s seznama razpoložljivih entitet, nato pa izberite možnost **Shrani**. Vse izbrane entitete bodo vključene iz novega vira podatkov.
+1. V pogovornem oknu **Izberite mapo Common Data Model** izberite datoteko model.json ali manifest.json, iz katere želite uvoziti podatke, in izberite možnost **Naprej**.
+   > [!NOTE]
+   > Vsaka datoteka model.json ali manifest.json, povezana z drugim virom podatkov v okolju, ne bo prikazana na seznamu.
+
+1. V izbrani datoteki model.json ali manifest.json boste prejeli seznam razpoložljivih entitet. Oglejte si ga in izberite možnost s seznama razpoložljivih entitet, nato pa izberite možnost **Shrani**. Vse izbrane entitete bodo vključene iz novega vira podatkov.
    > [!div class="mx-imgBorder"]
    > ![Pogovorno okno s seznamom entitet iz datoteke model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z 
 9. Ko shranite svoje nastavitve, se odpre stran **Viri podatkov**. Zdaj bi se vam morala prikazati povezava mape Common Data Model kot vir podatkov.
 
 > [!NOTE]
-> Datoteka model.json se lahko v istem okolju poveže samo z enim virom podatkov. Vendar pa je isto datoteko model.json mogoče uporabiti za vire podatkov v več okoljih.
+> Datoteka model.json ali manifest.json se lahko v istem okolju poveže samo z enim virom podatkov. Vendar pa je isto datoteko model.json ali ali manifest.json mogoče uporabiti za vire podatkov v več okoljih.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Urejanje vira podatkov mape Common Data Model
 
-Lahko posodobite ključ za dostop za račun za shrambo, ki vsebuje mapo Common Data Model. Lahko pa tudi spremenite datoteko model.json. Če se želite povezati z drugim vsebnikom iz računa za shrambo ali spremeniti ime računa, [ustvarite novo povezavo vira podatkov](#connect-to-a-common-data-model-folder).
+Lahko posodobite ključ za dostop za račun za shrambo, ki vsebuje mapo Common Data Model. Prav tako lahko spremenite datoteko model.json ali manifest.json. Če se želite povezati z drugim vsebnikom iz računa za shrambo ali spremeniti ime računa, [ustvarite novo povezavo vira podatkov](#connect-to-a-common-data-model-folder).
 
 1. Pri vpogledih v občinstvo izberite **Podatki** > **Viri podatkov**.
 
@@ -77,13 +85,24 @@ Lahko posodobite ključ za dostop za račun za shrambo, ki vsebuje mapo Common D
 
 5. Po želji lahko posodobitev opravite prek povezave s ključem kupca s povezavo, ki temelji na viru ali naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Ob posodobitvi povezave ne morete spremeniti podatkov **vsebnika**.
    > [!div class="mx-imgBorder"]
-   > ![Pogovorno okno za vnos podrobnosti o povezavi za Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Izberete lahko tudi drugo datoteko model.json z drugačnim naborom entitet iz vsebnika.
+   > ![Pogovorno okno za vnos podrobnosti povezave za Azure Data Lake v obstoječem računu za shrambo](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Za povezavo in ustvarjanje vira podatkov potrebujete eno od naslednjih vlog bodisi zgoraj omenjenemu vsebniku ali računu za shranjevanje:
+   >  - Bralnik podatkov shrambe zbirke dvojiških podatkov
+   >  - Lastnik podatkov shrambe zbirke dvojiških podatkov
+   >  - Sodelujoči v shrambi zbirke dvojiških podatkov
+
+
+6. Izberete lahko tudi drugo datoteko model.json ali manifest.json z drugim naborom entitet iz vsebnika.
 
 7. Po želji lahko izberete dodatne entitete za vključitev. Če ne obstajajo odvisnosti, lahko tudi odstranite vse izbrane entitete.
 
    > [!IMPORTANT]
-   > Če v obstoječi datoteki model.json in naboru entitet obstajajo odvisnosti, se prikaže sporočilo o napaki in ne morete izbrati druge datoteke model.json. Odstranite te odvisnosti, preden spremenite datoteko model.json, ali ustvarite nov vir podatkov z datoteko model.json, ki jo želite uporabiti, da vam ne bo treba odstraniti odvisnosti.
+   > Če obstajajo odvisnosti za obstoječo datoteko model.json ali manifest.json in nabor entitet, se prikaže sporočilo o napaki, vi pa ne morete izbrati druge datoteke model.json ali manifest.json. Odstranite te odvisnosti, preden spremenite datoteko model.json ali manifest.json oziroma ustvarite nov vir podatkov z datoteko model.json ali manifest.json, ki jo želite uporabiti, da se izognete odstranjevanju odvisnosti.
 
 8. Po želji lahko izberete dodatne atribute ali entitete, da omogočite profiliranje podatkov ali onemogočite že izbrane.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

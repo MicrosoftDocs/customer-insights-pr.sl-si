@@ -1,20 +1,20 @@
 ---
 title: Povezovanje računa Azure Data Lake Storage Gen2 z glavnim imenom storitve
 description: Uporabite glavno ime storitve Azure za vpoglede v občinstvo, da se povežete z lastnim jezerom podatkov, ko ga priložite vpogledom v občinstvo.
-ms.date: 11/24/2020
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644108"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267742"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Povezovanje računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure za vpoglede v občinstvo
 
@@ -22,7 +22,9 @@ Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omej
 
 Z glavnim imenom storitve lahko varno [dodate ali uredite mapo Common Data Model kot vir podatkov](connect-common-data-model.md) ali [ustvarite novo oz. posodobite obstoječe okolje](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Za izdelavo glavnega imena storitve potrebujete skrbniška dovoljenja za naročnino Azure.
+> [!IMPORTANT]
+> - Račun za shrambo Azure Data Lake Gen2, ki namerava uporabiti glavno ime storitve, mora imeti [omogočeno funkcijo hierarhičnega imenskega prostora (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Za izdelavo glavnega imena storitve potrebujete skrbniška dovoljenja za naročnino Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Ustvarjanje glavnega imena storitve Azure za vpoglede v občinstvo
 
@@ -83,7 +85,7 @@ Priložite račun za shrambo Azure Data Lake v vpoglede v občinstvo, da [shrani
 
 Upoštevajte naslednja navodila, da posredujete zahtevane podatke o izbranem pristopu.
 
-### <a name="resounce-based-storage-account-connection"></a>Povezava računa za shranjevanje na podlagi vira
+### <a name="resource-based-storage-account-connection"></a>Povezava računa za shrambo na podlagi vira
 
 1. Odprite [skrbniški portal Azure](https://portal.azure.com), se vpišite v svojo naročnino in odprite račun za shranjevanje.
 
@@ -108,7 +110,8 @@ Upoštevajte naslednja navodila, da posredujete zahtevane podatke o izbranem pri
 1. Preglejte **naročnino**, **skupino virov** in **ime** računa za shranjevanje, da se prepričate, da ste izbrali prave vrednosti pri vpogledih v občinstvo.
 
 1. Pri vpogledih v občinstvo izberite vrednosti ali ustrezna polja, ko pripnete račun za shranjevanje.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Vnesite podatke za ID vira računa za shranjevanje.":::
    
 1. Nadaljujte s preostalimi koraki pri vpogledih v občinstvo, da pripnete račun za shranjevanje.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

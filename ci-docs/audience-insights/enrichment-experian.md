@@ -1,20 +1,20 @@
 ---
 title: Obogatitev z neodvisnimi obogatitvami Experian
 description: Splošne informacije o neodvisni obogatitvi Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668833"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269580"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogatitev profilov strank z demografskimi podatki podjetja Experian (predogled)
 
@@ -41,7 +41,9 @@ Za konfiguracijo storitve Experian je treba izpolnjevati naslednje predpogoje:
 
 ## <a name="map-your-fields"></a>Preslikajte polja
 
-1. Izberite **Dodajte podatke** in izberite svoje identifikatorje ključev med možnostmi **Ime in naslov**, **E-pošta** ali **Telefon**, ki jih želite poslati v Experian za razreševanje identitete.
+1.  Izberite možnost **Dodaj podatke** in izberite **nabor podatkov o strankah**, ki ga želite obogatiti z demografskimi podatki iz podjetja Experian. Izberete lahko entiteto **Stranka**, da obogatite vse vaše profile strank, ali entiteto segmenta, da obogatite samo profile strank, ki jih vsebuje ta segment.
+
+1. Izberite identifikatorje ključev iz polj **Ime in naslov**, **E-naslov** ali **Telefon**, da bodo poslani v Experian za razrešitev identitete.
 
    > [!TIP]
    > Več atributov identifikatorjev ključev, poslanih Experianu, bo verjetno povzročilo višjo stopnjo ujemanja.
@@ -52,8 +54,8 @@ Za konfiguracijo storitve Experian je treba izpolnjevati naslednje predpogoje:
 
 1.  Izberite **Shrani** za dokončanje preslikave polj.
 
-   > [!div class="mx-imgBorder"]
-   > ![Preslikave polja Experian](media/experian-field-mapping.png "Preslikave polja Experian")
+    > [!div class="mx-imgBorder"]
+    > ![Preslikave polja Experian](media/experian-field-mapping.png "Preslikave polja Experian")
 
 ## <a name="enrichment-results"></a>Rezultati obogatitve
 
@@ -71,3 +73,6 @@ Nadgradite svoje obogatene podatke o strankah. Ustvarite [Segmente](segments.md)
 
 Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v Experian dovoljujete prenos podatkov izven meje zagotavljanja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da Experian izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli odstrani in s tem prekini uporabo te funkcije.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

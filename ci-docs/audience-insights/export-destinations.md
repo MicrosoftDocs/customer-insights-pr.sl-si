@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643883"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477153"
 ---
-# <a name="export-destinations-preview"></a>Cilji za izvoz (predogled)
+# <a name="export-destinations-preview-overview"></a>Pregled ciljev za izvoz (predogled)
 
 Stran **Cilji za izvoz** prikazuje vsa mesta, ki ste jih nastavili za izvoz podatkov. Dodate lahko tudi nove cilje za izvoz. Poleg tega prikazuje trenutno razpoložljive možnosti za izvoz. Pridobite hiter pregled, opis in informacije o tem, kaj lahko storite z vsako možnostjo razširljivosti. Izvozite poenotene profile, mere in segmente v podprte aplikacije, relevantne za vaše poslovanje.
 
@@ -27,10 +27,13 @@ Odprite **Skrbnik** > **Cilji za izvoz**, da poiščete naslednje možnosti raz�
 - [Povezovalnik Power Automate](export-power-automate.md)
 - [Povezovalnik Power Apps](export-power-apps.md)
 - [Povezovalnik Power BI](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Shramba zbirke dvojiških podatkov Azure](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [Povezovalnik LiveRamp &reg;](export-liveramp.md)
 - [Bot za Microsoft Teams](export-teams-bot.md)
 - [MailChimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Po konfiguraciji povezovalnika za cilj za izvoz se izvozi zaženejo z vsako [na�
 2. Na spustnem seznamu izberite **Odstrani**.
 
 3. Odstranjevanje potrdite tako, da na potrditvenem zaslonu izberete **Odstrani**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 11/18/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: jdahl
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 59f7f05ca0825ba147e9e93f10fa3508ec3a16dd
-ms.sourcegitcommit: ff824bbbd31fd666ab0da682bf48ea31580d242c
+ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "4568504"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269626"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogatite profile strank s podatki po meri (predogled)
 
@@ -107,3 +107,6 @@ Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izber
 Nadgradite svoje obogatene podatke o strankah. Ustvarite [segmente](segments.md), [mere](measures.md) in [izvozite podatke](export-destinations.md), da svojim strankam zagotovite prilagojene izkušnje.
 
 
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

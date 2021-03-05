@@ -4,17 +4,17 @@ description: Zagotovite ujemanje entitet za ustvarjanje poenotenih profilov stra
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406988"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267498"
 ---
 # <a name="match-entities"></a>Ujemanje entitet
 
@@ -22,7 +22,7 @@ Po zaključku faze preslikave ste pripravljeni na ujemanje entitet. Faza ujemanj
 
 ## <a name="specify-the-match-order"></a>Določanje vrstnega reda ujemanja
 
-Če želite začeti fazo ujemanja, se pomaknite na **Poenotenje** > **Ujemanje** in izberite **Nastavi vrstni red**.
+Odprite razdelek **Podatki** > **Poenoti** > **Ujemanje** in za začetek faze ujemanja izberite možnost **Nastavi vrstni red** .
 
 Vsako ujemanje poenoti najmanj dve entiteti v eno entiteto, hkrati pa ohrani vse enolične zapise strank. V spodnjem primeru smo izbrali tri entitete: **ContactCSV: TestData** kot **primarno** entiteto, **WebAccountCSV: TestData** kot **entiteto 2** in **CallRecordSmall: TestData** kot **entiteto 3**. Diagram nad izbirami ponazarja, kako se bo izvedel vrstni red ujemanja.
 
@@ -136,7 +136,7 @@ Po prepoznavanju zapisa, pri katerem je bilo odstranjeno podvajanje, bo ta zapis
 
 1. Zagon postopka ujemanja zdaj združuje zapise na podlagi pogojev, določenih v pravilih za odstranjevanje podvajanja. Po združevanju zapisov se za določitev zapisa zmagovalca uporabi pravilnik spajanja.
 
-1. Ta zapis zmagovalca se nato prenese na ujemanje med entitetami.
+1. Ta zapis zmagovalca se nato obdela v postopku preverjanja ujemanja med entitetami, skupaj z zapisi ne-zmagovalcev (na primer nadomestni ID-ji), da se izboljša kakovost ujemanja.
 
 1. Vsa pravila po meri za ujemanje, določena za ujemanje v vseh primerih ali ujemanje v nobenem primeru, preglasijo pravila za odstranjevanje podvajanja. Če pravilo odstranjevanja podvajanja prepozna ujemajoče se zapise in je pravilo ujemanja po meri nastavljeno tako, da se nikoli ne ujema s temi zapisi, potem se ta dva zapisa ne bosta ujemala.
 
@@ -157,6 +157,17 @@ Po prvem ujemanju se ustvari poenotena glavna enota. Po vseh naslednjih ujemanji
 
 > [!TIP]
 > Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za enega izmed poslov izberete **Prikaži podrobnosti**, se prikažejo dodatne informacije: čas obdelave, zadnji datum obdelave ter vse napake in opozorila, povezana z opravilom.
+
+## <a name="deduplication-output-as-an-entity"></a>Izhodni podatki brez podvajanj kot entiteta
+Poleg enotne glavne entitete, ustvarjene kot del preverjanja medsebojnega ujemanja entitet, se za vsako entiteto iz vrstnega reda ujemanja s postopkom odstranjevanja podvajanj generira tudi nova entiteta, da so prepoznani zapisi brez podvajanj. Te entitete in entiteto **ConflationMatchPairs: CustomerInsights** je mogoče najti z imenom **Deduplication_Datasource_Entity** v razdelku **Sistem** na strani **Entitete**.
+
+Izhodna entiteta brez podvajanj vsebuje naslednje informacije:
+- ID-je/ključe
+  - Polje primarnega ključa in pripadajoče polje nadomestnih ID-jev Polje nadomestnih ID-jev je sestavljeno iz vseh nadomestnih ID-jev, določenih za zapis.
+  - Polje Deduplication_GroupId prikazuje skupino ali gručo, identificirano znotraj entitete, ki združuje vse podobne zapise na podlagi določenih polj za odstranjevanje podvajanj. To se uporablja za namene sistemske obdelave. Če niso podana nobena pravila za ročno odstranjevanje podvajanj in veljajo sistemsko določena pravila za odstranjevanje podvajanj, tega polja v izhodni entiteti brez podvajanj morda ne boste našli.
+  - Deduplication_WinnerId: to polje vsebuje ID zmagovalnega zapisa iz identificiranih skupin ali gruč. Če je vrednost Deduplication_WinnerId enaka vrednosti primarnega ključa za zapis, to pomeni, da gre za zmagovalni zapis.
+- Polja, ki se uporabljajo za določanje pravil za odstranjevanje podvajanj.
+- Polji Pravilo in Ocena označujeta, katera od pravil za odpravljanje podvajanj so bila uporabljena, ter rezultat, ki ga vrne algoritem za iskanje ujemanj.
 
 ## <a name="review-and-validate-your-matches"></a>Pregled in preverjanje ujemanj
 
@@ -200,6 +211,11 @@ Povečajte kakovost s ponovnim konfiguriranjem nekaterih parametrov ujemanja:
   > [!div class="mx-imgBorder"]
   > ![Podvajanje pravila](media/configure-data-duplicate-rule.png "Podvajanje pravila")
 
+- **Deaktivirajte pravilo**, da se pravilo ujemanja obdrži in je hkrati izključeno iz postopka ujemanja.
+
+  > [!div class="mx-imgBorder"]
+  > ![Deaktiviranje pravila](media/configure-data-deactivate-rule.png "Deaktiviranje pravila")
+
 - Izberite simbol **Uredi** in **uredite pravila**. Naredite lahko te spremembe:
 
   - Spremenite atribute za pogoj: v vrstici določenega pogoja izberite nove atribute.
@@ -229,10 +245,12 @@ Določite lahko pogoj, da se morajo določeni zapisi vedno ujemati oziroma se ne
     - Entity2Key: 34567
 
    Ista datoteka predloge lahko določa zapise ujemanja po meri iz več entitet.
+   
+   Če želite za odpravljanje podvajanj iz entitete določiti iskanje ujemanja po meri, podajte isto entiteto kot Entity1 in Entity2 ter nastavite različne vrednosti primarnega ključa.
 
 5. Ko dodate vse preglasitve, ki jih želite uporabiti, shranite datoteko predloge.
 
-6. Odprite **Podatki** > **Viri podatkov** in datoteke predloge uvozite kot nove entitete. Po uvozu jih lahko uporabite za določanje konfiguracije ujemanja.
+6. Odprite razdelek **Podatki** > **Viri podatkov** in datoteke predloge uvozite kot nove entitete. Po uvozu jih lahko uporabite za določanje konfiguracije ujemanja.
 
 7. Ko so datoteke naložene in entitete na voljo, znova izberite možnost **Ujemanje po meri**. Videli boste možnosti za določanje entitet, ki jih želite vključiti. V spustnem meniju izberite potrebne entitete.
 
@@ -250,3 +268,6 @@ Določite lahko pogoj, da se morajo določeni zapisi vedno ujemati oziroma se ne
 ## <a name="next-step"></a>Naslednji korak
 
 Ko dokončate postopek ujemanja za vsaj en par ujemanja, lahko morebitne spore v podatkih razrešite po navodilih v temi [**Spajanje**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Obogatitev z neodvisnimi obogatitvami HERE Technologies
 description: Splošne informacije o neodvisni obogatitvi HERE Technologies.
-ms.date: 10/27/2020
+ms.date: 12/10/2020
 ms.reviewer: jodahl
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 7082fcfec099c3c9436b233c193be23625f6691a
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 258e37de9d9685d9ebc30b3c6b8d238d583431b4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668698"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269534"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obogatitev profilov strank v sodelovanju z družbo HERE Technologies (predogled)
 
@@ -43,7 +43,11 @@ Za konfiguracijo obogatitve HERE Technologies morajo biti izpolnjeni naslednji p
 
 1. Potrdite oba vnosa z izbiro možnosti **Povezovanje s HERE**.
 
-1. Izberite **Dodajanje podatkov** in izberite, ali želite polja preslikati na primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj (na primer domači in poslovni naslov) in obogatite profile za oba naslova posebej. Izberite **Naprej**.
+1.  Izberite možnost **Dodaj podatke** in izberite **nabor podatkov o strankah**, ki ga želite obogatiti s podatki o lokaciji iz podjetja HERE Technologies. Izberete lahko entiteto **Stranka**, da obogatite vse vaše profile strank, ali entiteto segmenta, da obogatite samo profile strank, ki jih vsebuje ta segment.
+
+    :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Posnetek zaslona izbire nabora podatkov o strankah.":::
+
+1. Izberite, ali želite polja preslikati na primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj (na primer domači in poslovni naslov) in obogatite profile za oba naslova posebej. Izberite **Naprej**.
 
 1. Določite, katera polja iz vaših poenotenih profilov naj bodo uporabljena za iskanje ustreznih podatkov o lokaciji družbe HERE Technologies. Polji **Ulica 1** in **Poštna številka** sta obvezni za izbrani primarni in/ali sekundarni naslov. Za večjo natančnost ujemanja lahko dodate več polj.
 
@@ -68,3 +72,6 @@ Nadgradite svoje obogatene podatke o strankah. Ustvarite [Segmente](segments.md)
 
 Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v HERE Technologies, dovoljujete prenos podatkov izven meje zagotavljanja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da HERE Technologies izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli odstrani in s tem prekini uporabo te funkcije.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

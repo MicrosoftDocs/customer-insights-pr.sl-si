@@ -1,7 +1,7 @@
 ---
 title: Namestitev in konfiguracija dodatka za kartice strank
 description: Namestite in konfigurirajte dodatek za kartico stranke za Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644063"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268064"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatek za kartico stranke (predogled)
 
@@ -28,7 +28,7 @@ Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 
 - Profili strank, [vključeni iz aplikacije Dynamics 365 prek storitve Common Data Service](connect-power-query.md).
 - Uporabniki dodatka za kartice stranke morajo biti [dodani kot uporabniki](permissions.md) pri vpogledih v občinstvo.
 - [Konfigurirane možnosti iskanja in filtriranja](search-filter-index.md).
-- Demografski kontrolnik: v poenotenem profilu strank so na voljo demografska polja, kot sta starost ali spol.
+- Demografski kontrolnik: v poenotenem profilu strank so na voljo demografska polja (kot sta starost ali spol).
 - Kontrolnik obogatitve: zahteva, da so za profile strank uporabljene aktivne [obogatitve](enrichment-hub.md).
 - Kontrolnik za obveščanje: zahteva podatke, ustvarjene s strojnim učenjem Azure ([modeli predvidevanja](predictions.md) ali [modeli po meri](custom-models.md))
 - Kontrolnik merjenja: zahteva [konfigurirane ukrepe](measures.md).
@@ -92,10 +92,26 @@ Namestitev rešitve v vaše okolje lahko traja nekaj časa.
 
 1. V pogovornem oknu **Lastnosti polja** počistite potrditveno polje **Prikaži oznako na obrazcu**.
 
-1. Izberite možnost **Splet** za kontrolnik. Za kontrolnik obogatitve izberite vrsto obogatitve, ki jo želite prikazati, in sicer tako, da konfigurirate polje **enrichmentType**. Za vsako vrsto obogatitve morate dodati ločen kontrolnik obogatitve.
+1. Izberite možnost **Splet** za kontrolnik. Za kontrolnik obogatitve izberite vrsto obogatitve, ki jo želite prikazati, in sicer tako, da konfigurirate polje **enrichmentType**. Za vsako vrsto obogatitve dodajte ločen kontrolnik obogatitve.
 
 1. Izberite **Shrani** in **Objavi**, da objavite posodobljeni obrazec za stik.
 
 1. Pojdite na objavljeni obrazec za stik. Novo dodani kontrolnik bo prikazan. Morda se boste morali prijaviti, ko ga boste prvič uporabili.
 
 1. Če želite prilagoditi prikaz na kontrolniku po meri, v zgornjem desnem kotu izberite gumb za urejanje.
+
+## <a name="upgrade-customer-card-add-in"></a>Nadgraditev dodatka za kartico stranke
+Dodatek za kartico stranke se ne nadgradi samodejno. Če ga želite nadgraditi na najnovejšo različico, upoštevajte navodila v aplikaciji Dynamics 365, v kateri je nameščen dodatek.
+
+1. V aplikaciji Dynamics 365 odprite razdelek **Nastavitve** > **Prilagajanje** in izberite možnost **Rešitve**.
+
+1. V tabeli dodatkov poiščite **CustomerInsightsCustomerCard** in izberite vrstico.
+
+1. V vrstici z dejanji izberite možnost **Uporabi nadgradnjo rešitve**.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Nadgradite rešitev na območju za prilagoditev v aplikacijah Dynamics 365":::
+
+1. Po začetku postopka nadgradnje je do zaključka prikazan kazalnik stanja nalaganja. Če novejše različice ni, se pri nadgradnji prikaže sporočilo o napaki.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

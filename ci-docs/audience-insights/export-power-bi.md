@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406952"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477108"
 ---
 # <a name="connector-for-power-bi-preview"></a>Povezovalnik za Power BI (predogled)
 
@@ -31,7 +31,7 @@ Ustvarite vizualizacije svojih podatkov s storitvijo Power BI Desktop. Ustvarite
 
 1. Izberite **Prikaži več** in poiščite storitev **Dynamics 365 Customer Insights**
 
-1. Izberite rezultat in izberite možnost **Poveži**.
+1. Izberite **Vzpostavljanje povezave**.
 
 1. Opravite **Vpis** z enakim računom organizacije, ki ga uporabljate za storitev Customer Insights, in izberite možnost **Poveži**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Povezovalnik Customer Insights za Power BI je zasnovan tako, da deluje za nabore
 ### <a name="work-with-a-subset-of-data"></a>Delo s podmnožico želenih podatkov
 
 Razmislite o delu s podmnožico svojih podatkov. Lahko na primer ustvarite [segmente](segments.md) namesto izvoza vseh zapisov strank v storitev Power BI.
+
+## <a name="troubleshooting"></a>Odpravljanje težav
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Okolje storitve Customer Insights se ne prikaže v storitvi Power BI
+
+Okolja, ki imajo opredeljen več kot en [odnos](relationships.md) med dvema enakima entitetama v vpogledih v občinstvo, ne bodo na voljo v povezovalniku storitve Power BI.
+
+Podvojene odnose lahko prepoznate in jih odstranite.
+
+1. V vpogledih v občinstvo odprite razdelek **Podatki** > **Odnosi** za okolje, ki manjka v storitvi Power BI.
+2. Prepoznajte podvojene odnose:
+   - Preverite, ali je med istima entitetama določen več kot en odnos.
+   - Preverite, ali je odnos ustvarjen med entitetama, ki sta vključeni v postopek poenotenja. Med vsemi entitetami, vključenimi v postopek združevanja, je določen implicitni odnos.
+3. Odstranite vse prepoznane podvojene odnose.
+
+Po odstranitvi podvojenih odnosov poskusite znova konfigurirati povezovalnik storitve Power BI. Okolje bi moralo biti zdaj na voljo.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

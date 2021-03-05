@@ -1,20 +1,20 @@
 ---
 title: Izvozite podatke Customer Insights v Dynamics 365 Sales
 description: Naučite se konfigurirati povezavo s storitvijo Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643838"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269028"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Povezovalnik za Dynamics 365 Sales (predogled)
 
@@ -24,7 +24,10 @@ Na podlagi podatkov o strankah z aplikacijo Dynamics 365 Sales ustvarjajte sezna
 
 ## <a name="prerequisite"></a>Predpogoj
 
-Zapisi stikov [iz storitve Dynamics 365 Sales, uvožene prek storitve Common Data Service](connect-power-query.md).
+1. Zapisi o stikih morajo biti prisotni v storitvi Dynamics 365 Sales, preden lahko izvozite segment iz rešitve Customer Insights v Sales. Preberite več o vključevanju stikov v storitvi [Dynamics 365 Sales z uporabo rešitve Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > Z izvozom segmentov iz vpogledov v občinstvo v rešitev Sales ne bodo ustvarjeni novi zapisi stikov v primerkih aplikacije Sales. Zapise o stikih iz rešitve Sales je treba vključiti v vpoglede v občinstvo in jih uporabiti kot vir podatkov. Prav tako jih je treba vključiti v enotno entiteto stranke, da se ID-ji strank preslikajo v ID-je stikov, preden je segmente mogoče izvoziti.
 
 ## <a name="configure-the-connector-for-sales"></a>Konfiguracija povezovalnika za Sales
 
@@ -49,3 +52,6 @@ Zapisi stikov [iz storitve Dynamics 365 Sales, uvožene prek storitve Common Dat
 ## <a name="export-the-data"></a>Izvoz podatkov
 
 Lahko [izvozite podatke na zahtevo](export-destinations.md). Izvoz se bo zagnal tudi z vsakim [načrtovanim osveževanjem](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

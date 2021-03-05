@@ -1,26 +1,26 @@
 ---
 title: Obogatite profile strank z storitvijo Microsoft Graph
 description: Uporabite lastniške podatke iz orodja Microsoft Graph, če želite obogatiti podatke o strankah s podatki o afiniteti do blagovnih znamk in zanimanj.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406959"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269350"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatitev profilov strank s podatki o afiniteti do blagovnih znamk in zanimanj (predogled)
 
 Uporabite lastniške podatke iz orodja Microsoft Graph, če želite obogatiti podatke o strankah s podatki o afiniteti do blagovnih znamk in zanimanj. Te afinitete so določene na podlagi podatkov ljudi s podobno demografijo, kot jo imajo vaše stranke. Te informacije vam pomagajo bolje razumeti in segmentirati vaše stranke na podlagi njihovih afinitet do določenih blagovnih znamk in zanimanj.
 
-Pri razdelku vpogledov v občinstvo izberite **Podatki** > **Obogatitev**, da [konfigurirate in si ogledate obogatitve](enrichment-hub.md).
+V vpogledih v občinstvo odprite razdelek **Podatki** > **Obogatitev**, da [konfigurirate in si ogledate obogatitve](enrichment-hub.md).
 
 Če želite konfigurirati obogatitev priljubljenih blagovnih znamk, se pomaknite na zavihek **Odkrivanje** in izberite **Obogatitev podatkov** na ploščici **Blagovne znamke**.
 
@@ -35,16 +35,21 @@ Podatke spletnega iskanja iz orodja Microsoft Graph uporabljamo za iskanje podat
 
 [Več informacij o orodju Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Ocena afinitete in zanesljivost
+## <a name="affinity-level-and-score"></a>Stopnja afinitete in ocena
 
-**Ocena afinitete** je izračunana na 100-točkovni lestvici, kjer 100 predstavlja segment, ki ima najvišjo afiniteto do blagovne znamke ali zanimanja.
+Za vsak obogateni profil stranke zagotavljamo dve povezani vrednosti – stopnjo afinitete in oceno afinitete. Te vrednosti vam pomagajo ugotoviti, kako močna je afiniteta demografskega segmenta tega profila za blagovno znamko ali zanimanje v primerjavi z drugimi demografskimi segmenti.
 
-**Zanesljivost afinitete** se izračuna tudi na 100-točkovni lestvici. Prikazuje raven zanesljivosti sistema glede prisotnosti afinitete do blagovne znamke ali zanimanje v segmentu. Raven zanesljivosti temelji na velikosti segmenta in granularnosti segmenta. Velikost segmenta določa količina podatkov, ki jih imamo za dani segment. Granularnost segmenta je določena glede na to koliko atributov (starost, spol, lokacija) je na voljo v profilu.
+*Stopnja afinitete* je sestavljena iz štirih stopenj, *ocena afinitete* pa se izračuna na 100-stopenjski lestvici, ki se preslika v stopnje afinitete.
 
-Ocen za vaš nabor podatkov ne normaliziramo. Posledično morda ne boste videli vseh vrednosti ocene afinitete za svoj nabor podatkov. V vaših podatkih, na primer, ni nobenega obogatenega profila stranke z oceno afinitete 100. To je mogoče, če v demografskem segmentu ni strank, ki bi za določeno blagovno znamko ali zanimanje dosegle vrednost 100.
 
-> [!TIP]
-> Ko [ustvarjate segmente](segments.md) z uporabo ocen afinitet, preglejte porazdelitev ocen afinitet za nabor podatkov, preden se odločite o primernih pragih ocene. Na primer ocena afinitete 10 se lahko smatra za pomembno v naboru podatkov, ki ima najvišjo oceno afinitete samo 25 za dano blagovno znamko ali zanimanje.
+|Stopnja afinitete |Ocena afinitete  |
+|---------|---------|
+|Zelo visoka     | 85–100       |
+|Velik     | 70–84        |
+|Srednji     | 35–69        |
+|Majhen     | 1–34        |
+
+Glede na granularnost, ki jo želite za merjenje afinitete, lahko uporabite možnost stopnje afinitete ali ocene afinitete. Ocena afinitete omogoča natančnejši nadzor.
 
 ## <a name="supported-countriesregions"></a>Podprte države/regije
 
@@ -54,17 +59,13 @@ Trenutno podpiramo naslednje države/regije: Avstralija, Kanada (angleščina), 
 
 ### <a name="implications-related-to-country-selection"></a>Posledice, povezane z izbiro države/regije
 
-- Ob [izbiri lastnih blagovnih znamk](#define-your-brands-or-interests) bomo podali predloge glede na izbrano državo/regijo.
+- Pri [izbiri lastnih blagovnih znamk](#define-your-brands-or-interests) sistem ponuja predloge glede na izbrano državo ali regijo.
 
-- Ko [izbirate panogo](#define-your-brands-or-interests), na podlagi izbrane države/regije prepoznamo najpomembnejše blagovne znamke ali interese.
+- Pri [izbiri panoge](#define-your-brands-or-interests) boste pridobili najbolj ustrezne blagovne znamke ali interese glede na izbrano državo oziroma regijo.
 
-- Če ob [preslikavi polj](#map-your-fields) država/regija ni preslikana, bomo za obogatitev profilov strank uporabili podatke orodja Microsoft Graph iz izbrane države/regije. To izbiro bomo uporabili tudi za obogatitev profilov strank, ki nimajo na voljo podatkov o državi/regiji.
-
-- Ob [obogatitvi profilov](#refresh-enrichment) bomo obogatili vse profile strank, za katere imamo na voljo podatke orodja Microsoft Graph za izbrane blagovne znamke in zanimanja, vključno s profili, ki niso v izbrani državi/regiji. Na primer, če ste izbrali Nemčijo, bomo obogatili profile v Združenih državah, če imamo na voljo podatke orodja Microsoft Graph za izbrane blagovne znamke in zanimanja v ZDA.
+- Pri [obogatitvi profilov](#refresh-enrichment) bomo obogatili vse profile strank, za katere dobimo podatke za izbrane blagovne znamke in interese. Vključno s profili, ki niso v izbrani državi ali regiji. Na primer, če ste izbrali Nemčijo, bomo obogatili profile v Združenih državah, če imamo na voljo podatke orodja Microsoft Graph za izbrane blagovne znamke in zanimanja v ZDA.
 
 ## <a name="configure-enrichment"></a>Konfiguracija obogatitve
-
-Konfiguriranje obogatitve blagovnih znamk ali zanimanj obsega dva koraka:
 
 ### <a name="define-your-brands-or-interests"></a>Določite svoje blagovne znamke ali zanimanja
 
@@ -75,9 +76,19 @@ Izberite eno od teh možnosti:
 
 Če želite dodati blagovno znamko ali zanimanje, ga vnesite v območje za vnos, da pridobite predloge glede na ustrezne pogoje. Če med predlogi ni blagovne znamke ali zanimanja, ki ga iščete, nam pošljite povratne informacije prek povezave **Predlagaj**.
 
+### <a name="review-enrichment-preferences"></a>Pregled nastavitev obogatitve
+
+Preglejte privzete nastavitve obogatitve in jih po potrebi posodobite.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Posnetek zaslona okna z nastavitvami obogatitve.":::
+
+### <a name="select-entity-to-enrich"></a>Izberite entiteto za obogatitev
+
+Izberite možnost **Obogatena entiteta** in izberite nabor podatkov, ki ga želite obogatiti s podatki iz orodja Microsoft Graph. Izberete lahko entiteto Stranka, da obogatite vse vaše profile strank, ali entiteto segmenta, da obogatite samo profile strank, ki jih vsebuje ta segment.
+
 ### <a name="map-your-fields"></a>Preslikajte polja
 
-Preslikajte polja iz svoje poenotene entitete stranke v vsaj dva atributa, da določite demografski segment, za katerega želite, da ga uporabimo za obogatitev vaših podatkov o stranki. Izberite **Uredi**, da določite preslikavo polj, in izberite **Uporabi**, ko končate. Izberite **Shrani** za dokončanje preslikave polj.
+Preslikajte polja iz enotne entitete stranke, da določite demografski segment, ki ga mora sistem uporabiti za obogatitev podatkov o strankah. Preslikajte vrednosti za državo/regijo in vsaj datum rojstva ali spol. Poleg tega morate preslikati vsaj en atribut za mesto (in državo/območje) ali poštno številko. Izberite **Uredi**, da določite preslikavo polj, in izberite **Uporabi**, ko končate. Izberite **Shrani** za dokončanje preslikave polj.
 
 Podprti so naslednji formati in vrednosti; vrednosti niso občutljive na male in male črke:
 
@@ -120,3 +131,6 @@ Afinitete do blagovnih znamk in interesov si je mogoče ogledati tudi na posamez
 ## <a name="next-steps"></a>Naslednji koraki
 
 Nadgradite svoje obogatene podatke o strankah. Ustvarite [Segmente](segments.md), [Mere](measures.md) in celo [izvozite podatke](export-destinations.md), da svojim strankam zagotovite prilagojeno izkušnjo.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

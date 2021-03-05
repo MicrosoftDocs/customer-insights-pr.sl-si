@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644423"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268338"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predvidevanje izgub glede transakcij (predogled)
 
@@ -97,6 +97,8 @@ Predvidevanje izgub glede transakcij pomaga predvideti, ali stranka v določenem
 
 1. Preslikajte semantična polja v atribute v entiteti dejavnosti strank in izberite **Naprej**. Za opise polj si oglejte [pogoje](#prerequisites).
 
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Preslikajte polja strank za podatke o transakciji.":::
+
 1. Izberite vrsto dejavnosti, ki se ujema z vrsto dejavnosti stranke, ki jo konfigurirate. Izberite **Ustvari novo** in izberite razpoložljivo vrsto dejavnosti ali ustvarite novo vrsto.
 
 1. Konfigurirati boste morali odnos med entiteto dejavnosti vaše stranke in entiteto stranke.
@@ -129,10 +131,10 @@ Predvidevanje izgub glede transakcij pomaga predvideti, ali stranka v določenem
    - **Vrsta predvidevanja:** vrsta modela, uporabljena za predvidevanje
    - **Izhodna entiteta:** ime entitete za shranjevanje rezultatov predvidevanja. Entiteto s tem imenom lahko najdete v razdelku **Podatki** > **Entitete**.
    - **Predvideno polje:** to polje je zapolnjeno samo za nekatere vrste predvidevanj in se ne uporablja pri predvidevanju izgub.
-   - **Stanje:** stanje zagona predvidevanja.
+   - **Stanje:** stanje izvajanja predvidevanja.
         - **V čakalni vrsti:** predvidevanje čaka, da se zaženejo drugi procesi.
         - **Osveževanje:** predvidevanje se trenutno izvaja za ustvarjanje rezultatov, ki bodo stekli v izhodno entiteto.
-        - **Ni uspelo:** zagon predvidevanja ni uspel. [Preglejte dnevniške datoteke](#troubleshoot-a-failed-prediction) za več podrobnosti.
+        - **Ni uspelo:** izvajanje predvidevanja ni uspelo. [Preglejte dnevniške datoteke](#troubleshoot-a-failed-prediction) za več podrobnosti.
         - **Uspelo:** predvidevanje je uspelo. Izberite **Pogled** pod navpičnimi tremi pikami za pregled predvidevanja
    - **Urejeno:** datum, ko je bila spremenjena konfiguracija predvidevanja.
    - **Nazadnje osveženo:** datum, ko je predvidevanje osvežilo rezultate v izhodni entiteti.
@@ -185,3 +187,6 @@ Predvidevanja se bodo samodejno osvežila v istem [urniku, kot ga osvežijo vaš
 1. Izberite navpične tri pike poleg predvidevanja, ki ga želite izbrisati.
 
 1. Izberite **Izbriši**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
