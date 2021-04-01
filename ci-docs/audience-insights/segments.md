@@ -1,20 +1,20 @@
 ---
 title: Ustvarjanje in upravljanje segmentov
 description: Ustvarite segmente strank, da jih združite na podlagi različnih atributov.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270376"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597079"
 ---
 # <a name="create-and-manage-segments"></a>Ustvarjanje in upravljanje segmentov
 
@@ -35,19 +35,19 @@ Segmenti se upravljajo na strani **Segmenti**.
 
 1. Pri vpogledih v občinstvo odprite stran **Segmenti**.
 
-2. Izberite **Novo** > **Prazen segment**.
+1. Izberite **Novo** > **Prazen segment**.
 
-3. Na strani **Nov segment** izberite vrsto segmenta in vnesite **ime**.
+1. Na strani **Nov segment** izberite vrsto segmenta in vnesite **ime**.
 
    Po želji vnesite prikazno ime in opis, s katerim boste lažje prepoznali segment.
 
-4. Izberite **Naprej**, da se pomaknete na stran **Graditelj segmentov**, kjer določite skupino. Skupina je nabor strank.
+1. Izberite **Naprej**, da se pomaknete na stran **Graditelj segmentov**, kjer določite skupino. Skupina je nabor strank.
 
-5. Izberite entiteto, ki vključuje atribut, po katerem želite segmentirati.
+1. Izberite entiteto, ki vključuje atribut, po katerem želite segmentirati.
 
-6. Izberite atribut, po katerem želite segmentirati. Ta atribut ima lahko eno od štirih vrst vrednosti: numerično, niz, datum ali logična vrednost.
+1. Izberite atribut, po katerem želite segmentirati. Ta atribut ima lahko eno od štirih vrst vrednosti: numerično, niz, datum ali logična vrednost.
 
-7. Izberite operator in vrednost za izbrani atribut.
+1. Izberite operator in vrednost za izbrani atribut.
 
    > [!div class="mx-imgBorder"]
    > ![Filter skupine po meri](media/customer-group-numbers.png "Filter skupine strank")
@@ -64,9 +64,14 @@ Segmenti se upravljajo na strani **Segmenti**.
    > [!div class="mx-imgBorder"]
    > ![Pot odnosa med ustvarjanjem segmenta](media/segments-multiple-relationships.png "Pot odnosa med ustvarjanjem segmenta")
 
-9. Izberite **Shrani**, da shranite segment. Če so vse zahteve potrjene, bo vaš segment shranjen in obdelan. V nasprotnem primeru bo shranjen kot osnutek.
+1. Segmenti privzeto generirajo izhodno entiteto, ki vsebuje vse atribute profilov strank, ki se ujemajo z določenimi filtri. Če segment temelji na drugih entitetah kot na entiteti *stranke*, lahko v izhodno entiteto dodate več atributov teh entitet. Izberite **Atributi projekta**, da izberete atribute, ki bodo dodani izhodni entiteti.  
 
-10. Izberite **Nazaj na segmente**, da se vrnete na stran **Segmenti**.
+   
+   Primer: Segment temelji na entiteti, ki vsebuje podatke o dejavnostih strank, povezane z entiteto *stranke*. Segment išče vse stranke, ki so v zadnjih 60 dneh poklicale službo za pomoč uporabnikom. Trajanje in število klicev lahko v izhodni entiteti priložite v vse ustrezne zapise strank, ki se ujemajo. Te informacije so lahko koristne za pošiljanje e-pošte strankam, ki so pogosto klicale, s koristnimi povezavami do spletnih člankov za pomoč in pogostih vprašanj.
+
+1. Izberite **Shrani**, da shranite segment. Če so vse zahteve potrjene, bo vaš segment shranjen in obdelan. V nasprotnem primeru bo shranjen kot osnutek.
+
+1. Izberite **Nazaj na segmente**, da se vrnete na stran **Segmenti**.
 
 ## <a name="manage-existing-segments"></a>Upravljanje obstoječih segmentov
 
@@ -85,6 +90,7 @@ Ko izberete segment, je na voljo naslednje dejanje:
 
 - Na voljo je **Prikaz** podrobnosti o odsekih, vključno s trendom števila članov in predogledom članov segmenta.
 - Za spreminjanje lastnosti segmenta lahko uporabite možnost **Uredi**.
+- **Ustvarjanje dvojnika** segmenta. Takoj lahko uredite njegove lastnosti ali preprosto shranite dvojnik.
 - Za vključitev najnovejših podatkov lahko izberete **Osveži**.
 - Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Segmenti imajo dve možni stanji - aktivno ali neaktivno. Stanji sta vam lahko v pomoč pri urejanju segmenta. Za neaktivne segmente definicija segmenta obstaja, vendar še ne vsebuje nobene stranke. Ko aktivirate segment, se njegovo stanje spremeni iz »neaktiven« v »aktiven« in začne iskati stranke, ki ustrezajo definiciji segmenta. Če je konfigurirana [načrtovana osvežitev](system.md#schedule-tab), je **Stanje** neaktivnih segmentov navedeno kot **Preskočeno**, kar pomeni, da poskusa osveževanja sploh ni bilo. Ko se aktivira neaktivni segment, se bo osvežil in bo vključen v načrtovane osvežitve.
   Lahko pa uporabite funkcijo **Razporedi pozneje** v spustnem meniju **Aktiviraj/Deaktivira**, da določite datum in čas v prihodnosti za aktiviranje in deaktiviranje določenega segmenta.

@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270224"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598359"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Uporabite modele na podlagi studia za strojno učenje Azure (klasični način)
 
@@ -37,7 +37,7 @@ V prvem koraku moramo ustvariti delovni prostor in odpreti Studio za strojno uč
 
 1. Poiščite **Delovni prostor studia za strojno učenje** in izberite **Ustvari**.
 
-1. Vnesite zahtevane podatke, da [ustvarite delovni prostor](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Izberite **Cena za razred cen paketa spletne storitve** na podlagi količine podatkov, ki jih nameravate uvoziti. Za boljše delovanje izberite **Lokacija**, ki vam je geografsko najbližje.
+1. Vnesite zahtevane podatke, da [ustvarite delovni prostor](/azure/machine-learning/studio/create-workspace). Izberite **Cena za razred cen paketa spletne storitve** na podlagi količine podatkov, ki jih nameravate uvoziti. Za boljše delovanje izberite **Lokacija**, ki vam je geografsko najbližje.
 
 1. Ko ste ustvarili vir, se vam bo prikazala nadzorna plošča delovnega prostora studia za strojno učenje. Izberite **Zaženi studio za strojno učenje**.
 
@@ -65,7 +65,7 @@ Zdaj lahko ustvarite nov poskus ali uvozite obstoječo predlogo poskusa iz galer
 
    ![Nastavitev spletne storitve za napovedovanje](media/predictive-webservice-control.png)
 
-1. Ko vam poskus spletne storitve za napovedovanje uspe, ga lahko uporabite za samodejno načrtovanje. Če želite uporabiti spletno storitev skupaj z aplikacijo Customer Insights, izberite **Uvedba spletne storitve** > **[Nov] predogled uvedbe spletne storitve**. [Podrobno se seznanite z uvedbo spletne storitve](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Ko vam poskus spletne storitve za napovedovanje uspe, ga lahko uporabite za samodejno načrtovanje. Če želite uporabiti spletno storitev skupaj z aplikacijo Customer Insights, izberite **Uvedba spletne storitve** > **[Nov] predogled uvedbe spletne storitve**. [Podrobno se seznanite z uvedbo spletne storitve](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Uvedba spletne storitve za napovedovanje](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Spodnja slika prikazuje prodajni lijak modela za usposabljanje in ocenjevanje iz
 
 ![Model izgube v studiu za strojno učenje Azure](media/azure-machine-learning-model.png)
 
-Uporabljamo tudi tehniko, ki se imenuje **Pomembnost permutacije lastnosti** in je pomemben vidik optimizacije modelov. Vgrajeni modeli imajo malo ali nič vpogleda v vpliv katere koli posebne lastnosti na končno napoved. Kalkulator pomembnosti lastnosti uporablja algoritem po meri za izračun vpliva posameznih lastnosti na rezultat posebnega modela. Pomembnost lastnosti je normalizirana med +1 in –1. Negativen vpliv pomeni, da ima ustrezna lastnost kontraintuitiven vpliv na rezultat in jo je treba odstraniti iz modela. Pozitiven vpliv pomeni, da lastnost močno prispeva k napovedi. Te vrednosti niso korelacijski koeficienti, saj gre za drugačne metrike. Za več informacij glejte [Pomembnost lastnosti permutacije](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Uporabljamo tudi tehniko, ki se imenuje **Pomembnost permutacije lastnosti** in je pomemben vidik optimizacije modelov. Vgrajeni modeli imajo malo ali nič vpogleda v vpliv katere koli posebne lastnosti na končno napoved. Kalkulator pomembnosti lastnosti uporablja algoritem po meri za izračun vpliva posameznih lastnosti na rezultat posebnega modela. Pomembnost lastnosti je normalizirana med +1 in –1. Negativen vpliv pomeni, da ima ustrezna lastnost kontraintuitiven vpliv na rezultat in jo je treba odstraniti iz modela. Pozitiven vpliv pomeni, da lastnost močno prispeva k napovedi. Te vrednosti niso korelacijski koeficienti, saj gre za drugačne metrike. Za več informacij glejte [Pomembnost lastnosti permutacije](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Celoten [poskus z izgubo je na voljo v galeriji Azure AI](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Celoten [poskus priporočila izdelka je na voljo v galeriji Azure AI.](https://g
 
 ## <a name="integrate-custom-models"></a>Integracija modelov po meri
 
-Če želite te napovedi uporabiti v aplikaciji Customer Insights, morate **izvoziti** predvidevanja skupaj z ID-ji strank. [Izvozite jih na isto mesto v shrambi v zbirki dvojiških podatkov Azure](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs), kamor izvažate izvorne podatke. Napovedno spletno storitev je mogoče načrtovati tako, da se redno izvaja in posodablja rezultate.
+Če želite te napovedi uporabiti v aplikaciji Customer Insights, morate **izvoziti** predvidevanja skupaj z ID-ji strank. [Izvozite jih na isto mesto v shrambi v zbirki dvojiških podatkov Azure](/azure/storage/common/storage-import-export-data-from-blobs), kamor izvažate izvorne podatke. Napovedno spletno storitev je mogoče načrtovati tako, da se redno izvaja in posodablja rezultate.
 
 Podatke, ki jih ustvari model po meri, lahko uporabimo za dodatno obogatitev podatkov o strankah. Za več informacij glejte [Modeli strojnega učenja po meri](custom-models.md).
 

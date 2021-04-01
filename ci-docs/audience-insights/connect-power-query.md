@@ -2,23 +2,23 @@
 title: Vključitev podatkov prek povezovalnika Power Query
 description: Povezovalniki za podatkovne vire, ki temeljijo na Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267794"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596933"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezava z virom podatkov Power Query
 
-Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Dynamics 365 Customer Insights podpira večino teh povezovalnikov. Dodajanje virov podatkov na podlagi povezovalnikov Power Query običajno sledi korakom, opisanim v naslednjem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Za več informacij glejte dokumentacijo o posameznih povezovalnikih v [sklicih na povezovalnike Power Query](https://docs.microsoft.com/power-query/connectors/).
+Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Dynamics 365 Customer Insights podpira večino teh povezovalnikov. Dodajanje virov podatkov na podlagi povezovalnikov Power Query običajno sledi korakom, opisanim v naslednjem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Za več informacij glejte dokumentacijo o posameznih povezovalnikih v [sklicih na povezovalnike Power Query](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Ustvarjanje novega vira podatkov
 
@@ -44,7 +44,7 @@ Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Dynamics 365 Cu
    > [!div class="mx-imgBorder"]
    > ![Pogovorno okno urejanja poizvedb](media/data-manager-configure-edit-queries.png "Pogovorno okno urejanja poizvedb")
 
-1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v oknu Power Query, da uporabite pretvorbe. Vsaka pretvorba je navedena pod **Uporabljeni koraki**. Power Query ponuja številne vnaprej vgrajene možnosti preoblikovanja. Če želite več informacij, glejte razdelek [Pretvorbe Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v oknu Power Query, da uporabite pretvorbe. Vsaka pretvorba je navedena pod **Uporabljeni koraki**. Power Query ponuja številne vnaprej vgrajene možnosti preoblikovanja. Če želite več informacij, glejte razdelek [Pretvorbe Power Query](/power-query/power-query-what-is-power-query#transformations).
 
 1. Virom podatkov lahko dodate dodatne entitete tako, da izberete **Pridobi podatke** v pogovornem oknu **Urejanje poizvedb**.
 
@@ -59,7 +59,7 @@ Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Dynamics 365 Cu
 
 ## <a name="available-power-query-data-sources"></a>Razpoložljivi viri podatkov Power Query
 
-Glejte [sklicevanje na povezovalnik Power Query](https://docs.microsoft.com/power-query/connectors/) za posodobljen seznam povezovalnikov, ki jih lahko izberete za uvoz podatkov v Customer Insights. 
+Glejte [sklicevanje na povezovalnik Power Query](/power-query/connectors/) za posodobljen seznam povezovalnikov, ki jih lahko izberete za uvoz podatkov v Customer Insights. 
 
 Povezovalniki s kljukico v stolpcu **Customer Insights (podatkovni toki)** so na voljo za ustvarjanje novih virov podatkov, ki temeljijo na Power Query. Preglejte dokumentacijo določenega povezovalnika, če želite izvedeti več o njegovih predpogojih, omejitvah in drugih podrobnostih.
 

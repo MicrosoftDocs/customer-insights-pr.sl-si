@@ -2,19 +2,19 @@
 title: Povezovalnik Power BI
 description: Seznanite se z uporabo povezovalnika Dynamics 365 Customer Insights v storitvi Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477108"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596059"
 ---
 # <a name="connector-for-power-bi-preview"></a>Povezovalnik za Power BI (predogled)
 
@@ -23,7 +23,7 @@ Ustvarite vizualizacije svojih podatkov s storitvijo Power BI Desktop. Ustvarite
 ## <a name="prerequisites"></a>Zahteve
 
 - Imate poenotene profile strank.
-- Najnovejša različica storitve [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je nameščena v računalnik. [Preberite več o storitvi Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Najnovejša različica aplikacije [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je nameščena v vašem računalniku. [Preberite več o storitvi Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konfiguracija povezovalnika za Power BI
 
@@ -47,7 +47,7 @@ Ustvarite vizualizacije svojih podatkov s storitvijo Power BI Desktop. Ustvarite
 
 ## <a name="large-data-sets"></a>Obsežni nabori podatkov
 
-Povezovalnik Customer Insights za Power BI je zasnovan tako, da deluje za nabore podatkov, ki imajo do 1 milijona profilov strank. Uvoz večjih naborov podatkov lahko deluje, vendar traja dolgo. Poleg tega lahko zaradi omejitev storitve Power BI pride do časovnih omejitev. Za več informacij glejte [Power BI: priporočila za obsežne nabore podatkov](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Povezovalnik Customer Insights za Power BI je zasnovan tako, da deluje za nabore podatkov, ki imajo do 1 milijona profilov strank. Uvoz večjih naborov podatkov lahko deluje, vendar traja dolgo. Poleg tega lahko zaradi omejitev storitve Power BI pride do časovnih omejitev. Za več informacij glejte [Power BI: priporočila za obsežne nabore podatkov](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Delo s podmnožico želenih podatkov
 
@@ -70,4 +70,3 @@ Podvojene odnose lahko prepoznate in jih odstranite.
 Po odstranitvi podvojenih odnosov poskusite znova konfigurirati povezovalnik storitve Power BI. Okolje bi moralo biti zdaj na voljo.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

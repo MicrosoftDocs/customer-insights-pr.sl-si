@@ -2,19 +2,19 @@
 title: Obogatite profile strank z storitvijo Microsoft Graph
 description: Uporabite lastniške podatke iz orodja Microsoft Graph, če želite obogatiti podatke o strankah s podatki o afiniteti do blagovnih znamk in zanimanj.
 ms.date: 12/10/2020
-ms.reviewer: kishorem
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: kishorem-MS
+ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: aa46dac4f9c0d27881371877b14a92a6725710da
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269350"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596473"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatitev profilov strank s podatki o afiniteti do blagovnih znamk in zanimanj (predogled)
 
@@ -33,7 +33,7 @@ V vpogledih v občinstvo odprite razdelek **Podatki** > **Obogatitev**, da [konf
 
 Podatke spletnega iskanja iz orodja Microsoft Graph uporabljamo za iskanje podatkov o afiniteti do blagovnih znamk in zanimanj v različnih demografskih segmentih (glede na starost, spol ali lokacijo). Obseg spletnega iskanja blagovne znamke ali zanimanja določa raven afinitete do blagovnih znamk ali zanimanj v posameznem demografskem segmentu v primerjavi z drugimi segmenti.
 
-[Več informacij o orodju Microsoft Graph](https://docs.microsoft.com/graph/overview).
+[Več informacij o orodju Microsoft Graph](/graph/overview).
 
 ## <a name="affinity-level-and-score"></a>Stopnja afinitete in ocena
 

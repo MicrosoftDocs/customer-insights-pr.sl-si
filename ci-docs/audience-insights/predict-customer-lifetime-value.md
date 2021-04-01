@@ -2,19 +2,19 @@
 title: Predvidevanje življenjske vrednosti stranke (CLV)
 description: Predvidevajte prihodnje potencialne prihodke za aktivne stranke.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268614"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595829"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predvidevanje življenjske vrednosti stranke (CLV) (predogled)
 
@@ -194,11 +194,11 @@ Na strani z rezultati so trije primarni razdelki podatkov.
   
   - **Uspešnost pri predvidevanju strank z visoko vrednostjo**
 
-  Oglejte si razliko pri napovedovanju kupcev z visoko vrednostjo z uporabo modela umetne inteligence v primerjavi z osnovnim modelom. 84-odstotna stopnja uspešnosti na primer pomeni, da je od vseh strank z visoko vrednostjo v podatkih za usposabljanje model umetne inteligence lahko natančno zajel 84 % strank. Nato to stopnjo uspešnosti primerjamo s stopnjo uspešnosti osnovnega modela, da poročamo o relativni spremembi. Ta vrednost se uporablja za dodelitev ocene modelu.
+    Oglejte si razliko pri napovedovanju kupcev z visoko vrednostjo z uporabo modela umetne inteligence v primerjavi z osnovnim modelom. 84-odstotna stopnja uspešnosti na primer pomeni, da je od vseh strank z visoko vrednostjo v podatkih za usposabljanje model umetne inteligence lahko natančno zajel 84 % strank. Nato to stopnjo uspešnosti primerjamo s stopnjo uspešnosti osnovnega modela, da poročamo o relativni spremembi. Ta vrednost se uporablja za dodelitev ocene modelu.
 
   - **Metrika napak**
     
-  Druga meritev omogoča pregled splošne uspešnosti modela z vidika napak pri predvidevanju prihodnjih vrednosti. Za oceno te napake uporabljamo meritev korena povprečne kvadratne napake (RMSE). Meritev RMSE je standardni način merjenja napak modela pri predvidevanju kvantitativnih podatkov. Meritev RMSE modela umetne inteligence se primerja z meritvijo RMSE osnovnega modela, poročana pa je relativna razlika.
+    Druga meritev omogoča pregled splošne uspešnosti modela z vidika napak pri predvidevanju prihodnjih vrednosti. Za oceno te napake uporabljamo meritev korena povprečne kvadratne napake (RMSE). Meritev RMSE je standardni način merjenja napak modela pri predvidevanju kvantitativnih podatkov. Meritev RMSE modela umetne inteligence se primerja z meritvijo RMSE osnovnega modela, poročana pa je relativna razlika.
 
   Model umetne inteligence daje prednost natančnemu razvrščanju strank glede na vrednost, ki jo prinašajo podjetju. Tako se za pridobitev končne ocene modela uporablja le stopnja uspešnosti predvidevanja strank z visoko vrednostjo. Meritev RMSE je občutljiva na odstopanja. V primerih, ko imate majhen delež strank z izjemno visokimi vrednostmi nakupa, splošna meritev RMSE morda ne zagotovi celotne slike o uspešnosti modela.   
 

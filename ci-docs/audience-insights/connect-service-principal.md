@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267742"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596519"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Povezovanje računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure za vpoglede v občinstvo
 
@@ -23,7 +23,7 @@ Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omej
 Z glavnim imenom storitve lahko varno [dodate ali uredite mapo Common Data Model kot vir podatkov](connect-common-data-model.md) ali [ustvarite novo oz. posodobite obstoječe okolje](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Račun za shrambo Azure Data Lake Gen2, ki namerava uporabiti glavno ime storitve, mora imeti [omogočeno funkcijo hierarhičnega imenskega prostora (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Račun za shrambo Azure Data Lake Gen2, ki namerava uporabiti glavno ime storitve, mora imeti [omogočeno funkcijo hierarhičnega imenskega prostora (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
 > - Za izdelavo glavnega imena storitve potrebujete skrbniška dovoljenja za naročnino Azure.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Ustvarjanje glavnega imena storitve Azure za vpoglede v občinstvo
@@ -48,7 +48,7 @@ Preden ustvarite novega glavnega imena storitve za vpoglede v občinstvo, prever
 
 ### <a name="create-a-new-service-principal"></a>Ustvari novo glavno ime storitve
 
-1. Namestite najnovejšo različico **Azure Active Directory PowerShell for Graph**. Za več informacij glejte [Namestitev storitve Azure Active Directory PowerShell for Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Namestite najnovejšo različico **Azure Active Directory PowerShell for Graph**. Za več informacij glejte [Namestitev storitve Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
    - V računalniku izberite tipko Windows na tipkovnici in poiščite možnosti **Windows PowerShell** in **Zaženi kot skrbnik**.
    
    - V oknu PowerShell, ki se odpre, vnesite `Install-Module AzureAD`.

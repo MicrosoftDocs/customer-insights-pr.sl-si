@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267926"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597439"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Uporaba modelov, ki temeljijo na strojnem učenju Azure
 
@@ -29,9 +29,9 @@ Združeni podatki v storitvi Dynamics 365 Customer Insights so vir za gradnjo mo
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Nastavitev delovnega prostora za strojno učenje Azure
 
-1. Glejte razdelek za [ustvarjanje delovnega prostora za strojno učenje Azure](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace), če želite spoznati različne možnosti ustvarjanja delovnega prostora. Za najboljšo zmogljivost ustvarite delovni prostor v območju Azure, ki je geografsko najbližje vašemu okolju Customer Insights.
+1. Glejte razdelek za [ustvarjanje delovnega prostora za strojno učenje Azure](/azure/machine-learning/concept-workspace#-create-a-workspace), če želite spoznati različne možnosti ustvarjanja delovnega prostora. Za najboljšo zmogljivost ustvarite delovni prostor v območju Azure, ki je geografsko najbližje vašemu okolju Customer Insights.
 
-1. Dostopajte do delovnega prostora prek [studia za strojno učenje Azure](https://ml.azure.com/). Obstaja več [načinov interakcije](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) z delovnim prostorom.
+1. Dostopajte do delovnega prostora prek [studia za strojno učenje Azure](https://ml.azure.com/). Obstaja več [načinov interakcije](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) z delovnim prostorom.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Delo z oblikovalnikom za strojno učenje Azure
 
@@ -39,13 +39,13 @@ Oblikovalnik za strojno učenje Azure ponuja vizualno delovno območje, kamor la
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Delo s SDK-jem za strojno učenje Azure
 
-Podatkovni znanstveniki in razvijalci umetne inteligence uporabljajo [SDK za strojno učenje Azure](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) za ustvarjanje potekov dela za strojno učenje. Trenutno modelov, naučenih z uporabo SDK-ja, ni mogoče neposredno integrirati s storitvijo Customer Insights. Za integracijo s storitvijo Customer Insights je potreben prodajni lijak za sklepanje glede paketov, ki uporablja ta model.
+Podatkovni znanstveniki in razvijalci umetne inteligence uporabljajo [SDK za strojno učenje Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) za ustvarjanje potekov dela za strojno učenje. Trenutno modelov, naučenih z uporabo SDK-ja, ni mogoče neposredno integrirati s storitvijo Customer Insights. Za integracijo s storitvijo Customer Insights je potreben prodajni lijak za sklepanje glede paketov, ki uporablja ta model.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Zahteve za prodajni lijak paketa za namene integracije s storitvijo Customer Insights
 
 ### <a name="dataset-configuration"></a>Konfiguracija nabora podatkov
 
-Ustvariti morate nabore podatkov, da boste lahko uporabili podatke entitete iz storitve Customer Insights v prodajnem lijaku za sklepanje glede paketov. Te nabore podatkov je treba registrirati v delovnem prostoru. Trenutno podpiramo samo [tabelarične nabore podatkov](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) v obliki .csv. Nabore podatkov, ki ustrezajo podatkom entitete, je treba razvrstiti kot parametre prodajnega lijaka.
+Ustvariti morate nabore podatkov, da boste lahko uporabili podatke entitete iz storitve Customer Insights v prodajnem lijaku za sklepanje glede paketov. Te nabore podatkov je treba registrirati v delovnem prostoru. Trenutno podpiramo samo [tabelarične nabore podatkov](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) v obliki .csv. Nabore podatkov, ki ustrezajo podatkom entitete, je treba razvrstiti kot parametre prodajnega lijaka.
    
 * Parametri nabora podatkov v oblikovalniku
    
@@ -76,7 +76,7 @@ Ustvariti morate nabore podatkov, da boste lahko uporabili podatke entitete iz s
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Uvoz podatkov prodajnega lijaka v Customer Insights
 
-* Oblikovalnik zagotavlja [modul za izvoz podatkov](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data), ki omogoča izvoz izhoda prodajnega lijaka v shrambo Azure. Trenutno mora modul uporabljati vrsto shrambe podatkov **Shramba zbirke dvojiških podatkov Azure** in nastaviti parameter **Shramba podatkov** in relativno **pot**. Customer Insights preglasi oba parametra med izvajanjem prodajnega lijaka s shrambo podatkov in potjo, ki je dostopna izdelku.
+* Oblikovalnik zagotavlja [modul za izvoz podatkov](/azure/machine-learning/algorithm-module-reference/export-data), ki omogoča izvoz izhoda prodajnega lijaka v shrambo Azure. Trenutno mora modul uporabljati vrsto shrambe podatkov **Shramba zbirke dvojiških podatkov Azure** in nastaviti parameter **Shramba podatkov** in relativno **pot**. Customer Insights preglasi oba parametra med izvajanjem prodajnega lijaka s shrambo podatkov in potjo, ki je dostopna izdelku.
    > [!div class="mx-imgBorder"]
    > ![Konfiguracija modula za izvoz podatkov](media/intelligence-designer-importdata.png "Konfiguracija modula za izvoz podatkov")
    

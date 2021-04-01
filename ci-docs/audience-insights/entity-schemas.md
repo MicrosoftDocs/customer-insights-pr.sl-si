@@ -2,25 +2,25 @@
 title: Sheme entitet Customer Insights v rešitvi Common Data Model
 description: Delo z entitetami v rešitvi Common Data Model.
 ms.date: 04/17/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269304"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596381"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Sheme entitet v rešitvi Common Data Model
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[Common Data Model](https://docs.microsoft.com/common-data-model/) je deklarativna specifikacija in opredelitev standardnih entitet, ki predstavljajo pogosto uporabljane koncepte in dejavnosti po poslovnih in storilnostnih aplikacijah. Ta model se širi tudi na podatke opazovanj in analitične podatke. Common Data Model zagotavlja dobro opredeljene, modularne in razširljive poslovne entitete – kot so kupec, poslovna enota, primer, stik, možna stranka, priložnost in izdelek – ter interakcije z dobavitelji, delavci in strankami – kot so dejavnosti in pogodbe o ravni storitve. Vsakdo lahko nadgradi in razširi definicije Common Data Model, da zajame dodatne poslovne zamisli.
+[Common Data Model](/common-data-model/) je deklarativna specifikacija in opredelitev standardnih entitet, ki predstavljajo pogosto uporabljane koncepte in dejavnosti po poslovnih in storilnostnih aplikacijah. Ta model se širi tudi na podatke opazovanj in analitične podatke. Common Data Model zagotavlja dobro opredeljene, modularne in razširljive poslovne entitete – kot so kupec, poslovna enota, primer, stik, možna stranka, priložnost in izdelek – ter interakcije z dobavitelji, delavci in strankami – kot so dejavnosti in pogodbe o ravni storitve. Vsakdo lahko nadgradi in razširi definicije Common Data Model, da zajame dodatne poslovne zamisli.
 
 To je model podatkov v skupni rabi, ki aplikacijam in integratorjem podatkov omogoča lažje sodelovanje z zagotavljanjem enotne definicije podatkov. Common Data Model vključuje bogat sistem metapodatkov s standardnimi entitetami, odnosi, hierarhijami, lastnostmi in drugim. Izvira iz aplikacij Dynamics 365 in je storitvi GitHub odprtokodni model z več kot 260 standardnimi entitetami. Velik sistem notranjih in zunanjih partnerjev prispeva industrijske koncepte v Common Data Model.
 
@@ -32,13 +32,13 @@ Da bi vzpostavili popoln pregled stranke in poskrbeli za razpoložljivost modelo
 
 | Entiteta | Opis |
 |---------|---------|
-|[CustomerActivity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Dejavnost, ki jo izvaja uporabnik in ima opazovalno vrednost za poslovanje. |
-|[CustomerProfile](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Oseba ali organizacija, ki je opravljala poslovno dejavnost ali ima potencial za vključitev v poslovno dejavnost. |
-|[MeasureDefinition](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definicija dogodkov KPI, razdeljenih na nič ali več dimenzij (npr. mesečno aktivni uporabniki, skupna poraba stranke, povprečni stroški pridobitve stranke) |
-|[Segment](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Določa skupino članov s skupnimi lastnostmi. |
-|[SegmentMembership](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Člani, ki sodelujejo v določenem segmentu. |
+|[CustomerActivity](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Dejavnost, ki jo izvaja uporabnik in ima opazovalno vrednost za poslovanje. |
+|[CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | Oseba ali organizacija, ki je opravljala poslovno dejavnost ali ima potencial za vključitev v poslovno dejavnost. |
+|[MeasureDefinition](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definicija dogodkov KPI, razdeljenih na nič ali več dimenzij (npr. mesečno aktivni uporabniki, skupna poraba stranke, povprečni stroški pridobitve stranke) |
+|[Segment](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Določa skupino članov s skupnimi lastnostmi. |
+|[SegmentMembership](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Člani, ki sodelujejo v določenem segmentu. |
 
-Za več informacij glejte dokumentacijo o [shemah entitet Customer Insights v Common Data Model](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
+Za več informacij glejte dokumentacijo o [shemah entitet Customer Insights v Common Data Model](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Prikaz entitet z uporabo orodja Common Data Model Entity Navigator
 

@@ -2,19 +2,19 @@
 title: Povezovalnik Power Apps
 description: Povezava s storitvama Power Apps in Power Automate.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268936"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598175"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Povezovalnik storitve Microsoft Power Apps (predogled)
 
@@ -22,9 +22,9 @@ Vnesite poenotene profile strank v svoje prilagojene aplikacije s storitvijo Pow
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Povezava storitev Power Apps in Dynamics 365 Customer Insights
 
-Storitev Customer Insights je ena od mnogih [razpoložljivih virov podatkov v storitvi Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Storitev Customer Insights je ena od mnogih [razpoložljivih virov podatkov v storitvi Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Oglejte si dokumentacijo za Power Apps, če želite izvedeti več o [dodajanju podatkovne povezave v aplikacijo](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Priporočamo, da pregledate tudi [kako se v storitvi Power Apps uporablja pooblastitve za obdelavo velikih množic podatkov v aplikacijah s platnom](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Oglejte si dokumentacijo za Power Apps, če želite izvedeti več o [dodajanju podatkovne povezave v aplikacijo](/powerapps/maker/canvas-apps/add-data-connection). Priporočamo, da pregledate tudi [kako se v storitvi Power Apps uporablja pooblastitve za obdelavo velikih množic podatkov v aplikacijah s platnom](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Entitete, ki so na voljo
 
@@ -47,11 +47,11 @@ Pooblastitev deluje za entiteto »Stranka« in entiteto »UnifiedActivity«.
 
 - Pooblastitev za entiteto **UnifiedActivity**: pooblastitev za to entiteto deluje samo za polja **ActivityId** in **CustomerId**.  
 
-- Za več informacij o pooblastitvi glejte [Funkcije in postopki v storitvi Power Apps. ki jih je mogoče pooblastiti](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+- Za več informacij o pooblastitvi glejte [Funkcije in postopki v storitvi Power Apps. ki jih je mogoče pooblastiti](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Primer kontrolnika galerije
 
-Profile strank na primer dodate v [kontrolnik galerije](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Profile strank na primer dodate v [kontrolnik galerije](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Aplikaciji, ki jo ustvarjate, dodajte kontrolnik **Galerija**.
 

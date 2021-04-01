@@ -5,16 +5,16 @@ ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268292"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595921"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Delne podatke dopolnite s predvidevanji
 
@@ -31,7 +31,7 @@ Predvidevanja omogočajo preprosto ustvarjanje predvidenih vrednosti, ki okrepij
 
 Preden lahko vaša organizacija uporablja funkcijo predvidevanj, morajo biti izpolnjeni naslednji predpogoji:
 
-1. Vaša organizacija ima primerek [nastavljen v storitvi Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) in je v isti organizaciji kot Customer Insights.
+1. Vaša organizacija ima primerek [nastavljen v storitvi Common Data Service](/ai-builder/build-model#prerequisites) in je v isti organizaciji kot Customer Insights.
 
 2. Vaše okolje je vezano na vaš primerek Common Data Service.
 
@@ -120,7 +120,7 @@ Ko ste ustvarili predvidevanja, lahko prilagodite model v orodju AI Builder, da 
 
 4. Izberite **Prilagajanje v orodju AI Builder**.
 
-5. Posodobite model v orodju AI Builder. [Preberite več o upravljanju modelov v orodju AI Builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Posodobite model v orodju AI Builder. [Preberite več o upravljanju modelov v orodju AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Ob naslednjem zagonu predvidevanja bo uporabljen ustvarjeni posodobljeni model.
 

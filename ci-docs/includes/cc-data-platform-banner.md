@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 133555881fcbb0bcecb0749343d0aef970405af2
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a953b35b7299500471457d826332563e007a28e3
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643373"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595630"
 ---
 > [!NOTE]
-> Velja od novembra 2020:
-> - Common Data Service je bil preimenovan v Microsoft Dataverse. [Več o tem](https://aka.ms/PAuAppBlog)
-> - Nekaj terminologije v storitvi Microsoft Dataverse je bilo posodobljene. *Entiteta* je zdaj na primer *tabela*, *polje* pa je zdaj *stolpec*. [Več o tem](https://go.microsoft.com/fwlink/?linkid=2147247)
+> Veljavno od novembra 2020:
+> - Storitev Common Data Service je bila preimenovana v Microsoft Dataverse. [Več o tem](https://aka.ms/PAuAppBlog)
+> - V storitvi Microsoft Dataverse je bil posodobljen del terminologije. Na primer: *entiteta* je zdaj *tabela* in *polje* je zdaj *stolpec*. [Več o tem](/powerapps/maker/data-platform/data-platform-intro)
 >
-> Ta članek bo kmalu posodobljen, da bo odražal najnovejšo terminologijo.
+> Ta članek bo kmalu posodobljen z najnovejšo terminologijo.
