@@ -1,7 +1,7 @@
 ---
 title: Nove in prihajajoče funkcije
 description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270452"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598502"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Navdušeno sporočamo, da so najnovejše posodobitve pripravljene! V tem članku so povzete funkcije predogledne različice za javnost, splošne izboljšave razpoložljivosti in posodobitve funkcij. Če si želite ogledati dolgoročne načrte za funkcije, glejte [Načrti za izdajo storitev Dynamics 365 in Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Navdušeno sporočamo, da so najnovejše posodobitve pripravljene! V tem članku so povzete funkcije predogledne različice za javnost, splošne izboljšave razpoložljivosti in posodobitve funkcij. Če si želite ogledati dolgoročne načrte za funkcije, glejte [Načrti za izdajo storitev Dynamics 365 in Power Platform](/dynamics365/release-plans/).
 
 Če želite izvedeti več o zmogljivostih, načrtovanih v zadnjih šestih mesecih, si lahko ogledate tudi naslednji videoposnetek.
 
@@ -30,6 +30,40 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Posodobitve februarja 2021
+
+Posodobitve v februarju 2021 vključujejo več funkcij, nadgradnje zmogljivosti in popravke napak.
+
+#### <a name="extensibility"></a>Razširljivost
+
+- **Izvoz segmentov v AdRoll**
+
+  Cilje za izvoz smo razširili na storitev AdRoll. Zdaj lahko izvozite segmente iz Customer Insights v občinstva AdRoll in jih uporabite kot osnovni model za oglaševanje. Če želite več informacij, glejte razdelek [Povezovalnik za AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmenti
+ 
+- **Podvajanje segmenta**
+  
+  Če želite na podlagi obstoječega segmenta ustvariti novega, lahko segment podvojite segment in ga uredite, da ga še izboljšate. 
+
+- **Dodajanje dodatnih atributov segmentu**
+
+  Zdaj lahko v izhod segmenta vključite atribute, tudi če ti atributi niso del profila stranke. Vključite na primer ID-je naročnin v segment, čeprav je del naročniške entitete, ki ima razmerje M:1 z entiteto stranke. Dokler atribut pripada entiteti, povezani z entiteto stranke, lahko te atribute vključite.  
+
+#### <a name="predictions"></a>Predvidevanja
+
+- **Ustvarjanje predvidenih priporočil izdelkov**
+
+  Eden prvih korakov za izboljšanje poslovnega prihodka in povečanje zvestobe strank s prilagajanjem in sodelovanjem je razumeti, za nakup česa se zanimajo stranke. Podajanje priporočil za izdelke, ki niso usklajeni z interesi vaše stranke, lahko ustvari občutek nepovezanosti med stranko in vašim podjetjem ter na koncu omeji skupni potencialni prihodek in izkušnjo stranke. 
+
+  Z lastnimi podatki lahko zdaj ustvarite predvidevanja za izdelke, ki jih bodo vaše stranke verjetno kupile v prihodnosti. Za več informacij glejte [Predvidevanje priporočil izdelkov](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Skrbništvo sistema
+
+- **Okolje za kopiranje podpira več vrst virov podatkov**
+
+  Skrbniki lahko kopirajo konfiguracije okolja v novo okolje v isti organizaciji. Ta funkcija razširja funkcionalnost okolja za kopiranje za primere, v katerih so uporabljeni viri podatkov, ki temeljijo na jezeru podatkov Common Data Service, ali mapa Common Data Model.
 
 ## <a name="january-2021-updates"></a>Posodobitve v januarju 2021
 

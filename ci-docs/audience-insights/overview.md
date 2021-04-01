@@ -2,19 +2,19 @@
 title: Pregled vpogledov v občinstvo v storitvi Dynamics 365 Customer Insights
 description: Pregled vpogledov v občinstvo v storitvi Dynamics 365 Customer Insights
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477015"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598650"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Pregled vpogledov v občinstvo v storitvi Dynamics 365 Customer Insights
 
@@ -25,7 +25,7 @@ Vpogledi v občinstvo vam pomagajo bolje razumeti svoje stranke. Povežite podat
 - **Odstranijo podatkovne silose in poenotijo podatke o strankah**
 
   - Svoje podatke lahko preprosto povežete in poenotite – združite podatke o transakcijah, opazovanju in vedenju iz priljubljenih [virov podatkov z uporabo vnaprej pripravljenih povezovalnikov](data-sources.md).
-  - Pametno pretvarjanje podatkov o strankah - sestavite poenotene profile strank, ki ustrezajo modelu [Common Data Model](https://docs.microsoft.com/common-data-model/). Razrešite identitete strank s priporočili na osnovi priporočil UI/strojnega učenja.
+  - Pametno pretvarjanje podatkov o strankah - sestavite poenotene profile strank, ki ustrezajo modelu [Common Data Model](/common-data-model/). Razrešite identitete strank s priporočili na osnovi priporočil UI/strojnega učenja.
 
 - **Obogatitev obveščanja občinstva, ki jo vsebuje orodje Microsoft Graph**
 
@@ -42,7 +42,7 @@ Vpogledi v občinstvo vam pomagajo bolje razumeti svoje stranke. Povežite podat
 - **Analitiki/skrbniki podatkov:**
 
   - Dostop do bogate zbirke povezovalnikov za sprejem vseh podatkov o strankah.
-  - Sposobnost poenotenja podatkov o strankah in njihovo pretvorbo v obliko [Common Data Model](https://docs.microsoft.com/common-data-model/).
+  - Sposobnost poenotenja podatkov o strankah in njihovo pretvorbo v obliko [Common Data Model](/common-data-model/).
   - Informacije o strankah obogatite z vpogledi iz obveščanja občinstva, ki jih vsebuje Microsoft Graph, na primer o priljubljenosti blagovnih znamk in interesih.
   - Konfiguracija »Kliki-ne-koda« in izkušnja z iskanjem napak za preprostejšo konfiguracijo vpogledov v občinstvo in prepoznavanje morebitnih težav.
   - Očistite in standardizirajte podatke o strankah v različnih virih s priporočili umetne inteligence.  

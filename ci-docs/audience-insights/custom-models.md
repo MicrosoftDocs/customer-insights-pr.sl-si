@@ -1,19 +1,20 @@
 ---
 title: Modeli strojnega učenja po meri | Microsoftovo gradivo
 description: Uporabite modele po meri iz rešitve za strojno učenje Azure v aplikaciji Dynamics 365 Customer Insights.
-ms.date: 11/19/2020
-ms.reviewer: zacook
-ms.service: dynamics-365-ai
+ms.date: 03/22/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
+ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267254"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "5700688"
 ---
 # <a name="custom-machine-learning-models"></a>Modeli strojnega učenja po meri
 
@@ -21,13 +22,18 @@ Možnost **Obveščanje** > **Modeli po meri** vam omogoča upravljanje potekov 
 
 ## <a name="responsible-ai"></a>Odgovorna umetna inteligenca
 
-Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, izboljšanje poslovnih zmogljivosti in virov prihodkov. Močno priporočamo, da vrednost predvidevanja uravnotežite z vplivom in pristranskostmi, ki bi jih lahko uvedli na etičen način. Preberite več o tem, kako Microsoft [obravnava odgovorno ravnanje umetne inteligence](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Preberete lahko tudi o [tehnikah in postopkih za odgovorno strojno učenje](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml), specifično za Strojno učenje Azure.
+Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, izboljšanje poslovnih zmogljivosti in virov prihodkov. Močno priporočamo, da vrednost predvidevanja uravnotežite z vplivom in pristranskostmi, ki bi jih lahko uvedli na etičen način. Preberite več o tem, kako Microsoft [obravnava odgovorno ravnanje umetne inteligence](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Preberete lahko tudi o [tehnikah in postopkih za odgovorno strojno učenje](/azure/machine-learning/concept-responsible-ml), specifično za Strojno učenje Azure.
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Trenutno ta funkcija podpira spletne storitve, objavljene prek možnosti [studio za strojno učenje (klasični način)](https://studio.azureml.net) in [prodajni lijaki paketov za strojno učenje Azure](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines).
+- Trenutno ta funkcija podpira spletne storitve, objavljene prek možnosti [studio za strojno učenje (klasični način)](https://studio.azureml.net) in [prodajni lijaki paketov za strojno učenje Azure](/azure/machine-learning/concept-ml-pipelines).
 
-- Za uporabo te funkcije potrebujete račun za shranjevanje Azure Data Lake Gen2, povezan z vašim primerkom studia Azure. Če želite več informacij, glejte [Ustvarjanje računa za shrambo Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+- Za uporabo te funkcije potrebujete račun za shranjevanje Azure Data Lake Gen2, povezan z vašim primerkom studia Azure. Če želite več informacij, glejte [Ustvarjanje računa za shrambo Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+
+- Za delovne prostore za strojno učenje Azure s prodajnimi lijaki potrebujete skrbniška dovoljenja za dostop lastnika ali uporabnika do delovnega prostora za strojno učenje Azure.
+
+   > [!NOTE]
+   > Podatki se prenašajo med vašimi primerki Customer Insights in izbranimi spletnimi storitvami Azure ali prodajnimi lijaki v poteku dela. Ko prenesete podatke v storitev Azure, se prepričajte, da je storitev konfigurirana za obdelavo podatkov za takšen način in lokacijo, ki sta potrebna za izpolnjevanje zakonskih zahtev ali zahtev za skladnost s predpisi, potrebnimi za te podatke, za vašo organizacijo.
 
 ## <a name="add-a-new-workflow"></a>Dodajanje novega poteka dela
 
@@ -45,8 +51,8 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 1. Izberite **delovne prostore**, povezane z vašo spletno storitvijo. Na seznamu sta navedena dva razdelka, eden za Strojno učenje Azure različice 1 (Studio za strojno učenje (klasični način)) in Strojno učenje Azure različice 2 (Strojno učenje Azure). Če niste prepričani, kateri delovni prostor je pravi za vašo spletno storitev studia za strojno učenje (klasični način), izberite **Poljubno**.
 
 1. Izberite spletno storitev studia za strojno učenje (klasični način) ali prodajni lijak za strojno učenje Azure na spustnem seznamu **Spletna storitev, ki vsebuje vaš model**. Nato izberite **Naprej**.
-   - Preberite več o [objavi spletne storitve studia za strojno učenje (klasični način)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service).
-   - Preberite več o [objavi prodajnega lijaka v storitvi Strojno učenje Azure z uporabo oblikovalnika](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ali [SDK-jem](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš prodajni lijak mora biti objavljen v okviru [končne točke prodajnega lijaka](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Preberite več o [objavi spletne storitve studia za strojno učenje (klasični način)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service).
+   - Preberite več o [objavi prodajnega lijaka v storitvi Strojno učenje Azure z uporabo oblikovalnika](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ali [SDK-jem](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš prodajni lijak mora biti objavljen v okviru [končne točke prodajnega lijaka](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za vsak **vnos spletne storitve** izberite ujemajočo se **entiteto** iz vpogledov v občinstvo in izberite **Naprej**.
    > [!NOTE]
@@ -54,7 +60,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 
    > [!div class="mx-imgBorder"]
    > ![Konfiguriranje poteka dela](media/intelligence-screen2-updated.png "Konfiguriranje poteka dela")
-   
+
 1. Pri koraku **Parametri izhodnih podatkov modela** nastavite naslednje lastnosti:
    - Studio za strojno učenje (klasični način)
       1. Vnesite izhodno **ime entitete**, v katero želite, da se stekajo izhodni rezultati spletne storitve.
@@ -62,12 +68,12 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
       1. Vnesite izhodno **ime entitete**, v katero želite, da se stekajo izhodni rezultati prodajnega lijaka.
       1. Izberite **Ime parametra shrambe izhodnih podatkov** za prodajni lijak paketov s spustnega seznama.
       1. Izberite **Ime parametra shrambe poti za izhodne podatke** za prodajni lijak paketov s spustnega seznama.
-      
+
       > [!div class="mx-imgBorder"]
       > ![Podokno parametrov izhodnih podatkov modela](media/intelligence-screen3-outputparameters.png "Podokno parametrov izhodnih podatkov modela")
 
 1. Na spustnem seznamu **ID stranke v rezultatih** izberite ujemajoč se atribut, ki prepozna stranke, in izberite **Shrani**.
-   
+
    > [!div class="mx-imgBorder"]
    > ![Povezava rezultatov s podoknom podatkov o strankah](media/intelligence-screen4-relatetocustomer.png "Povezava rezultatov s podoknom podatkov o strankah")
 
@@ -95,7 +101,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
       1. Izberite **Ime parametra poti za izhodne podatke** za preskusni prodajni lijak.
 
 1. Na spustnem seznamu **ID stranke v rezultatih** izberite ujemajoč se atribut, ki prepozna stranke, in izberite **Shrani**.
-   Prek izhodnih podatkov za sklepanje morate izbrati atribut z vrednostmi, podobnimi stolpcu ID stranke pri entiteti stranke. Če v naboru podatkov nimate takega stolpca, izberite atribut, ki enolično prepozna vrstico.
+   Prek izhodnih podatkov za sklepanje izberite atribut z vrednostmi, podobnimi stolpcu ID stranke pri entiteti stranke. Če v naboru podatkov nimate takega stolpca, izberite atribut, ki enolično prepozna vrstico.
 
 ## <a name="run-a-workflow"></a>Zagon poteka dela
 
@@ -113,5 +119,28 @@ Z vsakim načrtovanim osveževanjem se samodejno zažene tudi vaš potek dela. P
 
 Vaš potek dela bo izbrisan. [Entiteta](entities.md), ki je bila ustvarjena, ko ste ustvarili potek dela, se ohrani in si jo lahko ogledate na strani **Entitete**.
 
+## <a name="results"></a>Rezultati
+
+Rezultati poteka dela so shranjeni v entiteti, konfigurirani med fazo parametrov izhodnih podatkov modela. Do teh podatkov lahko dostopate na [strani entitet](entities.md) ali z [dostopom do API-ja](apis.md).
+
+### <a name="api-access"></a>Dostop do API-ja
+
+Za posebno poizvedbo OData za pridobitev podatkov iz entitete modela po meri uporabite naslednjo obliko:
+
+`https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
+
+1. Zamenjajte `<your instance id>` z ID-jem okolja Customer Insights, ki ga najdete v naslovni vrstici brskalnika, ko dostopate do Customer Insights.
+
+1. Zamenjajte `<custom model output entity>` z imenom entitete, ki ste ga navedli pri koraku »Parametri izhodnih podatkov modela« pri konfiguraciji modela po meri.
+
+1. Zamenjajte `<guid value>` z ID-jem stranke, za katero želite dostopati do zapisa. Običajno lahko ta ID najdete na [strani s profili strank](customer-profiles.md) v polju CustomerID.
+
+## <a name="frequently-asked-questions"></a>Pogosta vprašanja
+
+- Zakaj pri nastavitvi poteka dela modela po meri ne vidim svojega prodajnega lijaka?    
+  To težavo pogosto povzroča težava s konfiguracijo v prodajnem lijaku. Zagotovite, da je [vhodni parameter konfiguriran](azure-machine-learning-experiments.md#dataset-configuration) in da so [parametri izhodne podatkovne shrambe in poti](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights) prav tako konfigurirani.
+
+- Kaj pomeni napaka »Ne morem shraniti poteka dela obveščanja«?    
+  Uporabniki to sporočilo o napaki običajno vidijo, če v delovnem prostoru nimajo skrbniških pravic za dostop lastnika ali uporabnika. Uporabnik potrebuje višjo raven dovoljenj, da storitvi Customer Insights omogoči obdelavo poteka dela kot storitev, namesto da uporablja uporabniške poverilnice za naslednje zagone poteka dela.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
