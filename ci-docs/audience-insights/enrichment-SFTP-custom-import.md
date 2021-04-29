@@ -1,7 +1,7 @@
 ---
 title: Obogatitev z uvozom po meri SFTP
 description: Splošne informacije o obogatitvi uvoza po meri SFTP.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595875"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896301"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogatite profile strank s podatki po meri (predogled)
 
-Uvoz po meri s protokolom za varen prenos datotek (SFTP) vam omogoča uvoz podatkov, ki jim ni treba iti skozi postopek poenotenja podatkov. To je prilagodljiv, varen in enostaven način za vnos podatkov. Uvoz po meri SFTP se lahko uporablja v kombinaciji z [izvozom SFTP](export-sftp.md), ki vam omogoča izvoz podatkov o profilih strank, ki so potrebni za obogatitev. Podatke lahko nato obdelamo in obogatimo ter uporabimo uvoz po meri SFTP, da obogatene podatke vrnemo nazaj k zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights.
+Uvoz po meri s protokolom za varen prenos datotek (SFTP) omogoča uvoz podatkov, za katere ni potreben postopek poenotenja podatkov. To je prilagodljiv, varen in enostaven način za vnos podatkov. Uvoz po meri SFTP se lahko uporablja v kombinaciji z [izvozom SFTP](export-sftp.md), ki vam omogoča izvoz podatkov o profilih strank, ki so potrebni za obogatitev. Podatke lahko nato obdelamo in obogatimo ter uporabimo uvoz po meri SFTP, da obogatene podatke vrnemo nazaj k zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Zahteve
 
 Za konfiguracijo uvoza po meri SFTP morajo biti izpolnjeni naslednji predpogoji:
 
-- Imate uporabniške poverilnice (uporabniško ime in geslo) za lokacijo SFTP, od koder bodo uvoženi podatki.
-- Imate URL in številko vrat (običajno 22) za gostitelja STFP.
-- Pri gostitelju SFTP imate ime in lokacijo datoteke, ki jo želite uvoziti.
-- Tam je datoteka *model.json*, ki določa shemo za podatke, ki jih želite uvoziti. Ta datoteka mora biti v istem imeniku kot datoteka za uvoz.
-- Imate [skrbniško](permissions.md#administrator) dovoljenje.
+- Imate ime in lokacijo (pot) datoteke, ki jo želite uvoziti v gostitelja SFTP.
+- Obstaja datoteka z obliko zapisa *model.json*, ki določa [shemo za podatkovni model Common Data Model](/common-data-model/) za uvoz podatkov. Ta datoteka mora biti v istem imeniku kot datoteka za uvoz.
+- Skrbnik je že konfiguriral povezavo SFTP *oziroma* imate vi [skrbniška](permissions.md#administrator) dovoljenja. Potrebujete uporabniške poverilnice, URL in številko vrat za lokacijo SFTP, iz katere želite uvoziti podatke.
 
-## <a name="configuration"></a>Konfiguracija
+
+## <a name="configure-the-import"></a>Konfiguriranje uvoza
 
 1. Pojdite v **Podatki** > **Obogatitev** in izberite zavihek **Odkrivanje**.
 
-1. V **ploščici za uvoz po meri SFTP** izberite **Obogatitev podatkov**.
+1. Na **ploščici za uvoz po meri SFTP** izberite možnost **Obogatitev podatkov** in nato izberite možnost **Začetek**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Ploščica za uvoz po meri SFTP](media/SFTP_Custom_Import_tile.png "Ploščica za uvoz po meri SFTP")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Ploščica za uvoz po meri SFTP.":::
 
-1. Izberite **Začetek** in vnesite poverilnice in naslov strežnika SFTP. Na primer sftp://mysftpserver.com:22.
+1. Na spustnem seznamu izberite [povezavo](connections.md). Če ni na voljo nobena povezava, se obrnite na skrbnika. Če ste skrbnik, lahko vzpostavite povezavo tako, da izberete možnost **Dodaj povezavo** in na spustnem meniju izberete možnost **Uvoz po meri SFTP**.
 
-1. Vnesite ime datoteke, ki vsebuje podatke in pot do datoteke v strežniku SFTP, če ni v korenski mapi.
+1. Izberite možnost **Poveži z uvozom po meri** za potrditev izbrane povezave.
 
-1. Potrdite vse vnose z izbiro možnosti **Povezovanje z uvozom po meri**.
+1.  Izberite možnost **Naprej** in vnesite **Ime datoteke** in **Pot** podatkovne datoteke, ki jo želite uvoziti.
 
-   > [!div class="mx-imgBorder"]
-   > ![Pojavni meni za konfiguracijo uvoza po meri SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Pojavni meni za konfiguracijo uvoza po meri SFTP")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Posnetek zaslona vnosa lokacije podatkov.":::
+
+1. Izberite možnost **Naprej** ter navedite ime obogatitve in izhodne entitete. 
+
+1. Po pregledu svoje izbire izberite možnost **Shrani obogatitev**.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfiguriranje povezave za uvoz uvoz po meri SFTP 
+
+Za konfiguriranje povezav morate biti skrbnik. Pri konfiguriranju obogatitve izberite možnost **Dodaj povezavo** *ali* odprite razdelek **Skrbnik** > **Povezave** in na ploščici Uvoz po meri izberite možnost **Nastavitev**.
+
+1. Vnesite ime povezave v polje za **prikazno ime**.
+
+1. Vnesite veljavno uporabniško ime, geslo in URL gostitelja strežnika STFP, na katerem so podatki, ki jih želite uvoziti.
+
+1. Preberite in podajte soglasje za **Zasebnost podatkov in skladnost** tako, da potrdite polje **Strinjam se**.
+
+1. Izberite možnost **Potrdi** za potrditev konfiguracije.
+
+1. Ko je preverjanje končano, lahko povezavo shranite s klikom možnosti **Shrani**.
+
+> [!div class="mx-imgBorder"]
+   > ![Stran za konfiguriranje povezave z Experian](media/enrichment-SFTP-connection.png "Stran za konfiguriranje povezave z Experian")
+
 
 ## <a name="defining-field-mappings"></a>Opredelitev preslikav polja 
 
@@ -105,8 +124,5 @@ Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izber
 ## <a name="next-steps"></a>Naslednji koraki
 
 Nadgradite svoje obogatene podatke o strankah. Ustvarite [segmente](segments.md), [mere](measures.md) in [izvozite podatke](export-destinations.md), da svojim strankam zagotovite prilagojene izkušnje.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

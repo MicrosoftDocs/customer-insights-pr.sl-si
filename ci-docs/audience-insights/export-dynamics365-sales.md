@@ -1,7 +1,7 @@
 ---
 title: Izvozite podatke Customer Insights v Dynamics 365 Sales
-description: Naučite se konfigurirati povezavo s storitvijo Dynamics 365 Sales.
-ms.date: 02/01/2021
+description: Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Sales.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,35 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 39ecdf528c6be4d8fb420a52a6ed998317e43bcd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fc1a05ba4d21d96aa1a9724d158687bbb86949b6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598129"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759624"
 ---
-# <a name="connector-for-dynamics-365-sales-preview"></a>Povezovalnik za Dynamics 365 Sales (predogled)
+# <a name="use-segments-in-dynamics-365-sales-preview"></a>Uporaba segmentov v storitvi Dynamics 365 Sales (predogledna različica)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Na podlagi podatkov o strankah z aplikacijo Dynamics 365 Sales ustvarjajte sezname za trženje in postopke za nadaljnje delo ter pošiljajte promocijske vsebine.
 
-## <a name="prerequisite"></a>Predpogoj
+## <a name="prerequisite-for-connection"></a>Predpogoj za povezavo
 
 1. Zapisi o stikih morajo biti prisotni v storitvi Dynamics 365 Sales, preden lahko izvozite segment iz rešitve Customer Insights v Sales. Preberite več o vključevanju stikov v storitvi [Dynamics 365 Sales z uporabo rešitve Common Data Services](connect-power-query.md).
 
    > [!NOTE]
    > Z izvozom segmentov iz vpogledov v občinstvo v rešitev Sales ne bodo ustvarjeni novi zapisi stikov v primerkih aplikacije Sales. Zapise o stikih iz rešitve Sales je treba vključiti v vpoglede v občinstvo in jih uporabiti kot vir podatkov. Prav tako jih je treba vključiti v enotno entiteto stranke, da se ID-ji strank preslikajo v ID-je stikov, preden je segmente mogoče izvoziti.
 
-## <a name="configure-the-connector-for-sales"></a>Konfiguracija povezovalnika za Sales
+## <a name="set-up-the-connection-to-sales"></a>Nastavitev povezave s storitvijo Sales
 
-1. Pri vpogledih v občinstvo izberite **Skrbnik** > **Cilji izvoza**.
+1. Odprite razdelek **Skrbnik** > **Povezave**.
 
-1. Pod možnostjo **Dynamics 365 Sales** izberite **Nastavitev**.
+1. Izberite **Dodajanje povezave** in izberite **Dynamics 365 Sales** za konfiguracijo povezave.
 
-1. Dajte svojemu cilju izvoza prepoznavno ime v polju **Prikazno ime**.
+1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**. Ime in vrsta povezave opisujeta to povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
+
+1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Vnesite URL za Sales vaše organizacije v polje **Naslov strežnika**.
 
@@ -43,15 +45,24 @@ Na podlagi podatkov o strankah z aplikacijo Dynamics 365 Sales ustvarjajte sezna
 
 1. Polje za ID stranke preslikajte v ID stika za Dynamics 365.
 
-1. Izberite **Naprej**.
+1. Izberite možnost **Shrani**, da dokončate povezavo. 
+
+## <a name="configure-an-export"></a>Konfiguriranje izvoza
+
+Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Odprite razdelek **Podatki** > **Izvozi**.
+
+1. Za ustvarjanje novega izvoza izberite **Dodaj cilj**.
+
+1. V polju **Povezava za izvoz** izberite povezavo v razdelku Dynamics 365 Sales. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
 
 1. Izberite enega ali več segmentov.
 
-1. Izberite **Shrani**.
+1. Izberite **Shrani**
 
-## <a name="export-the-data"></a>Izvoz podatkov
+S shranjevanjem izvoza se ta ne zažene takoj.
 
-Lahko [izvozite podatke na zahtevo](export-destinations.md). Izvoz se bo zagnal tudi z vsakim [načrtovanim osveževanjem](system.md#schedule-tab).
-
+Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

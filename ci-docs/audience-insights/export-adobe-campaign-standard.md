@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov iz storitve Customer Insights v aplikacijo Adobe Campaign Standard
 description: Preberite, kako uporabljati segmente vpogleda v občinstvo v aplikaciji Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596335"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760301"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Uporaba segmentov storitve Customer Insights v aplikaciji Adobe Campaign Standard (predogledna različica)
 
@@ -48,15 +48,21 @@ E-poštno sporočilo, ki ga želite poslati, bo vsebovalo ime, priimek in končn
 
 ## <a name="export-your-target-audience"></a>Izvoz ciljnega občinstva
 
+### <a name="configure-a-connection"></a>Konfiguriranje povezave
+
 Ko je ciljno občinstvo določeno, lahko konfiguriramo izvoz iz vpogledov v občinsto v račun za shrambo zbirke dvojiških podatkov Azure.
 
-1. Pri vpogledih v občinstvo izberite **Skrbnik** > **Cilji izvoza**.
+1. V pogledih v občinstvo odprite razdelek **Skrbnik** > **Povezave**.
 
-1. Na ploščici **Adobe Campaign** izberite **Nastavi**.
+1. Izberite možnost **Dodaj povezavo** in izberite **Adobe Campaign**, da konfigurirate povezavo, ali izberite možnost **Nastavitev** na ploščici za **Adobe Campaign**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Konfiguracijska ploščica za Adobe Campaign Standard.":::
 
-1. Navedite **prikazno ime** za novi cilj izvoza ter vnesite **ime računa**, **ključ računa** in **vsebnik** računa za shrambo zbirke dvojiških podatkov Azure, kamor želite izvoziti segment.  
+1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**. Ime in vrsta povezave opisujeta to povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
+
+1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Vnesite **Ime računa**, **Ključ računa** in **Vsebnik** računa Azure Blob Storage, kamor želite izvoziti segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Posnetek zaslona konfiguracije računa za shrambo. "::: 
 
@@ -64,7 +70,17 @@ Ko je ciljno občinstvo določeno, lahko konfiguriramo izvoz iz vpogledov v obč
 
    - Če želite izvedeti, kako ustvariti vsebnik, glejte [Ustvarjanje vsebnika](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Izberite **Naprej**.
+1. Izberite možnost **Shrani**, da dokončate povezavo.
+
+### <a name="configure-an-export"></a>Konfiguriranje izvoza
+
+Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Odprite razdelek **Podatki** > **Izvozi**.
+
+1. Izberite možnost **Dodaj izvoz** za ustvarjanje novega izvoza.
+
+1. V polju **Povezava za izvoz** izberite povezavo iz razdelka Adobe Campaign. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
 
 1. Izberite segment, ki ga želite izvoziti. V tem primeru je to **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Ko je ciljno občinstvo določeno, lahko konfiguriramo izvoz iz vpogledov v obč
 
 1. Izberite **Shrani**.
 
-Ko shranite cilj izvoza, ga najdete v možnosti **Skrbnik** > **Izvozi** > **Moji cilji izvoza**.
+Ko shranite cilj za izvoz, ga najdete v razdelku **Podatki** > **Izvoz**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Posnetek zaslona z označenim seznamom izvozov in vzorčnim segmentom.":::
-
-Zdaj lahko [izvozite segment na zahtevo](export-destinations.md#export-data-on-demand). Izvoz se bo zagnal tudi z vsakim [načrtovanim osveževanjem](system.md).
+Zdaj lahko [izvozite segment na zahtevo](export-destinations.md#run-exports-on-demand). Izvoz se bo zagnal tudi z vsakim [načrtovanim osveževanjem](system.md).
 
 > [!NOTE]
 > Prepričajte se, da je število zapisov v izvoženem segmentu znotraj dovoljene omejitve vaše licence Adobe Campaign Standard.

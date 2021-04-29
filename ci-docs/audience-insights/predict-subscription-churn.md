@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595676"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906922"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predvidevanje izgube naročnine (predogled)
 
@@ -49,6 +49,12 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
         - **Časovni žig:** datum in ura dogodka, ki ga je prepoznal primarni ključ.
         - **Dogodek:** ime dogodka, ki ga želite uporabiti. Primer: polje, imenovano »UserAction«, v storitvi pretakanja videov ima lahko vrednost »Ogledano«.
         - **Podrobnosti:** podrobni podatki o dogodku. Primer: polje, imenovano »ShowTitle«, v storitvi pretakanja videov ima lahko vrednost videoposnetka, ki si ga je stranka ogledala.
+- Predlagane lastnosti podatkov:
+    - Zadostni zgodovinski podatki: naročniški podatki za vsaj podvojeni časovni okvir. Po možnosti dve do tri leta naročniških podatkov.
+    - Stanje naročnine: podatki vključujejo dejavne in nedejavne naročnine za vsako stranko, tako da ima en ID stranke več vnosov.
+    - Število strank: vsaj 10 profilov strank, po možnosti več kot 1000 posameznih strank. Model bo propadel z manj kot 10 strankami in nezadostnimi zgodovinskimi podatki.
+    - Popolnost podatkov: manj kot 20 % manjkajočih vrednosti v podatkovnem polju podane entitete.
+   
    > [!NOTE]
    > Za 50 % strank, za katere želite izračunati možnost odpovedi naročnine, boste potrebovali vsaj dva zapisa dejavnosti.
 
@@ -67,7 +73,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
 ### <a name="define-customer-churn"></a>Določitev izgube strank
 
 1. Vnesite število za možnost **Dnevi od konca naročnine**, da lahko vaše podjetje šteje, da je stranka v stanju izgube. To obdobje je običajno primerno za poslovne dejavnosti, kot so ponudbe ali druga tržna prizadevanja, ki poskušajo preprečiti izgubo stranke.
-1. Vnesite število za možnost **Dnevi v prihodnosti za napoved možnosti izgube strank**, da nastavite časovno okno za napoved izgube. Tako lahko na primer izberete napoved možnosti izgube strank v naslednjih 90 dneh, da lahko temu prilagodite trženje z namenom obdržanja strank. Napovedovanje tveganja za izgubo strank za daljša ali krajša obdobja lahko oteži obravnavo dejavnikov v vašem profilu tveganja za izgubo, vendar je to zelo odvisno od vaših posebnih poslovnih potreb. Če želite nadaljevati, izberite **Naprej**.
+1. Vnesite število za možnost **Dnevi v prihodnosti za napoved možnosti izgube strank**, da nastavite časovno okno za napoved izgube. Tako lahko na primer izberete napoved možnosti izgube strank v naslednjih 90 dneh, da lahko temu prilagodite trženje z namenom obdržanja strank. Napovedovanje tveganja izgube za daljša ali krajša obdobja lahko oteži obravnavo dejavnikov v vašem profilu tveganja izgube, odvisno od vaših poslovnih potreb. Če želite nadaljevati, izberite **Naprej**.
    >[!TIP]
    > Kadar koli lahko izberete možnost **Shrani in zapri**, da shranite predvidevanje kot osnutek. Osnutek predvidevanja boste lahko našli na zavihku **Moja predvidevanja** za nadaljevanje.
 
@@ -113,7 +119,8 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
 1. Izberite predvidevanje, ki ga želite pregledati.
    - **Ime predvidevanja:** ime predvidevanja, navedeno pri ustvarjanju.
    - **Vrsta predvidevanja:** vrsta modela, uporabljenega za predvidevanje
-   - **Izhodna entiteta:** ime entitete za shranjevanje rezultatov predvidevanja. Entiteto s tem imenom lahko najdete v razdelku **Podatki** > **Entitete**.
+   - **Izhodna entiteta:** ime entitete za shranjevanje rezultatov predvidevanja. Entiteto s tem imenom lahko najdete v razdelku **Podatki** > **Entitete**.    
+     V izhodni entiteti je vrednost *ChurnScore* predvidena verjetnost izgube, *IsChurn* pa binarna oznaka na podlagi vrednosti *ChurnScore* s pragom 0,5. Privzeti prag morda ne bo deloval za vaš scenarij. [Ustvarite nov segment](segments.md#create-a-new-segment) z želenim pragom.
    - **Predvideno polje:** to polje je izpolnjeno le za nekatere vrste predvidevanj in se ne uporablja pri predvidevanju izgube naročnine.
    - **Stanje:** trenutno stanje izvajanja predvidevanja.
         - **V čakalni vrsti:** predvidevanje trenutno čaka, da se začnejo izvajati drugi postopki.

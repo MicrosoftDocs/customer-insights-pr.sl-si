@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597209"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906876"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predvidevanje izgub glede transakcij (predogled)
 
@@ -46,6 +46,14 @@ Predvidevanje izgub glede transakcij pomaga predvideti, ali stranka v določenem
         - **Časovni žig:** datum in ura dogodka, ki ga je prepoznal primarni ključ.
         - **Dogodek:** ime dogodka, ki ga želite uporabiti. Na primer, polje z imenom »UserAction« v trgovini z živili je lahko kupon, ki ga kupec uporabi.
         - **Podrobnosti:** podrobni podatki o dogodku. Na primer, polje z imenom »CouponValue« v trgovini z živili je lahko vrednost valute kupona.
+- Predlagane lastnosti podatkov:
+    - Zadostni zgodovinski podatki: transakcijski podatki za vsaj podvojeni časovni okvir. Po možnosti dve do tri leta naročniških podatkov. 
+    - Več nakupov na stranko: v idealnem primeru vsaj dve transakciji na stranko.
+    - Število strank: vsaj 10 profilov strank, po možnosti več kot 1000 posameznih strank. Model bo propadel z manj kot 10 strankami in nezadostnimi zgodovinskimi podatki.
+    - Popolnost podatkov: manj kot 20 % manjkajočih vrednosti v podatkovnem polju podane entitete.
+
+> [!NOTE]
+> Za podjetja z visoko pogostnostjo nakupov strank (vsakih nekaj tednov) je priporočljivo izbrati krajši časovni okvir predvidevanja in definicijo izgube. Za nizko pogostnost nakupov (vsakih nekaj mesecev ali enkrat na leto) izberite daljši časovni okvir in definicijo izgube.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Ustvarjanje predvidevanja o izgubi glede transakcij
 
@@ -129,7 +137,9 @@ Predvidevanje izgub glede transakcij pomaga predvideti, ali stranka v določenem
 1. Izberite predvidevanje, ki ga želite pregledati.
    - **Ime predvidevanja:** ime predvidevanja, navedeno ob ustvarjanju.
    - **Vrsta predvidevanja:** vrsta modela, uporabljena za predvidevanje
-   - **Izhodna entiteta:** ime entitete za shranjevanje rezultatov predvidevanja. Entiteto s tem imenom lahko najdete v razdelku **Podatki** > **Entitete**.
+   - **Izhodna entiteta:** ime entitete za shranjevanje rezultatov predvidevanja. Entiteto s tem imenom lahko najdete v razdelku **Podatki** > **Entitete**.    
+     V izhodni entiteti je vrednost *ChurnScore* predvidena verjetnost izgube, *IsChurn* pa binarna oznaka na podlagi vrednosti *ChurnScore* s pragom 0,5. Privzeti prag morda ne bo deloval za vaš scenarij. [Ustvarite nov segment](segments.md#create-a-new-segment) z želenim pragom.
+     Vse stranke niso nujno tudi dejavne stranke. Nekatere od njih morda že dolgo niso bile dejavne in se na podlagi definicije izgube že štejejo za izgubljene. Napovedovanje tveganja izgube za strank, ki so že izgubljene, ni koristno, ker ne spadajo v ciljno občinstvo.
    - **Predvideno polje:** to polje je zapolnjeno samo za nekatere vrste predvidevanj in se ne uporablja pri predvidevanju izgub.
    - **Stanje:** stanje izvajanja predvidevanja.
         - **V čakalni vrsti:** predvidevanje čaka, da se zaženejo drugi procesi.

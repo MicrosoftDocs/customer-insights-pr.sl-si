@@ -1,7 +1,7 @@
 ---
 title: Obogatitev z neodvisnimi obogatitvami HERE Technologies
 description: Splošne informacije o neodvisni obogatitvi HERE Technologies.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597761"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896071"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obogatitev profilov strank v sodelovanju z družbo HERE Technologies (predogled)
 
@@ -26,35 +26,54 @@ Za konfiguracijo obogatitve HERE Technologies morajo biti izpolnjeni naslednji p
 
 - Imate aktivno naročnino HERE Technologies. Če želite naročnino, se lahko [prijavite tukaj](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ali neposredno [stopite v stik z družbo HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Preberite več o obogatitvi lokacije HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Imate ključ API za HERE Technologies.
+- Na voljo je [povezava](connections.md) za storitev HERE *oziroma* imate vi [skrbniška](permissions.md#administrator) dovoljenja in ključ za API HERE Technologies.
 
-- Imate [skrbniška](permissions.md#administrator) dovoljenja.
+## <a name="configure-the-enrichment"></a>Konfiguriranje obogatitve
 
-## <a name="configuration"></a>Konfiguracija
+1. Pomaknite se na možnost **Podatki** > **Obogatitev**. 
 
-1. Pomaknite se na možnost **Podatki** > **Obogatitev**.
-
-1. Izberite **Obogatitev podatkov** na ploščici HERE Technologies.
+1. Na ploščici za HERE Technologies izberite možnost **Obogatitev podatkov** in izberite možnost **Začetek**.
 
    > [!div class="mx-imgBorder"]
    > ![Ploščica HERE Technologies](media/HERE-tile.png "Ploščica HERE Technologies")
 
-1. Vnesite aktiven **ključ API za HERE Technologies**. Preberite in podajte soglasje za **Zasebnost podatkov in skladnost** tako, da potrdite polje **Strinjam se**. 
+1. Na spustnem seznamu izberite [povezavo](connections.md). Če ni na voljo nobena povezava, se obrnite na skrbnika. Če ste skrbnik, lahko vzpostavite povezavo z izbiro možnosti **Dodaj povezavo**. Na spustnem meniju izberite možnost **HERE Technologies**. 
 
-1. Potrdite oba vnosa z izbiro možnosti **Povezovanje s HERE**.
+1. Izberite možnost **Poveži z družbo HERE Technologies** za potrditev izbire.
 
-1.  Izberite možnost **Dodaj podatke** in izberite **nabor podatkov o strankah**, ki ga želite obogatiti s podatki o lokaciji iz podjetja HERE Technologies. Izberete lahko entiteto **Stranka**, da obogatite vse vaše profile strank, ali entiteto segmenta, da obogatite samo profile strank, ki jih vsebuje ta segment.
+1.  Izberite možnost **Naprej** in izberite **nabor podatkov o stranki**, ki ga želite obogatiti s podatki o lokaciji podjetja HERE Technologies. Izberete lahko entiteto **Stranka**, da obogatite vse vaše profile strank, ali entiteto segmenta, da obogatite samo profile strank, ki jih vsebuje ta segment.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Posnetek zaslona izbire nabora podatkov o strankah.":::
 
-1. Izberite, ali želite polja preslikati na primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj (na primer domači in poslovni naslov) in obogatite profile za oba naslova posebej. Izberite **Naprej**.
+1. Izberite, ali želite polja preslikati na primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj in obogatite profile za vsak naslov posebej. Gre za primere, ko je na primer na voljo domač in poslovni naslov. Izberite **Naprej**.
 
 1. Določite, katera polja iz vaših poenotenih profilov naj bodo uporabljena za iskanje ustreznih podatkov o lokaciji družbe HERE Technologies. Polji **Ulica 1** in **Poštna številka** sta obvezni za izbrani primarni in/ali sekundarni naslov. Za večjo natančnost ujemanja lahko dodate več polj.
 
    > [!div class="mx-imgBorder"]
    > ![Stran za konfiguracijo obogatitve HERE Technologies](media/enrichment-HERE-configuration.png "Stran za konfiguracijo obogatitve HERE Technologies")
 
-1. Izberite **Uporabi** za dokončanje preslikave polja.
+1. Izberite možnost **Naprej**, da dokončate preslikavo polj.
+
+1. Navedite ime obogatitve. 
+
+1. Po pregledu svoje izbire izberite možnost **Shrani obogatitev**.
+
+## <a name="configure-the-connection-for-here-technologies"></a>Konfiguriranje povezave z družbo HERE technologies 
+
+Za konfiguriranje povezav morate biti skrbnik. Pri konfiguriranju obogatitve izberite možnost **Dodaj povezavo** *ali* odprite razdelek **Skrbnik** > **Povezave** in na ploščici HERE Technologies izberite možnost **Nastavitev**.
+
+1. Vnesite ime povezave v polje za **prikazno ime**.
+
+1. Navedite veljaven ključ za API HERE Technologies.
+
+1. Preberite in podajte soglasje za **Zasebnost podatkov in skladnost** tako, da potrdite polje **Strinjam se**.
+
+1. Izberite možnost **Potrdi** za potrditev konfiguracije.
+
+1. Po zaključku potrjevanja izberite možnost **Shrani**.
+
+> [!div class="mx-imgBorder"]
+   > ![Stran za konfiguriranje povezave z družbo HERE technologies](media/enrichment-HERE-connection.png "Stran za konfiguriranje povezave z družbo HERE technologies")
 
 ## <a name="enrichment-results"></a>Rezultati obogatitve
 

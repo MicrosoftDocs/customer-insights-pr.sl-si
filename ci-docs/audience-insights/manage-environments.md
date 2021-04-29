@@ -1,7 +1,7 @@
 ---
 title: Ustvarjanje in upravljanje okolij
 description: Naučite se, kako se prijaviti za storitev in kako upravljati okolja.
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598313"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5888006"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
 
@@ -44,6 +44,9 @@ Ta članek pojasnjuje, kako ustvariti novo organizacijo in kako omogočiti upora
 
 Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfiguracijo ali kopirate nekatere konfiguracijske nastavitve iz obstoječega okolja.
 
+> [!NOTE]
+> Organizacije lahko ustvarijo *dve* okolji za vsako licenco Customer Insights. Če vaša organizacija kupi več kot eno licenco, [se obrnite na našo skupino za podporo](https://go.microsoft.com/fwlink/?linkid=2079641), da vam poveča število razpoložljivih okolij. Za več informacij o zmogljivosti in dodatni zmogljivosti prenesite [Vodnik za licenciranje za Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 Če želite ustvariti okolje:
 
 1. V glavi aplikacije izberite izbirnik **Okolje**.
@@ -55,14 +58,14 @@ Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfi
 
 1. V pogovornem oknu **Ustvari novo okolje** izberite **Novo okolje**.
 
-   Če želite [prekopirati podatke iz trenutnega okolja](#additional-considerations-for-copy-configuration-preview), izberite **Kopiraj iz obstoječega okolja**. Prikazan bo seznam vseh razpoložljivih okolij iz vaše organizacije, od koder lahko kopirate podatke.
+   Če želite [prekopirati podatke iz trenutnega okolja](#considerations-for-copy-configuration-preview), izberite **Kopiraj iz obstoječega okolja**. Prikazan bo seznam vseh razpoložljivih okolij iz vaše organizacije, od koder lahko kopirate podatke.
 
 1. Navedite naslednje podrobnosti:
    - **Ime**: ime tega okolja. To polje je že izpolnjeno, če ste kopirali iz obstoječega okolja, lahko pa ga spremenite.
    - **Območje**: območje, v katerem je storitev uvedena in gostovana.
    - **Vrsta**: izberite, ali želite ustvariti produkcijsko ali preizkusno okolje.
 
-2. Če želite, lahko izberete **Napredne nastavitve**:
+1. Če želite, lahko izberete **Napredne nastavitve**:
 
    - **Shrani vse podatke v**: določa, kam želite shraniti izhodne podatke, ustvarjene s storitvijo Customer Insights. Na voljo imate dve možnosti: **Shramba za Customer Insights** (shramba Azure Data Lake, ki jo upravlja ekipa za Customer Insights) in **Azure Data Lake Storage Gen2** (vaša shramba Azure Data Lake Storage). Privzeto je izbrana možnost »Shramba za Customer Insights«.
 
@@ -75,20 +78,20 @@ Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfi
 
    - Za možnost Azure Data Lake Storage Gen2 lahko izbirate med možnostjo, ki temelji na viru, in možnostjo preverjanja pristnosti, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Imena **Vsebnik** ni mogoče spremeniti in bo naslednji: customerinsights.
    
-   - Če želite uporabiti [predvidevanja](predictions.md) ali konfigurirati skupno rabo podatkov z aplikacijami in rešitvami, ki temeljijo na storitvi Microsoft Dataverse, navedite URL okolja Microsoft Dataverse pod razdelkom **Konfigurirajte skupno rabo podatkov z Microsoft Dataverse in omogočite dodatne zmogljivosti**. Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Microsoft Dataverse Managed Data Lake.
+   - Če želite uporabljati [napovedi](predictions.md), konfigurirati skupno rabo podatkov z aplikacijami in rešitvami na podlagi storitve Microsoft Dataverse ali omogočiti uvoz podatkov iz podatkovnih virov na mestu uporabe, zagotovite URL okolja Microsoft Dataverse pod možnostjo **Konfiguriranje skupne rabe podatkov s storitvijo Microsoft Dataverse in omogočanje dodatnih zmogljivosti**. Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Microsoft Dataverse Managed Data Lake.
 
      > [!NOTE]
      > - Skupna raba podatkov s storitvijo Microsoft Dataverse Managed Data Lake trenutno ni podprta, če vse podatke shranjujete v shrambi Azure Data Lake Storage.
      > - [Predvidevanje manjkajočih vrednosti v entiteti](predictions.md) trenutno ni podprto, če je omogočena skupna rabo podatkov s storitvijo Microsoft Dataverse Managed Data Lake.
 
      > [!div class="mx-imgBorder"]
-     > ![Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
+     > ![Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
    Ko zaženete postopke, na primer uvoz podatkov ali ustvarjanje segmenta, bodo v zgoraj navedenem računu za shranjevanje ustvarjene ustrezne mape. Podatkovne datoteke in datoteke model.json bodo ustvarjene in dodane v zadevne podmape na podlagi procesa, ki ga izvajate.
 
    Če ustvarite več okolij Customer Insights in izhodne entitete iz teh okolij shranite v svoj račun za shranjevanje, bodo za vsako okolje ustvarjene ločene mape, pri čemer bo v vsebniku ci_<environmentid>.
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>Dodatni premisleki glede konfiguracije kopiranja (predogled)
+### <a name="considerations-for-copy-configuration-preview"></a>Vidiki za konfiguracijo kopiranja (predogledna različica)
 
 Kopirane so naslednje konfiguracijske nastavitve:
 
@@ -136,6 +139,18 @@ Uredite lahko določene podatke obstoječih okolij.
 4. Če je okolje konfigurirano za shranjevanje podatkov v shrambi Azure Data Lake Storage Gen2, lahko posodobite **ključ računa**. Vendar pa ne morete spremeniti možnosti **Ime računa** ali imena razdelka **Vsebnik**.
 
 5. Po želji lahko posodobitev opravite prek povezave na podlagi ključa kupca s povezavo, ki temelji na viru ali naročnini. Po nadgradnji ne morete povrniti ključa kupca po posodobitvi. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Ob posodobitvi povezave ne morete spremeniti podatkov **vsebnika**.
+
+6. Izbirno lahko zagotovite URL okolja Microsoft Dataverse pod možnostjo **Konfiguriranje skupne rabe podatkov s storitvijo Microsoft Dataverse in omogočanje dodatnih zmogljivosti**. Te zmogljivosti vključujejo skupno rabo podatkov z aplikacijami in rešitvami na podlagi storitve Microsoft Dataverse, uvoz podatkov iz podatkovnih virov na mestu uporabe ali uporabo [napovedi](predictions.md). Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Microsoft Dataverse Managed Data Lake.
+
+   > [!NOTE]
+   > - Skupna raba podatkov s storitvijo Microsoft Dataverse Managed Data Lake trenutno ni podprta, če vse podatke shranjujete v shrambi Azure Data Lake Storage.
+   > - [Predvidevanje manjkajočih vrednosti v entiteti](predictions.md) trenutno ni podprto, ko omogočite izmenjavo podatkov s storitvijo Microsoft Dataverse Managed Data Lake.
+
+   Ko omogočite izmenjavo podatkov s storitvijo Microsoft Dataverse, bo sprožena popolna osvežitev vaših virov podatkov in drugih postopkov. Če se postopki trenutno izvajajo in so v čakalni vrsti, ne boste videli možnosti za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse. Lahko počakate, da se ti postopki končajo ali jih prekličete, da omogočite izmenjavo podatkov. 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse.":::
+   
+   Ko zaženete postopke, na primer uvoz podatkov ali ustvarjanje segmenta, bodo v zgoraj navedenem računu za shranjevanje ustvarjene ustrezne mape. Podatkovne datoteke in datoteke model.json bodo ustvarjene in dodane v zadevne podmape, odvisno od postopka, ki ga izvajate.
 
 ## <a name="reset-an-existing-environment"></a>Ponastavitev obstoječega okolja
 

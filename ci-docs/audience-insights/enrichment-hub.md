@@ -1,7 +1,7 @@
 ---
 title: Obogatitev poenotenih profilov strank
 description: Uporabite zmogljivosti za obogatitev podatkov o strankah.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597715"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896025"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogatitev profilov strank (predogled)
 
@@ -27,8 +27,8 @@ Za ustvarjanje ali urejanje obogatitev morate imeti dovoljenje »Sodelavec« ali
 
 Na zavihku **Odkrivanje** so na voljo te obogatitve:
 
-- [Blagovne znamke](enrichment-microsoft-graph.md) zagotavlja Microsoft Graph.
-- [Zanimanja](enrichment-microsoft-graph.md) zagotavlja Microsoft Graph.
+- [Znamke](enrichment-microsoft.md), ki jih zagotavlja Microsoft
+- [Zanimanja](enrichment-microsoft.md), ki jih zagotavlja Microsoft
 - [Podatki o podjetju](enrichment-leadspace.md), ki jih zagotavlja Leadspace
 - [Demografski podatki](enrichment-experian.md), ki jih zagotavlja Experian
 - [Podatki o lokaciji](enrichment-here.md), ki jih zagotavlja HERE Technologies
@@ -40,7 +40,7 @@ Na zavihku **Moje obogatitve** si lahko ogledate obogatitve, ki ste jih konfigur
 
 Pojdite na razdelek **Moje obogatitve** za ogled vseh konfiguriranih obogatitev. Vsaka obogatitev je predstavljena kot vrstica, ki vključuje dodatne informacije o obogatitvi.
 
-Izberite obogatitev in si oglejte razpoložljive možnosti. Lahko pa izberete elipso (...) na elementu s seznama in si tako ogledate možnosti.
+Izberite obogatitev in si oglejte razpoložljive možnosti. Za ogled možnosti lahko izberete tudi treh pik (...) na elementu seznama.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Možnosti upravljanja obogatitev na seznamu obogatitev":::
 
@@ -52,5 +52,12 @@ Izberite obogatitev in si oglejte razpoložljive možnosti. Lahko pa izberete el
 
 Več obogatitev lahko zaženete ali deaktivirate hkrati, tako da jih izberete na seznamu. Možnosti pogleda in urejanja niso na voljo kot množično dejanje in delujejo le za eno obogatitev na enkrat.
 
+## <a name="enrichments-and-connections"></a>Obogatitve in povezave
+
+Obogatitve neodvisnih ponudnikov so konfigurirane z uporabo [povezav](connections.md), za katere skrbnik nastavi poverilnice in poda soglasje za prenose podatkov. Za konfiguriranje obogatitev lahko povezavo uporabijo skrbniki in sodelavci.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Več obogatitev iste vrste
+
+Entiteta, ki jo je treba obogatiti, je določena med konfiguriranjem obogatitve, ki omogoča obogatiti samo podmnožico vseh profilov. Obogatite podatke na primer samo za določen segment. Konfigurirate lahko več obogatitev iste vrste in znova uporabite isto povezavo. Nekatere obogatitve imajo omejitev števila obogatitev iste vrste, ki jih je mogoče ustvariti. Omejitve in trenutno uporabo si lahko ogledate na strani **Obogatitev**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

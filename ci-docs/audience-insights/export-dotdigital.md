@@ -1,7 +1,7 @@
 ---
 title: Izvozite podatke Customer Insights v DotDigital
-description: Preberite o konfiguraciji povezave s storitvijo DotDigital.
-ms.date: 11/14/2020
+description: Naučite se, kako konfigurirati povezavo in izvažati v DotDigital.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,40 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 51a28bdf0de34f0555d8ad7e3d13b2ef8911d417
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 235bcdfa4a7c4c1a382778bd4f66c1a9f5b7beb1
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598037"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759979"
 ---
-# <a name="connector-for-dotdigital-preview"></a>Povezovalnik za DotDigital (predogled)
+# <a name="export-segment-lists-to-dotdigital-preview"></a>Izvoz seznamov segmentov v DotDigital (predogledna različica)
 
 Izvozite segmente poenotenih profilov strank v adresarje DotDigital ter jih uporabite za akcije, e-poštno trženje ter sestavljanje segmentov strank s storitvijo DotDigital. 
 
-## <a name="prerequisites"></a>Zahteve
+## <a name="prerequisites-for-a-connection"></a>Predpogoji za povezavo
 
 -   Imate [račun za DotDigital](https://dotdigital.com/) in ustrezne skrbniške poverilnice.
 -   V storitvi DotDigital so na voljo obstoječi adresarji in ustrezni ID-ji. ID lahko najdete v URL-ju, ko izberete in odprete adresar. Za več informacij glejte [Adresarji DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Imate [konfigurirane segmente](segments.md) pri vpogledih v občinstvo.
 -   Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
 
-## <a name="connect-to-dotdigital"></a>Povezovanje s storitvijo DotDigital
+## <a name="known-limitations"></a>Znane omejitve
 
-1. Izberite **Skrbnik** > **Cilji za izvoz**.
+- Do 1 milijon profilov na izvoz v DotDigital.
+- Izvoz v DotDigital je omejen na segmente.
+- Izvoz segmentov s skupno 1 milijonom profilov lahko traja do 3 ure zaradi omejitev na strani ponudnika. 
+- Število profilov, ki jih lahko izvozite v DotDigital, je odvisno in omejeno glede na vašo pogodbo s podjetjem DotDigital.
 
-1. Pod razdelkom **DotDigital** izberite **Nastavi**.
+## <a name="set-up-connection-to-dotdigital"></a>Nastavitev povezave s storitvijo DotDigital
 
-1. Dajte svojemu cilju izvoza prepoznavno ime v polju **Prikazno ime**.
+1. Odprite razdelek **Skrbnik** > **Povezave**.
 
-   :::image type="content" source="media/DotDigital_config.PNG" alt-text="Podokno konfiguracije za izvoz DotDigital.":::
+1. Izberite **Dodajanje povezave** in izberite **DotDigital** za konfiguracijo povezave.
+
+1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**. Ime in vrsta povezave opisujeta to povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
+
+1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Vnesite **uporabniško ime in geslo za DotDigital**.
 
@@ -47,9 +54,18 @@ Izvozite segmente poenotenih profilov strank v adresarje DotDigital ter jih upor
 
 1. Izberite **Dodajte sebe kot uporabnika za izvoz** in vnesite svoje poverilnice Customer Insights.
 
-1. Izberite **Naslednji** za nastavitev izvoza.
+1. Izberite možnost **Shrani**, da dokončate povezavo. 
 
-## <a name="configure-the-connector"></a>Konfiguracija povezovalnika
+## <a name="configure-an-export"></a>Konfiguriranje izvoza
+
+Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Odprite razdelek **Podatki** > **Izvozi**.
+
+1. Za ustvarjanje novega izvoza izberite **Dodaj cilj**.
+
+1. V polju **Povezava za izvoz** izberite povezavo v razdelku DotDigital. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
+
 
 1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. Ponovite iste korake za druga neobvezna polja, kot so **Ime**, **Priimek**, **Polno ime**, **Spol** in **Poštna številka**.
 
@@ -57,16 +73,12 @@ Izvozite segmente poenotenih profilov strank v adresarje DotDigital ter jih upor
 
 1. Izberite **Shrani**.
 
-## <a name="export-the-data"></a>Izvoz podatkov
+S shranjevanjem izvoza se ta ne zažene takoj.
 
-Lahko [izvozite podatke na zahtevo](export-destinations.md). Izvoz se bo zagnal tudi z vsakim [načrtovanim osveževanjem](system.md#schedule-tab). V storitvi DotDigital lahko zdaj najdete svoje segmente v [adresarjih DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
+ 
+V storitvi DotDigital lahko zdaj najdete svoje segmente v [adresarjih DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
-## <a name="known-limitations"></a>Znane omejitve
-
-- Do 1 milijon profilov na izvoz v DotDigital.
-- Izvoz v DotDigital je omejen na segmente.
-- Izvoz segmentov s skupno 1 milijonom profilov lahko traja do 3 ure zaradi omejitev na strani ponudnika. 
-- Število profilov, ki jih lahko izvozite v DotDigital, je odvisno in omejeno glede na vašo pogodbo s podjetjem DotDigital.
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 

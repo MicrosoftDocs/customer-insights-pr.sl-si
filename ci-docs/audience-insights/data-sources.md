@@ -1,7 +1,7 @@
 ---
 title: Uporaba virov podatkov za vključitev podatkov
 description: Naučite se uvoziti podatke iz različnih virov.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595967"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887914"
 ---
 # <a name="data-sources-overview"></a>Pregled virov podatkov
 
@@ -32,8 +32,15 @@ Vir podatkov lahko dodate na tri glavne načine:
 - [Iz mape Common Data Model](connect-common-data-model.md)
 - [Iz svojega jezera storitve Common Data Service](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Podatkov iz virov podatkov na mestu uporabe še ne morete dodati.
+## <a name="add-data-from-on-premises-data-sources"></a>Dodajanje podatkov iz virov podatkov na mestu uporabe
+
+Uvoz podatkov iz virov podatkov na mestu uporabe v vpogledih v občinstvo je podprt na podlagi podatkovnih tokov iz storitve Power Platform. Podatkovne tokove lahko omogočite v storitvi Customer Insights, in sicer tako, da med nastavitvijo okolja [navedete URL povezave za okolje Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization).
+
+Za vire podatkov, ustvarjene ob vzpostavitvi povezave med okoljem storitve Dataverse in storitvijo Customer Insights, se privzeto uporabljajo [podatkovni tokovi iz storitve Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Za podatkovne tokove je prek prehodov za podatke podprta povezljivost na mestu uporabe. Odstranite vire podatkov, ki so bili uporabljeni vzpostavitvijo povezave z okoljem Dataverse za uporabo prehodov za podatke na mestu uporabe, in jih znova ustvarite.
+
+Prehodi za podatke iz obstoječega okolja storitve Power BI ali Power Apps bodo vidni v storitvi Customer Insights, kjer jih lahko znova uporabite. Na strani z viri podatkov je prikazana povezava do okolja Power Platform, kjer si lahko ogledate prehode za podatke na mestu uporabe in jih konfigurirate.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Posnetek zaslona strani z viri podatkov, na kateri so prikazane povezave za preusmeritev na okolje storitve Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Pregled zaužitih podatkov
 
@@ -65,7 +72,7 @@ Izberite **Skrbnik** > **Sistem** > [**Načrtovanje**](system.md#schedule-tab) z
 
 2. Izberite navpične tri pike poleg vira podatkov, ki ga želite osvežiti, in izberite **Osveži** s spustnega seznama.
 
-3. Vir podatkov se zdaj sproži za ročno osvežitev. Če osvežite vir podatkov, boste posodobili tako shemo entitet kot tudi podatke za vse entitete, določene v viru podatkov.
+3. Vir podatkov se zdaj sproži za ročno osvežitev. Če osvežite vir podatkov, se posodobijo tudi shema entitet in podatki za vse entitete, določene v viru podatkov.
 
 4. Izberite **Ustavi osveževanje**, če želite preklicati obstoječo osvežitev, in se bo vir podatkov vrnil na zadnje stanje osveževanja.
 

@@ -1,7 +1,7 @@
 ---
 title: Upravljanje uporabniških dovoljenj
 description: Preberite o dovoljenjih in uporabniških vlogah.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595722"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760393"
 ---
 # <a name="user-permissions"></a>Uporabniška dovoljenja
 
@@ -31,10 +31,10 @@ Na voljo so tri vrste vlog:
 - Ogled in raziskovanje strani **Obogatitev**.
 - Na strani **Entitete** raziščite in izvozite entitete.
 - Na strani **Sistem** si oglejte stanje sistemskih procesov.
-- Izvozite segmente s strani **Segmenti**.
+- Oglejte si izvoze na strani **Izvozi**.
 - Namestite in uporabite nadzorno ploščo **Power BI Customer Insights**.
 
-## <a name="contributor"></a>Sodelavec
+## <a name="contributor"></a>Sodelujoči
 
 - Vsa dovoljenja, ki so na voljo gledalcu.
 - Na strani **Viri podatkov** naložite in preoblikujte podatke.
@@ -43,6 +43,7 @@ Na voljo so tri vrste vlog:
 - Na strani **Segmenti** ustvarite segmente.
 - Na strani **Mere** ustvarite mere.
 - Upravljajte konfiguracijo in obogatite profile strank s strani **Obogatitev** (samo za obogatitve proizvajalca).
+- Upravljajte in ustvarjajte izvoze na podlagi povezav v skupni rabi s sodelavci. [Preberite več o tem, kako skrbniki dovolijo sodelavcem, da uporabljajo povezavo za izvoze](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Skrbnik
 
@@ -50,8 +51,9 @@ Na voljo so tri vrste vlog:
 - Spremenite nastavitve na strani **Sistem**, vključno z delovnim jezikom in urniki osveževanja za sistemske procese.
 - Na strani **Dovoljenja** si oglejte in dodajte dovoljenja..
 - Na strani **Kazalo za iskanje in filtriranje** (dostopna prek strani **Stranke**) nastavite definiciji iskanja in filtriranja za stran »Stranke«.
-- Na strani **Cilji za izvoz** določite cilje segmenta aplikacije Dynamics 365 Sales.
+- Upravljajte povezave in jih dovolite za druge uporabniške vloge na strani **Povezave**.
 - Upravljajte konfiguracijo in obogatite profile strank s strani **Obogatitev** (za vse obogatitve).
+- Upravljajte in ustvarjajte izvoze na strani **Izvozi**.
 - Namestite in uporabite **dodatek za kartice strank**.
 - Dodajte in uporabite **povezovalnik Power Apps**.
 - Omogočite uporabo [API-jev za Customer Insights](apis.md).

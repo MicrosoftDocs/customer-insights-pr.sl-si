@@ -1,7 +1,7 @@
 ---
 title: Ustvarjanje in upravljanje mer
 description: Določite mere za analizo in odraz uspešnosti vašega podjetja.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654752"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887960"
 ---
 # <a name="define-and-manage-measures"></a>Določanje in upravljanje mer
 
-Mere vam pomagajo bolje razumeti vedenje strank in poslovno uspešnost tako, da vam prikažejo relevantne vrednosti iz [poenotenih profilov](data-unification.md). Podjetje na primer želi videti *skupno porabo na stranko* za razumevanje zgodovine nakupov posameznih strank. Ali izmeriti *celotno prodajo podjetja* za razumevanje združenega prihodka na ravni celotnega podjetja.  
+Ukrepi vam pomagajo bolje razumeti vedenje strank in poslovno uspešnost. Upoštevajo relevantne vrednosti iz [poenotenih profilov](data-unification.md). Podjetje želi na primer videti *skupno porabo stranke*, da bi razumelo zgodovino nakupov stranke, ali izmeriti *skupno prodajo podjetja*, da bi razumelo skupni prihodek celotnega posla.  
 
 Mere so ustvarjene z graditeljem mer, platformo za poizvedbe po podatkih z različnimi operatorji in enostavnimi možnostmi preslikave. Omogoča filtriranje podatkov, združevanje rezultatov v skupine, zaznavanje [poti odnosov entitet](relationships.md) in predogled rezultatov.
 
 Uporabite graditelja mer za načrtovanje poslovnih dejavnosti s poizvedbami po podatkih o strankah in pridobivanjem vpogledov. Ustvarjanje na primer mer za *skupno porabo na stranko* in *skupni donos na stranko* pomaga prepoznati skupino strank z visoko porabo, ki pa so hkrati zelo donosne. Mogoče je [ustvariti segment](segments.md) za spodbujanje drugih priporočenih dejanj. 
 
-## <a name="create-a-measure"></a>Ustvarjanje mere
+## <a name="build-your-own-measure-from-scratch"></a>Ustvarjanje ukrepa od začetka
 
 V tem razdelku je opisano ustvarjanje novega mere od začetka. Mero lahko sestavite z atributi podatkov iz podatkovnih entitet, ki imajo nastavljen odnos za povezavo z entiteto stranke. 
 
 1. Pri vpogledih v občinstvo izberite **Mere**.
 
-1. Izberite **Novo**.
+1. Izberite **Novo** in nato še **Ustvarite si svojega**.
 
 1. Izberite možnost **Uredi ime** in navedite **ime** za mero. 
    > [!NOTE]
@@ -72,6 +72,8 @@ V tem razdelku je opisano ustvarjanje novega mere od začetka. Mero lahko sestav
    1. Izberite možnost **Uredi razsežnosti**, da dodate atribute podatkov, po katerih želite vrednosti mer razvrstiti v skupine. Na primer po mestu ali spolu. Privzeto je razsežnost *CustomerID* izbrana za ustvarjanje *ukrepov na ravni kupca*. Če želite ustvariti *ukrepe na ravni podjetja*, lahko odstranite privzeto dimenzijo.
    1. Izberite možnost **Končano**, da meri dodate razsežnosti.
 
+1. Če so v vaših podatkih vrednosti, ki jih morate zamenjati s celim številom, zamenjajte *null* na primer z *0* in izberite **Pravila**. Konfigurirajte pravilo in se prepričajte, da jih nadomestite le s celimi števili.
+
 1. Če med podatkovno entiteto, ki ste jo preslikali, in *entiteto* stranke obstaja več poti, morate izbrati eno od prepoznanih [poti odnosov entitet](relationships.md). Rezultati mere se lahko razlikujejo glede na izbrano pot. 
    1. Izberite možnost **Podatkovne nastavitve** in izberite pot entitete, ki naj bo uporabljena za prepoznavanje mere. Če obstaja samo ena pot do entitete *stranke*, ta nadzor ne bo prikazan.
    1. Izberite možnost **Končano**, da uporabite izbor. 
@@ -88,9 +90,57 @@ V tem razdelku je opisano ustvarjanje novega mere od začetka. Mero lahko sestav
 
 1. Na strani **Mere** si na seznamu oglejte novo ustvarjeno mero.
 
+## <a name="use-a-template-to-build-a-measure"></a>Uporaba predloge za izdelavo ukrepa
+
+Za ustvarjanje ukrepov lahko uporabite vnaprej določene predloge pogosto uporabljenih ukrepov. Podrobni opisi predlog in vodena izkušnja vam pomagajo pri učinkovitem ustvarjanju ukrepov. Predloge temeljijo na preslikanih podatkih iz entitete *Poenotena dejavnost*. Prepričajte se, da ste konfigurirali [dejavnosti strank](activities.md), preden ustvarite ukrep iz predloge.
+
+Razpoložljive predloge ukrepov: 
+- Povprečna vrednost transakcije (ATV)
+- Skupna vrednost transakcije
+- Povprečni dnevni prihodek
+- Povprečni letni prihodek
+- Število transakcij
+- Prislužene točke zvestobe
+- Izkoriščene točke zvestobe
+- Stanje točk zvestobe
+- Življenjska doba dejavne stranke
+- Trajanje članstva v programu zvestobe
+- Čas od zadnjega nakupa
+
+V naslednjem postopku so opisani koraki za ustvarjanje novega ukrepa s pomočjo predloge.
+
+1. Pri vpogledih v občinstvo izberite **Mere**.
+
+1. Izberite **Novo** in nato **Izberi predlogo**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Posnetek zaslona spustnega menija pri ustvarjanju novega ukrepa s poudarjeno predlogo.":::
+
+1. Poiščite predlogo, ki ustreza vašim potrebam, in izberite **Izberi predlogo**.
+
+1. Preglejte zahtevane podatke in izberite **Začetek**, če imate na voljo vse podatke.
+
+1. V podoknu **Uredi ime** nastavite ime za vaš ukrep in izhodno entiteto. 
+
+1. Izberite **Dokončano**.
+
+1. V razdelku **Nastavi časovno obdobje** določite časovni okvir podatkov, ki jih želite uporabiti. Določite, ali želite z novim ukrepom zajeti celoten nabor podatkov, tako da izberete **Ves čas**. Ali če želite, da se ukrep osredotoči na **Določeno časovno obdobje**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Posnetek zaslona, ki prikazuje razdelek časovnega obdobja pri konfiguriranju ukrepa iz predloge.":::
+
+1. V naslednjem razdelku izberite **Dodaj podatke**, če želite izbrati dejavnosti in preslikati ustrezne podatke iz vaše entitete *Poenotena dejavnost*.
+
+    1. Korak 1 od 2: v razdelku **Vrsta dejavnosti** izberite vrsto entitete, ki jo želite uporabiti. Za **Dejavnosti** izberite entitete, ki jih želite preslikati.
+    1. Korak 2 od 2: izberite atribut v entiteti *Poenotena dejavnost* za komponento, ki jo zahteva formula. Za povprečno vrednost transakcije je to na primer atribut, ki predstavlja vrednost transakcije. Za **Časovni žig dejavnosti** izberite atribut iz entitete poenotene dejavnosti, ki predstavlja datum in čas dejavnosti.
+   
+1. Ko je preslikava podatkov uspešno zaključena, se prikaže stanje **Dokončano** skupaj z imenom preslikanih dejavnosti in atributov.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Posnetek zaslona dokončane konfiguracije predloge ukrepa.":::
+
+1. Zdaj lahko izberete **Zaženi**, da izračunate rezultate ukrepa. Če jih želite pozneje prilagoditi, izberite **Shrani osnutek**.
+
 ## <a name="manage-your-measures"></a>Upravljajte svoje mere
 
-Ko [ustvarite mero](#create-a-measure), boste na strani **Mere** videli seznam mer.
+Seznam ukrepov najdete na strani **Ukrepi**.
 
 Našli boste podatke o vrsti mere, ustvarjalcu, datumu ustvarjanja, statusu in stanju. Ko izberete mero s seznama, si lahko ogledate izhodne podatke in jih prenesete kot datoteko .CSV.
 
