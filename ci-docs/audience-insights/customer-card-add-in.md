@@ -1,7 +1,7 @@
 ---
-title: Namestitev in konfiguracija dodatka za kartice strank
-description: Namestite in konfigurirajte dodatek za kartico stranke za Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Dodatek za kartico stranke v aplikacijah Dynamics 365
+description: S tem dodatkom prikažite podatke iz vpogledov v občinstvo v aplikacijah Dynamics 365.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597347"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059608"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatek za kartico stranke (predogled)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 365. Z dodatkom za kartico stranke si oglejte demografske podatke, vpoglede in časovnice z dejavnostmi.
+Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 365. Z dodatkom za kartico stranke, nameščenim v podprti aplikaciji Dynamics 365, lahko izberete prikaz demografskih podatkov, vpogledov in časovnic dejavnosti. Dodatek bo pridobil podatke iz Customer Insights, ne da bi to vplivalo na podatke v povezani aplikaciji Dynamics 365. 
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Aplikacija Dynamics 365 (kot je Središče za prodajo ali Središče storitev za stranke), različica 9.0 in novejše z omogočenim poenotenim vmesnikom.
-- Profili strank, [vključeni iz aplikacije Dynamics 365 prek storitve Common Data Service](connect-power-query.md).
-- Uporabniki dodatka za kartice stranke morajo biti [dodani kot uporabniki](permissions.md) pri vpogledih v občinstvo.
-- [Konfigurirane možnosti iskanja in filtriranja](search-filter-index.md).
-- Demografski kontrolnik: v poenotenem profilu strank so na voljo demografska polja (kot sta starost ali spol).
-- Kontrolnik obogatitve: zahteva, da so za profile strank uporabljene aktivne [obogatitve](enrichment-hub.md).
-- Kontrolnik za obveščanje: zahteva podatke, ustvarjene s strojnim učenjem Azure ([modeli predvidevanja](predictions.md) ali [modeli po meri](custom-models.md))
-- Kontrolnik merjenja: zahteva [konfigurirane ukrepe](measures.md).
-- Kontrolnik časovnice: zahteva [konfigurirane dejavnosti](activities.md).
+- Dodatek deluje samo z aplikacijami Dynamics 365, ki temeljijo na modelu, na primer Sales ali Customer Service, različice 9.0 in novejše.
+- Da se bodo vaši podatki iz aplikacije Dynamics 365 preslikali v profile strank za vpoglede v občinstvo, morajo biti [uvoženi iz aplikacije Dynamics 365 s priključkom Common Data Service](connect-power-query.md).
+- Vsi uporabniki aplikacije Dynamics 365 in dodatka za kartice strank morajo biti za ogled podatkov [dodani kot uporabniki](permissions.md) v vpogledih v občinstvo.
+- Za delovanje iskanja podatkov so zahtevane [konfigurirane možnosti iskanja in filtriranja](search-filter-index.md) v vpogledih v občinstvo.
+- Vsak kontrolnik dodatka se zanaša na določene podatke v vpogledih v občinstvo:
+  - Kontrolnik merjenja: zahteva [konfigurirane ukrepe](measures.md).
+  - Kontrolnik obveščanja: zahteva podatke, ustvarjene z [napovedmi](predictions.md) ali [modeli po meri](custom-models.md).
+  - Demografski kontrolnik: v poenotenem profilu strank so na voljo demografska polja (kot sta starost ali spol).
+  - Kontrolnik obogatitve: zahteva, da so za profile strank uporabljene aktivne [obogatitve](enrichment-hub.md).
+  - Kontrolnik časovnice: zahteva [konfigurirane dejavnosti](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Namestitev dodatka za kartice strank
 
@@ -56,9 +57,9 @@ Namestitev rešitve v vaše okolje lahko traja nekaj časa.
    > [!NOTE]
    > Preverite, ali preprečevalnik pojavnih oken v brskalniku ne blokira okna za preverjanje pristnosti, ko izberete gumb **Vpis**.
 
-1. Izberite okolje, iz katerega želite pridobiti podatke.
+1. Izberite okolje storitve Customer Insights, iz katerega želite pridobiti podatke.
 
-1. Določite, katera preslikava polja se zabeleži v aplikaciji Dynamics 365.
+1. Določite preslikavo polj v zapise v aplikaciji Dynamics 365. Glede na vaše podatke v rešitvi Customer Insights lahko preslikate naslednje možnosti:
    - Če želite preslikavo opraviti s stikom, izberite polje pri entiteti stranke, ki se ujema z ID-jem entitete stika.
    - Če želite preslikavo opraviti s stranko, izberite polje pri entiteti stranke, ki se ujema z ID-jem entitete kupca.
 

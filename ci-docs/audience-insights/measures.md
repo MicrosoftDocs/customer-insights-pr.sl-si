@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887960"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049270"
 ---
 # <a name="define-and-manage-measures"></a>Določanje in upravljanje mer
 
@@ -34,7 +34,7 @@ V tem razdelku je opisano ustvarjanje novega mere od začetka. Mero lahko sestav
 
 1. Izberite možnost **Uredi ime** in navedite **ime** za mero. 
    > [!NOTE]
-   > Če ima nova konfiguracija mere samo dve polji, na primer, CustomerID in en izračun, bodo izhodni podatki dodani kot nov stolpec v sistemsko ustvarjeni entiteti z imenom Customer_Measure. Vrednost mere pa boste lahko videli v enotnem profilu stranke. Druge mere ustvarijo lastne entitete.
+   > Če ima vaša nova konfiguracija mere samo dve polji, na primer CustomerID in en izračun, bo izhod dodan kot nov stolpec k sistemsko ustvarjeni entiteti, imenovani Customer_Measure. Vrednost mere pa boste lahko videli v enotnem profilu stranke. Druge mere ustvarijo lastne entitete.
 
 1. V območju za konfiguracijo izberite združevalno funkcijo s spustnega menija **Izberi funkcijo**. Združevalne funkcije vključujejo: 
    - **Vsota**

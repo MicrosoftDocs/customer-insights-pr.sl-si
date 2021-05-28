@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887914"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085550"
 ---
 # <a name="data-sources-overview"></a>Pregled virov podatkov
 
@@ -36,11 +36,9 @@ Vir podatkov lahko dodate na tri glavne načine:
 
 Uvoz podatkov iz virov podatkov na mestu uporabe v vpogledih v občinstvo je podprt na podlagi podatkovnih tokov iz storitve Power Platform. Podatkovne tokove lahko omogočite v storitvi Customer Insights, in sicer tako, da med nastavitvijo okolja [navedete URL povezave za okolje Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Za vire podatkov, ustvarjene ob vzpostavitvi povezave med okoljem storitve Dataverse in storitvijo Customer Insights, se privzeto uporabljajo [podatkovni tokovi iz storitve Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Za podatkovne tokove je prek prehodov za podatke podprta povezljivost na mestu uporabe. Odstranite vire podatkov, ki so bili uporabljeni vzpostavitvijo povezave z okoljem Dataverse za uporabo prehodov za podatke na mestu uporabe, in jih znova ustvarite.
+Za vire podatkov, ustvarjene ob vzpostavitvi povezave med okoljem storitve Dataverse in storitvijo Customer Insights, se privzeto uporabljajo [podatkovni tokovi iz storitve Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Za podatkovne tokove je prek prehoda za podatke podprta povezljivost na mestu uporabe. Odstranite vire podatkov, ki so obstajali pred vzpostavitvijo povezave z okoljem Dataverse za [uporabo prehodov za podatke na mestu uporabe](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md), in jih znova ustvarite.
 
 Prehodi za podatke iz obstoječega okolja storitve Power BI ali Power Apps bodo vidni v storitvi Customer Insights, kjer jih lahko znova uporabite. Na strani z viri podatkov je prikazana povezava do okolja Power Platform, kjer si lahko ogledate prehode za podatke na mestu uporabe in jih konfigurirate.
-
-:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Posnetek zaslona strani z viri podatkov, na kateri so prikazane povezave za preusmeritev na okolje storitve Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Pregled zaužitih podatkov
 

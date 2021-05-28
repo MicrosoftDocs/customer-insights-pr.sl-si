@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595829"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954599"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predvidevanje življenjske vrednosti stranke (CLV) (predogled)
 
@@ -38,11 +38,11 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
 - Identifikator stranke: enolični identifikator, ki ustreza transakcijam posamezni stranki
 
 - Zgodovina transakcij: dnevnik zgodovine transakcij s spodnjo semantično podatkovno shemo
-    - ID transakcije: enolični identifikator vsake transakcije
-    - Datum transakcije: datum, po možnosti časovni žig vsake transakcije
-    - Transakcijski znesek: denarna vrednost (na primer prihodek ali stopnja dobička) vsake transakcije
-    - Oznaka, dodeljena vračilom (neobvezno): logična vrednost, ki označuje, ali je transakcija vračilo 
-    - ID izdelka (neobvezno): ID izdelka, vključenega v transakcijo
+    - **ID transakcije**: enolični identifikator vsake transakcije
+    - **Datum transakcije**: datum, po možnosti časovni žig vsake transakcije
+    - **Transakcijski znesek**: denarna vrednost (na primer prihodek ali stopnja dobička) vsake transakcije
+    - **Oznaka, dodeljena vračilom** (neobvezno): logična vrednost, ki označuje, ali je transakcija vračilo 
+    - **ID izdelka** (neobvezno): ID izdelka, vključenega v transakcijo
 
 - Dodatni podatki (izbirno), na primer
     - Spletne dejavnosti: zgodovina obiska spletnega mesta, zgodovina e-pošte
@@ -53,10 +53,20 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
     - Identifikatorji strank za preslikavo dejavnosti v stranke
     - Podatki o dejavnosti, ki vsebujejo ime in datum dejavnosti
     - Semantična podatkovna shema za dejavnosti vključuje: 
-        - Primarni ključ: enolični identifikator dejavnosti
-        - Časovni žig: datum in ura dogodka, ki ga je prepoznal primarni ključ
-        - Dogodek (ime aktivnosti): ime dogodka, ki ga želite uporabiti
-        - Podrobnosti (znesek ali vrednost): podrobnosti o dejavnosti stranke
+        - **Primarni ključ**: enolični identifikator dejavnosti
+        - **Časovni žig**: datum in ura dogodka, ki ga je prepoznal primarni ključ
+        - **Dogodek (ime aktivnosti)**: ime dogodka, ki ga želite uporabiti
+        - **Podrobnosti (znesek ali vrednost)**: podrobnosti o dejavnosti stranke
+
+- Predlagane lastnosti podatkov:
+    - Zadostni zgodovinski podatki: vsaj eno leto transakcijskih podatkov. Po možnosti dve do tri leta transakcijskih podatkov za predvidevanje življenjske vrednostni strank za eno leto.
+    - Več nakupov na stranko: v idealnem primeru vsaj dve do tri transakcije na ID stranke, po možnosti na več datumov.
+    - Število strank: vsaj 100 enoličnih strank, po možnosti več kot 10.000 strank. Model bo propadel z manj kot 100 strankami in nezadostnimi zgodovinskimi podatki
+    - Popolnost podatkov: manj kot 20 % manjkajočih vrednosti v obveznih poljih vhodnih podatkov   
+
+> [!NOTE]
+> - Model potrebuje zgodovino transakcij vaših strank. Trenutno je mogoče konfigurirati samo eno entiteto zgodovine transakcij. Če je več entitet nakupov/transakcij, jih lahko pred uvozom podatkov združite v storitvi Power Query.
+> - Za dodatne podatke o dejavnostih strank (neobvezno) pa lahko dodate toliko entitet dejavnosti strank, kolikor želite, da jih model upošteva.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Ustvarjanje predvidevanja življenjske vrednosti stranke
 
@@ -76,7 +86,7 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
    Privzeto je enota nastavljena na mesece. Spremenite jo lahko v leta, da pogledate dlje v prihodnost.
 
    > [!TIP]
-   > Če želite natančno napovedati življenjsko vrednost stranke za nastavljeno časovno obdobje, potrebujete zgodovinske podatke o primerljivem obdobju. Če želite na primer ustvariti predvidevanje za naslednjih 12 mesecev, je priporočljivo, da imate vsaj 18–24 mesecev zgodovinskih podatkov.
+   > Če želite natančno napovedati življenjsko vrednost stranke za nastavljeno časovno obdobje, potrebujete zgodovinske podatke o primerljivem obdobju. Če želite na primer ustvariti predvidevanje življenjske vrednostni strank za naslednjih 12 mesecev, je priporočljivo, da imate vsaj 18–24 mesecev zgodovinskih podatkov.
 
 1. Navedite, kaj **aktivne stranke** pomenijo v vašem podjetju. Nastavite časovni okvir, v katerem mora imeti stranka vsaj eno transakcijo, da se šteje za aktivno stranko. Model bo življenjsko vrednost stranke napovedal samo za aktivne stranke. 
    - **Naj model izračuna interval nakupa (priporočljivo)**: model analizira podatke in določi časovno obdobje na podlagi preteklih nakupov.
@@ -181,14 +191,14 @@ Na strani z rezultati so trije primarni razdelki podatkov.
   Na podlagi definicije strank z visoko vrednostjo, ki je bila podana med konfiguriranjem predvidevanja, sistem oceni, kako je model umetne inteligence deloval pri napovedovanju strank z visoko vrednostjo v primerjavi z osnovnim modelom.    
 
   Ocene so določene na podlagi naslednjih pravil:
-  - A, če model natančno napove vsaj 5% več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
-  - B, če model natančno napove 0–5 % več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
-  - A, če model natančno napove manj kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
+  - **A**, če model natančno napove vsaj 5 % več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
+  - **B**, če model natančno napove 0–5 % več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
+  - **C**, če model natančno napove manj kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
 
   Podokno **Ocena modela** prikazuje nadaljnje podrobnosti o zmogljivosti modela umetne inteligence in osnovnega modela. Osnovni model uporablja pristop, ki ne temelji na umetni inteligenci, za izračun življenjske vrednosti strank, ki temelji predvsem na preteklih nakupih, ki jih opravijo stranke.     
   Standardna formula, ki se uporablja za izračun življenjske vrednosti strank v osnovnem modelu:    
 
-  *Življenjska vrednost stranke za posamezno stranko = povprečni znesek mesečnega nakupa, ki ga stranka opravi v oknu dejavnih strank * število mesecev v obdobju predvidevanja življenjske vrednostni strank * splošna stopnja ohranitve vseh strank*
+  _**Življenjska vrednost stranke za posamezno stranko** = povprečni znesek mesečnega nakupa, ki ga stranka opravi v oknu dejavnih strank * število mesecev v obdobju predvidevanja življenjske vrednostni strank * splošna stopnja ohranitve vseh strank_
 
   Model umetne inteligence se primerja z osnovnim modelom na podlagi dveh meritev uspešnosti modela.
   

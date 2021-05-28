@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595584"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085642"
 ---
 # <a name="match-entities"></a>Ujemanje entitet
 
@@ -103,6 +103,18 @@ Pravila ujemanja predstavljajo nabore pogojev. Za ujemanje entitet pod pogoji na
 
 > [!NOTE]
 > Vrstni red pravil je pomemben. Algoritem ujemanja poskuša ujemati na podlagi vašega prvega pravila in nadaljuje z drugim pravilom le, če s prvim pravilom ni bilo identificiranih nobenih zadetkov.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Spreminjanje vrstnega reda entitete v pravilih ujemanja
+
+Entitete za pravila ujemanja lahko preuredite, če želite spremeniti vrstni red njihove obdelave. Pravila, ki so v sporu zaradi spremenjenega vrstnega reda, bodo odstranjena. Odstranjena pravila morate znova ustvariti s posodobljeno konfiguracijo.
+
+1. Odprite zavihek **Podatki** > **Poenotenje** > **Ujemanje** in izberite možnost **Uredi**.
+
+1. V podoknu **Urejanje pravila** izberite kontrolnik za **premik gor/dol** ali povlecite in spustite entitete, če želite spremeniti vrstni red.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Možnosti za spreminjanje vrstnega reda obdelave entitet v fazi ujemanja.":::
+
+1. Izberite **Dokončano**, da shranite pravilo.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Opredelitev odstranjevanja podvajanj za entiteto ujemanja
 

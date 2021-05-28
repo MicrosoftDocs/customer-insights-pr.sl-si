@@ -1,7 +1,7 @@
 ---
 title: Združevanje entitet za poenotenje podatkov
 description: Združite entitete za ustvarjanje poenotenih profilov strank.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,61 +9,100 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896531"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085596"
 ---
 # <a name="merge-entities"></a>Združevanje entitet
 
 Faza spajanja je zadnja faza v postopku poenotenja podatkov. Njen namen je uskladitev podatkov v sporu. Primer podatkov v sporu je na primer ime stranke, ki ga najdemo v dveh zbirkah podatkov, vendar je v vsaki prikazan nekoliko drugače (»Grant Marshall« v primerjavi z »Grant Marshal«), ali telefonska številka, ki se razlikuje v obliki zapisa (617-803-091X v primerjavi s 617803091X). Spajanje teh podatkovnih točk v sporu poteka na osnovi »atribut za atributom«.
 
+:::image type="content" source="media/merge-fields-page.png" alt-text="Stran za spajanje v postopku poenotenja podatkov, ki prikazuje tabelo s spojenimi polji, ki določajo poenoten profil kupca.":::
+
 Po zaključku [faze ujemanja](match-entities.md) fazo spajanja začnete tako, da izberete ploščico **Spajanje** na strani **Poenotenje**.
 
 ## <a name="review-system-recommendations"></a>Pregled priporočil sistema
 
-Na strani **Spajanje** izberete in izključite atribute, ki jih je treba spojiti v entiteti poenotenega profila stranke (rezultat postopka konfiguracije). Sistem samodejno spoji nekatere atribute.
+V zavihku **Podatki** > **Poenotenje** > **Spajanje** izberete in izključite atribute za spojitev znotraj vaše entitete poenotenega profila kupca. Poenoten profil stranke je rezultat postopka poenotenja podatkov. Sistem samodejno spoji nekatere atribute.
 
-### <a name="view-merged-attributes"></a>Prikaz spojenih atributov
+Če si želite ogledati atribute, ki so vključeni v enega od vaših samodejno spojenih atributov, izberite ta spojeni atribut v zavihku **Polja za stranke** v tabeli. Atributi, ki sestavljajo ta spojeni atribut, bodo prikazani v dveh novih vrsticah pod spojenim atributom.
 
-Če si želite ogledati atribute, ki so vključeni v enega od samodejno spojenih atributov, izberite spojen atribut. Atributa, ki sestavljata ta spojeni atribut, sta prikazana v dveh novih vrsticah pod spojenim atributom.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Ločevanje, preimenovanje, izključevanje in urejanje spojenih polj
 
-> [!div class="mx-imgBorder"]
-> ![Izbira spojenega atributa](media/configure-data-merge-profile-attributes.png "Izbira spojenega atributa")
+Spremenite lahko, kako sistem obdeluje spojene atribute, da ustvari poenoten profil stranke. Izberite možnost **Pokaži več** in izberite, kaj želite spremeniti.
 
-### <a name="separate-merged-attributes"></a>Ločevanje spojenih atributov
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Možnosti v spustnem meniju Pokaži več za upravljanje spojenih atributov.":::
 
-Če želite ločiti oz. razdružiti samodejno spojene atribute, poiščite atribut v tabeli **Atributi profila**.
+Če želite več informacij, glejte naslednje razdelke.
 
-1. Izberite gumb treh pik (...).
+## <a name="separate-merged-fields"></a>Ločevanje spojenih polj
+
+Če želite ločiti spojena polja, v tabeli poiščite atribut. Ločena polja so prikazana kot posamezne podatkovne točke na poenotenem profilu stranke. 
+
+1. Izberite spojeno polje.
   
-2. V spustnem seznamu izberite **Loči polja**.
+1. Izberite možnost **Pokaži več** in **Loči polja**.
+ 
+1. Potrdite ločevanje.
 
-### <a name="remove-merged-attributes"></a>Odstranjevanje spojenih atributov
+1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb.
 
-Če želite izključiti atribut iz entitete končnega profila stranke, ga poiščite v tabeli **Atributi profila**.
+## <a name="rename-merged-fields"></a>Preimenovanje spojenih polj
 
-1. Izberite gumb treh pik (...).
+Spremenite prikazno ime spojenih atributov. Imen izhodne entitete ni mogoče spremeniti.
+
+1. Izberite spojeno polje.
   
-2. V spustnem seznamu izberite **Ne spoji**.
+1. Izberite možnost **Pokaži več** in **Preimenuj**.
 
-   Atribut je premaknjen v razdelek **Odstranjeno iz zapisa stranke**.
+1. Potrdite spremenjeno prikazno ime. 
 
-## <a name="manually-add-a-merged-attribute"></a>Ročno dodajanje spojenega atributa
+1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb.
 
-Če želite dodati spojeni atribut, pojdite na stran **Spajanje**.
+## <a name="exclude-merged-fields"></a>Izključevanje spojenih polj
 
-1. Izberite **Dodaj spojeni atribut**.
+Iz poenotenega profila stranke izključite atribut. Če se polje uporablja v drugih procesih, na primer v segmentu, ga odstranite iz teh procesov, preden ga izključite iz profila stranke. 
 
-2. Vnesite **ime**, da ga boste pozneje prepoznali na strani **Spajanje**.
+1. Izberite spojeno polje.
+  
+1. Izberite možnost **Pokaži več** in **Izključi**.
 
-3. Vnesete lahko tudi **Prikazno ime**, ki bo prikazano v entiteti poenotenega profila stranke.
+1. Potrdite izključitev.
 
-4. Konfigurirajte možnost **Izberi podvojene atribute**, da izberete atribute, ki jih želite spojiti iz ujemajočih se entitet. Atribute lahko tudi poiščete.
+1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb. 
 
-5. Nastavite **Uvrstitev po pomembnosti** za prednostno obravnavanje določenega atributa pred drugimi. Če entiteta *WebAccountCSV* vključuje najbolj natančne podatke o atributu *Polna imena*, lahko prednostno obravnavate to entiteto pred entiteto *ContactCSV* tako, da izberete *WebAccountCSV*. Entiteta *WebAccountCSV* tako postane prva prioriteta, entiteta *ContactCSV* pa druga prioriteta pri klicanju vrednosti za atribut *Polno ime*.
+Na strani za **spajanje** izberite **Izključena polja** za ogled seznama vseh izključenih polj. To podokno vam omogoča vnovično dodajanje izključenih polj.
+
+## <a name="manually-combine-fields"></a>Ročno združevanje polj
+
+Ročno določite spojeni atribut. 
+
+1. Na strani za **spajanje** izberite možnost **Združi polja**.
+
+1. Navedite **Ime** in **Ime izhodnega polja**.
+
+1. Izberite polje, ki ga želite dodati. Izberite možnost **Dodaj polja**, če želite združiti več polj.
+
+1. Potrdite izključitev.
+
+1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb. 
+
+## <a name="change-the-order-of-fields"></a>Spreminjanje vrstnega reda polj
+
+Nekatere entitete vsebujejo več podrobnosti kot druge. Če entiteta vključuje najnovejše podatke o polju, jo lahko pri spajanju vrednosti prednostno obravnavate pred drugimi entitetami.
+
+1. Izberite spojeno polje.
+  
+1. Izberite možnost **Pokaži več** in **Uredi**.
+
+1. V podoknu **Združevanje polj** izberite možnost **Premik gor/dol**, da nastavite vrstni red, ali pa jih povlecite in spustite na želeni položaj.
+
+1. Potrdite spremembo.
+
+1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb.
 
 ## <a name="run-your-merge"></a>Zagon spajanja
 
@@ -72,11 +111,11 @@ Ne glede na to, ali atribute spajate ročno ali jih spoji sistem, lahko vedno za
 > [!div class="mx-imgBorder"]
 > ![Shranjevanje in zagon spajanja podatkov](media/configure-data-merge-save-run.png "Shranjevanje in zagon spajanja podatkov")
 
-Če želite vnesti dodatne spremembe in ponovno zagnati korak, lahko prekličete spajanje v teku. Izberite **Osveževanje ...**, nato pa **Prekliči posel** v stranskem podoknu, ki se prikaže.
+Izberite možnost **Zaženi samo spajanje**, če želite, da se rezultat prikaže samo v poenoteni entiteti stranke. Procesi iz strežnika bodo osveženi, kot je [opredeljeno v načrtovanju osveževanja](system.md#schedule-tab).
 
-Po tem, ko se napis **Osveževanje ...** se spremeni v **Uspešno**, je spajanje dokončalo in razrešilo nasprotja v vaših podatkih v skladu z določenimi pravilniki. Spojeni in nespojeni atributi so vključeni v entiteto poenotenega profila. Izključeni atributi niso vključeni v entiteto poenotenega profila.
+Izberite možnost **Zaženi procese spajanja in procese iz strežnika**, da osvežite sistem s svojimi spremembami. Vsi procesi, vključno z obogatitvijo, segmenti in merami, se bodo samodejno ponovili. Po zaključku vseh procesov iz strežnika profili strank prikažejo vse spremembe, ki ste jih naredili.
 
-Če to vaša prva uspešna izvedba spajanja, se bodo vsi nadaljnji postopki, vključno z obogatitvijo, segmentacijo in merami, samodejno znova zagnali. Po ponovnem zagonu vseh nadaljnjih postopkov bodo v profilih strank prikazane vaše spremembe.
+Če želite narediti več sprememb in ponoviti korak, lahko prekličete spajanje v teku. Izberite **Osveževanje ...**, nato pa **Prekliči posel** v stranskem podoknu, ki se prikaže.
 
 > [!TIP]
 > Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za enega izmed poslov izberete **Prikaži podrobnosti**, se prikažejo dodatne informacije: čas obdelave, zadnji datum obdelave ter vse napake in opozorila, povezana z opravilom.
@@ -85,9 +124,6 @@ Po tem, ko se napis **Osveževanje ...** se spremeni v **Uspešno**, je spajanje
 
 Za pridobitev več vpogledov v stranke konfigurirajte možnosti [Dejavnosti](activities.md), [Obogatitev](enrichment-hub.md) ali [Odnosi](relationships.md).
 
-Če ste že konfigurirali dejavnosti, obogatitev ali odnose ali če ste opredelili segmente, bodo samodejno obdelani za uporabo najnovejših podatkov strank.
-
-
-
+Če ste že konfigurirali dejavnosti, obogatitev ali segmente, bodo samodejno obdelani za uporabo najnovejših podatkov o strankah.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

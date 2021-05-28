@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759841"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059336"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Izvoz segmentov v Marketo (predogledna različica)
 
@@ -44,7 +44,7 @@ Izvozite segmente poenotenih profilov strank, da akcije, zagotovite e-poštno tr
 
 1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Vnesite svoj **[ID odjemalca Marketo, skrivnost odjemalca in ime gostitelja končne točke REST](https://developers.marketo.com/rest-api/authentication/)**.
+1. Vnesite svoj **[ID odjemalca Marketo, skrivnost odjemalca in ime gostitelja končne točke REST](https://developers.marketo.com/rest-api/authentication/)**. Ime gostitelja za končno točko REST je samo ime gostitelja, brez `https://`. Primer: `xyz-abc-123.mktorest.com`. 
 
 1. Izberite **Strinjam se** za potrditev možnosti **Zasebnost podatkov in skladnost** in izberite možnost **Poveži**, da inicializirate povezavo s storitvijo Marketo.
 
@@ -62,7 +62,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. V polju **Povezava za izvoz** izberite povezavo v razdelku Marketo. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
 
-1. Vnesite svoj **[ID seznama Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. Vnesite svoj **[ID seznama za Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID seznama je zgolj številčna vrednost. Če je na primer vaš ID seznama za Marketo ST12345A7, odstranite znak pred in za številkami ter vnesite `12345`. 
 
 1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. 
 
@@ -74,7 +74,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 S shranjevanjem izvoza se ta ne zažene takoj.
 
-Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). V storitvi Marketo lahko zdaj najdete svoje segmente pod možnostjo [Občinstva Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). V storitvi Marketo lahko zdaj najdete svoje segmente pod možnostjo [Občinstva Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost

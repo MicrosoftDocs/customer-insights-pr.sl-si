@@ -1,7 +1,7 @@
 ---
-title: Ustvarjanje in upravljanje segmentov
-description: Ustvarite segmente strank, da jih združite na podlagi različnih atributov.
-ms.date: 03/02/2021
+title: Segmenti v vpogledih v občinstvo
+description: Pregled segmentov ter napotki, kako jih ustvariti in upravljati.
+ms.date: 05/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,79 +9,42 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
+ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597079"
+ms.lasthandoff: 05/14/2021
+ms.locfileid: "6034032"
 ---
-# <a name="create-and-manage-segments"></a>Ustvarjanje in upravljanje segmentov
+# <a name="segments-overview"></a>Pregled segmentov
 
 Segmenti vam omogočajo, da svoje stranke razvrstite na podlagi demografskih, transakcijskih ali vedenjskih atributov. Segmente lahko uporabite za ciljanje promocijskih akcij, prodajnih dejavnosti in ukrepov za podporo strankam, da dosežete svoje poslovne cilje.
 
-Za entiteto profila stranke in njene povezane entitete lahko določite zapletene filtre. Po obdelavi vsak segment ustvari niz zapisov strank, ki jih lahko izvozite in obdelate. Veljajo nekatere [omejitve storitev](service-limits.md).
-
-Če ni drugače določeno, so vsi segmenti **Dinamični segmenti**, ki se osvežujejo po rednem urniku.
-
-Naslednji primer prikazuje zmogljivost segmentacije. Določili smo segment za stranke, ki so v zadnjih 90 dneh naročile blaga v vrednosti vsaj 500 USD *in* ki so bile vključene v klic storitev za stranke, ki je bil posredovan na višjo raven.
-
-> [!div class="mx-imgBorder"]
-> ![Več skupin](media/segmentation-group1-2.png "Več skupin")
+Profili strank, ki se ujemajo s filtri definicije segmenta, se imenujejo *člani* segmenta. Veljajo nekatere [omejitve storitev](service-limits.md).
 
 ## <a name="create-a-new-segment"></a>Ustvarjanje novega segmenta
 
-Segmenti se upravljajo na strani **Segmenti**.
+Nov segment lahko ustvarite na več načinov: 
 
-1. Pri vpogledih v občinstvo odprite stran **Segmenti**.
+- Kompleksni segment z graditeljem segmentov: [Prazen segment](segment-builder.md#create-a-new-segment)
+- Preprosti segmenti z enim operatorjem: [Hitri segment](segment-builder.md#quick-segments)
+- Možnost na podlagi umetne inteligence za iskanje podobnih strank: [Podobne stranke](find-similar-customer-segments.md)
+- Predlogi z umetno inteligenco, ki temeljijo na merah ali atributih: [Predlagani segmenti za izboljšanje mer](suggested-segments.md)
+- Predlogi na podlagi dejavnosti: [Predlagani segmenti na podlagi dejavnosti strank](suggested-segments-activity.md)
 
-1. Izberite **Novo** > **Prazen segment**.
+## <a name="get-insights-on-existing-segments"></a>Pridobivanje vpogleda v obstoječe segmente
 
-1. Na strani **Nov segment** izberite vrsto segmenta in vnesite **ime**.
+Odkrijte dodatne informacije o svojih obstoječih segmentih z [vpogledi v segmente](segment-insights.md). Ugotovite, kako se dva segmenta razlikujeta ali kaj imata skupnega.
 
-   Po želji vnesite prikazno ime in opis, s katerim boste lažje prepoznali segment.
+## <a name="find-similar-customers"></a>Poišči podobne stranke
 
-1. Izberite **Naprej**, da se pomaknete na stran **Graditelj segmentov**, kjer določite skupino. Skupina je nabor strank.
-
-1. Izberite entiteto, ki vključuje atribut, po katerem želite segmentirati.
-
-1. Izberite atribut, po katerem želite segmentirati. Ta atribut ima lahko eno od štirih vrst vrednosti: numerično, niz, datum ali logična vrednost.
-
-1. Izberite operator in vrednost za izbrani atribut.
-
-   > [!div class="mx-imgBorder"]
-   > ![Filter skupine po meri](media/customer-group-numbers.png "Filter skupine strank")
-
-   |Število |Definicija  |
-   |---------|---------|
-   |1     |Entity          |
-   |2     |Atribut          |
-   |3    |Operator         |
-   |4    |Vrednost         |
-
-8. Če je entiteta povezana s poenoteno entiteto stranke prek [odnosov](relationships.md), morate določiti pot odnosa, da ustvarite veljaven segment. Dodajte entitete s poti odnosa, dokler se na spustnem meniju ne pojavi možnost za izbiro entitete **Stranka: CustomerInsights**. Nato za vsak pogoj izberite možnost **Vsi zapisi**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Pot odnosa med ustvarjanjem segmenta](media/segments-multiple-relationships.png "Pot odnosa med ustvarjanjem segmenta")
-
-1. Segmenti privzeto generirajo izhodno entiteto, ki vsebuje vse atribute profilov strank, ki se ujemajo z določenimi filtri. Če segment temelji na drugih entitetah kot na entiteti *stranke*, lahko v izhodno entiteto dodate več atributov teh entitet. Izberite **Atributi projekta**, da izberete atribute, ki bodo dodani izhodni entiteti.  
-
-   
-   Primer: Segment temelji na entiteti, ki vsebuje podatke o dejavnostih strank, povezane z entiteto *stranke*. Segment išče vse stranke, ki so v zadnjih 60 dneh poklicale službo za pomoč uporabnikom. Trajanje in število klicev lahko v izhodni entiteti priložite v vse ustrezne zapise strank, ki se ujemajo. Te informacije so lahko koristne za pošiljanje e-pošte strankam, ki so pogosto klicale, s koristnimi povezavami do spletnih člankov za pomoč in pogostih vprašanj.
-
-1. Izberite **Shrani**, da shranite segment. Če so vse zahteve potrjene, bo vaš segment shranjen in obdelan. V nasprotnem primeru bo shranjen kot osnutek.
-
-1. Izberite **Nazaj na segmente**, da se vrnete na stran **Segmenti**.
+S pomočjo umetne inteligence poiščite stranke, ki so podobne članom izbranega segmenta. Če želite več informacij, glejte [podobne stranke](find-similar-customer-segments.md).
 
 ## <a name="manage-existing-segments"></a>Upravljanje obstoječih segmentov
 
-Na strani **Segmenti** si lahko ogledate vse shranjene segmente in jih upravljate.
+Odprite stran **Segmenti**, da si ogledate vse shranjene segmente in jih upravljate.
 
 Vsak segment predstavlja vrstica, ki vključuje dodatne informacije o segmentu.
-
-Segmente lahko razvrstite v stolpcu tako, da izberete naslov stolpca.
-
-Za filtriranje segmentov uporabite polje **Iskanje** v zgornjem desnem kotu.
 
 > [!div class="mx-imgBorder"]
 > ![Možnosti za upravljanje obstoječega segmenta](media/segments-selected-segment.png "Možnosti za upravljanje obstoječega segmenta")
@@ -106,71 +69,6 @@ Vse segmente lahko osvežite naenkrat tako, da izberete **Osveži vse** na stran
 > [!TIP]
 > Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za enega izmed poslov izberete **Prikaži podrobnosti**, se prikažejo dodatne informacije: čas obdelave, zadnji datum obdelave ter vse napake in opozorila, povezana z opravilom.
 
-## <a name="download-and-export-segments"></a>Prenos in izvoz segmentov
-
-Segmente lahko prenesete v datoteko CSV ali jih izvozite v storitev Dynamics 365 Sales.
-
-### <a name="download-segments-to-a-csv-file"></a>Prenesite segmente v datoteko CSV
-
-1. Pri vpogledih v občinstvo odprite stran **Segmenti**.
-
-2. Izberite tri pike na ploščici posameznega segmenta.
-
-3. Na spustnem seznamu dejanj izberite **Prenesi kot CSV**.
-
-### <a name="export-segments-to-dynamics-365-sales"></a>Izvoz segmentov v storitev Dynamics 365 Sales
-
-Pred izvozom segmentov v storitev Dynamics 365 Sales mora skrbnik [ustvariti cilj izvoza](export-destinations.md) za storitev Dynamics 365 Sales.
-
-1. Pri vpogledih v občinstvo odprite stran **Segmenti**.
-
-2. Izberite tri pike na ploščici posameznega segmenta.
-
-3. Na spustnem seznamu dejanj izberite možnost **Dodaj v** in nato izberite cilj izvoza, kamor želite poslati podatke.
-
-## <a name="draft-mode-for-segments"></a>Način osnutka za segmente
-
-Če niso izpolnjene vse zahteve za obdelavo segmenta, lahko shranite segment kot osnutek in do njega dostopate s strani **Segmenti**.
-
-Shranjen bo kot neaktiven segment in ga ni mogoče aktivirati, dokler ne postane veljaven.
-
-## <a name="add-more-conditions-to-a-group"></a>Dodajanje več pogojev v skupino
-
-Če želite v skupino dodati več pogojev, lahko uporabite dva logična operaterja:
-
-- Operator **IN**: oba pogoja morata biti izpolnjena kot del postopka segmentacije. Ta možnost je najbolj uporabna, če določite pogoje v različnih entitetah.
-
-- Operator **ALI**: izpolnjen mora biti kateri koli od pogojev kot del postopka segmentacije. Ta možnost je najbolj uporabna, če določite več pogojev za isto entiteto.
-
-   > [!div class="mx-imgBorder"]
-   > ![Operator ALI, pri katerem mora biti izpolnjen kateri koli pogoj](media/segmentation-either-condition.png "Operator ALI, pri katerem mora biti izpolnjen kateri koli pogoj")
-
-Trenutno je mogoče ugnezditi operator **ALI** pod operator **IN**, ne pa obratno.
-
-## <a name="combine-multiple-groups"></a>Združevanje več skupin
-
-Vsaka skupina ustvari določen nabor strank. Te skupine lahko združite, da vključite stranke, ki so potrebne za vaš poslovni primer.
-
-1. Pri vpogledih v občinstvo odprite stran **Segmenti** in izberite segment.
-
-2. Izberite **Dodaj skupino**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Dodajanje skupine za skupino strank](media/customer-group-add-group.png "Dodajanje skupine za skupino strank")
-
-3. Izberite enega od naslednjih nastavitvenih operaterjev: **Združevanje**, **Presek** ali **Razen**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Dodajanje unije za skupino strank](media/customer-group-union.png "Dodajanje unije za skupino strank")
-
-   Izberite nastavljenega operatorja, da lahko določite novo skupino. Shranite različne skupine, da določite, kateri podatki se ohranijo:
-
-   - **Unija** združi dve skupini.
-
-   - **Presek** prekriva obe skupini. Samo podatki, ki *so skupni* obema skupinama, se ohranijo v poenoteni skupini.
-
-   - **Razen** združuje obe skupini. Samo podatki v skupini A, ki *niso enaki* kot podatki v skupini B, se ohranijo.
-
 ## <a name="view-processing-history-and-segment-members"></a>Prikaz zgodovine obdelave in članov segmenta
 
 Usklajene podatke o segmentu si lahko ogledate tako, da pregledate njegove podrobnosti.
@@ -191,43 +89,4 @@ Spodnji del vsebuje seznam članov segmenta.
 >
 >Seznam je predogled ujemajočih se članov segmenta in prikazuje prvih 100 zapisov vašega segmenta, tako da ga lahko po potrebi hitro ocenite in pregledate njegove definicije. Če si želite ogledati vse ujemajoče se zapise, morate [izvoziti segment](export-destinations.md).
 
-## <a name="quick-segments"></a>Hitri segmenti
-
-Poleg graditelja segmentov obstaja še ena pot za ustvarjanje segmentov. Hitri segmenti vam omogočajo hitro ustvarjanje preprostih segmentov z enim samim operaterjem in s takojšnjimi vpogledi.
-
-1. Na strani **Segmenti** izberite možnost **Novo** > **Hitro ustvarjanje iz**.
-
-   - Izberite možnost **Profili**, da ustvarite segment, ki temelji na poenoteni entiteti stranke.
-   - Izberite možnost **Mere**, da ustvarite segment okoli vsake vrste atributov stranke za mere, ki ste jih ustvarili na strani **Mere**.
-   - Izberite možnost **Obveščanje**, da sestavite segment okoli ene od izhodnih entitet, ki ste jih ustvarili z zmogljivostmi **Predvidevanja** ali **Modeli po meri**.
-
-2. V pogovornem oknu **Nov hitri segment** izberite atribut s spustnega seznama **Polje**.
-
-3. Sistem bo zagotovil nekaj dodatnih vpogledov, ki vam bodo pomagali ustvariti boljše segmente strank.
-   - Za kategorična polja bomo prikazali 10 največjih strank. Izberite **Vrednost** in **Pregled**.
-
-   - Pri številskem atributu sistem prikaže, katera vrednost atributa spada pod posamezni percentil stranke. Izberite **Operator** in **Vrednost** ter nato **Pregled**.
-
-4. Sistem prikaže **ocenjeno velikost segmenta**. Izberete lahko, ali želite ustvariti segment, ki ste ga določili, ali se želite najprej znova vrniti nanj, da dobite drugačno velikost segmenta.
-
-    > [!div class="mx-imgBorder"]
-    > ![Ime in ocena za hitri segment](media/quick-segment-name.png "Ime in ocena za hitri segment")
-
-5. Vnesite **ime** za segment. Po želji vnesite **prikazno ime**.
-
-6. Izberite **Shrani**, da ustvarite segment.
-
-7. Ko je obdelava segmenta končana, si ga lahko ogledate kot katerikoli drug segment, ki ste ga ustvarili.
-
-Pri spodnjih scenarijih svetujemo uporabo graditelja segmentov in ne priporočene zmogljivosti segmentov:
-
-- Ustvarjanje segmentov s filtri v kategoričnih poljih, kjer je operator drugačen od operatorja **Je**
-- Ustvarjanje segmentov s filtri v številskih poljih, kjer je operator drugačen od operatorjev **Med**, **Več kot** in **Manj kot**
-- Ustvarjanje segmentov s filtri na poljih vrste datumov
-
-## <a name="next-steps"></a>Naslednji koraki
-
-[Izvozite segment](export-destinations.md) in raziščite [kartico stranke](customer-card-add-in.md) in [povezovalnike](export-power-bi.md), da pridobite vpoglede na ravni stranke.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+[!INCLUDE[footer-include](../includes/footer-banner.md)] 
