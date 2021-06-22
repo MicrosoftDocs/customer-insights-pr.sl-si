@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906784"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095576"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predvidevanje priporočil izdelkov (predogled)
 
@@ -205,33 +205,9 @@ Včasih so samo nekateri izdelki koristni ali primerni za vrsto predvidevanja, k
        > [!div class="mx-imgBorder"]
        > ![Seznam, ki prikazuje predloge z visoko zanesljivostjo za izbrani nabor posameznih strank](media/product-recommendation-highconfidence.PNG "Seznam, ki prikazuje predloge z visoko zanesljivostjo za izbrani nabor posameznih strank")
 
-## <a name="fix-a-failed-prediction"></a>Popravljanje neuspelega predvidevanja
+## <a name="manage-predictions"></a>Upravljanje predvidevanj
 
-1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
-
-1. Izberite predvidevanje, za katerega bi si radi ogledali dnevnike napak, in izberite **Dnevniki**.
-
-1. Preglejte vse napake. Pride lahko do več vrst napak, ki opisujejo, kakšno stanje je povzročilo napako. Napako, da ni dovolj podatkov za natančno napovedovanje, običajno odpravimo tako, da naložimo več podatkov v Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Osveževanje predvidevanja
-
-Napovedi se samodejno osvežijo glede na isti [urnik osveževanja podatkov](system.md#schedule-tab), kot je konfiguriran v nastavitvah.
-
-1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
-
-1. Izberite navpične tri pike poleg predvidevanja, ki ga želite osvežiti.
-
-1. Izberite **Osveži**.
-
-## <a name="delete-a-prediction"></a>Brisanje predvidevanja
-
-Če izbrišete predvidevanje, odstranite tudi njegovo izhodno entiteto.
-
-1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
-
-1. Izberite navpične tri pike poleg predvidevanja, ki ga želite izbrisati.
-
-1. Izberite **Izbriši**.
+Predvidevanja je mogoče optimizirati, zanje odpraviti napake, osvežiti ali izbrisati. Preglejte poročilo o uporabnosti vhodnih podatkov, če želite izvedeti, kako narediti predvidevanje hitrejše in zanesljivejše. Za več informacij glejte razdelek [Upravljanje predvidevanj](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

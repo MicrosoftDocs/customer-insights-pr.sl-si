@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906922"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095668"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predvidevanje izgube naročnine (predogled)
 
@@ -147,30 +147,9 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
        > [!div class="mx-imgBorder"]
        > ![Seznam, ki prikazuje vplivne dejavnike in njihov pomen za napovedovanje rezultata izgube](media/subscription-churn-influentialfactors.PNG "Seznam, ki prikazuje vplivne dejavnike in njihov pomen za napovedovanje rezultata izgube")
 
-## <a name="fix-a-failed-prediction"></a>Popravljanje neuspelega predvidevanja
+## <a name="manage-predictions"></a>Upravljanje predvidevanj
 
-1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
-1. Izberite predvidevanje, za katerega bi si radi ogledali dnevnike napak, in izberite **Dnevniki**.
-   > [!div class="mx-imgBorder"]
-   > ![Pogled vrstice menija z rezultati, vključno z gumbi za zapiranje, urejanje modela in dnevnike](media/subscription-churn-logsbutton.PNG "Pogled vrstice menija z rezultati, vključno z gumbi za zapiranje, urejanje modela in dnevnike")
-1. Preglejte vse napake. Pride lahko do več vrst napak, ki opisujejo, kakšno stanje je povzročilo napako. Napaka, za katero ni dovolj podatkov za natančno predvidevanje, se na primer običajno reši z nalaganjem dodatnih podatkov.
-
-## <a name="refresh-a-prediction"></a>Osveževanje predvidevanja
-
-Predvidevanja se bodo samodejno osvežila v istem [urniku, kot ga osvežijo vaši podatki](system.md#schedule-tab), ko se konfigurirajo v nastavitvah.
-
-1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
-1. Izberite navpične tri pike poleg predvidevanja, ki ga želite osvežiti.
-1. Izberite **Osveži**.
-
-## <a name="delete-a-prediction"></a>Brisanje predvidevanja
-
-1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
-1. Izberite navpične tri pike poleg predvidevanja, ki ga želite izbrisati.
-1. Izberite **Izbriši**.
-
-> [!NOTE]
-> Če izbrišete predvidevanje, odstranite njegovo izhodno entiteto.
+Predvidevanja je mogoče optimizirati, zanje odpraviti napake, osvežiti ali izbrisati. Preglejte poročilo o uporabnosti vhodnih podatkov, če želite izvedeti, kako narediti predvidevanje hitrejše in zanesljivejše. Za več informacij glejte razdelek [Upravljanje predvidevanj](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Ustvarjanje in upravljanje okolij
 description: Naučite se, kako se prijaviti za storitev in kako upravljati okolja.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5888006"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259119"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
 
@@ -76,9 +76,9 @@ Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfi
    > Podpiramo samo račune za shranjevanje Azure Data Lake Gen2 iz iste regije Azure, ki ste jo izbrali pri ustvarjanju okolja.
    > Podpiramo samo račune za shrambo z omogočenim hierarhičnim imenskim prostorom (HNS) shrambe Azure Data Lake Gen2.
 
-   - Za možnost Azure Data Lake Storage Gen2 lahko izbirate med možnostjo, ki temelji na viru, in možnostjo preverjanja pristnosti, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Imena **Vsebnik** ni mogoče spremeniti in bo naslednji: customerinsights.
+   - Za možnost Azure Data Lake Storage Gen2 lahko izbirate med možnostjo, ki temelji na viru, in možnostjo preverjanja pristnosti, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Imena **Zabojnika** ni mogoče spremeniti in ostaja `customerinsights`.
    
-   - Če želite uporabljati [napovedi](predictions.md), konfigurirati skupno rabo podatkov z aplikacijami in rešitvami na podlagi storitve Microsoft Dataverse ali omogočiti uvoz podatkov iz podatkovnih virov na mestu uporabe, zagotovite URL okolja Microsoft Dataverse pod možnostjo **Konfiguriranje skupne rabe podatkov s storitvijo Microsoft Dataverse in omogočanje dodatnih zmogljivosti**. Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Microsoft Dataverse Managed Data Lake.
+   - Če želite uporabljati [napovedi](predictions.md), konfigurirati skupno rabo podatkov z okoljem Microsoft Dataverse ali omogočiti uvoz podatkov iz podatkovnih virov na mestu uporabe, zagotovite URL okolja Microsoft Dataverse pod možnostjo **Konfiguriranje skupne rabe podatkov s storitvijo Microsoft Dataverse in omogočanje dodatnih zmogljivosti**. Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Microsoft Dataverse Managed Data Lake.
 
      > [!NOTE]
      > - Skupna raba podatkov s storitvijo Microsoft Dataverse Managed Data Lake trenutno ni podprta, če vse podatke shranjujete v shrambi Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfi
      > [!div class="mx-imgBorder"]
      > ![Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Ko zaženete postopke, na primer uvoz podatkov ali ustvarjanje segmenta, bodo v zgoraj navedenem računu za shranjevanje ustvarjene ustrezne mape. Podatkovne datoteke in datoteke model.json bodo ustvarjene in dodane v zadevne podmape na podlagi procesa, ki ga izvajate.
+   Ko zaženete postopke, na primer uvoz podatkov ali ustvarjanje segmenta, bodo v zgoraj navedenem računu za shranjevanje ustvarjene ustrezne mape. Podatkovne datoteke in datoteke model.json bodo ustvarjene in dodane v mape na podlagi imena postopka.
 
    Če ustvarite več okolij Customer Insights in izhodne entitete iz teh okolij shranite v svoj račun za shranjevanje, bodo za vsako okolje ustvarjene ločene mape, pri čemer bo v vsebniku ci_<environmentid>.
 
@@ -146,7 +146,7 @@ Uredite lahko določene podatke obstoječih okolij.
    > - Skupna raba podatkov s storitvijo Microsoft Dataverse Managed Data Lake trenutno ni podprta, če vse podatke shranjujete v shrambi Azure Data Lake Storage.
    > - [Predvidevanje manjkajočih vrednosti v entiteti](predictions.md) trenutno ni podprto, ko omogočite izmenjavo podatkov s storitvijo Microsoft Dataverse Managed Data Lake.
 
-   Ko omogočite izmenjavo podatkov s storitvijo Microsoft Dataverse, bo sprožena popolna osvežitev vaših virov podatkov in drugih postopkov. Če se postopki trenutno izvajajo in so v čakalni vrsti, ne boste videli možnosti za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse. Lahko počakate, da se ti postopki končajo ali jih prekličete, da omogočite izmenjavo podatkov. 
+   Ko omogočite izmenjavo podatkov z okoljem Microsoft Dataverse, se bo zagnala popolna osvežitev vaših virov podatkov in drugih postopkov. Če se postopki trenutno izvajajo, ne boste videli možnosti za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse. Počakajte, da se ti postopki končajo ali jih prekličete, da omogočite izmenjavo podatkov. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse.":::
    

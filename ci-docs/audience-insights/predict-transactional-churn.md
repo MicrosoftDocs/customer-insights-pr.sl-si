@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906876"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095622"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predvidevanje izgub glede transakcij (predogled)
 
@@ -144,7 +144,7 @@ Predvidevanje izgub glede transakcij pomaga predvideti, ali stranka v določenem
    - **Stanje:** stanje izvajanja predvidevanja.
         - **V čakalni vrsti:** predvidevanje čaka, da se zaženejo drugi procesi.
         - **Osveževanje:** predvidevanje se trenutno izvaja za ustvarjanje rezultatov, ki bodo stekli v izhodno entiteto.
-        - **Ni uspelo:** izvajanje predvidevanja ni uspelo. [Preglejte dnevniške datoteke](#troubleshoot-a-failed-prediction) za več podrobnosti.
+        - **Ni uspelo:** izvajanje predvidevanja ni uspelo. [Preglejte dnevniške datoteke](manage-predictions.md#troubleshoot-a-failed-prediction) za več podrobnosti.
         - **Uspelo:** predvidevanje je uspelo. Izberite **Pogled** pod navpičnimi tremi pikami za pregled predvidevanja
    - **Urejeno:** datum, ko je bila spremenjena konfiguracija predvidevanja.
    - **Nazadnje osveženo:** datum, ko je predvidevanje osvežilo rezultate v izhodni entiteti.
@@ -168,35 +168,9 @@ Predvidevanje izgub glede transakcij pomaga predvideti, ali stranka v določenem
        
     1. **Najvplivnejši dejavniki:** ob ustvarjanju predvidevanja se upošteva veliko dejavnikov. Vsak od dejavnikov ima svoj pomen, izračunan za združena predvidevanja, ki jih ustvari model. Te dejavnike lahko uporabite za pomoč pri preverjanju rezultatov predvidevanja. Lahko pa te podatke uporabite pozneje za [ustvarjanje segmentov](segments.md), ki bi lahko pomagali vplivati na tveganje izgube strank.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Odpravite težave z neuspešnim predvidevanjem
+## <a name="manage-predictions"></a>Upravljanje predvidevanj
 
-1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
-
-1. Izberite navpične tri pike poleg predvidevanja, za katere si želite ogledati dnevnike napak.
-
-1. Izberite **Dnevniki**.
-
-1. Preglejte vse napake. Pride lahko do več vrst napak, ki opisujejo, kakšno stanje je povzročilo napako. Primer: napaka, za katero ni dovolj podatkov za natančno predvidevanje, se običajno odpravi z nalaganjem dodatnih podatkov v storitev Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Osveževanje predvidevanja
-
-Predvidevanja se bodo samodejno osvežila v istem [urniku, kot ga osvežijo vaši podatki](system.md#schedule-tab), ko se konfigurirajo v nastavitvah. Lahko jih osvežite tudi ročno.
-
-1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
-
-1. Izberite navpične tri pike poleg predvidevanja, ki ga želite osvežiti.
-
-1. Izberite **Osveži**.
-
-## <a name="delete-a-prediction"></a>Brisanje predvidevanja
-
-Če izbrišete predvidevanje, odstranite tudi njegovo izhodno entiteto.
-
-1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
-
-1. Izberite navpične tri pike poleg predvidevanja, ki ga želite izbrisati.
-
-1. Izberite **Izbriši**.
+Predvidevanja je mogoče optimizirati, zanje odpraviti napake, osvežiti ali izbrisati. Preglejte poročilo o uporabnosti vhodnih podatkov, če želite izvedeti, kako narediti predvidevanje hitrejše in zanesljivejše. Za več informacij glejte razdelek [Upravljanje predvidevanj](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

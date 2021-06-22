@@ -1,7 +1,7 @@
 ---
 title: Obogatitev profilov strank s podatki družbe Microsoft
 description: Uporabite lastniške podatke družbe Microsoft, da obogatite podatke o strankah z priljubljenostjo znamk in zanimanj.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064911"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245727"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatitev profilov strank s podatki o afiniteti do blagovnih znamk in zanimanj (predogled)
 
@@ -69,12 +69,10 @@ Pri konfiguriranju obogatitev vam pomaga vodena izkušnja.
 
 ### <a name="define-your-brands-or-interests"></a>Določite svoje blagovne znamke ali zanimanja
 
-Izberite eno od teh možnosti:
+Izberite do pet blagovnih znamk ali zanimanj z izbiro ene ali obeh možnosti:
 
-- **Panoga**: sistem prepozna glavne blagovne znamke ali zanimanja, pomembne za vašo panogo, in z njimi obogati podatke o strankah.
-- **Izberite svoje**: na seznamu blagovnih znamk ali zanimanj, ki so najbolj pomembni za vašo organizacijo, izberite največ pet elementov.
-
-Če želite dodati blagovno znamko ali zanimanje, ga vnesite v območje za vnos, da pridobite predloge glede na ustrezne pogoje. Če med predlogi ni blagovne znamke ali zanimanja, ki ga iščete, nam pošljite povratne informacije prek povezave **Predlagaj**.
+- **Panoga**: na spustnem seznamu izberite svojo panogo in nato izberite eno izmed najboljših blagovnih znamk ali zanimanj za to panogo.
+- **Izberite svojo**: vnesite blagovno znamko ali zanimanje, ki je relevantno za vašo organizacijo, in nato izberite enega izmed predlogov ujemanja. Če med predlogi ni blagovne znamke ali zanimanja, ki ga iščete, nam pošljite povratne informacije prek povezave **Predlagaj**.
 
 ### <a name="review-enrichment-preferences"></a>Pregled nastavitev obogatitve
 

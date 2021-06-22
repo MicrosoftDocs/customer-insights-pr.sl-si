@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954599"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095530"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predvidevanje življenjske vrednosti stranke (CLV) (predogled)
 
@@ -149,7 +149,6 @@ Podatki, ki odražajo interakcije ključnih strank (na primer dnevnike za splet,
 
 1. Izberite **Naprej**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Pregled in zagon konfiguracije modela
 
 1. Pri koraku **Pregled podrobnosti o modelu** preverite veljavnost konfiguracije predvidevanja. Na kateri koli del konfiguracije predvidevanja se lahko vrnete tako, da izberete možnost **Uredi** pod prikazano vrednostjo. Korak konfiguracije lahko izberete tudi s kazalnika napredka.
@@ -170,11 +169,10 @@ Podatki, ki odražajo interakcije ključnih strank (na primer dnevnike za splet,
 - **Stanje:** stanje izvajanja predvidevanja.
     - **V čakalni vrsti:** predvidevanje čaka, da se zaključijo drugi postopki.
     - **Osveževanje:** predvidevanje se trenutno izvaja za ustvarjanje rezultatov, ki bodo združeni v izhodni entiteti.
-    - **Ni uspelo:** izvajanje predvidevanja ni uspelo. [Preglejte dnevniške datoteke](#troubleshoot-a-failed-prediction) za več podrobnosti.
+    - **Ni uspelo:** izvajanje predvidevanja ni uspelo. [Preglejte dnevniške datoteke](manage-predictions.md#troubleshoot-a-failed-prediction) za več podrobnosti.
     - **Uspelo:** predvidevanje je uspelo. Pod navpičnimi tremi pikami izberite možnost **Pogled** za pregled rezultatov predvidevanja.
 - **Urejeno**: datum, ko je bila spremenjena konfiguracija predvidevanja.
 - **Nazadnje osveženo**: datum, ko je predvidevanje osvežilo rezultate v izhodni entiteti.
-
 
 ### <a name="review-prediction-results"></a>Pregled rezultatov predvidevanja
 
@@ -216,28 +214,8 @@ Na strani z rezultati so trije primarni razdelki podatkov.
 
 - **Najvplivnejši dejavniki** : pri ustvarjanju predvidevanja življenjske vrednosti stranke upoštevamo različne dejavnike na podlagi vhodnih podatkov, posredovanih modelu umetne inteligence. Za vsakega od dejavnikov je izračunan pomen za združena predvidevanja, ki jih ustvari model. Te dejavnike lahko uporabite za pomoč pri preverjanju rezultatov predvidevanja. Ti dejavniki omogočajo tudi večji vpogled v najvplivnejše dejavnike, ki so prispevali k predvidevanju življenjske vrednosti stranke za vse vaše stranke.
 
-## <a name="refresh-a-prediction"></a>Osveževanje predvidevanja
+## <a name="manage-predictions"></a>Upravljanje predvidevanj
 
-Napovedi se samodejno osvežijo glede na isti [urnik osveževanja podatkov](system.md#schedule-tab), kot je konfiguriran v nastavitvah. Lahko jih osvežite tudi ročno.
-
-1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
-2. Izberite navpične tri pike poleg predvidevanja, ki ga želite osvežiti.
-3. Izberite **Osveži**.
-
-## <a name="delete-a-prediction"></a>Brisanje predvidevanja
-
-Če izbrišete predvidevanje, odstranite tudi njegovo izhodno entiteto.
-
-1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
-2. Izberite navpične tri pike poleg predvidevanja, ki ga želite izbrisati.
-3. Izberite **Izbriši**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Odpravite težave z neuspešnim predvidevanjem
-
-1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
-2. Izberite navpične tri pike poleg predvidevanja, za katere si želite ogledati dnevnike napak.
-3. Izberite **Dnevniki**.
-4. Preglejte vse napake. Pride lahko do več vrst napak, ki opisujejo, kakšno stanje je povzročilo napako. Napaka, za katero ni dovolj podatkov za natančno predvidevanje, se na primer običajno reši z nalaganjem dodatnih podatkov v vpoglede v občinstvo.
-
+Predvidevanja je mogoče optimizirati, zanje odpraviti napake, osvežiti ali izbrisati. Preglejte poročilo o uporabnosti vhodnih podatkov, če želite izvedeti, kako narediti predvidevanje hitrejše in zanesljivejše. Za več informacij glejte razdelek [Upravljanje predvidevanj](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

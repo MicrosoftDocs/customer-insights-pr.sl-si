@@ -1,7 +1,7 @@
 ---
 title: Nove in prihajajoče funkcije
 description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988940"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263271"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
 
@@ -26,6 +26,37 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Posodobitve za maj 2021
+
+Posodobitve maja 2021 vključujejo številne funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="data-ingestion"></a>Uvoz podatkov
+
+- **Ogled ali sprememba metapodatkov ali definicije entitete, ko pripenjate podatke iz Azure Data Lake Storage** Zdaj si lahko ogledujete in urejate metapodatke ali definicijo entitete v vpogledih za občinstvo, ko pripenjate podatke iz mape Common Data Model v vaši storitvi Azure Data Lake Storage. Ta zmogljivost zagotavlja povratne informacije v realnem času, preverjanje modelov in preverjanje napak. Omogoča vam nemoteno urejanje model.json in manifest.json.
+
+### <a name="extensibility"></a>Razširljivost
+
+- **Izboljšan izvoz segmentov, razpored po meri in podvajanje** Zdaj si lahko [ogledate vse izvoze za določen segment](export-destinations.md#view-exports-and-export-details) na seznamu. Ta novi pogled pomaga pri upravljanju uporabe določenega segmenta in prilagajanju obstoječih ali ustvarjanju novih izvozov.    
+  [Določite lahko urnike osveževanja po meri](export-destinations.md#schedule-and-run-exports) za posamezen izvoz ali več izvozov hkrati. Do zdaj so se izvozi izvajali ob vsakem osveževanju sistema.    
+  Namesto da bi ustvarili nov izvoz brez predloge, lahko začnete na podlagi obstoječega in s tem prihranite nekaj časa.
+
+- **Izvoz segmentov v Microsoft Advertising** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi Microsoft Advertising. V storitvi Microsoft Advertising lahko s poenotenimi podatki o profilih strank ustvarite ciljne skupine storitve Customer Match in jih uporabite za svoje oglaševalske akcije. Če želite več informacij, glejte [Izvoz segmentov v Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Izvoz segmentov v LinkedIn Ads** Izvozne cilje smo razširili, tako da vključujejo oglase LinkedIn Ads in vam omogočili, da prek LinkedIna odklenete ciljanje stikov in ciljanje podjetij z izvozom vaših poenotenih podatkov o profilih strank. Če želite več informacij, glejte [Izvoz segmentov v LinkedIn Ads](export-linkedin-ads.md).
+
+
+- **Izvoz segmentov v Omnisend** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi Omnisend. S segmenti, ustvarjenimi v vpogledih občinstva, ustvarite akcije, zagotovite e-poštno trženje in uporabite določene skupine strank s storitvijo Omnisend. Če želite več informacij, glejte [Izvoz segmentov v Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Predvidevanja
+
+- **Poročilo o uporabnosti vhodnih podatkov** Poročilo o uporabnosti vhodnih podatkov ponuja strnjen prikaz napak in opozoril, ki jih lahko ustvarijo vaše vnaprej pripravljene napovedi. Prav tako daje priporočila, kako izboljšati zmogljivost modela.    
+  Poročilo je na voljo, ko model zaključi s postopkom kvalificiranja. Ustvarjeno je za vsak model posebej, ne glede na to, ali je bilo uspešno zaključeno ali ne.
+  Trenutno je ta funkcija na voljo samo za model izgube transakcije. Za več informacij glejte [Poročilo o uporabnosti vhodnih podatkov](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Odnosi
+
+- **Vizualizator odnosov** Pogled vizualizatorja odnosov vam omogoča, da vidite vse obstoječe odnose med entitetami in njihovo kardinalnostjo. Odnosi so zdaj organizirani v skupine: ustvaril uporabnik, sistem in podedovani odnosi. Pogled lahko izvozite tudi kot sliko. Več informacij najdete v razdelku [Ogled odnosov](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Posodobitve iz aprila 2021
 
