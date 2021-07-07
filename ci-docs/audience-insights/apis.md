@@ -9,21 +9,21 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
-ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
+ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/10/2021
-ms.locfileid: "6016640"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304762"
 ---
 # <a name="work-with-customer-insights-apis"></a>Delo z API-ji za Customer Insights
 
-Dynamics 365 Customer Insights ponuja API-je za izdelavo lastnih aplikacij, ki temeljijo na vaših podatkih v storitvi Customer Insights.
+Dynamics 365 Customer Insights vam zagotavlja API-je za izgradnjo lastnih aplikacij, in sicer na podlagi vaših podatkov v storitvi Customer Insights.
 
 > [!IMPORTANT]
-> Podrobnosti o teh API-jih so navedene pri [sklicu za API-je za Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Vključujejo dodatne informacije o postopkih, parametrih in odzivih.
+> Podrobnosti o API-jih najdete v [sklicu na API-je v storitvi Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Vključujejo dodatne informacije o postopkih, parametrih in odzivih.
 
-Ta članek vas pomaga pri dostopu do API-jev za Customer Insights, ustvarjanju registracije aplikacije Azure in začetku uporabe razpoložljivih odjemalskih knjižnic.
+V tem članku je opisano, kako dostopati do API-jev storitve Customer Insights, se registrirati v aplikaciji Azure in začeti z razpoložljivimi odjemalskimi knjižnicami.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Začetek uporabe API-jev za Customer Insights
 
@@ -32,6 +32,7 @@ Ta članek vas pomaga pri dostopu do API-jev za Customer Insights, ustvarjanju r
 1. Če želite omogočiti API-je v okolju Customer Insights, izberite **Skrbnik** > **Dovoljenja**. Za to boste potrebovali skrbniška dovoljenja.
 
 1. Izberite zavihek **API-ji** in izberite gumb **Omogoči**.    
+ 
    Z omogočanjem API-jev se ustvari primarni in sekundarni naročniški ključ za vaš primerek, ki se uporablja v zahtevah API-ja. Ključe lahko znova ustvarite tako, da izberete **Znova ustvari primarnega** ali **Znova ustvari sekundarnega** v razdelku **Skrbnik** > **Dovoljenja** > **API-ji**.
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Omogočite API-je za Customer Insights":::
@@ -40,7 +41,7 @@ Ta članek vas pomaga pri dostopu do API-jev za Customer Insights, ustvarjanju r
 
 1. Izberite postopek API-ja in izberite **Preskusi**.
 
-1. V stranskem podoknu nastavite vrednost v spustnem meniju **Avtorizacija** na **implicitno**. Pri glavi `Authorization` se doda nosilni žeton. Vaš naročniški ključ bo samodejno izpolnjen.
+1. Vrednost v stranskem podoknu, in sicer v spustnem meniju **Pooblastilo**, označite z **implicitno**. Glava `Authorization` je dodana z nosilnim žetonom. Vaš naročniški ključ bo samodejno izpolnjen.
   
 1. Po želji dodajte vse potrebne parametre poizvedbe.
 
@@ -48,27 +49,27 @@ Ta članek vas pomaga pri dostopu do API-jev za Customer Insights, ustvarjanju r
 
 Odgovor HTTP se bo kmalu prikazal spodaj.
 
-
-   :::image type="content" source="media/try-apis.gif" alt-text="Animirani gif, ki prikazuje, kako izbrati test API-jev.":::
+   :::image type="content" source="media/try-apis.gif" alt-text="Navodila za preizkušanje API-jev.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Ustvarjanje registracije nove aplikacije v portalu Azure
 
-Ti koraki vam pomagajo začeti uporabljati API-je za Customer Insights v aplikaciji Azure z uporabo dodeljenih dovoljenj. Najprej se prepričajte, da ste zaključili [razdelek za začetek](#get-started-trying-the-customer-insights-apis).
+Ti koraki vam bodo omogočili enostavnejšo prvo uporabo API-jev storitve Customer Insights v aplikaciji Azure z dodeljenimi dovoljenji. Najprej zaključite [razdelek Začetek](#get-started-trying-the-customer-insights-apis).
 
 1. Vpišite se v [portal Azure](https://portal.azure.com) z računom, ki lahko dostopa do podatkov Customer Insights.
 
 1. Na levi izberite **Registracije aplikacij**.
 
-1. Izberite **Nova registracija** ter navedite ime aplikacije in izberite vrsto računa.
+1. Izberite možnost **Nova registracija**, navedite ime aplikacije in izberite vrsto računa.
+ 
    Lahko tudi dodate URL za preusmeritev. http://localhost zadostuje za razvoj aplikacije v vašem lokalnem računalniku.
 
 1. V razdelku za registracijo nove aplikacije izberite **Dovoljenja za API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Animirani gif za nastavitev dovoljenja za API pri registraciji aplikacije.":::
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Kako ob registraciji programa nastaviti dovoljenja za API.":::
 
 1. Izberite **Dodaj dovoljenje** in zatem **Customer Insights** v stranskem podoknu.
 
-1. Za možnost **Vrsta dovoljenja** izberite **Dodeljena dovoljenja** in izberite dovoljenje **user_impersonation**.
+1. Za **Vrsto dovoljenja** izberite **Dodeljena dovoljenja**, nato pa dovoljenje **poosebljanje_uporabnika**.
 
 1. Izberite **Dodaj dovoljenja**. Če morate do API-ja dostopati brez vpisa uporabnika, preberite razdelek [Dovoljenja aplikacij za povezovanje med strežniki](#server-to-server-application-permissions).
 
@@ -76,13 +77,13 @@ Ti koraki vam pomagajo začeti uporabljati API-je za Customer Insights v aplikac
 
 ID aplikacije/odjemalca lahko uporabite za registracijo te aplikacije v knjižnici za preverjanje pristnosti Microsoft Authentication Library (MSAL), da prejmete nosilni žeton, ki ga z vašo zahtevo pošljete v API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Animirani gif za odobritev soglasja skrbnika.":::
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="Kako izdati soglasje skrbnika.":::
 
 Za več informacij o knjižnici MSAL glejte [Pregled knjižnice Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Če želite več informacij o registraciji aplikacij v storitvi Azure, glejte razdelek [Nova izkušnja pri registraciji aplikacije portala Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
+Za več informacij o registraciji programa v storitvi Azure si oglejte možnost [Registracija programa](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
 
-Za informacije o uporabi API-jev pri naših odjemalskih knjižnicah glejte [Odjemalske knjižnice Customer Insights](#customer-insights-client-libraries).
+Za informacije o uporabi API-jev v naših odjemalskih knjižnicah si oglejte [odjemalske knjižnice Customer Insights](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Dovoljenja aplikacij za povezovanje med strežniki
 
@@ -94,7 +95,7 @@ Za informacije o uporabi API-jev pri naših odjemalskih knjižnicah glejte [Odje
 
 1. Izberite zavihek **API-ji, ki jih uporablja organizacija** in s seznama izberite **Dynamics 365 AI za Customer Insights**. 
 
-1. Za možnost **Vrsta dovoljenja** izberite **Dovoljenja aplikacije** in izberite dovoljenje **CustomerInsights.Api.All**.
+1. Za **Vrsto dovoljenja** izberite **Dodeljena dovoljenja**, nato pa dovoljenje **poosebljanje_uporabnika**.
 
 1. Izberite **Dodaj dovoljenja**.
 
@@ -102,9 +103,10 @@ Za informacije o uporabi API-jev pri naših odjemalskih knjižnicah glejte [Odje
 
 1. Izberite **Podeli soglasje skrbnika za ...**, da dokončate registracijo aplikacije.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Animirani gif za odobritev soglasja skrbnika.":::
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Kako izdati soglasje skrbnika.":::
 
-1. Na koncu moramo še dodati ime registracije aplikacije kot uporabnik v storitvi Customer Insights.    
+1. Na koncu moramo še dodati ime registracije aplikacije kot uporabnik v storitvi Customer Insights.  
+   
    Odprite Customer Insights, izberite **Skrbnik** > **Dovoljenja** in izberite **Dodaj uporabnika**.
 
 1. Poiščite ime registracije za svojo aplikacijo, izberite ga med rezultati iskanja in izberite **Shrani**.
@@ -124,6 +126,7 @@ Naučite se uporabljati odjemalske knjižnice C# storitve NuGet.org. Za več inf
 1. Poiščite **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Izberite **Namesti** za dodajanje paketa v projekt.
+ 
    Ta ukaz lahko zaženete tudi v **konzoli upravitelja paketov NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
    :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Dodajte paket NuGet v projekt Visual Studio":::
@@ -132,16 +135,18 @@ Naučite se uporabljati odjemalske knjižnice C# storitve NuGet.org. Za več inf
 
 1. Uporabite knjižnico [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview), da prejmete `AccessToken` z uporabo obstoječe [registracije aplikacije Azure](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Po uspešnem preverjanju pristnosti in pridobitvi žetona izdelajte novega oz. uporabite obstoječega odjemalca `HttpClient`, in sicer z dodatno **»avtorizacijo« DefaultRequestHeaders** nastavljeno na **Nosilec <access token>** in možnostjo **Ocp-Apim-Subscription-Key** nastavljeno na [**naročniški ključ** iz okolja Customer Insights](#get-started-trying-the-customer-insights-apis).    
+1. Po uspešnem preverjanju pristnosti in pridobitvi žetona izdelajte novega oz. uporabite obstoječega odjemalca `HttpClient`, in sicer z dodatno **»avtorizacijo« DefaultRequestHeaders** nastavljeno na **Nosilec <access token>** in možnostjo **Ocp-Apim-Subscription-Key** nastavljeno na [**naročniški ključ** iz okolja Customer Insights](#get-started-trying-the-customer-insights-apis).   
+ 
    Ponastavite glavo **Avtorizacija**, kadar je to primerno. Na primer, ko je žeton potekel.
 
 1. Odjemalca `HttpClient` posredujte za pripravo odjemalca `CustomerInsights`.
 
    :::image type="content" source="media/httpclient-sample.png" alt-text="Vzorec odjemalca httpclient":::
 
-1. Z odjemalcem prikličite »načine razširitve«, na primer `GetAllInstancesAsync`. Če je zaželen dostop do temeljne možnosti `Microsoft.Rest.HttpOperationResponse`, uporabite »načine sporočil http«, na primer `GetAllInstancesWithHttpMessagesAsync`.
+1. Z odjemalcem prikličite »načine razširitve« – na primer `GetAllInstancesAsync`. Če je zaželen dostop do temeljne možnosti `Microsoft.Rest.HttpOperationResponse`, uporabite »načine sporočil http« — na primer `GetAllInstancesWithHttpMessagesAsync`.
 
 1. Vrsta odziva bo verjetno `object`, ker lahko ta način vrne več vrst (na primer `IList<InstanceInfo>` in `ApiErrorResult`). Če želite preveriti vrsto vrnitve, lahko predmete varno pretvorite v vrste odzivov, določene na [strani s podrobnostmi o API-ju](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) za ta postopek.    
+   
    Če potrebujete več informacij o zahtevi, uporabite **načine sporočil http** za dostop do predmeta neobdelanega odziva.
 
 ### <a name="nodejs-package"></a>Paket NodeJS

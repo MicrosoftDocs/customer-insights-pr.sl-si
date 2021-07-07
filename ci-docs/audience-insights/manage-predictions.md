@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095752"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315898"
 ---
 # <a name="manage-predictions"></a>Upravljanje predvidevanj
 
@@ -35,9 +35,6 @@ Ta članek obravnava nekatere naloge, ki so skupne večini scenarijev predvideva
 Poročilo o uporabnosti vhodnih podatkov ponuja strnjen prikaz napak in opozoril, ki jih lahko ustvarijo vaše vnaprej pripravljene napovedi. Prav tako daje priporočila, kako izboljšati zmogljivost modela.
 
 Poročilo je na voljo, ko model zaključi s postopkom kvalificiranja. Ustvarjeno je za vsak model posebej, ne glede na to, ali je bilo uspešno zaključeno ali ne.
-
-> [!NOTE]
-> Trenutno ta funkcija deluje samo za model izgube transakcije.
 
 ### <a name="view-the-input-data-usability-report"></a>Ogled poročila o uporabnosti vhodnih podatkov
 

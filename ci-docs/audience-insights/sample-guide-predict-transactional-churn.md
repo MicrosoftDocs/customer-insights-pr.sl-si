@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595446"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306140"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube glede transakcij (predogled)
 
-S spodnjimi podatki vam bomo v tem vodniku razložili celovit primer predvidevanja izgube glede transakcij v storitvi Customer Insights. Vsi podatki, uporabljeni v tem priročniku, niso resnični podatki o strankah in so del nabora podatkov Contoso, ki ga najdemo v *predstavitvenem* okolju v okviru naročnine Customer Insights.
+S spodnjimi podatki vam bomo v tem vodniku razložili celovit primer predvidevanja izgube glede transakcij v storitvi Customer Insights. Podatki, uporabljeni v tem vodniku, niso resnični podatki o strankah in so del nabora podatkov Contoso, ki se nahaja v okolju *Demo* in vam pripada v sklopu naročnine Customer Insights.
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek njihovega spletnega mesta Contoso Coffee. Njihov cilj je vedeti, katere stranke, ki običajno redno kupujejo njihove izdelke, ne bodo več aktivne stranke v naslednjih 60 dneh. Znanje o tem, katere stranke se bodo **verjetno izgubile**, jim lahko pomaga, da bolje izkoristijo tržna prizadevanja tako, da se osredotočijo na njihovo ohranitev.
+Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek svoje spletne strani Contoso Coffee. Njihov cilj je vedeti, katere stranke, ki običajno redno kupujejo njihove izdelke, ne bodo več aktivne stranke v naslednjih 60 dneh. Znanje o tem, katere stranke se bodo **verjetno izgubile**, jim lahko pomaga, da bolje izkoristijo tržna prizadevanja tako, da se osredotočijo na njihovo ohranitev.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -109,9 +109,9 @@ Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdel
 
 1. Izberite zavihek **Ujemanje** in izberite **Nastavi vrstni red**.
 
-1. Na spustnem seznamu **Primarno** izberite **StikiEPoslovanja: EPoslovanje** kot primarni vir in vključite vse zapise.
+1. Na spustnem seznamu izberite možnost **Primarni** ter za primarni vir določite **eCommerceContacts: eCommerce** in vključite vse zapise.
 
-1. Na spustnem seznamu **Entiteta 2** izberite **zvesteStranke: ShemaZvestobe** in vključite vse zapise.
+1. Na spustnem seznamu izberite možnost **Entiteta 2**, nato pa **loyCustomers: LoyaltyScheme** in vključite vse zapise.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Poenotenje ujemanja elektronskega poslovanja in zvestobe.":::
 
@@ -119,16 +119,16 @@ Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdel
 
 1. Dodajte svoj prvi pogoj z možnostjo FullName.
 
-   * Za StikiEPoslovanja izberite **FullName** v spustnem meniju.
-   * Za zvesteStranke izberite **FullName** v spustnem meniju.
+   * Za entiteto StikiEPoslovanja na spustnem seznamu izberite **FullName**.
+   * Za entiteto zvesteStranke na spustnem seznamu izberite **FullName**.
    * Izberite spustni meni **Normaliziraj** in izberite **Vrsta (telefon, ime, naslov, ...)**.
    * Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 
 1. Vnesite ime **FullName, Email** za novo pravilo.
 
    * Dodajte drugi pogoj za e-poštni naslov tako, da izberete **Dodaj pogoj**.
-   * Za StikiEPoslovanja entitete izberite **E-pošta** v spustnem meniju.
-   * Za zvesteStranke entitete izberite **E-pošta** v spustnem meniju. 
+   * Za entiteto StikiEPoslovanja na spustnem seznamu izberite možnost **E-pošta**.
+   * Za entiteto zvesteStranke na spustnem seznamu izberite možnost **E-pošta**. 
    * Pustite polje Normaliziraj prazno. 
    * Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 

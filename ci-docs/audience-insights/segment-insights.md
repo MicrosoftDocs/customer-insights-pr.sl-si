@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595354"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306094"
 ---
 # <a name="segment-insights-preview"></a>Vpogled v segmente (predogledna različica)
 
@@ -50,7 +50,7 @@ Izberite vpogled za prikaz rezultatov analize:
 
 - Število članov, ki se prekrivajo v segmentih, izbranih za analizo.
 - Število članov, vključenih v enega od segmentov, ne pa v ostale segmente.
-- Če ste med konfiguriranjem analize prekrivanja izbrali polja, jih boste našli na ustreznih zavihkih. S spustnim menijem za filtriranje lahko izberete katero koli stopnjo zanimanja in v spodnji tabeli se bodo prikazali ustrezni podatki.
+- Če ste med konfiguriranjem analize prekrivanja izbrali polja, jih boste našli na ustreznih zavihkih. S pomočjo spustnega seznama filtrov lahko izberete katerokoli pomembno raven zanimanja, pri čemer vam bo tabela na dnu prikazala ustrezne podatke.
 
 ## <a name="segment-differentiators"></a>Diferenciatorji segmentov
 

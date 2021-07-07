@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259119"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304900"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
 
@@ -54,29 +54,32 @@ Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfi
 1. Izberite **Novo**.
 
    > [!div class="mx-imgBorder"]
-   > ![Nastavitve okolja](media/environment-settings-dialog.png)
+   > ![Nastavitve okolja.](media/environment-settings-dialog.png)
 
-1. V pogovornem oknu **Ustvari novo okolje** izberite **Novo okolje**.
+1. V pogovornem oknu **Ustvari okolje** izberite **Novo okolje**.
 
    Če želite [prekopirati podatke iz trenutnega okolja](#considerations-for-copy-configuration-preview), izberite **Kopiraj iz obstoječega okolja**. Prikazan bo seznam vseh razpoložljivih okolij iz vaše organizacije, od koder lahko kopirate podatke.
 
 1. Navedite naslednje podrobnosti:
    - **Ime**: ime tega okolja. To polje je že izpolnjeno, če ste kopirali iz obstoječega okolja, lahko pa ga spremenite.
-   - **Območje**: območje, v katerem je storitev uvedena in gostovana.
    - **Vrsta**: izberite, ali želite ustvariti produkcijsko ali preizkusno okolje.
-
+   - **Območje**: območje, v katerem je storitev uvedena in gostovana.
+   
 1. Če želite, lahko izberete **Napredne nastavitve**:
 
-   - **Shrani vse podatke v**: določa, kam želite shraniti izhodne podatke, ustvarjene s storitvijo Customer Insights. Na voljo imate dve možnosti: **Shramba za Customer Insights** (shramba Azure Data Lake, ki jo upravlja ekipa za Customer Insights) in **Azure Data Lake Storage Gen2** (vaša shramba Azure Data Lake Storage). Privzeto je izbrana možnost »Shramba za Customer Insights«.
+   - **Shrani vse podatke v**: določa, kam želite shraniti izhodne podatke, ustvarjene s storitvijo Customer Insights. Na voljo imate dve možnosti: **Shramba storitve Customer Insights** (storitev Azure Data Lake, ki jo upravlja ekipa za Customer Insights) in **Azure Data Lake Storage** (vaša lastna storitev Azure Data Lake Storage). Privzeto je izbrana možnost »Shramba za Customer Insights«.
 
-   > [!NOTE]
-   > Če shranite podatke v Azure Data Lake Storage, se strinjate, da bodo podatki preneseni na ustrezno geografsko lokacijo za ta račun za shrambo Azure in tam shranjeni. Ta lokacija se lahko razlikuje od lokacije, kjer so shranjeni podatki v storitvi Dynamics 365 Customer Insights. [Več o tem preberite v Microsoftovem središču zaupanja.](https://www.microsoft.com/trust-center)
-   >
-   > Trenutno se uvožene entitete vedno shranijo v shrambo Data Lake, ki jo upravlja aplikacija Customer Insights.
-   > Podpiramo samo račune za shranjevanje Azure Data Lake Gen2 iz iste regije Azure, ki ste jo izbrali pri ustvarjanju okolja.
-   > Podpiramo samo račune za shrambo z omogočenim hierarhičnim imenskim prostorom (HNS) shrambe Azure Data Lake Gen2.
+     > [!NOTE]
+     > Če shranite podatke v Azure Data Lake Storage, se strinjate, da bodo podatki preneseni na ustrezno geografsko lokacijo za ta račun za shrambo Azure in tam shranjeni. Ta lokacija se lahko razlikuje od lokacije, kjer so shranjeni podatki v storitvi Dynamics 365 Customer Insights. [Več o tem preberite v Microsoftovem središču zaupanja.](https://www.microsoft.com/trust-center)
+     >
+     > Trenutno se uvožene entitete vedno shranijo v shrambo Data Lake, ki jo upravlja aplikacija Customer Insights. 
+     > 
+     > Podpiramo samo račune Azure Data Lake Storage iz tiste regije v storitvi Azure, ki ste jo izbrali pri ustvarjanju okolja. 
+     > 
+     > Podpiramo samo račune Azure Data Lake Storage z omogočenim hierarhičnim imenskim prostorom.
 
-   - Za možnost Azure Data Lake Storage Gen2 lahko izbirate med možnostjo, ki temelji na viru, in možnostjo preverjanja pristnosti, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Imena **Zabojnika** ni mogoče spremeniti in ostaja `customerinsights`.
+
+   - V sklopu možnosti Azure Data Lake Storage lahko za preverjanje pristnosti izberete možnost, ki temelji na virih, ali možnost, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Imena **Zabojnika** ni mogoče spremeniti in ostaja `customerinsights`.
    
    - Če želite uporabljati [napovedi](predictions.md), konfigurirati skupno rabo podatkov z okoljem Microsoft Dataverse ali omogočiti uvoz podatkov iz podatkovnih virov na mestu uporabe, zagotovite URL okolja Microsoft Dataverse pod možnostjo **Konfiguriranje skupne rabe podatkov s storitvijo Microsoft Dataverse in omogočanje dodatnih zmogljivosti**. Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Microsoft Dataverse Managed Data Lake.
 
@@ -85,7 +88,7 @@ Novo okolje lahko ustvarite na dva načina. Lahko določite popolnoma novo konfi
      > - [Predvidevanje manjkajočih vrednosti v entiteti](predictions.md) trenutno ni podprto, če je omogočena skupna rabo podatkov s storitvijo Microsoft Dataverse Managed Data Lake.
 
      > [!div class="mx-imgBorder"]
-     > ![Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
 
    Ko zaženete postopke, na primer uvoz podatkov ali ustvarjanje segmenta, bodo v zgoraj navedenem računu za shranjevanje ustvarjene ustrezne mape. Podatkovne datoteke in datoteke model.json bodo ustvarjene in dodane v mape na podlagi imena postopka.
 
@@ -113,14 +116,14 @@ Naslednje nastavitve *niso* kopirane:
 
 - Profili strank
 - Poverilnice virov podatkov. Za vsak vir podatkov boste morali zagotoviti poverilnice in ročno osvežiti vire podatkov.
-- Viri podatkov iz mape Common Data Model in upravljanega jezera Common Data Service. Te vire podatkov boste morali ustvariti ročno z istim imenom kot v izvornem okolju.
+- Viri podatkov iz mape Common Data Model in shrambe Data Lake, ki jo upravlja Dataverse. Te vire podatkov boste morali ustvariti ročno z istim imenom kot v izvornem okolju.
 
 Ko kopirate okolje, boste videli potrditveno sporočilo, da je bilo ustvarjeno novo okolje. Izberite **Na vire podatkov**, da prikažete seznam virov podatkov.
 
 Vsi viri podatkov bodo prikazovali stanje **Zahtevane poverilnice**. Uredite vire podatkov in vnesite poverilnice, da jih osvežite.
 
 > [!div class="mx-imgBorder"]
-> ![Viri podatkov kopirani](media/data-sources-copied.png)
+> ![Kopirani viri podatkov.](media/data-sources-copied.png)
 
 Ko osvežite vire podatkov, se pomaknite na možnost **Podatki** > **Poenoti**. Tukaj so na voljo nastavitve iz izvornega okolja. Po potrebi jih uredite ali izberite **Zagon**, da zaženete proces poenotenja podatkov in ustvarite poenoteno entiteto stranke.
 
@@ -136,9 +139,9 @@ Uredite lahko določene podatke obstoječih okolij.
 
 3. V polju **Uredi okolje** lahko posodobite **prikazno ime** okolja, vendar pa ne morete spremeniti **regije** ali **tipa**.
 
-4. Če je okolje konfigurirano za shranjevanje podatkov v shrambi Azure Data Lake Storage Gen2, lahko posodobite **ključ računa**. Vendar pa ne morete spremeniti možnosti **Ime računa** ali imena razdelka **Vsebnik**.
+4. Če je okolje konfigurirano za shranjevanje podatkov v shrambi Azure Data Lake Storage, lahko posodobite **Ključ računa**. Vendar pa ne morete spremeniti možnosti **Ime računa** ali imena razdelka **Vsebnik**.
 
-5. Po želji lahko posodobitev opravite prek povezave na podlagi ključa kupca s povezavo, ki temelji na viru ali naročnini. Po nadgradnji ne morete povrniti ključa kupca po posodobitvi. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Ob posodobitvi povezave ne morete spremeniti podatkov **vsebnika**.
+5. Po želji lahko povezavo, ki temelji na ključu računa posodobite ter zamenjate s povezavo, ki temelji na virih ali na naročnini. Po nadgradnji ne morete povrniti ključa kupca po posodobitvi. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Ob posodobitvi povezave ne morete spremeniti podatkov **vsebnika**.
 
 6. Izbirno lahko zagotovite URL okolja Microsoft Dataverse pod možnostjo **Konfiguriranje skupne rabe podatkov s storitvijo Microsoft Dataverse in omogočanje dodatnih zmogljivosti**. Te zmogljivosti vključujejo skupno rabo podatkov z aplikacijami in rešitvami na podlagi storitve Microsoft Dataverse, uvoz podatkov iz podatkovnih virov na mestu uporabe ali uporabo [napovedi](predictions.md). Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Microsoft Dataverse Managed Data Lake.
 
@@ -158,19 +161,19 @@ Uredite lahko določene podatke obstoječih okolij.
 
 1.  V glavi aplikacije izberite izbirnik **Okolje**. 
 
-2.  Izberite okolje, ki ga želite ponastaviti, in izberite tri pike **...**. 
+2.  Izberite okolje, ki ga želite ponastaviti, nato pa tri pike (**...**). 
 
 3. Izberite možnost **Ponastavi**. 
 
 4.  Če želite potrditi brisanje, vnesite ime okolja in izberite **Ponastavi**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Izbris obstoječega okolja (na voljo samo za skrbnike)
+## <a name="delete-an-existing-environment"></a>Brisanje obstoječega okolja
 
 Kot skrbnik lahko izbrišete okolja, katerih skrbnik ste.
 
 1.  V glavi aplikacije izberite izbirnik **Okolje**.
 
-2.  Izberite okolje, ki ga želite ponastaviti, in izberite tri pike **...**. 
+2.  Izberite okolje, ki ga želite ponastaviti, nato pa tri pike (**...**). 
 
 3. Izberite možnost **Izbriši**. 
 

@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253060"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305498"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvozov (predogledna različica)
 
 Na strani **Izvozi** so prikazani vsi konfigurirani izvozi. Izvozi dajo specifične podatke v skupno rabo z različnimi aplikacijami. Vključujejo lahko profile strank ali entitete, sheme in podrobnosti o preslikavi. Za vsak izvoz je potrebna [povezava, ki jo nastavi skrbnik, za upravljanje preverjanja pristnosti in dostopa](connections.md).
 
-Pojdite na **Podatki** > **Izvozi** za ogled strani z izvozi. Vse uporabniške vloge imajo dostop za ogled konfiguriranih izvozov. Uporabite polje za iskanje v ukazni vrstici, da najdete izvoze po njihovem imenu, imenu povezave in vrsti povezave.
+Pojdite na **Podatki** > **Izvozi** za ogled strani z izvozi. Konfigurirani izvozi so za ogled na voljo vsem uporabniškim vlogam. S pomočjo iskalnega polja v ukazni vrstici poiščite izvoze glede na njihovo poimenovanje, ime povezave ali vrsto povezave.
 
 ## <a name="set-up-a-new-export"></a>Nastavitev novega izvoza
 
@@ -65,7 +65,7 @@ Po ustvarjanju ciljev za izvoz so ti navedeni na **Podatki** > **Izvozi**. Vsi u
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 
-1. Uporabniki brez dovoljenj za urejanje izberejo **Ogled** namesto **Urejanje** za prikaz podrobnosti izvoza.
+1. Uporabniki brez dovoljenja za urejanje naj za ogled podrobnosti o izvozu izberejo možnost **Pogled**, ne pa možnosti **Uredi**.
 
 1. V stranskem podoknu je prikazana konfiguracija izvoza. Brez dovoljenj za urejanje ne morete spreminjati vrednosti. Izberite **Zapri**, da se vrnete na stran z izvozi.
 
@@ -73,7 +73,7 @@ Po ustvarjanju ciljev za izvoz so ti navedeni na **Podatki** > **Izvozi**. Vsi u
 
 Vsak izvoz, ki ga konfigurirate, ima urnik osveževanja. Med osveževanjem sistem išče nove ali posodobljene podatke, ki jih bo vključil v izvoz. Izvozi se privzeto izvajajo kot del vsakega [načrtovanega osveževanja sistema](system.md#schedule-tab). Za ročni zagon izvozov lahko prilagodite urnik osveževanja ali ga izklopite.
 
-Urniki izvoza so odvisni od stanja vašega okolja. Če potekajo posodobitve [odvisnosti](system.md#refresh-policies), ko naj bi se začel načrtovani izvoz, bo sistem najprej dokončal odvisnosti in nato zagnal izvoz. V stolpcu **Osveženo** lahko vidite, kdaj je bil izvoz nazadnje osvežen.
+Urniki izvoza so odvisni od stanja vašega okolja. Če so posodobitve v teku v [odvisnostih](system.md#refresh-policies), ko bi se moral načrtovani izvoz začeti, bo sistem najprej dokončal posodobitve, šele nato pa začel z izvozom. V stolpcu **Osveženo** lahko vidite, kdaj je bil izvoz nazadnje osvežen.
 
 ### <a name="schedule-exports"></a>Načrtovanje izvozov
 

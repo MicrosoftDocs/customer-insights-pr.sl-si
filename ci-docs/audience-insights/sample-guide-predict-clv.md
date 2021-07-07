@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129965"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306369"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Vzorčni priročnik za predvidevanje vrednosti življenjske dobe stranke (CLV)
 
@@ -123,9 +123,9 @@ Po uvozu podatkov se začne postopek poenotenja podatkov za ustvarjanje enotnega
 
 1. Izberite zavihek **Ujemanje** in izberite **Nastavi vrstni red**.
 
-1. Na spustnem seznamu **Primarno** izberite **StikiEPoslovanja: EPoslovanje** kot primarni vir in vključite vse zapise.
+1. Na spustnem seznamu izberite možnost **Primarni** ter za primarni vir določite **eCommerceContacts: eCommerce** in vključite vse zapise.
 
-1. Na spustnem seznamu **Entiteta 2** izberite **zvesteStranke: ShemaZvestobe** in vključite vse zapise.
+1. Na spustnem seznamu izberite možnost **Entiteta 2**, nato pa **loyCustomers: LoyaltyScheme** in vključite vse zapise.
 
    ![Poenotenje ujemanja elektronskega poslovanja in zvestobe.](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ Po uvozu podatkov se začne postopek poenotenja podatkov za ustvarjanje enotnega
 
 1. Dodajte svoj prvi pogoj z možnostjo FullName.
 
-   - Za StikiEPoslovanja izberite **FullName** v spustnem meniju.
-   - Za zvesteStranke izberite **FullName** v spustnem meniju.
-   - Izberite spustni meni **Normaliziraj** in izberite **Vrsta (telefon, ime, naslov, ...)**.
+   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite **FullName**.
+   - Za entiteto zvesteStranke na spustnem seznamu izberite **FullName**.
+   - Na spustnem seznamu izberite možnost **Normaliziraj**, nato pa **Vrsta (telefon, ime, naslov, ...)**.
    - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 
 1. Vnesite ime **FullName, Email** za novo pravilo.
 
    - Dodajte drugi pogoj za e-poštni naslov tako, da izberete **Dodaj pogoj**.
-   - Za StikiEPoslovanja entitete izberite **E-pošta** v spustnem meniju.
-   - Za zvesteStranke entitete izberite **E-pošta** v spustnem meniju.
+   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite možnost **E-pošta**.
+   - Za entiteto zvesteStranke na spustnem seznamu izberite možnost **E-pošta**.
    - Pustite polje Normaliziraj prazno.
    - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 

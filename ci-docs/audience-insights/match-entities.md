@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085642"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306048"
 ---
 # <a name="match-entities"></a>Ujemanje entitet
 
@@ -209,7 +209,7 @@ Preskusite različne pragove natančnosti v pogojih, da poiščete optimalno vre
 
 Večino parametrov ujemanja lahko znova konfigurirate in prilagodite.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Posnetek zaslona spustnega seznama z možnostmi za pravila ujemanja.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Posnetek zaslona spustnega menija z možnostmi pravil ujemanja.":::
 
 - Če ste določili več pravil, **spremenite vrstni red pravil**. Pravila ujemanja lahko preuredite tako, da izberete možnosti **Premakni navzgor** in **Premakni navzdol** ali da povlečete in spustite.
 
@@ -247,7 +247,7 @@ Določite lahko pogoj, da se morajo določeni zapisi vedno ujemati oziroma se ne
 
 1. Odprite razdelek **Podatki** > **Viri podatkov** in datoteke predloge uvozite kot nove entitete. Po uvozu jih lahko uporabite za določanje konfiguracije ujemanja.
 
-1. Ko so datoteke naložene in entitete na voljo, znova izberite možnost **Ujemanje po meri**. Videli boste možnosti za določanje entitet, ki jih želite vključiti. V spustnem meniju izberite potrebne entitete.
+1. Ko so datoteke naložene in entitete na voljo, znova izberite možnost **Ujemanje po meri**. Videli boste možnosti za določanje entitet, ki jih želite vključiti. V spustnem meniju izberite zahtevane entitete.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Posnetek zaslona pogovornega okna za izbiro preglasitev za okoliščine ujemanja po meri.":::
 

@@ -1,5 +1,5 @@
 ---
-title: Obogatitev z neodvisnimi obogatitvami HERE Technologies
+title: Obogatitev z neodvisno obogatitvijo HERE Technologies
 description: Splošne informacije o neodvisni obogatitvi HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896071"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305314"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obogatitev profilov strank v sodelovanju z družbo HERE Technologies (predogled)
 
@@ -24,9 +24,9 @@ HERE Technologies je podjetje z lokacijsko platformo, ki ponuja lokacijsko usmer
 
 Za konfiguracijo obogatitve HERE Technologies morajo biti izpolnjeni naslednji predpogoji:
 
-- Imate aktivno naročnino HERE Technologies. Če želite naročnino, se lahko [prijavite tukaj](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ali neposredno [stopite v stik z družbo HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Preberite več o obogatitvi lokacije HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- Imate aktivno naročnino HERE Technologies. Če želite naročnino, se lahko [prijavite tukaj](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) ali [se obrnete neposredno na družbo HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you). [Preberite več o obogatitvi lokacije HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Na voljo je [povezava](connections.md) za storitev HERE *oziroma* imate vi [skrbniška](permissions.md#administrator) dovoljenja in ključ za API HERE Technologies.
+- [Povezava](connections.md) HERE je na voljo, *do nje pa lahko dostopate tudi* s pomočjo dovoljenja [skrbnika](permissions.md#administrator) in ključa vmesnika API družbe HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Konfiguriranje obogatitve
 
@@ -37,7 +37,7 @@ Za konfiguracijo obogatitve HERE Technologies morajo biti izpolnjeni naslednji p
    > [!div class="mx-imgBorder"]
    > ![Ploščica HERE Technologies](media/HERE-tile.png "Ploščica HERE Technologies")
 
-1. Na spustnem seznamu izberite [povezavo](connections.md). Če ni na voljo nobena povezava, se obrnite na skrbnika. Če ste skrbnik, lahko vzpostavite povezavo z izbiro možnosti **Dodaj povezavo**. Na spustnem meniju izberite možnost **HERE Technologies**. 
+1. Na spustnem seznamu izberite možnost [povezava](connections.md). Če ni na voljo nobena povezava, se obrnite na skrbnika. Če ste skrbnik, lahko vzpostavite povezavo z izbiro možnosti **Dodaj povezavo**. Na spustnem seznamu izberite možnost **HERE Technologies**. 
 
 1. Izberite možnost **Poveži z družbo HERE Technologies** za potrditev izbire.
 
@@ -58,7 +58,7 @@ Za konfiguracijo obogatitve HERE Technologies morajo biti izpolnjeni naslednji p
 
 1. Po pregledu svoje izbire izberite možnost **Shrani obogatitev**.
 
-## <a name="configure-the-connection-for-here-technologies"></a>Konfiguriranje povezave z družbo HERE technologies 
+## <a name="configure-the-connection-for-here-technologies"></a>Konfigurirajte povezavo za HERE Technologies. 
 
 Za konfiguriranje povezav morate biti skrbnik. Pri konfiguriranju obogatitve izberite možnost **Dodaj povezavo** *ali* odprite razdelek **Skrbnik** > **Povezave** in na ploščici HERE Technologies izberite možnost **Nastavitev**.
 
@@ -66,13 +66,13 @@ Za konfiguriranje povezav morate biti skrbnik. Pri konfiguriranju obogatitve izb
 
 1. Navedite veljaven ključ za API HERE Technologies.
 
-1. Preberite in podajte soglasje za **Zasebnost podatkov in skladnost** tako, da potrdite polje **Strinjam se**.
+1. Preglejte in podajte soglasje, tako da v razdelku **Zasebnost in skladnost podatkov** izberete možnost **Strinjam se**.
 
 1. Izberite možnost **Potrdi** za potrditev konfiguracije.
 
 1. Po zaključku potrjevanja izberite možnost **Shrani**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Stran za konfiguriranje povezave z družbo HERE technologies](media/enrichment-HERE-connection.png "Stran za konfiguriranje povezave z družbo HERE technologies")
 
 ## <a name="enrichment-results"></a>Rezultati obogatitve
@@ -85,12 +85,12 @@ Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izber
 
 ## <a name="next-steps"></a>Naslednji koraki
 
-Nadgradite svoje obogatene podatke o strankah. Ustvarite [Segmente](segments.md), [Mere](measures.md) in pa [izvozite podatke](export-destinations.md), da svojim strankam zagotovite prilagojeno izkušnjo.
+Nadgradite svoje obogatene podatke o strankah. Ustvarite [segmente](segments.md) in [mere](measures.md) ter celo [izvozite podatke](export-destinations.md) in tako svojim strankam zagotovite prilagojeno izkušnjo.
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 
 Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v HERE Technologies, dovoljujete prenos podatkov izven meje zagotavljanja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da HERE Technologies izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli odstrani in s tem prekini uporabo te funkcije.
+Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadarkoli odstrani, s čimer je uporaba te funkcije prekinjena.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

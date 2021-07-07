@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760301"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305406"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Uporaba segmentov storitve Customer Insights v aplikaciji Adobe Campaign Standard (predogledna različica)
 
-Kot uporabnik vpogledov v občinstvo za Dynamics 365 Customer Insights ste morda ustvarili segmente za izboljšanje učinkovitosti svojih trženjskih akcij s ciljanjem na ustrezno občinstvo. Če želite uporabiti segment iz vpogledov v občinstvo na platformi Adobe Experience Platform in v aplikacijah, kot je Adobe Campaign Standard, morate slediti nekaj korakom, ki so opisani v tem članku.
+Kot uporabnik vpogleda občinstva v storitvi Dynamics 365 Customer Insights ste morda ustvarili segmente, da bi z njihovo pomočjo, in sicer z izborom relevantnejšega ciljnega občinstva, izpopolnili svoje trženjske akcije. Če želite uporabiti segment iz vpogledov v občinstvo na platformi Adobe Experience Platform in v aplikacijah, kot je Adobe Campaign Standard, morate slediti nekaj korakom, ki so opisani v tem članku.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagram postopka korakov, opisanih v tem članku.":::
 
@@ -54,7 +54,7 @@ Ko je ciljno občinstvo določeno, lahko konfiguriramo izvoz iz vpogledov v obč
 
 1. V pogledih v občinstvo odprite razdelek **Skrbnik** > **Povezave**.
 
-1. Izberite možnost **Dodaj povezavo** in izberite **Adobe Campaign**, da konfigurirate povezavo, ali izberite možnost **Nastavitev** na ploščici za **Adobe Campaign**.
+1. Izberite možnost **Dodaj povezavo**, nato pa **Adobe Campaign** ter tako konfigurirajte povezavo, ali pa izberite možnost **Nastavitev** na ploščici za **Adobe Campaign**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Konfiguracijska ploščica za Adobe Campaign Standard.":::
 
@@ -64,9 +64,9 @@ Ko je ciljno občinstvo določeno, lahko konfiguriramo izvoz iz vpogledov v obč
 
 1. Vnesite **Ime računa**, **Ključ računa** in **Vsebnik** računa Azure Blob Storage, kamor želite izvoziti segment.  
       
-   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Posnetek zaslona konfiguracije računa za shrambo. "::: 
+   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Posnetek zaslona konfiguracije računa za shrambo."::: 
 
-   - Če želite izvedeti več o tem, kako najti ime in ključ računa za shrambo zbirke dvojiških podatkov Azure, glejte [Upravljanje nastavitev računa za shrambo na portalu storitve Azure](/azure/storage/common/storage-account-manage).
+   - Če želite izvedeti več o tem, kako do imena in ključa računa shrambe zbirke dvojiških podatkov Azure, si oglejte [Upravljanje nastavitev računa za shrambo na portalu storitve Azure](/azure/storage/common/storage-account-manage).
 
    - Če želite izvedeti, kako ustvariti vsebnik, glejte [Ustvarjanje vsebnika](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -80,7 +80,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Izberite možnost **Dodaj izvoz** za ustvarjanje novega izvoza.
 
-1. V polju **Povezava za izvoz** izberite povezavo iz razdelka Adobe Campaign. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
+1. V polju **Povezava za izvoz** izberite povezavo iz razdelka Adobe Campaign. Če se vam poimenovanje tega odseka ne prikaže, to pomeni, da vam ni na voljo nobena tovrstna povezava.
 
 1. Izberite segment, ki ga želite izvoziti. V tem primeru je to **ChurnProneCustomers**.
 
@@ -118,7 +118,7 @@ Ko je segment iz vpogledov v občinstvo izvožen, vsebuje stolpce, ki ste jih iz
 
 Če želimo segment uporabiti v aplikaciji Adobe Campaign Standard, moramo razširiti shemo profilov v aplikaciji Adobe Campaign Standard, da bo vključevala še dve dodatni polji. Preberite, kako [razširite vir profila](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) z novimi polji v aplikaciji Adobe Campaign Standard.
 
-V našem primeru so to polja *Ime in datum segmenta (izbirno).*
+V tem primeru gre za polja *Ime in datum segmenta (izbirno)*.
 
 Ta polja bomo uporabili za prepoznavanje profilov v aplikaciji Adobe Campaign Standard, na katere želimo ciljati pri tej akciji.
 
@@ -128,7 +128,7 @@ Ta polja bomo uporabili za prepoznavanje profilov v aplikaciji Adobe Campaign St
 
 Zdaj, ko je vse na svojem mestu, moramo iz vpogledov v občinstvo v aplikacijo Adobe Campaign Standard uvoziti pripravljene podatke o občinstvu za ustvarjanje profilov. Preberite, [kako uvoziti profile v aplikacijo Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) s potekom dela.
 
-Potek dela uvoza na spodnji sliki je konfiguriran za zagon vsakih 8 ur in išče izvožene segmente vpogledov v občinstvo (datoteka .csv v shrambi zbirke dvojiških podatkov Azure). Potek dela izvleče vsebino datoteke .csv v določenem vrstnem redu stolpcev. Ta potek dela je bil zgrajen tako, da izvaja osnovno obravnavanje napak in zagotavlja, da ima vsak zapis e-poštni naslov, preden podatke hidrira v aplikacijo Adobe Campaign Standard. Potek dela izvleče tudi ime segmenta iz imena datoteke, preden ga vstavi v podatke profila ACS.
+Potek dela uvoza na spodnji sliki je konfiguriran, da se zažene na vsakih osem ur, in išče izvožene segmente vpogleda občinstva (datoteka .csv v shrambi zbirke dvojiških podatkov Azure). Potek dela izvleče vsebino datoteke .csv v določenem vrstnem redu stolpcev. Ta potek dela je bil zgrajen tako, da izvaja osnovno obravnavanje napak in zagotavlja, da ima vsak zapis e-poštni naslov, preden podatke hidrira v aplikacijo Adobe Campaign Standard. Potek dela prav tako iz imena dokumenta izvleče ime segmenta, preden ga vstavi v podatke profila storitve Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Posnetek zaslona poteka dela uvoza v uporabniškem vmesniku aplikacije Adobe Campaign Standard.":::
 

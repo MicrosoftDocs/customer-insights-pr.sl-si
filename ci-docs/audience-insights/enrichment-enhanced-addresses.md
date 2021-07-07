@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965598"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305452"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogatitev profilov strank z izboljšanimi naslovi
 
@@ -22,11 +22,11 @@ Naslovi v vaših podatkih so lahko nestrukturirani, nepopolni ali napačni. Upor
 
 ## <a name="how-we-enhance-addresses"></a>Kako izboljšujemo naslove?
 
-Naš model gre skozi dvostopenjski postopek za izboljšanje naslova. Najprej razčleni naslov, da prepozna njegove komponente, in jih postavi v strukturirano obliko. Nato z umetno inteligenco popravimo, dopolnimo in standardiziramo vrednosti v naslovu.
+Naš model gre skozi dvostopenjski postopek za izboljšanje naslova. Najprej razčleni naslov, da prepozna njegove komponente, in jih postavi v strukturirano obliko. Nato s pomočjo umetne inteligence popravimo, dopolnimo in standardiziramo vrednosti v naslovu.
 
 ### <a name="example"></a>Primer
 
-Podatki o naslovih so lahko v nestandardni obliki in vsebujejo napake v črkovanju. Model lahko odpravi te težave in ustvari dosledne naslove v poenotenih profilih strank.
+Podatki o naslovu so lahko v nestandardni obliki in lahko vsebujejo napake v črkovanju. Model lahko odpravi te težave in ustvari dosledne naslove v poenotenih profilih strank.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Izboljšani naslovi delujejo samo z vrednostmi, ki že obstajajo v uvoženih pod
 2. Ne preveri, ali je katera od vrednosti, na primer poštne številke ali imena ulic, veljavna.
 3. Ne spremeni vrednosti, ki jih ne prepozna.
 
-Model za izboljšanje naslovov uporablja tehnike, ki temeljijo na strojnem učenju. 100-odstotna natančnost ni zagotovljena, čeprav uporabljamo visok prag zanesljivosti, ko model spremeni vhodno vrednost, tako kot pri katerem koli modelu, ki temelji na strojnem učenju.
+Model za izboljšanje naslovov uporablja tehnike, ki temeljijo na strojnem učenju. Čeprav je naša stopnja zanesljivosti, ko gre spremembo vhodne vrednosti modela, visoka, 100-odstotna natančnost – tako kot pri vseh modelih, ki temeljijo na strojnem učenju – ni zagotovljena.
 
 ## <a name="supported-countries-or-regions"></a>Podprte države ali regije
 
@@ -76,7 +76,7 @@ Naslovi morajo vsebovati vrednost države/regije. Ne obdelujemo naslovov za drž
 1. Izberite način oblikovanja naslovov v naboru podatkih. Izberite **Naslov z enim atributom**, če naslovi v vaših podatkih uporabljajo eno samo polje. Izberite **Naslov z več atributi**, če naslovi v vaših podatkih uporabljajo več kot eno podatkovno polje.
 
    > [!NOTE]
-   > Država/regija je obvezna tako v naslovu z enim kot z več atributi. Naslovi, ki ne vsebujejo veljavnih ali podprtih vrednosti držav/regij, ne bodo obogateni
+   > Navedba države/regije je obvezna tako pri naslovih z enim atributom kot tudi pri tistih z več atributi. Naslovi brez veljavnih ali podprtih vrednosti države/regije ne bodo obogateni.
 
 1.  Preslikajte polja z naslovi iz vaše poenotene entitete stranke.
 
@@ -98,6 +98,6 @@ Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izber
 
 ## <a name="next-steps"></a>Naslednji koraki
 
-Nadgradite svoje obogatene podatke o strankah. Ustvarite [Segmente](segments.md), [Mere](measures.md) in pa [izvozite podatke](export-destinations.md), da svojim strankam zagotovite prilagojeno izkušnjo.
+Nadgradite svoje obogatene podatke o strankah. Ustvarite [segmente](segments.md) in [mere](measures.md) ter celo [izvozite podatke](export-destinations.md) in tako svojim strankam zagotovite prilagojeno izkušnjo.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,6 +1,6 @@
 ---
 title: Izvoz podatkov storitve Customer Insights na platformo Adobe Experience Platform
-description: Preberite, kako uporabljati segmente vpogleda v občinstvo na platformi Adobe Experience Platform.
+description: Naučite se, kako uporabljati segmente vpogleda občinstva v storitvi Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760121"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305544"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Uporaba segmentov storitve Customer Insights na platformi Adobe Experience Platform (predogledna različica)
 
-Kot uporabnik vpogledov v občinstvo za Dynamics 365 Customer Insights ste morda ustvarili segmente za izboljšanje učinkovitosti svojih trženjskih akcij s ciljanjem na ustrezno občinstvo. Če želite uporabiti segment iz vpogledov v občinstvo na platformi Adobe Experience Platform in v aplikacijah, kot je Adobe Campaign Standard, morate slediti nekaj korakom, ki so opisani v tem članku.
+Kot uporabnik vpogleda občinstva v storitvi Dynamics 365 Customer Insights ste morda ustvarili segmente, da bi z njihovo pomočjo, in sicer z izborom relevantnejšega ciljnega občinstva, izpopolnili svoje trženjske akcije. Če želite uporabiti segment iz vpogledov v občinstvo na platformi Adobe Experience Platform in v aplikacijah, kot je Adobe Campaign Standard, morate slediti nekaj korakom, ki so opisani v tem članku.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagram postopka korakov, opisanih v tem članku.":::
 
@@ -55,19 +55,19 @@ Ko je ciljno občinstvo določeno, lahko konfiguriramo izvoz iz vpogledov v obč
 
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 
-1. Izberite možnost **Dodaj povezavo** in izberite shrambo **Azure Blob** oziroma na ploščici za shrambo **Azure Blob** izberite možnost **Nastavitev**.
+1. Izberite možnost **Dodaj povezavo**, nato pa **zbirka dvojiških podatkov Azure**, ali pa izberite možnost **Nastavitev** na ploščici za **zbirko dvojiških podatkov Azure** ter konfigurirajte povezavo.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfiguracijska ploščica za shrambo zbirke dvojiških podatkov Azure."::: za konfiguriranje povezave.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Konfiguracijska ploščica za shrambo zbirke dvojiških podatkov Azure."::: 
 
 1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**. Ime in vrsta povezave opisujeta to povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
 
 1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Vnesite **Ime računa**, **Ključ računa** in **Vsebnik** računa za shrambo Blob, v katerega želite izvoziti segment.  
+1. Da bi ustvarili račun za shrambo zbirke dvojiških podatkov, v katerega želite izvoziti segment, vnesite **Ime računa**, **Ključ računa** in **Vsebnik**.  
       
-   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Posnetek zaslona konfiguracije računa za shrambo. "::: 
+   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Posnetek zaslona konfiguracije računa za shrambo."::: 
    
-    - Za več informacij o iskanju imena računa in ključa računa shrambe Blob glejte razdelek [Upravljanje nastavitev računa shrambe v portalu Azure](/azure/storage/common/storage-account-manage).
+    - Za več informacij o iskanju imena računa in ključa računa shrambe zbirke dvojiških podatkov si oglejte [Upravljanje nastavitev računa za shrambo na portalu Azure](/azure/storage/common/storage-account-manage).
     - Če želite izvedeti, kako ustvariti vsebnik, glejte [Ustvarjanje vsebnika](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 1. Izberite možnost **Shrani**, da dokončate povezavo. 
@@ -80,7 +80,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Izberite možnost **Dodaj izvoz** za ustvarjanje novega izvoza.
 
-1. V polju **Povezava za izvoz** izberite povezavo v razdelku Azure Blob Storage. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
+1. V polju **Povezava za izvoz** izberite povezavo v razdelku Azure Blob Storage. Če se vam poimenovanje tega odseka ne prikaže, to pomeni, da vam ni na voljo nobena tovrstna povezava.
 
 1. Izberite segment, ki ga želite izvoziti. V tem primeru je to **ChurnProneCustomers**.
 
@@ -123,7 +123,8 @@ Ko določite izvorne povezave, [konfigurirajte podatkovni tok](https://experienc
 
 Za pošiljanje e-poštnega sporočila za to akcijo bomo uporabili aplikacijo Adobe Campaign Standard. Po uvozu podatkov na platformo Adobe Experience Platform moramo v aplikaciji Adobe Campaign Standard [ustvariti občinstvo](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission), pri čemer uporabimo podatke na platformi Adobe Experience Platform.
 
-Preberite, kako v aplikaciji Adobe Campaign Standard [uporabite graditelja segmentov](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment), da določite občinstvo na podlagi podatkov na platformi Adobe Experience Platform.
+
+Preberite, kako v aplikaciji Adobe Campaign Standard [uporabite graditelja segmentov](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html), da določite občinstvo na podlagi podatkov na platformi Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Ustvarjanje in pošiljanje e-poštnih sporočil z aplikacijo Adobe Campaign Standard
 

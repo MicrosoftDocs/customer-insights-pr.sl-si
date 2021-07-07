@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866427"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304946"
 ---
 # <a name="customer-activities"></a>Dejavnosti stranke
 
@@ -45,7 +45,7 @@ Vaši viri podatkov lahko vključujejo entitete s transakcijskimi podatki in pod
 
    - **Prvič**: tuje polje v entiteti dejavnosti, ki bo uporabljeno za vzpostavitev odnosa z drugo entiteto.
    - **Drugič**: ustrezna izvorna entiteta stranke, s katero bo entiteta dejavnosti v odnosu. Nanašate se lahko samo na izvorne entitete strank, ki se uporabljajo v postopku poenotenja podatkov.
-   - **Tretjič**: če odnos med to entiteto dejavnosti in izbrano izvorno entiteto stranke že obstaja, bo ime odnosa v načinu samo za branje. Če ne obstaja noben takšen odnos, bo ustvarjen nov odnos z imenom, ki ga navedete v tem polju.
+   - **Tretjič**: če odnos med to entiteto dejavnosti in izbrano izvorno entiteto stranke že obstaja, bo ime odnosa v načinu samo za branje. Če takšen odnos ni na voljo, bo na podlagi imena, ki ste ga navedli v tem polju, ustvarjen nov.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Določite odnos entitete.":::
 
@@ -53,23 +53,23 @@ Vaši viri podatkov lahko vključujejo entitete s transakcijskimi podatki in pod
 
 1. V koraku **Poenotenje dejavnosti** izberite dogodek dejavnosti in čas začetka dejavnosti. 
    - **Zahtevana polja**
-      1. **Dejavnost dogodka**: polje, ki je dogodek za to dejavnost
-      2. **Časovni žig**: polje, ki predstavlja čas začetka dejavnosti.
+      - **Dejavnost dogodka**: polje, ki predstavlja dogodek za to dejavnost.
+      - **Časovni žig**: polje, ki predstavlja čas začetka dejavnosti.
 
    - **Izbirna polja**
-      1. **Dodatne podrobnosti**: polje z relevantnimi informacijami za to dejavnost.
-      2. **Ikona**: ikona, ki najbolje predstavlja to vrsto dejavnosti.
-      3. **Spletni naslov** : polje z URL-jem s podatki o tej dejavnosti. Na primer transakcijski sistem, ki je vir te dejavnosti. Ta URL je lahko katero koli polje iz vira podatkov, lahko pa je oblikovano kot novo polje s pretvorbo v orodju Power Query. Podatki z URL-ja bodo shranjeni v entiteti *Poenotena dejavnost*, ki se lahko porabi v nadaljnjem toku z uporabo [API-jev](apis.md).
+      - **Dodatne podrobnosti**: polje z relevantnimi informacijami za to dejavnost.
+      - **Ikona**: ikona, ki najbolje predstavlja to vrsto dejavnosti.
+      - **Spletni naslov** : polje z URL-jem s podatki o tej dejavnosti. Na primer transakcijski sistem, ki je vir te dejavnosti. Ta URL je lahko katero koli polje iz vira podatkov, lahko pa je oblikovano kot novo polje s pretvorbo v orodju Power Query. Podatki z URL-ja bodo shranjeni v entiteti *Poenotena dejavnost*, ki se lahko porabi v nadaljnjem toku z uporabo [API-jev](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="V entiteti Poenotena dejavnost navedite podatke o dejavnosti stranke.":::
 
 1. Izberite možnost **Naprej** za pomik na naslednji korak. Izberete lahko možnost **Zaključek in pregled**, da takoj shranite dejavnost z vrsto dejavnosti, nastavljeno na možnost **Drugo**. 
 
-1. V koraku **Vrsta dejavnosti** izberite vrsto dejavnosti in po želji izberite, ali želite semantično preslikati nekatere vrste dejavnosti za uporabo na drugih področjih storitve Customer Insights. Vrsti dejavnosti *Naročnina* & *SalesOrderLine* je mogoče semantično preslikati, ko se strinjate s preslikavo polj. Če vrsta dejavnosti za novo dejavnost ni pomembna, lahko izberete možnost *Drugo* ali *Ustvari novo* za prilagojeno vrsto dejavnosti.
+1. V koraku **Vrsta dejavnosti** izberite vrsto dejavnosti in po želji izberite, ali želite semantično preslikati nekatere vrste dejavnosti za uporabo na drugih področjih storitve Customer Insights. Po potrditvi, da se strinjate s preslikavo polij, je mogoče dejavnosti *naročnina* in *SalesOrderLine* semantično preslikati. Če vrsta dejavnosti za novo dejavnost ni pomembna, lahko izberete možnost *Drugo* ali *Ustvari novo* za prilagojeno vrsto dejavnosti.
 
 1. Izberite možnost **Naprej** za pomik na naslednji korak. 
 
-1. V koraku **Pregled** preverite svoje izbire. Po potrebi se lahko vrnete se na katerega koli od prejšnjih korakov in posodobite podatke.
+1. V koraku **Pregled** preverite svoje izbire. Vrnite se na kateregakoli izmed prejšnjih korakov in posodobite podatke, če je to potrebno.
 
    :::image type="content" source="media/Activity_Wizard5.PNG" alt-text="Preglejte navedena polja za dejavnost.":::
    
@@ -89,7 +89,7 @@ Ko izberete dejavnost, so na voljo naslednja dejanja.
 
 - **Uredi**: odpre korak nastavitve dejavnosti v koraku pregleda. V tem koraku lahko spremenite vse trenutne konfiguracije. Po spremembi konfiguracije izberite možnost **Shrani dejavnost** in nato izberite možnost **Zaženi** za obdelavo sprememb.
 
-- **Preimenuj**: odpre pogovorno okno, kamor vnesete drugo ime za izbrano dejavnost. Če želite uporabiti spremembe, izberite **Shrani**.
+- **Preimenujte**: odpre pogovorno okno, kamor lahko za izbrano dejavnost vnesete drugačno poimenovanje. Če želite uporabiti spremembe, izberite **Shrani**.
 
 - **Izbriši**: odpre pogovorno okno za potrditev brisanja izbrane dejavnosti. Izbrišete lahko tudi več dejavnosti hkrati, in sicer tako, da izberete dejavnosti ter nato izberete ikono za brisanje. Izberite možnost **Izbriši**, da pordite izbris.
 

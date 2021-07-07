@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896347"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304624"
 ---
 # <a name="customer-profiles"></a>Profili strank
 
@@ -57,13 +57,13 @@ Izberite katero koli ploščico stranke, da odprete **stran s podrobnostmi o str
 
 Podrobnosti o stranki vključujejo:
 
--   **Ploščica profila stranke:** ta ploščica prikazuje različne vrednosti iz poenotene entitete profila stranke. Te podrobnosti lahko vključujejo e-poštni naslov, ime, mesto itd. 
+-   **Ploščica profila stranke:** ploščica prikazuje različne vrednosti iz poenotene entitete profila stranke. Te podrobnosti lahko vključujejo e-poštni naslov, ime, mesto itd. 
 
--   **Morebitna zanimanja, morebitne blagovne znamke:** pokaže, ali ste konfigurirali lastno obogatitev. Predstavlja potencialne interese in priljubljene blagovne znamke za stranke s podobnim profilom kot ta stranka. Za več informacij glejte [Obogatitev profilov strank s priljubljenimi blagovnimi znamkami in zanimanji](enrichment-microsoft.md).
+-   **Potencialna zanimanja, potencialne blagovne znamke**: pokaže vam, ali ste konfigurirali obogatitev proizvajalca. Predstavlja potencialne interese in priljubljene blagovne znamke za stranke s podobnim profilom kot ta stranka. Za več informacij glejte [Obogatitev profilov strank s priljubljenimi blagovnimi znamkami in zanimanji](enrichment-microsoft.md).
 
--   **Mere:** prikaže, ali ste konfigurirali eno ali več mer določene vrste: mere atributov stranke. Vključujejo izračunane KPI-je v zvezi z vašimi strankami na ravni posamezne stranke. Za več informacij glejte [Določanje in upravljanje mer](measures.md).
+-   **Mere:** pokažejo vam, ali ste konfigurirali eno mero ali več mer določene vrste: mere atributov stranke. Vključujejo izračunane KPI-je v zvezi z vašimi strankami na ravni posamezne stranke. Za več informacij glejte [Določanje in upravljanje mer](measures.md).
 
--   **Časovnica dejavnosti:** prikazuje, ali ste konfigurirali dejavnosti. Pogled časovnice vsebuje kronološko razvrščene dejavnosti te stranke, pri čemer se začne z najnovejšo dejavnostjo. Za več informacij glejte [Dejavnosti stranke](activities.md).
+-   **Časovnica dejavnosti:** pokaže, ali ste konfigurirali dejavnosti. Pogled časovnice vsebuje kronološko razvrščene dejavnosti te stranke, pri čemer se začne z najnovejšo dejavnostjo. Za več informacij glejte [Dejavnosti stranke](activities.md).
 
 Izberite **Nazaj k strankam** za vrnitev na stran za iskanje strank.
 

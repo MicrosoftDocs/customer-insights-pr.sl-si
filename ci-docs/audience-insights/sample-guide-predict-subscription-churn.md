@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595538"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306323"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube naročnin (predogled)
 
@@ -22,7 +22,7 @@ S spodnjimi vzorčnimi podatki vam bomo razložili celovit primer predvidevanja 
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek njihovega spletnega mesta Contoso Coffee. Pred kratkim so začeli naročniško dejavnost, s katero so stranke redno dobivale kavo. Njihov cilj je razumeti, katere naročene stranke bi lahko v naslednjih nekaj mesecih odpovedale naročnino. Znanje o tem, katere stranke se bodo **verjetno izgubile**, jim lahko pomaga, da bolje izkoristijo tržna prizadevanja tako, da se osredotočijo na njihovo ohranitev.
+Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek svoje spletne strani Contoso Coffee. Pred kratkim so začeli naročniško dejavnost, s katero so stranke redno dobivale kavo. Njihov cilj je razumeti, katere naročene stranke bi lahko v naslednjih nekaj mesecih odpovedale naročnino. Znanje o tem, katere stranke se bodo **verjetno izgubile**, jim lahko pomaga, da bolje izkoristijo tržna prizadevanja tako, da se osredotočijo na njihovo ohranitev.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -128,9 +128,9 @@ Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdel
 
 1. Izberite zavihek **Ujemanje** in izberite **Nastavi vrstni red**.
 
-1. Na spustnem seznamu **Primarno** izberite **StikiEPoslovanja: EPoslovanje** kot primarni vir in vključite vse zapise.
+1. Na spustnem seznamu izberite možnost **Primarni** ter za primarni vir določite **eCommerceContacts: eCommerce** in vključite vse zapise.
 
-1. Na spustnem seznamu **Entiteta 2** izberite **zvesteStranke: ShemaZvestobe** in vključite vse zapise.
+1. Na spustnem seznamu izberite možnost **Entiteta 2**, nato pa **loyCustomers: LoyaltyScheme** in vključite vse zapise.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Poenotenje ujemanja elektronskega poslovanja in zvestobe.":::
 
@@ -138,16 +138,16 @@ Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdel
 
 1. Dodajte svoj prvi pogoj z možnostjo FullName.
 
-   * Za StikiEPoslovanja izberite **FullName** v spustnem meniju.
-   * Za zvesteStranke izberite **FullName** v spustnem meniju.
+   * Za entiteto StikiEPoslovanja na spustnem seznamu izberite **FullName**.
+   * Za entiteto zvesteStranke na spustnem seznamu izberite **FullName**.
    * Izberite spustni meni **Normaliziraj** in izberite **Vrsta (telefon, ime, naslov, ...)**.
    * Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 
 1. Vnesite ime **FullName, Email** za novo pravilo.
 
    * Dodajte drugi pogoj za e-poštni naslov tako, da izberete **Dodaj pogoj**.
-   * Za StikiEPoslovanja entitete izberite **E-pošta** v spustnem meniju.
-   * Za zvesteStranke entitete izberite **E-pošta** v spustnem meniju. 
+   * Za entiteto StikiEPoslovanja na spustnem seznamu izberite možnost **E-pošta**.
+   * Za entiteto zvesteStranke na spustnem seznamu izberite možnost **E-pošta**. 
    * Pustite polje Normaliziraj prazno. 
    * Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 

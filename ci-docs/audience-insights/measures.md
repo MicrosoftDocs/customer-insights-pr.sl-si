@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049270"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304826"
 ---
 # <a name="define-and-manage-measures"></a>Določanje in upravljanje mer
 
-Ukrepi vam pomagajo bolje razumeti vedenje strank in poslovno uspešnost. Upoštevajo relevantne vrednosti iz [poenotenih profilov](data-unification.md). Podjetje želi na primer videti *skupno porabo stranke*, da bi razumelo zgodovino nakupov stranke, ali izmeriti *skupno prodajo podjetja*, da bi razumelo skupni prihodek celotnega posla.  
+Ukrepi vam pomagajo bolje razumeti vedenje strank in poslovno uspešnost. Upoštevajo relevantne vrednosti iz [poenotenih profilov](data-unification.md). Da bi podjetje razumelo zgodovino nakupov posamezne stranke, ga zanima, *koliko je določena stranka porabila*, za lažje razumevanje svojih svojega skupnega dohodka pa lahko izmeri *celotni obseg svoje prodaje*.  
 
 Mere so ustvarjene z graditeljem mer, platformo za poizvedbe po podatkih z različnimi operatorji in enostavnimi možnostmi preslikave. Omogoča filtriranje podatkov, združevanje rezultatov v skupine, zaznavanje [poti odnosov entitet](relationships.md) in predogled rezultatov.
 
@@ -34,9 +34,9 @@ V tem razdelku je opisano ustvarjanje novega mere od začetka. Mero lahko sestav
 
 1. Izberite možnost **Uredi ime** in navedite **ime** za mero. 
    > [!NOTE]
-   > Če ima vaša nova konfiguracija mere samo dve polji, na primer CustomerID in en izračun, bo izhod dodan kot nov stolpec k sistemsko ustvarjeni entiteti, imenovani Customer_Measure. Vrednost mere pa boste lahko videli v enotnem profilu stranke. Druge mere ustvarijo lastne entitete.
+   > Če vaša nova konfiguracija mere vsebuje samo dve polji, na primer CustomerID, in en izračun, bo izhod v obliki novega stolpca dodan k sistemsko ustvarjeni entiteti, imenovani Customer_Measure. Vrednost mere pa boste lahko videli v enotnem profilu stranke. Druge mere ustvarijo lastne entitete.
 
-1. V območju za konfiguracijo izberite združevalno funkcijo s spustnega menija **Izberi funkcijo**. Združevalne funkcije vključujejo: 
+1. V območju konfiguracije, in sicer v spustnem meniju **Izbira funkcije**, izberite združevalno funkcijo. Združevalne funkcije vključujejo: 
    - **Vsota**
    - **Povprečje**
    - **Število**
@@ -64,17 +64,19 @@ V tem razdelku je opisano ustvarjanje novega mere od začetka. Mero lahko sestav
 
 1. Če želite dodati filtre, v konfiguracijskem območju izberite možnost **Filter**. 
   
-   1. V razdelku **Dodaj atribut** na podoknu **Filtri** izberite atribut, ki ga želite uporabiti za ustvarjanje filtrov.
+   1. V razdelku **Dodaj atribut**, in sicer v podoknu **Filtri**, izberite atribut, ki ga želite uporabiti za ustvarjanje filtrov.
    1. Nastavite operatorje filtrov, da določite filter za vsak izbrani atribut.
    1. Izberite možnost **Dodaj**, da meri dodate filter.
 
 1. Če želite dodati razsežnosti, v območju za konfiguracijo izberite možnost **Razsežnosti**. Dimenzije bodo prikazane kot stolpci v entiteti izhodnih mer.
+ 
    1. Izberite možnost **Uredi razsežnosti**, da dodate atribute podatkov, po katerih želite vrednosti mer razvrstiti v skupine. Na primer po mestu ali spolu. Privzeto je razsežnost *CustomerID* izbrana za ustvarjanje *ukrepov na ravni kupca*. Če želite ustvariti *ukrepe na ravni podjetja*, lahko odstranite privzeto dimenzijo.
    1. Izberite možnost **Končano**, da meri dodate razsežnosti.
 
-1. Če so v vaših podatkih vrednosti, ki jih morate zamenjati s celim številom, zamenjajte *null* na primer z *0* in izberite **Pravila**. Konfigurirajte pravilo in se prepričajte, da jih nadomestite le s celimi števili.
+1. Če so v vaše podatke vključene vrednosti, ki jih morate zamenjati s celimi števili (vrednost *nič* na primer zamenjajte z *0*), izberite možnost **Pravila**. Konfigurirajte pravilo in se prepričajte, da jih nadomestite le s celimi števili.
 
 1. Če med podatkovno entiteto, ki ste jo preslikali, in *entiteto* stranke obstaja več poti, morate izbrati eno od prepoznanih [poti odnosov entitet](relationships.md). Rezultati mere se lahko razlikujejo glede na izbrano pot. 
+   
    1. Izberite možnost **Podatkovne nastavitve** in izberite pot entitete, ki naj bo uporabljena za prepoznavanje mere. Če obstaja samo ena pot do entitete *stranke*, ta nadzor ne bo prikazan.
    1. Izberite možnost **Končano**, da uporabite izbor. 
 
@@ -113,7 +115,7 @@ V naslednjem postopku so opisani koraki za ustvarjanje novega ukrepa s pomočjo 
 
 1. Izberite **Novo** in nato **Izberi predlogo**.
 
-   :::image type="content" source="media/measure-use-template.png" alt-text="Posnetek zaslona spustnega menija pri ustvarjanju novega ukrepa s poudarjeno predlogo.":::
+   :::image type="content" source="media/measure-use-template.png" alt-text="Posnetek zaslona spustnega menija pri ustvarjanju nove mere z oznako na predlogi.":::
 
 1. Poiščite predlogo, ki ustreza vašim potrebam, in izberite **Izberi predlogo**.
 
@@ -123,7 +125,7 @@ V naslednjem postopku so opisani koraki za ustvarjanje novega ukrepa s pomočjo 
 
 1. Izberite **Dokončano**.
 
-1. V razdelku **Nastavi časovno obdobje** določite časovni okvir podatkov, ki jih želite uporabiti. Določite, ali želite z novim ukrepom zajeti celoten nabor podatkov, tako da izberete **Ves čas**. Ali če želite, da se ukrep osredotoči na **Določeno časovno obdobje**.
+1. V razdelku **Nastavi časovno obdobje** določite časovni okvir podatkov, ki jih želite uporabiti. Če želite, da nova mera pokrije celoten nabor podatkov, izberite možnost **Ves čas**, ali pa se odločite, da se mera osredotoči na **Določeno časovno obdobje**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Posnetek zaslona, ki prikazuje razdelek časovnega obdobja pri konfiguriranju ukrepa iz predloge.":::
 
@@ -142,12 +144,12 @@ V naslednjem postopku so opisani koraki za ustvarjanje novega ukrepa s pomočjo 
 
 Seznam ukrepov najdete na strani **Ukrepi**.
 
-Našli boste podatke o vrsti mere, ustvarjalcu, datumu ustvarjanja, statusu in stanju. Ko izberete mero s seznama, si lahko ogledate izhodne podatke in jih prenesete kot datoteko .CSV.
+Našli boste podatke o vrsti mere, ustvarjalcu, datumu ustvarjanja, statusu in stanju. Ko na seznamu izberete mero, si lahko vnaprej ogledate izhod in prenesete datoteko CSV.
 
 Če želite hkrati osvežiti vse svoje mere, izberite **Osveži vse**, ne da bi izbrali posamezno mero.
 
 > [!div class="mx-imgBorder"]
-> ![Dejanja za upravljanje posameznih mer](media/measure-actions.png "Dejanja za upravljanje posameznih mer")
+> ![Dejanja za upravljanje posameznih mer.](media/measure-actions.png "Dejanja za upravljanje posameznih mer.")
 
 Na seznamu izberite mero za naslednje možnosti:
 
@@ -159,11 +161,11 @@ Na seznamu izberite mero za naslednje možnosti:
 - **Aktiviraj** ali **deaktiviraj**. Nedejavne mere se med [načrtovano osvežitvijo](system.md#schedule-tab) ne bodo osvežile.
 
 > [!TIP]
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za enega izmed poslov izberete **Prikaži podrobnosti**, se prikažejo dodatne informacije: čas obdelave, zadnji datum obdelave ter vse napake in opozorila, povezana z opravilom.
+> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za eno izmed opravil izberete možnost **Prikaži podrobnosti**, boste lahko dostopali do naslednjih dodatnih informacij: čas obdelave, datum zadnjega poskusa obdelave ter vse napake in opozorila, povezana z nalogo.
 
 ## <a name="next-step"></a>Naslednji korak
 
-Z obstoječimi merami lahko ustvarite [segment stranke](segments.md).
+Za ustvarjanje [segmenta stranke](segments.md) lahko uporabite obstoječe mere.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

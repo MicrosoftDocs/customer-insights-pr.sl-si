@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700688"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305676"
 ---
 # <a name="custom-machine-learning-models"></a>Modeli strojnega učenja po meri
 
@@ -72,7 +72,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
       > [!div class="mx-imgBorder"]
       > ![Podokno parametrov izhodnih podatkov modela](media/intelligence-screen3-outputparameters.png "Podokno parametrov izhodnih podatkov modela")
 
-1. Na spustnem seznamu **ID stranke v rezultatih** izberite ujemajoč se atribut, ki prepozna stranke, in izberite **Shrani**.
+1. Na spustnem seznamu **ID stranke v rezultatih**, na katerem so navedene stranke, izberite ujemajoči atribut, nato pa možnost **Shrani**.
 
    > [!div class="mx-imgBorder"]
    > ![Povezava rezultatov s podoknom podatkov o strankah](media/intelligence-screen4-relatetocustomer.png "Povezava rezultatov s podoknom podatkov o strankah")
@@ -100,7 +100,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
       1. Izberite **Ime parametra shrambe izhodnih podatkov** za preskusni prodajni lijak.
       1. Izberite **Ime parametra poti za izhodne podatke** za preskusni prodajni lijak.
 
-1. Na spustnem seznamu **ID stranke v rezultatih** izberite ujemajoč se atribut, ki prepozna stranke, in izberite **Shrani**.
+1. Na spustnem seznamu **ID stranke v rezultatih**, na katerem so navedene stranke, izberite ujemajoči atribut, nato pa možnost **Shrani**.
    Prek izhodnih podatkov za sklepanje izberite atribut z vrednostmi, podobnimi stolpcu ID stranke pri entiteti stranke. Če v naboru podatkov nimate takega stolpca, izberite atribut, ki enolično prepozna vrstico.
 
 ## <a name="run-a-workflow"></a>Zagon poteka dela

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896117"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304992"
 ---
 # <a name="connections-preview-overview"></a>Pregled povezav (predogledna različica)
 
@@ -42,7 +42,7 @@ Za dodajanje povezav morate imeti [skrbniška dovoljenja](permissions.md). Če v
 
 1. Pojdite na zavihek **Povezave**.
 
-1. Izberite možnost **Dodaj povezavo**, da ustvarite novo povezavo. Na spustnem meniju izberite, katero vrsto povezave želite ustvariti.
+1. Izberite možnost **Dodaj povezavo**, da ustvarite novo povezavo. V spustnem meniju izberite vrsto povezave, ki jo želite ustvariti.
 
 1. V podoknu **Vzpostavitev povezave** vnesite zahtevane podrobnosti. 
    1. **Prikazno ime** in vrsta povezave opisujeta povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
@@ -74,7 +74,9 @@ Ko nastavljate povezavo za izvoz podatkov ali jo urejate, izberete uporabnike, k
 
 ## <a name="remove-a-connection"></a>Odstranjevanje povezave
 
-Če je povezava, ki jo želite odstraniti, uporabljena v obogatitvah ali izvozih, jo morate najprej odstraniti oziroma z njo prekiniti povezavo. Pogovorno okno za odstranitev vas bo vodilo do ustreznih obogatitev oziroma izvozov. Odstranjene obogatitve in izvozi bodo postali nedejavni. Ponovno jih aktivirate tako, da jim na strani [Obogatitve](enrichment-hub.md) ali [Izvozi](export-destinations.md) dodate drugo povezavo.
+Če je povezava, ki jo želite odstraniti, uporabljena v obogatitvah ali izvozih, jo morate najprej odstraniti oziroma z njo prekiniti povezavo. Pogovorno okno za odstranitev vas bo vodilo do ustreznih obogatitev oziroma izvozov. 
+
+Odstranjene obogatitve in izvozi bodo postali nedejavni. Ponovno jih aktivirate tako, da jim na strani [Obogatitve](enrichment-hub.md) ali [Izvozi](export-destinations.md) dodate drugo povezavo.
 
 1. Odprite razdelek **Skrbnik** > **Povezave (predogled)**.
 
@@ -89,5 +91,5 @@ Ko nastavljate povezavo za izvoz podatkov ali jo urejate, izberete uporabnike, k
       - **Obogatitve:** če želite odstraniti povezavo, lahko izberete možnost deaktiviranja ali odstranjevanja obogatitev. 
    1. Ko za povezavo ni več odvisnosti, se vrnite v razdelek **Skrbnik** > **Povezave** in poskusite znova odstraniti povezavo.
 
-1. Izberite možnost **Odstrani**, da pordite izbris.
+1. Za potrditev izbrisa izberite možnost **Odstrani**.
 
