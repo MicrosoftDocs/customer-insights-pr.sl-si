@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305911"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554712"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezava z virom podatkov Power Query
 
@@ -42,7 +42,7 @@ Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Dynamics 365 Cu
 1. Pogovorno okno **Power Query - Urejanje poizvedb** omogoča pregled in natančnejše določanje podatkov. Entitete, ki jih sistemi, opredeljeni v izbranem viru podatkov, prikažejo v levem podoknu.
 
    > [!div class="mx-imgBorder"]
-   > ![Pogovorno okno urejanja poizvedb](media/data-manager-configure-edit-queries.png "Pogovorno okno urejanja poizvedb")
+   > ![Pogovorno okno za urejanje poizvedb.](media/data-manager-configure-edit-queries.png "Pogovorno okno urejanja poizvedb")
 
 1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v oknu Power Query, da uporabite pretvorbe. Vsaka pretvorba je navedena pod **Uporabljeni koraki**. Power Query ponuja številne vnaprej vgrajene možnosti preoblikovanja. Če želite več informacij, glejte razdelek [Pretvorbe Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Povezovalniki s kljukico v stolpcu **Customer Insights (podatkovni toki)** so na
 2. Izberite navpične tri pike poleg tistega vira podatkov, ki ga želite spremeniti, nato pa v spustnem meniju izberite **Uredi**.
 
    > [!div class="mx-imgBorder"]
-   > ![Možnost urejanja](media/edit-option-data-sources.png "Možnost urejanja")
+   > ![Možnost urejanja.](media/edit-option-data-sources.png "Možnost urejanja")
 
 3. Uporabite svoje spremembe in pretvorbe v pogovornem oknu **Power Query - Urejanje poizvedb**, kot je opisano v razdelku [Ustvari nov vir podatkov](#create-a-new-data-source).
 

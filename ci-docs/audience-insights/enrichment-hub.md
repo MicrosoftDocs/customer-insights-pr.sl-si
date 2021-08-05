@@ -1,7 +1,7 @@
 ---
 title: Obogatitev poenotenih profilov strank
 description: Uporabite zmogljivosti za obogatitev podatkov o strankah.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305268"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555281"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogatitev profilov strank (predogled)
 
 Za obogatitev podatkov o strankah uporabite podatke iz virov, kot so Microsoft in drugi partnerji.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Stran zvezdišča za obogatitev":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Stran zvezdišča za obogatitev.":::
 
 V razdelku vpogledov v občinstvo odprite **Podatki** > **Obogatitev** za delo z možnostmi obogatitve.  
 
@@ -42,17 +43,17 @@ Na zavihku **Moje obogatitve** si lahko ogledate obogatitve, ki ste jih konfigur
 
 Za ogled vseh konfiguriranih obogatitev odprite zavihek **Moje obogatitve**. Vsaka obogatitev je predstavljena kot vrstica, ki vključuje dodatne informacije o obogatitvi.
 
-Izberite obogatitev in si oglejte razpoložljive možnosti. Za ogled možnosti lahko izberete tudi treh pik (...) na elementu seznama.
+Izberite obogatitev, da si ogledate razpoložljive možnosti. Za ogled možnosti lahko izberete tudi treh pik (...) na elementu seznama. Če ste konfigurirali več obogatitev, jih lahko hitro poiščete v polju za iskanje.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Možnosti upravljanja obogatitev na seznamu obogatitev":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Možnosti upravljanja obogatitev na seznamu obogatitev.":::
 
 - **Pogled** podrobnosti o obogatitvi s številom obogatenih profilov kupcev.
 - **Urejanje** konfiguracije obogatitve.
 - **Zaženite** obogatitev za posodobitev profilov strank z najnovejšimi podatki.
 - **Deaktiviranje** obstoječe obogatitve za preprečitev samodejnega osveževanja z vsako načrtovano osvežitvijo. Podatki iz zadnje uspešne osvežitve bodo še naprej na voljo. **Aktivacija** neaktivne obogatitve za ponovni zagon samodejnega osveževanja z vsako načrtovano osvežitvijo.
-- **Brisanje** obogatitve.
+- **Izbriši** obogatitev.
 
-Več obogatitev lahko zaženete ali deaktivirate hkrati, tako da jih izberete na seznamu. Možnosti pogleda in urejanja niso na voljo kot množično dejanje in delujejo le za eno obogatitev na enkrat.
+Zaženite ali deaktivirajte več obogatitev naenkrat, tako da jih izberete na seznamu. Možnosti ogleda in urejanja niso na voljo kot množično dejanje. Delujejo samo za eno obogatitev naenkrat.
 
 ## <a name="enrichments-and-connections"></a>Obogatitve in povezave
 

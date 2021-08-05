@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309840"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555373"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Profile strank obogatite z demografskimi podatki iz storitve Experian (predogled)
 
@@ -39,7 +39,7 @@ Obogatitev profilov strank trenutno omogočamo samo v ZDA.
 1. Izberite možnost **Obogatitev mojih podatkov** na ploščici Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian ploščic](media/experian-tile.png "Experian tile")
+   > ![Ploščica Experian.](media/experian-tile.png "Experian tile")
    > 
 
 1. Na spustnem seznamu izberite možnost [povezava](connections.md). Če ni na voljo nobena povezava, se obrnite na skrbnika. Če ste skrbnik, lahko vzpostavite povezavo tako, da izberete možnost **Dodaj povezavo** in na spustnem seznamu izberete Experian. 

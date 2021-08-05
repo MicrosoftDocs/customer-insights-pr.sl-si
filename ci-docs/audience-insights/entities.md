@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049414"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553995"
 ---
 # <a name="entities-in-audience-insights"></a>Entitete pri vpogledih v občinstvo
 
@@ -30,19 +30,19 @@ Na strani **Entitete** so navedene entitete, vključuje pa tudi več stolpcev:
 - **Zadnja posodobitev**: datum in ura zadnje posodobitve entitete.
 - **Zadnja osvežitev**: datum in ura zadnje osvežitve podatkov.
 
-## <a name="exploring-a-specific-entitys-data"></a>Raziskovanje podatkov določene entitete
+## <a name="explore-a-specific-entitys-data"></a>Raziskovanje podatkov določene entitete
 
 Izberite entiteto za raziskovanje različnih polj in zapisov, vključenih v to entiteto.
 
 > [!div class="mx-imgBorder"]
-> ![Izberite entiteto](media/data-manager-entities-data.png "Izbira entitete")
+> ![Izberite entiteto.](media/data-manager-entities-data.png "Izberite entiteto")
 
 - Zavihek **Podatki** prikazuje tabelo s podrobnostmi o posameznih zapisih entitete.
 
 > [!div class="mx-imgBorder"]
-> ![Tabela s polji](media/data-manager-entities-fields.PNG "Tabela s polji")
+> ![Tabela s polji.](media/data-manager-entities-fields.PNG "Tabela s polji")
 
-- Zavihek **Atributi** je privzeto izbran in prikazuje tabelo za pregled podrobnosti za izbrano entiteto, kot so imena polj, vrste podatkov in vrste. V stolpcu **Vrste** so prikazane vrste, povezane z modelom Common Data Model, ki jih sistem samodejno identificira ali jih uporabniki [ročno preslikajo](map-entities.md). To so semantične vrste, ki se lahko razlikujejo od vrst podatkov atributov – na primer spodnje polje *E-pošta* ima vrsto podatkov *Besedilo*, vendar je lahko njena (semantična) vrsta za Common Data Model *E-pošta* ali *E-poštni naslov*.
+- Zavihek **Atributi** je privzeto izbran in prikazuje tabelo za pregled podrobnosti za izbrano entiteto, kot so imena polj, vrste podatkov in vrste. V stolpcu **Vrste** so prikazane vrste, povezane z modelom Common Data Model, ki jih sistem samodejno identificira ali jih uporabniki [ročno preslikajo](map-entities.md). Te vrste so semantične vrste, ki se lahko razlikujejo od vrst podatkov atributov. Na primer spodnje polje *E-pošta* ima vrsto podatkov *Besedilo*, vendar je njegova (semantična) vrsta modela Common Data Model lahko *E-pošta* ali *E-poštni naslov*.
 
 > [!NOTE]
 > Obe tabeli prikazujeta samo vzorec podatkov vaše entitete. Če si želite ogledati celoten nabor podatkov, pojdite na stran **Viri podatkov**, izberite entiteto, izberite **Uredi**, nato pa si oglejte podatke te entitete z urejevalnikom Power Query, kot je pojasnjeno v temi [Viri podatkov](data-sources.md).
@@ -52,11 +52,28 @@ Izberite entiteto za raziskovanje različnih polj in zapisov, vključenih v to e
 Izberite ikono grafikona, če želite videti povzetek podatkov.
 
 > [!div class="mx-imgBorder"]
-> ![Simbol povzetka](media/data-manager-entities-summary.png "Tabela s povzetkom podatkov")
+> ![Simbol povzetka.](media/data-manager-entities-summary.png "Tabela s povzetkom podatkov")
 
-### <a name="next-step"></a>Naslednji korak
+## <a name="entity-specific-information"></a>Informacije o določeni entiteti
 
-Glejte temo [Poenotenje](data-unification.md), če želite izvedeti več o *preslikavi*, *ujemanju* in *spajanju* uvoženih podatkov.
+V naslednjem razdelku najdete informacije o nekaterih entitetah, ki jih je ustvaril sistem.
+
+### <a name="corrupted-data-sources"></a>Poškodovani viri podatkov
+
+Polja iz uvoženega vira podatkov lahko vsebujejo poškodovane podatke. Zapisi s poškodovanimi polji so na voljo v entitetah, ki jih je ustvaril sistem. Poznavanje poškodovanih zapisov vam pomaga ugotoviti, katere podatke morate pregledati in posodobiti v izvornem sistemu. Po naslednji osvežitvi vira podatkov se popravljeni zapisi uvozijo v Customer Insights in posredujejo v postopke iz strežnika. 
+
+Na primer stolpec »rojstni dan« ima vrsto podatkov nastavljeno kot »datum«. V evidenci strank je njihov rojstni dan vpisan kot »01/01/19777«. Sistem bo ta zapis označil kot poškodovan. Nekdo lahko v izvornem sistemu zdaj spremeni rojstni dan na »1977«. Po samodejnem osveževanju virov podatkov ima polje zdaj veljavno obliko in zapis bo odstranjen iz poškodovane entitete. 
+
+Pojdite na **Podatki** > **Entitete** in v razdelku **Sistem** poiščite poškodovane entitete. Shema poimenovanja poškodovanih entitet: »DataSourceName_EntityName_corrupt«.
+
+Customer Insights še vedno obdeluje poškodovane zapise. Lahko pa povzročijo težave pri delu s poenotenimi podatki.
+
+Za odkrivanje poškodovanih zapisov se izvajajo naslednja preverjanja uvoženih podatkov: 
+
+- Vrednost polja se ne ujema z vrsto podatkov njegovega stolpca.
+- Polja vsebujejo znake, zaradi katerih se stolpci ne ujemajo s pričakovano shemo. Na primer: napačno oblikovani narekovaji, nespremenjeni narekovaji ali znaki nove vrstice.
+- Če obstajajo stolpci za premik datetime/date/datetimeoffset, je treba v modelu določiti njihovo obliko, če model ne sledi standardnemu formatu ISO.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

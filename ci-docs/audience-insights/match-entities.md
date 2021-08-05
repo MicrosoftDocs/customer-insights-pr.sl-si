@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306048"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650338"
 ---
 # <a name="match-entities"></a>Ujemanje entitet
 
@@ -138,7 +138,7 @@ Določanje pravil za odstranjevanje podvajanja ni obvezno. Če taka pravila niso
    - **Najstarejše**: določi rekord zmagovalca glede na najstarejše rezultate. Zahteva datum ali številsko polje za določitev najnovejše izkušnje.
  
    > [!div class="mx-imgBorder"]
-   > ![1. korak pravil za odstranjevanje podvajanja](media/match-selfconflation.png "1. korak pravil za odstranjevanje podvajanja")
+   > ![1. korak pravil za odstranjevanje podvajanja.](media/match-selfconflation.png "1. korak pravil za odstranjevanje podvajanja")
  
 1. Ko so entitete izbrane in so nastavljene nastavitve spajanja, izberite **Dodaj pravilo** za določitev pravil o odstranjevanju podvajanja na ravni entitete.
    - **Izberite polje** navede vsa razpoložljiva polja te entitete. Izberite polje, v katerem želite preveriti dvojnike. Izberite polja, ki so verjetno edinstvena vsaki stranki. Na primer e-poštni naslov ali kombinacija imena, mesta in telefonske številke.
@@ -146,7 +146,7 @@ Določanje pravil za odstranjevanje podvajanja ni obvezno. Če taka pravila niso
    - Določite več pogojev tako, da izberete **Dodaj pogoj**.
  
    > [!div class="mx-imgBorder"]
-   > ![2. korak pravil za odstranjevanje podvajanja](media/match-selfconflation-rules.png "2. korak pravil za odstranjevanje podvajanja")
+   > ![2. korak pravil za odstranjevanje podvajanja.](media/match-selfconflation-rules.png "2. korak pravil za odstranjevanje podvajanja")
 
   Za entiteto lahko ustvarite več pravil za odstranjevanje podvajanja. 
 
@@ -179,7 +179,9 @@ Pojdite v **Podatki** > **Poenotenje** > **Ujemanje** in izberite **Zaženi** za
 Rezultat uspešnega izvajanja, poenoteno entiteto profila stranke, boste našli na strani **Entitete**. Poenotena entiteta stranke se imenuje **Stranke** v razdelku **Profili**. Prvo uspešno izvajanje ujemanja ustvari poenoteno entiteto *stranke*. Vsa naslednja izvajanja ujemanja to entiteto razširijo.
 
 > [!TIP]
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za enega izmed poslov izberete **Prikaži podrobnosti**, se prikažejo dodatne informacije: čas obdelave, zadnji datum obdelave ter vse napake in opozorila, povezana z opravilom.
+> Ko zaženete postopek ujemanja, izberite stanje procesa, da odprete podokno **Podrobnosti opravila**. Ponuja pregled časa obdelave, zadnjega datuma obdelave ter vseh napak in opozoril, povezanih z opravilom. Izberite **Glej podrobnosti**, da vidite, katere entitete so sodelovale v postopku ujemanja, katera pravila so zanje veljala in ali so bile posodobitve uspešno objavljene.  
+> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Pot do več podrobnosti o obdelavi s povezave do stanja opravila.":::
 
 ## <a name="review-and-validate-your-matches"></a>Pregled in preverjanje ujemanj
 

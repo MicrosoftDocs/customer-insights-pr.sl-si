@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597531"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554373"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahteve posameznikov, na katere se nanašajo podatki, (DSR) v skladu z uredbo GDPR
 
@@ -40,7 +40,7 @@ Skrbnik storitve Customer Insights lahko upošteva te korake, da odstrani podatk
    2. Preverite stanje vira podatkov v razdelku **Stanje**. Kljukica pomeni, da je bila osvežitev uspešna. Opozorilni trikotnik pomeni, da je prišlo do napake. Če se prikaže opozorilni trikotnik, pošljite sporočilo na naslov D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Obravnava zahtev za izbris podatkov o strankah v skladu z uredbo GDPR](media/gdpr-data-sources.png "Obravnava zahtev za izbris podatkov o strankah v skladu z uredbo GDPR")
+> ![Obravnava zahtev za izbris podatkov o strankah v skladu z uredbo GDPR.](media/gdpr-data-sources.png "Obravnava zahtev za izbris podatkov o strankah v skladu z uredbo GDPR")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Upravljanje zahtev za izbris uporabniških podatkov
 
@@ -52,7 +52,7 @@ Skrbnik storitve Customer Insights lahko za izbris uporabniških podatkov storit
 4. Izberite **Odstrani**.
 
 > [!div class="mx-imgBorder"]
-> ![Upravljanje zahtev za izbris uporabniških podatkov v skladu z uredbo GDPR](media/gdpr-permissions.png "Upravljanje zahtev za izbris uporabniških podatkov v skladu z uredbo GDPR")
+> ![Upravljanje zahtev za izbris uporabniških podatkov v skladu z uredbo GDPR.](media/gdpr-permissions.png "Upravljanje zahtev za izbris uporabniških podatkov v skladu z uredbo GDPR")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Odziv na zahteve posameznikov, na katere se nanašajo podatki, za izvoz v skladu z uredbo GDPR
 

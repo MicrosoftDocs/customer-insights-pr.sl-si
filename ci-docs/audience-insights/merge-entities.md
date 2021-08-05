@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305674"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650246"
 ---
 # <a name="merge-entities"></a>Združevanje entitet
 
@@ -109,7 +109,7 @@ Nekatere entitete vsebujejo več podrobnosti kot druge. Če entiteta vključuje 
 Ne glede na to, ali atribute spajate ročno ali jih spoji sistem, lahko vedno zaženete spajanje. Za začetek postopka izberite **Zaženi** na strani **Spajanje**.
 
 > [!div class="mx-imgBorder"]
-> ![Shranjevanje in zagon spajanja podatkov](media/configure-data-merge-save-run.png "Shranjevanje in zagon spajanja podatkov")
+> ![Shranjevanje in zagon spajanja podatkov.](media/configure-data-merge-save-run.png "Shranjevanje in zagon spajanja podatkov")
 
 Izberite možnost **Zaženi samo spajanje**, če želite, da se rezultat prikaže samo v poenoteni entiteti stranke. Procesi iz strežnika bodo osveženi, kot je [opredeljeno v načrtovanju osveževanja](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Izberite možnost **Zaženi procese spajanja in procese iz strežnika**, da osve
 Če želite narediti več sprememb in ponoviti korak, lahko prekličete spajanje v teku. Izberite **Osveževanje ...**, nato pa **Prekliči posel** v stranskem podoknu, ki se prikaže.
 
 > [!TIP]
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za enega izmed poslov izberete **Prikaži podrobnosti**, se prikažejo dodatne informacije: čas obdelave, zadnji datum obdelave ter vse napake in opozorila, povezana z opravilom.
+> Ko zaženete postopek spajanja, izberite stanje procesa, da odprete podokno **Podrobnosti opravila**. Ponuja pregled časa obdelave, zadnjega datuma obdelave ter vseh napak in opozoril, povezanih z opravilom. Izberite **Glej podrobnosti**, da vidite, katere entitete so sodelovale v postopku ujemanja, ali je razreševanje sporov bilo uspešno in ali so bile posodobitve uspešno objavljene.  
+> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Pot do več podrobnosti o obdelavi s povezave do stanja opravila.":::
 
 ## <a name="next-step"></a>Naslednji korak
 

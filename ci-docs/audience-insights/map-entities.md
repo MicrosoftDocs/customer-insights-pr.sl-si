@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596013"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555143"
 ---
 # <a name="map-entities-and-attributes"></a>Entitete in atributi zemljevida
 
@@ -35,14 +35,14 @@ ms.locfileid: "5596013"
 3. Izberite entitete in atribute, ki jih želite uporabiti v fazah *ujemanja* in *spajanja*. Obvezne atribute lahko iz entitete izberete posamezno ali pa iz nje vključite vse atribute in sicer tako, da izberete potrditveno polje na ravni entitete **Vključi vsa polja**. Priporočamo, da izberete vsaj dve entiteti, da boste lahko izkoristili postopek poenotenja podatkov.
 
    > [!div class="mx-imgBorder"]
-   > ![Primer dodajanja entitet](media/data-manager-configure-map-add-entities-example.png "Primer dodajanja entitet")
+   > ![Primer dodajanja entitet.](media/data-manager-configure-map-add-entities-example.png "Primer dodajanja entitet")
 
    V tem primeru dodajamo entiteti **eCommerceContacts** in **loyCustomers**. Če izberete te dve entiteti lahko pridobite vpogled v to, kateri od spletnih poslovnih strank so člani programa zvestobe.
    
    Po ključnih besedah lahko iščete po vseh atributih in entitetah, da izberete zahtevane atribute, ki jih želite preslikati.
    
      > [!div class="mx-imgBorder"]
-   > ![Primer polj za iskanje](media/data-manager-configure-map-search-fields-example.png "Primer polj za iskanje")
+   > ![Primer polj za iskanje.](media/data-manager-configure-map-search-fields-example.png "Primer polj za iskanje")
 
 4. Izberite **Uporabi** za potrditev izbire.
 
@@ -55,7 +55,7 @@ Ko izberete entitete, stran **Preslikava** navede izbrane entitete vam v pregled
 - **Vrsta semantike atributa**: kategorije atributov, na primer e-poštni naslov ali ime. Če želite uporabiti modele umetne inteligence za pametno predvidevanje semantike, prihranite čas in izboljšajte natančnost, možnost **Pametna preslikava** nastavite na **VKLOPLJENO**. Pametna preslikava označi priporočila semantike na podlagi umetne inteligence v polju **Vrsta**. Če jo nastavite na **IZKLOPLJENO**, boste videli naša običajna priporočila za preslikavo. Na razpoložljivem seznamu možnosti lahko izberete katero koli semantično vrsto in preglasite predlagani izbor.
 
 > [!div class="mx-imgBorder"]
-> ![Vrsta atributa in predvidevanje semantike](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Vrsta atributa in predvidevanje semantike")
+> ![Vrsta atributa in predvidevanje semantike.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Vrsta atributa in predvidevanje semantike")
 
 Možno je tudi dodajanje vrste semantike po meri. Izberite polje vrste za atribut in vnesite ime za vrsto semantike po meri. Tako lahko spremenite tudi vrste atributov, ki jih je sistem prepoznal.
 
@@ -64,7 +64,7 @@ Vsi atributi, za katere je vrsta semantike samodejno določena, so združeni v r
 Atributi, ki niso samodejno preslikani v vrsto semantike, so združeni v razdelku **Določanje podatkov v nepreslikanih poljih**. Izberite polje vrste semantike za nepreslikane atribute ali vnesite ime vrste atributa po meri.
 
 > [!div class="mx-imgBorder"]
-> ![Primarni ključ in vrsta atributa](media/data-manager-configure-map-add-attributes.png "Primarni ključ in vrsta atributa")
+> ![Primarni ključ in vrsta atributa.](media/data-manager-configure-map-add-attributes.png "Primarni ključ in vrsta atributa")
 
 > [!NOTE]
 > Eno polje se mora preslikati v vrsto semantike »Person.FullName«, da ime stranke vnese v kartico stranke. Sicer bodo kartice strank prikazane brez imen. 
@@ -76,7 +76,7 @@ Atributi, ki niso samodejno preslikani v vrsto semantike, so združeni v razdelk
 2. V podoknu **Uredi polja** dodajte ali odstranite atribute in entitete. Z iskanjem ali drsanjem navzdol in navzgor poiščite atribute in entitete, ki vas zanimajo, in jih izberite. Atributa ali entitete ne morete odstraniti, če se že ujema.
 
    > [!div class="mx-imgBorder"]
-   > ![Dodajanje ali odstranjevanje atributov](media/configure-data-map-edit.png "Dodajanje ali odstranjevanje atributov")
+   > ![Dodajanje ali odstranjevanje atributov.](media/configure-data-map-edit.png "Dodajanje ali odstranjevanje atributov")
 
 3. Izberite **Uporabi**.
 

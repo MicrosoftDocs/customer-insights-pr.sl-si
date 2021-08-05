@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304624"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554638"
 ---
 # <a name="customer-profiles"></a>Profili strank
 
@@ -23,11 +23,11 @@ Stran **Stranke** prikazuje kombiniran pogled vaših strank na podlagi podatkov 
 Stranke so lahko posamezniki ali organizacije (predogled). Ploščica predstavlja vsak posamezni profil stranke ali organizacije. Izberite ploščico in si oglejte dodatne informacije o določeni stranki ali organizaciji. Za prikaz dodatnih zapisov uporabite kontrolnik za oštevilčevanje strani na dnu strani.
 
 > [!div class="mx-imgBorder"] 
-> ![Profili strank pri prodaji strankam](media/profiles-customers.png "Profili strank pri prodaji strankam")
+> ![Profili strank pri prodaji strankam.](media/profiles-customers.png "Profili strank pri prodaji strankam")
 
 Organizacije (predogled)
 > [!div class="mx-imgBorder"] 
-> ![Profili strank pri prodaji podjetjem](media/profile-customers-b2b.png "Profili strank pri prodaji podjetjem")
+> ![Profili strank pri prodaji strankam.](media/profile-customers-b2b.png "Profili strank pri prodaji podjetjem")
 
 > [!NOTE]
 > Če pri krmarjenju po izbiri možnosti **Stranke** ne vidite ploščic, mora vaš skrbnik [določiti vsaj en atribut, ki je omogočen za iskanje](search-filter-index.md), v možnosti **Kazalo za iskanje in filtre**.
@@ -47,7 +47,7 @@ Stranke lahko filtrirate po poljih entitete »Profil stranke«. Podobno kot pri 
 2. Potrdite polja poleg atributov, po katerih želite filtrirati stranke.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profili strank](media/profiles-customers3.png "Profili strank")
+   > ![Profili strank.](media/profiles-customers3.png "Profili strank")
 
 3. Odstranite filtre tako, da izberete **Počisti filtre** na strani **Stranke**.
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095622"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559425"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predvidevanje izgub glede transakcij (predogled)
 
@@ -47,7 +47,7 @@ Predvidevanje izgub glede transakcij pomaga predvideti, ali stranka v določenem
         - **Dogodek:** ime dogodka, ki ga želite uporabiti. Na primer, polje z imenom »UserAction« v trgovini z živili je lahko kupon, ki ga kupec uporabi.
         - **Podrobnosti:** podrobni podatki o dogodku. Na primer, polje z imenom »CouponValue« v trgovini z živili je lahko vrednost valute kupona.
 - Predlagane lastnosti podatkov:
-    - Zadostni zgodovinski podatki: transakcijski podatki za vsaj podvojeni časovni okvir. Po možnosti dve do tri leta naročniških podatkov. 
+    - Zadostni zgodovinski podatki: transakcijski podatki za vsaj podvojeni časovni okvir. Po možnosti dve do tri leta zgodovine transakcij. 
     - Več nakupov na stranko: v idealnem primeru vsaj dve transakciji na stranko.
     - Število strank: vsaj 10 profilov strank, po možnosti več kot 1000 posameznih strank. Model bo propadel z manj kot 10 strankami in nezadostnimi zgodovinskimi podatki.
     - Popolnost podatkov: manj kot 20 % manjkajočih vrednosti v podatkovnem polju podane entitete.

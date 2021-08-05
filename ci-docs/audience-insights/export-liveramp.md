@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760347"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555465"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Izvoz segmentov v LiveRamp&reg; (predogledna različica)
 
@@ -56,7 +56,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. V polju **Izbira identifikatorja ključa** izberite **E-pošta**, **Ime in naslov** ali **Telefon** za pošiljanje v LiveRamp za reševanje identitete.
    > [!div class="mx-imgBorder"]
-   > ![Povezovalnik LiveRamp s preslikavo atributov](media/export-liveramp-segments.png "Povezovalnik LiveRamp s preslikavo atributov")
+   > ![Povezovalnik LiveRamp s preslikavo atributov.](media/export-liveramp-segments.png "Povezovalnik LiveRamp s preslikavo atributov")
 
 1. Preslikajte pripadajoče atribute iz poenotene entitete stranke za izbrani identifikator ključa.
 

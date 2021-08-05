@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596565"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554914"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povezava z mapo Common Data Model z uporabo računa Azure Data Lake
 
@@ -45,7 +45,7 @@ V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z 
 
 1. Izbirate lahko med možnostjo, ki temelji na viru, in možnostjo preverjanja pristnosti, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Vnesite podatke **vsebnika** in izberite **Naprej**.
    > [!div class="mx-imgBorder"]
-   > ![Pogovorno okno za vnos novih podrobnosti povezave za Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Pogovorno okno za vnos novih podrobnosti povezave za Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Za povezavo in ustvarjanje vira podatkov potrebujete eno od naslednjih vlog bodisi zgoraj omenjenemu vsebniku ali računu za shranjevanje:
    >  - Bralnik podatkov shrambe zbirke dvojiških podatkov
@@ -58,11 +58,11 @@ V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z 
 
 1. V izbrani datoteki model.json ali manifest.json boste prejeli seznam razpoložljivih entitet. Oglejte si ga in izberite možnost s seznama razpoložljivih entitet, nato pa izberite možnost **Shrani**. Vse izbrane entitete bodo vključene iz novega vira podatkov.
    > [!div class="mx-imgBorder"]
-   > ![Pogovorno okno s seznamom entitet iz datoteke model.json](media/review-entities.png)
+   > ![Pogovorno okno s seznamom entitet iz datoteke model.json.](media/review-entities.png)
 
 8. Navedite, za katere podatkovne entitete želite omogočiti profiliranje podatkov, in izberite **Shrani**. Profiliranje podatkov omogoča analitiko in druge zmogljivosti. Izberete lahko celotno entiteto, pri čemer se izbere vse atribute iz entitete, ali izberete določene atribute po svoji izbiri. Privzeto nobena entiteta ni omogočena za profiliranje podatkov.
    > [!div class="mx-imgBorder"]
-   > ![Pogovorno okno, ki prikazuje profiliranje podatkov](media/dataprofiling-entities.png)
+   > ![Pogovorno okno, ki prikazuje profiliranje podatkov.](media/dataprofiling-entities.png)
 
 9. Ko shranite svoje nastavitve, se odpre stran **Viri podatkov**. Zdaj bi se vam morala prikazati povezava mape Common Data Model kot vir podatkov.
 
@@ -81,12 +81,12 @@ Lahko posodobite ključ za dostop za račun za shrambo, ki vsebuje mapo Common D
 
 4. Po želji posodobite **Ključ za dostop** in izberite **Naprej**.
 
-   ![Pogovorno okno za urejanje in posodobitev ključa za dostop za obstoječi vir podatkov](media/edit-access-key.png)
+   ![Pogovorno okno za urejanje in posodobitev ključa za dostop za obstoječi vir podatkov.](media/edit-access-key.png)
 
 5. Po želji lahko posodobitev opravite prek povezave s ključem kupca s povezavo, ki temelji na viru ali naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Ob posodobitvi povezave ne morete spremeniti podatkov **vsebnika**.
    > [!div class="mx-imgBorder"]
 
-   > ![Pogovorno okno za vnos podrobnosti povezave za Azure Data Lake v obstoječem računu za shrambo](media/enter-existing-storage-details.png)
+   > ![Pogovorno okno za vnos podrobnosti povezave za Azure Data Lake v obstoječi račun za shrambo.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Za povezavo in ustvarjanje vira podatkov potrebujete eno od naslednjih vlog bodisi zgoraj omenjenemu vsebniku ali računu za shranjevanje:

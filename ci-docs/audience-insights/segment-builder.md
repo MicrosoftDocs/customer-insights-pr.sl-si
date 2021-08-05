@@ -1,7 +1,7 @@
 ---
 title: Ustvarjanje in upravljanje segmentov
 description: Ustvarite segmente strank, da jih združite na podlagi različnih atributov.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064957"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685482"
 ---
 # <a name="create-and-manage-segments"></a>Ustvarjanje in upravljanje segmentov
+
+> [!IMPORTANT]
+> V izkušnjo ustvarjanja segmentov bo septembra 2021 uvedenih več sprememb: 
+> - Graditelj segmentov bo videti nekoliko drugače, s prenovljenimi elementi in izboljšanim pretokom uporabnikov.
+> - V graditelju segmentov so omogočeni novi operaterji datetime in izboljšani izbirnik datumov.
+> - Lahko boste dodali ali odstranili pogoje in pravila iz segmentov. 
+> - Na voljo bodo ugnezdena pravila, ki se začnejo s pogojem ALI. Na zunanjem sloju ne potrebujete več pogoja IN.
+> - Stransko podokno za izbiro atributov bo nenehno na voljo.
+> - Možnost izbire poti odnosa entitet.
+> Če želite preizkusiti novega izdelovalca segmentov, pošljite e-poštno sporočilo z zadevo »Zahteva za omogočanje novega graditelja segmentov« na cihelp [at] microsoft.com. Dopišite ime vaše organizacije in ID vašega preizkusnega okolja.
 
 Določite zapletene filtre okoli poenotene entitete stranke in z njo povezanih entitet. Po obdelavi vsak segment ustvari niz zapisov strank, ki jih lahko izvozite in obdelate. Segmenti se upravljajo na strani **Segmenti**. 
 
@@ -50,7 +60,7 @@ Med ustvarjanjem segmenta lahko shranite osnutek. Shranjen bo kot neaktiven segm
 1. Izberite operator in vrednost za izbrani atribut.
 
    > [!div class="mx-imgBorder"]
-   > ![Filter skupine po meri](media/customer-group-numbers.png "Filter skupine strank")
+   > ![Filter skupine po meri.](media/customer-group-numbers.png "Filter skupine strank")
 
    |Številka |Definicija  |
    |---------|---------|
@@ -66,7 +76,7 @@ Med ustvarjanjem segmenta lahko shranite osnutek. Shranjen bo kot neaktiven segm
       - Operator **ALI**: izpolnjen mora biti kateri koli od pogojev kot del postopka segmentacije. Ta možnost je najbolj uporabna, če določite več pogojev za isto entiteto.
 
       > [!div class="mx-imgBorder"]
-      > ![Operator ALI, pri katerem mora biti izpolnjen kateri koli pogoj](media/segmentation-either-condition.png "Operator ALI, pri katerem mora biti izpolnjen kateri koli pogoj")
+      > ![Operator ALI, pri katerem mora biti izpolnjen kateri koli pogoj.](media/segmentation-either-condition.png "Operator ALI, pri katerem mora biti izpolnjen kateri koli pogoj")
 
       Trenutno je mogoče ugnezditi operator **ALI** pod operator **IN**, ne pa obratno.
 
@@ -74,12 +84,12 @@ Med ustvarjanjem segmenta lahko shranite osnutek. Shranjen bo kot neaktiven segm
    Izberite **Dodaj skupino**.
 
       > [!div class="mx-imgBorder"]
-      > ![Dodajanje skupine za skupino strank](media/customer-group-add-group.png "Dodajanje skupine za skupino strank")
+      > ![Dodajanje skupine za skupino strank.](media/customer-group-add-group.png "Dodajanje skupine za skupino strank")
 
    1. Izberite enega od nastavljenih operatorjev: **Združitev**, **Presek** ali **Razen**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dodajanje unije za skupino strank](media/customer-group-union.png "Dodajanje unije za skupino strank")
+   > ![Dodajanje unije za skupino strank.](media/customer-group-union.png "Dodajanje unije za skupino strank")
 
    - **Unija** združi dve skupini.
 
@@ -90,7 +100,7 @@ Med ustvarjanjem segmenta lahko shranite osnutek. Shranjen bo kot neaktiven segm
 1. Če je entiteta povezana s poenoteno entiteto stranke prek [odnosov](relationships.md), morate določiti pot odnosa, da ustvarite veljaven segment. Dodajte entitete s poti odnosa, dokler se na spustnem meniju ne pojavi možnost za izbiro entitete **Stranka: CustomerInsights**. Nato za vsak korak izberite možnost **Vsi zapisi**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pot odnosa med ustvarjanjem segmenta](media/segments-multiple-relationships.png "Pot odnosa med ustvarjanjem segmenta")
+   > ![Pot odnosa med ustvarjanjem segmenta.](media/segments-multiple-relationships.png "Pot odnosa med ustvarjanjem segmenta")
 
 1. Segmenti privzeto generirajo izhodno entiteto, ki vsebuje vse atribute profilov strank, ki se ujemajo z določenimi filtri. Če segment temelji na drugih entitetah kot na entiteti *stranke*, lahko v izhodno entiteto dodate več atributov teh entitet. Izberite **Atributi projekta**, da izberete atribute, ki bodo dodani izhodni entiteti.  
   
@@ -127,7 +137,7 @@ Hitri segmenti vam omogočajo hitro izdelavo preprostih segmentov z enim samim o
 4. Sistem prikaže **ocenjeno velikost segmenta**. Izberete lahko, ali želite ustvariti segment, ki ste ga določili, ali se želite najprej znova vrniti nanj, da dobite drugačno velikost segmenta.
 
     > [!div class="mx-imgBorder"]
-    > ![Ime in ocena za hitri segment](media/quick-segment-name.png "Ime in ocena za hitri segment")
+    > ![Ime in ocena za hitri segment.](media/quick-segment-name.png "Ime in ocena za hitri segment")
 
 5. Vnesite **ime** za segment. Po želji vnesite **prikazno ime**.
 

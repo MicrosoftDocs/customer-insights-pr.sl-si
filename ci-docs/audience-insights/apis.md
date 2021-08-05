@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304762"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554501"
 ---
 # <a name="work-with-customer-insights-apis"></a>Delo z API-ji za Customer Insights
 
@@ -35,7 +35,7 @@ V tem članku je opisano, kako dostopati do API-jev storitve Customer Insights, 
  
    Z omogočanjem API-jev se ustvari primarni in sekundarni naročniški ključ za vaš primerek, ki se uporablja v zahtevah API-ja. Ključe lahko znova ustvarite tako, da izberete **Znova ustvari primarnega** ali **Znova ustvari sekundarnega** v razdelku **Skrbnik** > **Dovoljenja** > **API-ji**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Omogočite API-je za Customer Insights":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Omogočite storitev Customer Insights za API-je.":::
 
 1. Izberite **Raziskovanje API-jev**, da [preizkusite API-je](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Naučite se uporabljati odjemalske knjižnice C# storitve NuGet.org. Za več inf
  
    Ta ukaz lahko zaženete tudi v **konzoli upravitelja paketov NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Dodajte paket NuGet v projekt Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Dodajte paket NuGet v projekt Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Uporaba odjemalske knjižnice C#
 
@@ -141,7 +141,7 @@ Naučite se uporabljati odjemalske knjižnice C# storitve NuGet.org. Za več inf
 
 1. Odjemalca `HttpClient` posredujte za pripravo odjemalca `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Vzorec odjemalca httpclient":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Vzorec odjemalca http.":::
 
 1. Z odjemalcem prikličite »načine razširitve« – na primer `GetAllInstancesAsync`. Če je zaželen dostop do temeljne možnosti `Microsoft.Rest.HttpOperationResponse`, uporabite »načine sporočil http« — na primer `GetAllInstancesWithHttpMessagesAsync`.
 

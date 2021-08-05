@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596519"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692133"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Povezovanje računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure za vpoglede v občinstvo
 
 Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omejena dovoljenja. Namesto da bi se v aplikacije vpisali kot uporabnik s vsemi pravicami, Azure ponuja glavno ime storitve. Preberite nadaljevanje, če želite izvedeti, kako povezati vpogled v občinstvo z računom Azure Data Lake Storage Gen2, ki uporablja glavno ime storitve Azure namesto ključev računa za shranjevanje. 
 
-Z glavnim imenom storitve lahko varno [dodate ali uredite mapo Common Data Model kot vir podatkov](connect-common-data-model.md) ali [ustvarite novo oz. posodobite obstoječe okolje](manage-environments.md#create-an-environment-in-an-existing-organization).
+Z glavnim imenom storitve lahko varno [dodate ali uredite mapo Common Data Model kot vir podatkov](connect-common-data-model.md) ali [ustvarite novo oz. posodobite obstoječe okolje](get-started-paid.md).
 
 > [!IMPORTANT]
 > - Račun za shrambo Azure Data Lake Gen2, ki namerava uporabiti glavno ime storitve, mora imeti [omogočeno funkcijo hierarhičnega imenskega prostora (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Uvedba sprememb lahko traja do 15 minut.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>V priponko računa za shranjevanje za vpoglede v občinstvo vnesite ID vira Azure ali podrobnosti o naročnini za Azure.
 
-Priložite račun za shrambo Azure Data Lake v vpoglede v občinstvo, da [shranite izhodne podatke](manage-environments.md) ali to [uporabite kot vir podatkov](connect-common-data-service-lake.md). Če izberete možnost Azure Data Lake, lahko izbirate med pristopom na podlagi virov ali na podlagi naročnine.
+Priložite račun za shrambo Azure Data Lake v vpoglede v občinstvo, da [shranite izhodne podatke](manage-environments.md) ali to [uporabite kot vir podatkov](connect-dataverse-managed-lake.md). Če izberete možnost Azure Data Lake, lahko izbirate med pristopom na podlagi virov ali na podlagi naročnine.
 
 Upoštevajte naslednja navodila, da posredujete zahtevane podatke o izbranem pristopu.
 

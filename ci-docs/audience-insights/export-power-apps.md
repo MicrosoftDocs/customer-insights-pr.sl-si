@@ -9,12 +9,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598175"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554133"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Povezovalnik storitve Microsoft Power Apps (predogled)
 
@@ -56,12 +56,12 @@ Profile strank na primer dodate v [kontrolnik galerije](/powerapps/maker/canvas-
 1. Aplikaciji, ki jo ustvarjate, dodajte kontrolnik **Galerija**.
 
 > [!div class="mx-imgBorder"]
-> ![Dodajanje elementa galerije](media/connector-powerapps9.png "Dodajanje elementa galerije")
+> ![Dodajte element galerije.](media/connector-powerapps9.png "Dodajanje elementa galerije")
 
 1. Kot vir podatkov za elemente izberite **Stranka**.
 
     > [!div class="mx-imgBorder"]
-    > ![Izbira vira podatkov](media/choose-datasource-powerapps.png "Izbira vira podatkov")
+    > ![Izberite vir podatkov.](media/choose-datasource-powerapps.png "Izbira vira podatkov")
 
 1. Ploščo podatkov na desni strani lahko spremenite in izberete, katero polje za entiteto stranke bo prikazano v galeriji.
 

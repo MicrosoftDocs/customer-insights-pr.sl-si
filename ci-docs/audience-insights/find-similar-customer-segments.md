@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f588f45ed11efffbb335003642a4b92810153017
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96fbd18a20e0df7abd4e79ff77e2c3a396e33ccc
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596795"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554225"
 ---
 # <a name="similar-customers-preview"></a>Podobne stranke (predogled)
 
@@ -50,7 +50,7 @@ Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdet
 Po obdelavi podobnega segmenta boste novi segment našli na seznamu na strani **Segmenti**.
 
 > [!div class="mx-imgBorder"]
-> ![Segment podobnih strank](media/expanded-segment.png "Segment podobnih strank")
+> ![Segment podobnih strank.](media/expanded-segment.png "Segment podobnih strank")
 
 V delovni vrstici izberite **Pogled**, da odprete podrobnosti o segmentu. Ta pogled vsebuje informacije o porazdelitvi rezultatov v [ocenah podobnosti](#about-similarity-scores). Vrednosti ocen podobnosti boste našli tudi v **Predogledu članov segmenta**.
 

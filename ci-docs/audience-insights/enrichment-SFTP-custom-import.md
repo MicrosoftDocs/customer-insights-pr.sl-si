@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 9331cf8057850e2fbe03622831f388e73056d938
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304670"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555419"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogatite profile strank s podatki po meri (predogled)
 
@@ -64,7 +64,7 @@ Za konfiguriranje povezav morate biti skrbnik. Pri konfiguriranju obogatitve izb
 1. Ko zaključite s preverjanjem, lahko povezavo shranite tako, da izberete možnost **Shrani**.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian – stran za konfiguracijo povezave](media/enrichment-SFTP-connection.png "Experian – stran za konfiguracijo povezave")
+   > ![Stran za konfiguracijo povezave Experian.](media/enrichment-SFTP-connection.png "Experian – stran za konfiguracijo povezave")
 
 
 ## <a name="defining-field-mappings"></a>Opredelitev preslikav polja 

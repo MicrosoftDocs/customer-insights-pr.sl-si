@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305314"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555327"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obogatitev profilov strank v sodelovanju z družbo HERE Technologies (predogled)
 
@@ -35,7 +35,7 @@ Za konfiguracijo obogatitve HERE Technologies morajo biti izpolnjeni naslednji p
 1. Na ploščici za HERE Technologies izberite možnost **Obogatitev podatkov** in izberite možnost **Začetek**.
 
    > [!div class="mx-imgBorder"]
-   > ![Ploščica HERE Technologies](media/HERE-tile.png "Ploščica HERE Technologies")
+   > ![Ploščica HERE Technologies.](media/HERE-tile.png "Ploščica HERE Technologies")
 
 1. Na spustnem seznamu izberite možnost [povezava](connections.md). Če ni na voljo nobena povezava, se obrnite na skrbnika. Če ste skrbnik, lahko vzpostavite povezavo z izbiro možnosti **Dodaj povezavo**. Na spustnem seznamu izberite možnost **HERE Technologies**. 
 
@@ -50,7 +50,7 @@ Za konfiguracijo obogatitve HERE Technologies morajo biti izpolnjeni naslednji p
 1. Določite, katera polja iz vaših poenotenih profilov naj bodo uporabljena za iskanje ustreznih podatkov o lokaciji družbe HERE Technologies. Polji **Ulica 1** in **Poštna številka** sta obvezni za izbrani primarni in/ali sekundarni naslov. Za večjo natančnost ujemanja lahko dodate več polj.
 
    > [!div class="mx-imgBorder"]
-   > ![Stran za konfiguracijo obogatitve HERE Technologies](media/enrichment-HERE-configuration.png "Stran za konfiguracijo obogatitve HERE Technologies")
+   > ![Stran za konfiguracijo obogatitve HERE Technologies.](media/enrichment-HERE-configuration.png "Stran za konfiguracijo obogatitve HERE Technologies")
 
 1. Izberite možnost **Naprej**, da dokončate preslikavo polj.
 
@@ -73,7 +73,7 @@ Za konfiguriranje povezav morate biti skrbnik. Pri konfiguriranju obogatitve izb
 1. Po zaključku potrjevanja izberite možnost **Shrani**.
 
    > [!div class="mx-imgBorder"]
-   > ![Stran za konfiguriranje povezave z družbo HERE technologies](media/enrichment-HERE-connection.png "Stran za konfiguriranje povezave z družbo HERE technologies")
+   > ![Stran za konfiguriranje povezave z družbo HERE technologies.](media/enrichment-HERE-connection.png "Stran za konfiguriranje povezave z družbo HERE technologies")
 
 ## <a name="enrichment-results"></a>Rezultati obogatitve
 

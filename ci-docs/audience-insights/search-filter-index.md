@@ -9,19 +9,19 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: b6cc0ad1a47a6c00e3bf220271f42870fc53621b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597163"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554041"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili strank: Kazalo za iskanje in filtre
 
 Rezultat poenotenja podatkov strank je vnos profila stranke, ki zagotavlja poenoten pogled v celotno bazo strank. Za hitro [iskanje informacij o določeni stranki ali skupini strank](customer-profiles.md), lahko konfigurirate zmogljivosti **Iskanje** in **Filter** na strani **Stranke**. Berite dalje, da boste izvedeli, kako uredite atribute na strani **Kazalo za iskanje in filtre**, ki je na voljo uporabnikom za iskanje in filtriranje.
 
 > [!div class="mx-imgBorder"]
-> ![Filter za iskanje](media/search-filter.png "Filter za iskanje")
+> ![Filter za iskanje.](media/search-filter.png "Filter za iskanje")
 
 ## <a name="add-fields-and-specify-attributes"></a>Dodajanje polj in določanje atributov
 

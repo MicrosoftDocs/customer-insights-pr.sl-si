@@ -1,7 +1,7 @@
 ---
 title: Povezovalnik Power BI
 description: Seznanite se z uporabo povezovalnika Dynamics 365 Customer Insights v storitvi Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596059"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661122"
 ---
 # <a name="connector-for-power-bi-preview"></a>Povezovalnik za Power BI (predogled)
 
@@ -39,7 +39,7 @@ Ustvarite vizualizacije svojih podatkov s storitvijo Power BI Desktop. Ustvarite
 
 1. V pogovornem oknu **Krmilnik**. Prikazan je seznam vseh okolij, do katerih imate dostop. Razširite okolje in odprite katero koli mapo (entitete, mere, segmenti, obogatitve). Odprite na primer mapo **Entitete** za ogled vseh entitet, ki jih lahko uvozite.
 
-   ![Krmilnik povezovalnika storitve Power BI](media/power-bi-navigator.png "Krmilnik povezovalnika storitve Power BI")
+   ![Krmilnik povezovalnika storitve Power BI.](media/power-bi-navigator.png "Krmilnik povezovalnika storitve Power BI")
 
 1. Izberite potrditvena polja poleg entitet, ki jih želite vključiti, in nato **Naloži**. Izberete lahko več entitet iz več okolij.
 
@@ -68,5 +68,11 @@ Podvojene odnose lahko prepoznate in jih odstranite.
 3. Odstranite vse prepoznane podvojene odnose.
 
 Po odstranitvi podvojenih odnosov poskusite znova konfigurirati povezovalnik storitve Power BI. Okolje bi moralo biti zdaj na voljo.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Napake v datumskih poljih pri nalaganju entitet v Power BI Desktop
+
+Ko nalagate entitete, ki vsebujejo polja z obliko datuma, kot je DD/MM/LLLL, lahko naletite na napake zaradi neusklajenih oblik območnih nastavitev. To neskladje se zgodi, ko je vaša datoteka Power BI Desktop nastavljena na jezik, ki ni angleščina (Združene države), ker se datumska polja v vpogledih občinstva shranijo v ameriškem formatu.
+
+Datoteka Power BI Desktop ima eno območno nastavitev, ki se uporablja pri pridobivanju podatkov. Če želite pravilno razlagati ta datumska polja, nastavite območno nastavitev datoteke .BPI v angleščino (Združene države). [Naučite se spremeniti območno nastavitev namizne datoteke Power BI](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

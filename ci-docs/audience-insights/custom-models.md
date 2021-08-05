@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305676"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554868"
 ---
 # <a name="custom-machine-learning-models"></a>Modeli strojnega učenja po meri
 
@@ -42,7 +42,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 1. Za svoj model po meri v polju **Ime** določite prepoznavno ime.
 
    > [!div class="mx-imgBorder"]
-   > ![Posnetek zaslona podokna »Nov potek dela«](media/new-workflowv2.png "Posnetek zaslona podokna »Nov potek dela«")
+   > ![Posnetek zaslona podokna »Nov potek dela«.](media/new-workflowv2.png "Posnetek zaslona podokna »Nov potek dela«")
 
 1. V možnosti **Najemnik, ki vsebuje vašo spletno storitev** izberite organizacijo, v kateri je spletna storitev.
 
@@ -59,7 +59,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
    > Potek dela po meri modela uporablja hevristiko za preslikavo vnosnih polj spletnih storitev v atribute entitete na podlagi imena in podatkovne vrste polja. Napaka bo prikazana, če polja spletne storitve ni mogoče preslikati v entiteto.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfiguriranje poteka dela](media/intelligence-screen2-updated.png "Konfiguriranje poteka dela")
+   > ![Konfiguriranje poteka dela.](media/intelligence-screen2-updated.png "Konfiguriranje poteka dela")
 
 1. Pri koraku **Parametri izhodnih podatkov modela** nastavite naslednje lastnosti:
    - Studio za strojno učenje (klasični način)
@@ -70,12 +70,12 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
       1. Izberite **Ime parametra shrambe poti za izhodne podatke** za prodajni lijak paketov s spustnega seznama.
 
       > [!div class="mx-imgBorder"]
-      > ![Podokno parametrov izhodnih podatkov modela](media/intelligence-screen3-outputparameters.png "Podokno parametrov izhodnih podatkov modela")
+      > ![Podokno parametrov izhodnih podatkov modela.](media/intelligence-screen3-outputparameters.png "Podokno parametrov izhodnih podatkov modela")
 
 1. Na spustnem seznamu **ID stranke v rezultatih**, na katerem so navedene stranke, izberite ujemajoči atribut, nato pa možnost **Shrani**.
 
    > [!div class="mx-imgBorder"]
-   > ![Povezava rezultatov s podoknom podatkov o strankah](media/intelligence-screen4-relatetocustomer.png "Povezava rezultatov s podoknom podatkov o strankah")
+   > ![Povezava rezultatov s podoknom podatkov o strankah.](media/intelligence-screen4-relatetocustomer.png "Povezava rezultatov s podoknom podatkov o strankah")
 
 1. Prikazal se bo zaslon **Potek dela shranjen** s podrobnostmi o poteku dela.    
    Če ste konfigurirali potek dela za prodajni lijak za strojno učenje Azure, se bodo vpogledi v občinstvo prilepili v delovni prostor, ki vsebuje prodajni lijak. Vpogledi v občinstvo bodo prejeli vlogo **sodelujočega** v delovnem prostoru Azure.

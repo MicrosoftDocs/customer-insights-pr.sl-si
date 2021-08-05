@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095576"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556144"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predvidevanje priporočil izdelkov (predogled)
 
@@ -64,7 +64,7 @@ Poleg tega bodo v izhodnih podatkih tega modela podana priporočila na podlagi I
 
 1. Izberite ploščico **Model priporočil izdelkov (predogled)** in izberite možnost **Uporabi ta model**.
    > [!div class="mx-imgBorder"]
-   > ![Ploščica modela priporočil izdelkov z gumbom Uporabi ta model](media/product-recommendation-usethismodel.PNG "Ploščica modela priporočil izdelkov z gumbom Uporabi ta model")
+   > ![Ploščica modela priporočil izdelkov z gumbom Uporabi ta model.](media/product-recommendation-usethismodel.PNG "Ploščica modela priporočil izdelkov z gumbom Uporabi ta model")
 
 1. Preglejte informacije o zahtevah modela. Če imate potrebne podatke, izberite možnost **Začetek**.
 
@@ -93,7 +93,7 @@ Poleg tega bodo v izhodnih podatkih tega modela podana priporočila na podlagi I
 
 1. Preslikajte semantična polja v atribute v entiteti vaše zgodovine nakupov in izberite **Naprej**. Za opise polj si oglejte [pogoje](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Določanje odnosa entitete](media/product-recommendation-purchasehistorymapping.PNG "Stran z zgodovino nakupov, ki prikazuje semantične atribute, ki so preslikani v polja v izbrani entiteti zgodovine nakupov")
+   > ![Določite odnos entitete.](media/product-recommendation-purchasehistorymapping.PNG "Stran z zgodovino nakupov, ki prikazuje semantične atribute, ki so preslikani v polja v izbrani entiteti zgodovine nakupov")
 
 1. Če polja niso izpolnjena, konfigurirajte odnos med entiteto zgodovine nakupov in entiteto *stranke*.
     1. Izberite **Entiteta zgodovine nakupov**.
@@ -101,7 +101,7 @@ Poleg tega bodo v izhodnih podatkih tega modela podana priporočila na podlagi I
     1. Izberite **Entiteto stranke**, ki se ujema z vašo primarno entiteto stranke.
     1. Vnesite ime, ki opisuje odnos.
        > [!div class="mx-imgBorder"]
-       > ![Stran z zgodovino nakupov, ki prikazuje vzpostavitev odnosa s stranko](media/model-purchase-join.png "Stran z zgodovino nakupov, ki prikazuje vzpostavitev odnosa s stranko")
+       > ![Stran z zgodovino nakupov, ki prikazuje vzpostavitev odnosa s stranko.](media/model-purchase-join.png "Stran z zgodovino nakupov, ki prikazuje vzpostavitev odnosa s stranko")
 
 1. Izberite **Shrani**.
 
@@ -145,7 +145,7 @@ Včasih so samo nekateri izdelki koristni ali primerni za vrsto predvidevanja, k
 
 1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
    > [!div class="mx-imgBorder"]
-   > ![Pogled strani »Moja predvidevanja«](media/product-recommendation-mypredictions.PNG "Pogled strani »Moja predvidevanja«")
+   > ![Pogled strani Moja predvidevanja.](media/product-recommendation-mypredictions.PNG "Pogled strani »Moja predvidevanja«")
 
 1. Izberite predvidevanje, ki ga želite pregledati.
    - **Ime predvidevanja:** ime predvidevanja, navedeno pri ustvarjanju.
@@ -163,7 +163,7 @@ Včasih so samo nekateri izdelki koristni ali primerni za vrsto predvidevanja, k
 
 1. Izberite navpične tri pike poleg predvidevanja, za katerega želite pregledati rezultate, in izberite **Pogled**.
    > [!div class="mx-imgBorder"]
-   > ![Pogled možnosti v meniju z navpičnimi tremi pikami za predvidevanje, vključno z urejanjem, osveževanjem, pogledom, dnevniki in brisanjem](media/product-recommendation-verticalellipses.PNG "Pogled možnosti v meniju z navpičnimi tremi pikami za predvidevanje, vključno z urejanjem, osveževanjem, pogledom, dnevniki in brisanjem")
+   > ![Pogled možnosti v meniju z navpičnimi tremi pikami za predvidevanje, vključno z urejanjem, osveževanjem, pogledom, dnevniki in brisanjem.](media/product-recommendation-verticalellipses.PNG "Pogled možnosti v meniju z navpičnimi tremi pikami za predvidevanje, vključno z urejanjem, osveževanjem, pogledom, dnevniki in brisanjem")
 
 1. Na strani z rezultati je pet osnovnih skupin podatkov:
     1. **Učinkovitost modela za kvalifikacijo:** A, B ali C so možni rezultati. Ta rezultat kaže na učinkovitost predvidevanja in vam lahko pomaga pri odločitvi za uporabo rezultatov, shranjenih v izhodni entiteti.
@@ -173,13 +173,13 @@ Včasih so samo nekateri izdelki koristni ali primerni za vrsto predvidevanja, k
             - **C** Kakovost modela je smatrana za razred **C**, če je metrika "Success @ K" manjša od osnovnega modela.
                
                > [!div class="mx-imgBorder"]
-               > ![Pogled na rezultat učinkovitosti modela](media/product-recommendation-modelperformance.PNG "Pogled na rezultat učinkovitosti modela")
+               > ![Pogled na rezultat učinkovitosti modela.](media/product-recommendation-modelperformance.PNG "Pogled na rezultat učinkovitosti modela")
             - **Osnovni model**: model upošteva najbolj priporočene izdelke glede na število nakupov pri vseh strankah in uporablja naučena pravila, ki jih določa model, da ustvari nabor priporočil za stranke. Napovedi se nato primerjajo z najboljšimi izdelki, določenimi s številom kupcev, ki so kupili izdelek. Če ima stranka v priporočenih izdelkih vsaj en izdelek, ki je bil viden tudi med najbolj kupljenimi izdelki, se stranka šteje za del osnovnega modela. Če 10 od skupno 100 strank strank kupi priporočeni izdelek, je osnovni model 10%.
             - **Uspeh @ K** : Z uporabo veljavnostnega nabora časovnega obdobja transakcij se ustvarijo priporočila za vse stranke in se primerjajo z veljavnostnim naborom transakcij. V 12-mesečnem obdobju je na primer 12. mesec lahko izbran kot veljavnostni nabor podatkov. Če model predvideva vsaj en izdelek, ki ga kupite v 12. mesecu, na podlagi tega, kar se je naučil v preteklih 11 mesecih, bi ta kupec povečal vrednost metrike "Success @ K".
     
     1. **Najpogosteje predlagani izdelki (s skupnim številom):** pet najboljših izdelkov, ki so bili predvideni za vaše stranke.
        > [!div class="mx-imgBorder"]
-       > ![Graf, ki prikazuje 5 najbolj priporočenih izdelkov](media/product-recommendation-topproducts.PNG "Graf, ki prikazuje 5 najbolj priporočenih izdelkov")
+       > ![Graf, ki prikazuje 5 najbolj priporočenih izdelkov.](media/product-recommendation-topproducts.PNG "Graf, ki prikazuje 5 najbolj priporočenih izdelkov")
     
     1. **Ključni dejavniki priporočanja:** model uporablja zgodovino transakcij strank za podajanje priporočil izdelkov. Vzorce oblikuje na podlagi preteklih nakupov in ugotovi podobnosti med strankami in izdelki. Te podobnosti se nato uporabijo za oblikovanje priporočil izdelkov.
     Spodaj so našteti dejavniki, ki bi lahko vplivali na priporočilo izdelka, ki ga ustvari model. 
@@ -190,20 +190,20 @@ Včasih so samo nekateri izdelki koristni ali primerni za vrsto predvidevanja, k
         Na vsako priporočilo izdelka vpliva eden ali več dejavnikov. Delež priporočil, kjer je vsak vplivni dejavnik igral svojo vlogo, je prikazan v grafikonu. V naslednjem primeru so na 100 % priporočil vplivale pretekle transakcije, na 60 % podobnost strank in na 22 % podobnost izdelkov. Premaknite kazalec miške nad stolpce na grafikonu, da vidite natančen delež prispevanja vplivnih dejavnikov.
 
         > [!div class="mx-imgBorder"]
-        > ![Ključni dejavniki za priporočila](media/product-recommendation-keyrecommendationfactors.png "Ključni dejavniki priporočil, ki se jih je model naučil za oblikovanje priporočil izdelkov")
+        > ![Ključni dejavniki za priporočila.](media/product-recommendation-keyrecommendationfactors.png "Ključni dejavniki priporočil, ki se jih je model naučil za oblikovanje priporočil izdelkov")
        
      
    1. **Statistika podatkov**: zagotavlja pregled nad številom transakcij, strank in izdelkov, ki jih obravnava model. Temelji na vhodnih podatkih, ki so bili uporabljeni za učenje vzorcev in ustvarjanje priporočil izdelkov.
 
       > [!div class="mx-imgBorder"]
-      > ![Statistika podatkov](media/product-recommendation-datastatistics.png "Statistika podatkov o vhodnih podatkih, ki jih model uporablja za učenje vzorcev")
+      > ![Statistika podatkov.](media/product-recommendation-datastatistics.png "Statistika podatkov o vhodnih podatkih, ki jih model uporablja za učenje vzorcev")
 
       Ta razdelek prikazuje statistiko o podatkovnih točkah, ki jih je model uporabil za učenje vzorcev in ustvarjanje priporočil izdelkov. Filtriranje, kot je konfigurirano v konfiguraciji modela, bo veljalo za izhod, ki ga ustvari model. Vendar pa model uporablja vse razpoložljive podatke za učenje vzorcev. Če torej v konfiguraciji modela uporabite filtriranje izdelkov, bo v tem razdelku prikazano skupno število izdelkov, ki jih je model analiziral za učenje vzorcev, ki se lahko razlikujejo od števila izdelkov, ki ustrezajo določenim merilom filtriranja.
 
    1. **Priporočila za izdelke z visoko zanesljivostjo:** vzorec priporočil za vaše stranke, za katere model meni, da jih bo stranka verjetno kupila.    
       Če je dodan katalog izdelkov, se ID-ji izdelkov nadomestijo z imeni izdelkov. Imena izdelkov zagotavljajo bolj uporabne in intuitivne informacije o predvidevanjih.
        > [!div class="mx-imgBorder"]
-       > ![Seznam, ki prikazuje predloge z visoko zanesljivostjo za izbrani nabor posameznih strank](media/product-recommendation-highconfidence.PNG "Seznam, ki prikazuje predloge z visoko zanesljivostjo za izbrani nabor posameznih strank")
+       > ![Seznam, ki prikazuje predloge z visoko zanesljivostjo za izbrani nabor posameznih strank.](media/product-recommendation-highconfidence.PNG "Seznam, ki prikazuje predloge z visoko zanesljivostjo za izbrani nabor posameznih strank")
 
 ## <a name="manage-predictions"></a>Upravljanje predvidevanj
 

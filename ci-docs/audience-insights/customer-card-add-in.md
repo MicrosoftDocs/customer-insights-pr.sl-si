@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059608"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692225"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatek za kartico stranke (predogled)
 
@@ -25,7 +25,7 @@ Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 
 ## <a name="prerequisites"></a>Zahteve
 
 - Dodatek deluje samo z aplikacijami Dynamics 365, ki temeljijo na modelu, na primer Sales ali Customer Service, različice 9.0 in novejše.
-- Da se bodo vaši podatki iz aplikacije Dynamics 365 preslikali v profile strank za vpoglede v občinstvo, morajo biti [uvoženi iz aplikacije Dynamics 365 s priključkom Common Data Service](connect-power-query.md).
+- Da se bodo vaši podatki iz aplikacije Dynamics 365 preslikali v profile strank za vpoglede v občinstvo, morajo biti [uvoženi iz aplikacije Dynamics 365 s priključkom Microsoft Dataverse](connect-power-query.md).
 - Vsi uporabniki aplikacije Dynamics 365 in dodatka za kartice strank morajo biti za ogled podatkov [dodani kot uporabniki](permissions.md) v vpogledih v občinstvo.
 - Za delovanje iskanja podatkov so zahtevane [konfigurirane možnosti iskanja in filtriranja](search-filter-index.md) v vpogledih v občinstvo.
 - Vsak kontrolnik dodatka se zanaša na določene podatke v vpogledih v občinstvo:
@@ -50,7 +50,7 @@ Namestitev rešitve v vaše okolje lahko traja nekaj časa.
 1. Izberite povezavo **Prikazno ime** za rešitev dodatka kartice za stranke za **Dynamics 365 Customer Insights (predogled)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Izberite prikazano ime](media/select-display-name.png "Izberite prikazano ime")
+   > ![Izberite prikazano ime.](media/select-display-name.png "Izberite prikazano ime")
 
 1. Izberite **Vpis** in vnesite poverilnice za skrbniški račun, ki ga uporabljate za konfiguriranje storitve Customer Insights.
 
@@ -64,7 +64,7 @@ Namestitev rešitve v vaše okolje lahko traja nekaj časa.
    - Če želite preslikavo opraviti s stranko, izberite polje pri entiteti stranke, ki se ujema z ID-jem entitete kupca.
 
    > [!div class="mx-imgBorder"]
-   > ![Polje ID-ja stika](media/contact-id-field.png "Polje ID-ja stika")
+   > ![Polje ID-ja stika.](media/contact-id-field.png "Polje ID-ja stika")
 
 1. Če želite shraniti nastavitve, izberite **Shrani konfiguracijo**.
 
@@ -83,7 +83,7 @@ Namestitev rešitve v vaše okolje lahko traja nekaj časa.
 1. Izberite obrazec za stik, v katerega želite dodati kontrolnike kartice stranke.
 
     > [!div class="mx-imgBorder"]
-    > ![Izbira obrazca za stik](media/contact-active-forms.png "Izbira obrazca za stik")
+    > ![Izberite obrazec stika.](media/contact-active-forms.png "Izbira obrazca za stik")
 
 1. Če želite dodati kontrolnik, povlecite poljubno polje iz možnosti **Raziskovalec polj** na želeno mesto za kontrolnik.
 
@@ -110,7 +110,7 @@ Dodatek za kartico stranke se ne nadgradi samodejno. Če ga želite nadgraditi n
 
 1. V vrstici z dejanji izberite možnost **Uporabi nadgradnjo rešitve**.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Nadgradite rešitev na območju za prilagoditev v aplikacijah Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Nadgradite rešitev na območju za prilagoditve v aplikacijah Dynamics 365.":::
 
 1. Po začetku postopka nadgradnje je do zaključka prikazan kazalnik stanja nalaganja. Če novejše različice ni, se pri nadgradnji prikaže sporočilo o napaki.
 

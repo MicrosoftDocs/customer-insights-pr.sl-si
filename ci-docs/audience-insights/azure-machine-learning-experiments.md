@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597439"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554455"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Uporaba modelov, ki temeljijo na strojnem učenju Azure
 
@@ -52,7 +52,7 @@ Ustvariti morate nabore podatkov, da boste lahko uporabili podatke entitete iz s
      V oblikovalniku odprite možnost **Izbira stolpcev v naboru podatkov** in izberite **Nastavi kot parameter prodajnega lijaka**, pri čemer navedete ime parametra.
 
      > [!div class="mx-imgBorder"]
-     > ![Razvrstitev parametrov nabora podatkov v oblikovalniku](media/intelligence-designer-dataset-parameters.png "Razvrstitev parametrov nabora podatkov v oblikovalniku")
+     > ![Parametrizacija nabora podatkov v oblikovalniku.](media/intelligence-designer-dataset-parameters.png "Razvrstitev parametrov nabora podatkov v oblikovalniku")
    
 * Parameter nabora podatkov v SDK-ju (Python)
    
@@ -78,7 +78,7 @@ Ustvariti morate nabore podatkov, da boste lahko uporabili podatke entitete iz s
 
 * Oblikovalnik zagotavlja [modul za izvoz podatkov](/azure/machine-learning/algorithm-module-reference/export-data), ki omogoča izvoz izhoda prodajnega lijaka v shrambo Azure. Trenutno mora modul uporabljati vrsto shrambe podatkov **Shramba zbirke dvojiških podatkov Azure** in nastaviti parameter **Shramba podatkov** in relativno **pot**. Customer Insights preglasi oba parametra med izvajanjem prodajnega lijaka s shrambo podatkov in potjo, ki je dostopna izdelku.
    > [!div class="mx-imgBorder"]
-   > ![Konfiguracija modula za izvoz podatkov](media/intelligence-designer-importdata.png "Konfiguracija modula za izvoz podatkov")
+   > ![Konfiguracija modula za izvoz podatkov.](media/intelligence-designer-importdata.png "Konfiguracija modula za izvoz podatkov")
    
 * Ob zapisu izhodnih podatkov za sklepanje s kod, lahko izhodne podatke naložite v pot znotraj *registrirane shrambe podatkov* v delovnem prostoru. Če so določeni parametri poti in shrambe podatkov v prodajnem lijaku, bo lahko Customer Insights prebral in uvozil izhodne podatke za sklepanje. Trenutno je podprt en sam niz tabelaričnih izhodnih podatkov v obliki zapisa csv. Pot mora vsebovati imenik in ime datoteke.
 

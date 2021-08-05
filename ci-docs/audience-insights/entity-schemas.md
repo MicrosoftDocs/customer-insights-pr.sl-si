@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596381"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692325"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Sheme entitet v rešitvi Common Data Model
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596381"
 
 To je model podatkov v skupni rabi, ki aplikacijam in integratorjem podatkov omogoča lažje sodelovanje z zagotavljanjem enotne definicije podatkov. Common Data Model vključuje bogat sistem metapodatkov s standardnimi entitetami, odnosi, hierarhijami, lastnostmi in drugim. Izvira iz aplikacij Dynamics 365 in je storitvi GitHub odprtokodni model z več kot 260 standardnimi entitetami. Velik sistem notranjih in zunanjih partnerjev prispeva industrijske koncepte v Common Data Model.
 
-Danes več sistemov in platform uporablja Common Data Model, vključno podatkovni toki Power BI in podatkovne storitve Azure. Model je že podprt v storitvah Common Data Service, Dynamics 365, Power Apps, Power BI in prihodnjih podatkovnih storitvah Azure, in neposredno pridobiva vrednost za [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Common Data Model danes uporablja več sistemov in platform, vključno s podatkovnimi tokovi Power BI in podatkovnimi storitvami Azure. Podprt je že v Microsoft Dataverse, Dynamics 365, Power Apps, Power BI in prihajajočih podatkovnih storitvah Azure, ki neposredno razmejujejo vrednost za iniciativo [Pobuda za odprte podatke](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Sheme entitet Customer Insights
 
@@ -44,7 +44,7 @@ Za več informacij glejte dokumentacijo o [shemah entitet Customer Insights v Co
 
 Entitete si lahko ogledate v orodju [Common Data Model Entity Navigator](https://microsoft.github.io/CDM/). Izberite gumb **Naloži iz storitve GitHub!** in se pomaknite na **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, kjer boste našli seznam entitet Customer Insights in njihove definicije.
 > [!div class="mx-imgBorder"]
-> ![CDM Entity Navigator prikazuje entiteto CustomerActivity](media/CDM-entity-navigator.png "CDM Entity Navigator prikazuje entiteto CustomerActivity")
+> ![Orodje za krmarjenje po entitetah CDM prikazuje entiteto CustomerActivity.](media/CDM-entity-navigator.png "CDM Entity Navigator prikazuje entiteto CustomerActivity")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

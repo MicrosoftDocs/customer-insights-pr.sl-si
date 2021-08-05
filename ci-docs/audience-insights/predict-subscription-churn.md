@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095668"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556327"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predvidevanje izgube naročnine (predogled)
 
@@ -63,7 +63,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
 1. Pri vpogledih v občinstvo izberite **Obveščanje** > **Predvidevanja**.
 1. Izberite ploščico **Model izgube naročnine (predogled)** in izberite **Uporabi ta model**.
    > [!div class="mx-imgBorder"]
-   > ![Ploščica »Model izgube naročnine« z gumbom »Uporabi ta model«](media/subscription-churn-usethismodel.PNG "Ploščica »Model izgube naročnine« z gumbom »Uporabi ta model«")
+   > ![Ploščica »Model izgube naročnine« z gumbom »Uporabi ta model«.](media/subscription-churn-usethismodel.PNG "Ploščica »Model izgube naročnine« z gumbom »Uporabi ta model«")
 
 ### <a name="name-model"></a>Ime modela
 
@@ -86,11 +86,11 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
     1. Izberite **Entiteto stranke**, ki se ujema z vašo primarno entiteto stranke.
     1. Vnesite ime, ki opisuje odnos.
        > [!div class="mx-imgBorder"]
-       > ![Stran z zgodovino naročnine prikazuje vzpostavljanje odnosa s stranko](media/subscription-churn-subscriptionhistoryrelationship.PNG "Stran z zgodovino naročnine prikazuje vzpostavljanje odnosa s stranko")
+       > ![Stran z zgodovino naročnine prikazuje vzpostavljanje odnosa s stranko.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Stran z zgodovino naročnine prikazuje vzpostavljanje odnosa s stranko")
 1. Izberite **Naprej**.
 1. Preslikajte semantična polja v atribute v entiteti zgodovine naročnine in izberite **Shrani**. Za opise polj si oglejte [pogoje](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Stran z zgodovino naročnine prikazuje semantične atribute, preslikane v polja v izbrani entiteti zgodovine naročnine](media/subscription-churn-subscriptionhistorymapping.PNG "Stran z zgodovino naročnine prikazuje semantične atribute, preslikane v polja v izbrani entiteti zgodovine naročnine")
+   > ![Stran z zgodovino naročnine prikazuje semantične atribute, preslikane v polja v izbrani entiteti zgodovine naročnine.](media/subscription-churn-subscriptionhistorymapping.PNG "Stran z zgodovino naročnine prikazuje semantične atribute, preslikane v polja v izbrani entiteti zgodovine naročnine")
 1. Izberite **Dodaj podatke** za **Dejavnosti stranke** in izberite entiteto, ki zagotavlja podatke o dejavnosti stranke, kot je opisano v pogojih.
 1. Izberite vrsto dejavnosti, ki se ujema z vrsto dejavnosti stranke, ki jo konfigurirate.  Izberite **Ustvari novo** in navedite ime, če ne vidite možnosti, ki se ujema z vrsto dejavnosti, ki jo potrebujete.
 1. Konfigurirati boste morali odnos med entiteto dejavnosti vaše stranke in entiteto stranke.
@@ -101,7 +101,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
 1. Preslikajte semantična polja v atribute v entiteti dejavnosti stranke in izberite **Shrani**. Za opise polj si oglejte [pogoje](#prerequisites).
 1. (Neobvezno) Če imate kakršne koli druge dejavnosti stranke, ki jih želite vključiti, ponovite zgornje korake.
    > [!div class="mx-imgBorder"]
-   > ![Določanje odnosa entitete](media/subscription-churn-customeractivitiesmapping.PNG "Stran z dejavnostmi stranke prikazuje semantične atribute, preslikane v polja v izbrani entiteti dejavnosti stranke")
+   > ![Določite odnos entitete.](media/subscription-churn-customeractivitiesmapping.PNG "Stran z dejavnostmi stranke prikazuje semantične atribute, preslikane v polja v izbrani entiteti dejavnosti stranke")
 1. Izberite **Naprej**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Nastavitev razporeda in pregled konfiguracije
@@ -115,7 +115,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
 
 1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
    > [!div class="mx-imgBorder"]
-   > ![Pogled strani »Moja predvidevanja«](media/subscription-churn-mypredictions.PNG "Pogled strani »Moja predvidevanja«")
+   > ![Pogled strani »Moja predvidevanja«.](media/subscription-churn-mypredictions.PNG "Pogled strani »Moja predvidevanja«")
 1. Izberite predvidevanje, ki ga želite pregledati.
    - **Ime predvidevanja:** ime predvidevanja, navedeno pri ustvarjanju.
    - **Vrsta predvidevanja:** vrsta modela, uporabljenega za predvidevanje
@@ -131,7 +131,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
    - **Nazadnje osveženo:** datum, ko je predvidevanje osvežilo rezultate v izhodni entiteti.
 1. Izberite navpične tri pike poleg predvidevanja, za katerega želite pregledati rezultate, in izberite **Pogled**.
    > [!div class="mx-imgBorder"]
-   > ![Pogled možnosti v meniju z navpičnimi tremi pikami za predvidevanje, vključno z urejanjem, osveževanjem, pogledom, dnevniki in brisanjem](media/subscription-churn-verticalellipses.PNG "Pogled možnosti v meniju z navpičnimi tremi pikami za predvidevanje, vključno z urejanjem, osveževanjem, pogledom, dnevniki in brisanjem")
+   > ![Pogled možnosti v meniju z navpičnimi tremi pikami za predvidevanje, vključno z urejanjem, osveževanjem, pogledom, dnevniki in brisanjem.](media/subscription-churn-verticalellipses.PNG "Pogled možnosti v meniju z navpičnimi tremi pikami za predvidevanje, vključno z urejanjem, osveževanjem, pogledom, dnevniki in brisanjem")
 1. Na strani z rezultati so trije primarni razdelki podatkov:
     1. **Učinkovitost modela za kvalifikacijo:** A, B ali C so možni rezultati. Ta rezultat kaže na učinkovitost predvidevanja in vam lahko pomaga pri odločitvi za uporabo rezultatov, shranjenih v izhodni entiteti.
         - Rezultati se določijo na podlagi naslednjih pravil:
@@ -139,13 +139,13 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
             - **B**, kadar model natančno napove vsaj 50 % vseh predvidevanj in kadar je odstotek točnih predvidevanj za izgubljene stranke večji od pretekle povprečne stopnje osipa za največ 10 % pretekle povprečne stopnje osipa.
             - **C**, kadar model natančno napove manj kot 50 % vseh predvidevanj ali kadar je odstotek točnih predvidevanj za izgubljene stranke manjši od pretekle povprečne stopnje osipa.
                > [!div class="mx-imgBorder"]
-               > ![Pogled na rezultat učinkovitosti modela](media/subscription-churn-modelperformance.PNG "Pogled na rezultat učinkovitosti modela")
+               > ![Pogled na rezultat učinkovitosti modela.](media/subscription-churn-modelperformance.PNG "Pogled na rezultat učinkovitosti modela")
     1. **Verjetnost izgube (število strank):** skupine strank na podlagi predvidenega tveganja za izgubo. Ti podatki vam bodo lahko pozneje v pomoč, če boste želeli ustvariti segment strank z visokim tveganjem za izgubo. Takšni segmenti vam pomagajo razumeti, kako mora biti nastavljena vaša prekinitev za članstvo v segmentu.
        > [!div class="mx-imgBorder"]
-       > ![Graf, ki prikazuje porazdelitev rezultatov izgube, razdeljen na obsege od 0 % do 100 %](media/subscription-churn-resultdistribution.PNG "Graf, ki prikazuje porazdelitev rezultatov izgube, razdeljen na obsege od 0 % do 100 %")
+       > ![Graf, ki prikazuje porazdelitev rezultatov izgube, razdeljen na obsege od 0 % do 100 %.](media/subscription-churn-resultdistribution.PNG "Graf, ki prikazuje porazdelitev rezultatov izgube, razdeljen na obsege od 0 % do 100 %")
     1. **Najvplivnejši dejavniki:** ob ustvarjanju predvidevanja se upošteva veliko dejavnikov. Za vsakega od dejavnikov je izračunan pomen za združena predvidevanja, ki jih ustvari model. Te dejavnike lahko uporabite za pomoč pri preverjanju rezultatov predvidevanja. Lahko pa te podatke uporabite pozneje za [ustvarjanje segmentov](segments.md), ki bi lahko pomagali vplivati na tveganje izgube strank.
        > [!div class="mx-imgBorder"]
-       > ![Seznam, ki prikazuje vplivne dejavnike in njihov pomen za napovedovanje rezultata izgube](media/subscription-churn-influentialfactors.PNG "Seznam, ki prikazuje vplivne dejavnike in njihov pomen za napovedovanje rezultata izgube")
+       > ![Seznam, ki prikazuje vplivne dejavnike in njihov pomen za napovedovanje rezultata izgube.](media/subscription-churn-influentialfactors.PNG "Seznam, ki prikazuje vplivne dejavnike in njihov pomen za napovedovanje rezultata izgube")
 
 ## <a name="manage-predictions"></a>Upravljanje predvidevanj
 

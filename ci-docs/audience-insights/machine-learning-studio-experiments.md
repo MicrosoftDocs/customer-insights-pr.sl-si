@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598359"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555189"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Uporabite modele na podlagi studia za strojno učenje Azure (klasični način)
 
@@ -41,7 +41,7 @@ V prvem koraku moramo ustvariti delovni prostor in odpreti Studio za strojno uč
 
 1. Ko ste ustvarili vir, se vam bo prikazala nadzorna plošča delovnega prostora studia za strojno učenje. Izberite **Zaženi studio za strojno učenje**.
 
-   ![Uporabniški vmesnik studia za strojno učenje Azure](media/azure-machine-learning-studio.png)
+   ![Uporabniški vmesnik studia za strojno učenje Azure.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Uporaba studia za strojno učenje Azure
 
@@ -55,7 +55,7 @@ Zdaj lahko ustvarite nov poskus ali uvozite obstoječo predlogo poskusa iz galer
 
 1. Če ustvarite nov poskus ali uporabite predlogo poskusa iz galerije, morate konfigurirati lastnosti **Podatki za uvoz**. Uporabite vodeno izkušnjo ali neposredno navedite podrobnosti za dostop do shrambe zbirke dvojiških podatkov Azure, ki vsebuje vaše podatke.  
 
-   ![Poskus studia za strojno učenje Azure](media/azure-machine-learning-studio-experiment.png)
+   ![Poskus studia za strojno učenje Azure.](media/azure-machine-learning-studio-experiment.png)
 
 1. Zdaj lahko ustvarite prodajni lijak za obdelavo po meri, s katerim lahko počistite in predobdelate podatke, izvlečete funkcije in pripravite ustrezni model.
 
@@ -63,15 +63,15 @@ Zdaj lahko ustvarite nov poskus ali uvozite obstoječo predlogo poskusa iz galer
 
 1. Ko boste zadovoljni s kakovostjo modela, izberite **Nastavitev spletne storitve** > **Spletna storitev za napovedovanje**. S to možnostjo boste uvozili pripravljeni model in prodajni lijak lastnosti iz poskusa usposabljanja v napovedno storitev. Napovedna storitev lahko sprejme tudi kak drug niz vhodnih podatkov s shemo, uporabljeno v poskusu usposabljanja za ustvarjanje napovedi.
 
-   ![Nastavitev spletne storitve za napovedovanje](media/predictive-webservice-control.png)
+   ![Nastavite spletno storitev za napovedovanje.](media/predictive-webservice-control.png)
 
 1. Ko vam poskus spletne storitve za napovedovanje uspe, ga lahko uporabite za samodejno načrtovanje. Če želite uporabiti spletno storitev skupaj z aplikacijo Customer Insights, izberite **Uvedba spletne storitve** > **[Nov] predogled uvedbe spletne storitve**. [Podrobno se seznanite z uvedbo spletne storitve](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Uvedba spletne storitve za napovedovanje](media/predictive-webservice-deploy.png)
+   ![Uvedite spletno storitev za napovedovanje.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Vzorčni modeli iz galerije
 
-Za modele v tem članku bomo uporabili izmišljeni scenarij hotela Contoso. Hotel Contoso zbira naslednje podatke:
+Za modele v tem članku bomo uporabili izmišljen scenarij Hotela Contoso. Hotel Contoso zbira naslednje podatke:
 
 - Podatki CRM o bivanju v hotelu. Nabor podatkov vključuje podatke o datumih bivanja za vsako registrirano stranko. Vsebuje tudi informacije o rezervaciji, vrstah sob, podrobnostih o porabi in podobno. Podatki zajemajo obdobje štirih let, od januarja 2014 do januarja 2018.
 - Profili strank, tj. hotelskih gostov. Ti profili vsebujejo podatke o vsaki stranki, vključno z njihovim imenom, rojstnim dnem, poštnim naslovom, spolom in telefonsko številko.
@@ -87,13 +87,13 @@ Opredelitev izgube se lahko razlikuje glede na scenarij. V tem primeru je treba 
 
 Predlogo poskusa lahko uvozite iz galerije. Najprej se prepričajte, da uvažate podatke za **Bivanje v hotelu**, **Podatki o stranki** in **Podatki o uporabi storitve** iz shrambe zbirke dvojiških podatkov Azure.
 
-   ![Uvozi podatke za model menjavanja strank](media/import-data-azure-blob-storage.png)
+   ![Uvozite podatke za model izgube.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Določanje lastnosti
 
 Na podlagi opredelitve izgube moramo najprej prepoznati osnovne lastnosti, ki bodo vplivale na to oznako. Nato obdelamo osnovne lastnosti v številčne lastnosti, ki jih je mogoče uporabiti pri modelih strojnega učenja. Integracija podatkov se zgodi v storitvi Customer Insights, tako da se lahko tabelam pridružimo z uporabo možnosti *ID stranke*.
 
-   ![Združevanje uvoženih podatkov](media/join-imported-data.png)
+   ![Združite uvožene podatke.](media/join-imported-data.png)
 
 Določitev lastnosti za ustvarjanje modela za analizo izgube je lahko zapletena. Podatki so funkcija časa z novo dejavnostjo hotela, ki se beleži vsakodnevno. Med določanjem lastnosti želimo ustvariti statične lastnosti iz dinamičnih podatkov. V tem primeru ustvarimo več funkcij iz hotelske dejavnosti z drsnim oknom, ki označuje obdobje enega leta. Razširimo tudi kategorične lastnosti, kot sta vrsta sobe ali vrsta rezervacije, in sicer v ločene lastnosti z uporabo kodiranja z eno kategorično vrednostjo.  
 
@@ -114,7 +114,7 @@ Zdaj moramo izbrati še optimalen algoritem, ki ga bomo uporabili. V tem primeru
 
 Spodnja slika prikazuje prodajni lijak modela za usposabljanje in ocenjevanje iz studia za strojno učenje Azure:
 
-![Model izgube v studiu za strojno učenje Azure](media/azure-machine-learning-model.png)
+![Model izgube v studiu za strojno učenje Azure.](media/azure-machine-learning-model.png)
 
 Uporabljamo tudi tehniko, ki se imenuje **Pomembnost permutacije lastnosti** in je pomemben vidik optimizacije modelov. Vgrajeni modeli imajo malo ali nič vpogleda v vpliv katere koli posebne lastnosti na končno napoved. Kalkulator pomembnosti lastnosti uporablja algoritem po meri za izračun vpliva posameznih lastnosti na rezultat posebnega modela. Pomembnost lastnosti je normalizirana med +1 in –1. Negativen vpliv pomeni, da ima ustrezna lastnost kontraintuitiven vpliv na rezultat in jo je treba odstraniti iz modela. Pozitiven vpliv pomeni, da lastnost močno prispeva k napovedi. Te vrednosti niso korelacijski koeficienti, saj gre za drugačne metrike. Za več informacij glejte [Pomembnost lastnosti permutacije](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Cilj opredelimo kot maksimiranje uporabe storitve po dolarski vrednosti, tako da
 
 Tako kot model izgube tudi mi združujemo atribut ServiceCustomerID s CustomerID, da bi dosledno ustvarjali priporočila za vsak CustomerID.
 
-![Določanje lastnosti modela priporočil](media/azure-machine-learning-model-featurization.png)
+![Določanje lastnosti modela priporočil.](media/azure-machine-learning-model-featurization.png)
 
 Podatki se pridobivajo iz treh različnih entitet, iz katerih nato izhajajo lastnosti. Določanje lastnosti za priporočila se razlikuje od izgube ali scenarijev CLTV. Model priporočil potrebuje vhodne podatke v obliki treh sklopov lastnosti.
 
@@ -156,13 +156,13 @@ Podatki se pridobivajo iz treh različnih entitet, iz katerih nato izhajajo last
 
 Izdelke ali storitve napovedujemo z algoritmom, ki se imenuje **Usposabljanje orodja za priporočanje ujemanja**, da z njim pripravimo model napovedovanja.
 
-![Algoritem za priporočanje izdelkov](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritem za priporočanje izdelkov.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Tri vhodna vrata za model **Usposabljanje orodja za priporočanje ujemanja** upoštevajo podatke o uporabi storitve usposabljanja, opis stranke (izbirno) in opis storitve. Obstajajo trije različni načini ocenjevanja modela. Prvi je za ocenjevanje modela, pri katerem se izračuna ocena Normaliziran znižan skupni dobiček (NDCG) za razvrščanje ocenjenih elementov. V tem poskusu je ocena NDCG 0,97. Ostali dve možnosti ocenjujeta model v celotnem katalogu priporočljivih storitev ali pa le za elemente, ki jih uporabniki prej niso uporabljali.
 
 Če si podrobneje pogledamo distribucijo priporočil v celotnem katalogu storitev, opazimo, da so najpogosteje priporočene storitve telefon, WiFi in pošta. To je skladno z našimi ugotovitvami iz distribucij podatkov o porabi storitev:
 
-![Izhod modela priporočil](media/azure-machine-learning-model-output.png)
+![Izhod modela priporočil.](media/azure-machine-learning-model-output.png)
 
 Celoten [poskus priporočila izdelka je na voljo v galeriji Azure AI.](https://gallery.azure.ai/Experiment/Recommendation-4)
 
