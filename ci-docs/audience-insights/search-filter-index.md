@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: a6131d4dddce48b0fba153bcefe5631e0d22d808
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: e53d87c4f633cba09fecbc1c219f0ac2ec6bb5598a7902cbcf7398d26d6d7c6b
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554041"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7029419"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili strank: Kazalo za iskanje in filtre
 
@@ -60,7 +60,7 @@ Meni **Filter** na strani **Stranke** lahko vključuje različno število ravni 
 
 ## <a name="next-steps"></a>Naslednji koraki
 
-Če želite poiskati profile strank, pojdite na stran **Uporabniki**, ali pa za prikaz podmnožice vseh profilov strank uporabite indeksirana polja.
+Preglejte [stran poenotenih profilov](customer-profiles.md), da poiščete profile, ali uporabite indeksirana polja, da si ogledate podmnožice vseh poenotenih profilov.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
