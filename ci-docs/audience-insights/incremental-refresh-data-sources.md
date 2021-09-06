@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554179"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377854"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Postopno osveževanje za vire podatkov, ki temeljijo na orodju Power Query
 
@@ -44,8 +44,7 @@ Vpogledi v občinstvo omogočajo postopno osveževanje za vire podatkov, uvožen
 
 1. V možnosti **Nastavitve postopnega osveževanja** boste konfigurirali postopno osveževanje za vse entitete, ki ste jih izbrali ob ustvarjanju vira podatkov.
 
-   > [!div class="mx-imgBorder"]
-   > ![Konfiguracija entitet v viru podatkov za postopno osveževanje.](media/incremental-refresh-settings.png "Konfiguracija entitet v viru podatkov za postopno osveževanje")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Konfiguracija entitet v viru podatkov za postopno osveževanje.":::
 
 1. Izberite entiteto in podajte naslednje podrobnosti:
 

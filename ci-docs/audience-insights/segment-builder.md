@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685482"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377808"
 ---
 # <a name="create-and-manage-segments"></a>Ustvarjanje in upravljanje segmentov
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685482"
 > - Stransko podokno za izbiro atributov bo nenehno na voljo.
 > - Možnost izbire poti odnosa entitet.
 > Če želite preizkusiti novega izdelovalca segmentov, pošljite e-poštno sporočilo z zadevo »Zahteva za omogočanje novega graditelja segmentov« na cihelp [at] microsoft.com. Dopišite ime vaše organizacije in ID vašega preizkusnega okolja.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementi graditelja segmentov." lightbox="media/segment-builder-overview.png":::
+>
+> 1 – Organizirajte svoj segment s pravili in podpravili. Vsako pravilo ali podpravilo je sestavljeno iz pogojev. Združite pogoje z logičnimi operaterji
+>
+> 2 – Izberite [pot odnosa](relationships.md) med entitetami, ki veljajo za pravilo. Pot odnosa določa, katere atribute je mogoče uporabiti v pogoju.
+>
+> 3 – Upravljajte pravila in podpravila. Spremenite položaj pravila ali ga izbrišite.
+>
+> 4 – Dodajte pogoje in z uporabo podpravil zgradite pravo raven gnezdenja.
+>
+> 5 – Uporabite nastavljene operacije za povezana pravila.
+>
+> 6 – S podoknom atributov dodajte atribute entitete, ki so na voljo, ali ustvarite pogoje na podlagi atributov. Podokno prikazuje seznam entitet in atributov, ki so na podlagi izbrane poti odnosa na voljo za izbrano pravilo.
+>
+> 7 – Obstoječim pravilom in podpravilom dodajte pogoje, ki temeljijo na atributih, ali jih dodajte novemu pravilu.
+>
+> 8 – Razveljavite in uveljavite spremembe med gradnjo segmenta.
 
 Določite zapletene filtre okoli poenotene entitete stranke in z njo povezanih entitet. Po obdelavi vsak segment ustvari niz zapisov strank, ki jih lahko izvozite in obdelate. Segmenti se upravljajo na strani **Segmenti**. 
 
@@ -147,6 +164,6 @@ Hitri segmenti vam omogočajo hitro izdelavo preprostih segmentov z enim samim o
 
 ## <a name="next-steps"></a>Naslednji koraki
 
-[Izvozite segment](export-destinations.md) in raziščite [kartico stranke](customer-card-add-in.md) in [povezovalnike](export-power-bi.md), da pridobite vpoglede na ravni stranke.
+[Izvozite segment](export-destinations.md) in raziščite [Integracija kartice stranke](customer-card-add-in.md) za uporabo segmentov v drugih aplikacijah.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

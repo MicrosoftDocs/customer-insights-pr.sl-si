@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171184"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035251"
 ---
 # <a name="relationships-between-entities"></a>Odnosi med entitetami
 
@@ -82,7 +82,7 @@ Ta stran ponuja nabor možnosti za obstoječe in nove odnose:
 
 ### <a name="explore-the-relationship-visualizer"></a>Raziščite vizualizator odnosov
 
-Vizualizator odnosov prikazuje omrežni diagram obstoječih odnosov med povezanimi entitetami in njihovo kardinalnost.
+Vizualizator odnosov prikazuje omrežni diagram obstoječih odnosov med povezanimi entitetami in njihovo kardinalnost. Prav tako vizualizira pot odnosa.
 
 Če želite prilagoditi pogled, lahko spremenite položaj polj tako, da jih povlečete na platno.
 
@@ -92,6 +92,20 @@ Razpoložljive možnosti:
 - **Izvozi kot sliko**: shranite trenutni pogled kot slikovno datoteko.
 - **Spremeni v vodoravno/navpično postavitev**: spremenite poravnavo entitet in odnosov.
 - **Uredi**: posodobite lastnosti odnosov po meri v podoknu za urejanje in shranite spremembe.
+
+### <a name="relationship-path"></a>Pot odnosa
+
+Pot odnosa opisuje entitete, ki so povezane z odnosi med izvorno entiteto in ciljno entiteto. Uporablja se pri ustvarjanju segmenta ali mere, ki vključuje entitete razen entitete poenotenega profila, in obstaja več možnosti za dosego entitete poenotenega profila.
+
+Pot odnosa obvešča sistem, preko katerega odnosi dostopajo do entitete poenotenega profila. Različne poti odnosov lahko podajo različne rezultate.
+
+Na primer entiteta *eCommerce_eCommercePurchases* ima do poenotenega profila entitete *Stranka* naslednje odnose:
+
+- eCommerce_eCommercePurchases > Stranka
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Stranka
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Stranka 
+
+Pot odnosa določa, katere entitete lahko uporabite pri ustvarjanju pravil za mere ali segmente. Izbira možnosti z najdaljšo potjo odnosa bo verjetno prinesla manj rezultatov, ker morajo biti ujemajoči se zapisi del vseh entitet. V tem primeru mora stranka kupiti izdelke prek e-trgovine (eCommerce_eCommercePurchases), na prodajnem mestu (POS_posPurchases) in sodelovati v našem programu zvestobe (loyaltyScheme_loyCustomers). Če bi izbrali prvo možnost, bi verjetno dobili več rezultatov, ker morajo stranke obstajati le v eni dodatni entiteti.
 
 ## <a name="manage-existing-relationships"></a>Upravljanje obstoječih odnosov 
 
@@ -105,6 +119,6 @@ Izberite odnos in eno od naslednjih možnosti:
 
 ## <a name="next-step"></a>Naslednji korak
 
-Sistemski odnosi in odnosi po meri se uporabljajo za [ustvarjanje segmentov](segments.md) na podlagi več virov podatkov, ki niso več ločeni.
+Sistemske odnose in odnose po meri uporabljamo, da [ustvarimo segmente](segments.md) in [mere](measures.md) na podlagi več virov podatkov, ki niso več v silosu.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

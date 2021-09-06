@@ -166,6 +166,8 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Klaviyo
+              href: audience-insights/export-klaviyo.md
             - name: Oglasi za LinkedIn
               href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
@@ -310,5 +312,13 @@
       href: engagement-insights/regional-availability.md
     - name: Omejitve storitev
       href: engagement-insights/quotas.md
-- name: "Stik s\_podporo"
-  href: 'https://admin.powerplatform.microsoft.com/support'
+- name: Integracija vpogledov občinstva in vpogledov v interakcije
+  items:
+    - name: Povezovanje vpogledov občinstva in vpogledov v interakcije
+      href: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - name: Uporaba segmentov vpogledov občinstva v poročilih o vpogledih v interakcije
+      href: engagement-insights/integrate-audience-insights-segments.md
+    - name: Uporaba demografskih dimenzij za razdelitev vedenjskih podatkov
+      href: engagement-insights/curate-dimensions.md
+- name: Podpora
+  href: 'https://dynamics.microsoft.com/en-us/support/'

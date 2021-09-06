@@ -1,7 +1,7 @@
 ---
 title: Pregled vpogledov v občinstvo v storitvi Dynamics 365 Customer Insights
 description: Pregled vpogledov v občinstvo v storitvi Dynamics 365 Customer Insights
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539135"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034380"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Pregled vpogledov v občinstvo v storitvi Dynamics 365 Customer Insights
 
-Vpogledi v občinstvo vam pomagajo bolje razumeti svoje stranke. Povežite podatke iz različnih virov glede transakcij, vedenja in opazovanja, da ustvarite popoln pregled strank. S temi vpogledi omogočite izkušnje in procese, osredotočene na stranko. Poenotenje in razumevanje podatkov o strankah ter njihova uporaba za inteligentne vpoglede in dejanja.
+[Vpogledi občinstva, možnost storitve Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/), vam pomaga, da bolje razumete svoje stranke. Povežite podatke iz različnih virov glede transakcij, vedenja in opazovanja, da ustvarite popoln pregled strank. S temi vpogledi omogočite izkušnje in procese, osredotočene na stranko. Poenotenje in razumevanje podatkov o strankah ter njihova uporaba za inteligentne vpoglede in dejanja.
 
 ## <a name="main-benefits"></a>Glavne prednosti 
 
@@ -34,9 +34,9 @@ Vpogledi v občinstvo vam pomagajo bolje razumeti svoje stranke. Povežite podat
 
 - **Okrepite poslovni proces in prilagojene izkušnje strank**
 
-  - Pospešujte po meri prilagojeno sodelovanje po kanalih – podprite strokovnjake za trženje, prodajo in storitve z vnaprej pripravljenimi, kontekstualnimi vpogledi v stranke in prilagojenimi karticami profilov strank, vgrajenimi v poslovne aplikacije, ki jih že uporabljajo vsak dan
-  - Avtomatizirajte izkušnje in procese, osredotočene na stranke, v prilagodljivih profilih, poslovnih merah in segmentih.
-  - Omogočite in razširite izkušnje poslovne dejavnosti, zgrajene na platformi [Microsoft Power Platform](https://powerplatform.microsoft.com/). Hitro gradite aplikacije z vgrajenimi vpogledi z uporabo zmogljivega pristopa, ki zahteva le malo kode, storitve PowerApps.  
+  - Spodbujajte osebno interakcijo po različnih kanalih – pooblastite strokovnjake za trženje, prodajo in storitve. Uporabite vnaprej pripravljene vpoglede in prilagojene kartice profila strank, ki se integrirajo s poslovnimi aplikacijami, ki jih že uporabljajo.
+  - Avtomatizirajte izkušnje in postopke na podlagi prilagodljivih profilov, poslovnih mer in segmentov.
+  - Omogočite in razširite izkušnje poslovne dejavnosti, zgrajene na platformi [Microsoft Power Platform](https://powerplatform.microsoft.com/). Hitro gradite aplikacije z vgrajenimi vpogledi z uporabo zmogljivega pristopa, ki zahteva le malo kode, storitve Power Apps.  
 
 ## <a name="key-audiences"></a>Ključna občinstva
 
@@ -50,13 +50,18 @@ Vpogledi v občinstvo vam pomagajo bolje razumeti svoje stranke. Povežite podat
 
 - **Poslovni uporabniki:**
 
-  - Vpogledi v popolne profile strank in celovite prikaze dejavnosti strank.
+  - Vpogledi v popolne profile strank in dejavnosti strank.
   - Oglejte si popolne podatke o strankah v okviru poslovnih procesov Dynamics 365 s predpripravljenimi paketi.
 
 - **Poslovni analitiki:**
 
   - Izdelajte prilagodljive profile, določite mere, ustvarite segmente in izkoristite napovedno analizo, da pridobite celovit pregled stranke, značilen za vašo organizacijo.  
-  - Za nadaljnjo obdelavo vpogledov uporabite pripravljene povezovalnike za več Microsoftovih in neodvisnih aplikacij ali API-jev.
+  - Za obdelavo vpogledov uporabite vnaprej pripravljene povezovalnike za več Microsoftovih aplikacij in aplikacij drugih ponudnikov ali API-jev.
 
+## <a name="pricing-and-licensing"></a>Cene in licenciranje
+
+Storitev Customer Insights je licencirana na najemnika in vključuje več zmogljivosti. Upravičene zmogljivosti vključujejo niz profilov, dnevno osveževanje sistema, zahteve storitve Power Platform in dve okolji. Za povečanje privzete kvote lahko kupite dodatne zmogljivosti in licenco. 
+- Podrobne zmogljivosti in upravičenosti: [Vodnik za licenciranje Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Pregled cen: [Cene storitve Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
