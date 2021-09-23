@@ -4,17 +4,17 @@ description: Ustvarjanje, preimenovanje in brisanje delovnih prostorov in okolij
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034062"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486055"
 ---
 # <a name="manage-environments-and-workspaces"></a>Upravljanje okolij in delovnih prostorov
 
@@ -85,13 +85,11 @@ V okolju lahko hkrati vzdržujete več delovnih prostorov. Od vaše [vloge](user
 
 1. Izberite **Dodaj člane**, da omogočite dostop in [dodelite vloge](user-roles.md). Trenutno je na voljo samo **Skrbnik delovnega prostora**.
 
-1. Če nastavite [povezavo do vpogledov v občinstvo](configure-connections.md), lahko izberete **Dovoli dostop do podatkov o profilu**, da članu omogoči ogled poročil na podlagi [uporabniških profilov](profile-reports.md).
-
 1. Izberite **Dodaj člane**, da jih dodate v svoj delovni prostor.
 
 ## <a name="manage-an-environment"></a>Upravljanje okolja
 
-Kot skrbnik okolja lahko do okolja dostopate v levem podoknu za krmarjenje. Konfigurirate lahko nastavitve okolja, druge skrbnike okolja, delovne prostore in [povezave do vpogledov v občinstvo](configure-connections.md). Izberite zavihke za premikanje med različnimi območji v skrbniškem centru.
+Kot skrbnik okolja lahko do okolja dostopate v levem podoknu za krmarjenje. Konfigurirate lahko nastavitve okolja, druge skrbnike okolja in delovne prostore. Izberite zavihke za premikanje med različnimi območji v skrbniškem centru.
 
 :::image type="content" source="media/New-environment.png" alt-text="Skrbniško središče za okolje.":::
 
@@ -123,8 +121,6 @@ Kot skrbnik okolja lahko do okolja dostopate v levem podoknu za krmarjenje. Konf
 
 1. Izberite **Dodaj člane**, da posodobite člane in [dodelite vloge](user-roles.md). Trenutno je na voljo samo **Skrbnik okolja**.
 
-1. Če nastavite [povezavo do vpogledov v občinstvo](configure-connections.md), lahko izberete **Dovoli dostop do podatkov o profilu**, da članu omogoči ogled poročil na podlagi [uporabniških profilov](profile-reports.md).
-
 1. Izberite **Dodaj člane**, da jih dodate v svoje okolje.
 
 ### <a name="delete-an-environment"></a>Brisanje okolja
@@ -143,7 +139,7 @@ Skrbniki okolja lahko izbrišejo okolja. Preden lahko izbrišete okolje, morate 
 
 Vzpostavitev povezav z vpogledi v občinstvo vam omogoča, da si ogledate poročila v vpogledih v občinstvo na podlagi poenotenih profilov strank. 
 
-Več informacij najdete v razdelku [Konfiguracija povezav](configure-connections.md).
+Za več informacij glejte [Ustvarjanje povezave med vpogledi občinstva in vpogledi v interakcije](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Upravljanje osebnih podatkov
 

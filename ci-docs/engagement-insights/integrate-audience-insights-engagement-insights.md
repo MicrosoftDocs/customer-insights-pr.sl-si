@@ -1,19 +1,19 @@
 ---
 title: Ustvarjanje povezave med vpogledi občinstva in vpogledi v interakcije
 description: Ustvarjanje aktivne povezave med vpogledi občinstva in vpogledi v interakcije za omogočanje dvosmerne izmenjave podatkov.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461033"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487127"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Ustvarjanje povezave med vpogledi občinstva in vpogledi v interakcije
 
@@ -26,14 +26,14 @@ Uporabite poenotene profile in segmente iz vpogledov občinstva za več možnost
 ## <a name="prerequisites"></a>Zahteve
 
 - Profili vpogledov občinstva morajo biti shranjeni v računu Azure Data Lake Storage, ki ga imate, ali v jezeru podatkov, s katerim upravlja storitev [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-
+- Vaše okolje vpogledov v občinstvo mora imeti povezano okolje storitve Dataverse. Če to okolje prav tako uporablja storitev Dataverse za shranjevanje podatkov, preverite, da ste izbrali možnost **Omogočite skupno rabo podatkov** v vpogledih v občinstvo. Za več informacij glejte [Ustvarjanje in konfiguriranje plačljivega okolja v vpogledih v občinstvo](../audience-insights/get-started-paid.md).
 - Potrebujete skrbniška dovoljenja za okolja vpogledov v interakcije in vpogledov občinstva.
-
 - Povezana okolja morajo biti v isti geografski regiji.
 
 > [!NOTE]
-> - Če je vaša naročnina na vpoglede občinstva preskusna in uporablja interno upravljano storitev Managed Data Lake v vpogledih občinstva, se obrnite na [pirequest@microsoft.com](mailto:pirequest@microsoft.com) za pomoč. 
-> - Če vaše okolje vpogledov občinstva uporablja vašo storitev Azure Data Lake Storage za shranjevanje podatkov, morate v račun za shranjevanje dodati glavno ime storitve Azure za vpoglede v interakcije. Za podrobnosti pojdite na [Povezava z računom Azure Data Lake Storage z glavnim imenom storitve Azure za vpoglede občinstva](../audience-insights/connect-service-principal.md). Tudi vaše okolje vpogledov občinstva mora imeti povezano [okolje Dataverse](../audience-insights/get-started-paid.md). 
+> - Če je vaša naročnina na vpoglede v občinstvo preskusna različica in uporablja interno upravljano jezero podatkov v vpogledih v občinstvo, se obrnite na [pirequest@microsoft.com](mailto:pirequest@microsoft.com) za pomoč. 
+> - Če vaše okolje vpogledov občinstva uporablja vašo storitev Azure Data Lake Storage za shranjevanje podatkov, morate v račun za shranjevanje dodati glavno ime storitve Azure za vpoglede v interakcije. Za podrobnosti pojdite na [Povezava z računom Azure Data Lake Storage z glavnim imenom storitve Azure za vpoglede občinstva](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Ustvarjanje povezave okolja
 
@@ -75,6 +75,7 @@ Ko povežete okolja, lahko izberete izbirne funkcije za povezana okolja. Te funk
 
    > [!IMPORTANT]
    > Če v tem koraku izrecno ne dodate uporabnikov, bodo podatki pri vpogledih v interakcije skriti pred uporabniki.
+   > Če želite, da se segmenti vpogledov občinstva prikažejo v vpogledih v interakcije, morate najprej [zagnati združevanje in postopke iz strežnika](../audience-insights/merge-entities.md). Postopki iz strežnika so pomembni, ker ustvarjajo edinstveno tabelo, ki pripravlja segmente vpogledov občinstva za skupno rabo z vpogledi v interakcije. (Če je načrtovana osvežitev sistema, se bodo samodejno vključili postopki iz strežnika.)
 
 1. Preglejte svojo izbiro in nato izberite **Končaj**.
 

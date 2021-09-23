@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Zmogljivost vpogledov v interakcijo (predogledna različica) v storitvi Dynamics 365 Customer Insights
+title: Možnost vpogledov v interakcije v storitvi Dynamics 365 Customer Insights (predogledna različica)
 summary: Zbirajte podatke za svoja spletna mesta. Razumevanje interakcij strank in uporabe na vaših spletnih mestih, interaktivno. Uporabite globoko integracijo med vpogledi v interakcije in vpogledi v občinstvo, da obogatite vedenjsko analitiko v realnem času s poročili o profilu strank. Obogatite profile strank s spletnimi aktivnostmi, da dobite podatke o vedenju v realnem času skupaj z ustreznimi podatki o strankah. Pretvorite svoje podjetje tako, da boste iz podatkov o strankah dobili takojšnjo vrednost.
 metadata:
   title: Dokumentacija za vpoglede v interakcijo (predogledna različica)
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: sl-SI
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036258"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494204"
 landingContent:
 - title: Vizitka
   linkLists:
   - linkListType: overview
     links:
-    - text: Pregled zmogljivosti
+    - text: Prednosti možnosti
       url: overview.md
-    - text: Pogoji in koncepti
+    - text: Slovar izrazov
       url: glossary.md
-    - text: Odkrijte vpoglede v interakcije
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Nove in posodobljene funkcije
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Vključevanje
   linkLists:
   - linkListType: how-to-guide
@@ -38,28 +38,30 @@ landingContent:
       url: create-workspace.md
     - text: Zagotavljanje učinkovitosti spletnega mesta
       url: instrument-website.md
-- title: Poročila
+- title: Ogled in filtriranje poročil
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Ogled poročil
       url: view-reports.md
-    - text: Ustvarjanje poročil po meri
-      url: custom-reports.md
     - text: Ogled poročila o poenotenih profilih
       url: profile-reports.md
-    - text: Pripravite poročila o lijakih
-      url: funnel-reports.md
-- title: Dogodki
+    - text: Uporaba segmentov občinstva za filtriranje poročil
+      url: integrate-audience-insights-segments.md
+- title: Analiziranje
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Pripravite poročila o lijakih
+      url: funnel-reports.md
+    - text: Analizira vedenjskih podatkov
+      url: curate-dimensions.md
+    - text: Ustvarjanje poročil po meri
+      url: custom-reports.md
     - text: Ustvarjanje dogodkov, ki so natančneje določeni
       url: refined-events.md
     - text: Izvozi dogodke
       url: export-events.md
-    - text: Brisanje in izvoz osebnih podatkov
-      url: delete-export-personal-data.md
 - title: Viri za razvijalce
   linkLists:
   - linkListType: reference
@@ -81,6 +83,10 @@ landingContent:
     - text: Upravljanje okolij in delovnih prostorov
       url: manage-environments-workspaces.md
     - text: Povezovanje z vpogledi občinstva
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Upravljanje piškotkov in soglasje uporabnikov
       url: user-consent-storage.md
+    - text: Brisanje in izvoz osebnih podatkov
+      url: delete-export-personal-data.md
+    - text: Omejitve storitev
+      url: ../service-limits.md

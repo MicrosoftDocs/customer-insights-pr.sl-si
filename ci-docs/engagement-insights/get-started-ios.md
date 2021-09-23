@@ -4,17 +4,17 @@ description: Naučite se, kako prilagoditi in zagnati komplet za razvoj programs
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036893"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494250"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Začnite z uporabo kompleta za razvoj programske opreme za iOS
 
@@ -45,11 +45,36 @@ Za začetek postopka izberite delovni prostor, ki ga boste uporabljali pri delu,
 
 - Če nimate obstoječega delovnega prostora, izberite možnost  **Nov delovni prostor** in sledite korakom za ustvarjanje [novega delovnega prostora](create-workspace.md).
 
+- Ko ustvarite delovni prostor, izberite možnost **Skrbnik** > **Delovni prostor**, nato pa **Navodila za namestitev**.
+
 ## <a name="configure-the-sdk"></a>Konfigurirajte komplet za razvoj programske opreme
 
-Ko prenesete komplet za razvoj programske opreme, ga lahko uporabite za delo v okolju Xcode ter tako omogočite in opredelite dogodke.
+Ko prenesete komplet za razvoj programske opreme, ga lahko uporabite za delo v okolju Xcode ter tako omogočite in opredelite dogodke. Za to obstajata dva načina
 
-1. Ko ustvarite delovni prostor, izberite možnost **Skrbnik** > **Delovni prostor**, nato pa **Navodila za namestitev**.
+### <a name="option-1-using-cocoapods-recommended"></a>1. možnost: uporaba upravitelja CocoaPods (priporočeno)
+CocoaPods je upravitelj odvisnosti za projekte Swift in Objective-C Cocoa. Z njegovo uporabo je lažje vključiti vpoglede v interakcije kompleta za razvoj programske opreme za sistem iOS. CocoaPods omogoča tudi nadgradnjo na najnovejšo različico vpogledov v interakcije kompleta za razvoj programske opreme. Tukaj je opisano, kako uporabiti CocoaPods za vključitev vpogledov v interakcije kompleta za razvoj programske opreme v vaš projekt Xcode. 
+
+1. Namestite rešitev CocoaPods. 
+
+1. V korenskem imeniku svojega projekta ustvarite novo datoteko, imenovano Podfile, in ji dodajte naslednje izjave.Zamenjajte YOUR_TARGET_PROJECT_NAME z imenom vašega projekta Xcode. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+Zgornja konfiguracija za pod vsebuje različice za odpravljanje napak in komplet za razvoj programske opreme. Izberite tisto, ki je najboljša za vaš projekt.
+
+1. Namestite pod tako, da izvedete naslednji ukaz: `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>2. možnost: uporaba povezave za prenos
 
 1. Prenesite [vpoglede v interakcije kompleta za razvoj programske opreme za iOS](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) in datoteko `EIObjC.xcframework` prenesite v mapo `Frameworks`.
 

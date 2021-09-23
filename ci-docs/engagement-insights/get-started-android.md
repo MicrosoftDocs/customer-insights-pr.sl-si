@@ -4,17 +4,17 @@ description: Naučite se, kako prilagoditi in zagnati komplet za razvoj programs
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036938"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494295"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Začnite z uporabo kompleta za razvoj programske opreme Android
 
@@ -35,17 +35,38 @@ V komplet za razvoj programske opreme lahko prenesete naslednje možnosti konfig
 
 - Ključ za sprejemanje (navodila o tem, kako ga pridobiti, se nahajajo spodaj)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>1. korak: V svojo aplikacijo integrirajte komplet za razvoj programske opreme
+## <a name="integrate-the-sdk-into-your-application"></a>V svojo aplikacijo integrirajte komplet za razvoj programske opreme
 Za začetek postopka izberite delovni prostor ter mobilno platformo Android in prenesite komplet za razvoj programske opreme za Android.
 
 - Svoj delovni prostor izberite v levem podoknu za krmarjenje, s preklopnikom med delovnimi prostori.
 
 - Če nimate obstoječega delovnega prostora, izberite možnost  **Nov delovni prostor** in sledite korakom za ustvarjanje [novega delovnega prostora](create-workspace.md).
 
-## <a name="step-2-configure-the-sdk"></a>2. korak: Konfigurirajte komplet za razvoj programske opreme
+- Ko ustvarite delovni prostor, izberite možnost **Skrbnik** > **Delovni prostor**, nato pa  **Navodila za namestitev**. 
 
-1. Ko ustvarite delovni prostor, izberite možnost **Skrbnik** > **Delovni prostor**, nato pa  **Navodila za namestitev**. 
+## <a name="configure-the-sdk"></a>Konfigurirajte komplet za razvoj programske opreme
 
+Ko prenesete komplet za razvoj programske opreme, ga lahko uporabite za delo v okolju Android Studio ter tako omogočite in opredelite dogodke. Za to obstajata dva načina:
+### <a name="option-1-using-jitpack-recommended"></a>1. možnost: Uporaba shrambe JitPack (priporočeno)
+1. Dodajte shrambo JitPack svojemu korenu `build.gradle`:
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Dodajte odvisnost:
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>2. možnost: uporaba povezave za prenos
 1. Prenesite [vpoglede v interakcijo kompleta za razvoj programske opreme za Android](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) in datoteko `eiandroidsdk-debug.aar` prenesite v mapo `libs`.
 
 1. Odprite datoteko `build.gradle` na projekti ravni in dodajte naslednje izrezke:
@@ -62,7 +83,17 @@ Za začetek postopka izberite delovni prostor ter mobilno platformo Android in p
     }
     ```
 
-1. Vpoglede v interakcije kompleta za razvoj programske opreme nastavite s pomočjo datoteke `AndroidManifest.xml`, ki se nahaja v mapi `manifests`. 
+1. V svojo datoteko dodajte dovoljenje za omrežje in internet v datoteki `AndroidManifest.xml`, ki se nahaja pod mapo `manifests`. 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. Vpoglede v interakcije kompleta za razvoj programske opreme nastavite s pomočjo datoteke `AndroidManifest.xml`. 
+
+## <a name="enable-auto-instrumentation"></a>Omogočite samodejno instrumentacijo
 1. Iz **Navodil za namestitev** kopirajte izrezek XML. `Your-Ingestion-Key` je mora biti izpolnjen samodejno.
 
    > [!NOTE]
@@ -85,7 +116,7 @@ Za začetek postopka izberite delovni prostor ter mobilno platformo Android in p
    </application>
    ```
 
-1. Omogočite ali onemogočite samodejno zajemanje prikaza dogodkov `View` tako, da zgornje polje `autoCapture` nastavite na `true` ali `false`.
+1. Omogočite ali onemogočite samodejno zajemanje prikaza dogodkov `View` tako, da zgornje polje `autoCapture` nastavite na `true` ali `false`. Trenutno je treba dogodke `Action` dodati ročno.
 
 1. (Izbirno.) Druge konfiguracije vključujejo nastavitev URL-ja končne točke povezovalnika. Dodati jih je mogoče pod `AndroidManifest.xml`, in sicer med metapodatki ključa za sprejemanje:
     ```xml
@@ -94,9 +125,9 @@ Za začetek postopka izberite delovni prostor ter mobilno platformo Android in p
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>3. korak: Inicializirajte komplet za razvoj programske opreme iz MainActivity 
+## <a name="implement-custom-events"></a>Izvedite dogodke po meri
 
-Po inicializaciji kompleta za razvoj programske opreme je mogoče v okolju MainActivity delati z dogodki in njihovimi lastnostmi.
+Po inicializaciji kompleta za razvoj programske opreme je mogoče v okolju `MainActivity` delati z dogodki in njihovimi lastnostmi.
 
     
 Java:
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Nastavite podrobnosti uporabnika za svoj dogodek (neobvezno)
+## <a name="set-user-details-for-your-event-optional"></a>Nastavite podrobnosti uporabnika za svoj dogodek (neobvezno)
 
 Komplet za razvoj programske opreme vam omogoča, da določite podatke o uporabniku, ki jih je mogoče poslati z vsakim dogodkom. Podatke o uporabniku lahko določite s klicem API `setUser(user: User)` na ravni `Analytics`.
 

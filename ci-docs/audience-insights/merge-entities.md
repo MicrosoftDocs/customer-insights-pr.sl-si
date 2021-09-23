@@ -1,7 +1,7 @@
 ---
 title: Združevanje entitet za poenotenje podatkov
 description: Združite entitete za ustvarjanje poenotenih profilov strank.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035022"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494339"
 ---
 # <a name="merge-entities"></a>Združevanje entitet
 
@@ -76,17 +76,40 @@ Iz poenotenega profila stranke izključite atribut. Če se polje uporablja v dru
 
 Na strani za **spajanje** izberite **Izključena polja** za ogled seznama vseh izključenih polj. To podokno vam omogoča vnovično dodajanje izključenih polj.
 
+## <a name="edit-a-merged-field"></a>Urejanje spojenega polja
+
+1.  Izberite spojeno polje.
+
+1.  Izberite možnost **Pokaži več** in **Uredi**.
+
+1.  Določite, kako združiti ali spojiti polja z eno od treh možnosti:
+    - **Pomembnost**: Določi zmagovalno vrednost na podlagi uvrstitve pomembnosti, določene za vključena polja. To je privzeta možnost spajanja. Izberite **Premakni gor/dol**, da določite razvrstitev pomembnosti.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Možnost pomembnosti v dialogu za spajanje polj."::: 
+    - **Najnovejše**: Določi zmagovalno vrednost na podlagi najnovejših. Zahteva datum ali številsko polje za vsako vključeno entiteto v obsegu spajanja polj za določitev nedavnosti.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Možnost nedavnosti v dialogu za spajanje polj.":::
+    - **Najstarejše**: Določi zmagovalno vrednost na podlagi najstarejših. Zahteva datum ali številsko polje za vsako vključeno entiteto v obsegu spajanja polj za določitev nedavnosti.
+
+1.  Če želite sodelovati v postopku spajanja, lahko dodate dodatna polja.
+
+1.  Spojeno polje lahko preimenujete.
+
+1. Če želite uporabiti spremembe, izberite **Dokončaj**.
+
+1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb. 
+
 ## <a name="manually-combine-fields"></a>Ročno združevanje polj
 
 Ročno določite spojeni atribut. 
 
 1. Na strani za **spajanje** izberite možnost **Združi polja**.
 
-1. Navedite **Ime** in **Ime izhodnega polja**.
+1. Pravilnik zmagovalnega spajanja določite v spustnem meniju **Združi polja glede na**.
 
 1. Izberite polje, ki ga želite dodati. Izberite možnost **Dodaj polja**, če želite združiti več polj.
 
-1. Potrdite izključitev.
+1. Navedite **Ime** in **Ime izhodnega polja**.
+
+1. Če želite uporabiti spremembe, izberite **Dokončaj**.
 
 1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb. 
 
@@ -103,6 +126,27 @@ Nekatere entitete vsebujejo več podrobnosti kot druge. Če entiteta vključuje 
 1. Potrdite spremembo.
 
 1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb.
+
+## <a name="configure-customer-id-generation"></a>Konfiguriranje generacije ID-ja stranke 
+
+Ko konfigurirate polja za spajanje, lahko določite, kako ustvariti vrednosti CustomerId, edinstvene identifikatorje profila stranke. Korak spajanja v postopku poenotenja podatkov ustvari edinstven identifikator profila stranke. Identifikator je CustomerId v entiteti *Stranka*, ki je rezultat postopka poenotenja podatkov. 
+
+CustomerId v entiteti Stranka temelji na razprševanju prve vrednosti primarnih zmagovalnih ključev, ki niso »null«. Ti ključi prihajajo iz entitet, uporabljenih v fazi ujemanja in spajanja, nanje pa vpliva vrstni red ujemanja.Tako se lahko ustvarjeni ID stranke spremeni, ko se vrednost primarnega ključa spremeni v primarni entiteti vrstnega reda ujemanja. Posledično vrednost primarnega ključa morda ne predstavlja vedno iste stranke.
+
+Če konfigurirate stabilen ID stranke, se lahko temu izognete.
+
+**Konfiguriranje enoličnega ID-ja stranke**
+
+1. Odprite razdelek **Poenotenje** > **Spoji**.
+
+1. Na strani **Spoji** izberite zavihek **Ključi**. 
+
+1. Pomaknite se v vrstico **CustomerId** in izberite možnost **Konfiguriraj**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Kontrolnik za prilagoditev ID-ja generacije.":::
+
+1. Izberite do pet polj, ki bodo vsebovala edinstven ID stranke in so bolj stabilna. Zapisi, ki se ne ujemajo z vašo konfiguracijo, namesto tega uporabljajo sistemsko konfiguriran ID.  
+
+1. Izberite **Dokončaj** in zaženite postopek spajanja, da uporabite spremembe.
 
 ## <a name="run-your-merge"></a>Zagon spajanja
 

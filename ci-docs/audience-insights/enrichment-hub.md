@@ -1,7 +1,7 @@
 ---
 title: Obogatitev poenotenih profilov strank
 description: Uporabite zmogljivosti za obogatitev podatkov o strankah.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032548"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7470036"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogatitev profilov strank (predogled)
 
@@ -29,6 +29,7 @@ Za ustvarjanje ali urejanje obogatitev morate imeti dovoljenje »Sodelavec« ali
 
 Na zavihku **Odkrivanje** so na voljo te obogatitve:
 
+- [Storitev Zemljevidi Azure](enrichment-azure-maps.md) zagotavlja Microsoft
 - [Znamke](enrichment-microsoft.md), ki jih zagotavlja Microsoft
 - [Zanimanja](enrichment-microsoft.md), ki jih zagotavlja Microsoft
 - [Izboljšani naslovi](enrichment-enhanced-addresses.md), ki jih zagotavlja Microsoft
@@ -62,5 +63,17 @@ Obogatitve neodvisnih ponudnikov so konfigurirane z uporabo [povezav](connection
 ## <a name="multiple-enrichments-of-the-same-type"></a>Več obogatitev iste vrste
 
 Entiteta, ki jo je treba obogatiti, je določena med konfiguriranjem obogatitve, ki omogoča obogatiti samo podmnožico vseh profilov. Obogatiti je na primer mogoče samo podatke za točno določeni segment. Konfigurirate lahko več obogatitev iste vrste in znova uporabite isto povezavo. Nekatere obogatitve imajo omejitev števila obogatitev iste vrste, ki jih je mogoče ustvariti. Omejitve in trenutno uporabo si lahko ogledate na strani **Obogatitev**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Oglejte si napredek postopka obogatitve
+
+Podrobnosti o obdelavi obogatitve, vključno s stanjem in možnimi težavami, lahko najdete med osveževanjem ali po končani osvežitvi. Spoznajte, kateri postopki so potrebni za osvežitev obogatitve in koliko časa je trajalo, da so se postopki izvedli. Stanje obogatitve je podprto za družbe Experian, Leadspace, HERE Technologies, SFTP Import in storitev Zemljevidi Azure.
+
+Če si želite ogledati stanje obogatitve:
+
+1. Pomaknite se na možnost **Podatki** > **Obogatitev**. 
+1. V zavihku **Moje obogatitve** izberite stanje obogatitve, da odprete stransko podokno. 
+1. V podoknu **Podrobnosti o napredku** razširite razdelek **Obogatitve**. 
+1. Pod obogatitvijo, za katero želite videti napredek, izberite **Prikaži podrobnosti**. 
+1. V podoknu **Podrobnosti opravila** izberite **Pokaži podrobnosti**, da si ogledate postopke, ki so vključeni v posodabljanje obogatitve, in njihovo stanje. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

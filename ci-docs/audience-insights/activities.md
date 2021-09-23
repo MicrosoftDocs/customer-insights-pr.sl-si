@@ -1,20 +1,20 @@
 ---
 title: Dejavnosti stranke
-description: Določite dejavnosti stranke in si jih oglejte na časovnici stranke.
-ms.date: 04/07/2021
+description: Določitev dejavnosti strank in njihov ogled v časovnici v profilih strank.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033651"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494431"
 ---
 # <a name="customer-activities"></a>Dejavnosti stranke
 
@@ -60,12 +60,15 @@ Vaši viri podatkov lahko vključujejo entitete s transakcijskimi podatki in pod
       - **Dodatne podrobnosti**: polje z relevantnimi informacijami za to dejavnost.
       - **Ikona**: ikona, ki najbolje predstavlja to vrsto dejavnosti.
       - **Spletni naslov** : polje z URL-jem s podatki o tej dejavnosti. Na primer transakcijski sistem, ki je vir te dejavnosti. Ta URL je lahko katero koli polje iz vira podatkov, lahko pa je oblikovano kot novo polje s pretvorbo v orodju Power Query. Podatki z URL-ja bodo shranjeni v entiteti *Poenotena dejavnost*, ki se lahko porabi v nadaljnjem toku z uporabo [API-jev](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="V entiteti Poenotena dejavnost navedite podatke o dejavnosti stranke.":::
+
+   - **Pokaži na časovnici**
+      - Izberite, če želite to dejavnost pokazati v pogledu časovnice vaših profilov strank. Izberite **Da** za prikaz dejavnosti v časovnici ali **Ne**, da jih skrijete.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="V entiteti Poenotena dejavnost navedite podatke o dejavnosti stranke.":::
 
 1. Izberite možnost **Naprej** za pomik na naslednji korak. Izberete lahko možnost **Zaključek in pregled**, da takoj shranite dejavnost z vrsto dejavnosti, nastavljeno na možnost **Drugo**. 
 
-1. V koraku **Vrsta dejavnosti** izberite vrsto dejavnosti in po želji izberite, ali želite semantično preslikati nekatere vrste dejavnosti za uporabo na drugih področjih storitve Customer Insights. Po potrditvi, da se strinjate s preslikavo polij, je mogoče dejavnosti *naročnina* in *SalesOrderLine* semantično preslikati. Če vrsta dejavnosti za novo dejavnost ni pomembna, lahko izberete možnost *Drugo* ali *Ustvari novo* za prilagojeno vrsto dejavnosti.
+1. V koraku **Vrsta dejavnosti** izberite vrsto dejavnosti in po želji izberite, ali želite semantično preslikati nekatere vrste dejavnosti za uporabo na drugih področjih storitve Customer Insights. Po potrditvi, da se strinjate s preslikavo polj, je mogoče vrste dejavnosti *Povratne informacije*, *Zvestoba*, *SalesOrder*, *SalesOrderLine* in *Naročnina* semantično preslikati. Če vrsta dejavnosti za novo dejavnost ni pomembna, lahko izberete možnost *Drugo* ali *Ustvari novo* za prilagojeno vrsto dejavnosti.
 
 1. Izberite možnost **Naprej** za pomik na naslednji korak. 
 

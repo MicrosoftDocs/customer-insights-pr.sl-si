@@ -4,17 +4,17 @@ description: Kako uporabiti poročila o lijakih, da bi razumeli, kako občinstvo
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032275"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498662"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Ustvarjanje in upravljanje poročil o lijakih
 
@@ -158,4 +158,21 @@ Lahko spremenite ime poročila o lijakih, ga izbrišete ali spremenite korake v 
 1. Izberite ime, da odprete poročilo.
 
 1. Izberite korak, ki ga želite odstraniti, in izberite **Izbriši**.
+
+## <a name="funnel-insights"></a>Vpogledi v lijake 
+
+Vpogledi v interakcije zdaj strankam ponujajo vpoglede v lijake. S vpogledi v lijake pridobite podrobnejši vpogled v vedenje strank glede korakov v vašem poročilu o lijaku. Ko ustvarite in shranite novo poročilo o lijaku, se za vaše poročilo samodejno ustvarijo vpogledi v lijake. 
+
+Vpoglede v lijake si lahko ogledate v naslednjih kategorijah, tako na glavni ravni kot v korakih: 
+
+ - Stopnja konverzije 
+ - Čas prehoda 
+ - Čas zaključka 
+
+Uporabite te vpoglede za podrobnejše raziskovanje vedenja strank ter boljše razumevanje točke oddaje in pretvorb za poročilo o lijaku. 
+
+Vpogledi v lijake se vnovično izračunajo vsakih 24 ur ali ko izberete **Shrani** in shranite svoje poročilo o lijaku. 
+
+> [!NOTE]
+> Če si želite ogledati vpoglede za svoj lijak, morate poročilo shraniti vsakič, ko ga spremenite. 
 

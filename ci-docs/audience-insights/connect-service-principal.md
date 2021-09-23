@@ -1,7 +1,7 @@
 ---
 title: Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve
 description: Uporaba glavnega imena storitve Azure za povezovanje s shrambo Data Lake.
-ms.date: 07/23/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461168"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483545"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve Azure
-<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+
 Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omejena dovoljenja. Namesto da bi se v aplikacije vpisali kot uporabnik s vsemi pravicami, Azure ponuja glavno ime storitve. Preberite, če želite izvedeti, kako se povezati s storitvijo Dynamics 365 Customer Insights z računom Azure Data Lake Storage tako, da uporabite glavno ime storitve Azure namesto ključev računa za shranjevanje. 
 
-Lahko uporabite glavno ime storitve, da varno [dodate ali uredite mapo Common Data Model kot vir podatkov](connect-common-data-model.md), oz. [ustvarite ali posodobite okolje](get-started-paid.md).<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
+Lahko uporabite glavno ime storitve, da varno [dodate ali uredite mapo Common Data Model kot vir podatkov](connect-common-data-model.md), oz. [ustvarite ali posodobite okolje](get-started-paid.md).
 
 > [!IMPORTANT]
-> - Račun storitve Data Lake Storage, ki bo uporabil<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> glavno ime storitve, mora imeti [omogočen hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
+> - Račun storitve Data Lake Storage, ki bo uporabljal glavno ime storitve, mora imeti [omogočen hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
 > - Za izdelavo glavnega imena storitve potrebujete skrbniška dovoljenja za naročnino Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Ustvarjanje glavnega imena storitve Azure za storitev Customer Insights
@@ -38,7 +38,7 @@ Preden ustvarite novo glavno ime storitve za vpoglede občinstva ali vpoglede v 
 
 3. Pod možnostjo **Upravljanje** izberite **Aplikacije za podjetja**.
 
-4. Iskanje za Microsoft<!--note from editor: Via Microsoft Writing Style Guide.--> ID aplikacije:
+4. Poiščite ID Microsoftove aplikacije:
    - Vpogledi občinstva: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` z imenom `Dynamics 365 AI for Customer Insights`
    - Vpogledi v interakcije: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` z imenom `Dynamics 365 AI for Customer Insights engagement insights`
 
@@ -49,23 +49,23 @@ Preden ustvarite novo glavno ime storitve za vpoglede občinstva ali vpoglede v 
 6. Če se ne vrnejo nobeni rezultati, ustvarite novo glavno ime storitve.
 
 >[!NOTE]
->Če želite izkoristiti vse možnosti storitve Dynamics 365 Customer Insights, predlagamo, da obe aplikaciji dodate glavnemu imenu storitve.<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+>Če želite izkoristiti vse možnosti storitve Dynamics 365 Customer Insights, predlagamo, da obe aplikaciji dodate glavnemu imenu storitve.
 
 ### <a name="create-a-new-service-principal"></a>Ustvari novo glavno ime storitve
-<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+
 1. Namestite najnovejšo različico storitve Azure Active Directory PowerShell for Graph. Za več informacij pojdite na [Namestitev storitve Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
 
-   1. V računalniku izberite tipko Windows na tipkovnici in poiščite **Windows PowerShell** in izberite **Zaženi kot skrbnik**.<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
+   1. V računalniku izberite tipko Windows na tipkovnici in poiščite **Windows PowerShell** in izberite **Zaženi kot skrbnik**.
    
    1. V oknu PowerShell, ki se odpre, vnesite `Install-Module AzureAD`.
 
 2. Ustvarite glavno ime storitve za Customer Insights z modulom Azure AD PowerShell.
 
-   1. V oknu PowerShell vnesite `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Zamenjajte *»[svoj ID najemnika]«*<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> z dejanskim ID-jem vašega najemnika, za katerega želite ustvariti glavno ime storitve. Parameter z imenom okolja, `AzureEnvironmentName`, je izbiren.
+   1. V oknu PowerShell vnesite `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Zamenjajte *[ID vašega najemnika]* z dejanskim ID-jem vašega najemnika, kjer želite ustvariti glavno ime storitve. Parameter z imenom okolja, `AzureEnvironmentName`, je izbiren.
   
    1. Vnesite `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Ta ukaz ustvari glavno ime storitve za vpoglede v občinstvo izbranega najemnika. 
 
-   1. Vnesite `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Ta ukaz ustvari glavno ime storitve za vpoglede v interakcije<!--note from editor: Edit okay?--> v izbranem najemniku.
+   1. Vnesite `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Ta ukaz ustvari glavno ime storitve za vpoglede v interakcije v izbranem najemniku.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Dodelite dovoljenja glavnemu imenu storitve za dostop do računa za shranjevanje
 
@@ -90,7 +90,7 @@ Uvedba sprememb lahko traja do 15 minut.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>V priponko računa za shranjevanje za vpoglede občinstva vnesite ID vira Azure ali podrobnosti o naročnini za Azure
 
-Lahko<!--note from editor: Edit suggested only if this section is optional.--> priložite račun storitve Data Lake Storage v vpogledih občinstva, da [shranite izhodne podatke](manage-environments.md) ali [ga uporabite kot vir podatkov](connect-common-data-service-lake.md). Ta možnost vam omogoča izbiro med pristopom, ki temelji na virih, ali pristopom, ki temelji na naročnini. Odvisno od pristopa, ki ga izberete, sledite postopku v enem od naslednjih razdelkov.<!--note from editor: Suggested.-->
+V vpogledih v občinstvo lahko priložite račun za storitev Data Lake Storage, da [shranite izhodne podatke](manage-environments.md) ali [ga uporabite kot vir podatkov](connect-common-data-service-lake.md). Ta možnost vam omogoča izbiro med pristopom, ki temelji na virih, ali pristopom, ki temelji na naročnini. Odvisno od pristopa, ki ga izberete, sledite postopku v enem od naslednjih razdelkov.
 
 ### <a name="resource-based-storage-account-connection"></a>Povezava računa za shrambo na podlagi vira
 
