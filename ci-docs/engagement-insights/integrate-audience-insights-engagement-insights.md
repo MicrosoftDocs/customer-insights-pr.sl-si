@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487127"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559038"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Ustvarjanje povezave med vpogledi občinstva in vpogledi v interakcije
 
@@ -25,7 +25,7 @@ Uporabite poenotene profile in segmente iz vpogledov občinstva za več možnost
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Profili vpogledov občinstva morajo biti shranjeni v računu Azure Data Lake Storage, ki ga imate, ali v jezeru podatkov, s katerim upravlja storitev [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
+- Profili vpogledov občinstva morajo biti shranjeni v računu Azure Data Lake Storage, ki ga imate, ali v jezeru podatkov, s katerim upravljate storitev [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
 - Vaše okolje vpogledov v občinstvo mora imeti povezano okolje storitve Dataverse. Če to okolje prav tako uporablja storitev Dataverse za shranjevanje podatkov, preverite, da ste izbrali možnost **Omogočite skupno rabo podatkov** v vpogledih v občinstvo. Za več informacij glejte [Ustvarjanje in konfiguriranje plačljivega okolja v vpogledih v občinstvo](../audience-insights/get-started-paid.md).
 - Potrebujete skrbniška dovoljenja za okolja vpogledov v interakcije in vpogledov občinstva.
 - Povezana okolja morajo biti v isti geografski regiji.
@@ -54,6 +54,9 @@ Povezavo okolja lahko ustvarite tako, da posodobite nastavitve v razdelku **Skrb
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Omogočite atribute in segmente poenotenih profilov vpogledov občinstva
 
 Ko povežete okolja, lahko izberete izbirne funkcije za povezana okolja. Te funkcije omogočajo poenotene atribute profila in segmente iz vpogledov občinstva za interaktivno analizo podatkov o strankah.
+
+> [!IMPORTANT]
+> Če želite, da se segmenti vpogledov občinstva prikažejo v vpogledih v interakcije, morate najprej [zagnati združevanje in postopke iz strežnika](../audience-insights/merge-entities.md). Postopki iz strežnika so pomembni, ker ustvarjajo edinstveno tabelo, ki pripravlja segmente vpogledov občinstva za skupno rabo z vpogledi v interakcije. (Če je načrtovana osvežitev sistema, se bodo samodejno vključili postopki iz strežnika.)
 
 **Za analizo spletnih podatkov v vpogledih v interakcije**
 

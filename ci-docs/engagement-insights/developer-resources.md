@@ -4,27 +4,27 @@ description: Poiščite informacije o organizaciji kompletov za razvoj programsk
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036303"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558766"
 ---
 # <a name="developer-resources-overview"></a>Pregled virov za razvijalce
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Ta članek navaja vse razpoložljive izrezke kode in vzorce za hiter začetek uporabe. Pridobite kodo za pošiljatelja dogodka za svojo platformo in sledite vadnicam. 
+Ta članek navaja vse razpoložljive izrezke in vzorce kod kompleta za razvoj programske opreme (SDK), s katerimi lahko razvijalci podatke dajo v skupno rabo z aplikacijo Dynamics 365 Customer Insights. Pridobite kodo za dogodke, značilne za vašo platformo, tako, da sledite vadnicam.
 
 ## <a name="capture-events-from-websites"></a>Zajemite dogodke s spletnih mest
 
-- [Kako dodati izrezek kode na spletno mesto](instrument-website.md)
+- [Instrumentiranje spletnega mesta](instrument-website.md)
 - [Vzorec za spletne storitve SDK](websdk-sample.md)
 - [Napredna instrumentacija s spletnim kompletom za razvoj programske opreme](advanced-SDK-implementation.md)
 

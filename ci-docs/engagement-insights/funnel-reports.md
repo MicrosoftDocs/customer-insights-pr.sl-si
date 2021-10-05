@@ -4,17 +4,17 @@ description: Kako uporabiti poročila o lijakih, da bi razumeli, kako občinstvo
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
+ms.date: 09/21/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
+ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498662"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558962"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Ustvarjanje in upravljanje poročil o lijakih
 
@@ -26,7 +26,7 @@ V poročilo o lijakih so zbrane informacije o korakih, ki nastopijo med dejavnos
 
 Če želite ustvariti poročilo o lijaku, določite korake, ki jih želite vključiti, in aktivnost za vsak korak. Dejavnost je [dogodek](glossary.md), ki predstavlja vedenje uporabnika. Poročilo o lijaku prikazuje število uporabnikov, ki so zaključili vsak določen korak. 
 
-1. Pojdi na **Lijaki** in izberite **+ Nov lijak** za začetek poročila o lijaku.
+1. Odprite razdelek **Lijaki** in izberite **+ Nov lijak** za začetek poročila o lijaku.
 
 1. Pri možnosti **Urejevalnik lijakov** pod možnostjo **Koraki** izberite **+ Dodaj korak.** 
 
@@ -34,7 +34,7 @@ V poročilo o lijakih so zbrane informacije o korakih, ki nastopijo med dejavnos
 
    :::image type="content" source="media/new-funnel-report.png" alt-text="Novo poročilo o lijaku.":::
 
-1. Izberite **Dejavnost**. Dejavnost beleži, ko si uporabnik ogleda stran (dejavnost **ogleda**) ali ima interakcijo z vsebino (dogodek **Dejanje**).
+1. Izberite **Dejavnost**. Dejavnost beleži, ko si uporabnik ogleda stran (dejavnost **Ogled**) ali ima interakcijo z vsebino (dejavnost **Dejanje**).
 
 1. Uporabite **Merila koraka**, da določite razsežnost dejavnosti. [Razsežnosti](dimensions.md) so atributi, ki lahko opisujejo, filtrirajo ali združujejo podatke.
 
@@ -63,7 +63,7 @@ Ta lijak vam omogoča, da vidite število uporabnikov, ki so promocijsko kodo po
 
 Poročila o lijaku vam omogočajo, da določite omejitev časa, potrebnega za dokončanje lijaka. Čas za dokončanje lijaka lahko na primer nastavite na štiri dni. Ta nastavitev bo štela samo uspešne prijave na naročnino, ki so bile opravljene v štirih dneh od obiska domače strani s strani uporabnika.
 
-1. Pojdi na **Lijaki**, da odprete **Knjižnica lijakov**.
+1. Odprite razdelek **Lijaki**, da odprete **Knjižnica lijakov**.
 
 1. Izberite ime, da odprete poročilo. 
 
@@ -80,7 +80,7 @@ Poročila o lijaku vam omogočajo, da določite omejitev časa, potrebnega za do
 
 ## <a name="cross-channel-funnel-reports"></a>Poročila o lijakih v različnih kanalih 
 
-Vpogledi v interakcije omogočajo zbiranje podatkov o vedenju strank v vaši mobilni aplikaciji. Ko ste svojo mobilno aplikacijo opremili z vpogledi v interakcije kompleta za razvoj programske opreme za [Android ](get-started-android.md) ali [kompleta za razvoj programske opreme za iOS](get-started-ios.md), lahko pripravite poročila o lijakih v različnih kanalih. 
+Vpogledi v interakcije omogočajo zbiranje podatkov o vedenju strank v vaši mobilni aplikaciji. Ko ste svojo mobilno aplikacijo opremili z vpogledi v interakcije [kompleta za razvoj programske opreme za Android](get-started-android.md) ali [kompleta za razvoj programske opreme za iOS](get-started-ios.md), lahko pripravite poročila o lijakih v različnih kanalih. 
 
 ### <a name="create-a-cross-channel-funnel-report"></a>Pripravite poročila o lijakih v različnih kanalih 
 
@@ -98,7 +98,7 @@ Poročila o lijakih lahko pregledate, da analizirate podatke, spremljate uspešn
 
 ### <a name="view-funnel-reports"></a>Ogled poročil o lijakih
 
-1. Pojdi na **Lijaki**, da odprete **Knjižnica lijakov**.
+1. Odprite razdelek **Lijaki**, da odprete **Knjižnica lijakov**.
 1. Izberite ime, da odprete poročilo.    
 
 ### <a name="see-the-data-collected-for-a-report"></a>Oglejte si zbrane podatke za poročilo   
@@ -111,11 +111,11 @@ Za ogled informacij o fazi
 
 ### <a name="change-the-date-range-for-the-funnel-report"></a>Spremenite časovno obdobje za poročilo o lijaku
 
-1. Pojdi na **Lijaki**, da odprete **Knjižnica lijakov**.
+1. Odprite razdelek **Lijaki**, da odprete **Knjižnica lijakov**.
 
 1. Izberite ime, da odprete poročilo.
 
-1. Odprite **časovno obdobje** in s seznama izberite novo časovno obdobje oz. **Fiksno časovno obdobje**, da določite časovno obdobje.
+1. Odprite razdelek **časovno obdobje** in s seznama izberite novo časovno obdobje oz. **Fiksno časovno obdobje**, da določite časovno obdobje.
 
 ## <a name="edit-or-delete-funnel-reports"></a>Urejanje ali brisanje poročil o lijakih
 
@@ -123,13 +123,13 @@ Lahko spremenite ime poročila o lijakih, ga izbrišete ali spremenite korake v 
 
 ### <a name="rename-or-delete-a-funnel-report"></a>Preimenovanje ali brisanje poročila o lijaku
 
-1. Pojdi na **Lijaki**, da odprete **Knjižnica lijakov**. 
+1. Odprite razdelek **Lijaki**, da odprete **Knjižnica lijakov**. 
 
 1. Izberite **Več** poleg poročila, ki ga želite spremeniti, in izberite **Uredi ime** ali **Izbriši**.
 
 ### <a name="edit-a-funnel-step"></a>Urejanje koraka pri lijaku  
 
-1. Pojdi na **Lijaki**, da odprete **Knjižnica lijakov**. 
+1. Odprite razdelek **Lijaki**, da odprete **Knjižnica lijakov**. 
 
 1. Izberite ime, da odprete poročilo.
 
@@ -143,7 +143,7 @@ Lahko spremenite ime poročila o lijakih, ga izbrišete ali spremenite korake v 
 
 ### <a name="reorder-a-funnel-step"></a>Spreminjanje vrstnega reda koraka pri lijaku
 
-1. Pojdi na **Lijaki**, da odprete **Knjižnica lijakov**. 
+1. Odprite razdelek **Lijaki**, da odprete **Knjižnica lijakov**. 
 
 1. Izberite ime, da odprete poročilo.
 
@@ -153,7 +153,7 @@ Lahko spremenite ime poročila o lijakih, ga izbrišete ali spremenite korake v 
 
 ### <a name="delete-a-funnel-step"></a>Brisanje koraka pri lijaku
 
-1. Pojdi na **Lijaki**, da odprete **Knjižnica lijakov**. 
+1. Odprite **Lijaki**, da odprete **Knjižnica lijakov**. 
 
 1. Izberite ime, da odprete poročilo.
 
@@ -163,13 +163,23 @@ Lahko spremenite ime poročila o lijakih, ga izbrišete ali spremenite korake v 
 
 Vpogledi v interakcije zdaj strankam ponujajo vpoglede v lijake. S vpogledi v lijake pridobite podrobnejši vpogled v vedenje strank glede korakov v vašem poročilu o lijaku. Ko ustvarite in shranite novo poročilo o lijaku, se za vaše poročilo samodejno ustvarijo vpogledi v lijake. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Vpogledi v lijake.":::
+
+> [!NOTE]
+> Vpoglede v lijake je mogoče ustvariti samo za korake za lijak, ki **ne** vključujejo razsežnosti po meri. Če želite ustvariti vpoglede v lijake za vse korake v svojem lijaku, uporabite pripravljene razsežnosti vpogledov v interakcije, da ustvarite korake za lijak. 
+
 Vpoglede v lijake si lahko ogledate v naslednjih kategorijah, tako na glavni ravni kot v korakih: 
 
- - Stopnja konverzije 
+ - Stopnja konverzije
+ -    Stopnja konverzije med možnostma »Dokončanje nakupa« in »Nakup« je 22 %.
  - Čas prehoda 
+ -    Povprečen čas prehoda med možnostma »Voziček« in »Dokončanje nakupa« je 23 minut. 
  - Čas zaključka 
+ -    Povprečni čas, ki ga stranke porabijo za dokončanje lijaka, je 47 minut. 
 
 Uporabite te vpoglede za podrobnejše raziskovanje vedenja strank ter boljše razumevanje točke oddaje in pretvorb za poročilo o lijaku. 
+
+Če želite primerjati vpoglede v različnih korakih, izberite **Prikaži razčlenitev korakov** ali **Primerjaj z drugimi koraki** s kartic vpogledov. Te bodo prikazale palični grafikon, ki primerja meritve za vsak korak lijaka. 
 
 Vpogledi v lijake se vnovično izračunajo vsakih 24 ur ali ko izberete **Shrani** in shranite svoje poročilo o lijaku. 
 
