@@ -1,7 +1,7 @@
 ---
 title: Segmenti v vpogledih v občinstvo
 description: Pregled segmentov ter napotki, kako jih ustvariti in upravljati.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036393"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617395"
 ---
 # <a name="segments-overview"></a>Pregled segmentov
 
@@ -26,11 +26,19 @@ Profili strank, ki se ujemajo s filtri definicije segmenta, se imenujejo *člani
 
 Nov segment lahko ustvarite na več načinov: 
 
-- Kompleksni segment z graditeljem segmentov: [Prazen segment](segment-builder.md#create-a-new-segment)
-- Preprosti segmenti z enim operatorjem: [Hitri segment](segment-builder.md#quick-segments)
-- Možnost na podlagi umetne inteligence za iskanje podobnih strank: [Podobne stranke](find-similar-customer-segments.md)
-- Predlogi z umetno inteligenco, ki temeljijo na merah ali atributih: [Predlagani segmenti za izboljšanje mer](suggested-segments.md)
-- Predlogi na podlagi dejavnosti: [Predlagani segmenti na podlagi dejavnosti strank](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Posamezne stranke (B2C)](#tab/b2c)
+
+- Zapleteni segment z graditeljem segmentov: [Zgradimo svojega](segment-builder.md#create-a-new-segment) 
+- Preprosti segmenti z enim operatorjem: [Hitri segment](segment-builder.md#quick-segments) 
+- Možnost na podlagi umetne inteligence za iskanje podobnih strank: [Podobne stranke](find-similar-customer-segments.md) 
+- Predlogi z umetno inteligenco, ki temeljijo na merah ali atributih: [Predlagani segmenti za izboljšanje mer](suggested-segments.md) 
+- Predlogi na podlagi dejavnosti: [Predlagani segmenti na podlagi dejavnosti strank](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+
+- Zapleteni segment z graditeljem segmentov: [Zgradimo svojega](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Upravljanje obstoječih segmentov
 
@@ -70,9 +78,9 @@ Segment lahko izvozite s strani s segmenti ali s [strani z izvozi](export-destin
 
 1. Na spustnem seznamu izberite možnost **Upravljanje izvozov**.
 
-1. Odpre se stran **Izvozi (predogledna različica) za segment**. Ogledate si lahko vse konfigurirane izvoze, razvrščene po izvozih, ki trenutni segment vsebujejo ali ne.
+1. Odpre se stran **Izvozi (predogledna različica) za segment**. Ogledate si lahko vse konfigurirane izvoze, razvrščene glede na to, ali vsebujejo trenutni segment ali ne.
 
-   1. Če želite izbrani segment dodati izvozu, izberite izvoz na seznamu in nato **Dodaj segment**.
+   1. Če želite izbranemu segmentu dodati izvoz, izberite **Uredi** za ta izvoz, da izberete ustrezen segment, nato pa ga shranite. V okoljih za posamezne stranke lahko na seznamu izberete izvoz in nato **Dodaj segment**, da bi dosegli enak rezultat.
 
    1. Če želite ustvariti nov izvoz z izbranim segmentom, izberite **Dodaj izvoz**. Za več informacij o ustvarjanju izvozov glejte [Nastavitev novega izvoza](export-destinations.md#set-up-a-new-export).
 

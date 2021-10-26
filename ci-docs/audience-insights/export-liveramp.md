@@ -1,7 +1,7 @@
 ---
 title: 'Povezovalnik LiveRamp '
 description: Naučite se, kako konfigurirati povezavo in izvažati v LiveRamp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7940db3efacad62ba16099849b3e3ca00d2a5cc1ed31e15a34209c0797e6ae13
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9a0a88fb58897e4d279c181f4cdb4f6c852da60
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035665"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618955"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Izvoz segmentov v LiveRamp&reg; (predogledna različica)
 
@@ -58,7 +58,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
    > [!div class="mx-imgBorder"]
    > ![Povezovalnik LiveRamp s preslikavo atributov.](media/export-liveramp-segments.png "Povezovalnik LiveRamp s preslikavo atributov")
 
-1. Preslikajte pripadajoče atribute iz poenotene entitete stranke za izbrani identifikator ključa.
+1. Preslikajte ustrezne atribute iz vaše entiteta *Stranka* za izbrani identifikator ključa.
 
 1. Izberite **Dodajanje atributa** za preslikavo več atributov za pošiljanje v LiveRamp.
 

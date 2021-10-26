@@ -4,17 +4,17 @@ description: Ustvarjanje, preimenovanje in brisanje delovnih prostorov in okolij
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486055"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645466"
 ---
 # <a name="manage-environments-and-workspaces"></a>Upravljanje okolij in delovnih prostorov
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486055"
 
 ## <a name="overview"></a>Pregled
 
-Delovni prostor je prostor za shranjevanje ter upravljanje dogodkov in poročil. Tam si lahko v realnem času ogledate dejavnost uporabnikov. Ko ustvarite delovni prostor, izberete vrsto podatkov, ki jo boste poslali delovnemu prostoru. Trenutno so podprti spletni podatki in mobilne aplikacije.
+Ta tema predstavlja, kako upravljati delovne prostore in okolja, ko so že ustvarjena. 
 
-Okolje je prostor, kjer upravljate s svojimi delovnimi prostori in povezavami. Kako uporabljate okolja, je odvisno od vaše organizacije in primera uporabe. Omogoča na primer ustvarjanje:
+- *Delovni prostor* je prostor za shranjevanje ter upravljanje dogodkov in poročil. Tam si lahko v realnem času ogledate dejavnost uporabnikov. Ko ustvarite delovni prostor, izberete vrsto podatkov, ki jo boste poslali delovnemu prostoru. Trenutno so podprti spletni podatki in mobilne aplikacije. Za več informacij glejte razdelek [Ustvarjanje delovnega prostora in dodajanje članov](create-workspace.md).
 
--   enega okolja,
--   ločenih okolij za preskušanje in proizvodnjo,
--   ločenih okolij za določene skupine ali oddelke v vaši organizaciji, ki vsebujejo ustrezne dogodke za vsak občinstvo,
--   ločenih okolij za različne globalne podružnice vašega podjetja,
--   povezav do zmogljivosti vpogledov v občinstvo Customer Insights.
+- *Okolje* je prostor, kjer upravljate s svojimi delovnimi prostori in povezavami. Za več informacij glejte [Ustvarjanje novega okolja](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Izberite okolje in ustvarite delovni prostor 
-
-Vsak delovni prostor mora biti v okolju. Ko ustvarite delovni prostor, lahko izberete že obstoječe okolje ali ustvarite novo. Nato lahko dodate člane delovnega prostora in začnete zbirati podatke.
-
-**Ustvarjanje prvega delovnega prostora**
-
-1. Pri vpogledih v interakcije izberite **Novo** iz preklopnika delovnega prostora. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Izbirnik delovnega prostora na strani Customer Insights.":::
-
-1. S seznama izberite okolje ali izberite **Ustvari novo okolje**.
-
-1. Vnesite ime in shranite **ime delovnega prostora**. 
-
-1. Izberite vrsto okolja, ki ga želite ustvariti, odvisno od tega, ali želite dogajanje oceniti na spletnem mestu ali v mobilni aplikaciji. 
-
-1. Lahko dodate člane in jim dodelite raven dovoljenj s seznama **Vloga**. Nato izberite **Končaj**, da ustvarite delovni prostor oz. **Naprej** za namestitev kode. 
-
-1. Namestite izrezek kode, da začnete prejemati podatke, in nato izberite **Končano**. 
-
-## <a name="manage-a-workspace"></a>Upravljanje delovnega prostora
+## <a name="manage-an-existing-workspace"></a>Upravljanje obstoječega delovnega prostora
 
 V okolju lahko hkrati vzdržujete več delovnih prostorov. Od vaše [vloge](user-roles.md) je odvisno, na kakšen način lahko v njih opravljate delo. 
 
  - Delovni prostor lahko upravljate le kot skrbnik okolja ali skrbnik delovnega prostora.
  - Če ste skrbnik delovnega prostora, lahko preimenujete obstoječe delovne prostore ali jih izbrišete. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Središče skrbnika delovnega prostora":::
 
 ### <a name="edit-a-workspace-name"></a>Urejanje imena delovnega prostora
 
@@ -75,7 +53,7 @@ V okolju lahko hkrati vzdržujete več delovnih prostorov. Od vaše [vloge](user
 
 1. Izberite **Izbriši delovni prostor**. 
 
-1. V pogovornemu oknu **Brisanje delovnega prostora** vnesite **POTRDITEV BRISANJA**. 
+1. V pogovornem oknu **Brisanje delovnega prostora**, vnesite napis **POTRDI BRISANJE** z velikimi tiskanimi črkami. 
 
 1. Izberite **Izbriši** za trajno brisanje delovnega prostora.
 
@@ -87,27 +65,11 @@ V okolju lahko hkrati vzdržujete več delovnih prostorov. Od vaše [vloge](user
 
 1. Izberite **Dodaj člane**, da jih dodate v svoj delovni prostor.
 
-## <a name="manage-an-environment"></a>Upravljanje okolja
+## <a name="manage-an-existing-environment"></a>Upravljanje obstoječega okolja
 
 Kot skrbnik okolja lahko do okolja dostopate v levem podoknu za krmarjenje. Konfigurirate lahko nastavitve okolja, druge skrbnike okolja in delovne prostore. Izberite zavihke za premikanje med različnimi območji v skrbniškem centru.
 
-:::image type="content" source="media/New-environment.png" alt-text="Skrbniško središče za okolje.":::
-
-### <a name="create-an-environment"></a>Ustvarjanje okolja
-
-1. V izbirniku delovnega prostora izberite **+Novo**.
-
-1. V vodeni izkušnji odprite spustni meni **Okolje** in izberite **Ustvari novo okolje**. 
-
-1. Navedite **Ime okolja**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Začnite z vodeno izkušnjo, da navedete podrobnosti o okolju.":::
-
-1. Izberite **Regija** in izberite **Naprej**. 
-
-1. Navedite ime delovnega prostora in izberite, katero vrsto delovnega prostora želite ustvariti. 
-
-1.  Po želji dodajte člane in kopirajte izrezek kode, da dokončate postopek ustvarjanja.
+:::image type="content" source="media/environment-edit.png" alt-text="Skrbniško središče za okolje.":::
 
 ### <a name="rename-an-environment"></a>Preimenovanje okolja
 
@@ -131,7 +93,7 @@ Skrbniki okolja lahko izbrišejo okolja. Preden lahko izbrišete okolje, morate 
 
 1. Izberite **Izbriši okolje**. 
 
-1. V pogovornemu oknu **Brisanje delovnega prostora** vnesite **POTRDITEV BRISANJA**. 
+1. V pogovornem oknu **Brisanje delovnega prostora**, vnesite napis **POTRDI BRISANJE** z velikimi tiskanimi črkami. 
 
 1. Izberite **Izbriši** za trajen izbris okolja.
 

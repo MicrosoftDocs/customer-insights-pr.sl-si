@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov iz Customer Insights v storitev Autopilot
 description: Naučite se, kako konfigurirati povezavo in izvažati v storitev Autopilot.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9ada8a6f4e4546990a1360567b400033050119c4c4c9a3df1af8fcaab75e157
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032045"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618449"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Izvoz segmentov v Autopilot (predogledna različica)
 
@@ -28,10 +28,10 @@ Izvozite segmente poenotenih profilov strank v storitev Autopilot in jih uporabi
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- V storitev Autopilot lahko izvozite do sto tisoč profilov.
+- V storitev Autopilot lahko izvozite skupaj do 100.000 profilov strank.
 - Izvoz v storitev Autopilot je omejen na segmente.
-- Izvoz do sto tisoč profilov v storitev Autopilot lahko traja do nekaj ur. 
-- Število profilov, ki jih lahko izvozite v storitev Autopilot, je odvisno in omejeno glede na vašo pogodbo za Autopilot.
+- Izvoz do 100.000 profilov strank v storitev Autopilot lahko traja do nekaj ur. 
+- Število profilov strank, ki jih lahko izvozite v storitev Autopilot, je odvisno in omejeno glede na vašo pogodbo s storitvijo Autopilot.
 
 ## <a name="set-up-connection-to-autopilot"></a>Nastavitev povezave s storitvijo Autopilot
 
@@ -43,7 +43,7 @@ Izvozite segmente poenotenih profilov strank v storitev Autopilot in jih uporabi
 
 1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-3. Vpišite [ključ API-ja za storitev Autopilot](https://autopilot.docs.apiary.io/#).
+1. Vpišite [ključ API-ja za storitev Autopilot](https://autopilot.docs.apiary.io/#).
 
 1. Izberite potrditveno polje **Strinjam se**, da potrdite **Zasebnost in skladnost podatkov**.
 
@@ -63,7 +63,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. V polju **Povezava za izvoz** izberite povezavo v razdelku Autopilot. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
 
-3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. Ponovite iste korake za druga neobvezna polja, kot so **ime**, **priimek**.
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. Ponovite iste korake za druga neobvezna polja, kot so **ime**, **priimek**.
 
 1. Izberite segmente, ki jih želite izvoziti. Močno **priporočamo, da v storitev Autopilot skupno ne izvozite več kot sto tisoč profilov strank**. 
 

@@ -1,7 +1,7 @@
 ---
 title: Dejavnosti stranke
 description: Določitev dejavnosti strank in njihov ogled v časovnici v profilih strank.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494431"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617989"
 ---
 # <a name="customer-activities"></a>Dejavnosti stranke
 
@@ -24,8 +24,7 @@ Združite dejavnosti strank iz [različnih virov podatkov](data-sources.md) v re
 
 Vaši viri podatkov lahko vključujejo entitete s transakcijskimi podatki in podatki o dejavnosti iz več virov podatkov. Določite te entitete in izberite časovnice, ki si jih želite ogledati na časovnici stranke. Izberite entiteto, ki vključuje vašo ciljno dejavnost ali dejavnosti.
 
-> [!NOTE]
-> Entiteta mora imeti vsaj en atribut vrste **Datum**, da je lahko vključena na časovnico stranke, vi pa ne morete dodajati entitet brez polja **Datum**. Ukaz **Dodaj dejavnost** je onemogočen, če take entitete ni mogoče najti.
+Entiteta mora imeti vsaj en atribut vrste **Datum**, da je lahko vključena na časovnico stranke, vi pa ne morete dodajati entitet brez polja **Datum**. Ukaz **Dodaj dejavnost** je onemogočen, če take entitete ni mogoče najti.
 
 1. Pri vpogledih v občinstvo izberite **Podatki** > **Dejavnosti**.
 
@@ -41,13 +40,16 @@ Vaši viri podatkov lahko vključujejo entitete s transakcijskimi podatki in pod
 
 1. Izberite možnost **Naprej** za pomik na naslednji korak.
 
-1. V koraku **Odnos** konfigurirajte podrobnosti za povezavo podatkov o dejavnosti z ustrezno stranko. V koraku so upodobljene povezave med entitetami.  
+1. V koraku **Odnos** konfigurirajte podrobnosti za povezavo vaših podatkov o dejavnosti z ustreznimi zapisi stranke. V koraku so upodobljene povezave med entitetami.  
 
    - **Prvič**: tuje polje v entiteti dejavnosti, ki bo uporabljeno za vzpostavitev odnosa z drugo entiteto.
    - **Drugič**: ustrezna izvorna entiteta stranke, s katero bo entiteta dejavnosti v odnosu. Nanašate se lahko samo na izvorne entitete strank, ki se uporabljajo v postopku poenotenja podatkov.
    - **Tretjič**: če odnos med to entiteto dejavnosti in izbrano izvorno entiteto stranke že obstaja, bo ime odnosa v načinu samo za branje. Če takšen odnos ni na voljo, bo na podlagi imena, ki ste ga navedli v tem polju, ustvarjen nov.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Določite odnos entitete.":::
+
+   > [!TIP]
+   > V okoljih B2B lahko izbirate med entitetami računa in drugimi entitetami. Če izberete entiteto računa, se pot odnosa samodejno nastavi. Za druge entitete morate določiti pot odnosa do ene ali več vmesnih entitet, dokler ne dosežete entitete računa.
 
 1. Izberite možnost **Naprej** za pomik na naslednji korak. 
 
@@ -95,5 +97,34 @@ Ko izberete dejavnost, so na voljo naslednja dejanja.
 - **Preimenujte**: odpre pogovorno okno, kamor lahko za izbrano dejavnost vnesete drugačno poimenovanje. Če želite uporabiti spremembe, izberite **Shrani**.
 
 - **Izbriši**: odpre pogovorno okno za potrditev brisanja izbrane dejavnosti. Izbrišete lahko tudi več dejavnosti hkrati, in sicer tako, da izberete dejavnosti ter nato izberete ikono za brisanje. Izberite možnost **Izbriši**, da pordite izbris.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Ogled časovnic dejavnosti v profilih strank
+
+Ko konfigurirate dejavnosti strank, izberite **Prikaz na časovnici dejavnosti** v konfiguraciji dejavnosti poiščite vse dejavnosti vaših strank na njihovem profilu stranke.
+
+Če želite odpreti časovnico za stranko, odprite razdelek **Stranke** in izberite profil stranke, ki si ga želite ogledati.
+
+Če je stranka sodelovala pri dejavnosti, ki ste jo konfigurirali, jo boste našli v razdelku **Časovnica dejavnosti**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Oglejte si konfigurirane dejavnosti v profilih strank.":::
+
+Na časovnici dejavnosti lahko filtrirate dejavnosti na več načinov:
+
+- Izberete lahko eno ali več ikon dejavnosti, da izboljšate svoje rezultate in vključite samo izbrane vrste.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrirajte dejavnosti po vrstah z uporabo ikon.":::
+
+- Izberete lahko **filter**, da odprete ploščo filtrov in nastavite filtre časovnice.
+
+   1. Filtrirate lahko po *vrsti dejavnosti* in *datumu*
+   1. Izberite možnost **Uporabi**, da uporabite filtre na časovnici dejavnosti.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="S ploščo filtrov konfigurirajte pogoje filtra.":::
+
+Če želite odstraniti filtre, izberite možnost **x** poleg vsakega filtra, uporabljenega na časovnici, ali izberite možnost **Počisti filtre**.
+
+
+> [!NOTE]
+> Filtri dejavnosti se odstranijo, ko zapustite profil stranke. Uporabiti jih morate vsakič, ko odprete profil stranke.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558992"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617943"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Izvoz segmentov v Google Ads (predogledna različica)
 
@@ -35,9 +35,9 @@ Segmente poenotenih profilov strank izvozite na seznam občinstva Google Ads in 
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Do 1 milijon profilov na izvoz v Google Ads.
+- Do 1 milijon profilov strank na izvoz v storitev Google Ads.
 - Izvoz v Google Ads je omejen na segmente.
-- Izvoz segmentov s skupno 1 milijonom profilov lahko traja do 5 minut zaradi omejitev na strani ponudnika. 
+- Izvoz segmentov s skupno 1 milijonom profilov strank lahko traja do 5 minut zaradi omejitev na strani ponudnika. 
 - Ujemanje v storitvi Google Ads lahko traja do 48 ur.
 
 ## <a name="set-up-connection-to-google-ads"></a>Nastavitev povezave s storitvijo Google Ads
@@ -74,7 +74,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Vnesite **[ID občinstva za Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** in izberite **Poveži**, da inicializirate povezavo s storitvijo Google Ads.
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke.
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke.
 
 1. Izberite segmente, ki jih želite izvoziti. V Google Ads lahko izvozite do 1 milijon profilov strank.
 

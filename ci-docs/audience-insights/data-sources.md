@@ -10,12 +10,12 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 75d597158233f75f0eb5f94389f9dba199d81719f2bbe4e5cc58d2a3afc7dcf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: de31e1f25c08d0bcb5341c5f465b1999de48acf3
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032870"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645375"
 ---
 # <a name="data-sources-overview"></a>Pregled virov podatkov
 
@@ -35,7 +35,7 @@ Vir podatkov lahko dodate na tri glavne načine:
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Dodajanje podatkov iz virov podatkov na mestu uporabe
 
-Uvažanje podatkov iz virov podatkov na mestu uporabe v vpogledih občinstva je podprto na podlagi podatkovnih tokov storitve Microsoft Power Platform. Podatkovne tokove lahko omogočite v storitvi Customer Insights, in sicer tako, da med nastavitvijo okolja [navedete URL povezave za okolje Microsoft Dataverse](get-started-paid.md).
+Uvažanje podatkov iz virov podatkov na mestu uporabe v vpogledih občinstva je podprto na podlagi podatkovnih tokov storitve Microsoft Power Platform. Podatkovne tokove lahko omogočite v storitvi Customer Insights, in sicer tako, da med nastavitvijo okolja [navedete URL povezave za okolje Microsoft Dataverse](create-environment.md).
 
 Za vire podatkov, ustvarjene ob vzpostavitvi povezave med okoljem storitve Dataverse in storitvijo Customer Insights, se privzeto uporabljajo [podatkovni tokovi iz storitve Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Za podatkovne tokove je prek prehoda za podatke podprta povezljivost na mestu uporabe. Odstranite vire podatkov, ki so obstajali pred vzpostavitvijo povezave z okoljem Dataverse za [uporabo prehodov za podatke na mestu uporabe](/data-integration/gateway/service-gateway-app), in jih znova ustvarite.
 

@@ -1,7 +1,7 @@
 ---
 title: Ustvarjanje in upravljanje okolij
 description: Naučite se, kako se prijaviti za storitev in kako upravljati okolja.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034197"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645146"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
 
@@ -26,7 +26,7 @@ V zgornjem desnem kotu strani izberite kontrolnik **Okolje**, če želite spreme
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Posnetek zaslona kontrolnika za preklapljanje med okolji.":::
 
-Če ste skrbnik, lahko [ustvarite](get-started-paid.md) in upravljate okolja.
+Če ste skrbnik, lahko [ustvarite](create-environment.md) in upravljate okolja.
 
 ## <a name="edit-an-existing-environment"></a>Urejanje obstoječega okolja
 
@@ -36,23 +36,9 @@ Uredite lahko določene podatke obstoječih okolij.
 
 2.  Izberite ikono za **urejanje**.
 
-3. V polju **Uredi okolje** lahko posodobite **prikazno ime** okolja, vendar pa ne morete spremeniti **regije** ali **tipa**.
+3. V polju **Urejanje okolja**, lahko posodobite nastavitve okolja.
 
-4. Če je okolje konfigurirano za shranjevanje podatkov v shrambi Azure Data Lake Storage, lahko posodobite **Ključ računa**. Vendar pa ne morete spremeniti možnosti **Ime računa** ali imena razdelka **Vsebnik**.
-
-5. Po želji lahko povezavo, ki temelji na ključu računa posodobite ter zamenjate s povezavo, ki temelji na virih ali na naročnini. Po nadgradnji ne morete povrniti ključa kupca po posodobitvi. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Ob posodobitvi povezave ne morete spremeniti podatkov **vsebnika**.
-
-6. Izbirno lahko zagotovite URL okolja Microsoft Dataverse pod možnostjo **Konfiguriranje skupne rabe podatkov s storitvijo Microsoft Dataverse in omogočanje dodatnih zmogljivosti**. Te zmogljivosti vključujejo skupno rabo podatkov z aplikacijami in rešitvami na podlagi storitve Microsoft Dataverse, uvoz podatkov iz podatkovnih virov na mestu uporabe ali uporabo [napovedi](predictions.md). Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Microsoft Dataverse Managed Data Lake.
-
-   > [!NOTE]
-   > - Skupna raba podatkov s storitvijo Microsoft Dataverse Managed Data Lake trenutno ni podprta, če vse podatke shranjujete v shrambi Azure Data Lake Storage.
-   > - [Predvidevanje manjkajočih vrednosti v entiteti](predictions.md) in vdelana poročila PowerBI v vpogledih v občinstvo (če je omogočeno v vašem okolju) trenutno niso podprta, če omogočite skupno rabo podatkov s podatkovnim jezerom, ki ga upravlja Microsoft Dataverse.
-
-   Ko omogočite izmenjavo podatkov z okoljem Microsoft Dataverse, se bo zagnala popolna osvežitev vaših virov podatkov in drugih postopkov. Če se postopki trenutno izvajajo, ne boste videli možnosti za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse. Počakajte, da se ti postopki končajo ali jih prekličete, da omogočite izmenjavo podatkov. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse.":::
-   
-   Ko zaženete postopke, na primer uvoz podatkov ali ustvarjanje segmenta, bodo v zgoraj navedenem računu za shranjevanje ustvarjene ustrezne mape. Podatkovne datoteke in datoteke model.json bodo ustvarjene in dodane v zadevne podmape, odvisno od postopka, ki ga izvajate.
+Za več informacij o nastavitvah okolja glejte [Ustvarjanje novega okolja](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okolja
 

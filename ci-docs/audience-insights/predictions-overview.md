@@ -1,7 +1,7 @@
 ---
 title: Pregled podprtih scenarijev predvidevanja
 description: Scenariji in možnosti predvidevanja, ki jih zajema aplikacija Dynamics 365 Customer Insights.
-ms.date: 05/18/2021
+ms.date: 09/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036029"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618863"
 ---
 # <a name="predictions-overview"></a>Pregled predvidevanj
 
@@ -24,10 +24,20 @@ Dynamics 365 Customer Insights vsebuje različne možnosti, ki uporabljajo AI in
 ## <a name="out-of-box-models"></a>Vnaprej pripravljeni modeli
 
 Najlažji način za začetek napovedovanja podatkov predstavljajo vnaprej določeni modeli, ki jih pogosto imenujemo vnaprej pripravljeni modeli. Za hitro ustvarjanje vpogledov potrebujejo le določene podatke in strukturo. Trenutno so na voljo naslednji modeli: 
-- [Vrednost življenjske dobe stranke](predict-customer-lifetime-value.md): napoveduje potencialni prihodek stranke v celotni interakciji s podjetjem. 
+
+# <a name="individual-customers-b2c"></a>[Posamezne stranke (B2C)](#tab/b2c)
+
+- [Vrednost življenjske dobe stranke](predict-customer-lifetime-value.md): napoveduje potencialni prihodek stranke v celotni interakciji s podjetjem.
 - [Priporočilo izdelka](predict-product-recommendation.md): predlaga nabore napovednih priporočil za izdelke, ki temeljijo na nakupnem vedenju in strankah s podobnimi vzorci nakupovanja.
 - [Izguba naročnin](predict-subscription-churn.md): predvidi, ali za stranko obstaja tveganje, če ne bo več uporabljala naročniških izdelkov ali storitev vašega podjetja.
 - [Izguba transakcij](predict-transactional-churn.md): predvidi, ali stranka ne bo več kupovala vaših izdelkov ali storitev v določenem časovnem okviru.
+
+# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+
+- [Izguba transakcij](predict-transactional-churn.md): predvidi, ali stranka ne bo več kupovala vaših izdelkov ali storitev v določenem časovnem okviru.
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Integracija strojnega učenja Azure
 

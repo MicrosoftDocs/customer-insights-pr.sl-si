@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov Customer Insights v Constant Contact
 description: Naučite se, kako konfigurirati povezavo in izvažati v Constant Contact.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 30dfe4d6c2374ba9979827ea70a71c52a1334b45dd3e36ccb1de90fae0c61ad9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031861"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619139"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Izvoz segmentov v Constant Contact (predogledna različica)
 
@@ -28,10 +28,10 @@ Izvozite segmente poenotenih profilov strank v Constant Contact in jih uporabite
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- V Constant Contact lahko izvozite do 1 milijon profilov na izvoz.
+- V storitev Constant Contact lahko izvozite do 1 milijon profilov strank na izvoz.
 - Izvoz v Constant Contact je omejen na segmente.
-- Izvoz do 1 milijona profilov v Constant Contact lahko traja do 1 uro. 
-- Število profilov, ki jih lahko izvozite v Constant Contact, je odvisno in omejeno od vaše pogodbe za Constant Contact.
+- Izvoz do 1 milijon profilov strank v storitev Constant Contact lahko traja do 1 uro. 
+- Število profilov strank, ki jih lahko izvozite v storitev Constant Contact, je odvisno in omejeno glede na vašo pogodbo s storitvijo Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Nastavitev povezave s storitvijo Constant Contact
 
@@ -65,7 +65,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Vnesite [**ID seznama storitve Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Odprite seznam v storitvi Constant Contact, da najdete ID seznama v URL-ju.
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. To je obvezno za izvoz segmentov Constant Contact.
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. To je obvezno za izvoz segmentov Constant Contact.
 
 1. Po želji lahko izvozite ime in priimek kot dodatna polja za ustvarjanje bolj prilagojenih e-poštnih sporočil. Izberite **Dodaj atribut** za preslikavo teh polj.
 

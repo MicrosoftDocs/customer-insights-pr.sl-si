@@ -1,7 +1,7 @@
 ---
 title: Izvozite podatke Customer Insights v Marketo
 description: Naučite se, kako konfigurirati povezavo in izvažati v Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033513"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619185"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Izvoz segmentov v Marketo (predogledna različica)
 
@@ -29,10 +29,10 @@ Izvozite segmente poenotenih profilov strank, da akcije, zagotovite e-poštno tr
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Do 1 milijon profilov na izvoz v Marketo.
+- Do 1 milijon profilov strank na izvoz v storitev Marketo.
 - Izvoz v Marketo je omejen na segmente.
-- Izvoz segmentov s skupno 1 milijonom profilov lahko traja do 3 ure. 
-- Število profilov, ki jih lahko izvozite v Marketo, je odvisno in omejeno glede na vašo pogodbo s podjetjem Marketo.
+- Izvoz segmentov s skupno 1 milijonom profilov strank lahko traja do 3 ure. 
+- Število profilov strank, ki jih lahko izvozite v storitev Marketo, je odvisno in omejeno glede na vašo pogodbo s storitvijo Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Nastavitev povezave s storitvijo Marketo
 
@@ -64,7 +64,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Vnesite svoj **[ID seznama za Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID seznama je zgolj številčna vrednost. Če je na primer vaš ID seznama za Marketo ST12345A7, odstranite znak pred in za številkami ter vnesite `12345`. 
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. 
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. 
 
 1. Izbirno lahko izvozite **Ime**, **Priimek**, **Mesto**, **Zvezna država** in **Država/regija**, da ustvarite bolj prilagojena e-poštna sporočila. Izberite **Dodaj atribut** za preslikavo teh polj.
 

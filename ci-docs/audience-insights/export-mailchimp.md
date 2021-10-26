@@ -1,7 +1,7 @@
 ---
 title: Izvozite podatke Customer Insights v Mailchimp
 description: Naučite se, kako konfigurirati povezavo in izvažati v Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033559"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618634"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Izvoz segmentov v Mailchimp (predogledna različica)
 
@@ -29,10 +29,10 @@ Izvozite segmente poenotenih profilov strank v Mailchimp, da ustvarite glasila i
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Do 1 milijon profilov na izvoz v Mailchimp.
+- Do 1 milijon profilov strank na izvoz v storitev Mailchimp.
 - Izvoz v Mailchimp je omejen na segmente.
-- Izvoz segmentov z 1 milijonom profilov lahko traja do tri ure. 
-- Število profilov, ki jih lahko izvozite v Mailchimp, je odvisno in omejeno glede na vašo pogodbo s podjetjem Mailchimp.
+- Izvoz segmentov z 1 milijonom profilov strank lahko traja do tri ure. 
+- Število profilov strank, ki jih lahko izvozite v storitev Mailchimp, je odvisno in omejeno glede na vašo pogodbo s storitvijo Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Nastavitev povezave s storitvijo Mailchimp
 
@@ -66,7 +66,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Vnesite svoj **[ID občinstva storitve Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. 
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. 
 
 1. Izbirno lahko izvozite **Ime** in **Priimek**, da ustvarite bolj prilagojena e-poštna sporočila. Izberite **Dodaj atribut** za preslikavo teh polj.
 

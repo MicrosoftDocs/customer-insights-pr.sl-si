@@ -2,8 +2,14 @@
   href: index.yml
 - name: Pregled izdelka
   href: overview.md
-- name: Ustvari preskusno različico
-  href: audience-insights/get-started-trial.md
+- name: Brezplačna preskusna različica
+  items:
+    - name: Vpis za brezplačno preskusno različico
+      href: trial-signup.md
+    - name: Pogosta vprašanja o preskusni različici
+      href: trial-FAQ.md
+- name: Začnite s plačljivo licenco
+  href: paid-license.md
 - name: Dostop do okolja
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Vpogledi v občinstvo
@@ -18,10 +24,12 @@
       items:
         - name: Vodnik za hitri začetek
           href: audience-insights/get-started.md
-        - name: Ustvarjanje novega okolja
-          href: audience-insights/get-started-paid.md
+        - name: Ustvarite novo okolje
+          href: audience-insights/create-environment.md
         - name: Raziskovanje vpogledov v občinstvo
           href: audience-insights/home.md
+    - name: Delo s poslovnimi računi
+      href: audience-insights/work-with-business-accounts.md
     - name: Več o modulih
       items:
         - name: Vnos podatkov
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Seznam dejavnosti strank
           href: audience-insights/activities.md
+        - name: Določanje semantičnih preslikav
+          href: audience-insights/semantic-mappings.md
     - name: Obogatitev podatkov
       items:
         - name: Obogatitev profilov strank
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Predvidevanje izgube naročnine
               href: audience-insights/predict-subscription-churn.md
-            - name: Predvidevanje izgub glede transakcij
+            - name: Predvidevanje izgube transakcij
               href: audience-insights/predict-transactional-churn.md
             - name: Uporabite modele po meri iz Strojnega učenja Azure
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Vzorčni vodnik za predvidevanje izgube naročnin
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Vzorčni vodnik za predvidevanje izgube glede transakcij
+            - name: Vzorčni vodnik za predvidevanje izgube transakcij
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Vzorčni vodnik za predvidevanje priporočil za izdelke
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Upravljanje več okolij
           href: audience-insights/manage-environments.md
-        - name: Povezovanje z računom za shranjevanje ADLS prek glavnega imena storitve
-          href: audience-insights/connect-service-principal.md
         - name: Podprti jeziki
           href: audience-insights/supported-languages.md
+        - name: Varnost
+          items:
+            - name: Prinesite svojo storitev Key Vault
+              href: audience-insights/use-azure-key-vault.md
+            - name: Povezovanje z računom za shranjevanje ADLS prek glavnega imena storitve
+              href: audience-insights/connect-service-principal.md
     - name: Razširljivost
       items:
         - name: Integracija spletnih podatkov iz vpogledov interakcij
@@ -248,6 +262,8 @@
       items:
         - name: Vodnik za hitri začetek
           href: engagement-insights/get-started.md
+        - name: Ustvarjanje okolja
+          href: engagement-insights/create-new-environment.md
         - name: Ustvarjanje delovnega prostora
           href: engagement-insights/create-workspace.md
         - name: Zajemite dogodke iz spletnih mest in mobilnih aplikacij

@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7559038"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645602"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Ustvarjanje povezave med vpogledi občinstva in vpogledi v interakcije
 
@@ -26,7 +26,7 @@ Uporabite poenotene profile in segmente iz vpogledov občinstva za več možnost
 ## <a name="prerequisites"></a>Zahteve
 
 - Profili vpogledov občinstva morajo biti shranjeni v računu Azure Data Lake Storage, ki ga imate, ali v jezeru podatkov, s katerim upravljate storitev [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-- Vaše okolje vpogledov v občinstvo mora imeti povezano okolje storitve Dataverse. Če to okolje prav tako uporablja storitev Dataverse za shranjevanje podatkov, preverite, da ste izbrali možnost **Omogočite skupno rabo podatkov** v vpogledih v občinstvo. Za več informacij glejte [Ustvarjanje in konfiguriranje plačljivega okolja v vpogledih v občinstvo](../audience-insights/get-started-paid.md).
+- Vaše okolje vpogledov v občinstvo mora imeti povezano okolje storitve Dataverse. Če to okolje prav tako uporablja storitev Dataverse za shranjevanje podatkov, preverite, da ste izbrali možnost **Omogočite skupno rabo podatkov** v vpogledih v občinstvo. Za več informacij glejte razdelek [Ustvarjanje in konfiguriranje okolja v vpogledih v občinstvo](../audience-insights/create-environment.md).
 - Potrebujete skrbniška dovoljenja za okolja vpogledov v interakcije in vpogledov občinstva.
 - Povezana okolja morajo biti v isti geografski regiji.
 

@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov Customer Insights v Campaign Monitor
 description: Naučite se, kako konfigurirati povezavo in izvažati v Campaign Monitor.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d2cc3ec944faa1d77ffb44e8abb422d753c5625d0ccef75cbb7efb14cb7c3741
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 063de14c4ffd51b3afd89786606d7b37626695dc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031907"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619001"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Izvoz segmentov v Campaign Monitor (predogledna različica)
 
@@ -28,10 +28,10 @@ Izvozite segmente poenotenih profilov strank v Campaign Monitor in jih uporabite
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- V Campaign Monitor lahko izvozite do 1 milijon profilov na izvoz.
+- V storitev Campaign Monitor lahko izvozite do 1 milijon profilov strank na izvoz.
 - Izvoz v Campaign Monitor je omejen na segmente.
-- Izvoz do 1 milijona profilov v Campaign Monitor lahko traja do 20 minut. 
-- Število profilov, ki jih lahko izvozite v Campaign Monitor, je odvisno in omejeno od vaše pogodbe za Campaign Monitor.
+- Izvoz do 1 milijon profilov strank v storitev Campaign Monitor lahko traja do 20 minut. 
+- Število profilov strank, ki jih lahko izvozite v storitev Campaign Monitor, je odvisno in omejeno glede na vašo pogodbo s storitvijo Campaign Monitor.
 
 ## <a name="set-up-connection-to-campaign-monitor"></a>Nastavitev povezave s storitvijo Campaign Monitor
 
@@ -66,7 +66,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 1. Vnesite [**ID seznama storitve Campaign Monitor**](https://www.campaignmonitor.com/api/getting-started/#your-list-id).    
    Najprej [ustvarite ključ API](https://www.campaignmonitor.com/api/getting-started/) iz možnosti **Nastavitve računa** v storitvi Campaign Monitor, da prikažete ID seznama API-jev.  
 
-3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. To je obvezno za izvoz segmentov Campaign Monitor.
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. To je obvezno za izvoz segmentov Campaign Monitor.
 
 1. Izberite **Shrani**.
 

@@ -1,7 +1,7 @@
 ---
 title: Podatke iz storitve Customer Insights izvozite v ActiveCampaign
 description: Naučite se, kako konfigurirati povezavo in podatke izvoziti v ActiveCampaign.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 14d420205a5c60d471ef21a04ab6d02295a65ca8fd5205ba782a300703b06102
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032229"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618173"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Izvoz segmentov v ActiveCampaign (predogledna različica)
 
@@ -28,9 +28,9 @@ Segmente poenotenih profilov strank izvozite v ActiveCampaign in jih uporabite z
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Naenkrat je mogoče v ActiveCampaign izvoziti največ milijon profilov, kar lahko traja do 90 minut.
+- Izvozite lahko do 1 milijon profilov strank na izvoz v storitev ActiveCampaign in to lahko traja do 90 minut.
 - Pri izvažanju v ActiveCampaign ste omejeni na segmente.
-- Število profilov, ki jih lahko izvozite v ActiveCampaign, je odvisno od vaše pogodbe z ActiveCampaign.
+- Število profilov strank, ki jih lahko izvozite v storitev ActiveCampaign, je odvisno od vaše pogodbe s storitvijo ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Vzpostavite povezavo s storitvijo ActiveCampaign
 
@@ -64,7 +64,7 @@ Izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inform
 
 1. Vnesite svoj [**ID seznama za ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. Segmente morate izvoziti v ActiveCampaign. Za bolj prilagojena e-poštna sporočila vam je na voljo možnost izvoza imena, priimka in vsebine telefona. Izberite Dodaj atribut za preslikavo teh polj.
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. Segmente morate izvoziti v ActiveCampaign. Za bolj prilagojena e-poštna sporočila vam je na voljo možnost izvoza imena, priimka in vsebine telefona. Izberite Dodaj atribut za preslikavo teh polj.
 
 1. Izberite **Shrani**.
 

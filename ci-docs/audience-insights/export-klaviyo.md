@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov iz storitve Customer Insights v storitev Klaviyo
 description: Preberite, kako konfigurirate povezavo in podatke izvozite v storitev Klaviyo.
-ms.date: 08/13/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
+ms.openlocfilehash: 5f7c91afed8eeb1f767f1efc58dceb7782c37bb4
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7385808"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619093"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Izvoz seznamov segmentov v storitev Klaviyo (predogledna različica)
 
@@ -28,10 +28,10 @@ Segmente poenotenih profilov strank izvozite v storitev Klaviyo in jih uporabite
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- V storitev Klaviyo lahko izvozite do 100.000 profilov na izvoz.
+- V storitev Klaviyo lahko izvozite do 100.000 profilov strank na izvoz.
 - Pri izvažanju v storitev Klaviyo ste omejeni na segmente.
-- Izvažanje do 1 milijona profilov v storitev Klaviyo lahko traja do 20 minut. 
-- Število profilov, ki jih lahko izvozite v storitev Klaviyo, je omejeno s pogodbo, ki ste jo sklenili s podjetjem Klaviyo, od katere je odvisno število profilov.
+- Izvoz do 1 milijon profilov strank v storitev Klaviyo lahko traja do 20 minut. 
+- Število profilov strank, ki jih lahko izvozite v storitev Klaviyo, je odvisno in omejeno glede na vašo pogodbo s storitvijo Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Vzpostavitev povezave s storitvijo Klaviyo
 
@@ -67,7 +67,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Vnesite svoj [**ID seznama za storitev Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. Segmente morate izvoziti v storitev Klaviyo.
+3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. Segmente morate izvoziti v storitev Klaviyo.
 
 1. Izberite **Shrani**.
 

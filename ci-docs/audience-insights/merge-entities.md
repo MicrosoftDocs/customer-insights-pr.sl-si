@@ -1,7 +1,7 @@
 ---
 title: Združevanje entitet za poenotenje podatkov
 description: Združite entitete za ustvarjanje poenotenih profilov strank.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494339"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648274"
 ---
 # <a name="merge-entities"></a>Združevanje entitet
 
@@ -89,7 +91,7 @@ Na strani za **spajanje** izberite **Izključena polja** za ogled seznama vseh i
     :::image type="content" source="media/recency-merge-option.png" alt-text="Možnost nedavnosti v dialogu za spajanje polj.":::
     - **Najstarejše**: Določi zmagovalno vrednost na podlagi najstarejših. Zahteva datum ali številsko polje za vsako vključeno entiteto v obsegu spajanja polj za določitev nedavnosti.
 
-1.  Če želite sodelovati v postopku spajanja, lahko dodate dodatna polja.
+1.  Če želite sodelovati v postopku spajanja, lahko dodate več polj.
 
 1.  Spojeno polje lahko preimenujete.
 
@@ -131,7 +133,7 @@ Nekatere entitete vsebujejo več podrobnosti kot druge. Če entiteta vključuje 
 
 Ko konfigurirate polja za spajanje, lahko določite, kako ustvariti vrednosti CustomerId, edinstvene identifikatorje profila stranke. Korak spajanja v postopku poenotenja podatkov ustvari edinstven identifikator profila stranke. Identifikator je CustomerId v entiteti *Stranka*, ki je rezultat postopka poenotenja podatkov. 
 
-CustomerId v entiteti Stranka temelji na razprševanju prve vrednosti primarnih zmagovalnih ključev, ki niso »null«. Ti ključi prihajajo iz entitet, uporabljenih v fazi ujemanja in spajanja, nanje pa vpliva vrstni red ujemanja.Tako se lahko ustvarjeni ID stranke spremeni, ko se vrednost primarnega ključa spremeni v primarni entiteti vrstnega reda ujemanja. Posledično vrednost primarnega ključa morda ne predstavlja vedno iste stranke.
+CustomerId v entiteti Stranka temelji na razprševanju prve vrednosti primarnih zmagovalnih ključev, ki niso »null«. Ti ključi prihajajo iz entitet, uporabljenih v fazi ujemanja in spajanja, nanje pa vpliva vrstni red ujemanja.Tako se lahko ustvarjeni ID stranke spremeni, ko se vrednost primarnega ključa spremeni v primarni entiteti vrstnega reda ujemanja. Vrednost primarnega ključa morda ne predstavlja vedno iste stranke.
 
 Če konfigurirate stabilen ID stranke, se lahko temu izognete.
 
@@ -139,7 +141,7 @@ CustomerId v entiteti Stranka temelji na razprševanju prve vrednosti primarnih 
 
 1. Odprite razdelek **Poenotenje** > **Spoji**.
 
-1. Na strani **Spoji** izberite zavihek **Ključi**. 
+1. Izberite zavihek **Ključi**. 
 
 1. Pomaknite se v vrstico **CustomerId** in izberite možnost **Konfiguriraj**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Kontrolnik za prilagoditev ID-ja generacije.":::
@@ -147,6 +149,30 @@ CustomerId v entiteti Stranka temelji na razprševanju prve vrednosti primarnih 
 1. Izberite do pet polj, ki bodo vsebovala edinstven ID stranke in so bolj stabilna. Zapisi, ki se ne ujemajo z vašo konfiguracijo, namesto tega uporabljajo sistemsko konfiguriran ID.  
 
 1. Izberite **Dokončaj** in zaženite postopek spajanja, da uporabite spremembe.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Združevanje profilov v gospodinjstva ali gruče
+
+Kot del postopka konfiguracije ustvarjanja profila stranke lahko določite pravila za združevanje sorodnih profilov v gručo. Trenutno sta na voljo dve vrsti gruč – gospodinjska in po meri. Sistem samodejno izbere gospodinjstvo z vnaprej določenimi pravili, če entiteta *Stranka* vsebuje semantični polji *Person.LastName* in *Location.Address*. Ustvarite lahko tudi gručo z lastnimi pravili in pogoji, ki so podobni [pravilom za ujemanje](match-entities.md#define-rules-for-match-pairs).
+
+**Določite gospodinjstvo ali gručo**
+
+1. Odprite razdelek **Poenotenje** > **Spoji**.
+
+1. V zavihku **Spoji** izberite **Napredno** > **Ustvari gručo**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Nadzor za ustvarjanje nove gruče.":::
+
+1. Izberite med gručama **Gospodinjstvo** ali **Po meri**. Če semantični polji *Person.LastName* in *Location.Address* obstajata v entiteti *Stranka*, bo samodejno izbrano gospodinjstvo.
+
+1. Vnesite ime za gručo in izberite **Končano**.
+
+1. Izberite zavihek **Gruče**, da poiščete gručo, ki ste jo ustvarili.
+
+1. Določite pravila in pogoje za opredelitev gruče.
+
+1. Izberite **Zaženi**, da zaženete postopek spajanja in ustvarite gručo.
+
+Po zagonu postopka spajanja se identifikatorji gruče dodajo kot nova polja v entiteto *Stranka*.
 
 ## <a name="run-your-merge"></a>Zagon spajanja
 

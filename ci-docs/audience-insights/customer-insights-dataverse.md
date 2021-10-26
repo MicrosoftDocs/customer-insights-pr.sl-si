@@ -1,7 +1,7 @@
 ---
 title: Podatki Customer Insights v okolju Microsoft Dataverse
 description: Uporabite entitete Customer Insights kot tabele v okoljih Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032916"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645238"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Delo s podatki Customer Insights v okolju Microsoft Dataverse
 
@@ -24,11 +24,7 @@ Storitev Customer Insights nudi možnost omogočanja izhodnih entitet v okolju [
 
 **Organizacije z obstoječimi okolji Dataverse**
 
-Organizacije, ki že uporabljajo okolje Dataverse, lahko [uporabijo enega od obstoječih okolij Dataverse](get-started-paid.md), ko skrbnik nastavi vpoglede občinstva. Če navedete URL v okolje Dataverse, se priloži njegovemu novemu okolju za vpoglede občinstva. Da bi zagotovili najboljšo možno uspešnost, morata biti okolji Customer Insights in Dataverse gostovani v isti regiji.
-
-Če želite priložiti okolje Dataverse, razširite **Napredne nastavitve** pri ustvarjanju okolja za vpoglede občinstva. Navedite **URL okolja Microsoft Dataverse** in potrdite polje **Omogoči skupno rabo podatkov**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alternativa.":::
+Organizacije, ki že uporabljajo okolje Dataverse, lahko [uporabijo enega od obstoječih okolij Dataverse](create-environment.md), ko skrbnik nastavi vpoglede občinstva. Če navedete URL v okolje Dataverse, se priloži njegovemu novemu okolju za vpoglede občinstva. Da bi zagotovili najboljšo možno uspešnost, morata biti okolji Customer Insights in Dataverse gostovani v isti regiji.
 
 **Nova organizacija**
 

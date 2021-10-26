@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465225"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606134"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Posodobitve v septembru 2021
+
+Posodobitve v septembru 2021 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="activities"></a>dejavnosti
+
+- **Izboljšave časovnice dejavnosti** Filtre za časovnico dejavnosti smo razširili na profile strank. Poleg tega lahko z novim podoknom za filtriranje filtrirate po vrsti dejavnosti in datumu. Datume je mogoče filtrirati z različnimi pogoji. Za več informacij glejte [Ogled časovnice dejavnosti v profilih strank](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Odnosi
+
+- **Podpora za odnos z več skoki** Pri konfiguriranju dejavnosti in določanju odnosov med entitetami uporabite odnose z več skoki. Odnosi z več skoki uporabljajo vmesno entiteto za povezavo dveh entitet. Ko konfigurirate dejavnost, lahko z odnosom z več skoki povežete entiteto dejavnosti z vmesno entiteto in nato z entiteto stranke. Odnose z več skoki lahko združite z odnosi z več potmi. Za več informacij glejte [Odnos z več skoki](relationships.md#multi-hop-relationship).
+
+- **Podpora za odnos z več potmi** Pri konfiguriranju dejavnosti in določanju odnosov med entitetami uporabite odnose z več potmi. Odnosi z več potmi povezujejo izvorno entiteto z več entitetami. Ko konfigurirate dejavnost, lahko z odnosom z več potmi povežete entiteto dejavnosti z več entitetami strank. Odnose z več potmi lahko združite z odnosi z več skoki. Za več informacij glejte [Odnos z več potmi](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Posodobitve v avgustu 2021
 

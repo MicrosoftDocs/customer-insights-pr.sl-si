@@ -1,7 +1,7 @@
 ---
 title: Domača stran pri vpogledih v občinstvo
 description: Začnite raziskovati aplikacijo na domači strani.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470035"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617715"
 ---
 # <a name="explore-audience-insights"></a>Raziskovanje vpogledov v občinstvo
 
@@ -23,7 +23,7 @@ Stran **Osnovno** prikazuje pregled segmentov, ukrepov in podatkov o obogatitvi 
 
 :::image type="content" source="media/home-page.png" alt-text="Posnetek začetnega zaslona z vzorčnimi vpogledi.":::
 
-1 – Preklapljajte med zmogljivostmi storitve Customer Insights 2 – Uporabite levo podokno za krmarjenje po različnih območjih 3 – Ugotovite, v katerem okolju delate, in upravljajte okolja kot skrbnik 4 – Določite osebne nastavitve za storitev Customer Insights
+1 – preklopite med zmožnostmi storitve Customer Insights 2 – uporabite levo podokno za krmarjenje med različnimi področji in izberite primarno ciljno občinstvo 3 – ugotovite, v katerem okolju delate, in upravljajte okolja kot skrbnik 4 – določite osebne nastavitve za storitev Customer Insights
 
 V razdelku **Nedavni segmenti** vidite skupine strank na podlagi demografskih, vedenjskih ali transakcijskih atributov, ki ste jih določili. [Ustvarjanje segmentov](segments.md) vam pomaga razvrstiti bazo strank in bolje usmeriti poslovna opravila.
 
