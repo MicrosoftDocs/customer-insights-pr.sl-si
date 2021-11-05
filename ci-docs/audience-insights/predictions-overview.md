@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618863"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673982"
 ---
 # <a name="predictions-overview"></a>Pregled predvidevanj
 
@@ -25,14 +25,14 @@ Dynamics 365 Customer Insights vsebuje različne možnosti, ki uporabljajo AI in
 
 Najlažji način za začetek napovedovanja podatkov predstavljajo vnaprej določeni modeli, ki jih pogosto imenujemo vnaprej pripravljeni modeli. Za hitro ustvarjanje vpogledov potrebujejo le določene podatke in strukturo. Trenutno so na voljo naslednji modeli: 
 
-# <a name="individual-customers-b2c"></a>[Posamezne stranke (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
 
 - [Vrednost življenjske dobe stranke](predict-customer-lifetime-value.md): napoveduje potencialni prihodek stranke v celotni interakciji s podjetjem.
 - [Priporočilo izdelka](predict-product-recommendation.md): predlaga nabore napovednih priporočil za izdelke, ki temeljijo na nakupnem vedenju in strankah s podobnimi vzorci nakupovanja.
 - [Izguba naročnin](predict-subscription-churn.md): predvidi, ali za stranko obstaja tveganje, če ne bo več uporabljala naročniških izdelkov ali storitev vašega podjetja.
 - [Izguba transakcij](predict-transactional-churn.md): predvidi, ali stranka ne bo več kupovala vaših izdelkov ali storitev v določenem časovnem okviru.
 
-# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
 
 - [Izguba transakcij](predict-transactional-churn.md): predvidi, ali stranka ne bo več kupovala vaših izdelkov ali storitev v določenem časovnem okviru.
 

@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645730"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673411"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Ustvarite okolje v vpogledih v občinstvo
 
@@ -46,7 +46,7 @@ V koraku **Osnovni podatki** izberite, ali želite ustvariti okolje od začetka 
 
 Navedite naslednje podrobnosti:
    - **Ime**: ime tega okolja. To polje je že izpolnjeno, če ste kopirali iz obstoječega okolja, lahko pa ga spremenite.
-   - **Izberite svoje podjetje**: izberite primarno občinstvo za novo okolje. Delate lahko s posameznimi strankami (B2C) ali [poslovnimi računi](work-with-business-accounts.md) (B2B).
+   - **Izberite svoje podjetje**: izberite primarno občinstvo za novo okolje. Sodelujete lahko s posameznimi potrošniki (prodaja strankam) ali [poslovnimi kupci](work-with-business-accounts.md) (podjetja podjetjem).
    - **Vrsta**: izberite, ali želite ustvariti produkcijsko ali preizkusno okolje. Preizkusna okolja ne dovoljujejo načrtovanega osveževanja podatkov in so namenjena predhodni implementaciji in testiranju. Okolja peskovnika uporabljajo isto primarno občinstvo kot trenutno izbrano produkcijsko okolje.
    - **Območje**: območje, v katerem je storitev uvedena in gostovana.
 
@@ -54,7 +54,7 @@ Navedite naslednje podrobnosti:
 
 V koraku **Shranjevanje podatkov** izberite, kam želite shraniti podatke iz vpogledov v občinstvo.
 
-Na voljo imate dve možnosti: **Shramba storitve Customer Insights** (storitev Azure Data Lake, ki jo upravlja ekipa za Customer Insights) in **Azure Data Lake Storage** (vaša lastna storitev Azure Data Lake Storage). Privzeto je izbrana možnost »Shramba za Customer Insights«.
+Na voljo imate dve možnosti: **Shramba storitve Customer Insights** (jezero podatkov Azure, ki ga upravlja ekipa za Customer Insights) in **Azure Data Lake Storage** (vaša lastna storitev Azure Data Lake Storage). Privzeto je izbrana možnost »Shramba za Customer Insights«.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Izberite Azure Data Lake Storage za shranjevanje podatkov o vpogledih v občinstvo.":::
 
@@ -66,7 +66,7 @@ S shranjevanjem podatkov v Azure Data Lake Storage se strinjate, da bodo podatki
 > - Računi Azure Data Lake Storage iz iste regije Azure, ki ste jo izbrali pri ustvarjanju okolja.
 > - Računi Azure Data Lake Storage, ki imajo omogočen *hierarhičen imenski prostor*.
 
-V sklopu možnosti Azure Data Lake Storage lahko za preverjanje pristnosti izberete možnost, ki temelji na virih, ali možnost, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Ime **vsebnika** bo `customerinsights` in ga ni mogoče spremeniti.
+V sklopu možnosti Azure Data Lake Storage lahko za preverjanje pristnosti izberete možnost, ki temelji na virih, ali možnost, ki temelji na naročnini. Za več informacij glejte [Vzpostavitev povezave z računom Azure Data Lake Storage z glavnim imenom storitve Azure](connect-service-principal.md). Ime **vsebnika** bo `customerinsights` in ga ni mogoče spremeniti.
 
 Ko so procesi sistema, na primer uvoz podatkov, končani, sistem ustvari ustrezne mape v računu za shrambo, ki ste ga določili. Ustvarijo se podatkovne datoteke in datoteke *model.json*, ki so na podlagi imena procesa dodane v mape.
 
@@ -76,14 +76,14 @@ Ko so procesi sistema, na primer uvoz podatkov, končani, sistem ustvari ustrezn
    
 Korak **Microsoft Dataverse** vam omogoča, da povežete Customer Insights s svojim okoljem Dataverse.
 
-Če želite uporabiti [pripravljene modele predvidevanja](predictions-overview.md#out-of-box-models), konfigurirajte skupno rabo podatkov z okoljem Dataverse. Ali pa omogočite uvoz podatkov iz virov podatkov na mestu uporabe, ki zagotavljajo URL za okolje Microsoft Dataverse, ki ga upravlja vaša organizacija. Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights s storitvijo Dataverse Managed Data Lake.
+Če želite uporabiti [pripravljene modele predvidevanja](predictions-overview.md#out-of-box-models), konfigurirajte skupno rabo podatkov z okoljem Dataverse. Ali pa omogočite uvoz podatkov iz virov podatkov na mestu uporabe, ki zagotavljajo URL za okolje Microsoft Dataverse, ki ga upravlja vaša organizacija. Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights z upravljanim jezerom podatkov Dataverse.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse.":::
 
 > [!NOTE]
 > Storitev Customer Insights ne podpira naslednjih primerov skupne rabe podatkov.
-> - Če vse podatke shranite v svojo shrambo Azure Data Lake Storage, ne boste mogli omogočiti skupne rabe podatkov s storitvijo Microsoft Dataverse Managed Data Lake.
-> - Če omogočite skupno rabo podatkov s storitvijo Microsoft Dataverse Managed Data Lake, ne boste mogli [ustvariti predvidenih ali manjkajočih vrednosti v entiteti](predictions.md).
+> - Če vse podatke shranite v svojo shrambo Azure Data Lake Storage, ne boste mogli omogočiti skupne rabe podatkov z upravljanim jezerom podatkov Dataverse.
+> - Če omogočite skupno rabo podatkov s storitvijo Dataverse, ne boste mogli [ustvariti predvidenih ali manjkajočih vrednosti v entiteti](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>4. korak: dokončanje nastavitev
 
@@ -93,10 +93,10 @@ Večino nastavitev lahko spremenite tudi pozneje. Za več informacij glejte [Upr
 
 ## <a name="work-with-your-new-environment"></a>Delajte z novim okoljem
 
-Oglejte si naslednje članke, ki vam bodo pomagali začeti s konfiguracijo Customer Insights. 
+Preglejte naslednje članke, ki vam bodo pomagali začeti s konfiguriranjem storitve Customer Insights: 
 
 - [Dodajte več uporabnikov in dodelite dovoljenja](permissions.md).
 - [Uvozite svoje vire podatkov](data-sources.md) in jih vodite skozi [postopek poenotenja podatkov](data-unification.md), da nastanejo [enotni profili strank](customer-profiles.md).
 - [Obogatite poenotene profile strank](enrichment-hub.md) ali [zaženite modele predvidevanja](predictions-overview.md).
-- [S segmenti](segments.md) lahko združujete stranke, z [ukrepi](measures.md) pa pregledate KPI-je.
+- [Ustvarite segmente](segments.md) za združevanje strank in [mere](measures.md) za pregled KPI-jev.
 - [Nastavite povezave](connections.md) in [izvoz](export-destinations.md) za obdelavo podmnožic vaših podatkov v drugih aplikacijah.

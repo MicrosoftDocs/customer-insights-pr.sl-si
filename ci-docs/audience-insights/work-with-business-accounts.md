@@ -1,7 +1,7 @@
 ---
 title: Začetek uporabe poslovnih kupcev kot primarno ciljno občinstvo
 description: Preberite, kako uporabljati poslovne kupce kot primarno ciljno občinstvo Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645008"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673707"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Delo s poslovnimi kupci v vpogledih v občinstvo
 
-Zmogljivost vpogledov v občinstvo v storitvi Dynamics 365 Customer Insights omogoča konfiguracijo vašega okolja za različna primarna ciljna občinstva: posamezne stranke (prodaja strankam) in poslovni kupci (prodaja podjetjem). V scenarijih »Prodaja strankam« podatki temeljijo na posameznikih. V scenarijih »Prodaja podjetjem« so primarna ciljna občinstva kupci – organizacije ali podjetja – in stiki. Ta članek vam pomaga začeti z okoljem za poslovne kupce. Navaja razlike za območja funkcij v vpogledih v občinstvo, odvisno od vašega okolja. Če želite več informacij o razlikah, preglejte dokumente o območjih funkcij. 
+Zmogljivost vpogledov v občinstva v storitvi Dynamics 365 Customer Insights omogoča konfiguracijo vašega okolja za različna primarna ciljna občinstva: posamezne stranke (prodaja strankam) in poslovni kupci (prodaja podjetjem). V scenarijih »Prodaja strankam« podatki temeljijo na posameznikih. V scenarijih »Prodaja podjetjem« so primarna ciljna občinstva kupci – organizacije ali podjetja – in stiki. Ta članek vam pomaga začeti z okoljem za poslovne kupce. Navaja razlike za območja funkcij v vpogledih v občinstvo, odvisno od vašega okolja. Če želite več informacij o razlikah, preglejte dokumente o območjih funkcij. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Ustvarjanje okolja za poslovne kupce
 
@@ -32,7 +32,7 @@ Po poenotenju podatkov [določite hierarhije računa](relationships.md#set-up-ac
 
 Če vaša organizacija vzdržuje okolja za posamezne stranke in poslovne kupce, lahko s preklopnikom v levem podoknu izberete primarno ciljno občinstvo.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Preklopnik za spremembo primarnega ciljnega občinstva med posameznimi strankami in poslovnimi kupci.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Preklopnik za spremembo primarnega ciljnega občinstva med posameznimi strankami in poslovnimi kupci.":::
 
 ## <a name="supported-feature-areas"></a>Podprta območja funkcij
 

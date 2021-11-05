@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645146"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673764"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
 
@@ -67,7 +67,8 @@ Naslednji podatki *niso* kopirani:
 
 - Profili strank
 - Poverilnice virov podatkov. Za vsak vir podatkov boste morali zagotoviti poverilnice in ročno osvežiti vire podatkov.
-- Viri podatkov iz mape Common Data Model in shrambe Data Lake, ki jo upravlja Dataverse. Te vire podatkov boste morali ustvariti ročno z istim imenom kot v izvornem okolju.
+
+- Viri podatkov iz mape Common Data Model in upravljanega jezera podatkov Dataverse. Te vire podatkov boste morali ustvariti ročno z istim imenom kot v izvornem okolju.
 
 Ko kopirate okolje, boste videli potrditveno sporočilo, da je bilo ustvarjeno novo okolje. Izberite **Na vire podatkov**, da prikažete seznam virov podatkov.
 

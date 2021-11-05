@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648183"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673295"
 ---
 # <a name="map-entities-and-attributes"></a>Entitete in atributi zemljevida
 
@@ -96,7 +96,7 @@ Nadaljujte s koraki za poenotenje in poskrbite, da je atribut, ki vsebuje URL sl
 
 Za organizacije (predogledna različica) mora biti vrsta atributa preslikana v »Organization.Name«
 > [!div class="mx-imgBorder"]
-> ![Primarni ključ in vrsta atributa pri prodaji podjetjem](media/configure-data-map-edit-b2b.png "Primarni ključ in vrsta atributa pri prodaji podjetjem")
+> ![Primarni ključ in vrsta atributa »podjetja podjetjem«.](media/configure-data-map-edit-b2b.png "Primarni ključ in vrsta atributa »podjetja podjetjem«")
 
 ## <a name="next-step"></a>Naslednji korak
 

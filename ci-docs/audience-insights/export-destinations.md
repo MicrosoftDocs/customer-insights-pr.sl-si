@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623153"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673343"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvozov (predogledna različica)
 
@@ -32,14 +32,14 @@ Obstajata dve glavni vrsti izvoza:
 
 ### <a name="export-segments"></a>Izvoz segmentov
 
-**Izvoz segmentov v okoljih za poslovne račune (B2B) ali posamezne stranke (B2C)**  
-Večina možnosti izvoza podpira obe vrsti okolij. Izvoz segmentov v različne ciljne sisteme ima posebne zahteve. Na splošno član segmenta, profil stranke, vsebuje podatke za stik. Čeprav to običajno velja za segmente, ki temeljijo na posameznih strankah (B2C), to ne velja nujno za segmente, ki temeljijo na poslovnih računih (B2B). 
+**Izvoz segmentov v okolja za poslovne kupce (podjetja podjetjem) ali posamezne potrošnike (prodaja strankam)**  
+Večina možnosti izvoza podpira obe vrsti okolij. Izvoz segmentov v različne ciljne sisteme ima posebne zahteve. Na splošno član segmenta, profil stranke, vsebuje podatke za stik. Čeprav to običajno velja za segmente, ki temeljijo na posameznih potrošnikih (prodaja strankam), to ne velja nujno za segmente, ki temeljijo na poslovnih kupcih (podjetja podjetjem). 
 
-**Izvozi segmenta v okoljih za poslovne račune (B2B)**  
+**Izvozi segmenta v okoljih za poslovne kupce (podjetja podjetjem)**  
 - Segmenti v kontekstu okolij za poslovne račune temeljijo na entiteti *računa*. Če želite izvoziti segmente računov takšne, kot so, mora ciljni sistem podpirati čiste segmente računov. To velja za [LinkedIn](export-linkedin-ads.md), ko izberete možnost **podjetje** pri definiranju izvoza.
 - Vsi drugi ciljni sistemi zahtevajo polja iz entitete stika. Če želite zagotoviti, da lahko segmenti računa pridobivajo podatke iz povezanih stikov, mora vaša definicija segmenta projicirati atribute entitete stika. Preberite več o tem, kako [konfigurirati segmente in atribute projekta](segment-builder.md).
 
-**Izvozi segmenta v okoljih za posamezne stranke (B2C)**  
+**Izvozi segmenta v okoljih za posamezne potrošnike (prodaja strankam)**  
 - Segmenti v kontekstu okolij za posamezne stranke temeljijo na entiteti *poenotenega profila stranke*. Izvoziti je mogoče vsak segment, ki izpolnjuje zahteve ciljnih sistemov (na primer e-poštni naslov).
 
 **Omejitve pri izvozu segmentov**  

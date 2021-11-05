@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606134"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673884"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
 
@@ -166,7 +166,7 @@ Posodobitve marca 2021 vključujejo številne funkcije, nadgradnje zmogljivosti 
 - **Izvoz segmentov v Constant Contact** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi Constant Contact. Zdaj lahko izvozite segmente iz Customer Insights na sezname Constant Contact in jih uporabite kot izhodišče za svoje tržne kampanje.   
    Če želite več informacij, glejte [Izvoz v Constant Contact](export-constant-contact.md).
 
-- **Izvoz segmentov v RollWorks** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi RollWorks. Zdaj lahko izvozite segmente iz Customer Insights v občinstva RollWorks in jih uporabite kot izhodišče za svoje oglaševanje v okviru prodaje podjetjem.    
+- **Izvoz segmentov v RollWorks** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi RollWorks. Zdaj lahko izvozite segmente iz storitve Customer Insights v občinstva RollWorks in jih uporabite kot izhodišče za vaše oglaševanje »podjetja podjetjem«.    
    Če želite več informacij, glejte [Izvoz v RollWorks](export-rollworks.md).
 
 - **Izvoz segmentov v Snapchat** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi Snapchat. Zdaj lahko izvozite segmente iz Customer Insights v občinstva Snapchat in jih uporabite kot izhodišče za oglaševanje.     

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617989"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673158"
 ---
 # <a name="customer-activities"></a>Dejavnosti stranke
 
@@ -49,7 +49,7 @@ Entiteta mora imeti vsaj en atribut vrste **Datum**, da je lahko vključena na �
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Določite odnos entitete.":::
 
    > [!TIP]
-   > V okoljih B2B lahko izbirate med entitetami računa in drugimi entitetami. Če izberete entiteto računa, se pot odnosa samodejno nastavi. Za druge entitete morate določiti pot odnosa do ene ali več vmesnih entitet, dokler ne dosežete entitete računa.
+   > V okoljih »podjetja podjetjem« lahko izbirate med entitetami računa in drugimi entitetami. Če izberete entiteto računa, se pot odnosa samodejno nastavi. Za druge entitete morate določiti pot odnosa do ene ali več vmesnih entitet, dokler ne dosežete entitete računa.
 
 1. Izberite možnost **Naprej** za pomik na naslednji korak. 
 

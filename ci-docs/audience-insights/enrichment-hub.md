@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617575"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673019"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogatitev profilov strank (predogled)
 
@@ -29,7 +29,7 @@ Za ustvarjanje ali urejanje obogatitev morate imeti dovoljenje »Sodelavec« ali
 
 V zavihku **Odkrivanje** boste našli vse podprte možnosti obogatitve.
 
-# <a name="individual-customers-b2c"></a>[Posamezne stranke (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
 
 - [Znamke](enrichment-microsoft.md), ki jih zagotavlja Microsoft
 - [Zanimanja](enrichment-microsoft.md), ki jih zagotavlja Microsoft
@@ -38,7 +38,7 @@ V zavihku **Odkrivanje** boste našli vse podprte možnosti obogatitve.
 - [Podatki po meri](enrichment-SFTP-custom-import.md) s protokolom za varen prenos datotek (SFTP) 
 - [Storitev Zemljevidi Azure](enrichment-azure-maps.md) zagotavlja Microsoft
 
-# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
 
 - [Podatki o podjetju](enrichment-leadspace.md), ki jih zagotavlja Leadspace
 - [Izboljšani naslovi](enrichment-enhanced-addresses.md), ki jih zagotavlja Microsoft 

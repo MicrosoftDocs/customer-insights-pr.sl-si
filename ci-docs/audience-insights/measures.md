@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623052"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673523"
 ---
 # <a name="define-and-manage-measures"></a>Določanje in upravljanje mer
 
@@ -28,7 +28,7 @@ Uporabite graditelja mer za načrtovanje poslovnih dejavnosti s poizvedbami po p
 
 V tem razdelku je opisano ustvarjanje novega mere od začetka. Ustvarite lahko mero z atributi podatkov iz entitet podatkov, ki imajo nastavljen odnos za povezavo s poenoteno entiteto profila stranke.
 
-# <a name="individual-customers-b2c"></a>[Posamezne stranke (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
 
 1. Pri vpogledih v občinstvo izberite **Mere**.
 
@@ -92,7 +92,7 @@ V tem razdelku je opisano ustvarjanje novega mere od začetka. Ustvarite lahko m
 
 1. Na strani **Mere** si na seznamu oglejte novo ustvarjeno mero.
 
-# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
 
 1. Pri vpogledih v občinstvo izberite **Mere**.
 
@@ -164,7 +164,7 @@ V tem razdelku je opisano ustvarjanje novega mere od začetka. Ustvarite lahko m
 
 Za ustvarjanje ukrepov lahko uporabite vnaprej določene predloge pogosto uporabljenih ukrepov. Podrobni opisi predlog in vodena izkušnja vam pomagajo pri učinkovitem ustvarjanju ukrepov. Predloge temeljijo na preslikanih podatkih iz entitete *Poenotena dejavnost*. Prepričajte se, da ste konfigurirali [dejavnosti strank](activities.md), preden ustvarite ukrep iz predloge.
 
-# <a name="individual-customers-b2c"></a>[Posamezne stranke (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
 
 Za ustvarjanje ukrepov lahko uporabite vnaprej določene predloge pogosto uporabljenih ukrepov. Podrobni opisi predlog in vodena izkušnja vam pomagajo pri učinkovitem ustvarjanju ukrepov. Predloge temeljijo na preslikanih podatkih iz entitete *Poenotena dejavnost*. Prepričajte se, da ste konfigurirali [dejavnosti strank](activities.md), preden ustvarite ukrep iz predloge.
 
@@ -212,7 +212,7 @@ V naslednjem postopku so opisani koraki za ustvarjanje novega ukrepa s pomočjo 
 
 1. Zdaj lahko izberete **Zaženi**, da izračunate rezultate ukrepa. Če jih želite pozneje prilagoditi, izberite **Shrani osnutek**.
 
-# <a name="business-accounts-b2b"></a>[Poslovni računi (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
 
 Ta funkcija je na voljo samo za mere, ustvarjene v okoljih s posameznimi strankami kot primarno ciljno občinstvo.
 

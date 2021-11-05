@@ -1,7 +1,7 @@
 ---
 title: Konfiguracija sistema pri vpogledih v občinstvo
 description: Preberite več o sistemskih nastavitvah pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035936"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651860"
 ---
 # <a name="system-configuration"></a>Konfiguracija sistema
 
@@ -24,9 +24,9 @@ Stran **Sistem** vključuje naslednje zavihke:
 - [Uporaba API-ja](#api-usage-tab)
 - [Vizitka](#about-tab)
 - [Splošno](#general-tab)
+- [Varnost](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Stran sistema.](media/system-tabs.png "Stran sistema")
+:::image type="content" source="media/system-tabs.png" alt-text="Zavihki z nastavitvami na sistemski strani.":::
 
 ## <a name="status-tab"></a>Zavihek stanja
 
@@ -84,9 +84,15 @@ Zavihek **Več o tem** vsebuje **Prikazno ime** vaše organizacije, dejavni **ID
 
 ## <a name="general-tab"></a>Zavihek Splošno
 
-V zavihku **Splošno** sta na voljo dve možnosti, **Jezik** in **Oblika zapisa države/regije**.
+Obliko jezika in države/regije lahko spremenite v zavihku **Splošno**.
 
-Aplikacija [podpira številne jezike](supported-languages.md). Če želite spremeniti izbrani jezik, na spustnem meniju izberite možnost **Jezik**.
+Storitev Customer Insights [podpira številne jezike](/dynamics365/get-started/availability). Aplikacija uporablja vaše jezikovne nastavitve za prikaz elementov, kot so meni, besedilo oznake in sistemska sporočila, v vašem izbranem jeziku.
+
+Uvoženi podatki in informacije, ki ste jih vnesli ročno, niso prevedeni.
+
+### <a name="update-the-settings"></a>Posodobi nastavitve
+
+Če želite spremeniti izbrani jezik, na spustnem meniju izberite možnost **Jezik**.
 
 Če želite spremeniti izbrano oblikovanje datumov, časa in številk, uporabite spustni meni **Oblika zapisa države/regije**. Pod tem poljem se prikaže predogled oblikovanja. Sistem bo samodejno predlagal izbiro, ko izberete nov jezik.
 
@@ -105,6 +111,13 @@ Razdelek **Uporaba API-ja** vsebuje tri razdelke:
 
    Postopki, ki uporabljajo [uvoz podatkov v realnem času](real-time-data-ingestion.md), vsebujejo gumb s simbolom daljnogleda za ogled sprotne uporabe API-ja. Izberite gumb, da odprete stransko podokno s podrobnostmi o uporabi za sprotno uporabo API-ja v trenutnem okolju.   
    V podoknu **Sprotna uporaba API-ja** uporabite polje **Združi po**, da izberete, kako najbolje predstaviti svoje interakcije v realnem času. Podatke lahko združite po metodi API-ja, določenem imenu entitete (uvožena entiteta), avtorju ustvarjanja (vir dogodka), rezultatu (uspeh ali neuspeh) ali kodah napak. Podatki so na voljo kot grafikon zgodovine in kot tabela.
+
+## <a name="security-tab"></a>Zavihek »Varnost«
+
+Zavihek **Varnost** vam omogoča povezovanje in upravljanje lastne [shrambe ključev Azure](/azure/key-vault/general/basic-concepts) z okoljem.
+Dodeljena shramba ključev se lahko uporablja za pripravo in uporabo skrivnosti na meji zagotavljanja skladnosti organizacije. Vpogledi v občinstvo lahko uporabijo skrivnosti v shrambi ključev Azure za [vzpostavitev povezav](connections.md) s sistemi drugih ponudnikov.
+
+Za več informacij glejte [Uporaba lastne shrambe ključev Azure](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
