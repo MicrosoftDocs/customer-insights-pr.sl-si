@@ -1,7 +1,7 @@
 ---
 title: Ustvarjanje in upravljanje mer
 description: Določite mere za analizo in odraz uspešnosti vašega podjetja.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673523"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732746"
 ---
 # <a name="define-and-manage-measures"></a>Določanje in upravljanje mer
 
@@ -238,8 +238,7 @@ Na seznamu izberite mero za naslednje možnosti:
 - Za brisanje mere je na voljo **Izbriši**.
 - **Aktiviraj** ali **deaktiviraj**. Nedejavne mere se med [načrtovano osvežitvijo](system.md#schedule-tab) ne bodo osvežile.
 
-> [!TIP]
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za eno izmed opravil izberete možnost **Prikaži podrobnosti**, boste lahko dostopali do naslednjih dodatnih informacij: čas obdelave, datum zadnjega poskusa obdelave ter vse napake in opozorila, povezana z nalogo.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>Naslednji korak
 

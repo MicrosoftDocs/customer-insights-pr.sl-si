@@ -1,7 +1,7 @@
 ---
 title: Ustvarjanje in upravljanje okolij
 description: Naučite se, kako se prijaviti za storitev in kako upravljati okolja.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673764"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799655"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
 
@@ -39,6 +39,19 @@ Uredite lahko določene podatke obstoječih okolij.
 3. V polju **Urejanje okolja**, lahko posodobite nastavitve okolja.
 
 Za več informacij o nastavitvah okolja glejte [Ustvarjanje novega okolja](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Povežite se z Microsoft Dataverse
+   
+The **Microsoft Dataverse** korak vam omogoča povezavo Customer Insights z vašim Dataverse okoljem.
+
+Uporabiti [gotovi modeli predvidevanje](predictions-overview.md#out-of-box-models), konfigurirajte skupno rabo podatkov z Dataverse. Lahko pa omogočite vnos podatkov iz virov podatkov na mestu uporabe, pri čemer navedete URL okolja Microsoft Dataverse, ki ga upravlja vaša organizacija. Izberite **Omogoči skupno rabo podatkov** deliti izhodne podatke Customer Insights s podatkovnim jezerom, ki ga upravlja Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfiguracije za omogočanje skupne rabe podatkov z Microsoft Dataverse.":::
+
+> [!NOTE]
+> Storitev Customer Insights ne podpira naslednjih primerov skupne rabe podatkov.
+> - Če shranite vse podatke v svoj Azure Data Lake Storage, ne boste mogli omogočiti skupne rabe podatkov s podatkovnim jezerom, ki ga upravlja Dataverse.
+> - Če omogočite skupno rabo podatkov z Dataverse, ne boste mogli [ustvariti predvidene ali manjkajoče vrednosti v entiteti](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okolja
 
@@ -68,7 +81,7 @@ Naslednji podatki *niso* kopirani:
 - Profili strank
 - Poverilnice virov podatkov. Za vsak vir podatkov boste morali zagotoviti poverilnice in ročno osvežiti vire podatkov.
 
-- Viri podatkov iz mape Common Data Model in upravljanega jezera podatkov Dataverse. Te vire podatkov boste morali ustvariti ročno z istim imenom kot v izvornem okolju.
+- Viri podatkov iz mape Common Data Model in podatkovnega jezera, ki ga upravlja Dataverse. Te vire podatkov boste morali ustvariti ročno z istim imenom kot v izvornem okolju.
 
 Ko kopirate okolje, boste videli potrditveno sporočilo, da je bilo ustvarjeno novo okolje. Izberite **Na vire podatkov**, da prikažete seznam virov podatkov.
 

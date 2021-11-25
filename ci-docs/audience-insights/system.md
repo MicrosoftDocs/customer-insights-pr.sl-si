@@ -1,7 +1,7 @@
 ---
 title: Konfiguracija sistema pri vpogledih v občinstvo
-description: Preberite več o sistemskih nastavitvah pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
+description: Več o sistemskih nastavitvah v Dynamics 365 Customer Insights občinstvo zmožnosti vpogledov.
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
-ms.translationtype: HT
+ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651860"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732390"
 ---
 # <a name="system-configuration"></a>Konfiguracija sistema
+
+Za dostop do sistemskih konfiguracij v občinstvo insights v levi navigacijski vrstici izberite **Admin** > **sistem** za ogled seznama sistemskih nalog in procesov.
 
 Stran **Sistem** vključuje naslednje zavihke:
 - [Status](#status-tab)
@@ -30,39 +32,55 @@ Stran **Sistem** vključuje naslednje zavihke:
 
 ## <a name="status-tab"></a>Zavihek stanja
 
-**Zavihek Stanje** omogoča sledenje napredku uvoza podatkov, izvoza podatkov in številnih drugih pomembnih procesih izdelkov. Preglejte informacije na tem zavihku, da zagotovite popolnost aktivnih procesov.
+The **Zavihek Status** omogoča spremljanje napredka opravil, vnosa podatkov, izvoza podatkov in več drugih pomembnih procesov izdelka. Preglejte informacije na tem zavihku, da zagotovite popolnost svojih aktivnih nalog in procesov.
 
-Ta zavihek vključuje tabele s podatki o stanju in obdelavi za različne procese. Vsaka tabela spremlja **Ime** opravila in njegove ustrezne entitete, **Stanje** njegovega zadnjega izvajanja in datum **Zadnje posodobitve**.
+Ta zavihek vključuje tabele s podatki o stanju in obdelavi za različne procese. Vsaka tabela spremlja **Ime** opravila in njegove ustrezne entitete, **Stanje** njegovega zadnjega izvajanja in datum **Zadnje posodobitve**. Podrobnosti zadnjih nekaj zagonov si lahko ogledate tako, da izberete ime opravila ali procesa. 
 
-Oglejte si podrobnosti o zadnjih nekaj izvedbah opravila tako, da izberete njegovo ime.
+Izberite stanje poleg opravila ali procesa v **Stanje** stolpec, da odprete **Podrobnosti o napredku** podokno.
 
-### <a name="status-types"></a>Vrste stanj
+   :::image type="content" source="media/system-progress-details.png" alt-text="Podokno s podrobnostmi o napredku sistema":::
 
-Na voljo je šest vrst stanja za opravila. Na straneh *Ujemanje*, *Spajanje*, *Viri podatkov*, *Segmenti*, *Mere*, *Obogatitev*, *Dejavnosti* in *Predvidevanja* so prikazane tudi naslednje vrste stanj:
+### <a name="status-definitions"></a>Definicije statusa
 
-- **Obdelava:** opravilo je v teku. Stanje se lahko spremeni v »Uspešno« ali »Neuspešno«.
-- **Uspešno:** opravilo je bilo uspešno dokončano.
-- **Preskočeno:** opravilo je bilo preskočeno. Eden ali več nadaljnjih postopkov, od katerih je odvisno opravilo, ne uspe ali ste jih preskočili.
-- **Neuspešno:** obdelava opravila ni uspela.
-- **Preklicano:** uporabnik je obdelavo preklical, še preden se je končala.
-- **V čakalni vrsti:** obdelovanje je v čakalni vrsti in se bo začelo, ko bodo dokončana vsa predhodna opravila. Če želite več informacij, si oglejte [pravilnike o osveževanju](#refresh-policies).
+Sistem uporablja naslednja stanja za opravila in procese:
 
-### <a name="refresh-policies"></a>Pravilniki osveževanja
+|Status  |Definicija  |
+|---------|---------|
+|Preklicano |Uporabnik je obdelavo preklical, preden se je končala.   |
+|Neuspelo   |Pri uvozu podatkov je prišlo do napak.         |
+|Ni uspelo  |Obdelava ni uspela.  |
+|Se ni začelo   |Vir podatkov še nima vključenih podatkov ali je še v načinu osnutka.         |
+|Predelava  |Naloga ali proces je v teku.  |
+|Osveževanje    |Uvažanje podatkov je v teku. Ta postopek lahko prekličete tako, da v stolpcu **Dejanja** izberete **Ustavi osveževanje**. Ustavitev osveževanja vira podatkov bo povrnjena na zadnje stanje osveževanja.       |
+|Preskočeno  |Naloga ali proces je bil preskočen. Eden ali več nadaljnjih postopkov, od katerih je odvisno opravilo, ne uspe ali ste jih preskočili.|
+|Uspešno  |Naloga ali proces je bil uspešno zaključen. Za vire podatkov označuje, da so bili podatki uspešno prevzeti, če je čas omenjen v **Osveženo** stolpec.|
+|V čakalni vrsti | Obdelava je v čakalni vrsti in se bo začela, ko bodo končana vsa nadaljnja opravila in procesi. Za več informacij glejte [Osvežite procese](#refresh-processes).|
 
-Ta seznam prikazuje pravilnike osveževanja za vsak glavni postopek:
+### <a name="refresh-processes"></a>Osvežite procese
 
-- **Viri podatkov:** zagon v skladu s [konfiguriranim razporedom](#schedule-tab). Ni odvisno od nobenega drugega postopka. Ujemanje je odvisno od uspešnega dokončanja tega postopka.
-- **Ujemanje:** zagon v skladu s [konfiguriranim razporedom](#schedule-tab). Odvisno je od obdelave virov podatkov, uporabljenih v definiciji ujemanja. Spajanje je odvisno od uspešnega dokončanja tega postopka.
-- **Spajanje:** zagon v skladu s [konfiguriranim razporedom](#schedule-tab). Odvisno je od dokončanja postopka ujemanja. Segmenti, mere, obogatitev, iskanje, dejavnosti, predvidevanja in priprava podatkov so odvisni od uspešnega dokončanja tega postopka.
-- **Segmenti**: zažene se ročno (enkratna osvežitev) in v skladu s [konfiguriranim razporedom](#schedule-tab). Odvisno je od spajanja. Vpogledi so odvisni od njegove obdelave.
-- **Mere**: zažene se ročno (enkratna osvežitev) in v skladu s [konfiguriranim razporedom](#schedule-tab). Odvisno je od spajanja.
-- **Dejavnosti**: zažene se ročno (enkratna osvežitev) in v skladu s [konfiguriranim razporedom](#schedule-tab). Odvisno je od spajanja.
-- **Obogatitev**: zažene se ročno (enkratna osvežitev) in v skladu s [konfiguriranim razporedom](#schedule-tab). Odvisno je od spajanja.
-- **Iskanje**: zažene se ročno (enkratna osvežitev) in v skladu s [konfiguriranim razporedom](#schedule-tab). Odvisno je od spajanja.
-- **Priprava podatkov**: zagon v skladu s [konfiguriranim razporedom](#schedule-tab). Odvisno je od spajanja.
-- **Vpogledi**: zažene se ročno (enkratna osvežitev) in v skladu s [konfiguriranim razporedom](#schedule-tab). Odvisno od segmentov.
+Osvežitev nalog in procesov se izvaja v skladu z [konfiguriran urnik](#schedule-tab). 
 
-Izberite stanje opravila, da si lahko ogledate podrobnosti o napredku celotnega posla, v katerega je bilo vključeno. Zgoraj navedeni pravilniki osveževanja lahko pripomorejo pri razumevanju, kaj lahko storite glede opravila, ki je bilo **Preskočeno** ali **V čakalni vrsti**.
+|Postopek  |Opis  |
+|---------|---------|
+|Dejavnost  |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja. Vpogledi so odvisni od njegove obdelave.|
+|Povezava analize |Teče ročno (enkratna osvežitev). Odvisno od segmentov.  |
+|Priprava analize |Teče ročno (enkratna osvežitev). Odvisno od segmentov.  |
+|Priprava podatkov   |Odvisno od združitve.   |
+|Viri podatkov   |Ni odvisno od nobenega drugega postopka. Ujemanje je odvisno od uspešnega dokončanja tega postopka.  |
+|Obogatitve   |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja. |
+|Izvozne destinacije |Teče ročno (enkratna osvežitev). Odvisno od segmentov.  |
+|Vpogledi |Teče ročno (enkratna osvežitev). Odvisno od segmentov.  |
+|Obveščanje   |Odvisno od združitve.   |
+|Povezovanje |Odvisno je od obdelave virov podatkov, uporabljenih v definiciji ujemanja.      |
+|Mere  |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja.  |
+|Spajanje   |Odvisno je od dokončanja postopka ujemanja. Segmenti, mere, obogatitev, iskanje, dejavnosti, predvidevanja in priprava podatkov so odvisni od uspešnega dokončanja tega postopka.   |
+|Profili   |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja. |
+|Poišči   |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja. |
+|Segmenti  |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja. Vpogledi so odvisni od njegove obdelave.|
+|Sistemsko   |Odvisno je od dokončanja postopka ujemanja. Segmenti, mere, obogatitev, iskanje, dejavnosti, predvidevanja in priprava podatkov so odvisni od uspešnega dokončanja tega postopka.   |
+|Uporabnik  |Teče ročno (enkratna osvežitev). Odvisno od subjektov.  |
+
+Izberite stanje procesa, da si ogledate podrobnosti o napredku celotnega opravila, v katerem je bil. Zgornji postopki osveževanja vam lahko pomagajo razumeti, kaj lahko storite za reševanje a **Preskočeno** oz **V čakalni vrsti** nalogo ali proces.
 
 ## <a name="schedule-tab"></a>Zavihek razporeda
 
@@ -86,7 +104,7 @@ Zavihek **Več o tem** vsebuje **Prikazno ime** vaše organizacije, dejavni **ID
 
 Obliko jezika in države/regije lahko spremenite v zavihku **Splošno**.
 
-Storitev Customer Insights [podpira številne jezike](/dynamics365/get-started/availability). Aplikacija uporablja vaše jezikovne nastavitve za prikaz elementov, kot so meni, besedilo oznake in sistemska sporočila, v vašem izbranem jeziku.
+Vpogled v stranke [podpira številne jezike](/dynamics365/get-started/availability). Aplikacija uporablja vaše jezikovne nastavitve za prikaz elementov, kot so meni, besedilo oznake in sistemska sporočila, v vašem izbranem jeziku.
 
 Uvoženi podatki in informacije, ki ste jih vnesli ročno, niso prevedeni.
 
@@ -109,7 +127,7 @@ Razdelek **Uporaba API-ja** vsebuje tri razdelke:
 
 -  **Postopki** – tabela z vrsticami za vsak razpoložljiv postopek API-ja in podrobnosti o uporabi postopkov. Izberete lahko ime postopka, da obiščete [sklice API-ja](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Postopki, ki uporabljajo [uvoz podatkov v realnem času](real-time-data-ingestion.md), vsebujejo gumb s simbolom daljnogleda za ogled sprotne uporabe API-ja. Izberite gumb, da odprete stransko podokno s podrobnostmi o uporabi za sprotno uporabo API-ja v trenutnem okolju.   
+   Operacije, ki uporabljajo [zaužitje podatkov v realnem času](real-time-data-ingestion.md) vsebujejo gumb z binokularnim simbolom za ogled uporabe API-ja v realnem času. Izberite gumb, da odprete stransko podokno s podrobnostmi o uporabi za sprotno uporabo API-ja v trenutnem okolju.   
    V podoknu **Sprotna uporaba API-ja** uporabite polje **Združi po**, da izberete, kako najbolje predstaviti svoje interakcije v realnem času. Podatke lahko združite po metodi API-ja, določenem imenu entitete (uvožena entiteta), avtorju ustvarjanja (vir dogodka), rezultatu (uspeh ali neuspeh) ali kodah napak. Podatki so na voljo kot grafikon zgodovine in kot tabela.
 
 ## <a name="security-tab"></a>Zavihek »Varnost«

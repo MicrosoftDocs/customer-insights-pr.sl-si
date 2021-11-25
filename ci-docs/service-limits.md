@@ -1,5 +1,5 @@
 ---
-title: Omejitve storitve v Dynamics 365 Customer Insights
+title: Omejitve storitev v Dynamics 365 Customer Insights
 description: Razumevanje omejitev.
 ms.date: 09/03/2021
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483709"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792000"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Omejitve storitve v zmogljivostih storitve Customer Insights
 
@@ -22,11 +22,11 @@ V tem članku so opisane vgrajene omejitve storitve Customer Insights, ki so zas
 
 ## <a name="audience-insights"></a>Vpogledi v občinstvo
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Omejitve storitev pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
+### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Omejitve storitev v zmožnosti vpogledov Dynamics 365 Customer Insights občinstvo
 
 | Površina  | Omejitve  | Beležke |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenti in mere | 100 segmentov ali mer. | Skupno število aktivnih [segmentov](audience-insights/segments.md) in [mer](audience-insights/measures.md) ne sme presegati 100.  |
+| Segmenti, meritve in napovedi | 300  | Skupno število [segmentih](audience-insights/segments.md),[ukrepe](audience-insights/measures.md), in [napovedi](audience-insights/predictions.md) skupaj ne sme presegati 300.  |
 | Odnosi | 20 stopenj globine v odnosih poti entitete. | Pri ustvarjanju [segmentov](audience-insights/segments.md) ali [ukrepov](audience-insights/measures.md) z uporabo vmesnika za gradnjo imajo lahko poti entitet do 20 povezav med začetno in ciljno entiteto.  |
 
 

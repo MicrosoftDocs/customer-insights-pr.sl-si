@@ -1,7 +1,7 @@
 ---
 title: Opravila v skupni rabi za scenarije predvidevanja
 description: Naučite se upravljati, odpravljati težave in izboljšati predvidevanja.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036485"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732008"
 ---
 # <a name="manage-predictions"></a>Upravljanje predvidevanj
 
@@ -50,12 +50,12 @@ Naslednji stolpci poročila vsebujejo koristne informacije za izboljšanje podat
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Primer poročila o uporabnosti vhodnih podatkov, ki prikazuje tabelo z napakami, opozorili in priporočili.":::
 
-- Ime: opisno ime napake, opozorila ali priporočila.
-- Korak: faza modela, kvalificiranje ali rezultat, na katerega se informacije nanašajo.
-- Stanje: resnost informacij (napaka, opozorilo, priporočilo).
-- Ime stolpca: stolpec v entiteti, ki jo je treba spremeniti za izboljšanje zmogljivosti modela.
-- Ime entitete: ime entitete, ki jo je treba spremeniti za izboljšanje zmogljivosti modela.
-- Podrobnosti: podrobnosti o napaki, opozorilu ali priporočilu.
+- **ime:** Opisno ime napake, opozorila ali priporočila.
+- **korak:** Model faza, vlak ali rezultat, se nanašajo informacije.
+- **Država:** Resnost informacij (napaka, opozorilo, priporočilo).
+- **Ime stolpca:** Stolpec v entiteti, ki jo je treba spremeniti za izboljšanje zmogljivosti modela.
+- **Ime subjekta:** Ime entitete, ki jo je treba spremeniti za izboljšanje zmogljivosti modela.
+- **Podrobnosti:** Podrobnosti o napaki, opozorilu ali priporočilu.
 
 ## <a name="refresh-a-prediction"></a>Osveževanje predvidevanja
 
@@ -66,6 +66,8 @@ Predvidevanja se bodo samodejno osvežila v istem [urniku, kot ga osvežijo vaš
 1. Izberite navpične tri pike poleg predvidevanja, ki ga želite osvežiti.
 
 1. Izberite **Osveži**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Brisanje predvidevanja
 

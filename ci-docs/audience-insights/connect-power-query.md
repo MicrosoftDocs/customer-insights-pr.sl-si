@@ -1,7 +1,7 @@
 ---
 title: Vključitev podatkov prek povezovalnika Power Query
 description: Povezovalniki za podatkovne vire, ki temeljijo na Power Query.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643514"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732238"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezava z virom podatkov Power Query
 
-Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Dynamics 365 Customer Insights podpira večino teh povezovalnikov. Dodajanje virov podatkov na podlagi povezovalnikov Power Query običajno sledi korakom, opisanim v naslednjem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Za več informacij glejte dokumentacijo o posameznih povezovalnikih v [sklicih na povezovalnike Power Query](/power-query/connectors/).
+Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Večino teh konektorjev podpira Dynamics 365 Customer Insights. Dodajanje virov podatkov na podlagi povezovalnikov Power Query običajno sledi korakom, opisanim v naslednjem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Za več informacij glejte dokumentacijo o posameznih povezovalnikih v [sklicih na povezovalnike Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -79,6 +79,8 @@ Povezovalniki s kljukico v stolpcu **Customer Insights (podatkovni toki)** so na
    > [!div class="mx-imgBorder"]
    > ![Možnost urejanja.](media/edit-option-data-sources.png "Možnost urejanja")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. Uporabite svoje spremembe in pretvorbe v pogovornem oknu **Power Query - Urejanje poizvedb**, kot je opisano v razdelku [Ustvari nov vir podatkov](#create-a-new-data-source).
 
 4. Izberite **Shrani** v Power Query po zaključitvi sprememb, da shranite spremembe.

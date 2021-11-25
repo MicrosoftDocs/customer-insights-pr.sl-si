@@ -1,7 +1,7 @@
 ---
 title: Semantične preslikave (predogledna različica)
 description: Pregled semantičnih preslikav in njihova uporaba.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622955"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731963"
 ---
 # <a name="semantic-mappings"></a>Semantične preslikave
 
@@ -75,8 +75,7 @@ Semantične preslikave vam omogočajo preslikavo podatkov o nedejavnosti v vnapr
 
 1. Če želite naknadno zagnati semantično preslikavo, izberite semantično preslikavo in izberite **Osveži**.
 
-> [!TIP]
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za enega izmed poslov izberete **Prikaži podrobnosti**, se prikažejo dodatne informacije: čas obdelave, zadnji datum obdelave ter vse napake in opozorila, povezana z opravilom.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Upravljanje obstoječih semantičnih preslikav
 
@@ -91,5 +90,6 @@ V razdelku **Podatki** > **Semantične preslikave (predogledna različica)** si 
 - **Preimenuj**: odpre pogovorno okno, v katero lahko vnesete drugo ime za izbrano semantično preslikavo. Če želite uporabiti spremembe, izberite **Shrani**.
 
 - **Izbriši**: odpre pogovorno okno za potrditev izbrisa izbrane semantične preslikave. Prav tako lahko izbrišete več kot eno semantično preslikavo hkrati, tako da izberete semantične preslikave in ikono za brisanje. Izberite možnost **Izbriši**, da pordite izbris.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

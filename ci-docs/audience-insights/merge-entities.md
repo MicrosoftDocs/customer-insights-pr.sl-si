@@ -1,7 +1,7 @@
 ---
 title: Združevanje entitet za poenotenje podatkov
 description: Združite entitete za ustvarjanje poenotenih profilov strank.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648274"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732792"
 ---
 # <a name="merge-entities"></a>Združevanje entitet
 
@@ -24,7 +24,7 @@ Faza spajanja je zadnja faza v postopku poenotenja podatkov. Njen namen je uskla
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Stran za spajanje v postopku poenotenja podatkov, ki prikazuje tabelo s spojenimi polji, ki določajo poenoten profil kupca.":::
 
-Po zaključku [faze ujemanja](match-entities.md) fazo spajanja začnete tako, da izberete ploščico **Spajanje** na strani **Poenotenje**.
+Po zaključku [faze ujemanja](match-entities.md) fazo spajanja začnete tako, da izberete ploščico [Spajanje](match-entities.md) na strani [Poenotenje](match-entities.md).
 
 ## <a name="review-system-recommendations"></a>Pregled priporočil sistema
 
@@ -187,10 +187,9 @@ Izberite možnost **Zaženi procese spajanja in procese iz strežnika**, da osve
 
 Če želite narediti več sprememb in ponoviti korak, lahko prekličete spajanje v teku. Izberite **Osveževanje ...**, nato pa **Prekliči posel** v stranskem podoknu, ki se prikaže.
 
-> [!TIP]
-> Ko zaženete postopek spajanja, izberite stanje procesa, da odprete podokno **Podrobnosti opravila**. Ponuja pregled časa obdelave, zadnjega datuma obdelave ter vseh napak in opozoril, povezanih z opravilom. Izberite **Glej podrobnosti**, da vidite, katere entitete so sodelovale v postopku ujemanja, ali je razreševanje sporov bilo uspešno in ali so bile posodobitve uspešno objavljene.  
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Pot do več podrobnosti o obdelavi s povezave do stanja opravila.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Pot do več podrobnosti o obdelavi s povezave do stanja opravila.":::
 
 ## <a name="next-step"></a>Naslednji korak
 

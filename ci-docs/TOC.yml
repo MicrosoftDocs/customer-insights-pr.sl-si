@@ -4,7 +4,7 @@
   href: overview.md
 - name: Brezplačna preskusna različica
   items:
-    - name: Vpis za brezplačno preskusno različico
+    - name: Prijavite se za brezplačno preskusno različico
       href: trial-signup.md
     - name: Pogosta vprašanja o preskusni različici
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Dodajanje mape Common Data Model kot vira podatkov
           href: audience-insights/connect-common-data-model.md
-        - name: Dodajanje upravljanega podatkovnega jezera Dataverse
+        - name: Dodajte Dataverse upravljano podatkovno jezero
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Postopna osvežitev za vire podatkov
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,13 +84,15 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Izboljšani naslovi
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Izboljšajte podatke o podjetju
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Obogatitev s storitvijo Zemljevidi Azure
           href: audience-insights/enrichment-azure-maps.md
         - name: Obogatitev z družbo HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Obogatitev z Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Obogatitev z družbo Experian
+        - name: Obogatitev z Experianom
           href: audience-insights/enrichment-experian.md
         - name: Obogatitev z uvozom po meri SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -180,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: Upravitelj oglasov za Facebook
+            - name: Facebook Upravitelj oglasov
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Pregled shem entitet v rešitvi Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Podatki Customer Insights v okolju Dataverse
+        - name: Podatki Customer Insights v Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Delo z API-ji
           href: audience-insights/apis.md
         - name: Sklici API-jev
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Upravljanje privolitve (predogled)
+  items:
+    - name: Središče za pomoč
+      href: consent-management/index.yml
+    - name: Pregled zmogljivosti
+      href: consent-management/overview.md
+    - name: Začni
+      items:
+        - name: Začni
+          href: consent-management/get-started.md
+        - name: Koncepti in terminologija
+          href: consent-management/glossary.md
+    - name: Uvoz podatkov o soglasju
+      items:
+        - name: Uvoz podatkov o soglasju
+          href: consent-management/import-consent-data.md
+        - name: Nastavite podatke o soglasju in uporabite nastavitve privolitve
+          href: consent-management/set-consent-rules.md
+    - name: Upravljajte podatke o privolitvi
+      items:
+        - name: Omogoči pravila o soglasju v občinstvo vpogledih
+          href: audience-insights/activate-consent.md
+        - name: Upravljajte privzeta pravila za soglasje v segmentih občinstvo vpogledov
+          href: audience-insights/change-default-consent-rules.md
+    - name: Upravljajte nastavitve in uporabnike
+      items:
+        - name: Konfigurirajte sistemske nastavitve
+          href: consent-management/system-settings.md
+        - name: Upravljajte uporabnike in dovoljenja
+          href: consent-management/manage-users.md
+    - name: Uporabite podatke o privolitvi
+      items:
+        - name: Ustvarite napovedi s podatki o soglasju
+          href: consent-management/predictions-consent-data.md
 - name: Vpogledi v interakcije (predogledna različica)
   items:
     - name: Središče za pomoč
@@ -304,7 +340,7 @@
           href: engagement-insights/websdk-sample.md
         - name: Vadnica za komplet za razvoj programske opreme za Android
           href: engagement-insights/get-started-android.md
-        - name: Vzorec kompleta za razvoj programske opreme za Android
+        - name: Android Vzorec kompleta za razvoj programske opreme
           href: engagement-insights/androidsdk-sample.md
         - name: Vadnica za komplet za razvoj programske opreme za iOS
           href: engagement-insights/get-started-ios.md

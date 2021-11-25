@@ -1,7 +1,7 @@
 ---
 title: Ujemanje entitet za poenotenje podatkov
 description: Ujemajte entitete za združevanje naborov podatkov in ustvarjanje poenotenih profilov strank.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648228"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732654"
 ---
 # <a name="match-entities"></a>Ujemanje entitet
 
@@ -79,7 +79,7 @@ Opozorilo **Potrebuje pravila** poleg imena entitete kaže, da za par ujemanja n
 
 1. Navedite **Ime** za pravilo.
 
-1. [Dodajte več pogojev](#add-conditions-to-a-rule) ali izberite **Končano** za dokončanje pravila.
+1. [Dodajte več pogojev](#add-conditions-to-a-rule) ali izberite [Končano](#add-conditions-to-a-rule) za dokončanje pravila.
 
 1. Po želji [dodajte več pravil](#add-rules-to-a-match-pair).
 
@@ -180,10 +180,7 @@ Pojdite v **Podatki** > **Poenotenje** > **Ujemanje** in izberite **Zaženi** za
 
 Rezultat uspešnega izvajanja, poenoteno entiteto profila stranke, boste našli na strani **Entitete**. Poenotena entiteta stranke se imenuje **Stranke** v razdelku **Profili**. Prvo uspešno izvajanje ujemanja ustvari poenoteno entiteto *stranke*. Vsa naslednja izvajanja ujemanja to entiteto razširijo.
 
-> [!TIP]
-> Ko zaženete postopek ujemanja, izberite stanje procesa, da odprete podokno **Podrobnosti opravila**. Ponuja pregled časa obdelave, zadnjega datuma obdelave ter vseh napak in opozoril, povezanih z opravilom. Izberite **Glej podrobnosti**, da vidite, katere entitete so sodelovale v postopku ujemanja, katera pravila so zanje veljala in ali so bile posodobitve uspešno objavljene.  
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Pot do več podrobnosti o obdelavi s povezave do stanja opravila.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Pregled in preverjanje ujemanj
 

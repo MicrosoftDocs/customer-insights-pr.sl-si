@@ -9,19 +9,21 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034563"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799701"
 ---
 # <a name="similar-customers-preview"></a>Podobne stranke (predogled)
 
 Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdete podobne stranke. Za uporabo te funkcije morate ustvariti vsaj en segment. Razširjanje meril obstoječega segmenta pomaga najti stranke, ki so podobne temu segmentu.
 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
+
 > [!NOTE]
-> Storitev *Poiščite podobne stranke* uporablja avtomatizirana sredstva za ocenjevanje podatkov in delanje prognoze na podlagi teh podatkov, zato se lahko uporabi kot metoda profiliranja, saj je ta izraz opredeljen v Splošni uredbi o varstvu podatkov ("GDPR"). Za strankino uporabo te funkcije za obdelavo podatkov lahko velja GDPR ali drugi zakoni ali predpisi. Sami ste odgovorni za to, da je vaša uporaba storitve Dynamics 365 Customer Insights, vključno s predvidevanji, v skladu z vsemi veljavnimi zakoni in predpisi, vključno z zakoni v zvezi z zasebnostjo, osebnimi podatki, biometričnimi podatki, varstvom podatkov in zaupnostjo komunikacij.
+> Storitev *Poiščite podobne stranke* uporablja avtomatizirana sredstva za ocenjevanje podatkov in delanje prognoze na podlagi teh podatkov, zato se lahko uporabi kot metoda profiliranja, saj je ta izraz opredeljen v Splošni uredbi o varstvu podatkov ("GDPR"). Za strankino uporabo te funkcije za obdelavo podatkov lahko velja GDPR ali drugi zakoni ali predpisi. Odgovorni ste za zagotovitev, da je vaša uporaba Dynamics 365 Customer Insights, vključno z napovedmi, v skladu z vsemi veljavnimi zakoni in predpisi, vključno z zakoni, povezanimi z zasebnostjo, osebnimi podatki, biometričnimi podatki, varstvom podatkov in zaupnostjo komunikacij.
 
 ## <a name="finding-similar-customers"></a>Iskanje podobnih strank
 

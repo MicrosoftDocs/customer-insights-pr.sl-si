@@ -1,7 +1,7 @@
 ---
 title: Obogatitev profilov strank s podatki družbe Microsoft
 description: Uporabite lastniške podatke družbe Microsoft, da obogatite podatke o strankah z priljubljenostjo znamk in zanimanj.
-ms.date: 06/14/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 51b150cbf5d9cfb3a5df42e680bcfa57ec5496cb
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617898"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732562"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatitev profilov strank s podatki o afiniteti do blagovnih znamk in zanimanj (predogled)
 
@@ -116,8 +116,7 @@ Zaženite obogatitev po tem, ko konfigurirate blagovne znamke, zanimanja in pres
 
 Glede na velikost podatkov o strankah lahko postopek obogatitve traja nekaj minut.
 
-> [!TIP]
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za eno izmed opravil izberete možnost **Prikaži podrobnosti**, boste lahko dostopali do naslednjih dodatnih informacij: čas obdelave, datum zadnjega poskusa obdelave ter vse napake in opozorila, povezana z nalogo.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="enrichment-results"></a>Rezultati obogatitve
 

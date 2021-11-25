@@ -1,7 +1,7 @@
 ---
 title: Dejavnosti stranke
 description: Določitev dejavnosti strank in njihov ogled v časovnici v profilih strank.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673158"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732480"
 ---
 # <a name="customer-activities"></a>Dejavnosti stranke
 
-Združite dejavnosti strank iz [različnih virov podatkov](data-sources.md) v rešitvi Dynamics 365 Customer Insights, da ustvarite časovnico, ki dejavnosti našteva v časovnem zaporedju. V aplikacijah Dynamics 365 vključite časovnico z rešitvijo [Dodatek za kartico stranke](customer-card-add-in.md) ali v nadzorni plošči storitve Power BI.
+Združite dejavnosti strank iz [različni viri podatkov](data-sources.md) v Dynamics 365 Customer Insights, da ustvarite časovnico, ki navaja dejavnosti kronološko. Vključite časovno os v aplikacije Dynamics 365 z [Dodatek za kartico stranke](customer-card-add-in.md) rešitev ali na Power BI nadzorni plošči.
 
 ## <a name="define-an-activity"></a>Določanje dejavnosti
 
@@ -82,9 +82,7 @@ Entiteta mora imeti vsaj en atribut vrste **Datum**, da je lahko vključena na �
 
 1. Za obdelavo dejavnosti na strani **Dejavnosti** izberite možnost **Zaženi**. 
 
-> [!TIP]
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za enega izmed poslov izberete **Prikaži podrobnosti**, se prikažejo dodatne informacije: čas obdelave, zadnji datum obdelave ter vse napake in opozorila, povezana z opravilom.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Upravljanje obstoječih dejavnosti
 
