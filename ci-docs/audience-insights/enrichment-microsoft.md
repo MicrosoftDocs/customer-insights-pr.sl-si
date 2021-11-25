@@ -1,7 +1,7 @@
 ---
 title: Obogatitev profilov strank s podatki družbe Microsoft
-description: Uporabite lastniške podatke družbe Microsoft, da obogatite podatke o strankah z priljubljenostjo znamk in zanimanj.
-ms.date: 11/01/2021
+description: Uporabite Microsoftove lastniške podatke, da obogatite svoje podatke o strankah z afinitetami in Delež prisotnosti.
+ms.date: 11/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,33 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: c25dbb7a877da2d3fccc1a4e5b219b9792bc6402
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
+ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732562"
+ms.lasthandoff: 11/11/2021
+ms.locfileid: "7793723"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatitev profilov strank s podatki o afiniteti do blagovnih znamk in zanimanj (predogled)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obogatite profile strank z afinitetami in Delež prisotnosti (predogled)
 
-Uporabite Microsoftove lastniške podatke, da obogatite podatke o strankah z priljubljenostjo znamk in zanimanj. Te afinitete temeljijo na podatkih oseb iz podobne demografske skupine kot vaše stranke. Te informacije vam pomagajo bolje razumeti in segmentirati vaše stranke na podlagi njihovih afinitet do določenih blagovnih znamk in zanimanj.
+Uporabite Microsoftove lastniške podatke, da obogatite svoje podatke o strankah z afinitetami blagovnih znamk, interesnimi afinitetami in Delež prisotnosti (SoV). Te afinitete in SoV temeljijo na podatkih ljudi s podobnimi demografskimi podatki kot vaše stranke. Te informacije vam pomagajo bolje razumeti in segmentirati svoje stranke glede na njihove afinitete ali SoV do določenih blagovnih znamk in interesov.
 
 V vpogledih v občinstvo odprite razdelek **Podatki** > **Obogatitev**, da [konfigurirate in si ogledate obogatitve](enrichment-hub.md).
 
-Če želite konfigurirati obogatitev priljubljenih blagovnih znamk, se pomaknite na zavihek **Odkrivanje** in izberite **Obogatitev podatkov** na ploščici **Blagovne znamke**.
+Če želite konfigurirati afinitete blagovne znamke in obogatitev SoV, pojdite na **Odkrij** zavihek in izberite **Obogatite moje podatke** na **Blagovne znamke** ploščice.
 
-Če želite konfigurirati obogatitev priljubljenih zanimanj, se pomaknite na zavihek **Odkrivanje** in izberite **Obogatitev podatkov** na ploščici **Zanimanja**.
+Če želite konfigurirati interesne afinitete in obogatitev SoV, pojdite na **Odkrij** zavihek in izberite **Obogatite moje podatke** na **Zanimanja** ploščice.
 
    > [!div class="mx-imgBorder"]
    > ![Ploščici Blagovne znamke in Zanimanja.](media/BrandsInterest-tile-Hub.png "Ploščici Blagovne znamke in Zanimanja")
 
-## <a name="how-we-determine-affinities"></a>Določitev priljubljenosti
+## <a name="how-we-determine-affinities-and-sov"></a>Kako določamo afinitete in SoV
 
-Microsoftove podatke o spletnih iskanjih uporabljamo za ugotavljanje priljubljenosti blagovnih znamk in interesov v različnih demografskih segmentih (opredeljenih s starostjo, spolom ali lokacijo). Obseg spletnega iskanja blagovne znamke ali zanimanja določa raven afinitete do blagovnih znamk ali zanimanj v posameznem demografskem segmentu v primerjavi z drugimi segmenti.
+Microsoftove podatke spletnega iskanja uporabljamo za iskanje afinitet in SoV za blagovne znamke in interese v različnih demografskih segmentih (opredeljenih glede na starost, spol ali lokacijo). Obseg spletnega iskanja za blagovno znamko ali zanimanje je osnova za določanje afinitete ali SoV. Vendar pa vsak ponuja drugačno perspektivo za razumevanje vaših strank.
+
+- Afiniteta je primerjava med demografskimi segmenti. Te podatke lahko uporabite za prepoznavanje demografskih segmentov, ki imajo največjo afiniteto do določene blagovne znamke ali zanimanja v primerjavi z drugimi segmenti.
+
+- Delež prisotnosti je primerjava vaših izbranih blagovnih znamk ali zanimanj. S temi informacijami lahko ugotovite, katera blagovna znamka ali zanimanje ima najvišji delež glasov za določen demografski segment v primerjavi z drugimi blagovnimi znamkami ali zanimanji, ki ste jih izbrali.
 
 ## <a name="affinity-level-and-score"></a>Stopnja afinitete in ocena
 
@@ -48,6 +52,10 @@ Za vsak obogateni profil stranke zagotavljamo dve povezani vrednosti: stopnjo af
 |Majhen     | 1–34        |
 
 Glede na granularnost, ki jo želite za merjenje afinitete, lahko uporabite možnost stopnje afinitete ali ocene afinitete. Ocena afinitete omogoča natančnejši nadzor.
+
+## <a name="share-of-voice-sov"></a>Delež prisotnosti (SoV)
+
+SoV izračunamo na 100-točkovni lestvici. Skupni SoV za vse blagovne znamke ali interese za vsak obogateni profil stranke znaša do 100. Za razliko od afinitet je SoV sorazmeren z blagovnimi znamkami in interesi, ki jih izberete. Vrednosti SoV za 'Microsoft' so lahko na primer drugačne, če so izbrane blagovne znamke ('Microsoft', 'GitHub') in ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Podprte države/regije
 
@@ -82,7 +90,7 @@ Preglejte privzete nastavitve obogatitve in jih po potrebi posodobite.
 
 ### <a name="select-entity-to-enrich"></a>Izberite entiteto za obogatitev
 
-Izberite možnost **Obogatena entiteta** in izberite nabor podatkov, ki ga želite obogatiti s podatki podjetja družbe Microsoft. Izberete lahko entiteto Stranka, da obogatite vse vaše profile strank, ali entiteto segmenta, da obogatite samo profile strank, ki jih vsebuje ta segment.
+Izberite **Obogatena entiteta** in izberite nabor podatkov, ki ga želite obogatiti s podatki iz Microsofta. Izberete lahko entiteto Stranka, da obogatite vse vaše profile strank, ali entiteto segmenta, da obogatite samo profile strank, ki jih vsebuje ta segment.
 
 ### <a name="map-your-fields"></a>Preslikajte polja
 
@@ -124,13 +132,11 @@ Po zagonu postopka obogatitve odprite razdelek **Moje obogatitve** in preglejte 
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Predogled rezultatov po zagonu postopka obogatitve.":::
 
-Preglejte obogatene podatke tako, da v grafikonu izberete možnost **Ogled obogatenih podatkov**. Obogateni podatki za blagovne znamke so poslani v entiteto **BrandAffinityFromMicrosoft**. Podatki za zanimanje so v entiteti **InteresAffinityFromMicrosoft**. Te entitete boste našli navedene tudi v skupini **Obogatitev** v **Podatki** > **Entitete**.
-
-Prikazal se bo grafikon s številom obogatenih profilov strank v določenem obdobju in predogledna različica obogatene entitete. Izberite **Pokaži več** v ploščici za predogled, da odprete obogateno entiteto.
+Našli boste grafikon s številom obogatenih profilov strank skozi čas in predogledi obogatenih entitet. Preglejte obogatene podatke z izbiro **Poglej več** v **Raven afinitete** oz **Delež prisotnosti** karte. Obogateni podatki za blagovne znamke gredo v **Blagovna znamkaAffinityFromMicrosoft** in **BrandShareOfVoiceFromMicrosoft** subjekti. Podatki za interese so v **InterestAffinityOd Microsofta** in **InterestShareOfVoiceFromMicrosoft** subjekti. Te entitete boste našli navedene tudi v skupini **Obogatitev** v **Podatki** > **Entitete**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Glejte podatke o obogatitvi na kartici stranke
 
-Afinitete do blagovnih znamk in interesov si je mogoče ogledati tudi na posameznih karticah strank. Odprite možnost **Stranke** in izberite profil stranke. Na kartici stranke boste našli grafikone blagovnih znamk ali zanimanj, ki so priljubljeni pri osebah v demografskem profilu stranke.
+Blagovna znamka in interes SoV si lahko ogledate tudi na posameznih karticah strank. Odprite možnost **Stranke** in izberite profil stranke. Na kartici stranke boste našli grafikone za blagovno znamko ali zanimanje SoV na podlagi ljudi v demografskem profilu te stranke.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartica stranke z obogatenimi podatki.":::
 

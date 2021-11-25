@@ -1,7 +1,7 @@
 ---
 title: Izboljšanje podatkov o podjetju
 description: Obogatite in normalizirajte podatke podjetja z Microsoftovimi modeli.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770190"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813937"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obogatitev profilov podjetij z izboljšanimi podatki o podjetju
 
@@ -51,7 +51,8 @@ Pri izboljšanih podatkih obstaja nekaj omejitev. Model ne podpira elementov na 
 
 1.  Potrdite identiteto podjetja. Ne preverjamo, ali je vhod obstoječa organizacija ali ali podjetje uporablja izhod kot svoje standardno ime.
 2.  Celovito pokrivajte podjetja po vsem svetu. Microsoftovi zbrani podatki o podjetju imajo globalno pokritost, vendar ponujajo največjo pokritost v Avstraliji, Kanadi, Združenem kraljestvu in Združenih državah.
-3.  Zagotavljamo točnost ali svežino podatkov. Ker se poslovne informacije pogosto spreminjajo, ne moremo zagotoviti, da so predloženi izboljšani podatki podjetja vedno točni ali posodobljeni.
+3.  Standardizirajte naslove podjetij po vsem svetu. Trenutno podpiramo standardizacijo naslovov v teh državah ali regijah: Avstralija, Kanada, Francija, Nemčija, Italija, Japonska, Združeno kraljestvo in Združene države.
+4.  Zagotavljamo točnost ali svežino podatkov. Ker se poslovne informacije pogosto spreminjajo, ne moremo zagotoviti, da so predloženi izboljšani podatki podjetja vedno točni ali posodobljeni.
 
 ## <a name="configure-the-enrichment"></a>Konfiguriranje obogatitve
 
