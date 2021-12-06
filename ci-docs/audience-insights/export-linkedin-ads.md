@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
-ms.translationtype: HT
+ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618311"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866908"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Izvoz segmentov v LinkedIn Ads (predogledna različica)
 
@@ -22,12 +22,13 @@ Izvozite segmente poenotenih profilov strank v LinkedIn Ads, da ustvarite ujemaj
 
 ## <a name="prerequisites"></a>Zahteve
 
--   Imate račun za [LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) in pripadajoče skrbniške poverilnice.
+-   Imate [LinkedIn Campaign Manager račun](https://business.linkedin.com/marketing-solutions/ads) in ustrezne skrbniške poverilnice.
 -   Imate [konfigurirane segmente](segments.md) pri vpogledih v občinstvo.
 -   Profili strank v izvoženih segmentih vsebujejo polje z e-poštnim naslovom.
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Vaš segment v storitvi Customer Insights mora vsebovati vsaj 300 edinstvenih profilov. 
 - V storitev LinkedIn Ads lahko izvozite do 100.000 profilov strank na izvoz.
 - Izvoz v LinkedIn Ads je omejen na segmente.
 - Izvoz do 100.000 profilov strank v storitev LinkedIn Ads lahko traja do 10 minut. 
@@ -42,13 +43,13 @@ Izvozite segmente poenotenih profilov strank v LinkedIn Ads, da ustvarite ujemaj
 
 1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Navedite svoj [ID računa LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
+1. Ponudite svoje [LinkedIn Campaign Manager ID računa](https://www.linkedin.com/help/lms/answer/a424270).
 
 1. Izberite potrditveno polje **Strinjam se**, da potrdite **Zasebnost in skladnost podatkov**.
 
 1. Izberite **Poveži** za inicializiranje povezave s storitvijo Campaign Monitor.
 
-1. Izberite **Preverjanje pristnosti z aplikacijo LinkedIn** in vnesite svoje skrbniške poverilnice za LinkedIn Campaign Manager.
+1. Izberite **Preverjanje pristnosti s LinkedInom** in navedite svoje skrbniške poverilnice za LinkedIn Campaign Manager.
 
 1. Izberite **Dodajte sebe kot uporabnika za izvoz** in vnesite svoje poverilnice Customer Insights.
 
@@ -68,7 +69,7 @@ Izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inform
 
 1. V razdelku **Ujemanje podatkov** za ciljanje stikov izberite vsaj eno polje, ki predstavlja e-poštni naslov stranke, ID oglasa Apple, ID oglasa Google, ID uporabnika Google ali ime in priimek. Če izberete ciljanje podjetja, izberite vsaj eno polje, ki predstavlja ime podjetja, e-poštno domeno, URL strani LinkedIn, simbol zaloge ali spletno mesto. Za nadaljnjo opredelitev izvoza lahko izberete dodatna polja. 
 
-1. Izberite segmente, ki jih želite izvoziti. Ujemajoče se ciljne skupine v LinkedIn Campaign Manager bodo samodejno ustvarjene z imenom segmentov za izvoz. Vsak segment bo prikazal ločeno ciljno skupino. 
+1. Izberite segmente, ki jih želite izvoziti. Ujemajoče se ciljne skupine v LinkedIn Campaign Manager bodo samodejno ustvarjene z imenom segmentov, ki ste jih izbrali za izvoz. Vsak segment bo prikazal ločeno ciljno skupino. 
 
 1. Izberite **Shrani**.
 
@@ -79,6 +80,6 @@ Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahk
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 
-Ko omogočite, da Dynamics 365 Customer Insights prenese podatke v LinkedIn Ads, dovolite prenos podatkov zunaj meja zagotavljanja skladnosti za Dynamics 365 Customer Insights, vključno potencialno občutljivih podatkov, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da LinkedIn Ads izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti, ki jih morda imate. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v LinkedIn Ads, dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da LinkedIn Ads izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti, ki jih morda imate. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Vaš skrbnik Dynamics 365 Customer Insights lahko kadar koli odstrani ta cilj izvoza, da prenehate uporabljati to funkcijo.
+Vaš Dynamics 365 Customer Insights skrbnik lahko kadar koli odstrani to destinacijo za izvoz, da ustavi uporabo te funkcije.

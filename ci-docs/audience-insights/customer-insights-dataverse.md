@@ -1,7 +1,7 @@
 ---
-title: Podatki Customer Insights v okolju Microsoft Dataverse
-description: Uporabite entitete Customer Insights kot tabele v okoljih Microsoft Dataverse.
-ms.date: 10/14/2021
+title: Podatki Customer Insights v Microsoft Dataverse
+description: Uporabite entitete Customer Insights kot tabele v Microsoft Dataverse.
+ms.date: 11/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,35 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 6f74559b34a95ed976a4e353c2dbabe59e1a8839
+ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645238"
+ms.lasthandoff: 11/29/2021
+ms.locfileid: "7866954"
 ---
-# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Delo s podatki Customer Insights v okolju Microsoft Dataverse
+# <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Delajte s podatki Customer Insights v Microsoft Dataverse
 
-Storitev Customer Insights nudi možnost omogočanja izhodnih entitet v okolju [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Ta integracija omogoča enostavno izmenjavo podatkov in razvoj po meri s pristopom, ki zahteva programiranje z malo kode/brez kode. Izhodne entitete bodo na voljo v obliki tabel v okolju Dataverse. Te tabele omogočajo scenarije, kot so [samodejni poteki dela prek Power Automate](/power-automate/getting-started), [aplikacije, ki temeljijo na modelu](/powerapps/maker/model-driven-apps/) in [aplikacije s platnom](/powerapps/maker/canvas-apps/) prek Power Apps. Podatke lahko uporabite za katero koli drugo aplikacijo, ki temelji na tabelah Dataverse. Trenutna izvedba v glavnem podpira iskanje, kjer je mogoče pridobiti podatke iz razpoložljivih entitet vpogledov občinstva za izbrani ID stranke.
+Customer Insights ponuja možnost, da so izhodne entitete na voljo v [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Ta integracija omogoča enostavno izmenjavo podatkov in razvoj po meri s pristopom, ki zahteva programiranje z malo kode/brez kode. Izhodne entitete bodo na voljo kot tabele v Dataverse. Te tabele omogočajo scenarije, kot so [samodejni potek dela prek Power Automate](/power-automate/getting-started),[aplikacije, ki jih poganja model](/powerapps/maker/model-driven-apps/) in [aplikacije za platno](/powerapps/maker/canvas-apps/) prek Power Apps. Podatke lahko uporabite za katero koli drugo aplikacijo, ki temelji na tabelah Dataverse. Trenutna izvedba v glavnem podpira iskanje, kjer je mogoče pridobiti podatke iz razpoložljivih entitet vpogledov občinstva za izbrani ID stranke.
 
-## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Priložite okolje Dataverse v Customer Insights
+## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Pripnite okolje Dataverse v Customer Insights
 
-**Organizacije z obstoječimi okolji Dataverse**
+**Organizacije z obstoječimi Dataverse okolji**
 
-Organizacije, ki že uporabljajo okolje Dataverse, lahko [uporabijo enega od obstoječih okolij Dataverse](create-environment.md), ko skrbnik nastavi vpoglede občinstva. Če navedete URL v okolje Dataverse, se priloži njegovemu novemu okolju za vpoglede občinstva. Da bi zagotovili najboljšo možno uspešnost, morata biti okolji Customer Insights in Dataverse gostovani v isti regiji.
+Organizacije, ki že uporabljajo Dataverse, lahko [uporabite eno od njihovih obstoječih okolij Dataverse](create-environment.md) ko skrbnik nastavi občinstvo vpoglede. Z zagotavljanjem URL-ja okolju Dataverse se ta poveže z njihovim novim okoljem občinstvo vpogledov. Za zagotovitev najboljše možne učinkovitosti morata okolja Customer Insights in Dataverse gostovati v isti regiji.
 
 **Nova organizacija**
 
-Če ustvarite novo organizacijo, ko nastavljate Customer Insights, boste samodejno pridobili novo okolje Dataverse.
+Če ustvarite novo organizacijo pri nastavitvi Customer Insights, boste samodejno dobili novo okolje Dataverse.
 
 > [!NOTE]
-> Če vaše organizacije že uporabljajo okolje Dataverse v svojem najemniku, si je dobro zapomniti, da [ustvarjanje okolja Dataverse upravlja skrbnik](/power-platform/admin/control-environment-creation.md). Če na primer s svojim organizacijskim računom nastavljate novo okolje za vpoglede občinstva in je skrbnik onemogočil ustvarjanje preizkusnih okolij Dataverse za vse, razen za skrbnike, ne morete ustvariti novega preizkusnega okolja.
+> Če vaše organizacije že uporabljajo Dataverse v svojem najemniku, si je pomembno zapomniti, da [Dataverse Ustvarjanje okolja nadzoruje skrbnik](/power-platform/admin/control-environment-creation.md) . Če na primer nastavljate novo okolje občinstvo vpogledov s svojim računom organizacije in je skrbnik onemogočil ustvarjanje Dataverse preskusnih okolij za vse, razen za skrbnike, ne morete ustvariti novega preskusnega okolja.
 > 
-> Preizkusna okolja Dataverse, ustvarjena v Customer Insights, imajo 3 GB prostora za shranjevanje, kar se ne bo vštelo v celotno zmogljivost, ki pripada najemniku. Plačljive naročnine so upravičene do okolja Dataverse s 15 GB prostora za zbirko podatkov in 20 GB prostora za shranjevanje datotek.
+> Preskusna okolja Dataverse, ustvarjena v storitvi Customer Insights, imajo 3 GB prostora za shranjevanje, kar se ne bo vštevalo v skupno zmogljivost, ki je upravičena do najemnika. Plačane naročnine dobijo Dataverse pooblastilo 15 GB za bazo podatkov in 20 GB za shranjevanje datotek.
 
 ## <a name="output-entities"></a>Izhodne entitete
 
-Nekatere izhodne entitete iz vpogledov občinstva so na voljo kot tabele v okolju Dataverse. Spodnji razdelki opisujejo pričakovano shemo teh tabel.
+Nekatere izhodne entitete iz občinstvo vpogledov so na voljo kot tabele v Dataverse. Spodnji razdelki opisujejo pričakovano shemo teh tabel.
 
 - [CustomerProfile](#customerprofile)
 - [AlternateKey](#alternatekey)
@@ -45,6 +45,7 @@ Nekatere izhodne entitete iz vpogledov občinstva so na voljo kot tabele v okolj
 - [CustomerMeasure](#customermeasure)
 - [Obogatitev](#enrichment)
 - [Predvidevanje](#prediction)
+- [Članstvo v segmentu](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -60,7 +61,7 @@ Tabela AlternateKey vsebuje ključe entitet, ki so sodelovale v postopku poenote
 |DataSourceName    |String         | Ime vira podatkov. Primer: `datasource5`.        |
 |EntityName        | String        | Ime entitete v vpogledih občinstva. Primer: `contact1`.        |
 |AlternateValue    |String         |Nadomestni ID, ki se preslika na ID stranke. Primer: `cntid_1078`         |
-|KeyRing           | Večvrstično besedilo        | Vrednost JSON  </br> Vzorec: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|KeyRing           | Večvrstično besedilo        | Vrednost JSON  </br> Vzorec: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"ključi":[" cntid_1078"]}]       |
 |CustomerId         | String        | ID poenotenega profila stranke.         |
 |AlternateKeyId     | GUID         |  Determinirani GUID AlternateKey, ki temelji na identifikatorju msdynci_identifier       |
 |msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Vzorec: `testdatasource|contact1|cntid_1078`    |
@@ -121,3 +122,16 @@ Ta tabela vsebuje rezultat predvidevanj modela.
 | Vrednosti               | Niz JSON | Seznam atributov, ki jih izdela model |
 | msdynci_predictionid | GUID        | Determinirani GUID, ustvarjen iz identifikatorja msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Članstvo v segmentu
+
+Ta tabela vsebuje informacije o članstvu v segmentih profilov strank.
+
+| Column        | Vnesi | Description                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | ID profila stranke        |
+| Ponudnik segmenta      | String       | Aplikacija, ki objavlja segmente. Privzeto: občinstvo vpogledi         |
+| SegmentMembershipType | String       | Vrsta stranke ta zapis članstva v segmentu. Podpira več vrst, kot so stranka, stik ali račun. Privzeto: Stranka  |
+| Segmenti       | Niz JSON  | Seznam edinstvenih segmentov, katerih član je profil stranke      |
+| msdynci_identifier  | String   | Enolični identifikator zapisa članstva v segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | Deterministični GUID, ustvarjen iz`msdynci_identifier`          |
