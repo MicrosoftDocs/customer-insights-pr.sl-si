@@ -1,7 +1,7 @@
 ---
 title: Povezovanje podatkov Common Data Model z računom Azure Data Lake
 description: Delo s podatki Common Data Model z uporabo storitve Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033146"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900217"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povezava z mapo Common Data Model z uporabo računa Azure Data Lake
 
@@ -30,7 +30,7 @@ V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z 
 
 - Azure Data Lake, ki ga želite povezati in od katerega želite vključiti podatke, mora biti v isti regiji Azure kot okolje Dynamics 365 Customer Insights. Povezave do mape Common Data Model iz jezera podatkov v drugi regiji Azure niso podprte. Če želite ugotoviti območje Azure v okolju, izberite **Skrbnik** > **Sistem** > **Vizitka** v razdelku vpogledov v občinstvo.
 
-- Podatki, shranjeni v spletnih storitvah, se lahko shranijo na drugem mestu kot na mestu, kjer se podatki obdelujejo ali shranjujejo v storitvi Dynamics 365 Customer Insights. Z uvažanjem podatkov ali povezovanjem s podatki, shranjenimi v spletnih storitvah, se strinjate, da se podatki lahko prenesejo in shranijo v storitvi Dynamics 365 Customer Insights. [Več o tem preberite v Microsoftovem središču zaupanja.](https://www.microsoft.com/trust-center)
+- Podatki, shranjeni v spletnih storitvah, so lahko shranjeni na drugi lokaciji kot tam, kjer se podatki obdelujejo ali shranjujejo v Dynamics 365 Customer Insights.Z uvozom ali povezovanjem s podatki, shranjenimi v spletnih storitvah, se strinjate, da se lahko podatki prenašajo in shranjujejo Dynamics 365 Customer Insights . [Več o tem v Microsoftovem centru za zaupanje](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Vzpostavitev povezave z mapo Common Data Model
 
@@ -38,12 +38,11 @@ V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z 
 
 1. Izberite **Dodaj vir podatkov**.
 
-1. Izberite **Vzpostavitev povezave z mapo Common Data Model**, vnesite **ime** za vir podatkov in izberite **Naprej**. Smernice za poimenovanje: 
-   - Začnite s črko.
-   - Uporabljajte samo črke in številke. Posebni znaki in presledki niso dovoljeni.
-   - Uporabite od 3 do 64 znakov.
+1. Izberite **Shramba podatkovnega jezera Azure**, vnesite a **ime** za vir podatkov, nato izberite **Naslednji**.
 
-1. Izbirate lahko med možnostjo, ki temelji na viru, in možnostjo preverjanja pristnosti, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Vnesite podatke **vsebnika** in izberite **Naprej**.
+   - Če ste pozvani, izberite enega od vzorčnih naborov podatkov, ki se nanašajo na vašo panogo, nato izberite **Naslednji**. 
+
+1. Izbirate lahko med možnostjo, ki temelji na viru, in možnostjo preverjanja pristnosti, ki temelji na naročnini. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md). Vnesite **Naslov strežnika**, izberite **Vpiši se**, nato izberite **Naslednji**.
    > [!div class="mx-imgBorder"]
    > ![Pogovorno okno za vnos novih podrobnosti povezave za Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z 
    > [!NOTE]
    > Vsaka datoteka model.json ali manifest.json, povezana z drugim virom podatkov v okolju, ne bo prikazana na seznamu.
 
-1. V izbrani datoteki model.json ali manifest.json boste prejeli seznam razpoložljivih entitet. Oglejte si ga in izberite možnost s seznama razpoložljivih entitet, nato pa izberite možnost **Shrani**. Vse izbrane entitete bodo vključene iz novega vira podatkov.
+1. Videli boste seznam razpoložljivih entitet v izbrani datoteki model.json ali manifest.json. Preglejte in izberite s seznama razpoložljivih entitet, nato izberite **Shrani**. Vse izbrane entitete bodo vključene iz novega vira podatkov.
    > [!div class="mx-imgBorder"]
    > ![Pogovorno okno s seznamom entitet iz datoteke model.json.](media/review-entities.png)
 
-8. Navedite, za katere podatkovne entitete želite omogočiti profiliranje podatkov, in izberite **Shrani**. Profiliranje podatkov omogoča analitiko in druge zmogljivosti. Izberete lahko celotno entiteto, pri čemer se izbere vse atribute iz entitete, ali izberete določene atribute po svoji izbiri. Privzeto nobena entiteta ni omogočena za profiliranje podatkov.
+8. Označite, katere podatkovne entitete želite omogočiti profiliranje podatkov, nato izberite **Shrani**. Profiliranje podatkov omogoča analitiko in druge zmogljivosti. Izberete lahko celotno entiteto, pri čemer se izbere vse atribute iz entitete, ali izberete določene atribute po svoji izbiri. Privzeto nobena entiteta ni omogočena za profiliranje podatkov.
    > [!div class="mx-imgBorder"]
    > ![Pogovorno okno, ki prikazuje profiliranje podatkov.](media/dataprofiling-entities.png)
 

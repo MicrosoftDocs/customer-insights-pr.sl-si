@@ -4,7 +4,7 @@
   href: overview.md
 - name: Brezplačna preskusna različica
   items:
-    - name: Prijavite se za brezplačno preskusno različico
+    - name: Vpis za brezplačno preskusno različico
       href: trial-signup.md
     - name: Pogosta vprašanja o preskusni različici
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Dodajanje mape Common Data Model kot vira podatkov
           href: audience-insights/connect-common-data-model.md
-        - name: Dodajte Dataverse upravljano podatkovno jezero
+        - name: Dodajanje upravljanega podatkovnega jezera Dataverse
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Postopna osvežitev za vire podatkov
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,7 +84,7 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Izboljšani naslovi
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Izboljšajte podatke o podjetju
+        - name: Izboljšani podatki podjetja
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Obogatitev s storitvijo Zemljevidi Azure
           href: audience-insights/enrichment-azure-maps.md
@@ -92,8 +92,10 @@
           href: audience-insights/enrichment-here.md
         - name: Obogatitev z Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Obogatitev z Experianom
+        - name: Obogatitev z družbo Experian
           href: audience-insights/enrichment-experian.md
+        - name: Obogatite z Office 365 podatkov
+          href: audience-insights/enrichment-office.md
         - name: Obogatitev z uvozom po meri SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmenti
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Poskusi s strojnim učenjem Azure
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Eksperimentiranje s studiem za strojno učenje Azure
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Upravljanje predvidevanj
           href: audience-insights/manage-predictions.md
         - name: Ustvarjanje segmentov na podlagi predvidevanja
@@ -182,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook Upravitelj oglasov
+            - name: Upravitelj oglasov za Facebook
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
@@ -240,13 +240,15 @@
               href: audience-insights/use-azure-key-vault.md
             - name: Povezovanje z računom za shranjevanje ADLS prek glavnega imena storitve
               href: audience-insights/connect-service-principal.md
+            - name: Izvozi diagnostične dnevnike
+              href: audience-insights/diagnostics.md
     - name: Razširljivost
       items:
         - name: Integracija spletnih podatkov iz vpogledov interakcij
           href: audience-insights/integrate-engagement-insights.md
         - name: Pregled shem entitet v rešitvi Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Podatki Customer Insights v Dataverse
+        - name: Podatki Customer Insights v okolju Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Delo z API-ji
           href: audience-insights/apis.md
@@ -340,7 +342,7 @@
           href: engagement-insights/websdk-sample.md
         - name: Vadnica za komplet za razvoj programske opreme za Android
           href: engagement-insights/get-started-android.md
-        - name: Android Vzorec kompleta za razvoj programske opreme
+        - name: Vzorec kompleta za razvoj programske opreme za Android
           href: engagement-insights/androidsdk-sample.md
         - name: Vadnica za komplet za razvoj programske opreme za iOS
           href: engagement-insights/get-started-ios.md

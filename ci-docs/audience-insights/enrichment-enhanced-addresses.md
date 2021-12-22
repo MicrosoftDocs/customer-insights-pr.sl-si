@@ -1,7 +1,7 @@
 ---
-title: Obogatitev izboljšave naslova
+title: Obogatitev naslova (videoposnetek)
 description: Z Microsoftovimi modeli obogatite in uravnotežite podatke o naslovih za profile strank.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643445"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927531"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogatitev profilov strank z izboljšanimi naslovi
 
@@ -101,6 +101,16 @@ Naslovi morajo vsebovati vrednost države/regije. Ne obdelujemo naslovov za drž
 Po končanem postopku obogatitve lahko podatke o na novo obogatenih profilih strank pregledate v možnosti **Moje obogatitve**. Poleg tega boste našli čas zadnje posodobitve in število obogatenih profilov.
 
 Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izberete **Ogled obogatenih podatkov**.
+
+### <a name="overview-card"></a>Pregledna kartica
+
+Pregledna kartica prikazuje podrobnosti o kritju obogatitve. 
+
+* **Stranke obdelane in spremenjene** : število uspešno obogatenih profilov strank.
+
+* **Stranke obdelane in niso spremenjene** : število profilov strank, ki so bili prepoznani, vendar nespremenjeni. Običajno se zgodi, ko so vhodni podatki veljavni in jih z obogatitvijo ni mogoče izboljšati.
+
+* **Stranke niso obdelane in niso spremenjene** : Število profilov, ki niso bili prepoznani. Običajno za vhodne podatke, ki so neveljavni ali niso podprti z obogatitvijo.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

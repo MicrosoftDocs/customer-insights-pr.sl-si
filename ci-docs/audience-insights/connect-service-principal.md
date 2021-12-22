@@ -1,7 +1,7 @@
 ---
 title: Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve
 description: Uporaba glavnega imena storitve Azure za povezovanje s shrambo Data Lake.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645192"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900295"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve Azure
 
-Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omejena dovoljenja. Namesto da bi se v aplikacije vpisali kot uporabnik s vsemi pravicami, Azure ponuja glavno ime storitve. Preberite, če želite izvedeti, kako se povezati s storitvijo Dynamics 365 Customer Insights z računom Azure Data Lake Storage tako, da uporabite glavno ime storitve Azure namesto ključev računa za shranjevanje. 
+Ta članek govori o tem, kako se povezati Dynamics 365 Customer Insights z Azure Data Lake Storage račun z uporabo principala storitve Azure namesto ključev računa za shranjevanje. 
 
-Lahko uporabite glavno ime storitve, da varno [dodate ali uredite mapo Common Data Model kot vir podatkov](connect-common-data-model.md), oz. [ustvarite ali posodobite okolje](create-environment.md).
+Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omejena dovoljenja. Namesto da bi se v aplikacije vpisali kot uporabnik s vsemi pravicami, Azure ponuja glavno ime storitve. Za varno lahko uporabite principe storitev [dodajte ali uredite mapo skupnega podatkovnega modela kot vir podatkov](connect-common-data-model.md) oz [ustvarite ali posodobite okolje](create-environment.md).
 
 > [!IMPORTANT]
 > - Račun storitve Data Lake Storage, ki bo uporabljal glavno ime storitve, mora imeti [omogočen hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
-> - Za izdelavo glavnega imena storitve potrebujete skrbniška dovoljenja za naročnino Azure.
+> - Za ustvarjanje principala storitve potrebujete skrbniška dovoljenja za svojo naročnino na Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Ustvarjanje glavnega imena storitve Azure za storitev Customer Insights
 
-Preden ustvarite novo glavno ime storitve za vpoglede občinstva ali vpoglede v interakcije, preverite, ali v vaši organizaciji že obstaja.
+Preden ustvarite novega principala storitve za Customer Insights, preverite, ali že obstaja v vaši organizaciji.
 
 ### <a name="look-for-an-existing-service-principal"></a>Poiščite obstoječega glavnega imena storitve
 

@@ -1,20 +1,20 @@
 ---
-title: Dodatek za kartico stranke v aplikacijah Dynamics 365
+title: Dodatek za kartico stranke za aplikacije Dynamics 365 (video)
 description: S tem dodatkom prikažite podatke iz vpogledov v občinstvo v aplikacijah Dynamics 365.
-ms.date: 09/30/2021
+ms.date: 12/07/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: pkieffer
-ms.author: philk
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
-ms.translationtype: MT
+ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
+ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7792046"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "7921885"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatek za kartico stranke (predogled)
 
@@ -27,20 +27,20 @@ Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 
 ## <a name="prerequisites"></a>Zahteve
 
 - Dodatek deluje samo z aplikacijami Dynamics 365, ki temeljijo na modelu, na primer Sales ali Customer Service, različice 9.0 in novejše.
-- Da se vaši podatki Dynamics 365 preslikajo v profile strank občinstvo insights, jih je treba [vneseno iz aplikacije Dynamics 365 s priključkom Microsoft Dataverse](connect-power-query.md).
+- Da se bodo vaši podatki iz aplikacije Dynamics 365 preslikali v profile strank za vpoglede v občinstvo, morajo biti [uvoženi iz aplikacije Dynamics 365 s priključkom Microsoft Dataverse](connect-power-query.md).
 - Vsi uporabniki aplikacije Dynamics 365 in dodatka za kartice strank morajo biti za ogled podatkov [dodani kot uporabniki](permissions.md) v vpogledih v občinstvo.
 - Za delovanje iskanja podatkov so zahtevane [konfigurirane možnosti iskanja in filtriranja](search-filter-index.md) v vpogledih v občinstvo.
 - Vsak kontrolnik dodatka se zanaša na določene podatke v vpogledih v občinstvo. Nekateri podatki in kontrolniki so na voljo samo v okoljih določenih vrst. Konfiguracija dodatka vas bo obvestila, če kontrolnik zaradi izbrane vrste okolja ni na voljo. Več informacij o [primerih uporabe okolja](work-with-business-accounts.md).
   - **Nadzor meritev**: zahteva [konfigurirana merila](measures.md) za vrsto atributov stranke.
-  - **Kontrolnik obveščanja**: zahteva podatke, ustvarjene z [napovedmi](predictions.md) ali [modeli po meri](custom-models.md).
+  - **Nadzor inteligence** : Zahteva podatke, ustvarjene z uporabo [napovedi ali modeli po meri](predictions-overview.md).
   - **Kontrolnik podrobnosti stranke**: vsa polja iz profila so na voljo v poenotenem profilu stranke.
-  - **Kontrolnik obogatitve**: zahteva, da so za profile strank uporabljene aktivne [obogatitve](enrichment-hub.md). Dodatek za kartice podpira te obogatitve: [Blagovne znamke](enrichment-microsoft.md) zagotavlja Microsoft, [Zanimanja](enrichment-microsoft.md) zagotavlja Microsoft.
+  - **Kontrolnik obogatitve**: zahteva, da so za profile strank uporabljene aktivne [obogatitve](enrichment-hub.md). Dodatek za kartice podpira te obogatitve: [Blagovne znamke](enrichment-microsoft.md) zagotavlja Microsoft, [Zanimanja](enrichment-microsoft.md) ki jih zagotavlja Microsoft, in [Podatki o poslovanju s pisarno](enrichment-office.md) zagotavlja Microsoft.
   - **Kontrolnik stikov**: zahteva opredelitev pomenske entitete vrste stikov.
   - **Kontrolnik časovnice**: zahteva [konfigurirane dejavnosti](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Namestitev dodatka za kartice strank
 
-Dodatek za kartico stranke je rešitev za aplikacije za sodelovanje s strankami v rešitvi Dynamics 365. Če želite namestiti rešitev, pojdite na AppSource in poiščite **Dynamics Customer Card**. Izberite [Dodatek za kartico stranke na AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) in izberite **Pridobite ga zdaj**.
+Dodatek za kartico stranke je rešitev za aplikacije za sodelovanje s strankami v rešitvi Dynamics 365. Če želite namestiti rešitev, odprite AppSource in poiščite možnost **Kartica za stranke Dynamics**. Izberite [dodatek za kartice strank v trgovini AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) in izberite **Prenesi zdaj**.
 
 Morda se boste morali vpisati s svojimi skrbniškimi poverilnicami za aplikacijo Dynamics 365, da boste lahko namestili rešitev. Namestitev rešitve v vaše okolje lahko traja nekaj časa.
 
@@ -48,7 +48,7 @@ Morda se boste morali vpisati s svojimi skrbniškimi poverilnicami za aplikacijo
 
 1. Kot skrbnik pojdite v razdelek **Nastavitve** v storitvi Dynamics 365 in izberite **Rešitve**.
 
-1. Izberite **prikazno ime** povezava za **Dynamics 365 Customer Insights Dodatek za kartico stranke (predogled)** rešitev.
+1. Izberite povezavo **Prikazno ime** za rešitev dodatka kartice za stranke za **Dynamics 365 Customer Insights (predogled)**.
 
    > [!div class="mx-imgBorder"]
    > ![Izberite prikazano ime.](media/select-display-name.png "Izberite prikazano ime.")

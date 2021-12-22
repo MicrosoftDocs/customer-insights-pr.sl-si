@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770144"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884236"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogatitev profilov strank (predogled)
 
@@ -46,6 +46,7 @@ V zavihku **Odkrivanje** boste našli vse podprte možnosti obogatitve.
 - [Podatki o lokaciji](enrichment-here.md), ki jih zagotavlja HERE Technologies 
 - [Podatki po meri](enrichment-SFTP-custom-import.md) s protokolom za varen prenos datotek (SFTP) 
 - [Storitev Zemljevidi Azure](enrichment-azure-maps.md) zagotavlja Microsoft
+- [Podatki o udeležbi na računu](enrichment-office.md) zagotavlja Microsoft
 
 ---
 
@@ -77,7 +78,7 @@ Entiteta, ki jo je treba obogatiti, je določena med konfiguriranjem obogatitve,
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Oglejte si napredek postopka obogatitve
 
-Podrobnosti o obdelavi obogatitve, vključno s stanjem in možnimi težavami, lahko najdete med osveževanjem ali po končani osvežitvi. Spoznajte, kateri postopki so potrebni za osvežitev obogatitve in koliko časa je trajalo, da so se postopki izvedli. Stanje obogatitve je podprto za Experian, Leadspace, HERE Technologies, SFTP Import in Azure Maps.
+Podrobnosti o obdelavi obogatitve, vključno s stanjem in možnimi težavami, lahko najdete med osveževanjem ali po končani osvežitvi. Spoznajte, kateri postopki so potrebni za osvežitev obogatitve in koliko časa je trajalo, da so se postopki izvedli. Stanje obogatitve je podprto za družbe Experian, Leadspace, HERE Technologies, SFTP Import in storitev Zemljevidi Azure.
 
 Če si želite ogledati stanje obogatitve:
 

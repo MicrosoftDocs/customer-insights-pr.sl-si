@@ -1,7 +1,7 @@
 ---
-title: Vključitev podatkov prek povezovalnika Power Query
+title: Vnos podatkov prek Power Query konektorja (video)
 description: Povezovalniki za podatkovne vire, ki temeljijo na Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732238"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903860"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezava z virom podatkov Power Query
 
-Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Večino teh konektorjev podpira Dynamics 365 Customer Insights. Dodajanje virov podatkov na podlagi povezovalnikov Power Query običajno sledi korakom, opisanim v naslednjem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Za več informacij glejte dokumentacijo o posameznih povezovalnikih v [sklicih na povezovalnike Power Query](/power-query/connectors/).
+Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Dynamics 365 Customer Insights podpira večino teh povezovalnikov. 
+
+Dodajanje podatkovnih virov na podlagi Power Query konektorjev običajno sledi korakom, opisanim v tem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Če želite izvedeti več, si oglejte dokumentacijo o posameznih konektorjih v [Power Query referenca konektorja](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Večino teh kon
 
 1. Izberite **Dodaj vir podatkov**.
 
-1. Izberite način **Uvozi podatke** in nato **Naprej**.
+1. Izberite **Microsoft Power Query**, nato izberite **Naslednji**.
 
-1. Vnesite **Ime** za vir podatkov in izberite **Naprej**, da ustvarite vir podatkov. Smernice za poimenovanje: 
-   - Začnite s črko.
-   - Uporabljajte samo črke in številke. Posebni znaki in presledki niso dovoljeni.
-   - Uporabite od 3 do 64 znakov.
+1. Vnesite **Ime** za vir podatkov in izberite **Naprej**, da ustvarite vir podatkov.
 
-1. Izberite enega od [razpoložljivih povezovalnikov](#available-power-query-data-sources). Za ta primer izberemo povezovalnik **Besedilo/CSV**.
+1. Izberite enega od [razpoložljivih povezovalnikov](#available-power-query-data-sources). V tem primeru izberemo **Besedilo/CSV** konektor.
 
 1. Vnesite zahtevane podrobnosti v **Nastavitve povezave** za izbrani povezovalnik in izberite **Naprej**, da si ogledate predogled podatkov.
 
@@ -50,7 +49,7 @@ Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Večino teh kon
 
 1. Virom podatkov lahko dodate dodatne entitete tako, da izberete **Pridobi podatke** v pogovornem oknu **Urejanje poizvedb**.
 
-   Ta preoblikovanja so zelo priporočljiva:
+   Priporočamo, da uporabite naslednje transformacije:
 
    - Če vnašate podatke iz datoteke CSV, prva vrstica pogosto vsebuje glave. Pojdite na **Tabela pretvorb** in izberite **Uporabi glave kot prvo vrstico**.
    - Prepričajte se, da je vrsta podatkov pravilno nastavljena.
@@ -61,7 +60,7 @@ Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Večino teh kon
 
 ## <a name="available-power-query-data-sources"></a>Razpoložljivi viri podatkov Power Query
 
-Glejte [sklicevanje na povezovalnik Power Query](/power-query/connectors/) za posodobljen seznam povezovalnikov, ki jih lahko izberete za uvoz podatkov v Customer Insights. 
+Glej [Power Query referenca konektorja](/power-query/connectors/) za seznam povezovalnikov, ki jih lahko uporabite za uvoz podatkov v Customer Insights. 
 
 Povezovalniki s kljukico v stolpcu **Customer Insights (podatkovni toki)** so na voljo za ustvarjanje novih virov podatkov, ki temeljijo na Power Query. Preglejte dokumentacijo določenega povezovalnika, če želite izvedeti več o njegovih predpogojih, omejitvah in drugih podrobnostih.
 
@@ -70,7 +69,7 @@ Povezovalniki s kljukico v stolpcu **Customer Insights (podatkovni toki)** so na
 > [!NOTE]
 > Morda ne bo mogoče spreminjati virov podatkov, ki se trenutno uporabljajo v enem od procesov aplikacije (na primer *segmentacija*, *ujemanje* ali *spajanje*). 
 >
-> Na strani **Nastavitve** lahko spremljate potek posameznih dejavnih procesov. Ko se proces zaključi, se lahko vrnete na stran **Viri podatkov** in opravite spremembe.
+> V **Nastavitve** strani, lahko spremljate napredek vsakega od aktivnih procesov. Ko se proces zaključi, se lahko vrnete na stran **Viri podatkov** in opravite spremembe.
 
 1. Pri vpogledih v občinstvo izberite **Podatki** > **Viri podatkov**.
 

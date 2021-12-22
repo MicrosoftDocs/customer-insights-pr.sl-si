@@ -1,7 +1,7 @@
 ---
 title: Semantične preslikave (predogledna različica)
 description: Pregled semantičnih preslikav in njihova uporaba.
-ms.date: 11/01/2021
+ms.date: 12/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7731963"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881850"
 ---
-# <a name="semantic-mappings"></a>Semantične preslikave
+# <a name="semantic-mappings-preview"></a>Semantične preslikave (predogledna različica)
 
 Semantične preslikave vam omogočajo preslikavo podatkov o nedejavnosti v vnaprej določene sheme. Te sheme pomagajo vpogledom v občinstvo, da bolje razumejo vaše atribute podatkov. Semantična preslikava in predloženi podatki omogočajo nove vpoglede in funkcije v vpogledih v občinstvo. Če želite podatke o dejavnosti preslikati v sheme, preglejte dokumentacijo [dejavnosti](activities.md).
 
@@ -91,5 +91,40 @@ V razdelku **Podatki** > **Semantične preslikave (predogledna različica)** si 
 
 - **Izbriši**: odpre pogovorno okno za potrditev izbrisa izbrane semantične preslikave. Prav tako lahko izbrišete več kot eno semantično preslikavo hkrati, tako da izberete semantične preslikave in ikono za brisanje. Izberite možnost **Izbriši**, da pordite izbris.
 
+## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Uporabite preslikavo semantične entitete ContactProfile za ustvarjanje dejavnosti na ravni stika
+
+Po ustvarjanju a *KontaktProfil* semantično preslikavo entitet, lahko zajamete dejavnosti stikov. Omogoča vam, da na časovnici dejavnosti za račun vidite, kateri stik je bil odgovoren za posamezno dejavnost. Večina korakov sledi tipični konfiguraciji preslikave dejavnosti.
+
+   > [!NOTE]
+   > Da bi dejavnosti na ravni stika delovale, morate imeti oboje **ID računa** in **ID stika** atribute za vsak zapis znotraj vaših podatkov o dejavnosti.
+
+1. [Definiraj a *KontaktProfil* preslikava semantičnih entitet.](#define-a-contactprofile-semantic-entity-mapping) In zaženite semantično preslikavo.
+
+1. Pri vpogledih v občinstvo izberite **Podatki** > **Dejavnosti**.
+
+1. Izberite **Dodaj dejavnost** ustvariti novo dejavnost.
+
+1. Poimenujte dejavnost, izberite izvorno entiteto dejavnosti in izberite primarni ključ entitete dejavnosti.
+
+1. V **Odnosi** korak, ustvarite posredno razmerje med vašimi izvornimi podatki o dejavnosti in računi, pri čemer uporabite svoje kontaktne podatke kot posredniško enoto. Za več informacij glejte [neposrednih in posrednih odnosih](relationships.md#relationship-paths).
+   - Primer razmerja za dejavnost, ki se imenuje *Nakupi*:
+      - **Podatki o izvorni dejavnosti nakupov** > **Kontaktni podatki** na atribut **ID stika**
+      - **Kontaktni podatki** > **Podatki o računu** na atribut **ID računa**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Primer nastavitve razmerja.":::
+
+1. Ko nastavite Odnosi, izberite **Naslednji** in dokončajte konfiguracijo preslikave dejavnosti. Za podrobne korake pri ustvarjanju dejavnosti glejte [opredeliti dejavnost](activities.md).
+
+1. Zaženite svoje preslikave dejavnosti.
+
+1. Vaše dejavnosti na ravni stika bodo zdaj vidne na časovnici vaše stranke.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Končni rezultat po konfiguraciji kontaktnih aktivnosti":::
+
+### <a name="contact-level-activity-timeline-filtering"></a>Filtriranje časovne osi dejavnosti na ravni stika
+
+Ko konfigurirate preslikavo dejavnosti na ravni stika in ga zaženete, bo časovnica dejavnosti za vaše stranke posodobljena. Vključuje njihove ID-je ali imena, odvisno od vašega *KontaktProfil* konfiguracijo za dejavnosti, na katere so delovali. Dejavnosti lahko filtrirate po stikih na časovnici, da vidite določene stike, ki vas zanimajo. Poleg tega si lahko ogledate vse dejavnosti, ki niso dodeljene določenemu stiku, tako da izberete **Dejavnosti, ki niso preslikane v stik**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Možnosti filtriranja so na voljo za dejavnosti na ravni stika.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

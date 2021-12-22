@@ -1,7 +1,7 @@
 ---
 title: Modeli strojnega učenja po meri | Microsoftovo gradivo
 description: Uporabite modele po meri iz rešitve za strojno učenje Azure v aplikaciji Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032962"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881804"
 ---
 # <a name="custom-machine-learning-models"></a>Modeli strojnega učenja po meri
+
+> [!NOTE]
+> Podpora za Strojno učenje Studio (klasični) bo prenehala 31. avgusta 2024. Priporočamo prehod na [Azure Strojno učenje](/azure/machine-learning/overview-what-is-azure-machine-learning) do tega datuma.
+>
+> Od 1. decembra 2021 ne boste mogli ustvarjati novih virov Strojno učenje Studio (klasičnih). Do 31. avgusta 2024 lahko še naprej uporabljate obstoječe vire Strojno učenje Studio (klasične). Za več informacij glejte [Preselitev v Azure Strojno učenje](/azure/machine-learning/migrate-overview).
+
 
 Možnost **Obveščanje** > **Modeli po meri** vam omogoča upravljanje potekov dela v modelih storitve Strojno učenje Azure. Poteki dela vam pomagajo izbrati podatke, iz katerih želite ustvariti vpogled, in rezultate preslikati v vaše poenotene podatke o strankah. Za več informacij o izdelavi modelov strojnega učenja po meri glejte razdelek [Uporaba modelov, ki temeljijo na strojnem učenju Azure](azure-machine-learning-experiments.md).
 
@@ -26,7 +32,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Trenutno ta funkcija podpira spletne storitve, objavljene prek možnosti [studio za strojno učenje (klasični način)](https://studio.azureml.net) in [prodajni lijaki paketov za strojno učenje Azure](/azure/machine-learning/concept-ml-pipelines).
+- Ta funkcija podpira spletne storitve, objavljene prek [Azure Strojno učenje paketni cevovodi](/azure/machine-learning/concept-ml-pipelines).
 
 - Za uporabo te funkcije potrebujete račun za shranjevanje Azure Data Lake Gen2, povezan z vašim primerkom studia Azure. Če želite več informacij, glejte [Ustvarjanje računa za shrambo Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 
 1. Če je vaša naročnina na Azure Machine Learning v drugem najemniku kot aplikacija Customer Insights, izberite možnost **Vpis** z vašimi poverilnicami za izbrano organizacijo.
 
-1. Izberite **delovne prostore**, povezane z vašo spletno storitvijo. Na seznamu sta navedena dva razdelka, eden za Strojno učenje Azure različice 1 (Studio za strojno učenje (klasični način)) in Strojno učenje Azure različice 2 (Strojno učenje Azure). Če niste prepričani, kateri delovni prostor je pravi za vašo spletno storitev studia za strojno učenje (klasični način), izberite **Poljubno**.
+1. Izberite **delovne prostore**, povezane z vašo spletno storitvijo. 
 
-1. Izberite spletno storitev studia za strojno učenje (klasični način) ali prodajni lijak za strojno učenje Azure na spustnem seznamu **Spletna storitev, ki vsebuje vaš model**. Nato izberite **Naprej**.
-   - Preberite več o [objavi spletne storitve studia za strojno učenje (klasični način)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service).
-   - Preberite več o [objavi prodajnega lijaka v storitvi Strojno učenje Azure z uporabo oblikovalnika](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ali [SDK-jem](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš prodajni lijak mora biti objavljen v okviru [končne točke prodajnega lijaka](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Izberite cevovod Azure Strojno učenje v **Spletna storitev, ki vsebuje vaš model** spustni meni. Nato izberite **Naprej**.    
+   Preberite več o [objavi prodajnega lijaka v storitvi Strojno učenje Azure z uporabo oblikovalnika](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ali [SDK-jem](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš prodajni lijak mora biti objavljen v okviru [končne točke prodajnega lijaka](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za vsak **vnos spletne storitve** izberite ujemajočo se **entiteto** iz vpogledov v občinstvo in izberite **Naprej**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
    > ![Konfiguriranje poteka dela.](media/intelligence-screen2-updated.png "Konfiguriranje poteka dela")
 
 1. Pri koraku **Parametri izhodnih podatkov modela** nastavite naslednje lastnosti:
-   - Studio za strojno učenje (klasični način)
-      1. Vnesite izhodno **ime entitete**, v katero želite, da se stekajo izhodni rezultati spletne storitve.
-   - Strojno učenje Azure
       1. Vnesite izhodno **ime entitete**, v katero želite, da se stekajo izhodni rezultati prodajnega lijaka.
       1. Izberite **Ime parametra shrambe izhodnih podatkov** za prodajni lijak paketov s spustnega seznama.
       1. Izberite **Ime parametra shrambe poti za izhodne podatke** za prodajni lijak paketov s spustnega seznama.
@@ -93,9 +95,6 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 1. Za vsak **vnos spletne storitve** lahko posodobite ujemajočo se **entiteto** iz vpogledov v občinstvo. Nato izberite **Naprej**.
 
 1. Pri koraku **Parametri izhodnih podatkov modela** nastavite naslednje lastnosti:
-   - Studio za strojno učenje (klasični način)
-      1. Vnesite izhodno **ime entitete**, v katero želite, da se stekajo izhodni rezultati spletne storitve.
-   - Strojno učenje Azure
       1. Vnesite izhodno **ime entitete**, v katero želite, da se stekajo izhodni rezultati prodajnega lijaka.
       1. Izberite **Ime parametra shrambe izhodnih podatkov** za preskusni prodajni lijak.
       1. Izberite **Ime parametra poti za izhodne podatke** za preskusni prodajni lijak.

@@ -1,7 +1,7 @@
 ---
 title: Nove in prihajajoče funkcije
 description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,35 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753137"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884282"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega v zmožnosti občinstvo vpogledov v Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Navdušeno sporočamo, da so najnovejše posodobitve pripravljene! V tem članku so povzete funkcije predogledne različice za javnost, splošne izboljšave razpoložljivosti in posodobitve funkcij. Če si želite ogledati dolgoročne načrte funkcij, si oglejte [Načrti izdaje Dynamics 365 in Power Platform](/dynamics365/release-plans/).
+Navdušeno sporočamo, da so najnovejše posodobitve pripravljene! V tem članku so povzete funkcije predogledne različice za javnost, splošne izboljšave razpoložljivosti in posodobitve funkcij. Če si želite ogledati dolgoročne načrte za funkcije, glejte [Načrti za izdajo storitev Dynamics 365 in Power Platform](/dynamics365/release-plans/).
 
 Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo funkcije pred drugimi. Če ni določeno drugače, vam ni treba ničesar storiti in aplikacijo bomo samodejno posodobili brez izpadov.
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Posodobitve v novembru 2021
+
+Posodobitve novembra 2021 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Segmentno članstvo je zdaj na voljo v Dataverse
+
+Informacije o članstvu v segmentih za profile strank so zdaj na voljo v Dataverse skupaj s profili strank in vpogledi. Aplikacije za dejanja Dynamics 365 in aplikacije, ki temeljijo na modelu, lahko uporabljajo te podatke za iskanje podrobnosti o članstvu v segmentu za dano stranko.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Dejavnosti podpirajo podrobnosti na ravni stika za poslovne račune
+
+Zdaj lahko konfigurirate, prikažete in filtrirate dejavnosti za stike na časovnici dejavnosti vašega poslovnega računa, da bolje razumete, kateri stiki v računu so sodelovali pri določenih dejavnostih.
 
 ## <a name="october-2021-updates"></a>Posodobitve v oktobru 2021
 
@@ -43,7 +55,7 @@ Vsi izvozi segmentov v občinstvo vpogledi so na voljo v okviru poslovnih račun
 
 #### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Uporabite izvoz oglasov LinkedIn s poslovnimi računi
 
-Izvoz oglasov LinkedIn je zdaj na voljo za ciljanje na stike in podjetja v okviru poslovnih računov. Ko izberete ciljanje na podjetja kot glavni cilj izvoza LinkedIn, lahko izvozite segmente, zgrajene na poslovnih računih, ne da bi vam bilo treba projicirati kontaktne podatke. Za več informacij pojdite v dokumente o [Izvoz oglasov LinkedIn](export-linkedin-ads.md) in razlika med [ciljanje na stik](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) in [ciljanje na podjetje](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
+Izvoz oglasov LinkedIn je zdaj na voljo za ciljanje na stike in podjetja v okviru poslovnih računov. Ko izberete ciljanje na podjetja kot svoj primarni fokus izvoza LinkedIn, lahko izvozite segmente, zgrajene na poslovnih računih, ne da bi vam bilo treba projicirati kontaktne podatke. Za več informacij pojdite v dokumente o [Izvoz oglasov LinkedIn](export-linkedin-ads.md) in razlika med [ciljanje na stik](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) in [ciljanje na podjetje](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
 
 #### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Ustvarite ukrepe na podlagi poslovnih računov in njihove hierarhije
 
@@ -51,9 +63,9 @@ Graditelj meril vam omogoča, da ustvarite ukrepe okoli poslovnih računov in po
 
 #### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Ustvarite segmente na podlagi poslovnih računov in njihove hierarhije
 
-Ustvarjalnik segmentov vam omogoča ustvarjanje segmentov poslovnih računov, ki po želji vključujejo kontaktne podatke za vsak račun v segmentu. Če imate nastavljeno hierarhijo računa, lahko pri ustvarjanju segmenta uporabite informacije o hierarhiji računa. Za več informacij glejte [Ustvarite nov segment](segment-builder.md#create-a-new-segment).
+Graditelj segmentov vam omogoča ustvarjanje segmentov poslovnih računov, ki po želji vključujejo kontaktne podatke za vsak račun v segmentu. Če imate nastavljeno hierarhijo računa, lahko pri ustvarjanju segmenta uporabite informacije o hierarhiji računa. Za več informacij glejte [Ustvarite nov segment](segment-builder.md#create-a-new-segment).
 
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Ohranite svoje poslovne račune z globokim vpogledom v njihovo nagnjenost k odtoku
+#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Ohranite svoje poslovne račune z globokim vpogledom v njihovo nagnjenost k odlivu
 
 Model odliva strank predvidevanje zdaj podpira tudi poslovne račune. Tveganje odtoka lahko ocenite ne samo za račun, ampak za kombinacijo računa in kategorije izdelkov ali storitev, ki jih kupijo pri vas. Ta dodatek vam pomaga razumeti, ali je večja verjetnost, da bo račun prenehal kupovati pri vas na splošno ali samo za določeno kategorijo blaga ali storitev. Za dodatno pomoč pri uporabi tega modela umetne inteligence so navedeni tudi razlogi, zakaj bo račun verjetno odtekel. Za več informacij glejte [Pretok transakcij predvidevanje (predogled)](predict-transactional-churn.md).
 
@@ -113,7 +125,7 @@ Posodobitve maja 2021 vključujejo številne funkcije, nadgradnje zmogljivosti i
 
 ### <a name="data-ingestion"></a>Uvoz podatkov
 
-- **Oglejte si ali spremenite metapodatke ali definicijo entitete, ko priložite podatke iz Azure Data Lake Storage** Zdaj si lahko ogledate in urejate metapodatke ali definicijo entitete v občinstvo Insights, ko priložite podatke iz mape skupnega podatkovnega modela v Azure Data Lake Storage. Ta zmogljivost zagotavlja povratne informacije v realnem času, preverjanje modelov in preverjanje napak. Omogoča vam nemoteno urejanje model.json in manifest.json.
+- **Ogled ali sprememba metapodatkov ali definicije entitete, ko pripenjate podatke iz Azure Data Lake Storage** Zdaj si lahko ogledujete in urejate metapodatke ali definicijo entitete v vpogledih za občinstvo, ko pripenjate podatke iz mape Common Data Model v vaši storitvi Azure Data Lake Storage. Ta zmogljivost zagotavlja povratne informacije v realnem času, preverjanje modelov in preverjanje napak. Omogoča vam nemoteno urejanje model.json in manifest.json.
 
 ### <a name="extensibility"></a>Razširljivost
 
@@ -188,7 +200,7 @@ Posodobitve marca 2021 vključujejo številne funkcije, nadgradnje zmogljivosti 
 
 ### <a name="data-ingestion"></a>Uvoz podatkov
 
-- **Povežite se z na mestu uporabe viri podatkov s pomočjo Power Platform podatkovnih tokov in prehodov** Z veseljem objavljamo predogled tokov podatkov Power Platform in na mestu uporabe povezljivosti z uporabo prehodov v storitvi Customer Insights s povezanim okoljem Power Platform ali Dataverse. Vsi novi viri podatkov, ustvarjeni v okolju Customer Insights s povezanim okoljem Dataverse, bodo privzeto nastavljeni na Power Platform podatkovni tokovi, ki prinašajo podatkovno povezljivost na mestu uporabe ter bogat nabor povezovalnikov in zmožnosti transformacije.
+- **Povezava s podatkovnimi viri na mestu uporabe prek podatkovnih tokov in prehodov Power Platform** Z veseljem objavljamo predogled podatkovnih tokov Power Platform in povezljivosti na mestu uporabe z uporabo prehodov v storitvi Customer Insights s povezanim okoljem Power Platform ali Dataverse. Vsi novi viri podatkov, ustvarjeni v okolju Customer Insights s povezanim okoljem Dataverse bodo privzeto nastavljeni na podatkovne tokove Power Platform, ki zagotavljajo podatkovno povezljivost na mestu uporabe in bogat nabor povezovalnikov in zmogljivosti preoblikovanja.
 
 ### <a name="extensibility"></a>Razširljivost
 
@@ -250,7 +262,7 @@ Posodobitve v februarju 2021 vključujejo več funkcij, nadgradnje zmogljivosti 
 
 - **Okolje za kopiranje podpira več vrst virov podatkov**
 
-  Skrbniki lahko kopirajo konfiguracije okolja v novo okolje v isti organizaciji. Ta funkcija razširja funkcionalnost okolja kopiranja za primere, v katerih se uporabljajo viri podatkov, ki temeljijo na Microsoft Dataverse upravljanem podatkovnem jezeru ali mapi skupnega podatkovnega modela.
+  Skrbniki lahko kopirajo konfiguracije okolja v novo okolje v isti organizaciji. Ta funkcija razširja funkcionalnost kopiranja okolja v primerih, ko so v uporabi viri podatkov na podlagi podatkovnega jezera, ki ga upravlja Microsoft Dataverse, ali mape Common Data Model.
 
 ## <a name="january-2021-updates"></a>Posodobitve v januarju 2021
 
@@ -276,7 +288,7 @@ Posodobitve v januarju 2021 vključujejo številne funkcije, nadgradnje učinkov
 
 #### <a name="system-administration"></a>Skrbništvo sistema
 
-- **Brezhibno delite podatke na Microsoft Dataverse** Zdaj lahko delite izhod Customer Insights z aplikacijami Microsoft Dataverse z uporabo Microsoft Dataverse Managed Data Lake. Ko povežete okolje Dataverse s storitvijo Customer Insights, dobite možnost, da omogočite skupno rabo podatkov.
+- **Brezhibno deljenje podatkov s storitvijo Microsoft Dataverse** Zdaj lahko rezultate storitve Customer Insights delite z aplikacijami Microsoft Dataverse z uporabo shrambe Data Lake, ki jo upravlja rešitev Microsoft Dataverse. Ko okolje Dataverse povežete s storitvijo Customer Insights, lahko omogočite skupno rabo podatkov.
   Za več informacij glejte [Upravljanje okolij](manage-environments.md).
 
 

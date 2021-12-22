@@ -1,5 +1,5 @@
 ---
-title: Izvozite podatke Customer Insights v gostitelje SFTP
+title: Izvoz podatkov Customer Insights v gostitelje SFTP (videoposnetek)
 description: Naučite se, kako konfigurirati povezavo in izvažati na lokacijo SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673936"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927623"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Izvoz segmentov in drugih podatkov v SFTP (predogledna različica)
 
@@ -28,6 +28,7 @@ Uporabite svoje podatke o strankah v aplikacijah drugih ponudnikov tako, da jih 
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Cilji SFTP za požarnimi zidovi trenutno niso podprti. 
 - Trajanje izvoza je odvisno od zmogljivosti vašega sistema. Kot minimalno konfiguracijo strežnika priporočamo dvojedrni procesor in 1 Gb pomnilnika. 
 - Izvoz entitet z do 100 milijoni profilov strank lahko traja 90 minut, če uporabite priporočeno minimalno konfiguracijo dvojedrnega procesorja in 1 Gb pomnilnika. 
 

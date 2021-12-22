@@ -1,7 +1,7 @@
 ---
 title: Postopno osveževanje za vire podatkov, ki temeljijo na storitvi Power Query
 description: Osvežite nove in posodobljene podatke za velike vire podatkov, ki temeljijo na orodju Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377854"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900305"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Postopno osveževanje za vire podatkov, ki temeljijo na orodju Power Query
+
+Ta članek obravnava, kako konfigurirati postopno osveževanje za vire podatkov na podlagi Power Query.
 
 Postopno osveževanje za vire podatkov zagotavlja naslednje prednosti:
 
@@ -30,9 +32,9 @@ Vpogledi v občinstvo omogočajo postopno osveževanje za vire podatkov, uvožen
 
 1. [Ustvarjanje novega vira podatkov, ki temelji na orodju Power Query](connect-power-query.md).
 
-1. Podajte ime vira podatkov.
+1. Zagotovite a **ime** za vir podatkov.
 
-1. Izberite vir podatkov, ki podpira postopno osveževanje, kot je zbirka podatkov Azure SQL.
+1. Izberite vir podatkov, ki podpira postopno osveževanje, kot je npr.[Baza podatkov Azure SQL](/power-query/connectors/azuresqldatabase).
 
 1. Izberite entitete ali tabele za zaužitje.
 
