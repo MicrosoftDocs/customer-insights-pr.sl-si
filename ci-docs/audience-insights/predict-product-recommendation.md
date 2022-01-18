@@ -1,7 +1,7 @@
 ---
 title: Predvidevanje priporočil izdelkov
 description: Predvidite, katere izdelke bo stranka verjetno kupila ali imela z njimi interakcije.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494559"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967859"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predvidevanje priporočil izdelkov (predogled)
 
@@ -54,7 +54,7 @@ Poleg tega bodo v izhodnih podatkih tega modela podana priporočila na podlagi I
 
 > [!NOTE]
 > - Model potrebuje zgodovino transakcij vaših strank. Definicija transakcije je precej prilagodljiva. Vsi podatki, ki opisujejo interakcijo med uporabnikom in izdelkom, lahko delujejo kot vhodni podatki. Na primer nakup izdelka, udeležba na tečaju ali obisk dogodka.
-> - Trenutno je mogoče konfigurirati samo eno entiteto zgodovine transakcij. Če je več entitet nakupov, jih pred uvozom podatkov združite v storitvi Power Query.
+> - Trenutno je mogoče konfigurirati samo eno entiteto zgodovine transakcij. Če obstaja več nabavnih subjektov, jih združite Power Query pred zaužitjem podatkov.
 > - Če sta entiteti naročila in podrobnosti naročila različni, ju pred uporabo v modelu združite. Model ne deluje, če ima v entiteti samo ID naročila ali ID prejema.
 
 
@@ -79,11 +79,11 @@ Poleg tega bodo v izhodnih podatkih tega modela podana priporočila na podlagi I
 1. Nastavite **število izdelkov**, ki jih želite priporočiti stranki. Ta vrednost je odvisna od tega, kako način dostavljanja izpolnjuje podatke. Če lahko priporočite tri izdelke, ustrezno nastavite to vrednost.
    
    >[!TIP]
-   > Kadar koli lahko izberete možnost **Shrani in zapri**, da shranite predvidevanje kot osnutek. Osnutek predvidevanja najdete na zavihku **Moja predvidevanja**.
+   > Lahko izberete **Shrani osnutek** kadar koli shranite predvidevanje kot osnutek. Osnutek predvidevanja najdete na zavihku **Moja predvidevanja**.
 
-1. Izberite, ali želite **predlagati izdelke, ki so jih stranke nedavno kupile**.
+1. Izberite, ali želite izdelke, ki so jih stranke nedavno kupile, vključiti v **Pričakovani ponovni nakupi** polje.
 
-1. Če se izbrali, da *ne* boste priporočali nedavno kupljenih izdelkov, nastavite **Okno za pogled nazaj**. Ta nastavitev določa časovni okvir, ki ga model upošteva, preden izdelek ponovno priporoči uporabniku. Napišite na primer, da stranka kupi prenosnik vsaki dve leti. To okno si bo ogledalo zgodovino nakupov v zadnjih dveh letih in če bo našlo ustrezen izdelek, ga bo filtriralo iz priporočil.
+1. Nastavite **Poglej nazaj okno**. Ta nastavitev določa časovni okvir, ki ga model upošteva, preden izdelek ponovno priporoči uporabniku. Napišite na primer, da stranka kupi prenosnik vsaki dve leti. To okno si bo ogledalo zgodovino nakupov v zadnjih dveh letih in če bo našlo ustrezen izdelek, ga bo filtriralo iz priporočil.
 
 1. Izberite **Naprej**
 

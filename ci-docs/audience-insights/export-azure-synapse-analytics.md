@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov iz rešitve Customer Insights v storitev Azure Synapse Analytics
 description: Preberite, kako konfigurirati povezavo s storitvijo Azure Synapse Analytics.
-ms.date: 04/12/2021
+ms.date: 01/05/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f206043298bdbf8a84b0ef37b47a43290653beba7d3d0e8b807ec74513614aa8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
+ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031953"
+ms.lasthandoff: 01/10/2022
+ms.locfileid: "7951062"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podatkov v storitev Azure Synapse Analytics (predogledna različica)
 
@@ -49,6 +49,8 @@ V storitvi Azure:
 
 ### <a name="configure-a-connection"></a>Konfiguriranje povezave
 
+Za ustvarjanje povezave potrebujeta principal storitve in uporabniški račun v Customer Insights **Uporabnik z dovoljenjem za branje** dovoljenja za *skupina virov* kjer se nahaja delovni prostor Synapse Analytics. Poleg tega potrebujeta principal storitve in uporabnik v delovnem prostoru Synapse Analytics **Skrbnik Synapse** dovoljenja. 
+
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 
 1. Za konfiguracijo izberite možnost **Dodaj povezavo** in izberite **Azure Synapse Analytics** ali pa izberite možnost **Nastavitev** na ploščici **Azure Synapse Analytics**.
@@ -63,7 +65,7 @@ V storitvi Azure:
 
 ### <a name="configure-an-export"></a>Konfiguriranje izvoza
 
-Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Če želite več informacij, glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Če želite konfigurirati izvoz s povezavo v skupni rabi, potrebujete vsaj **sodelavec** dovoljenja v Customer Insights. Če želite več informacij, glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 
@@ -82,6 +84,8 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Če želite
 S shranjevanjem izvoza se ta ne zažene takoj.
 
 Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand).
+
+Za poizvedbo po podatkih, ki so bili izvoženi v Synapse Analytics, potrebujete **Podatki blobov za shranjevanje Uporabnik z dovoljenjem za branje** dostop do ciljne shrambe na delovnem prostoru izvozov. 
 
 ### <a name="update-an-export"></a>Posodobitev izvoza
 

@@ -1,7 +1,7 @@
 ---
-title: Dodatek za kartico stranke za aplikacije Dynamics 365 (video)
+title: Dodatek za kartico stranke za aplikacije Dynamics 365 (vsebuje video)
 description: S tem dodatkom prikažite podatke iz vpogledov v občinstvo v aplikacijah Dynamics 365.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921885"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945447"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatek za kartico stranke (predogled)
 
@@ -27,7 +27,7 @@ Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 
 ## <a name="prerequisites"></a>Zahteve
 
 - Dodatek deluje samo z aplikacijami Dynamics 365, ki temeljijo na modelu, na primer Sales ali Customer Service, različice 9.0 in novejše.
-- Da se bodo vaši podatki iz aplikacije Dynamics 365 preslikali v profile strank za vpoglede v občinstvo, morajo biti [uvoženi iz aplikacije Dynamics 365 s priključkom Microsoft Dataverse](connect-power-query.md).
+- Za preslikavo vaših podatkov Dynamics 365 v profile strank občinstvo insights, priporočamo, da [vneseno iz aplikacije Dynamics 365 z uporabo Microsoft Dataverse konektor](connect-power-query.md). Če za vnos stikov (ali računov) Dynamics 365 uporabljate drugačen način, se morate prepričati,`contactid` (oz`accountid`) polje je nastavljeno kot [primarni ključ za ta vir podatkov v koraku zemljevida postopka združevanja podatkov](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Vsi uporabniki aplikacije Dynamics 365 in dodatka za kartice strank morajo biti za ogled podatkov [dodani kot uporabniki](permissions.md) v vpogledih v občinstvo.
 - Za delovanje iskanja podatkov so zahtevane [konfigurirane možnosti iskanja in filtriranja](search-filter-index.md) v vpogledih v občinstvo.
 - Vsak kontrolnik dodatka se zanaša na določene podatke v vpogledih v občinstvo. Nekateri podatki in kontrolniki so na voljo samo v okoljih določenih vrst. Konfiguracija dodatka vas bo obvestila, če kontrolnik zaradi izbrane vrste okolja ni na voljo. Več informacij o [primerih uporabe okolja](work-with-business-accounts.md).

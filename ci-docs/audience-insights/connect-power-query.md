@@ -1,6 +1,6 @@
 ---
-title: Vnos podatkov prek Power Query konektorja (video)
-description: Povezovalniki za podatkovne vire, ki temeljijo na Power Query.
+title: Zaužijte podatke prek a Power Query konektor (vsebuje video)
+description: Konektorji za podatkovne vire, ki temeljijo na Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,18 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7903860"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934998"
 ---
-# <a name="connect-to-a-power-query-data-source"></a>Povezava z virom podatkov Power Query
+# <a name="connect-to-a-power-query-data-source"></a>Povežite se z a Power Query vir podatkov
 
-Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Dynamics 365 Customer Insights podpira večino teh povezovalnikov. 
+Power Query ponuja širok nabor priključkov za vnos podatkov. Dynamics 365 Customer Insights podpira večino teh povezovalnikov. 
 
-Dodajanje podatkovnih virov na podlagi Power Query konektorjev običajno sledi korakom, opisanim v tem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Če želite izvedeti več, si oglejte dokumentacijo o posameznih konektorjih v [Power Query referenca konektorja](/power-query/connectors/).
+Dodajanje podatkovnih virov na podlagi Power Query konektorji na splošno sledi korakom, opisanim v tem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Če želite izvedeti več, si oglejte dokumentacijo o posameznih konektorjih v [Power Query referenca konektorja](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -40,12 +40,12 @@ Dodajanje podatkovnih virov na podlagi Power Query konektorjev običajno sledi k
 
 1. Izberite **Pretvori podatke**. V tem koraku boste dodali entitete v vir podatkov. Entitete so nabori podatkov. Če imate zbirko podatkov, ki vključuje več naborov podatkov, je vsak nabor podatkov svoja entiteta.
 
-1. Pogovorno okno **Power Query - Urejanje poizvedb** omogoča pregled in natančnejše določanje podatkov. Entitete, ki jih sistemi, opredeljeni v izbranem viru podatkov, prikažejo v levem podoknu.
+1. The **Power Query - Uredite poizvedbe** pogovorno okno vam omogoča pregled in izboljšanje podatkov. Entitete, ki jih sistemi, opredeljeni v izbranem viru podatkov, prikažejo v levem podoknu.
 
    > [!div class="mx-imgBorder"]
    > ![Pogovorno okno za urejanje poizvedb.](media/data-manager-configure-edit-queries.png "Pogovorno okno urejanja poizvedb")
 
-1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v oknu Power Query, da uporabite pretvorbe. Vsaka pretvorba je navedena pod **Uporabljeni koraki**. Power Query ponuja številne vnaprej vgrajene možnosti preoblikovanja. Če želite več informacij, glejte razdelek [Pretvorbe Power Query](/power-query/power-query-what-is-power-query#transformations).
+1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v Power Query okno za uporabo transformacij. Vsaka pretvorba je navedena pod **Uporabljeni koraki**. Power Query ponuja številne vnaprej izdelane možnosti preoblikovanja. Za več informacij glejte [Power Query Transformacije](/power-query/power-query-what-is-power-query#transformations).
 
 1. Virom podatkov lahko dodate dodatne entitete tako, da izberete **Pridobi podatke** v pogovornem oknu **Urejanje poizvedb**.
 
@@ -54,17 +54,17 @@ Dodajanje podatkovnih virov na podlagi Power Query konektorjev običajno sledi k
    - Če vnašate podatke iz datoteke CSV, prva vrstica pogosto vsebuje glave. Pojdite na **Tabela pretvorb** in izberite **Uporabi glave kot prvo vrstico**.
    - Prepričajte se, da je vrsta podatkov pravilno nastavljena.
 
-1. Izberite **Shrani** na dnu okna Power Query, da shranite pretvorbe. Po shranjevanju boste našli svoj vir podatkov pod **Podatki** > **Viri podatkov**.
+1. Izberite **Shrani** na dnu Power Query okno za shranjevanje transformacij. Po shranjevanju boste našli svoj vir podatkov pod **Podatki** > **Viri podatkov**.
 
 1. Na strani **Viri podatkov** boste opazili, da ima nov vir podatkov stanje **Osveževanje**.
 
-## <a name="available-power-query-data-sources"></a>Razpoložljivi viri podatkov Power Query
+## <a name="available-power-query-data-sources"></a>Na voljo Power Query viri podatkov
 
 Glej [Power Query referenca konektorja](/power-query/connectors/) za seznam povezovalnikov, ki jih lahko uporabite za uvoz podatkov v Customer Insights. 
 
-Povezovalniki s kljukico v stolpcu **Customer Insights (podatkovni toki)** so na voljo za ustvarjanje novih virov podatkov, ki temeljijo na Power Query. Preglejte dokumentacijo določenega povezovalnika, če želite izvedeti več o njegovih predpogojih, omejitvah in drugih podrobnostih.
+Konektorji s kljukico v **Vpogledi strank (tokovi podatkov)** so na voljo za ustvarjanje novih podatkovnih virov na podlagi Power Query. Preglejte dokumentacijo določenega povezovalnika, če želite izvedeti več o njegovih predpogojih, omejitvah in drugih podrobnostih.
 
-## <a name="edit-power-query-data-sources"></a>Urejanje virov podatkov Power Query
+## <a name="edit-power-query-data-sources"></a>Uredi Power Query viri podatkov
 
 > [!NOTE]
 > Morda ne bo mogoče spreminjati virov podatkov, ki se trenutno uporabljajo v enem od procesov aplikacije (na primer *segmentacija*, *ujemanje* ali *spajanje*). 
@@ -80,9 +80,9 @@ Povezovalniki s kljukico v stolpcu **Customer Insights (podatkovni toki)** so na
 
    [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
    
-3. Uporabite svoje spremembe in pretvorbe v pogovornem oknu **Power Query - Urejanje poizvedb**, kot je opisano v razdelku [Ustvari nov vir podatkov](#create-a-new-data-source).
+3. Uporabite svoje spremembe in transformacije v **Power Query - Uredite poizvedbe** pogovorno okno, kot je opisano v [Ustvarite nov vir podatkov](#create-a-new-data-source) oddelek.
 
-4. Izberite **Shrani** v Power Query po zaključitvi sprememb, da shranite spremembe.
+4. Izberite **Shrani** v Power Query po končanem urejanju, da shranite spremembe.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

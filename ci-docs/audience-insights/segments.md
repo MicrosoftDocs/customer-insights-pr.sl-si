@@ -4,17 +4,17 @@ description: Pregled segmentov ter napotki, kako jih ustvariti in upravljati.
 ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 56978c984a91e85e86956e7eac1d59609c349b6a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732608"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7978079"
 ---
 # <a name="segments-overview"></a>Pregled segmentov
 
@@ -54,7 +54,7 @@ Ko izberete segment, je na voljo naslednje dejanje:
 - Za spreminjanje lastnosti segmenta lahko uporabite možnost **Uredi**.
 - **Ustvarjanje dvojnika** segmenta. Takoj lahko uredite njegove lastnosti ali preprosto shranite dvojnik.
 - Za vključitev najnovejših podatkov lahko izberete **Osveži**.
-- Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Segmenti imajo dve možni stanji - aktivno ali neaktivno. Stanji sta vam lahko v pomoč pri urejanju segmenta. Za neaktivne segmente definicija segmenta obstaja, vendar še ne vsebuje nobene stranke. Ko aktivirate segment, se njegovo stanje spremeni iz »neaktiven« v »aktiven« in začne iskati stranke, ki ustrezajo definiciji segmenta. Če je konfigurirana [načrtovana osvežitev](system.md#schedule-tab), je [Stanje](system.md#schedule-tab) neaktivnih segmentov navedeno kot [Preskočeno](system.md#schedule-tab), kar pomeni, da poskusa osveževanja sploh ni bilo. Ko se aktivira neaktivni segment, se bo osvežil in bo vključen v načrtovane osvežitve.
+- Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Segmenti imajo dve možni stanji - aktivno ali neaktivno. Stanji sta vam lahko v pomoč pri urejanju segmenta. Za neaktivne segmente definicija segmenta obstaja, vendar še ne vsebuje nobene stranke. Ko aktivirate segment, se njegovo stanje spremeni iz »neaktiven« v »aktiven« in začne iskati stranke, ki ustrezajo definiciji segmenta. Če je konfigurirana [načrtovana osvežitev](system.md#schedule-tab), je **Stanje** neaktivnih segmentov navedeno kot **Preskočeno**, kar pomeni, da poskusa osveževanja sploh ni bilo. Ko se aktivira neaktivni segment, se bo osvežil in bo vključen v načrtovane osvežitve.
   Lahko pa uporabite funkcijo **Razporedi pozneje** v spustnem meniju **Aktiviraj/Deaktivira**, da določite datum in čas v prihodnosti za aktiviranje in deaktiviranje določenega segmenta.
 - Prek možnosti **Preimenuj** lahko segment preimenujete.
 - Na voljo je možnost **Prenesi** za prenos seznama članov kot datoteke .CSV.

@@ -1,26 +1,27 @@
 ---
-title: Začnite s Android SDK
-description: Naučite se prilagoditi in zagnati Android SDK
+title: Začnite z uporabo kompleta za razvoj programske opreme za Android
+description: Naučite se, kako prilagoditi in zagnati komplet za razvoj programske opreme za Android
 author: britl
 ms.reviewer: mhart
+ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
-ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
+ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7655362"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977595"
 ---
-# <a name="get-started-with-the-android-sdk"></a>Začnite s kompletom za razvoj programske opreme Android
+# <a name="get-started-with-the-android-sdk"></a>Začnite z uporabo kompleta za razvoj programske opreme Android
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Ta vadnica vas vodi skozi postopek instrumentiranja vaše Android aplikacije s SDK-jem Dynamics 365 Customer Insights za vpogled v sodelovanje. Dogodki se vam bodo na portalu prikazali v največ petih minutah.
+Vadnica vam nudi pregled postopka opremljanja vaše aplikacije za Android z vpogledi v interakcije kompleta za razvoj programske opreme Dynamics 365 Customer Insights. Dogodki se vam bodo na portalu prikazali v največ petih minutah.
 
 ## <a name="configuration-options"></a>Možnosti konfiguracije
 V komplet za razvoj programske opreme lahko prenesete naslednje možnosti konfiguracije:
@@ -31,12 +32,12 @@ V komplet za razvoj programske opreme lahko prenesete naslednje možnosti konfig
 
 - Android Studio
 
-- Najmanjša Android raven API-ja: 16 (Jelly Bean)
+- Najnižja stopnja API za Android: 16 (Jelly Bean)
 
 - Ključ za sprejemanje (navodila o tem, kako ga pridobiti, se nahajajo spodaj)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>V svojo aplikacijo integrirajte komplet za razvoj programske opreme
-Začnite postopek tako, da izberete delovni prostor, izberete mobilno platformo Android in prenesete Android SDK.
+Za začetek postopka izberite delovni prostor ter mobilno platformo Android in prenesite komplet za razvoj programske opreme za Android.
 
 - Svoj delovni prostor izberite v levem podoknu za krmarjenje, s preklopnikom med delovnimi prostori.
 
@@ -46,7 +47,7 @@ Začnite postopek tako, da izberete delovni prostor, izberete mobilno platformo 
 
 ## <a name="configure-the-sdk"></a>Konfigurirajte komplet za razvoj programske opreme
 
-Ko prenesete SDK, lahko delate z njim v Android Studio, da omogočite in definirate dogodke. Za to obstajata dva načina:
+Ko prenesete komplet za razvoj programske opreme, ga lahko uporabite za delo v okolju Android Studio ter tako omogočite in opredelite dogodke. Za to obstajata dva načina:
 ### <a name="option-1-use-jitpack-recommended"></a>1. možnost: uporabite JitPack (priporočeno)
 1. Dodajte shrambo JitPack svojemu korenu `build.gradle`:
     ```gradle
@@ -67,7 +68,7 @@ Ko prenesete SDK, lahko delate z njim v Android Studio, da omogočite in definir
     ```
 
 ### <a name="option-2-use-download-link"></a>2. možnost: uporabite povezavo za prenos
-1. Prenesite [SDK za vpogled v dejavnost Android](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), in postavite`eiandroidsdk-debug.aar` datoteko v`libs` mapo.
+1. Prenesite [vpoglede v interakcijo kompleta za razvoj programske opreme za Android](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) in datoteko `eiandroidsdk-debug.aar` prenesite v mapo `libs`.
 
 1. Odprite datoteko `build.gradle` na projekti ravni in dodajte naslednje izrezke:
     ```gradle
