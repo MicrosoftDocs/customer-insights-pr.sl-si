@@ -9,21 +9,16 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: sl-SI
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900171"
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povezovanje s podatki v upravljanem jezeru podatkov Microsoft Dataverse
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Ta članek vsebuje informacije o tem, kako Dataverse uporabniki se lahko hitro povežejo z analitičnimi entitetami v a Microsoft Dataverse upravljano jezero. 
 
 > [!NOTE]
-> Morate biti admin na Dataverse organizacije za nadaljevanje in ogled seznama subjektov, ki so na voljo v upravljanem jezeru.
+> Morate biti admin na Dataverse organizacije, da nadaljujete in si ogledate seznam subjektov, ki so na voljo v upravljanem jezeru.
 
 ## <a name="important-considerations"></a>Pomembni premisleki
 

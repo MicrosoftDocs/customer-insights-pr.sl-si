@@ -1,7 +1,7 @@
 ---
 title: Izboljšanje podatkov o podjetju
 description: Obogatite in normalizirajte podatke podjetja z Microsoftovimi modeli.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: MT
-ms.contentlocale: sl-SI
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927602"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obogatitev profilov podjetij z izboljšanimi podatki o podjetju
 
 Uporabite Microsoftove modele in zbrane podatke podjetja, da popravite, dopolnite in standardizirate profile vašega podjetja. Uporabili bomo [Format skupnega podatkovnega modela](/common-data-model/schema/core/applicationcommon/account) za boljšo natančnost in vpoglede.
@@ -82,17 +77,17 @@ Pri izboljšanih podatkih obstaja nekaj omejitev. Model ne podpira elementov na 
 
 Po končanem postopku obogatitve lahko podatke o na novo obogatenih profilih strank pregledate v možnosti **Moje obogatitve**. Poleg tega boste našli čas zadnje posodobitve in število obogatenih profilov.
 
-Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izberete **Ogled obogatenih podatkov**.
+Vzorec obogatenih podatkov si lahko ogledate v **Obogaten predogled strank** ploščice. Izberite **Poglej več** in izberite **Podatki** zavihek za dostop do podrobnega pogleda vsakega obogatenega profila.
 
 ### <a name="overview-card"></a>Pregledna kartica
 
 Pregledna kartica prikazuje podrobnosti o kritju obogatitve. 
 
-* **Stranke obdelane in spremenjene** : število uspešno obogatenih profilov strank.
+* **Podjetja obdelana in spremenjena** : Število uspešno obogatenih profilov podjetij strank.
 
-* **Stranke obdelane in niso spremenjene** : število profilov strank, ki so bili prepoznani, vendar nespremenjeni. Običajno se zgodi, ko so vhodni podatki veljavni in jih z obogatitvijo ni mogoče izboljšati.
+* **Podjetja obdelana in nespremenjena** : število profilov podjetij strank, ki so bili prepoznani, vendar nespremenjeni. To se običajno zgodi, ko so vhodni podatki veljavni in jih z obogatitvijo ni mogoče izboljšati.
 
-* **Stranke niso obdelane in niso spremenjene** : Število profilov, ki niso bili prepoznani. Običajno za vhodne podatke, ki so neveljavni ali niso podprti z obogatitvijo.
+* **Podjetja niso obdelana in nespremenjena** : Število profilov podjetij strank, ki niso bili prepoznani. To se običajno zgodi za vhodne podatke, ki so neveljavni ali jih obogatitev ne podpira.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

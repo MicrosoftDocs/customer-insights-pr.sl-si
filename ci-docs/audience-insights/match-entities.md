@@ -1,7 +1,7 @@
 ---
 title: Ujemanje entitet za poenotenje podatkov
 description: Zagotovite ujemanje entitet za ustvarjanje poenotenih profilov strank.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: MT
-ms.contentlocale: sl-SI
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863831"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Ujemanje entitet
 
 Faza ujemanja določa, kako združite nabore podatkov v nabor podatkov poenotenega profila stranke. Ko zaključite [korak preslikavanja](map-entities.md) v postopku poenotenja podatkov, ste pripravljeni na ujemanje entitet. Za fazo ujemanja potrebujete najmanj dve preslikani entiteti.
@@ -108,7 +103,7 @@ Pravila ujemanja predstavljajo nabore pogojev. Za ujemanje entitet pod pogoji na
 
 ### <a name="change-the-entity-order-in-match-rules"></a>Spreminjanje vrstnega reda entitete v pravilih ujemanja
 
-Entitete za pravila ujemanja lahko preuredite, če želite spremeniti vrstni red njihove obdelave. Pravila, ki so v sporu zaradi spremenjenega vrstnega reda, bodo odstranjena. Odstranjena pravila morate znova ustvariti s posodobljeno konfiguracijo.
+Entitete za pravila ujemanja lahko prerazporedite, da spremenite vrstni red, v katerem so obdelane. Pravila, ki so v sporu zaradi spremenjenega vrstnega reda, bodo odstranjena. Odstranjena pravila morate znova ustvariti s posodobljeno konfiguracijo.
 
 1. Odprite zavihek **Podatki** > **Poenotenje** > **Ujemanje** in izberite možnost **Uredi**.
 
@@ -130,17 +125,21 @@ Določanje pravil za odstranjevanje podvajanja ni obvezno. Če taka pravila niso
 
 1. Izberite **Podatki** > **Poenotenje** > **Ujemanje**.
 
-1. V razdelku **Spojeni dvojniki** izberite **Nastavitev entitet**. Če so pravila za odstranjevanje ponavljanja že ustvarjena, izberite **Uredi**.
+1. V **Podrobnosti o odvzetih zapisih** oddelek, izberite **Nastavite entitete**. Če so pravila za odstranjevanje ponavljanja že ustvarjena, izberite **Uredi**.
 
 1. V podoknu **Spoji nastavitve** izberite entitete, na katerih želite zagnati odstranjevanje podvajanja.
 
-1. Določite, kako združiti podvojene zapise, in izberite eno od treh možnosti:
-   - **Najpogostejše**: opredeli zapis atributa z najbolj izpolnjenimi polji kot zapis zmagovalca. To je privzeta možnost spajanja.
-   - **Najnovejše**: določi rekord zmagovalca glede na najnovejše rezultate. Zahteva datum ali številsko polje za določitev najnovejše izkušnje.
-   - **Najstarejše**: določi rekord zmagovalca glede na najstarejše rezultate. Zahteva datum ali številsko polje za določitev najnovejše izkušnje.
+   1. Določite, kako združiti podvojene zapise, in izberite eno od treh možnosti:
+      - **Najpogostejše**: opredeli zapis atributa z najbolj izpolnjenimi polji kot zapis zmagovalca. To je privzeta možnost spajanja.
+      - **Najnovejše**: določi rekord zmagovalca glede na najnovejše rezultate. Zahteva datum ali številsko polje za določitev najnovejše izkušnje.
+      - **Najstarejše**: določi rekord zmagovalca glede na najstarejše rezultate. Zahteva datum ali številsko polje za določitev najnovejše izkušnje.
+
+   1. Po želji izberite **Napredno** za definiranje pravil za deduplikacijo posameznih atributov entitete. Izberete lahko na primer, da obdržite najnovejšo e-pošto IN najbolj popoln naslov iz različnih zapisov. Razširite entiteto, da si ogledate vse njene atribute in določite, katero možnost uporabiti za posamezne atribute. Če izberete možnost, ki temelji na nedavnosti, morate določiti tudi polje za datum/čas, ki definira nedavnost. 
  
-   > [!div class="mx-imgBorder"]
-   > ![1. korak pravil za odstranjevanje podvajanja.](media/match-selfconflation.png "1. korak pravil za odstranjevanje podvajanja")
+      > [!div class="mx-imgBorder"]
+      > ![1. korak pravil za odstranjevanje podvajanja.](media/match-selfconflation.png "1. korak pravil za odstranjevanje podvajanja")
+
+   1. Izberite **Končano** da uporabite svoje nastavitve spajanja za odpravo podvajanja.
  
 1. Ko so entitete izbrane in so nastavljene nastavitve spajanja, izberite **Dodaj pravilo** za določitev pravil o odstranjevanju podvajanja na ravni entitete.
    - **Izberite polje** navede vsa razpoložljiva polja te entitete. Izberite polje, v katerem želite preveriti dvojnike. Izberite polja, ki so verjetno edinstvena vsaki stranki. Na primer e-poštni naslov ali kombinacija imena, mesta in telefonske številke.
@@ -158,7 +157,7 @@ Določanje pravil za odstranjevanje podvajanja ni obvezno. Če taka pravila niso
 
 1. Vsa določena pravila ujemanja po meri prepišejo pravila za odstranjevanje podvajanja. Če pravilo odstranjevanja podvajanja prepozna ujemajoče se zapise in je pravilo ujemanja po meri nastavljeno tako, da se nikoli ne ujema s temi zapisi, potem se ta dva zapisa ne bosta ujemala.
 
-1. Po [zagonu postopka ujemanja](#run-the-match-process) bo prikazana statistika odstranjevanja podvajanja v ploščicah ključnih meritev.
+1. Po [vodenje postopka tekme](#run-the-match-process), boste v ploščicah ključnih meritev videli statistiko deduplikacije.
 
 ### <a name="deduplication-output-as-an-entity"></a>Izhodni podatki brez podvajanj kot entiteta
 
@@ -222,7 +221,23 @@ Večino parametrov ujemanja lahko znova konfigurirate in prilagodite.
 
 - **Izbrišite pravilo** tako, da izberete simbol **Izbriši**.
 
-## <a name="specify-custom-match-conditions"></a>Določanje pogojev ujemanja po meri
+## <a name="advanced-options"></a>Dodatne možnosti
+
+### <a name="add-exceptions-to-a-rule"></a>Pravilu dodajte izjeme
+
+V večini primerov ujemanje entitet vodi do edinstvenih uporabniških profilov s konsolidiranimi podatki. Za dinamično obravnavanje redkih primerov lažno pozitivnih in lažno negativnih rezultatov lahko definirate izjeme za pravilo ujemanja. Izjeme se uveljavijo po obdelavi pravil ujemanja in se izognemo ujemanju vseh zapisov, ki izpolnjujejo merila izjem.
+
+Na primer, če vaše pravilo ujemanja združuje priimek, mesto in datum rojstva, bi sistem identificiral dvojčka z istim priimek, ki živita v istem mestu kot isti profil. Določite lahko izjemo, ki se ne ujema s profili, če ime v entitetah, ki jih združite, nista enaka.
+
+1. Pojdite v **Podatki** > **Poenotenje** > **Ujemanje** in izberite **Uredi** za pravilo, ki mu želite dodati pogoje.
+
+1. V **Uredi pravilo** podokno, izberite **Dodajte izjemo**.
+
+1. Določite merila izjeme. 
+
+1. Izberite **Dokončano**, da shranite pravilo.
+
+### <a name="specify-custom-match-conditions"></a>Določanje pogojev ujemanja po meri
 
 Določite lahko pogoje, ki preglasijo privzeto logiko ujemanja. Na voljo so štiri možnosti: 
 
@@ -239,9 +254,9 @@ Določite lahko pogoje, ki preglasijo privzeto logiko ujemanja. Na voljo so šti
 
 1. V **Po meri** podokno, pojdite na **Zapisi** zavihek.
 
-1. Izberite možnost ujemanja po meri v **Vrsta po meri** spustni meni in izberite **Prenesite predlogo**. Za vsako možnost ujemanja potrebujete ločeno predlogo.
+1. Izberite možnost ujemanja po meri iz **Vrsta po meri** spustni meni in izberite **Prenesite predlogo**. Za vsako možnost ujemanja potrebujete ločeno predlogo.
 
-1. Prenese se datoteka predloge. Odprite ga in izpolnite podrobnosti. Predloga vsebuje polja, ki določajo entiteto in vrednosti primarnega ključa entitete, ki se uporabljajo v ujemanju po meri. Če želite, da se na primer primarni ključ *12345* iz entitete *Prodaja* vedno ujema s primarnim ključem *34567* iz entitete *Stik*, izpolnite predlogo:
+1. Odprite preneseno datoteko predloge in izpolnite podrobnosti. Predloga vsebuje polja, ki določajo entiteto in vrednosti primarnega ključa entitete, ki se uporabljajo v ujemanju po meri. Če želite, da se na primer primarni ključ *12345* iz entitete *Prodaja* vedno ujema s primarnim ključem *34567* iz entitete *Stik*, izpolnite predlogo:
     - Entity1: prodaja
     - Entity1Key: 12345
     - Entity2: stik
@@ -268,10 +283,10 @@ Določite lahko pogoje, ki preglasijo privzeto logiko ujemanja. Na voljo so šti
 
 1. Izberite **Zaženi** na strani **Ujemanje**, da začnete postopek iskanja ujemanj. Konfiguracija ujemanja po meri preglasi druga določena pravila ujemanja.
 
-### <a name="known-issues"></a>Znane težave
+#### <a name="known-issues"></a>Znane težave
 
 - Samozdružitev ne prikaže normaliziranih podatkov v entitetah za odpravo podvajanja. Vendar pa med deduplikacijo interno uporabi normalizacijo. Zasnovano je za vse normalizacije. 
-- Če je nastavitev semantičnega tipa odstranjena v **Zemljevid** fazi, ko pravilo ujemanja uporablja preslikavo vzdevka ali obhod po meri, normalizacija ne bo uporabljena. To se zgodi le, če počistite semantični tip po konfiguriranju normalizacije v pravilu ujemanja, ker bo pomenski tip neznan.
+- Če je nastavitev semantičnega tipa odstranjena v **Zemljevid** fazi, ko pravilo ujemanja uporablja preslikavo vzdevka ali obhod po meri, normalizacija ne bo uporabljena. To se zgodi samo, če počistite semantični tip po konfiguriranju normalizacije v pravilu ujemanja, ker bo pomenski tip neznan.
 
 
 ## <a name="next-step"></a>Naslednji korak

@@ -1,7 +1,7 @@
 ---
 title: Združevanje entitet za poenotenje podatkov
 description: Združite entitete za ustvarjanje poenotenih profilov strank.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,21 +10,16 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: sl-SI
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732792"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Združevanje entitet
 
 Faza spajanja je zadnja faza v postopku poenotenja podatkov. Njen namen je uskladitev podatkov v sporu. Primer podatkov v sporu je na primer ime stranke, ki ga najdemo v dveh zbirkah podatkov, vendar je v vsaki prikazan nekoliko drugače (»Grant Marshall« v primerjavi z »Grant Marshal«), ali telefonska številka, ki se razlikuje v obliki zapisa (617-803-091X v primerjavi s 617803091X). Spajanje teh podatkovnih točk v sporu poteka na osnovi »atribut za atributom«.
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Stran za spajanje v postopku poenotenja podatkov, ki prikazuje tabelo s spojenimi polji, ki določajo poenoten profil kupca.":::
 
-Po zaključku [faze ujemanja](match-entities.md) fazo spajanja začnete tako, da izberete ploščico [Spajanje](match-entities.md) na strani [Poenotenje](match-entities.md).
+Po zaključku [faze ujemanja](match-entities.md) fazo spajanja začnete tako, da izberete ploščico **Spajanje** na strani **Poenotenje**.
 
 ## <a name="review-system-recommendations"></a>Pregled priporočil sistema
 
@@ -99,11 +94,13 @@ Na strani za **spajanje** izberite **Izključena polja** za ogled seznama vseh i
 
 1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb. 
 
-## <a name="manually-combine-fields"></a>Ročno združevanje polj
+## <a name="combine-fields-manually"></a>Ročno združi polja
 
-Ročno določite spojeni atribut. 
+Ročno določite spojeni atribut.
 
-1. Na strani za **spajanje** izberite možnost **Združi polja**.
+1. Na **Združi** stran, izberite **Združite**.
+
+1. Izberite **Polja** možnost.
 
 1. Pravilnik zmagovalnega spajanja določite v spustnem meniju **Združi polja glede na**.
 
@@ -114,6 +111,26 @@ Ročno določite spojeni atribut.
 1. Če želite uporabiti spremembe, izberite **Dokončaj**.
 
 1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb. 
+
+## <a name="combine-a-group-of-fields"></a>Združite skupino polj
+
+Skupino polj obravnavajte kot eno samo enoto. Na primer, če naši zapisi vsebujejo polja Naslov1, Naslov2, Mesto, Država in Zip. Verjetno se ne želimo združiti v naslov2 drugega zapisa, ker mislimo, da bi naši podatki postali popolnejši
+
+1. Na **Združi** stran, izberite **Združite**.
+
+1. Izberite **Skupina polj** možnost.
+
+1. Določite politiko zmagovalca spajanja v **Razvrstite skupine po** spustni meni.
+
+1. Izberite **Dodaj** in izberite, ali želite v polja dodati več polj ali dodatnih skupin.
+
+1. Zagotovite a **ime** in an **Ime izhoda** za vsako kombinirano polje.
+
+1. Zagotovite a **ime** za skupino polj. 
+
+1. Če želite uporabiti spremembe, izberite **Dokončaj**.
+
+1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb.
 
 ## <a name="change-the-order-of-fields"></a>Spreminjanje vrstnega reda polj
 

@@ -1,7 +1,7 @@
 ---
 title: Povezovanje podatkov Common Data Model z računom Azure Data Lake
 description: Delo s podatki Common Data Model z uporabo storitve Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: sl-SI
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900217"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povezava z mapo Common Data Model z uporabo računa Azure Data Lake
 
 V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z vašim računom Azure Data Lake Storage Gen2.
@@ -25,6 +20,8 @@ V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z 
 - Podatki v vaši shrambi Azure Data Lake morajo upoštevati standard Common Data Model. Druge oblike zapisa trenutno niso podprte.
 
 - Vključevanje podatkov podpira zgolj račune za shrambo Azure Data Lake *Gen2*. Računov za shrambo Azure Data Lake Gen1 ne morete uporabljati za vključevanje podatkov.
+
+- Račun za shranjevanje podatkov Azure Data Lake mora imeti [Imenski prostor hierarhičen je omogočen](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Če želite preveriti pristnost z glavnim imenom storitve Azure, preverite, ali je konfiguriran v najemniku. Za več informacij glejte [Povezovanje vpogledov v občinstvo in računa Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure](connect-service-principal.md).
 

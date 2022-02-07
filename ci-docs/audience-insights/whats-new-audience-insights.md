@@ -1,7 +1,7 @@
 ---
 title: Nove in prihajajoče funkcije
-description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
-ms.date: 12/02/2021
+description: 'Informacije o novih funkcijah, izboljšavah in popravkih napak.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: MT
-ms.contentlocale: sl-SI
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884282"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Navdušeno sporočamo, da so najnovejše posodobitve pripravljene! V tem članku so povzete funkcije predogledne različice za javnost, splošne izboljšave razpoložljivosti in posodobitve funkcij. Če si želite ogledati dolgoročne načrte za funkcije, glejte [Načrti za izdajo storitev Dynamics 365 in Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Posodobitve v decembru 2021
+
+Posodobitve decembra 2021 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Posredujte dnevnike Customer Insights v Azure Monitor
+
+Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Ta funkcija vključuje revizijske dogodke in operativne dogodke. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov v Azure Storage, Azure Log Analytics ali jih pretakate v Azure Središča za dogodke.
+
+Za več informacij glejte [Posredovanje dnevnika Dynamics 365 Customer Insights z Azure Monitor (predogled)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Obogatite profile strank s podatki o angažiranosti
+
+Uporabite podatke iz Microsoft Office 365 obogatiti profile računa strank z vpogledi v dejavnosti prek Office 365 aplikacije. Podatki o udeležbi so sestavljeni iz e-pošte in dejavnosti sestankov, ki so združeni na ravni računa. Na primer število e-poštnih sporočil iz poslovnega računa ali število sestankov z računom. Podatki o posameznih uporabnikih se ne delijo. Ta obogatitev je na voljo v naslednjih regijah: Združeno kraljestvo, Evropa, Severna Amerika.
+
+Za več informacij glejte [Obogatite profile strank s podatki o angažiranosti (predogled)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Napredne funkcije združevanja podatkov
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Omogoči politike reševanja sporov na ravni posameznega atributa
+
+Pri odstranjevanju podvojenih zapisov strank znotraj entitete morda ne boste želeli izbrati celotnega zapisa kot zmagovalca. Zdaj vam omogočamo, da združite najboljša polja iz različnih zapisov na podlagi pravil za vsak atribut. Izberete lahko na primer, da obdržite najnovejšo e-pošto IN najbolj popoln naslov iz različnih zapisov. 
+
+Zdaj lahko definirate ločena pravila spajanja za posamezne atribute, medtem ko odpravljate podvojene in združujete zapise znotraj ene same entitete. Prej smo vam dovolili, da izberete samo eno pravilo združevanja (vodenje evidence na podlagi popolnosti podatkov o nedavnih podatkih) in to pravilo je bilo uporabljeno na ravni zapisa za vse atribute. To ni idealno, če so nekateri podatki, ki jih želite obdržati, v zapisu A, drugi dobri pa v zapisu B.
+
+Za več informacij glejte [Opredelitev odstranjevanja podvajanj za entiteto ujemanja](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Pravila po meri za ujemanje
+
+Včasih morate določiti izjemo od splošnih pravil, da se zapisi NE ujemajo. To se lahko zgodi, ko si več posameznikov deli dovolj informacij, da bi jih sistem ujemal kot enega posameznika. Na primer, dvojčka z istim priimek, ki živita v istem mestu in imata isti datum rojstva.
+
+Izjeme zagotavljajo, da je napačno poenotenje podatkov mogoče obravnavati v pravilih poenotenja. Pravilu lahko dodate več izjem.
+
+Za več informacij glejte [Pravilu dodajte izjeme](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Zagotovite dodatne pravilnike za reševanje sporov in omogočite združevanje atributov
+
+Ta funkcija vam omogoča, da skupino polj obravnavate kot eno samo enoto. Na primer, če naši zapisi vsebujejo polja Naslov1, Naslov2, Mesto, Država in Zip. Najverjetneje se ne želimo združiti v naslov2 drugega zapisa, ker mislimo, da bi tako naši podatki postali popolnejši.
+
+Zdaj lahko združite skupino sorodnih polj in za skupino uporabite eno samo politiko spajanja. 
+
+Za več informacij glejte [Združite skupino polj](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Posodobitve v novembru 2021
 
