@@ -1,7 +1,7 @@
 ---
 title: Ujemanje entitet za poenotenje podatkov
 description: Zagotovite ujemanje entitet za ustvarjanje poenotenih profilov strank.
-ms.date: 01/28/2022
+ms.date: 02/07/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-match
+- ci-match
+ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
+ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.translationtype: HT
+ms.contentlocale: sl-SI
+ms.lasthandoff: 02/07/2022
+ms.locfileid: "8098855"
 ---
-
 # <a name="match-entities"></a>Ujemanje entitet
 
 Faza ujemanja določa, kako združite nabore podatkov v nabor podatkov poenotenega profila stranke. Ko zaključite [korak preslikavanja](map-entities.md) v postopku poenotenja podatkov, ste pripravljeni na ujemanje entitet. Za fazo ujemanja potrebujete najmanj dve preslikani entiteti.
@@ -24,13 +29,7 @@ Stran za ujemanje ima tri razdelke:
 
 ## <a name="specify-the-match-order"></a>Določanje vrstnega reda ujemanja
 
-Odprite razdelek **Podatki** > **Poenoti** > **Ujemanje** in za začetek faze ujemanja izberite možnost **Nastavi vrstni red** .
-
-Vsako ujemanje združi dve ali več entitet v eno, konsolidirano entiteto. Hkrati skrbi za enolične zapise strank. Izbrali smo na primer dve entiteti: **eCommerce:eCommerceContacts** kot primarno entiteto in **LoyaltyScheme:loyCustomers** kot drugo entiteto. Vrstni red entitet določa, v katerem vrstnem redu bo sistem poskušal ujemati zapise.
-
-:::image type="content" source="media/match-page.png" alt-text="Posnetek zaslona strani ujemanja v območju Unify pri postopku poenotenja podatkov.":::
-  
-Primarna entiteta *eCommerce:eCommerceContacts* se ujema z naslednjo entiteto *LoyaltyScheme:loyCustomers*. Nabor podatkov, ki je rezultat prvega koraka ujemanja, se ujema z naslednjo entiteto, če imate več kot dve entiteti.
+Vsako ujemanje združi dve ali več entitet v eno, konsolidirano entiteto. Hkrati skrbi za enolične zapise strank. Vrstni red ujemanja označuje vrstni red, v katerem sistem poskuša uskladiti zapise.
 
 > [!IMPORTANT]
 > Entiteta, ki jo izberete kot svojo primarno entiteto, služi kot osnova za vaš nabor podatkov o poenotenih profilih. Tej entiteti so dodane dodatne entitete, ki so izbrane med fazo ujemanja. To ne pomeni, da bo poenotena entiteta vključevala *vse* podatke, vključene v to entiteto.
@@ -38,9 +37,18 @@ Primarna entiteta *eCommerce:eCommerceContacts* se ujema z naslednjo entiteto *L
 > Ko izbirate hierarhijo svojih entitet, razmislite o dveh stvareh:
 >
 > - Kot primarno entiteto izberite entiteto z najbolj popolnimi in zanesljivimi podatki o profilu vaših strank.
-> - Kot primarno entiteto izberite entiteto, ki ima več skupnih atributov z drugimi entitetami (na primer ime, telefonska številka ali e-poštni naslov).
+> - Za primarno entiteto izberite entiteto, ki ima več skupnih atributov z drugimi entitetami (na primer ime, telefonska številka ali e-poštni naslov).
 
-Ko določite vrstni reda ujemanja, boste videli določene pare ujemanj v razdelku **Podrobnosti o ujemajočih se zapisih** pod **Podatki** > **Poenotenje** > **Ujemanje**. Ključne meritve bodo prazne, dokler se postopek ujemanja ne zaključi.
+1. Odprite razdelek **Podatki** > **Poenoti** > **Ujemanje** in za začetek faze ujemanja izberite možnost **Nastavi vrstni red** .
+1. Izberite **Naročilo subjekta**. Na primer, izberite **e-trgovina: kontakti za e-trgovino** kot primarni subjekt in **Shema zvestobe:loyCustomers** kot drugi subjekt. 
+1. Če želite imeti vsak zapis v entiteti kot edinstveno stranko in se ujemati z vsako naslednjo entiteto, izberite **Vključi vse**.
+1. Izberite **Dokončano**. 
+
+Ko določite vrstni red ujemanja, se definirani pari ujemanja prikažejo v **Podrobnosti o ujemajočih se zapisih** razdelek o **Podatki** > **Poenoti** > **Tekma**. Ključne meritve so prazne, dokler se postopek ujemanja ne zaključi.
+
+:::image type="content" source="media/match-page.png" alt-text="Posnetek zaslona strani ujemanja v območju Unify pri postopku poenotenja podatkov.":::
+  
+Primarna entiteta *eCommerce:eCommerceContacts* se ujema z naslednjo entiteto *LoyaltyScheme:loyCustomers*. Nabor podatkov, ki je rezultat prvega koraka ujemanja, se ujema z naslednjo entiteto, če imate več kot dve entiteti.
 
 ## <a name="define-rules-for-match-pairs"></a>Določanje pravil za pare ujemanja
 
@@ -50,7 +58,7 @@ Opozorilo **Potrebuje pravila** poleg imena entitete kaže, da za par ujemanja n
 
 :::image type="content" source="media/match-rule-add.png" alt-text="Posnetek zaslona razdelka «Podrobnosti o ujemajočem se zapisu» s kontrolnikom za dodajanje označenih pravil.":::
 
-1. Izberite **Dodajanje pravil** pod entiteto v razdelku **Podrobnosti o ujemajočih se zapisih** za določitev pravil ujemanja.
+1. Izberite **Dodajte pravilo** pod subjektom v **Podrobnosti o ujemajočih se zapisih** razdelek za določitev pravil ujemanja.
 
 1. V podoknu **Ustvarjanje pravila**, konfigurirajte pogoje za pravilo.
 
@@ -61,15 +69,15 @@ Opozorilo **Potrebuje pravila** poleg imena entitete kaže, da za par ujemanja n
    - **Entiteta/polje (druga vrstica)**: Izberite atribut, ki se nanaša na atribut entitete, določene v prvi vrstici.
 
    - **Normaliziranje**: Izberite med naslednjimi možnostmi normalizacije za izbrane atribute. 
-     - Presledek: odstrani vse presledke. *Živjo,   svet* postane *Živjo,svet*.
+     - Številke: pretvori druge številske sisteme, na primer rimske številke, v arabske številke. *VIII* postane *8*.
      - Simboli: odstrani vse simbole in posebne znake. *Glava&Rama* postane *GlavaRama*.
      - Besedilo z malimi črkami: pretvori vse znake v male črke. *VSE Z VELIKIMI in Naslov* postane *vse z velikimi in naslov*.
+     - Vrsta (telefon, ime, naslov, organizacija): Standardizira imena, naslove, telefonske številke, naslove itd. 
      - Unicode v ASCII: pretvori zapis unicode v znake ASCII. */u00B2* postane *2*.
-     - Številke: pretvori druge številske sisteme, na primer rimske številke, v arabske številke. *VIII* postane *8*.
-     - Semantične vrste: standardizira imena, nazive, telefonske številke, naslove itd. 
+     - Presledek: odstrani vse presledke. *Živjo,   svet* postane *Živjo,svet*.
 
    - **Natančnost**: nastavite raven natančnosti, ki se bo uporabljala za ta pogoj. 
-     - **Osnovno**: izberite med *nizko*, *srednje*, *visoko* in *popolno*. Izberite **Natančno**, da povežete samo zapise, ki se ujemajo stoodstotno. Izberite eno od drugih ravni, da povežete zapise, ki niso stoodstotno enaki.
+     - **Osnovno**: izberite med *nizko*, *srednje*, *visoko* in *popolno*. Izberite **Točno** da se ujemajo samo z zapisi, ki se ujemajo 100 odstotkov. Izberite eno od drugih ravni, da povežete zapise, ki niso stoodstotno enaki.
      - **Po meri**: nastavite odstotek, ki ga morajo imeti zapisi, da se ujemajo. Sistem se bo ujemal samo z zapisi, ki presegajo ta prag.
 
 1. Navedite **Ime** za pravilo.
@@ -92,7 +100,7 @@ Opozorilo **Potrebuje pravila** poleg imena entitete kaže, da za par ujemanja n
 
 ### <a name="add-rules-to-a-match-pair"></a>Dodajanje pravil paru ujemanja
 
-Pravila ujemanja predstavljajo nabore pogojev. Za ujemanje entitet pod pogoji na osnovi več atributov dodajte več pravil.
+Pravila ujemanja predstavljajo nabore pogojev. Če želite povezati entitete po pogojih na podlagi več atributov, dodajte več pravil.
 
 1.  Pojdite v **Podatki** > **Poenotenje** > **Ujemanje** in izberite **Dodaj pravilo** za entiteto, ki ji želite dodati pravila.
 
@@ -117,7 +125,7 @@ Entitete za pravila ujemanja lahko prerazporedite, da spremenite vrstni red, v k
 
 Poleg [pravil ujemanja med entitetami](#define-rules-for-match-pairs) lahko določite tudi pravila za odstranjevanje podvajanja. *Odstranjevanje podvajanja* je še en postopek pri ujemanju zapisov. Identificira podvojene zapise in jih združi v en zapis. Izvorni zapisi se na združeni zapis povežejo z nadomestnimi ID-ji.
 
-Zapisi, pri katerih je bilo odstranjeno podvajanje, bodo uporabljeni v postopku ujemanja med entitetami. Odstranjevanje podvajanja se zgodi na posameznih entitetah in ga je mogoče konfigurirati za vsako entiteto, uporabljeno v parih ujemanja.
+Odstranjeni zapisi se uporabljajo v postopku ujemanja med entitetami. Odpravljanje podvajanja se zgodi na posameznih entitetah in ga je mogoče konfigurirati za vsako entiteto, ki se uporablja v parih ujemanja.
 
 Določanje pravil za odstranjevanje podvajanja ni obvezno. Če taka pravila niso konfigurirana, se uporabijo sistemsko določena pravila. Vse zapise združijo v en zapis, preden podatke entitete posredujejo ujemanju med entitetami za večjo zmogljivost.
 
@@ -134,7 +142,7 @@ Določanje pravil za odstranjevanje podvajanja ni obvezno. Če taka pravila niso
       - **Najnovejše**: določi rekord zmagovalca glede na najnovejše rezultate. Zahteva datum ali številsko polje za določitev najnovejše izkušnje.
       - **Najstarejše**: določi rekord zmagovalca glede na najstarejše rezultate. Zahteva datum ali številsko polje za določitev najnovejše izkušnje.
 
-   1. Po želji izberite **Napredno** za definiranje pravil za deduplikacijo posameznih atributov entitete. Izberete lahko na primer, da obdržite najnovejšo e-pošto IN najbolj popoln naslov iz različnih zapisov. Razširite entiteto, da si ogledate vse njene atribute in določite, katero možnost uporabiti za posamezne atribute. Če izberete možnost, ki temelji na nedavnosti, morate določiti tudi polje za datum/čas, ki definira nedavnost. 
+   1. Če želite določiti pravila za odpravo podvajanja za posamezne atribute entitete, izberite **Napredno**. Izberete lahko na primer, da obdržite najnovejšo e-pošto IN najbolj popoln naslov iz različnih zapisov. Razširite entiteto, da si ogledate vse njene atribute in določite, katero možnost uporabiti za posamezne atribute. Če izberete možnost, ki temelji na nedavnosti, morate določiti tudi polje za datum/čas, ki definira nedavnost. 
  
       > [!div class="mx-imgBorder"]
       > ![1. korak pravil za odstranjevanje podvajanja.](media/match-selfconflation.png "1. korak pravil za odstranjevanje podvajanja")

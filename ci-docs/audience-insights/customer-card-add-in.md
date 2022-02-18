@@ -1,7 +1,7 @@
 ---
 title: Dodatek za kartico stranke za aplikacije Dynamics 365 (vsebuje video)
 description: S tem dodatkom prikažite podatke iz vpogledov v občinstvo v aplikacijah Dynamics 365.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: sl-SI
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085268"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Dodatek za kartico stranke (predogled)
 
 
@@ -113,5 +118,26 @@ Dodatek za kartico stranke se ne nadgradi samodejno. Če želite nadgraditi na n
 
 1. Po začetku postopka nadgradnje je do zaključka prikazan kazalnik stanja nalaganja. Če novejše različice ni, se pri nadgradnji prikaže sporočilo o napaki.
 
+## <a name="troubleshooting"></a>Odpravljanje težav
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kontrolniki iz dodatka za kartico stranke ne najdejo podatkov
+
+**Težava:**
+
+Tudi s pravilno konfiguriranimi ID polji kontrolniki ne najdejo podatkov za nobeno stranko.  
+
+**Rešitev:**
+
+1. Prepričajte se, da ste konfigurirali dodatek za kartice v skladu z navodili: [Konfigurirajte dodatek za kartico stranke](#configure-the-customer-card-add-in) 
+
+1. Preglejte konfiguracijo za vnos podatkov. Uredite vir podatkov za sistem Dynamics 365, ki vsebuje GUID ID stika. Če je ID stika GUID prikazan z velikimi črkami v Power Query urejevalnik, poskusite naslednje: 
+    1. Uredite vir podatkov, da odprete vir podatkov v Power Query Urednik.
+    1. Izberite stolpec ID stika.
+    1. Izberite **Preoblikovanje** v naslovni vrstici, da si ogledate razpoložljiva dejanja.
+    1. Izberite **male črke**. Preverite, ali so GUID-ji v tabeli zdaj male črke.
+    1. Shranite vir podatkov.
+    1. Zaženite procese za zaužitje podatkov, združevanje in nadaljnje postopke za širjenje sprememb v GUID. 
+
+Po končani popolni osvežitvi morajo kontrolniki dodatka za kartico stranke prikazati pričakovane podatke. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

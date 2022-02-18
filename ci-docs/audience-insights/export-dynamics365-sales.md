@@ -1,6 +1,6 @@
 ---
 title: Izvozite podatke Customer Insights v Dynamics 365 Sales
-description: 'Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Sales.'
+description: Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,13 +9,23 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
+ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.translationtype: HT
+ms.contentlocale: sl-SI
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8090943"
 ---
-
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Uporaba segmentov v storitvi Dynamics 365 Sales (predogledna različica)
 
 
 
 Na podlagi podatkov o strankah z aplikacijo Dynamics 365 Sales ustvarjajte sezname za trženje in postopke za nadaljnje delo ter pošiljajte promocijske vsebine.
+
+## <a name="known-limitations"></a>Znane omejitve
+
+- Izvoz v Dynamics 365 Sales je omejen na 100.000 članov na segment.
+- Izvoz segmentov v Dynamics 365 Sales lahko traja do 3 ure. 
 
 ## <a name="prerequisite-for-connection"></a>Predpogoj za povezavo
 

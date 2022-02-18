@@ -1,7 +1,7 @@
 ---
 title: Nove in prihajajoče funkcije
-description: 'Informacije o novih funkcijah, izboljšavah in popravkih napak.'
-ms.date: 01/27/2022
+description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: sl-SI
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088305"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Posodobitve v januarju 2022
+
+Posodobitve januarja 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analiza razpoloženja povratnih informacij vaših strank
+
+Customer Insights ponuja novo funkcijo, ki jo poganja umetna inteligenca, za sintetiziranje razpoloženja strank in prepoznavanje posebnih poslovnih vidikov kot priložnosti za ciljno usmerjene izboljšave. Z analizo pisnih povratnih informacij vaših strank lahko dobite natančne vpoglede po nizki ceni. Analiza občutkov, ki jo poganjajo modeli obdelave naravnega jezika (NLP), ki ustvarjajo dva izpeljana vpogleda za vsak ID stranke. Ocena razpoloženja (od –5 do 5) in seznam veljavnih poslovnih vidikov. 
+
+Za več informacij glejte [Analizirajte razpoloženje v povratnih informacijah strank (predogled)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Posodobitve v decembru 2021
@@ -37,7 +53,7 @@ Za več informacij glejte [Posredovanje dnevnika Dynamics 365 Customer Insights 
 
 Uporabite podatke iz Microsoft Office 365 obogatiti profile računa strank z vpogledi v dejavnosti prek Office 365 aplikacije. Podatki o udeležbi so sestavljeni iz e-pošte in dejavnosti sestankov, ki so združeni na ravni računa. Na primer število e-poštnih sporočil iz poslovnega računa ali število sestankov z računom. Podatki o posameznih uporabnikih se ne delijo. Ta obogatitev je na voljo v naslednjih regijah: Združeno kraljestvo, Evropa, Severna Amerika.
 
-Za več informacij glejte [Obogatite profile strank s podatki o angažiranosti (predogled)](enrichment-office.md)
+Za več informacij glejte [Obogatite profile strank s podatki o angažiranosti (predogled)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Napredne funkcije združevanja podatkov
 
@@ -106,7 +122,7 @@ Graditelj segmentov vam omogoča ustvarjanje segmentov poslovnih računov, ki po
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Ohranite svoje poslovne račune z globokim vpogledom v njihovo nagnjenost k odlivu
 
-Model odliva strank predvidevanje zdaj podpira tudi poslovne račune. Tveganje odtoka lahko ocenite ne samo za račun, ampak za kombinacijo računa in kategorije izdelkov ali storitev, ki jih kupijo pri vas. Ta dodatek vam pomaga razumeti, ali je večja verjetnost, da bo račun prenehal kupovati pri vas na splošno ali samo za določeno kategorijo blaga ali storitev. Za dodatno pomoč pri uporabi tega modela umetne inteligence so navedeni tudi razlogi, zakaj bo račun verjetno odtekel. Za več informacij glejte [Pretok transakcij predvidevanje (predogled)](predict-transactional-churn.md).
+Model odliva strank predvidevanje zdaj podpira tudi poslovne račune. Tveganje odtoka lahko ocenite ne samo za račun, ampak za kombinacijo računa in kategorije izdelkov ali storitev, ki jih kupijo pri vas. Ta dodatek vam pomaga razumeti, ali je večja verjetnost, da bo račun prenehal kupovati pri vas na splošno ali samo za določeno kategorijo blaga ali storitev. Za dodatno pomoč pri uporabi tega modela umetne inteligence so našteti tudi razlogi, zakaj bo račun verjetno odtekel. Za več informacij glejte [Pretok transakcij predvidevanje (predogled)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Oglejte si stike poslovnega računa v pogledu strank
 

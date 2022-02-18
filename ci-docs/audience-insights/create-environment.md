@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892358"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088133"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Ustvarite okolje v vpogledih v občinstvo
 
@@ -28,7 +28,7 @@ Organizacije lahko ustvarijo *dve* okolji za vsako licenco Customer Insights. Č
 
 ## <a name="create-a-new-environment"></a>Ustvarite novo okolje
 
-Po nakupu naročniške licence za Customer Insights globalni skrbnik najemnika Microsoft 365 prejme e-poštno sporočilo, ki ga povabi k ustvarjanju okolja. Za začetek pojdite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
+Po nakupu naročniške licence za Customer Insights, globalni skrbnik spletnega mesta Microsoft 365 najemnik prejme e-pošto, ki ga vabi k ustvarjanju okolja. Za začetek pojdite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). 
 
 Vodena izkušnja vam pomaga pri zbiranju vseh potrebnih informacij za novo okolje. Za ustvarjanje ali upravljanje okolij potrebujete [skrbniška dovoljenja](permissions.md) v vpogledih v občinstva.
 
@@ -64,7 +64,7 @@ S shranjevanjem podatkov v Azure Data Lake Storage se strinjate, da bodo podatki
 > Storitev Customer Insights trenutno podpira naslednje:
 > - Uvožene entitete iz podatkovnih tokov Power BI, ki so shranjeni v okolju Microsoft Dataverse, ki ga upravlja Data Lake.  
 > - Računi Azure Data Lake Storage iz iste regije Azure, ki ste jo izbrali pri ustvarjanju okolja.
-> - Računi Azure Data Lake Storage, ki imajo omogočen *hierarhičen imenski prostor*.
+> - Azure Data Lake Storage račune, ki so Gen2 in imajo *hierarhičen imenski prostor* omogočeno. Računi za shranjevanje podatkov Azure Data Lake Gen1 niso podprti.
 
 V sklopu možnosti Azure Data Lake Storage lahko za preverjanje pristnosti izberete možnost, ki temelji na virih, ali možnost, ki temelji na naročnini. Za več informacij glejte [Vzpostavitev povezave z računom Azure Data Lake Storage z glavnim imenom storitve Azure](connect-service-principal.md). Ime **vsebnika** bo `customerinsights` in ga ni mogoče spremeniti.
 

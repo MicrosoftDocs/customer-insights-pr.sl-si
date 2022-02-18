@@ -2,6 +2,22 @@
   href: index.yml
 - name: Pregled izdelka
   href: overview.md
+- name: Učni katalog
+  items:
+    - name: Začni
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Vnos podatkov
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Ustvarite poenoten profil stranke
+      href: /learn/modules/unified-customer-profile/
+    - name: Delajte z vpogledi občinstvo
+      href: /learn/modules/working-with-customer-insights/
+    - name: Obogatite podatke in naredite napovedi
+      href: /learn/modules/enrich-data/
+    - name: Upravljajte zunanje povezave
+      href: /learn/modules/configure-third-party-connections/
+    - name: Skrbništvo rešitve Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: Brezplačna preskusna različica
   items:
     - name: Vpis za brezplačno preskusno različico
@@ -24,22 +40,12 @@
       items:
         - name: Vodnik za hitri začetek
           href: audience-insights/get-started.md
-        - name: Ustvarite novo okolje
+        - name: Ustvarjanje novega okolja
           href: audience-insights/create-environment.md
         - name: Raziskovanje vpogledov v občinstvo
           href: audience-insights/home.md
     - name: Delo s poslovnimi računi
       href: audience-insights/work-with-business-accounts.md
-    - name: Več o modulih
-      items:
-        - name: Vnos podatkov
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Ustvarite poenoten profil stranke
-          href: /learn/modules/unified-customer-profile/
-        - name: Delo z aplikacijo
-          href: /learn/modules/working-with-customer-insights/
-        - name: Obogatitev podatkov in predvidevanj
-          href: /learn/modules/enrich-data/
     - name: Viri podatkov
       items:
         - name: Pregled virov podatkov
@@ -276,7 +282,7 @@
           href: consent-management/set-consent-rules.md
     - name: Upravljajte podatke o privolitvi
       items:
-        - name: Omogoči pravila o soglasju v občinstvo vpogledih
+        - name: Omogoči pravila za soglasje v občinstvo vpogledih
           href: audience-insights/activate-consent.md
         - name: Upravljajte privzeta pravila za soglasje v segmentih občinstvo vpogledov
           href: audience-insights/change-default-consent-rules.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: Pravice in zahteve DSR
   href: dsr-rights-requests.md
+- name: Podpora
+  href: /power-platform/admin/get-help-support

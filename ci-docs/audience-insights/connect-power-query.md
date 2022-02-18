@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
-ms.translationtype: MT
+ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
+ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934998"
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8092092"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povežite se z a Power Query vir podatkov
 
@@ -30,7 +30,7 @@ Dodajanje podatkovnih virov na podlagi Power Query konektorji na splošno sledi 
 
 1. Izberite **Dodaj vir podatkov**.
 
-1. Izberite **Microsoft Power Query**, nato izberite **Naslednji**.
+1. Izberite **Microsoft Power Query**.
 
 1. Vnesite **Ime** za vir podatkov in izberite **Naprej**, da ustvarite vir podatkov.
 
@@ -47,12 +47,12 @@ Dodajanje podatkovnih virov na podlagi Power Query konektorji na splošno sledi 
 
 1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v Power Query okno za uporabo transformacij. Vsaka pretvorba je navedena pod **Uporabljeni koraki**. Power Query ponuja številne vnaprej izdelane možnosti preoblikovanja. Za več informacij glejte [Power Query Transformacije](/power-query/power-query-what-is-power-query#transformations).
 
-1. Virom podatkov lahko dodate dodatne entitete tako, da izberete **Pridobi podatke** v pogovornem oknu **Urejanje poizvedb**.
-
    Priporočamo, da uporabite naslednje transformacije:
 
-   - Če vnašate podatke iz datoteke CSV, prva vrstica pogosto vsebuje glave. Pojdite na **Tabela pretvorb** in izberite **Uporabi glave kot prvo vrstico**.
-   - Prepričajte se, da je vrsta podatkov pravilno nastavljena.
+   - Če vnašate podatke iz datoteke CSV, prva vrstica pogosto vsebuje glave. Pojdi do **Preoblikovanje** in izberite **Uporabite prvo vrstico kot glave**.
+   - Prepričajte se, da je vrsta podatkov pravilno nastavljena. Na primer, za datumska polja izberite vrsto datuma.
+
+1. Če želite dodati dodatne entitete v svoj vir podatkov v **Uredite poizvedbe** pogovorno okno, pojdite na **Domov** in izberite **Pridobite podatke**.
 
 1. Izberite **Shrani** na dnu Power Query okno za shranjevanje transformacij. Po shranjevanju boste našli svoj vir podatkov pod **Podatki** > **Viri podatkov**.
 

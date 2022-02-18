@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900295"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088167"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve Azure
 
-Ta članek govori o tem, kako se povezati Dynamics 365 Customer Insights z Azure Data Lake Storage račun z uporabo principala storitve Azure namesto ključev računa za shranjevanje. 
+Ta članek govori o tem, kako povezati Dynamics 365 Customer Insights z Azure Data Lake Storage račun z uporabo principala storitve Azure namesto ključev računa za shranjevanje. 
 
 Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omejena dovoljenja. Namesto da bi se v aplikacije vpisali kot uporabnik s vsemi pravicami, Azure ponuja glavno ime storitve. Za varno lahko uporabite principe storitev [dodajte ali uredite mapo skupnega podatkovnega modela kot vir podatkov](connect-common-data-model.md) oz [ustvarite ali posodobite okolje](create-environment.md).
 
 > [!IMPORTANT]
-> - Račun storitve Data Lake Storage, ki bo uporabljal glavno ime storitve, mora imeti [omogočen hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
+> - Račun Data Lake Storage, ki bo uporabljal principala storitve, mora biti Gen2 in imeti [Imenski prostor hierarhičen je omogočen](/azure/storage/blobs/data-lake-storage-namespace). Računi za shranjevanje podatkov Azure Data Lake Gen1 niso podprti.
 > - Za ustvarjanje principala storitve potrebujete skrbniška dovoljenja za svojo naročnino na Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Ustvarjanje glavnega imena storitve Azure za storitev Customer Insights
