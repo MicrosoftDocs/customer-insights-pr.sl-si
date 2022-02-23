@@ -1,6 +1,6 @@
 ---
 title: Izvozite podatke Customer Insights v Dynamics 365 Marketing
-description: 'Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Marketing.'
+description: Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Marketing.
 ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,8 +9,13 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
+ms.openlocfilehash: e2ec9f1cc11fdab5ff313bb3041d2b158ed6ca67
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: sl-SI
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046767"
 ---
-
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Uporaba segmentov v storitvi Dynamics 365 Marketing (predogledna različica)
 
 

@@ -9,8 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
+ms.openlocfilehash: 8a871d65bd79d3246984e23fb52210c8dc7259b8
+ms.sourcegitcommit: 7a99f3490e6582c2bc2b38019ed1898348b0eaba
+ms.translationtype: HT
+ms.contentlocale: sl-SI
+ms.lasthandoff: 01/25/2022
+ms.locfileid: "8027072"
 ---
-
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povezava z mapo Common Data Model z uporabo računa Azure Data Lake
 
 V tem članku so informacije o vključitvi podatkov iz mape Common Data Model z vašim računom Azure Data Lake Storage Gen2.
