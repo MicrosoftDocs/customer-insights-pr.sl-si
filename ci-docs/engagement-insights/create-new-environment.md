@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673662"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648137"
 ---
 # <a name="create-a-new-environment"></a>Ustvarite novo okolje 
 
@@ -40,13 +40,13 @@ Okolje je prostor, kjer upravljate s svojimi delovnimi prostori in povezavami. K
 
 1. Izberite **Regija** in izberite **Naprej**. 
 
-1. Vnesite a **Ime delovnega prostora**, ki vam omogoča zbiranje podatkov za določena spletna mesta ali aplikacije. Za več informacij glejte razdelek [Ustvarjanje delovnega prostora](create-workspace.md).
+1. Vnesite **ime delovnega prostora**, ki vam omogoča zbiranje podatkov za določeno spletno mesto ali aplikacije. Za več informacij glejte razdelek [Ustvarjanje delovnega prostora](create-workspace.md).
 
-1. Izberite **Vrsta delovnega prostora** (splet ali mobilni), ki ga želite ustvariti. 
+1. Izberite **vrsto delovnega prostora** (spletno ali mobilno), ki ga želite ustvariti. 
 
 1. Izberite možnost **Prikaz naprednih nastavitev**, če želite omogočiti ali onemogočiti te izbirne nastavitve:
 
-   - Preklopite možnost **Iz neznanega v znano** na »omogočeno«, da povežete spletne dogodke z uporabniki, ki že imajo preverjeno pristnost. Za več informacij glejte [Prepoznajte spletne dogodke od predhodno overjenih obiskovalcev](unknown-to-known.md).
+   - Preklopite možnost **Iz neznanega v znano** na »omogočeno«, da povežete spletne dogodke z uporabniki, ki že imajo preverjeno pristnost. Za več informacij odprite razdelek [Prepoznavanje spletnih dogodkov za obiskovalce, ki že imajo preverjeno pristnost](unknown-to-known.md)
    - Preklopite možnost **Filtriranje prometa botov** na »omogočeno«, da odstranite spletni promet botov za ta delovni prostor. 
 
 1. Ko končate, izberite možnost **Dokončaj**. 

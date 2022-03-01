@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466368"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461123"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Uporaba demografskih dimenzij za razdelitev vedenjskih podatkov
 
@@ -29,7 +29,7 @@ Z uporabo demografskih dimenzij v poenotenem profilu lahko uporabniki vpogledov 
 - Okolje vpogledov v interakcije, v katerem imate podatke o profilu stranke, povezane z okoljem vpogledov občinstva, kjer se ustvarjajo profili strank. Več informacij: [Ustvarjanje povezave med vpogledi občinstva in vpogledi v interakcije](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Ko ustvarite povezavo med okolji vpogledov občinstva in vpogledi v interakcije, boste morda želeli le podatke, značilne za lastnosti profila strank, ki so lahko uporabni kot dimenzije pri vpogledih v interakcije. Za več informacij pojdite na [Omogočanje atributov in segmentov poenotenih profilov vpogledov občinstva](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
+> Ko ustvarite povezavo med okolji vpogledov občinstva in vpogledi v interakcije, boste morda želeli le podatke, značilne za lastnosti profila strank, ki so lahko uporabni kot dimenzije pri vpogledih v interakcije. Za več informacij pojdite na [Omogočanje atributov in segmentov poenotenih profilov vpogledov občinstva](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
 
 ## <a name="create-a-new-custom-report"></a>Ustvarjanje novega poročila po meri
 

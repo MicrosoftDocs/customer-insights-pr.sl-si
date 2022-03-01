@@ -4,17 +4,17 @@ description: Ustvarjanje, urejanje in brisanje metrik.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 06/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 79600a14bc7e98dfd066270f19c353fd007e1341
-ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
+ms.openlocfilehash: 97189168e0f5586aad8be8089a1f9e27893c2115c7e805ddaab1efc00e11b860
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623742"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034289"
 ---
 # <a name="view-and-create-metrics"></a>Ogled in ustvarjanje metrik
 
@@ -38,24 +38,21 @@ Te sistemske metrike temeljijo na obstoječih lastnostih dogodkov v osnovnih dog
 1. V levem podoknu za krmarjenje izberite **Podatki**. 
 1. Izberite zavihek **Metrike** za ogled seznama vseh metrik v delovnem prostoru. 
    > [!NOTE]
-   > Sistemsko ustvarjene metrike so na voljo samo za branje. Ni jih mogoče urejati ali izbrisati. Ustvarite in urejate lahko le metrike po meri.
+   > Sistemsko ustvarjene metrike so na voljo samo za branje. Ne morete jih spremeniti ali izbrisati. Ustvarite in urejate lahko le metrike po meri.
 
 ## <a name="create-a-metric"></a>Ustvarjanje metrike
 
 Skrbniki okolja in delovnega prostora lahko ustvarjajo metrike. Lastnosti dogodka je treba poslati v delovni prostor, preden ustvarite metriko. Ustvarite lahko metrike na podlagi lastnosti dogodka, ki jih pošljejo osnovni dogodki, ali pa uporabite spletni SDK, da [pošljete lastnosti dogodka po meri](advanced-SDK-implementation.md).
 
 1. Odprite **Podatki** > **Meritve**.
-1. Izberite **Nova meritev**, da odprete **Knjižnica virov** in pogovorno okno **Nova neimenovana meritev**.
+1. Izberite **Nova metrika**.
 
    :::image type="content" source="media/new-metric.png" alt-text="Dodajanje metrike za dogodek.":::
 
-1. V pogovornem oknu **Nova neimenovana meritev** izberite spustni seznam **Oblika** in nato vrsto podatka **Celo število** ali **Dvojno**. Celo število mora biti celo število. Za »Dvojno« lahko izberete eno in tri decimalna mesta.
-
-   :::image type="content" source="media/create-new-metric.png" alt-text="Ustvarjanje nove meritve.":::
-   
-5. V podoknu **Knjižnica virov** poiščite lastnost dogodka, na podlagi katere bo izdelana meritev.
-6. Izberite **znak plus (+)** poleg lastnosti, da jo uporabite v formuli. Formulo lahko ustvarite samo na podlagi ene lastnosti. 
-7. Izberite eno od naslednjih združenih funkcij. 
+1. Za formatiranje izberite vrsto podatkov **Celo število** ali **Dvojno**. Celo število mora biti celo število. Za »Dvojno« lahko izbirate med enim in tremi decimalnimi mesti.
+1. V podoknu **Knjižnica virov** poiščite lastnost dogodka, na podlagi katere bo izdelana meritev.
+1. Izberite **znak plus (+)** poleg lastnosti, da jo uporabite v formuli. Formulo lahko ustvarite samo na podlagi ene lastnosti. 
+1. Izberite eno od naslednjih združenih funkcij. 
 
    - Vsota: aritmetični seštevek vseh vrednosti 
    - Povprečje: povprečje vseh vrednosti
@@ -71,16 +68,12 @@ Traja lahko do eno minuto, preden lahko metriko uporabite za [ustvarjanje poroč
 
 ## <a name="edit-a-metric"></a>Urejanje metrike
 
-Urejate lahko samo meritve po meri.
-
 1. Odprite **Podatki** > **Meritve**.
 1. Na seznamu izberite metriko.
 1. Sprememba definicije metrike
 1. Izberite **Shrani**.
 
 ## <a name="change-the-name-of-a-metric"></a>Sprememba imena metrike
-
-Spremenite lahko samo ime meritev po meri.
 
 1. Odprite **Podatki** > **Meritve**.
 1. Izberite **Več [...]** pri posamezni metriki in izberite **Uredi ime**.
@@ -89,15 +82,11 @@ Spremenite lahko samo ime meritev po meri.
 
 ## <a name="delete-a-metric"></a>Brisanje metrike
 
-Izbrišete lahko samo meritve po meri.
-
 1. Odprite **Podatki** > **Meritve**.
 1. Izberite **Več [...]** pri posamezni metriki in izberite **Izbriši**.
 
    :::image type="content" source="media/delete-metric.png" alt-text="Brisanje metrike za dogodek.":::
 
 1. Izberite možnost **Izbriši**, da pordite izbris.
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov Customer Insights v storitev Azure Data Lake Storage Gen2
 description: Preberite o konfiguraciji povezave s storitvijo Azure Data Lake Storage Gen2.
-ms.date: 10/06/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,24 +9,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 934c396559d4c4be8e640917d2265805753eb62d
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7605923"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760071"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Izvoz seznama segmentov in drugih podatkov v storitev Azure Data Lake Storage Gen2 (predogledna različica)
-
-Podatke iz storitve Customer Insights shranite v račun Data Lake Storage Gen2 ali jih uporabite za prenos podatkov v druge aplikacije.
-
-## <a name="known-limitations"></a>Znane omejitve
-
-1. Za storitev Azure Data Lake Storage Gen2 lahko izbirate med [ravnjo standardne učinkovitosti delovanja in učinkovitosti delovanja Premium](/azure/storage/blobs/create-data-lake-storage-account), ko ustvarjate račun za shranjevanje za jezero podatkov. Če izberete raven učinkovitosti delovanja Premium, izberite bloke zbirke dvojiških podatkov za različico premium kot vrsto računa. 
-
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nastavitev povezave s storitvijo Azure Data Lake Storage Gen2 
-
+# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Nastavitev povezave s storitvijo Azure Data Lake Storage Gen2 (predogledna različica)
 
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 

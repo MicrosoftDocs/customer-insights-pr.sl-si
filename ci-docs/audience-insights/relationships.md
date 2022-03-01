@@ -1,20 +1,20 @@
 ---
 title: Odnosi med entitetami in poti entitet
 description: Ustvarite in upravljajte odnose med entitetami iz več virov podatkov.
-ms.date: 09/27/2021
+ms.date: 06/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: MichelleDevaney
+ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
+ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623189"
+ms.lasthandoff: 06/03/2021
+ms.locfileid: "6171184"
 ---
 # <a name="relationships-between-entities"></a>Odnosi med entitetami
 
@@ -31,8 +31,8 @@ Med poenotenjem podatkov se sistemski odnosi samodejno ustvarijo na podlagi pame
 
 :::image type="content" source="media/relationships-entities-merge.png" alt-text="Diagram s potmi odnosov za entiteto stranke s tremi odnosi 1-n.":::
 
-- **Odnos *CustomerToContact*** je bil ustvarjen med entiteto *Stranka* in entiteto *Stik*. Za entiteto *Stranka* se uporabi polje ključa **Contact_contactId** za povezovanje s poljem ključa entitete *Stik* **contactID**.
-- **Odnos *CustomerToAccount*** je bil ustvarjen med entiteto *Stranka* in entiteto *Kupec*. Za entiteto *Stranka* se uporabi polje ključa **Account_accountID** za povezovanje s poljem ključa entitete *Kupec* **accountID**.
+- **Odnos *CustomerToContact*** je bil ustvarjen med entiteto *Stranka* in entiteto *Stik*. Za entiteto *Stranka* se uporabi polje ključa Contact_ **contactId** za povezovanje s poljem ključa entitete *Stik* **contactID**.
+- **Odnos *CustomerToAccount*** je bil ustvarjen med entiteto *Stranka* in entiteto *Kupec*. Za entiteto *Stranka* se uporabi polje ključa Account_ **accountID** za povezovanje s poljem ključa entitete *Kupec* **accountID**.
 - **Odnos *CustomerToWebAccount*** je bil ustvarjen med entiteto *Stranka* in entiteto *WebAccount*. Za entiteto *Stranka* se uporabi polje ključa **WebAccount_webaccountID** za povezovanje s poljem ključa entitete *WebAccount* **webaccountID**.
 
 ## <a name="non-editable-inherited-relationships"></a>Podedovani odnosi, ki jih ni mogoče urejati
@@ -68,20 +68,6 @@ Odnos je sestavljen iz *izvorne entitete*, ki vsebuje tuji ključ, in *ciljne en
 
 4. Izberite možnost **Shrani**, da ustvarite odnos po meri.
 
-## <a name="set-up-account-hierarchies"></a>Nastavitev hierarhij računov
-
-Okolja, ki so konfigurirana za uporabo poslovnih računov kot primarno ciljno občinstvo, lahko konfigurirajo hierarhije računov za povezane poslovne račune. Na primer podjetje, ki ima ločene poslovne enote. 
-
-Organizacije ustvarjajo hierarhije računov za boljše upravljanje računov in njihovih odnosov med seboj. Zmogljivost vpogledov v občinstvo podpira hierarhije računov nadrejeni-podrejeni, ki že obstajajo v uvoženih podatkih o strankah. Na primer računi iz storitve Dynamics 365 Sales. Te hierarhije je mogoče konfigurirati na strani **Odnosi** v vpogledih v občinstvo v zavihku hierarhija računov.
-
-1. Odprite razdelek **Podatki** > **Odnosi**.
-1. Izberite zavihek **Hierarhija računa**.
-1. Izberite **Nova hierarhija računa**. 
-1. V podoknu **Hierarhija računa** vnesite ime za hierarhijo. Sistem ustvari ime za izhodno entiteto. Lahko spremenite ime izhodne entitete.
-1. Izberite entiteto, ki vsebuje hierarhijo vašega računa. Običajno je v isti entiteti, ki vsebuje račune.
-1. Izberite **ID računa** in **ID nadrejenega računa** iz izbrane entitete 
-1. Izberite **Shrani** za uporabo nastavitev in dokončajte hierarhijo računa.
-
 ## <a name="view-relationships"></a>Ogled odnosov
 
 Na strani Odnosi so navedeni vsi ustvarjeni odnosi. Vsaka vrstica predstavlja odnos, ki vključuje tudi podrobnosti o izvorni entiteti, ciljni entiteti in kardinalnosti. 
@@ -96,7 +82,7 @@ Ta stran ponuja nabor možnosti za obstoječe in nove odnose:
 
 ### <a name="explore-the-relationship-visualizer"></a>Raziščite vizualizator odnosov
 
-Vizualizator odnosov prikazuje omrežni diagram obstoječih odnosov med povezanimi entitetami in njihovo kardinalnost. Prav tako vizualizira pot odnosa.
+Vizualizator odnosov prikazuje omrežni diagram obstoječih odnosov med povezanimi entitetami in njihovo kardinalnost.
 
 Če želite prilagoditi pogled, lahko spremenite položaj polj tako, da jih povlečete na platno.
 
@@ -106,56 +92,6 @@ Razpoložljive možnosti:
 - **Izvozi kot sliko**: shranite trenutni pogled kot slikovno datoteko.
 - **Spremeni v vodoravno/navpično postavitev**: spremenite poravnavo entitet in odnosov.
 - **Uredi**: posodobite lastnosti odnosov po meri v podoknu za urejanje in shranite spremembe.
-
-## <a name="relationship-paths"></a>Poti odnosa
-
-Pot odnosa opisuje entitete, ki so povezane z odnosi med izvorno entiteto in ciljno entiteto. Uporablja se pri ustvarjanju segmenta ali mere, ki vključuje entitete razen entitete poenotenega profila, in obstaja več možnosti za dosego entitete poenotenega profila. 
-
-Pot odnosa obvešča sistem, preko katerega odnosi dostopajo do entitete poenotenega profila. Različne poti odnosov lahko podajo različne rezultate.
-
-Na primer entiteta *eCommerce_eCommercePurchases* ima do poenotenega profila entitete *Stranka* naslednje odnose:
-
-- eCommerce_eCommercePurchases > Stranka
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Stranka
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Stranka 
-
-Pot odnosa določa, katere entitete lahko uporabite pri ustvarjanju pravil za ukrepe ali segmente. Izbira možnosti z najdaljšo potjo odnosa bo verjetno prinesla manj rezultatov, ker morajo biti ujemajoči se zapisi del vseh entitet. V tem primeru mora stranka kupiti izdelke prek e-trgovine (eCommerce_eCommercePurchases) na prodajnem mestu (POS_posPurchases) in sodelovati v našem programu zvestobe (loyaltyScheme_loyCustomers). Če bi izbrali prvo možnost, bi verjetno dobili več rezultatov, ker morajo stranke obstajati le v eni dodatni entiteti.
-
-### <a name="direct-relationship"></a>Neposredni odnos
-
-Odnos je razvrščen kot **neposredni odnos**, če se izvorna entiteta nanaša na ciljno entiteto samo z enim odnosom.
-
-Na primer, če se entiteta dejavnosti, imenovana *eCommerce_eCommercePurchases*, poveže s ciljno entiteto *eCommerce_eCommerceContacts* samo prek *ContactId*, je to neposredni odnos.
-
-:::image type="content" source="media/direct_Relationship.png" alt-text="Izvorna entiteta se poveže neposredno s ciljno entiteto.":::
-
-#### <a name="multi-path-relationship"></a>Odnos z več potmi
-
-**Odnos z več potmi** je posebna vrsta neposrednega odnosa, ki izvorno entiteto poveže z več kot eno ciljno entiteto.
-
-Na primer, če se entiteta dejavnosti, imenovana *eCommerce_eCommercePurchases*, nanaša na dve ciljni entiteti, imenovani *eCommerce_eCommerceContacts* in *loyaltyScheme_loyCustomers*, je to odnos z več potmi.
-
-:::image type="content" source="media/multi-path_relationship.png" alt-text="Izvorna entiteta se prek odnosa z več skoki neposredno poveže z več ciljnimi entitetami.":::
-
-### <a name="indirect-relationship"></a>Posredni odnos
-
-Odnos je razvrščen kot **posredni odnos**, če se izvorna entiteta nanaša na eno ali več dodatnih entitet, preden se nanaša na ciljno entiteto.
-
-#### <a name="multi-hop-relationship"></a>Odnos z več skoki
-
-*Odnos z več skoki* je *posredni odnos*, ki omogoča povezavo izvorne entitete s ciljno entiteto prek ene ali več drugih vmesnih entitet.
-
-Na primer, če se entiteta dejavnosti, imenovana *eCommerce_eCommercePurchasesWest*, poveže z vmesno entiteto, imenovano *eCommerce_eCommercePurchasesEast*, in se nato poveže s ciljno entiteto, imenovano *eCommerce_eCommerceContacts*, je to odnos z več skoki.
-
-:::image type="content" source="media/multi-hop_relationship.png" alt-text="Izvorna entiteta se neposredno poveže s ciljno entiteto z vmesno entiteto.":::
-
-### <a name="multi-hop-multi-path-relationship"></a>Odnos z več skoki in več potmi
-
-Odnose z več skoki in odnose z več potmi lahko uporabite za ustvarjanje **odnosov z več skoki in več potmi**. Ta posebna vrsta združuje funkciji **odnosi z več skoki** in **odnosi z več potmi**. Omogoča, da se med uporabo vmesnih entitet povežete z več kot eno ciljno entiteto.
-
-Na primer, če se entiteta dejavnosti, imenovana *eCommerce_eCommercePurchasesWest*, poveže z vmesno entiteto, imenovano *eCommerce_eCommercePurchasesEast*, in se nato poveže z dvema ciljnima entitetama, imenovanima *eCommerce_eCommerceContacts* in *loyaltyScheme_loyCustomers*, je to odnos z več skoki in več potmi.
-
-:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Izvorna entiteta se neposredno poveže z eno ciljno entiteto in se z vmesno entiteto poveže z drugo ciljno entiteto.":::
 
 ## <a name="manage-existing-relationships"></a>Upravljanje obstoječih odnosov 
 
@@ -169,6 +105,6 @@ Izberite odnos in eno od naslednjih možnosti:
 
 ## <a name="next-step"></a>Naslednji korak
 
-Sistemske odnose in odnose po meri uporabljamo, da [ustvarimo segmente](segments.md) in [mere](measures.md) na podlagi več virov podatkov, ki niso več v silosu.
+Sistemski odnosi in odnosi po meri se uporabljajo za [ustvarjanje segmentov](segments.md) na podlagi več virov podatkov, ki niso več ločeni.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

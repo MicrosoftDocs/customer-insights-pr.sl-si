@@ -1,7 +1,7 @@
 ---
 title: Obogatitev naslova (vsebuje video)
 description: Z Microsoftovimi modeli obogatite in uravnotežite podatke o naslovih za profile strank.
-ms.date: 01/19/2022
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ba43d24ac5ae8846da87f0d41234d8616c2f8070
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010929"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934943"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogatitev profilov strank z izboljšanimi naslovi
 
@@ -100,17 +100,17 @@ Naslovi morajo vsebovati vrednost države/regije. Ne obdelujemo naslovov za drž
 
 Po končanem postopku obogatitve lahko podatke o na novo obogatenih profilih strank pregledate v možnosti **Moje obogatitve**. Poleg tega boste našli čas zadnje posodobitve in število obogatenih profilov.
 
-Vzorec obogatenih podatkov si lahko ogledate v **Obogaten predogled strank** ploščice. Izberite **Poglej več** in izberite **Podatki** zavihek za dostop do podrobnega pogleda vsakega obogatenega profila.
+Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izberete **Ogled obogatenih podatkov**.
 
 ### <a name="overview-card"></a>Pregledna kartica
 
 Pregledna kartica prikazuje podrobnosti o kritju obogatitve. 
 
-* **Naslovi obdelani in spremenjeni** : Število profilov strank z naslovi, ki so bili uspešno obogateni.
+* **Stranke obdelane in spremenjene** : število uspešno obogatenih profilov strank.
 
-* **Naslovi so obdelani in niso spremenjeni** : število profilov strank z naslovi, ki so bili prepoznani, vendar nespremenjeni. Običajno se zgodi, ko so vhodni podatki veljavni in jih z obogatitvijo ni mogoče izboljšati.
+* **Stranke obdelane in niso spremenjene** : število profilov strank, ki so bili prepoznani, vendar nespremenjeni. Običajno se zgodi, ko so vhodni podatki veljavni in jih z obogatitvijo ni mogoče izboljšati.
 
-* **Naslovi niso obdelani in nespremenjeni** : Število profilov z naslovi, ki niso bili prepoznani. Običajno za vhodne podatke, ki so neveljavni ali niso podprti z obogatitvijo.
+* **Stranke niso obdelane in niso spremenjene** : Število profilov, ki niso bili prepoznani. Običajno za vhodne podatke, ki so neveljavni ali niso podprti z obogatitvijo.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

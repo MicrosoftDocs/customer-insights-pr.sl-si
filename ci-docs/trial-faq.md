@@ -3,18 +3,18 @@ title: Pogosta vprašanja o preskusni različici – Dynamics 365 Customer Insig
 description: Rešitve za pogosta vprašanja, povezana z namestitvijo preskusne različice storitve Customer Insights in z njenim upravljanjem. Preberite več o tem, kako odpraviti težave, povezane s platformami in aplikacijami.
 author: m-hartmann
 ms.author: mhart
-ms.date: 02/10/2022
+ms.date: 09/30/2021
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
-ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
+ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
+ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "8115988"
+ms.lasthandoff: 10/13/2021
+ms.locfileid: "7642912"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Pogosta vprašanja o preskusni različici Dynamics 365 Customer Insights
 
@@ -24,7 +24,7 @@ ms.locfileid: "8115988"
 
 Gre za storitev v oblaku, ki razen posodobljenega spletnega brskalnika ne zahteva posebne programske opreme, kljub temu pa veljajo nekatere omejitve. Za najboljšo preskusno različico se izogibajte dostopu do spletnega mesta preskusne različice v načinu brez beleženja zgodovine in izberite preskusno lokacijo, ki vam je najbližja. [Preberite več o zahtevah za spletne aplikacije.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kako se prijavim na preizkus brez a Microsoft 365 najemnik?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Kako se lahko na preskušanje različice prijavim brez najemnika storitve Microsoft 365?
 
 Vpišite nedelovni e-poštni naslov in ustvarili vam bomo račun ter najemnika.
 
@@ -43,7 +43,7 @@ Ob prijavi na preskušanje boste prejeli e-poštno sporočilo s podrobnostmi o p
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Kako lahko v preskusno aplikacijo dodam več uporabnikov?
 
-Če želite dodati uporabnike, pojdite na [Microsoft 365 skrbniško središče](https://admin.microsoft.com) z uporabo poskusnega skrbniškega računa. Za dodajanje uporabnikov v preskusno različico sledite [navodilom skrbniškega središča](/microsoft-365/admin/add-users/add-users). Če uporabnik, ki ga dodate, že ima Microsoft 365 račun, jim dodelite ustrezen varnostna vloga v poskusni org. Za več informacij glejte [Uporabniku dodelite varnostna vloga](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Za dodajanje uporabnikov s svojim skrbniškim računom za preskusno različico obiščite [skrbniško središče za Microsoft 365](https://admin.microsoft.com). Za dodajanje uporabnikov v preskusno različico sledite [navodilom skrbniškega središča](/microsoft-365/admin/add-users/add-users). Če uporabnik, ki ga želite dodati, že ima račun za storitev Microsoftov 365, mu dodelite ustrezno varnostno vlogo v preskusni organizaciji. Za več informacij glejte [Dodeljevanje varnostne vloge uporabniku](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Koliko uporabnikov lahko dodam v preskusno okolje?
 
@@ -63,7 +63,7 @@ Preskusno različico lahko podaljšate neposredno v aplikaciji. Preskusno obdobj
 
 Na splošno priporočamo, da pri nadgradnji na plačljivo različico Customer Insights začnete na novo z lastnimi podatki. 
 
-Če uporabljate samo vpoglede v občinstvo, lahko kopirate svoje podatke iz preskusnega okolja, če kupite storitev Customer Insights. Biti morate skrbnik preizkusne različice Customer Insights in globalni skrbnik vašega Microsoft 365 najemnika ali skrbnika Dynamics 365 v vaši organizaciji, da nastavitve preselite iz preizkusnega okolja v plačljivo okolje. 
+Če uporabljate samo vpoglede v občinstvo, lahko kopirate svoje podatke iz preskusnega okolja, če kupite storitev Customer Insights. Če želite preseliti nastavitve iz preskusnega v plačljivo okolje, morate biti skrbnik preskusne različice Customer Insights in globalni skrbnik najemnika Microsoft 365 ali skrbnik Dynamics 365 v svoji organizaciji. 
 
 Ko se prvič prijavite v plačljivi primerek storitve Customer Insights, boste morali ustvariti novo okolje. V tem postopku lahko izberete kopiranje konfiguracije iz obstoječega okolja in preselite večino nastavitev. Če imate zgoraj navedena dovoljenja, bo na tem seznamu prikazano preskusno okolje. Za več informacij glejte [Kopirajte konfiguracijo okolja](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,9 +82,8 @@ Ko se prijavite za uporabo preskusne različice, se odpre glavni zaslon aplikaci
 
 Večina funkcij zmogljivosti Customer Insights je na voljo v preskusni različici.
 
-Naslednje značilnosti so **ni na voljo**: 
+Naslednja funkcija ni na voljo: 
 - Ne morete ustvariti novih okolij, ki uporabljajo lasten račun za Azure Data Lake Storage.
-- Preskusnega okolja ne morete izbrisati. 
 
 ### <a name="how-long-does-the-trial-last"></a>Kako dolgo traja preskusna različica?
 

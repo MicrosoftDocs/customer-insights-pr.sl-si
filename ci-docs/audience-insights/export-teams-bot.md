@@ -1,27 +1,27 @@
 ---
 title: Bot za Microsoft Teams
 description: Poiščite poenotene profile strank v storitvi Microsoft Teams s pomočjo bota.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: conceptual
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967839"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406980"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot Teams za Dynamics 365 Customer Insights (predogled)
 
 Povežite se s storitvijo Microsoft Teams, da bot dovoli iskanje poenotenih profilov strank v kanalih Teams.
 
 > [!div class="mx-imgBorder"]
-> ![Bot za Teams, ki prikazuje zapis stranke.](media/teams-bot.png "Bot za Teams, ki prikazuje zapis stranke")
+> ![Bot za Teams, ki prikazuje zapis stranke](media/teams-bot.png "Bot za Teams, ki prikazuje zapis stranke")
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -31,10 +31,7 @@ Za nastavitev in konfiguracijo bota morajo biti izpolnjeni ti pogoji:
 - [Postopek poenotenja](data-unification.md) je dokončan.
 - Polja so dodana v [kazalo za iskanje in filtriranje](search-filter-index.md).
 - Aplikaciji Customer Insights in Teams sta v isti organizaciji.
-- V vašem okolju je primarno ciljno občinstvo nastavljeno na posamezne stranke. Poslovni računi niso podprti.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Konfiguracija bota
 
 1. Pri vpogledih v občinstvo izberite **Skrbnik** > **Cilji za izvoz**.
@@ -55,6 +52,3 @@ Bot ponuja možnosti iskanja za poenotene profile strank.
 - Če vaša organizacija ohranja več okolij Customer Insights v isti organizaciji, lahko vnesete **switchinstance**, da izberete, v katero okolje želite povezati bot.
 
 - Če si želite ogledati seznam ukazov, ki so na voljo za bot, vnesite **pomoč**.  
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Sheme entitet Customer Insights v rešitvi Common Data Model
 description: Delo z entitetami v rešitvi Common Data Model.
-ms.date: 08/13/2021
+ms.date: 04/17/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2cdbe11a1c0cc5d65434fb2ae3a3f38c18f31cf4
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046537"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692325"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Sheme entitet v rešitvi Common Data Model
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 [Common Data Model](/common-data-model/) je deklarativna specifikacija in opredelitev standardnih entitet, ki predstavljajo pogosto uporabljane koncepte in dejavnosti po poslovnih in storilnostnih aplikacijah. Ta model se širi tudi na podatke opazovanj in analitične podatke. Common Data Model zagotavlja dobro opredeljene, modularne in razširljive poslovne entitete – kot so kupec, poslovna enota, primer, stik, možna stranka, priložnost in izdelek – ter interakcije z dobavitelji, delavci in strankami – kot so dejavnosti in pogodbe o ravni storitve. Vsakdo lahko nadgradi in razširi definicije Common Data Model, da zajame dodatne poslovne zamisli.
 
@@ -42,7 +42,7 @@ Za več informacij glejte dokumentacijo o [shemah entitet Customer Insights v Co
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Prikaz entitet z uporabo orodja Common Data Model Entity Navigator
 
-Entitete si lahko ogledate v orodju [Common Data Model Entity Navigator](https://microsoft.github.io/CDM/). Izberite entiteto v razdelku Application Insights, da dobite seznam entitet Customer Insights in njihove definicije.
+Entitete si lahko ogledate v orodju [Common Data Model Entity Navigator](https://microsoft.github.io/CDM/). Izberite gumb **Naloži iz storitve GitHub!** in se pomaknite na **foundationCommon** > **crmCommon** > **solutions** > **customerInsights**, kjer boste našli seznam entitet Customer Insights in njihove definicije.
 > [!div class="mx-imgBorder"]
 > ![Orodje za krmarjenje po entitetah CDM prikazuje entiteto CustomerActivity.](media/CDM-entity-navigator.png "CDM Entity Navigator prikazuje entiteto CustomerActivity")
 

@@ -1,6 +1,6 @@
 ---
 title: Zahteve posameznikov, na katere se nanašajo podatki, (DSR) v skladu z uredbo GDPR | Microsoftovo gradivo
-description: Odgovorite na zahteve subjektov podatkov za zmožnost vpogleda Dynamics 365 Customer Insights občinstvo.
+description: Odgovorite na zahteve posameznikov, na katere se nanašajo podatki, za zmogljivost vpogledov v občinstvo Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732700"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483708"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahteve posameznikov, na katere se nanašajo podatki, (DSR) v skladu z uredbo GDPR
 
@@ -24,7 +24,7 @@ Prizadevamo si, da svojim strankam pomagamo izpolniti zahteve uredbe GDPR. Vklju
 
 ## <a name="audience-insights"></a>Vpogledi v občinstvo
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Odgovarjanje na zahteve GDPR, na katere se nanašajo osebni podatki, za zmožnost vpogledov Dynamics 365 Customer Insights občinstvo
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Odgovorite na zahteve posameznikov, na katere se nanašajo podatki, za izbris za zmogljivost vpogledov v občinstvo Dynamics 365 Customer Insights, v skladu z uredbo GDPR.
 
 »Pravica do izbrisa« z odstranitvijo osebnih podatkov iz podatkov o strankah, ki jih ima organizacija, je ključna zaščita v Splošni uredbi o varstvu podatkov (GDPR). Odstranitev osebnih podatkov vključuje odstranitev vseh osebnih podatkov in sistemsko ustvarjenih dnevnikov, razen informacij iz dnevnika spremljanja sprememb.
 
@@ -39,7 +39,7 @@ Vpogledi v občinstvo nudijo naslednje izkušnje v izdelkih, s katerimi lahko iz
 
 Skrbnik storitve Customer Insights lahko upošteva te korake, da odstrani podatke stranke, ki so bili izbrisani iz vira podatkov:
 
-1. Prijavite se v Dynamics 365 Customer Insights.
+1. Vpis v storitev Dynamics 365 Customer Insights.
 2. Pri vpogledih v občinstvo izberite **Podatki** > **Viri podatkov**.
 3. Za vsak vir podatkov na seznamu, ki vsebuje izbrisane podatke strank:
    1. Izberite možnost (...) in nato **Osveži**.
@@ -52,7 +52,7 @@ Skrbnik storitve Customer Insights lahko upošteva te korake, da odstrani podatk
 
 Skrbnik storitve Customer Insights lahko za izbris uporabniških podatkov storitve Customer Insights upošteva te korake:
 
-1. Prijavite se v Dynamics 365 Customer Insights.
+1. Vpis v storitev Dynamics 365 Customer Insights.
 2. Pri vpogledih v občinstvo izberite **Skrbnik** > **Dovoljenja**.
 3. Potrdite polje za uporabnika, ki ga želite izbrisati.
 4. Izberite **Odstrani**.
@@ -79,14 +79,7 @@ Skrbnik najemnika lahko za izvoz podatkov upošteva ta navodila:
 2. Potrdite potrditev izvoza podatkov za zahtevanega uporabnika.
 3. Prejmite izvožene podatke prek e-poštnega naslova skrbnika najemnika.
 
-## <a name="consent-management-preview"></a>Upravljanje privolitve (predogled)
-
-Zmožnost upravljanja privolitve ne zbira uporabniških podatkov neposredno. Uvaža in obdeluje samo podatke o privolitvi, ki jih zagotovijo uporabniki v drugih aplikacijah.
-
-Če želite odstraniti podatke o soglasju o določenih uporabnikih, jih odstranite v virih podatkov, ki jih prevzame zmožnost upravljanja privolitve. Po osvežitvi vir podatkov bodo odstranjeni podatki izbrisani tudi v središču za soglasje. Aplikacije, ki uporabljajo entiteto za soglasje, bodo izbrisale tudi podatke, ki so bili odstranjeni iz vira po a [osveži](audience-insights/system.md#refresh-processes). Priporočamo, da po odzivu na zahtevo posameznika, na katerega se nanašajo osebni podatki, hitro osvežite vire podatkov za odstranitev uporabnikovih podatkov iz vseh drugih procesov in aplikacij.
-
-
-## <a name="engagement-insights-preview"></a>Vpogledi v interakcije (predogledna različica)
+## <a name="engagement-insights"></a>Vpogledi v interakcije
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Brisanje in izvoz podatkov o dogodkih, ki vsebujejo podatke, ki omogočajo identifikacijo končnega uporabnika
 

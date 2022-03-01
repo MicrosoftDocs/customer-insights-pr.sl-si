@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov Customer Insights v Omnisend
 description: Naučite se, kako konfigurirati povezavo in izvažati v Omnisend.
-ms.date: 10/08/2021
+ms.date: 05/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5496efa075fa3474c579366d143ea55e86ec3995
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7619048"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124553"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Izvoz segmentov v Omnisend (predogledna različica)
 
@@ -28,9 +28,9 @@ Izvozite segmente poenotenih profilov strank v Omnisend in jih uporabite za trž
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Izvozite lahko do 1 milijon profilov strank na izvoz v storitev Omnisend in to lahko traja do 4 ure.
+- V Omnisend lahko izvozite do 1 milijon profilov, kar lahko traja do 4 ure.
 - Izvoz v Omnisend je omejen na segmente.
-- Število profilov strank, ki jih lahko izvozite v storitev Omnisend, je odvisno od vaše pogodbe s storitvijo Omnisend.
+- Število profilov, ki jih lahko izvozite v Omnisend, je odvisno od vaše pogodbe z Omnisendom.
 
 ## <a name="set-up-connection-to-omnisend"></a>Nastavitev povezave s storitvijo Omnisend
 
@@ -62,7 +62,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. V polju **Povezava za izvoz** izberite povezavo v razdelku Omnisend. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. To je obvezno za izvoz segmentov Omnisend. Izbirno lahko izvozite Ime, Priimek, Naslov, Država/regija, Zvezna država, Mesto in Poštna številka, da ustvarite bolj prilagojena e-poštna sporočila. Izberite **Dodaj atribut** za preslikavo teh polj.
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. To je obvezno za izvoz segmentov Omnisend. Izbirno lahko izvozite Ime, Priimek, Naslov, Država/regija, Zvezna država, Mesto in Poštna številka, da ustvarite bolj prilagojena e-poštna sporočila. Izberite **Dodaj atribut** za preslikavo teh polj.
 
 1. Izberite **Shrani**.
 

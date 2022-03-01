@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov Customer Insights v Microsoft Advertising
 description: Naučite se, kako konfigurirati povezavo in izvažati v storitev Microsoft Advertising.
-ms.date: 10/08/2021
+ms.date: 05/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618081"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124552"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Izvoz segmentov v Microsoft Advertising (predogledna različica)
 
@@ -29,9 +29,9 @@ Izvozite segmente Customer Insights v Microsoft Advertising, da ustvarite ciljne
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- V storitev Microsoft Advertising lahko izvozite do 500.000 profilov strank na izvoz.
+- V Microsoft Advertising lahko izvozite do 500.000 profilov na izvoz.
 - Izvoz v Microsoft Advertising je omejen na segmente.
-- Izvoz do 500.000 profilov strank v storitev Microsoft Advertising lahko traja do 10 minut. 
+- Izvoz do 500.000 profilov v Microsoft Advertising lahko traja do 10 minut. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Nastavitev povezave s storitvijo Microsoft Advertising
@@ -68,7 +68,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Vpišite **ID stranke Microsoft Advertising in ID računa**. ID stranke (`cid`) in ID računa (`aid`) lahko najdete v parametrih URL-ja, ko ste prijavljeni v Microsoft Advertising.
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje z e-poštnim naslovom stranke. To je obvezno za izvoz segmentov Microsoft Advertising.
+1. V razdelku **Ujemanje podatkov** v polju **E-pošta** izberite polje v svojem poenotenem profilu stranke, ki ima e-poštni naslov stranke. To je obvezno za izvoz segmentov Microsoft Advertising.
 
 1. Izberite **Shrani**.
 

@@ -4,23 +4,23 @@ description: Kako izvoziti izboljšane in osnovne dogodke.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 04/30/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606272"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032405"
 ---
 # <a name="export-events"></a>Izvoz dogodkov
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Dogodek predstavlja vedenje uporabnika. Beleži, ko si uporabnik ogleda stran (dogodek ogleda) ali ima interakcijo z vsebino (dogodek dejanja). Ko se lahko odločite, katere lastnosti podatkov želite prikazati v poročilu, se ta navidezni pogled podatkov imenuje *izboljšani dogodek*. Za več informacij glejte razdelek [Ustvarjanje in spreminjanje segmentov](refined-events.md).
+Dogodek predstavlja vedenje uporabnika. Beleži, ko si uporabnik ogleda stran (dogodek ogleda) ali ima interakcijo z vsebino (dogodek dejanja). Ko se lahko odločite, katere lastnosti podatkov želite prikazati v poročilu, se ta navidezni pogled podatkov imenuje *izboljšani dogodek*. 
 
 - Dogodke in izboljšane dogodke lahko izvozite v zunanji pomnilnik. 
 - Izvoz je tok podatkov, ki se giba naprej. Ne morete napolniti toka. 
@@ -45,28 +45,26 @@ Preden nastavite izvoz, morate imeti dostop in aktivno naročnino na portal Azur
 
 ## <a name="export-events"></a>Izvozi dogodke
 
-Obstajata dva načina za priklic pogovornega okna **Izvoz dogodkov**: 
+Obstajata dva načina izvoza dogodkov: 
 - V razdelku **Podatki** > **Izvozi** izberite **Nov izvoz**.
 - Pojdite na možnost **Podatki** > **Dogodki**, izberite možnost **Več [...]** ob dogodku, ki ga želite izvoziti, in v spustnem meniju izberite možnost **Izvozi**. 
 
-:::image type="content" source="media/new-export.png" alt-text="Ustvarjanje novega izvoza":::
-
 Vodeni boste skozi korake za ustvarjanje izvoza:
 
-1. Zagotovite **Izvozno ime** in nato izberite možnost **Naprej**.
+1. Navedite **Ime izvoza**.
 
 1. Na spustnem seznamu **Izbor dogodkov** izberite osnovne dogodke in natančneje določene dogodke, ki jih želite izvoziti. 
 
-1. V razdelku **Struktura datoteke** izberite kadence (urno ali dnevno) za ustvarjanje novih datotek v ciljnem pomnilniku in nato izberite možnost **Naprej**. Dogodki se neprestano izvozijo ob prihodu.
+1. Pod možnostjo **Struktura datoteke** izberite zaporedje, da ustvarite nove datoteke v ciljnem pomnilniku. Dogodki se neprestano izvozijo ob prihodu.
 
-1. V pogovornem oknu **Izbira oblike zapisa**, izberite obliko zapisa za izvoz. Izbirajte med oblikami zapisa **Common Data Model**, **CSV** in **JSON**. Če želite izvoz uporabiti z drugimi aplikacijami Dynamics 365, priporočamo obliko zapisa **Common Data Model**.
+1. Izberite obliko za izvoz. Izbirate lahko med oblikami zapisa **Common Data Model**, **CSV** in **JSON**. Za uporabo izvoza z drugimi aplikacijami Dynamics 365 priporočamo uporabo oblike zapisa Common Data Model.
 
-1. V pogovornem oknu **Izbira cilja** določite lokacijo za Azure Data Lake Storage Gen 2.
+1. Pri koraku **Izbira cilja** določite lokacijo za Azure Data Lake Storage Gen 2.
     1. **Ime računa ADLS Gen 2** je ime računa za shranjevanje, v katerega želite shraniti izvoz. 
     1. **Pot mape** opredeljuje, kje naj bo izvoz shranjen v datotečnem sistemu in strukturi imenika za račun za shranjevanje.
     1. **Ključ v skupni rabi** je na voljo na portalu Azure za račun za shranjevanje.
 
-1. Za dokončanje preglejte in potrdite svoje izbire.
+1. Preglejte in potrdite svoj izbor.
 
 ## <a name="view-and-manage-exports"></a>Ogled in upravljanje izvozov
 

@@ -1,71 +1,75 @@
 ---
 title: Ogled profilov strank
 description: Pridobite kombiniran pogled vaših poenotenih podatkov o strankah.
-ms.date: 09/30/2021
+ms.date: 12/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 07d2206372f89cd7dcd9df84c87024a6f87d5eac
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623289"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896347"
 ---
 # <a name="customer-profiles"></a>Profili strank
 
-Stran **Stranke** prikazuje kombiniran pogled na vaše enotne profile strank. Profili strank so na voljo, ko enkrat [ustvarite enotno entiteto stranke](data-unification.md). Na tej strani lahko iščete stranke in določite indeks za to iskanje.
+Stran **Stranke** prikazuje kombiniran pogled vaših strank na podlagi podatkov o profilu, zbranih iz [vseh virov podatkov](data-sources.md). Profili strank so na voljo, ko [ustvarite poenoteno entiteto stranke](data-unification.md). Za podrobnejše prikaze strank dokončajte postopek poenotenja podatkov. Stran omogoča tudi iskanje strank.
 
-Stranke so lahko posamezniki ali organizacije. Vsak profil stranke je predstavljen s ploščico. Če želite dobiti več zapisov, uporabite kontrolnike za oštevilčevanje strani. Kartica prikazuje polja iz entitete *Stranka*, kot je opredeljeno v **indeksu iskanja in filtriranja**. Izberite ploščico, če si želite ogledati podatke za izbrano stranko na posebni strani, imenovani [Stran s podrobnostmi o stranki](customer-profiles.md#customer-details-page).
+Stranke so lahko posamezniki ali organizacije (predogled). Ploščica predstavlja vsak posamezni profil stranke ali organizacije. Izberite ploščico in si oglejte dodatne informacije o določeni stranki ali organizaciji. Za prikaz dodatnih zapisov uporabite kontrolnik za oštevilčevanje strani na dnu strani.
 
 > [!div class="mx-imgBorder"] 
-> ![Stran strank, ki prikazuje ploščice z rezultati](media/customers-page-result-tiles-B2C.png "Stran strank, ki prikazuje ploščice z rezultati")
+> ![Profili strank pri prodaji strankam](media/profiles-customers.png "Profili strank pri prodaji strankam")
+
+Organizacije (predogled)
+> [!div class="mx-imgBorder"] 
+> ![Profili strank pri prodaji podjetjem](media/profile-customers-b2b.png "Profili strank pri prodaji podjetjem")
 
 > [!NOTE]
-> Če ne vidite ploščic, ko pri krmarjenju izberete možnost **Stranke**, mora vaš skrbnik v **indeksu iskanja in filtriranja** [določiti vsaj en atribut, ki ga je mogoče iskati](search-filter-index.md).
+> Če pri krmarjenju po izbiri možnosti **Stranke** ne vidite ploščic, mora vaš skrbnik [določiti vsaj en atribut, ki je omogočen za iskanje](search-filter-index.md), v možnosti **Kazalo za iskanje in filtre**.
 
 ## <a name="search-for-customers"></a>Iskanje strank
 
-Stranke poiščete tako, da v polje za iskanje vnesete ime ali kakšen drug atribut. Iskanje deluje samo v entiteti _Stranka_, ustvarjeni med postopkom poenotenja podatkov.
+Stranke poiščete tako, da v polje za iskanje vnesete ime ali kakšen drug atribut. Iskanje deluje samo v entiteti »Profil stranke«, ki je bila ustvarjena med postopkom poenotenja podatkov.
 
-Kot skrbnik lahko konfigurirate atribute, omogočene za iskanje, na strani **Kazalo za iskanje in filtriranje**. Za več informacij odprite razdelek [Upravljanje indeksa iskanja in filtriranja](search-filter-index.md).
+Kot skrbnik lahko konfigurirate atribute, omogočene za iskanje, na strani **Kazalo za iskanje in filtriranje**. Za več informacij glejte [Upravljanje kazala za iskanje in filtriranje](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filtriranje strank
 
-Stranke lahko filtrirate po polju entitete _Stranka_. Podobno kot pri iskanju mora vaš skrbnik na strani **Kazalo za iskanje in filtriranje** najprej omogočiti filtriranje za polja.
+Stranke lahko filtrirate po poljih entitete »Profil stranke«. Podobno kot pri iskanju mora vaš skrbnik na strani **Kazalo za iskanje in filtriranje** najprej omogočiti filtriranje za polja.
 
-1. Na strani **Stranke** izberite možnost **Pokaži filtre**.
+1. Izberite **Filter** na strani **Stranke**.
 
-1. Potrdite polja poleg atributov, po katerih želite filtrirati stranke.
+2. Potrdite polja poleg atributov, po katerih želite filtrirati stranke.
 
-1. Odstranite filtre tako, da izberete **Počisti filtre** na strani **Stranke**.
+   > [!div class="mx-imgBorder"] 
+   > ![Profili strank](media/profiles-customers3.png "Profili strank")
 
-## <a name="customer-details-page"></a>Stran s podrobnostmi o stranki
+3. Odstranite filtre tako, da izberete **Počisti filtre** na strani **Stranke**.
 
-Izberite katero koli ploščico stranke, da odprete **stran s podrobnostmi o stranki**. Ta pogled vsebuje poenotene podatke za izbrano stranko. Podatki o strankah vključujejo naslednjo vsebino:
+##  <a name="customer-details-page"></a>Stran s podrobnostmi o stranki
 
-**Ploščica profila stranke**: ta ploščica prikazuje različne vrednosti poenotene entitete _Stranka_. Če polje nima vrednosti za izbrani profil stranke, se ploščica ne prikaže. Ploščica je razdeljena v razdelke:  
-  - Prvi razdelek prikazuje vnaprej določen niz polj, ki mu sledijo vsa polja, ki so del indeksa iskanja in filtriranja. Vsa polja, povezana z naslovom, so združena v eno vrstico, če profil vsebuje ta polja. 
-  - **Stiki za to stranko**: v okoljih za poslovne račune bodo v drugem razdelku prikazani vsi povezani stiki za to stranko. Vsak stik je prikazan s svojimi polji. Prazna polja so skrita.
-  - **Dodatna polja**: prikaže preostala polja izbrane stranke, razen ID-jev. 
-  - **ID-ji**: navede vse ID-je pod ustreznim imenom entitete. Polja so po semantiki identificirana kot ID-ji, ki jih kot take razvrščajo.
+Izberite katero koli ploščico stranke, da odprete **stran s podrobnostmi o stranki**. Ta pogled vsebuje poenotene podatke za izbrano stranko.
 
-**Časovnica dejavnosti**: prikaže podatke, če ste konfigurirali dejavnosti. Pogled časovnice vsebuje kronološko razvrščene dejavnosti izbrane stranke, z najnovejšo dejavnostjo na začetku. Za več informacij odprite razdelek [Dejavnosti strank](activities.md).
+Podrobnosti o stranki vključujejo:
 
-**Vpogledi**:  
-  - **Merila**: prikaže, ali ste konfigurirali enega ali več meril za atribute strank. Vključujejo izračunane KPI-je v zvezi z vašimi strankami na ravni posamezne stranke. Za več informacij odprite razdelek [Določanje in upravljanje meril](measures.md).
+-   **Ploščica profila stranke:** ta ploščica prikazuje različne vrednosti iz poenotene entitete profila stranke. Te podrobnosti lahko vključujejo e-poštni naslov, ime, mesto itd. 
 
-  - **Možni interesi, možne blagovne znamke**: prikaže, ali ste konfigurirali obogatitev afinitete za blagovno znamko ali zanimanje. Predstavlja možna zanimanja in afinitete za blagovne znamke na podlagi drugih strank, katerih profil je podoben profilu izbranega kupca. Za več informacij odprite razdelek [Obogatitev profilov strank z afinitetami za blagovne znamke in zanimanja](enrichment-microsoft.md).
+-   **Morebitna zanimanja, morebitne blagovne znamke:** pokaže, ali ste konfigurirali lastno obogatitev. Predstavlja potencialne interese in priljubljene blagovne znamke za stranke s podobnim profilom kot ta stranka. Za več informacij glejte [Obogatitev profilov strank s priljubljenimi blagovnimi znamkami in zanimanji](enrichment-microsoft.md).
 
-Če se želite vrniti na stran za iskanje strank, izberite možnost **Nazaj na stranke**.
+-   **Mere:** prikaže, ali ste konfigurirali eno ali več mer določene vrste: mere atributov stranke. Vključujejo izračunane KPI-je v zvezi z vašimi strankami na ravni posamezne stranke. Za več informacij glejte [Določanje in upravljanje mer](measures.md).
+
+-   **Časovnica dejavnosti:** prikazuje, ali ste konfigurirali dejavnosti. Pogled časovnice vsebuje kronološko razvrščene dejavnosti te stranke, pri čemer se začne z najnovejšo dejavnostjo. Za več informacij glejte [Dejavnosti stranke](activities.md).
+
+Izberite **Nazaj k strankam** za vrnitev na stran za iskanje strank.
 
 ## <a name="next-steps"></a>Naslednji koraki
 
-[Dodajte več virov podatkov](data-sources.md), [obogatite poenotene profile](enrichment-hub.md) ali [ustvarite segmente](segments.md) za delo s poenotenimi profili strank v drugih aplikacijah.
+[Dodajte več virov podatkov](data-sources.md) ali [ustvarite segmente strank](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035205"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129919"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje priporočil za izdelke (predogled)
 
@@ -105,9 +105,9 @@ Po uvozu podatkov se začne postopek poenotenja podatkov za ustvarjanje enotnega
 
 1. Izberite zavihek **Ujemanje** in izberite **Nastavi vrstni red**.
 
-2. Na spustnem seznamu izberite možnost **Primarni** ter za primarni vir določite **eCommerceContacts: eCommerce** in vključite vse zapise.
+2. Na spustnem seznamu **Primarno** izberite **StikiEPoslovanja: EPoslovanje** kot primarni vir in vključite vse zapise.
 
-3. Na spustnem seznamu izberite možnost **Entiteta 2**, nato pa **loyCustomers: LoyaltyScheme** in vključite vse zapise.
+3. Na spustnem seznamu **Entiteta 2** izberite **zvesteStranke: ShemaZvestobe** in vključite vse zapise.
 
    ![Poenotenje ujemanja elektronskega poslovanja in zvestobe.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Po uvozu podatkov se začne postopek poenotenja podatkov za ustvarjanje enotnega
 
 5. Dodajte svoj prvi pogoj z možnostjo FullName.
 
-   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite **FullName**.
-   - Za entiteto zvesteStranke na spustnem seznamu izberite **FullName**.
+   - Za StikiEPoslovanja izberite **FullName** v spustnem meniju.
+   - Za zvesteStranke izberite **FullName** v spustnem meniju.
    - Izberite spustni meni **Normaliziraj** in izberite **Vrsta (telefon, ime, naslov, ...)**.
    - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 
 6. Vnesite ime **FullName, Email** za novo pravilo.
 
    - Dodajte drugi pogoj za e-poštni naslov tako, da izberete **Dodaj pogoj**.
-   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite možnost **E-pošta**.
-   - Za entiteto zvesteStranke na spustnem seznamu izberite možnost **E-pošta**.
+   - Za StikiEPoslovanja entitete izberite **E-pošta** v spustnem meniju.
+   - Za zvesteStranke entitete izberite **E-pošta** v spustnem meniju.
    - Pustite polje Normaliziraj prazno.
    - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 

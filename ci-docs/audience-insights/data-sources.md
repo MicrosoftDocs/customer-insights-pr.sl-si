@@ -1,56 +1,62 @@
 ---
 title: Uporaba virov podatkov za vključitev podatkov
 description: Naučite se uvoziti podatke iz različnih virov.
-ms.date: 12/06/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ca979527c9cb8418e12af4a74513033047e4901c
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046617"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887914"
 ---
 # <a name="data-sources-overview"></a>Pregled virov podatkov
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Zmogljivost vpogledov v občinstvo v storitvi Dynamics 365 Customer Insights se poveže s podatki iz širokega nabora virov. Povezovanje z vir podatkov se pogosto imenuje postopek *zaužitje podatkov*. Po zaužitju podatkov lahko jih lahko [poenotite](data-unification.md) in jih uporabite.
 
 ## <a name="add-a-data-source"></a>Dodajanje vira podatkov
 
-Oglejte si podrobne članke, kako dodati vir podatkov, odvisno od možnosti, ki jo izberete.
+Glejte podrobne članke o tem, kako dodati vir podatkov, odvisno od tega, katero možnost izberete.
 
-Dodate lahko naslednje vire podatkov:
+Vir podatkov lahko dodate na tri glavne načine:
 
-- [Power Query konektorji](connect-power-query.md)
-- [Common Data Model](connect-common-data-model.md)
-- [Microsoft Dataverse jezero](connect-dataverse-managed-lake.md)
-
-> [!NOTE]
-> Če uporabljate preizkusno različico, razdelek z načini uvoza vključuje a **Knjižnica podatkov Customer Insights** možnost. Izberite to možnost, da izberete vzorčni nabor podatkov, ki je na voljo za različne panoge. Za več informacij glejte [Dynamics 365 Customer Insights sojenje](../trial-signup.md).
+- [S pomočjo številnih priključkov Power Query](connect-power-query.md)
+- [Iz mape Common Data Model](connect-common-data-model.md)
+- [Iz svojega jezera storitve Common Data Service](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Dodajanje podatkov iz virov podatkov na mestu uporabe
 
-Uvažanje podatkov iz virov podatkov na mestu uporabe v vpogledih občinstva je podprto na podlagi podatkovnih tokov storitve Microsoft Power Platform. Tokove podatkov lahko omogočite v Customer Insights z [zagotavljanje Microsoft Dataverse URL okolja](create-environment.md) pri postavljanju okolja.
+Uvoz podatkov iz virov podatkov na mestu uporabe v vpogledih v občinstvo je podprt na podlagi podatkovnih tokov iz storitve Power Platform. Podatkovne tokove lahko omogočite v storitvi Customer Insights, in sicer tako, da med nastavitvijo okolja [navedete URL povezave za okolje Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Viri podatkov, ki so ustvarjeni po povezovanju a Dataverse okolje z uporabo Customer Insights [Power Platform tokovi podatkov](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) privzeto. Za podatkovne tokove je prek prehoda za podatke podprta povezljivost na mestu uporabe. Vire podatkov, ki so obstajali pred a., lahko odstranite in znova ustvarite Dataverse okolje je bilo povezano [z uporabo podatkovnih prehodov na mestu uporabe](/data-integration/gateway/service-gateway-app).
+Za vire podatkov, ustvarjene ob vzpostavitvi povezave med okoljem storitve Dataverse in storitvijo Customer Insights, se privzeto uporabljajo [podatkovni tokovi iz storitve Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Za podatkovne tokove je prek prehodov za podatke podprta povezljivost na mestu uporabe. Odstranite vire podatkov, ki so bili uporabljeni vzpostavitvijo povezave z okoljem Dataverse za uporabo prehodov za podatke na mestu uporabe, in jih znova ustvarite.
 
-Prehodi za podatke iz obstoječega okolja storitve Power BI ali Power Apps bodo vidni v storitvi Customer Insights, kjer jih lahko znova uporabite. Na strani z viri podatkov se nahajajo povezave do okolja Microsoft Power Platform, kjer si lahko ogledate prehode za podatke na mestu uporabe ter jih konfigurirate.
+Prehodi za podatke iz obstoječega okolja storitve Power BI ali Power Apps bodo vidni v storitvi Customer Insights, kjer jih lahko znova uporabite. Na strani z viri podatkov je prikazana povezava do okolja Power Platform, kjer si lahko ogledate prehode za podatke na mestu uporabe in jih konfigurirate.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Posnetek zaslona strani z viri podatkov, na kateri so prikazane povezave za preusmeritev na okolje storitve Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Pregled zaužitih podatkov
 
 Videli boste ime vsakega zaužitega vira podatkov, njegovo stanje in čas, ko so bili podatki za ta vir nazadnje osveženi. Seznam virov podatkov lahko razvrstite po vseh stolpcih.
 
 > [!div class="mx-imgBorder"]
-> ![Vir podatkov je dodan.](media/configure-data-datasource-added.png "Vir podatkov je dodan")
+> ![Vir podatkov je dodan](media/configure-data-datasource-added.png "Vir podatkov je dodan")
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+|Stanje  |Opis  |
+|---------|---------|
+|Uspelo   |Vir podatkov je bil uspešno vključen, če je čas omenjen v stolpcu **Osveženo**.
+|Ni začeto   |Vir podatkov še nima vključenih podatkov ali je še v načinu osnutka.         |
+|Osveževanje    |Uvažanje podatkov je v teku. Ta postopek lahko prekličete tako, da v stolpcu **Dejanja** izberete **Ustavi osveževanje**. Ustavitev osveževanja vira podatkov bo povrnjena na zadnje stanje osveževanja.       |
+|Neuspelo     |Pri uvozu podatkov je prišlo do napak.         |
+
+Če si želite ogledati več podrobnosti, izberite vrednost stolpca **Stanje** katerega koli vira podatkov. V podoknu **Podrobnosti o napredku** razširite možnost **Viri podatkov**. Izberite možnost **Prikaži podrobnosti** za pregled več podrobnosti o stanju osveževanja, vključno s podrobnostmi o napakah in posodobitvami nadaljnjih postopkov.
 
 Nalaganje podatkov lahko traja nekaj časa. Po uspešni osvežitvi je mogoče uvožene podatke pregledati na strani **Entitete**. Za več informacij glejte [Entitete](entities.md).
 
@@ -64,7 +70,7 @@ Izberite **Skrbnik** > **Sistem** > [**Načrtovanje**](system.md#schedule-tab) z
 
 1. Pri vpogledih v občinstvo izberite **Podatki** > **Viri podatkov**.
 
-2. Izberite navpične tri pike poleg tistega vira podatkov, ki ga želite osvežiti, in na spustnem seznamu izberite **Osveži**.
+2. Izberite navpične tri pike poleg vira podatkov, ki ga želite osvežiti, in izberite **Osveži** s spustnega seznama.
 
 3. Vir podatkov se zdaj sproži za ročno osvežitev. Če osvežite vir podatkov, se posodobijo tudi shema entitet in podatki za vse entitete, določene v viru podatkov.
 
@@ -74,7 +80,7 @@ Izberite **Skrbnik** > **Sistem** > [**Načrtovanje**](system.md#schedule-tab) z
 
 1. Pri vpogledih v občinstvo izberite **Podatki** > **Viri podatkov**.
 
-2. Izberite navpične tri pike poleg tistega vira podatkov, ki ga želite odstraniti, in v spustnem meniju izberite **Izbriši**.
+2. Izberite navpične tri pike poleg vira podatkov, ki ga želite odstraniti, in na spustnem meniju izberite **Izbriši**.
 
 3. Potrdite izbris.
 

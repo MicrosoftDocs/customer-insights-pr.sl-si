@@ -1,5 +1,5 @@
 ---
-title: Poiščite podobne stranke z AI (vsebuje video)
+title: Poišči podobne stranke z umetno inteligenco
 description: Poiščite podobne segmente strank z umetno inteligenco.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,18 +9,16 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: de337ae989558c81fff25a6ff7cca01890ed306b
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934860"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034563"
 ---
 # <a name="similar-customers-preview"></a>Podobne stranke (predogled)
 
 Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdete podobne stranke. Za uporabo te funkcije morate ustvariti vsaj en segment. Razširjanje meril obstoječega segmenta pomaga najti stranke, ki so podobne temu segmentu.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > Storitev *Poiščite podobne stranke* uporablja avtomatizirana sredstva za ocenjevanje podatkov in delanje prognoze na podlagi teh podatkov, zato se lahko uporabi kot metoda profiliranja, saj je ta izraz opredeljen v Splošni uredbi o varstvu podatkov ("GDPR"). Za strankino uporabo te funkcije za obdelavo podatkov lahko velja GDPR ali drugi zakoni ali predpisi. Sami ste odgovorni za to, da je vaša uporaba storitve Dynamics 365 Customer Insights, vključno s predvidevanji, v skladu z vsemi veljavnimi zakoni in predpisi, vključno z zakoni v zvezi z zasebnostjo, osebnimi podatki, biometričnimi podatki, varstvom podatkov in zaupnostjo komunikacij.

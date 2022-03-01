@@ -1,22 +1,20 @@
 ---
-title: Preslikava entitet in atributov za poenotenje podatkov
-description: Izberite entitete, atribute, primarne ključe in semantične vrste za preslikavo podatkov v poenoten profil stranke.
-ms.date: 10/18/2020
+title: Preslikava entitet za poenotenje podatkov
+description: Preslikajte podatke za ustvarjanje poenotenih profilov strank.
+ms.date: 09/25/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: adkuppa
 manager: shellyha
-searchScope:
-- ci-map
-ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: e98c7717f7707d43a9fd1fc6f6b0e9c49e4e7ee0
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673295"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406984"
 ---
 # <a name="map-entities-and-attributes"></a>Entitete in atributi zemljevida
 
@@ -37,14 +35,14 @@ ms.locfileid: "7673295"
 3. Izberite entitete in atribute, ki jih želite uporabiti v fazah *ujemanja* in *spajanja*. Obvezne atribute lahko iz entitete izberete posamezno ali pa iz nje vključite vse atribute in sicer tako, da izberete potrditveno polje na ravni entitete **Vključi vsa polja**. Priporočamo, da izberete vsaj dve entiteti, da boste lahko izkoristili postopek poenotenja podatkov.
 
    > [!div class="mx-imgBorder"]
-   > ![Primer dodajanja entitet.](media/data-manager-configure-map-add-entities-example.png "Primer dodajanja entitet")
+   > ![Primer dodajanja entitet](media/data-manager-configure-map-add-entities-example.png "Primer dodajanja entitet")
 
    V tem primeru dodajamo entiteti **eCommerceContacts** in **loyCustomers**. Če izberete te dve entiteti lahko pridobite vpogled v to, kateri od spletnih poslovnih strank so člani programa zvestobe.
    
    Po ključnih besedah lahko iščete po vseh atributih in entitetah, da izberete zahtevane atribute, ki jih želite preslikati.
    
      > [!div class="mx-imgBorder"]
-   > ![Primer polj za iskanje.](media/data-manager-configure-map-search-fields-example.png "Primer polj za iskanje")
+   > ![Primer polj za iskanje](media/data-manager-configure-map-search-fields-example.png "Primer polj za iskanje")
 
 4. Izberite **Uporabi** za potrditev izbire.
 
@@ -57,7 +55,7 @@ Ko izberete entitete, stran **Preslikava** navede izbrane entitete vam v pregled
 - **Vrsta semantike atributa**: kategorije atributov, na primer e-poštni naslov ali ime. Če želite uporabiti modele umetne inteligence za pametno predvidevanje semantike, prihranite čas in izboljšajte natančnost, možnost **Pametna preslikava** nastavite na **VKLOPLJENO**. Pametna preslikava označi priporočila semantike na podlagi umetne inteligence v polju **Vrsta**. Če jo nastavite na **IZKLOPLJENO**, boste videli naša običajna priporočila za preslikavo. Na razpoložljivem seznamu možnosti lahko izberete katero koli semantično vrsto in preglasite predlagani izbor.
 
 > [!div class="mx-imgBorder"]
-> ![Vrsta atributa in predvidevanje semantike.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Vrsta atributa in predvidevanje semantike")
+> ![Vrsta atributa in predvidevanje semantike](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Vrsta atributa in predvidevanje semantike")
 
 Možno je tudi dodajanje vrste semantike po meri. Izberite polje vrste za atribut in vnesite ime za vrsto semantike po meri. Tako lahko spremenite tudi vrste atributov, ki jih je sistem prepoznal.
 
@@ -66,7 +64,7 @@ Vsi atributi, za katere je vrsta semantike samodejno določena, so združeni v r
 Atributi, ki niso samodejno preslikani v vrsto semantike, so združeni v razdelku **Določanje podatkov v nepreslikanih poljih**. Izberite polje vrste semantike za nepreslikane atribute ali vnesite ime vrste atributa po meri.
 
 > [!div class="mx-imgBorder"]
-> ![Primarni ključ in vrsta atributa.](media/data-manager-configure-map-add-attributes.png "Primarni ključ in vrsta atributa")
+> ![Primarni ključ in vrsta atributa](media/data-manager-configure-map-add-attributes.png "Primarni ključ in vrsta atributa")
 
 > [!NOTE]
 > Eno polje se mora preslikati v vrsto semantike »Person.FullName«, da ime stranke vnese v kartico stranke. Sicer bodo kartice strank prikazane brez imen. 
@@ -78,7 +76,7 @@ Atributi, ki niso samodejno preslikani v vrsto semantike, so združeni v razdelk
 2. V podoknu **Uredi polja** dodajte ali odstranite atribute in entitete. Z iskanjem ali drsanjem navzdol in navzgor poiščite atribute in entitete, ki vas zanimajo, in jih izberite. Atributa ali entitete ne morete odstraniti, če se že ujema.
 
    > [!div class="mx-imgBorder"]
-   > ![Dodajanje ali odstranjevanje atributov.](media/configure-data-map-edit.png "Dodajanje ali odstranjevanje atributov")
+   > ![Dodajanje ali odstranjevanje atributov](media/configure-data-map-edit.png "Dodajanje ali odstranjevanje atributov")
 
 3. Izberite **Uporabi**.
 
@@ -96,7 +94,7 @@ Nadaljujte s koraki za poenotenje in poskrbite, da je atribut, ki vsebuje URL sl
 
 Za organizacije (predogledna različica) mora biti vrsta atributa preslikana v »Organization.Name«
 > [!div class="mx-imgBorder"]
-> ![Primarni ključ in vrsta atributa »podjetja podjetjem«.](media/configure-data-map-edit-b2b.png "Primarni ključ in vrsta atributa »podjetja podjetjem«")
+> ![Primarni ključ in vrsta atributa pri prodaji podjetjem](media/configure-data-map-edit-b2b.png "Primarni ključ in vrsta atributa pri prodaji podjetjem")
 
 ## <a name="next-step"></a>Naslednji korak
 
@@ -104,6 +102,3 @@ Kot del postopka poenotenja podatkov pojdite na stran **Ujemanje**. Obiščite s
 
 > [!TIP]
 > Oglejte si ta videoposnetek: [Uvod: Ustvarjanje poenotenega profila stranke](https://youtu.be/oBfGEhucAxs).
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

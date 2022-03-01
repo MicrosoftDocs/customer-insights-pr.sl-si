@@ -1,7 +1,7 @@
 ---
 title: Izvoz podatkov Customer Insights v Snapchat
 description: Naučite se, kako konfigurirati povezavo in izvažati v Snapchat.
-ms.date: 10/08/2021
+ms.date: 03/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6565ab81599abcc0f94465e1153f08e0bc119839
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618703"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124063"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Izvoz segmentov v Snapchat (predogledna različica)
 
@@ -29,7 +29,7 @@ Izvozite segmente poenotenih profilov strank v Snapchat in jih uporabite za ogla
 ## <a name="known-limitations"></a>Znane omejitve
 
 - Izvoz v Snapchat je omejen na segmente.
-- Izvoz do 1 milijon profilov strank v Snapchat lahko traja do 15 minut. 
+- Izvoz do 1 milijona profilov v Snapchat lahko traja do 15 minut. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Nastavitev povezave s storitvijo Snapchat
 
@@ -63,7 +63,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Vnesite [**ID občinstva storitve Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. To je obvezno za izvoz segmentov Snapchat.
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. To je obvezno za izvoz segmentov Snapchat.
 
 1. Izberite segmente, ki jih želite izvoziti. 
 

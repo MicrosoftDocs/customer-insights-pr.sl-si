@@ -5,16 +5,16 @@ ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e78e18b75ee9797b5fc76486615992e301e4c650
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977757"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304992"
 ---
 # <a name="connections-preview-overview"></a>Pregled povezav (predogledna različica)
 
@@ -47,7 +47,6 @@ Za dodajanje povezav morate imeti [skrbniška dovoljenja](permissions.md). Če v
 1. V podoknu **Vzpostavitev povezave** vnesite zahtevane podrobnosti. 
    1. **Prikazno ime** in vrsta povezave opisujeta povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
    1. Dejanska polja so odvisna od storitve, s katero vzpostavljate povezavo. Podrobnosti o določeni vrsti povezave lahko izveste v ustreznem članku o ciljni storitvi.
-   1. Če [uporabite storitev Key Vault](use-azure-key-vault.md) za shranjevanje skrivnosti, aktivirajte možnost **Uporaba storitve Key Vault** in izberite skrivnost s seznama.
 
 1. Izberite možnost **Shrani**, da ustvarite povezavo.
 
@@ -94,6 +93,3 @@ Odstranjene obogatitve in izvozi bodo postali nedejavni. Ponovno jih aktivirate 
 
 1. Za potrditev izbrisa izberite možnost **Odstrani**.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Vzpostavitev povezav s skrivnostmi, ki jih upravlja vaša storitev Key Vault
-
-Nekatere povezave potrebujejo skrivnosti, kot so ključi API ali gesla. Nekatere povezave podpirajo skrivnosti, shranjene v vaši storitvi Key Vault. Preberite več o podprtih povezavah in o tem, kako jih nastaviti [v storitvi Key Vault za vpoglede v občinstvo](use-azure-key-vault.md).
