@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/01/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645330"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229097"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Ustvarjanje novega delovnega prostora in dodajanje članov
 
@@ -26,11 +25,11 @@ Ko ustvarite delovni prostor, izberete vrsto podatkov, na katere se želite osre
 
 ## <a name="create-a-new-workspace"></a>Ustvarjanje novega delovnega prostora
 
-Postopek ustvarjanja delovnega prostora vključuje nastavitev *okolja* za organiziranje delovnega prostora. Okolje je prostor, ki lahko vsebuje enega ali več delovnih prostorov. Z okoljem lahko upravljate svoje delovne prostore in povezave do zmogljivosti vpogledov v občinstvo Customer Insights.
+Postopek ustvarjanja delovnega prostora vključuje nastavitev *okolja* za organiziranje delovnega prostora. Okolje je prostor, ki lahko vsebuje enega ali več delovnih prostorov. Za upravljanje delovnih prostorov in povezav z zmožnostjo vpogledov občinstvo lahko uporabite okolje.
 
-1. Izberite **Novo** pri preklopniku delovnega prostora.
+1. Izberite **+Novo** iz preklopnika delovnega prostora.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Stran Customer Insights z oblačkom v podoknu za krmarjenje in opisom.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Stran Customer Insights z oblačkom v navigacijskem podoknu in opisom.":::
 
 1. V podoknu **Delovni prostor** vnesite **ime delovnega prostora**.
 
