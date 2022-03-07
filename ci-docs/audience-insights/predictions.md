@@ -1,24 +1,28 @@
 ---
 title: Izpolnite delne podatke z uporabo predvidevanj
 description: Z predvidevanji izpolnite nepopolne podatke o strankah.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268292"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354023"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Delne podatke dopolnite s predvidevanji
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Izpolnite svoje delne podatke s predvidevanji (zastarelo)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Ta funkcija bo **zastarel** od **5. november 2021**. Trenutne izvedbe bodo še naprej delovale, dokler funkcija ne bo odstranjena, vendar ne boste mogli ustvariti novih integracij z uporabo spodnjih navodil.
 
 Predvidevanja omogočajo preprosto ustvarjanje predvidenih vrednosti, ki okrepijo vaše razumevanje stranke. Na strani **Obveščanje** > **Predvidevanja** lahko izberete **Moje napovedi**, da si ogledate predvidevanja, ki ste jih konfigurirali v drugih delih vpogledov v občinstvo , in jim omogočite nadaljnjo prilagoditev.
 
@@ -31,11 +35,11 @@ Predvidevanja omogočajo preprosto ustvarjanje predvidenih vrednosti, ki okrepij
 
 Preden lahko vaša organizacija uporablja funkcijo predvidevanj, morajo biti izpolnjeni naslednji predpogoji:
 
-1. Vaša organizacija ima primerek [nastavljen v storitvi Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) in je v isti organizaciji kot Customer Insights.
+1. Vaša organizacija ima primerek, [nastavljen v Microsoft Dataverse](/ai-builder/build-model#prerequisites), ki je v isti organizaciji kot Customer Insights.
 
-2. Vaše okolje je vezano na vaš primerek Common Data Service.
+2. Vaše okolje za vpogled občinstva je povezano z vašim primerkom Dataverse.
 
-Če [ustvarjate novo okolje](manage-environments.md), ga konfigurirajte v pogovornem oknu **Ustvarjanje okolja** in izberite **Napredno**. Če ste okolje že ustvarili, odprite njegove nastavitve in izberite **Napredno**. Kakorkoli že, v razdelku **Uporaba napovedi** vnesite URL primerka Common Data Service, na katerega želite pritrditi svoje okolje.
+Za več informacij glejte [Ustvarjanje novega okolja](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Ustvarjanje predvidevanja v entiteti stranke
 
@@ -47,19 +51,21 @@ Preden lahko vaša organizacija uporablja funkcijo predvidevanj, morajo biti izp
 
 4. Poiščite ima atributa, za katerega želite napovedati vrednosti, nato izberite ikono **Pregled** v stolpcu **Povzetek**.
    > [!div class="mx-imgBorder"]
-   > ![Ikona pregleda](media/intelligence-overviewicon.png "Ikona pregleda")
+   > ![Ikona pregleda.](media/intelligence-overviewicon.png "Ikona pregleda")
 
 5. V primeru visoke stopnje manjkajočih vrednosti za atribut izberite **Predvidi manjkajoče vrednosti** za nadaljevanje s predvidevanjem.
    > [!div class="mx-imgBorder"]
-   > ![Stanje pregleda s prikazanim gumbom za predvidevanje manjkajočih vrednosti](media/intelligence-overviewpredictmissingvalues.png "Stanje pregleda s prikazanim gumbom za predvidevanje manjkajočih vrednosti")
+   > ![Stanje pregleda s prikazanim gumbom za predvidevanje manjkajočih vrednosti.](media/intelligence-overviewpredictmissingvalues.png "Stanje pregleda s prikazanim gumbom za predvidevanje manjkajočih vrednosti")
 
 6. Zagotovite **Prikazno ime** in **Ime izhodne entitete** za rezultate predvidevanja.
 
 7. Prikazal se bo vnaprej izpolnjen seznam možnosti, kjer lahko preslikate vrednosti v predvideno kategorijo. V tem primeru sta edini možnosti kategorije 0 ali 1, saj preslikava poteka na true/false ali binarno naravo predvidevanja. V stolpcu kategorije preslikajte vrednosti polj, za katera želite, da so razvrščena kot »0«, v končno predvidevanje na »0« in elemente, za katere želite, da so razvrščeni kot »1«, v končno predvidevanje na »1«.
    > [!div class="mx-imgBorder"]
-   > ![Primer, ki prikazuje preslikane vrednosti polj v kategorije](media/intelligence-categorymapping.png "Primer, ki prikazuje preslikane vrednosti polj v kategorije")
+   > ![Primer, ki prikazuje preslikane vrednosti polj v kategorije.](media/intelligence-categorymapping.png "Primer, ki prikazuje preslikane vrednosti polj v kategorije")
 
 8. Izberite **Dokončano** in predvidevanje bo obdelano. Obdelava traja nekaj časa, odvisno od velikosti in zapletenosti podatkov. Rezultati bodo na voljo v novi entiteti, ki temelji na možnosti **Ime izhodne entitete**, predvidevanja, ki ste ga ustvarili.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Ustvarjanje predvidevanja med ustvarjanjem segmenta
 
@@ -77,7 +83,7 @@ Kot del tega poteka izberete določen atribut, na katerem utemeljite segment, ko
 
 5. Če ima segment, ki ste ga ustvarili, manjkajoče podatke v izvornem polju, lahko izberete predvidevanje manjkajočih vrednosti.
    > [!div class="mx-imgBorder"]
-   > ![Gumb za predvidevanje](media/segments-predictoption.png "Gumb za predvidevanje")
+   > ![Gumb za predvidevanje.](media/segments-predictoption.png "Gumb za predvidevanje")
 
 6. Zagotovite **Prikazno ime** in **Ime izhodne entitete** za rezultate predvidevanja.
 
@@ -93,7 +99,7 @@ Kot del tega poteka izberete določen atribut, na katerem utemeljite segment, ko
 
 4. Videli boste število podatkovnih točk v pogledu predvidevanja.
    > [!div class="mx-imgBorder"]
-   > ![Stran predvidevanj](media/intelligence-predictionsviewpage.png "Stran predvidevanj")
+   > ![Stran predvidevanj.](media/intelligence-predictionsviewpage.png "Stran predvidevanj")
 
    - **Predvidene vrednosti** prikazuje preslikavo, ustvarjeno med fazo preslikave vrednosti polja v kategorijo. To so vrednosti v naboru podatkov, ki so bile preslikane v določeno kategorijo.
    -**Ključni dejavniki** so dejavniki v naboru podatkov, ki bodo najverjetneje vplivali na zanesljivost predvidevanja za vrednost polja, ki se preslika v določeno kategorijo.
@@ -110,7 +116,7 @@ Kot del tega poteka izberete določen atribut, na katerem utemeljite segment, ko
 
 ## <a name="edit-a-prediction"></a>Urejanje predvidevanja
 
-Ko ste ustvarili predvidevanja, lahko prilagodite model v orodju AI Builder, da povečate učinkovitost modela.  
+Ko ustvarite predvidevanje, lahko prilagodite model v AI Builder povečati učinkovitost vašega modela.  
 
 1. Pri vpogledih v občinstvo izberite **Obveščanje** > **Predvidevanja** > **Moja predvidevanja**.
 
@@ -118,14 +124,14 @@ Ko ste ustvarili predvidevanja, lahko prilagodite model v orodju AI Builder, da 
 
 3. Izberite tri pike v stolpcu **Dejanja** in izberite **Pogled**.
 
-4. Izberite **Prilagajanje v orodju AI Builder**.
+4. Izberite **Prilagodite v AI Builder**.
 
-5. Posodobite model v orodju AI Builder. [Preberite več o upravljanju modelov v orodju AI Builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Posodobite svoj model v AI Builder. [Preberite več o upravljanju modelov v orodju AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Ob naslednjem zagonu predvidevanja bo uporabljen ustvarjeni posodobljeni model.
 
 > [!NOTE]
-> Novi modeli, ustvarjeni v storitvi AI Builder, ne bodo prikazani pri vpogledih v občinstvo, razen če je bil model ustvarjen na podlagi zgoraj naštetih izkušenj.
+> Novi modeli, ustvarjeni v AI Builder ne bo prikazan v občinstvo vpogledih, razen če je bil model ustvarjen iz zgoraj navedenih izkušenj.
 
 ## <a name="remove-a-prediction"></a>Odstranjevanje predvidevanja
 
@@ -139,7 +145,7 @@ Ob naslednjem zagonu predvidevanja bo uporabljen ustvarjeni posodobljeni model.
 
 ## <a name="troubleshooting"></a>Odpravljanje težav
 
-Če zaradi napake ne morete dokončati priloženega postopka Common Data Service, lahko poskusite postopek dokončati ročno. V postopku prilaganja lahko pride do dveh znanih težav:
+Če zaradi napake ne morete dokončati priloženega postopka Dataverse, lahko poskusite postopek dokončati ročno. V postopku prilaganja lahko pride do dveh znanih težav:
 
 - Rešitev dodatka za kartice stranke ni nameščena.
     1. Opravite korake iz navodil za [namestitev in konfiguracijo rešitve](customer-card-add-in.md).

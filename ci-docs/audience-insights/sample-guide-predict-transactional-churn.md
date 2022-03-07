@@ -3,26 +3,25 @@ title: Vzorčni vodnik za predvidevanje izgube glede transakcij
 description: S tem vzorčnim vodnikom preizkusite vnaprej pripravljeni model za predvidevanje izgube glede transakcij.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306140"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354621"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube glede transakcij (predogled)
+# <a name="transactional-churn-prediction-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube glede transakcij
 
-S spodnjimi podatki vam bomo v tem vodniku razložili celovit primer predvidevanja izgube glede transakcij v storitvi Customer Insights. Podatki, uporabljeni v tem vodniku, niso resnični podatki o strankah in so del nabora podatkov Contoso, ki se nahaja v okolju *Demo* in vam pripada v sklopu naročnine Customer Insights.
+S spodnjimi podatki vam bomo v tem vodniku razložili celovit primer predvidevanja izgube glede transakcij v storitvi Customer Insights. Vsi podatki, uporabljeni v tem priročniku, niso resnični podatki o strankah in so del nabora podatkov Contoso, ki ga najdemo v *predstavitvenem* okolju v okviru naročnine Customer Insights.
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek svoje spletne strani Contoso Coffee. Njihov cilj je vedeti, katere stranke, ki običajno redno kupujejo njihove izdelke, ne bodo več aktivne stranke v naslednjih 60 dneh. Znanje o tem, katere stranke se bodo **verjetno izgubile**, jim lahko pomaga, da bolje izkoristijo tržna prizadevanja tako, da se osredotočijo na njihovo ohranitev.
+Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek njihovega spletnega mesta Contoso Coffee. Njihov cilj je vedeti, katere stranke, ki običajno redno kupujejo njihove izdelke, ne bodo več aktivne stranke v naslednjih 60 dneh. Znanje o tem, katere stranke se bodo **verjetno izgubile**, jim lahko pomaga, da bolje izkoristijo tržna prizadevanja tako, da se osredotočijo na njihovo ohranitev.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -31,7 +30,7 @@ Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki ji
 
 ## <a name="task-1---ingest-data"></a>1. opravilo – vnos podatkov
 
-Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu virov podatkov z uporabo povezovalnikov Power Query](connect-power-query.md). Z naslednjimi informacijami domnevamo, da ste na splošno seznanjeni z vnosom podatkov. 
+Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih virov z uporabo Power Query konektorji](connect-power-query.md) posebej. Z naslednjimi informacijami domnevamo, da ste na splošno seznanjeni z vnosom podatkov. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Vnos podatkov o strankah s platforme elektronskega poslovanja
 
@@ -46,8 +45,7 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
    - **DateOfBirth**: datum
    - **CreatedOn**: datum/čas/časovni pas
 
-   [!div class="mx-imgBorder"]
-   ![Spremeni datum rojstva v datum](media/ecommerce-dob-date.PNG "Spremeni datum rojstva v datum")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Spremeni datum rojstva v datum.":::
 
 1. V polju **Ime** v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **StikiEPoslovanja**
 
@@ -150,7 +148,7 @@ Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdel
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>3. opravilo – konfiguracija predvidevanja izgube glede transakcij
 
-Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje izgube naročnin. Za podrobne korake glejte članek [Predvidevanje izgube naročnin (predogled)](predict-subscription-churn.md). 
+Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje izgube naročnin. Za podrobne korake glejte [Odliv naročnin predvidevanje](predict-subscription-churn.md) Članek. 
 
 1. Odprite **Obveščanje** > **Odkrivanje** in izberite uporabo možnosti **Model izgube strank**.
 

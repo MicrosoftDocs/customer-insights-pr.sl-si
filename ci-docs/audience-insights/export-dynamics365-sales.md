@@ -3,28 +3,35 @@ title: Izvozite podatke Customer Insights v Dynamics 365 Sales
 description: Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 328bb2f26ebcea234fb645e5225930ab12f82a8b
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
-ms.translationtype: HT
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976246"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355049"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Uporaba segmentov v storitvi Dynamics 365 Sales (predogledna različica)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Na podlagi podatkov o strankah z aplikacijo Dynamics 365 Sales ustvarjajte sezname za trženje in postopke za nadaljnje delo ter pošiljajte promocijske vsebine.
 
+## <a name="known-limitations"></a>Znane omejitve
+
+- Izvoz v Dynamics 365 Sales je omejen na 100.000 članov na segment.
+- Izvoz segmentov v Dynamics 365 Sales lahko traja do 3 ure. 
+
 ## <a name="prerequisite-for-connection"></a>Predpogoj za povezavo
 
-1. Zapisi o stikih morajo biti prisotni v storitvi Dynamics 365 Sales, preden lahko izvozite segment iz rešitve Customer Insights v Sales. Preberite več o vključevanju stikov v storitvi [Dynamics 365 Sales z uporabo rešitve Common Data Services](connect-power-query.md).
+1. Zapisi o stikih morajo biti prisotni v storitvi Dynamics 365 Sales, preden lahko izvozite segment iz rešitve Customer Insights v Sales. Preberite več o vključevanju stikov v storitvi [Dynamics 365 Sales z uporabo rešitve Microsoft Dataverse](connect-power-query.md).
 
    > [!NOTE]
    > Z izvozom segmentov iz vpogledov v občinstvo v rešitev Sales ne bodo ustvarjeni novi zapisi stikov v primerkih aplikacije Sales. Zapise o stikih iz rešitve Sales je treba vključiti v vpoglede v občinstvo in jih uporabiti kot vir podatkov. Prav tako jih je treba vključiti v enotno entiteto stranke, da se ID-ji strank preslikajo v ID-je stikov, preden je segmente mogoče izvoziti.

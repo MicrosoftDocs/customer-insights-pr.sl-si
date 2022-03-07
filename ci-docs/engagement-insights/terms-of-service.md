@@ -5,26 +5,25 @@ author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
 ms.date: 06/09/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 101888ecc3a741a1ab6eb87c20055644eb8022b2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7774130"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228085"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS – Vpogledi v interakcije (predogledna različica) 
 
-Vpogledi v sodelovanje (predogled) so zmožnost predogleda pred izdajo, kar pomeni, da ima manj ali drugačne ukrepe za varnost, zasebnost in lokacijo podatkov kot funkcije in zmožnosti, ki so splošno na voljo v Dynamics 365 Customer Insights. Preglejte spodnje pogoje in dokumentacijo izdelka, da ugotovite, ali so vpogledi v interakcije (predogledna različica) primerni za vaše podatke.
+Vpogledi v interakcije (predogledna različica) je možnost predogleda pred izdajo, kar pomeni, da ima manj ukrepov za varnost, zasebnost in mesto podatkov ali pa so ukrepi drugačni kot funkcije in zmogljivosti, ki so splošno dostopne v storitvi Dynamics 365 Customer Insights. Preglejte spodnje pogoje in dokumentacijo izdelka, da ugotovite, ali so vpogledi v interakcije (predogledna različica) primerni za vaše podatke.
 
 ## <a name="preview-terms-of-service"></a>POGOJI STORITVE ZA PREDOGLEDNO RAZLIČICO
 
 NAZADNJE POSODOBLJENO V OKTOBRU 2020 
 
-Z dostopom ali uporabo predogleda storitev Dynamics 365 Customer Insights – vpogledi v sodelovanje (skupaj z vsemi viri podatkov, ki jih zagotovi Microsoft, "storitve"), sprejemate določila in pogoje te pogodbe. Če jih ne sprejmete, ne dostopajte do storitev in jih ne uporabljajte.
+Z dostopom ali uporabo predogledne različice storitev Dynamics 365 Customer Insights – vpogledi v interakcije (skupaj z vsemi viri podatkov, ki jih zagotavlja Microsoft, v nadaljevanju »storitve«) sprejemate pogoje in določila te pogodbe. Če jih ne sprejmete, ne dostopajte do storitev in jih ne uporabljajte.
 
 ## <a name="1-what-this-agreement-covers"></a>1. KAJ ZAJEMA POGODBA?
 
@@ -154,7 +153,7 @@ V NAJVEČJEM MOŽNEM OBSEGU, KI GA DOVOLJUJE ZAKON, MICROSOFT V NOBENEM PRIMERU 
 
 ### <a name="111-term"></a>11.1. Trajanje
 
-Ta pogodba začne veljati na dan, ko se z njo prvič strinjate. Ta pogodba nadomešča vse prejšnje pogodbe, po katerih ste uporabljali Dynamics 365 Product Insights, ali katere koli storitve predhodnikov. Ta pogodba bo prenehala veljati pred (i) dnevom prve razpoložljivosti komercialne izdaje storitev (če sploh kdaj) ali (ii) na datum, ko vas Microsoft obvesti o prekinitvi. Microsoft lahko kadar koli iz kakršnega koli razloga in po lastni presoji začasno ustavi ali prekliče uporabo in dostop do vseh ali katerega koli dela storitev ali prekine to pogodbo.
+Ta pogodba začne veljati na dan, ko se z njo prvič strinjate. Ta pogodba nadomešča vse prejšnje pogodbe, na podlagi katerih ste uporabljali storitev Dynamics 365 Product Insights ali katere koli predhodne storitve. Ta pogodba bo prenehala veljati pred (i) dnevom prve razpoložljivosti komercialne izdaje storitev (če sploh kdaj) ali (ii) na datum, ko vas Microsoft obvesti o prekinitvi. Microsoft lahko kadar koli iz kakršnega koli razloga in po lastni presoji začasno ustavi ali prekliče uporabo in dostop do vseh ali katerega koli dela storitev ali prekine to pogodbo.
 
 ### <a name="112-effect-of-termination"></a>11.2. Učinek prekinitve
 

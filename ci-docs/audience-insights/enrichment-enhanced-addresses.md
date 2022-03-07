@@ -1,20 +1,25 @@
 ---
-title: Obogatitev izboljšave naslova
+title: Obogatitev naslova (vsebuje video)
 description: Z Microsoftovimi modeli obogatite in uravnotežite podatke o naslovih za profile strank.
-ms.date: 04/21/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305452"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353656"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogatitev profilov strank z izboljšanimi naslovi
 
@@ -23,6 +28,8 @@ Naslovi v vaših podatkih so lahko nestrukturirani, nepopolni ali napačni. Upor
 ## <a name="how-we-enhance-addresses"></a>Kako izboljšujemo naslove?
 
 Naš model gre skozi dvostopenjski postopek za izboljšanje naslova. Najprej razčleni naslov, da prepozna njegove komponente, in jih postavi v strukturirano obliko. Nato s pomočjo umetne inteligence popravimo, dopolnimo in standardiziramo vrednosti v naslovu.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Primer
 
@@ -58,6 +65,10 @@ Trenutno podpiramo obogatitev naslovov v teh državah ali regijah:
 
 - Avstralija
 - Kanada
+- Francija
+- Nemčija
+- Italija
+- Japonska
 - Združeno kraljestvo
 - Združene države
 
@@ -94,10 +105,20 @@ Naslovi morajo vsebovati vrednost države/regije. Ne obdelujemo naslovov za drž
 
 Po končanem postopku obogatitve lahko podatke o na novo obogatenih profilih strank pregledate v možnosti **Moje obogatitve**. Poleg tega boste našli čas zadnje posodobitve in število obogatenih profilov.
 
-Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izberete **Ogled obogatenih podatkov**.
+Vzorec obogatenih podatkov si lahko ogledate v **Obogaten predogled strank** ploščice. Izberite **Poglej več** in izberite **Podatki** zavihek za dostop do podrobnega pogleda vsakega obogatenega profila.
+
+### <a name="overview-card"></a>Pregledna kartica
+
+Pregledna kartica prikazuje podrobnosti o kritju obogatitve. 
+
+* **Naslovi obdelani in spremenjeni** : Število profilov strank z naslovi, ki so bili uspešno obogateni.
+
+* **Naslovi so obdelani in niso spremenjeni** : število profilov strank z naslovi, ki so bili prepoznani, vendar nespremenjeni. Običajno se zgodi, ko so vhodni podatki veljavni in jih z obogatitvijo ni mogoče izboljšati.
+
+* **Naslovi niso obdelani in nespremenjeni** : Število profilov z naslovi, ki niso bili prepoznani. Običajno za vhodne podatke, ki so neveljavni ali niso podprti z obogatitvijo.
 
 ## <a name="next-steps"></a>Naslednji koraki
 
-Nadgradite svoje obogatene podatke o strankah. Ustvarite [segmente](segments.md) in [mere](measures.md) ter celo [izvozite podatke](export-destinations.md) in tako svojim strankam zagotovite prilagojeno izkušnjo.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

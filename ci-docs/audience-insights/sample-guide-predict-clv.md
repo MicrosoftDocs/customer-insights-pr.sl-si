@@ -3,18 +3,17 @@ title: Vzorčni priročnik za predvidevanje vrednosti življenjske dobe stranke
 description: Uporabite ta vzorčni priročnik, da preizkusite model za predvidevanje vrednosti življenjske dobe stranke.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306369"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354851"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Vzorčni priročnik za predvidevanje vrednosti življenjske dobe stranke (CLV)
 
@@ -22,7 +21,7 @@ Ta priročnik vam bo z vzorčnimi podatki v celoti razložil primer predvidevanj
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne aparate. Izdelke prodajajo prek svoje spletne strani Contoso Coffee. Podjetje želi predvideti vrednost (prihodek), ki jo lahko njihove stranke ustvarijo v naslednjih 12 mesecih. Poznavanje pričakovane vrednosti njihovih strank v naslednjih 12 mesecih jim pomaga usmeriti svoja tržna prizadevanja na stranke z visoko vrednostjo.
+Contoso je podjetje, ki proizvaja visokokakovostne aparate za kavo in kavo. Izdelke prodajajo preko svoje spletne strani Contoso Coffee. Podjetje želi predvideti vrednost (prihodek), ki jo lahko njihove stranke ustvarijo v naslednjih 12 mesecih. Poznavanje pričakovane vrednosti njihovih strank v naslednjih 12 mesecih jim pomaga usmeriti svoja tržna prizadevanja na stranke z visoko vrednostjo.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -31,7 +30,7 @@ Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne aparate. Izdelk
 
 ## <a name="task-1---ingest-data"></a>1. opravilo – vnos podatkov
 
-Preglejte članke [o vnosu podatkov](data-sources.md) in [uvozu virov podatkov s konektorji Power Query](connect-power-query.md). Z naslednjimi informacijami domnevamo, da ste na splošno seznanjeni z vnosom podatkov.
+Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih virov z uporabo Power Query konektorji](connect-power-query.md). Z naslednjimi informacijami domnevamo, da ste na splošno seznanjeni z vnosom podatkov.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Vnos podatkov o strankah s platforme elektronskega poslovanja
 
@@ -164,7 +163,7 @@ Po uvozu podatkov se začne postopek poenotenja podatkov za ustvarjanje enotnega
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>3. naloga – Konfiguriranje predvidevanja vrednosti življenjske dobe stranke
 
-Z vzpostavljenimi poenotenimi profili strank lahko zaženemo predvidevanje vrednosti življenjske dobe stranke. Za podrobne korake glejte [Predvidevanje vrednosti življenjske dobe stranke (predogledna različica)](predict-customer-lifetime-value.md).
+Z vzpostavljenimi poenotenimi profili strank lahko zaženemo predvidevanje vrednosti življenjske dobe stranke. Za podrobne korake glejte [Življenjska vrednost stranke predvidevanje](predict-customer-lifetime-value.md).
 
 1. Odprite **Obveščanje**  > **Napovedi** in izberite **Model za izračun vrednosti življenjske dobe stranke**.
 

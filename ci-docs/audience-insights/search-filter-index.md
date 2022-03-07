@@ -1,27 +1,30 @@
 ---
 title: Iskanje in filtriranje profilov strank
 description: Hitro poiščite informacije o poenotenih profilih strank in filtrirajte za določene atribute.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
-ms.translationtype: HT
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470037"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354529"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili strank: Kazalo za iskanje in filtre
 
 Rezultat poenotenja podatkov strank je vnos profila stranke, ki zagotavlja poenoten pogled v celotno bazo strank. Za hitro [iskanje informacij o določeni stranki ali skupini strank](customer-profiles.md), lahko konfigurirate zmogljivosti **Iskanje** in **Filter** na strani **Stranke**. Berite dalje, da boste izvedeli, kako uredite atribute na strani **Kazalo za iskanje in filtre**, ki je na voljo uporabnikom za iskanje in filtriranje.
 
-> [!div class="mx-imgBorder"]
-> ![Filter za iskanje.](media/search-filter.png "Filter za iskanje")
+   :::image type="content" source="media/search-filter.png" alt-text="Filter za iskanje":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Dodajanje polj in določanje atributov
 

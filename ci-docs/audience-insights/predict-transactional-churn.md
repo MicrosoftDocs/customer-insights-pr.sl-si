@@ -1,22 +1,21 @@
 ---
-title: Pretok transakcij predvidevanje (video)
+title: Pretok transakcij predvidevanje (vsebuje video)
 description: Predvidite, ali za stranko obstaja tveganje, da ne bo več kupovala izdelkov ali storitev vašega podjetja.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 9aa208ad94dcb6b1e0f110a3f974c56de00bbd07
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904092"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355679"
 ---
-# <a name="transaction-churn-prediction-preview"></a>Predvidevanje izgube transakcij (predogledna različica)
+# <a name="transaction-churn-prediction"></a>Predvidevanje izgube transakcij
 
 Predvidevanje izgub glede transakcij pomaga predvideti, ali stranka v določenem časovnem obdobju ne bo več kupovala vaših izdelkov ali storitev. Ustvarite lahko nove napovedi izgub v razdelku **Obveščanje** > **Predvidevanja**. Izberite **Moja predvidevanja**, da si ogledate druga predvidevanja, ki ste jih ustvarili. 
 
@@ -25,7 +24,7 @@ Predvidevanje izgub glede transakcij pomaga predvideti, ali stranka v določenem
 Za okolja, ki temeljijo na poslovnih računih, lahko predvidimo izgubo transakcij za račun in tudi kombinacijo računa in druge ravni informacij, kot je kategorija izdelkov. Če dodate dimenzijo, lahko ugotovite, kako verjetno je, da bo račun »Contoso« nehal kupovati kategorijo izdelkov »pisarniški material«. Poleg tega lahko za poslovne račune uporabimo tudi umetno inteligenco za ustvarjanje seznama možnih vzrokov, zakaj se bo račun verjetno izgubil za kategorijo podatkov sekundarne ravni.
 
 > [!TIP]
-> Preskusite vadnico za predvidevanje izgube transakcij z vzorčnimi podatki: [Vzorčni vodnik za predvidevanje izgube transakcij (predogledna različica)](sample-guide-predict-transactional-churn.md).
+> Preizkusite vadnico za odtok transakcij predvidevanje z uporabo vzorčnih podatkov: [Vzorčni vodnik za odtok transakcij predvidevanje](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -101,12 +100,12 @@ Za okolja, ki temeljijo na poslovnih računih, lahko predvidimo izgubo transakci
 
 1. V rešitvi Customer Insights pojdite na **Obveščanje** > **Predvidevanja**.
 
-1. Izberite ploščico **Model izgube strank (predogled)** in izberite **Uporabi ta model**.
+1. Izberite **Model odliva strank** ploščico in izberite **Uporabite ta model**.
 
 1. V podoknu **Model izgube strank** izberite **Transakcija** in nato **Začetek**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Posnetek zaslona z izbrano možnostjo transakcije v podoknu modela izgube strank.":::
-
+ 
 ### <a name="name-model"></a>Ime modela
 
 1. Navedite ime modela, da ga boste lahko razlikovali od drugih modelov.
@@ -117,11 +116,11 @@ Za okolja, ki temeljijo na poslovnih računih, lahko predvidimo izgubo transakci
 
 ### <a name="define-customer-churn"></a>Določitev izgube stranke
 
-1. Nastavite časovno obdobje za napovedovanje izgube v polju **Prepoznajte stranke, ki jih lahko izgubite v naslednjem času:**. Na primer, v naslednjih 90 dneh predvidite tveganje za izgubo strank, da temu prilagodite vaša prizadevanja za uspešno trženje. Predvidevanje tveganja izgube za daljše ali krajše časovno obdobje lahko oteži obravnavo dejavnikov v vašem profilu tveganja izgub, vendar je to odvisno od vaših specifičnih poslovnih potreb.
+1. Nastavite **predvidevanje okno**. Na primer, v naslednjih 90 dneh predvidite tveganje za izgubo strank, da temu prilagodite vaša prizadevanja za uspešno trženje. Predvidevanje tveganja izgube za daljše ali krajše časovno obdobje lahko oteži obravnavo dejavnikov v vašem profilu tveganja izgub, vendar je to odvisno od vaših specifičnih poslovnih potreb.
    >[!TIP]
-   > Kadar koli lahko izberete možnost **Shrani in zapri**, da shranite predvidevanje kot osnutek. Osnutek predvidevanja boste lahko našli na zavihku **Moja predvidevanja** za nadaljevanje.
+   > Lahko izberete **Shrani osnutek** kadar koli shranite predvidevanje kot osnutek. Osnutek predvidevanja boste lahko našli na zavihku **Moja predvidevanja** za nadaljevanje.
 
-1. Vnesite število dni za določitev izgube v polju **Stranka je izgubljena, če ni opravila nakupov toliko časa:**. Na primer, če stranka v zadnjih 30 dneh ni opravila nobenega nakupa, se lahko šteje, da je izgubljena za vaše podjetje. 
+1. Vnesite število dni za določitev odliva v **Opredelitev odtoka** polje. Na primer, če stranka v zadnjih 30 dneh ni opravila nobenega nakupa, se lahko šteje, da je izgubljena za vaše podjetje. 
 
 1. Če želite nadaljevati, izberite **Naprej**.
 
@@ -129,19 +128,16 @@ Za okolja, ki temeljijo na poslovnih računih, lahko predvidimo izgubo transakci
 
 1. Izberite **Dodaj podatke** in izberite vrsto dejavnosti v stranskem podoknu, ki vsebuje zahtevane podatke o transakcijah ali zgodovini nakupov.
 
-1. V razdelku **Izbor dejavnosti** izberite določene dejavnosti iz izbrane dejavnosti, na katere želite, da se osredotoči izračun.
+1. Spodaj **Izberite dejavnosti**, izberite določene dejavnosti iz izbrane vrste dejavnosti, na katero želite, da se osredotoči izračun.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Stransko podokno prikazuje izbiro določenih dejavnosti pod semantično vrsto.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Stransko podokno prikazuje izbiro določenih dejavnosti pod semantično vrsto.":::
 
-1. Če dejavnosti še niste preslikali v semantično vrsto, izberite **Uredi**, da to storite. Odpre se vodena izkušnja za preslikavo semantičnih dejavnosti. Podatke preslikajte v ustrezna polja izbrane vrste dejavnosti.
+   Če dejavnosti še niste preslikali v semantično vrsto, izberite **Uredi**, da to storite. Odpre se vodena izkušnja za preslikavo semantičnih dejavnosti. Podatke preslikajte v ustrezna polja izbrane vrste dejavnosti.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Vrsta dejavnosti nastavitve strani.":::
+1. Preslikajte semantične atribute v polja, ki so potrebna za zagon modela. Če spodnja polja niso izpolnjena, konfigurirajte razmerje med entiteto zgodovine nakupov in entiteto *Stranka*. Izberite **Shrani**.
 
-1. Ko preslikate dejavnost na ustrezno semantično vrsto, izberite **Naprej**, da nadaljujete
+1. V **Dodajte zahtevane podatke** korak, izberite **Naslednji** za nadaljevanje, če ne želite dodati več dejavnosti.
 
-1. Preslikajte semantične atribute v polja, ki so potrebna za zagon modela. Če spodnja polja niso izpolnjena, konfigurirajte razmerje med entiteto zgodovine nakupov in entiteto *Stranka*.
-
-1. Izberite **Naprej**.
 
 # <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
 

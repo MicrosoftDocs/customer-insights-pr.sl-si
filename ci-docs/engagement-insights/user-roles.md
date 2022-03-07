@@ -4,27 +4,32 @@ description: Pregled razpoložljivih vlog in dovoljenj za člane delovnega prost
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 07/06/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 6d7f4db4a130fc15a69b380c892538db5492d96d8e13f3c070c6a6b9bd098371
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: ccc6a1b87b4cc28701e276b6e35432356e7647c4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036713"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227559"
 ---
 # <a name="roles-and-permissions"></a>Vloge in dovoljenja
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Delovni prostor je način shranjevanja ter upravljanja dogodkov in poročil. Član je uporabnik, ki lahko dostopa do delovnega prostora. V delovni prostor lahko dodelite člane ter določite njihove vloge in dovoljenja. Skrbniške vloge upravljajo delovne prostore in okolja ter konfigurirajo vpoglede v interakcijo za druge uporabnike. Vloge sodelavcev so usmerjene na analitike, ki jim ni treba konfigurirati vpogledov v interakcije, ampak želijo ustvariti lastna poročila, lijake ali segmente.
+Delovni prostor je prostor, kjer shranjujete in upravljate dogodke in poročila. Za več informacij glejte razdelek [Ustvarjanje delovnega prostora in dodajanje članov](create-workspace.md). 
+
+Delovni prostor lahko vključuje naslednje vloge in dovoljenja:
+
+- Vloge *Član* so uporabniki, ki lahko dostopajo do delovnega prostora. V delovni prostor lahko dodelite člane ter določite njihove vloge in dovoljenja. 
+- Vloge *Skrbnik* upravljajo delovne prostore in okolja ter konfigurirajo vpoglede v interakcijo za druge uporabnike. 
+- Vloge *Sodelavec* so namenjene analitikom, ki jim ni treba konfigurirati vpogledov v interakcije, ampak želijo ustvariti lastna poročila, lijake ali segmente.
 
 ## <a name="permissions"></a>Dovoljenja
   
-Naslednji grafikon določa dovoljenja za vsako vlogo. 
+Naslednja tabela določa dovoljenja za vsako vlogo. 
 
 | Dovoljenje | Skrbnik okolja | Skrbnik delovnega prostora | Sodelavec za okolje | Sodelavec za delovni prostor | 
 |--|--|--|--|--|

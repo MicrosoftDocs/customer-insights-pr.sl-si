@@ -2,18 +2,17 @@
 title: Uporaba demografskih dimenzij za razdelitev vedenjskih podatkov (obravnavane dimenzije)
 description: Uporaba obravnavanih dimenzij v poenotenem profilu za omogočanje vpogledov občinstva v lastnostih profila stranke.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461123"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233067"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Uporaba demografskih dimenzij za razdelitev vedenjskih podatkov
 
@@ -29,7 +28,7 @@ Z uporabo demografskih dimenzij v poenotenem profilu lahko uporabniki vpogledov 
 - Okolje vpogledov v interakcije, v katerem imate podatke o profilu stranke, povezane z okoljem vpogledov občinstva, kjer se ustvarjajo profili strank. Več informacij: [Ustvarjanje povezave med vpogledi občinstva in vpogledi v interakcije](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Ko ustvarite povezavo med okolji vpogledov občinstva in vpogledi v interakcije, boste morda želeli le podatke, značilne za lastnosti profila strank, ki so lahko uporabni kot dimenzije pri vpogledih v interakcije. Za več informacij pojdite na [Omogočanje atributov in segmentov poenotenih profilov vpogledov občinstva](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Ko ustvarite povezavo med okolji vpogledov občinstva in vpogledi v interakcije, boste morda želeli le podatke, značilne za lastnosti profila strank, ki so lahko uporabni kot dimenzije pri vpogledih v interakcije. Za več informacij pojdite na [Omogočanje atributov in segmentov poenotenih profilov vpogledov občinstva](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Ustvarjanje novega poročila po meri
 

@@ -3,18 +3,20 @@ title: Modeli strojnega učenja po meri | Microsoftovo gradivo
 description: Uporabite modele po meri iz rešitve za strojno učenje Azure v aplikaciji Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 8ca30193ae4f4ef3ed9c60f2d694cd11fad46c76
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
-ms.translationtype: HT
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967675"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355106"
 ---
 # <a name="custom-machine-learning-models"></a>Modeli strojnega učenja po meri
 

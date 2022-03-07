@@ -1,20 +1,19 @@
 ---
-title: Izvoz podatkov Customer Insights v gostitelje SFTP (videoposnetek)
+title: Izvoz podatkov Customer Insights v gostitelje SFTP (vsebuje video)
 description: Naučite se, kako konfigurirati povezavo in izvažati na lokacijo SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: HT
+ms.openlocfilehash: 7b09da093d6332c5081da1beadc1df59f63c31d2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927623"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231174"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Izvoz segmentov in drugih podatkov v SFTP (predogledna različica)
 

@@ -1,22 +1,21 @@
 ---
 title: Izvoz podatkov storitve Customer Insights v storitev AdRoll
 description: Naučite se, kako konfigurirati povezavo in izvažati v storitev AdRoll.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e8f4d4ee6b2c6cdec513b700641db568fa16076d
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
-ms.translationtype: HT
+ms.openlocfilehash: 3a318750077c71a17e5a47c40722f6153e6640f3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895979"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227640"
 ---
-# <a name="export-segment-lists-to-adroll-preview"></a>Izvoz seznamov segmentov v AdRoll (predogledna različica)
+# <a name="export-segments-to-adroll-preview"></a>Izvoz segmentov v AdRoll (predogledna različica)
 
 Izvozite segmente poenotenih profilov strank v storitev AdRoll in jih uporabite za oglaševanje. 
 
@@ -28,11 +27,11 @@ Izvozite segmente poenotenih profilov strank v storitev AdRoll in jih uporabite 
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- V storitev AdRoll lahko ob vsakem izvozu izvozite do 250.000 profilov.
-- V storitev AdRoll ne morete izvoziti segmentov z manj kot 100 profili. 
+- V storitev AdRoll lahko hkrati izvozite do 250.000 profilov strank.
+- Segmentov z manj kot 100 profili strank ne morete izvoziti v storitev AdRoll. 
 - Izvoz v storitev AdRoll je omejen na segmente.
-- Izvoz do 250.000 profilov v storitev AdRoll lahko traja do 10 minut. 
-- Število profilov, ki jih lahko izvozite v storitev AdRoll, je odvisno in omejeno glede na vašo pogodbo s storitvijo AdRoll.
+- Izvoz do 250.000 profilov strank v storitev AdRoll lahko traja do 10 minut. 
+- Število profilov strank, ki jih lahko izvozite v storitev AdRoll, je odvisno od vaše pogodbe s storitvijo AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Nastavitev povezave s storitvijo AdRoll
 
@@ -62,19 +61,21 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Za ustvarjanje novega izvoza izberite **Dodaj cilj**.
 
-1. V polju **Povezava za izvoz** izberite povezavo v razdelku AdRoll. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
+1. V polju **Povezava za izvoz** izberite povezavo v razdelku AdRoll. Če se vam poimenovanje tega odseka ne prikaže, to pomeni, da vam ni na voljo nobena tovrstna povezava.
 
-1. Vpišite **ID za AdRoll Advertiser** Za več informacij glejte razdelek [Profili storitve AdRoll Advertiser](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Vnesite **ID oglaševalca AdRoll**. Za več informacij si oglejte možnost [Profili oglaševalcev AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. Segmente je treba izvoziti v storitev AdRoll.
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. Segmente je treba izvoziti v storitev AdRoll.
 
-1. Izberite segmente, ki jih želite izvoziti. Izberite segment z vsaj 100 člani. Manjših segmentov ni mogoče izvoziti. Poleg tega je največja velikost segmenta za izvoz 250.000 članov na izvoz. 
+1. Izberite segmente, ki jih želite izvoziti. Izberite segment z vsaj 100 člani. Manjših segmentov ni mogoče izvoziti. Poleg tega največja velikost segmenta za izvoz znaša 250.000 članov na izvoz. 
 
 1. Izberite **Shrani**.
 
 S shranjevanjem izvoza se ta ne zažene takoj.
 
-Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
+Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). 
+
+Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost

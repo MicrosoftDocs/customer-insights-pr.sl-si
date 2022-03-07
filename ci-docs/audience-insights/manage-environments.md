@@ -1,24 +1,26 @@
 ---
 title: Ustvarjanje in upravljanje okolij
 description: Naučite se, kako se prijaviti za storitev in kako upravljati okolja.
-ms.date: 11/12/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799655"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354299"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Zamenjava okolja
 
@@ -40,18 +42,21 @@ Uredite lahko določene podatke obstoječih okolij.
 
 Za več informacij o nastavitvah okolja glejte [Ustvarjanje novega okolja](create-environment.md).
 
-## <a name="connect-to-microsoft-dataverse"></a>Povežite se z Microsoft Dataverse
+## <a name="connect-to-microsoft-dataverse"></a>Vzpostavljanje povezave s programom Microsoft Dataverse
    
-The **Microsoft Dataverse** korak vam omogoča povezavo Customer Insights z vašim Dataverse okoljem.
+Korak **Microsoft Dataverse** vam omogoča, da povežete Customer Insights s svojim okoljem Dataverse.
 
-Uporabiti [gotovi modeli predvidevanje](predictions-overview.md#out-of-box-models), konfigurirajte skupno rabo podatkov z Dataverse. Lahko pa omogočite vnos podatkov iz virov podatkov na mestu uporabe, pri čemer navedete URL okolja Microsoft Dataverse, ki ga upravlja vaša organizacija. Izberite **Omogoči skupno rabo podatkov** deliti izhodne podatke Customer Insights s podatkovnim jezerom, ki ga upravlja Dataverse.
+Če želite uporabiti [pripravljene modele predvidevanja](predictions-overview.md#out-of-box-models), konfigurirajte skupno rabo podatkov z okoljem Dataverse. Ali pa omogočite uvoz podatkov iz virov podatkov na mestu uporabe, ki zagotavljajo URL za okolje Microsoft Dataverse, ki ga upravlja vaša organizacija.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfiguracije za omogočanje skupne rabe podatkov z Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Vpogled v stranke in Dataverse morajo biti v isti regiji, da omogočite skupno rabo podatkov.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse.":::
 
 > [!NOTE]
 > Storitev Customer Insights ne podpira naslednjih primerov skupne rabe podatkov.
-> - Če shranite vse podatke v svoj Azure Data Lake Storage, ne boste mogli omogočiti skupne rabe podatkov s podatkovnim jezerom, ki ga upravlja Dataverse.
-> - Če omogočite skupno rabo podatkov z Dataverse, ne boste mogli [ustvariti predvidene ali manjkajoče vrednosti v entiteti](predictions.md).
+> - Če vse podatke shranite v svojo shrambo Azure Data Lake Storage, ne boste mogli omogočiti skupne rabe podatkov z upravljanim jezerom podatkov Dataverse.
+> - Če omogočite skupno rabo podatkov s storitvijo Dataverse, ne boste mogli [ustvariti predvidenih ali manjkajočih vrednosti v entiteti](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okolja
 
@@ -81,7 +86,7 @@ Naslednji podatki *niso* kopirani:
 - Profili strank
 - Poverilnice virov podatkov. Za vsak vir podatkov boste morali zagotoviti poverilnice in ročno osvežiti vire podatkov.
 
-- Viri podatkov iz mape Common Data Model in podatkovnega jezera, ki ga upravlja Dataverse. Te vire podatkov boste morali ustvariti ročno z istim imenom kot v izvornem okolju.
+- Viri podatkov iz mape Common Data Model in upravljanega jezera podatkov Dataverse. Te vire podatkov boste morali ustvariti ročno z istim imenom kot v izvornem okolju.
 
 Ko kopirate okolje, boste videli potrditveno sporočilo, da je bilo ustvarjeno novo okolje. Izberite **Na vire podatkov**, da prikažete seznam virov podatkov.
 

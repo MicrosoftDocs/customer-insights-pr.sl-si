@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466597"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353747"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Uvod v možnost vpogledov v občinstvo s storitvijo Dynamics 365 Customer Insights
 
@@ -23,7 +25,7 @@ Vpogledi v občinstvo pomagajo, da bolje razumete svoje stranke. Povežite podat
 
 ## <a name="step-1-create-an-environment"></a>1. korak: Ustvarjanje okolja
 
-Za začetek morate najprej ustvariti okolje za delo. Če je vaša organizacija že kupila licenco, glejte [Začetek s plačljivo naročnino](get-started-paid.md). Če želite začeti preskus za vpoglede v občinstvo, glejte [Nastavitev preskusnega okolja](get-started-trial.md). 
+Za začetek morate najprej ustvariti okolje za delo. Če je vaša organizacija že kupila licenco, glejte razdelek [Ustvarjanje okolja](create-environment.md). Če želite začeti preskus za vpoglede v občinstvo, glejte [Nastavitev preskusnega okolja](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>2. korak: Raziskovanje vpogledov v občinstvo
 
@@ -37,7 +39,7 @@ Ko se prvič prijavite v vpoglede v občinstvo, lahko konfigurirate nastavitve i
 
 Poenoteni profili so osnova za pridobivanje vpogledov in ukrepanje v zvezi s podatki. Vnesite podatke iz različnih virov in zaženite postopek poenotenja podatkov, da združite poenotene profile. Določite odnose med uvoženimi entitetami, uporabite funkcije obogatitve za dodajanje informacij v profile. 
 
-1. Vnesite podatke tako, da ustvarite vire podatkov iz več možnosti. Izberite med [priključki orodja Power Query](connect-power-query.md), [mapo Common Data Model](connect-common-data-model.md) oz. [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Vnesite podatke tako, da ustvarite vire podatkov iz več možnosti. Izbirajte med [Power Query konektorji](connect-power-query.md), a [Mapa skupnega podatkovnega modela](connect-common-data-model.md), ali [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Zaženite [postopek poenotenja podatkov](data-unification.md) tako, da greste skozi [zemljevid](map-entities.md) in omogočite [ujemanje](match-entities.md) in [spajanje](merge-entities.md) faz.
 

@@ -4,16 +4,15 @@ author: m-hartmann
 description: Seznanite se z izkušnjami ob prvem zagonu v storitvi Dynamics 365 Customer Insights in raziščite njene zmogljivosti.
 ms.author: mhart
 ms.date: 10/05/2021
-ms.service: customer-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
-ms.translationtype: HT
+ms.openlocfilehash: c9517ed2b50ff37e361a27538dfb9f9ccbf3df8f
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977692"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350151"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Uvod po nakupu storitve Customer Insights
 
@@ -40,10 +39,7 @@ Izkušnja ob prvem zagonu vam pomaga izbrati začetno osredotočenost s storitvi
 
 ## <a name="create-your-own-environment"></a>Ustvarite lastno okolje
 
-Po prvem vpisu boste videli okolje z vzorčnimi podatki. S temi podatki lahko raziščete funkcije in se seznanite z aplikacijo. Če želite uporabljati lastne podatke, morate ustvariti okolje v zmogljivosti, v kateri želite delati.
-
-- [Ustvarite okolje v vpogledih v občinstvo.](audience-insights/get-started-paid.md)
-- [Ustvarite okolje v vpogledih v interakcije.](engagement-insights/create-new-environment.md) 
+Po prvem vpisu boste videli okolje z vzorčnimi podatki. S temi podatki lahko raziščete funkcije in se seznanite z aplikacijo. Če želite uporabljati lastne podatke, morate [ustvariti okolje](audience-insights/get-started-paid.md).
 
 
 

@@ -2,19 +2,21 @@
 title: Vpogledi v segmente za obstoječe segmente
 description: Pridobite vpogled v obstoječe segmente, da vidite razlike in skupne značilnosti.
 ms.date: 06/10/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+searchScope:
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 8ae832c69c89bee08b8ef36ed99233b6e8e5a0f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595354"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355587"
 ---
 # <a name="segment-insights-preview"></a>Vpogled v segmente (predogledna različica)
 
@@ -44,13 +46,13 @@ Analizirate lahko tudi, kako se prekrivanje spreminja za posamezne atribute.
 Po končani analizi poiščite podrobnosti o tem vpogledu v razdelku **Segmenti** > **Vpogled (predogled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Podrobnosti vpogleda v prekrivanje segmentov":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Podrobnosti vpogleda v prekrivanje segmentov.":::
 
 Izberite vpogled za prikaz rezultatov analize:
 
 - Število članov, ki se prekrivajo v segmentih, izbranih za analizo.
 - Število članov, vključenih v enega od segmentov, ne pa v ostale segmente.
-- Če ste med konfiguriranjem analize prekrivanja izbrali polja, jih boste našli na ustreznih zavihkih. S spustnim menijem za filtriranje lahko izberete katero koli stopnjo zanimanja in v spodnji tabeli se bodo prikazali ustrezni podatki.
+- Če ste med konfiguriranjem analize prekrivanja izbrali polja, jih boste našli na ustreznih zavihkih. S pomočjo spustnega seznama filtrov lahko izberete katerokoli pomembno raven zanimanja, pri čemer vam bo tabela na dnu prikazala ustrezne podatke.
 
 ## <a name="segment-differentiators"></a>Diferenciatorji segmentov
 
@@ -77,7 +79,7 @@ Diferenciatorji segmentov vam pomagajo ugotoviti, kako se segment razlikuje od o
 Po končani analizi poiščite podrobnosti o tem vpogledu v razdelku **Segmenti** > **Vpogled (predogled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Podrobnosti vpogleda v diferenciatorje segmentov":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Podrobnosti vpogleda v razlikovalnik segmentov.":::
 
 Izberite vpogled za prikaz rezultatov analize. Analiza diferenciatorjev ima dva zavihka. Na zavihku **Atributi** je seznam atributov profila, ki so obravnavani kot diferenciatorji. Na zavihku **Mere** je seznam diferenciatorjev. Oba zavihka vsebuje naslednje podrobnosti:
 

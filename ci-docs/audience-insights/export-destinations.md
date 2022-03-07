@@ -1,103 +1,144 @@
 ---
-title: Cilji za izvoz
-description: Izvozite podatke in upravljajte cilje za izvoz.
-ms.date: 07/21/2020
-ms.reviewer: philk
-ms.service: customer-insights
+title: Izvoz podatkov iz storitve Customer Insights
+description: Upravljajte izvoze za skupno rabo podatkov.
+ms.date: 11/01/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: overview
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
-ms.translationtype: HT
+searchScope:
+- ci-export
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 33f59c62565560517c480be63e581465605c5f7b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477153"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354345"
 ---
-# <a name="export-destinations-preview-overview"></a>Pregled ciljev za izvoz (predogled)
+# <a name="exports-preview-overview"></a>Pregled izvozov (predogledna različica)
 
-Stran **Cilji za izvoz** prikazuje vsa mesta, ki ste jih nastavili za izvoz podatkov. Dodate lahko tudi nove cilje za izvoz. Poleg tega prikazuje trenutno razpoložljive možnosti za izvoz. Pridobite hiter pregled, opis in informacije o tem, kaj lahko storite z vsako možnostjo razširljivosti. Izvozite poenotene profile, mere in segmente v podprte aplikacije, relevantne za vaše poslovanje.
+Na strani **Izvozi** so prikazani vsi konfigurirani izvozi. Izvozi dajo specifične podatke v skupno rabo z različnimi aplikacijami. Vključujejo lahko profile strank, entitete, sheme in podrobnosti preslikave. Za vsak izvoz je potrebna [povezava, ki jo nastavi skrbnik, za upravljanje preverjanja pristnosti in dostopa](connections.md).
 
-Odprite **Skrbnik** > **Cilji za izvoz**, da poiščete naslednje možnosti razširljivosti:
+Pojdite na **Podatki** > **Izvozi** za ogled strani z izvozi. Konfigurirani izvozi so za ogled na voljo vsem uporabniškim vlogam. S pomočjo iskalnega polja v ukazni vrstici poiščite izvoze glede na njihovo poimenovanje, ime povezave ali vrsto povezave.
 
-- [Dodatek za kartico stranke v Dynamics 365 Customer Insights](customer-card-add-in.md)
-- [Povezovalnik upravitelja oglasov kanala Facebook](export-facebook.md)
-- [Povezovalnik Power Automate](export-power-automate.md)
-- [Povezovalnik Power Apps](export-power-apps.md)
-- [Povezovalnik Power BI](export-power-bi.md)
-- [Autopilot](export-autopilot.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Shramba zbirke dvojiških podatkov Azure](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [SendGrid](export-sendgrid.md)
-- [Povezovalnik LiveRamp &reg;](export-liveramp.md)
-- [Bot za Microsoft Teams](export-teams-bot.md)
-- [MailChimp](export-mailchimp.md)
-- [API za Customer Insights](apis.md)
+## <a name="export-types"></a>Vrste izvoza
 
-## <a name="add-a-new-export-destination"></a>Dodajanje novega cilja za izvoz
+Obstajata dve glavni vrsti izvoza:  
 
-Če želite dodati cilje za izvoz, morate imeti [skrbniška dovoljenja](permissions.md). Če izvažate v Microsoftove storitve, domnevamo, da so vse storitve v isti organizaciji.
+- **Podatkovni izvoz** omogoča izvoz vseh vrst entitet, ki so na voljo v vpogledih v občinstvo. Entitete, ki jih izberete za izvoz, se izvozijo z vsemi podatkovnimi polji, metapodatki, shemami in podrobnostmi preslikave. 
+- **Izvoz segmenta** omogoča izvoz izvoženih segmentov iz vpogledov v občinstvo. Segmenti predstavljajo seznam profilov strank. Pri konfiguriranju izvoza izberete vključena podatkovna polja, odvisno od ciljnega sistema, v katerega izvozite podatke. 
 
-1. Izberite **Skrbnik** > **Cilji za izvoz**.
+### <a name="export-segments"></a>Izvoz segmentov
 
-1. Preklopite na zavihek **Moji cilji za izvoz**.
+**Izvoz segmentov v okolja za poslovne kupce (podjetja podjetjem) ali posamezne potrošnike (prodaja strankam)**  
+Večina možnosti izvoza podpira obe vrsti okolij. Izvoz segmentov v različne ciljne sisteme ima posebne zahteve. Na splošno član segmenta, profil stranke, vsebuje podatke za stik. Čeprav to običajno velja za segmente, ki temeljijo na posameznih potrošnikih (prodaja strankam), to ne velja nujno za segmente, ki temeljijo na poslovnih kupcih (podjetja podjetjem). 
 
-1. Izberite **Dodaj cilj**, da ustvarite nov cilj za izvoz.
+**Izvozi segmenta v okoljih za poslovne kupce (podjetja podjetjem)**  
+- Segmenti v kontekstu okolij za poslovne račune temeljijo na entiteti *računa*. Če želite izvoziti segmente računov takšne, kot so, mora ciljni sistem podpirati čiste segmente računov. To velja za [LinkedIn](export-linkedin-ads.md), ko izberete možnost **podjetje** pri definiranju izvoza.
+- Vsi drugi ciljni sistemi zahtevajo polja iz entitete stika. Če želite zagotoviti, da lahko segmenti računa pridobivajo podatke iz povezanih stikov, mora vaša definicija segmenta projicirati atribute entitete stika. Preberite več o tem, kako [konfigurirati segmente in atribute projekta](segment-builder.md).
 
-1. V podoknu **Dodaj cilj** v spustnem seznamu izberite možnost za **Vrsta** za cilj za izvoz.
+**Izvozi segmenta v okoljih za posamezne potrošnike (prodaja strankam)**  
+- Segmenti v kontekstu okolij za posamezne stranke temeljijo na entiteti *poenotenega profila stranke*. Izvoziti je mogoče vsak segment, ki izpolnjuje zahteve ciljnih sistemov (na primer e-poštni naslov).
 
-1. Zagotovite zahtevane podrobnosti in izberite **Naprej**, da ustvarite cilj za izvoz.
+**Omejitve pri izvozu segmentov**  
+- Ciljni sistemi neodvisnih izdelovalcev lahko omejijo število profilov strank, ki jih lahko izvozite. 
+- Za posamezne stranke boste ob izbiri segmenta za izvoz videli dejansko število članov segmenta. Če je segment prevelik, boste prejeli opozorilo. 
+- Pri poslovnih računih boste videli število računov v segmentu; vendar se število projiciranih stikov ne prikaže. V nekaterih primerih bi to lahko pripeljalo do tega, da izvoženi segment dejansko vsebuje več profilov strank, kot jih ciljni sistem sprejme. Preseganje omejitev rezultatov ciljnih sistemov bo preskočilo izvoz. 
 
-Izberete lahko tudi **Nastavitev** na ploščici na zavihku **Odkrivanje**.
+## <a name="set-up-a-new-export"></a>Nastavitev novega izvoza  
+Če želite nastaviti ali urediti izvoz, morate imeti na voljo povezave. Povezave so odvisne od vaše [uporabniške vloge](permissions.md):
+- **Skrbniki** imajo dostop do vseh povezav. Pri nastavitvi izvoza lahko ustvarijo tudi nove povezave.
+- **Udeleženci** lahko imajo dostop do določenih povezav. Pri konfiguriranju in skupni rabi povezav so odvisni od skrbnikov. Seznam izvozov sodelavcem prikazuje, ali lahko urejajo ali samo ogledujejo izvoz v stolpcu **Vaša dovoljenja**. Za več informacij odprite razdelek [Omogočanje sodelujočim, da uporabljajo povezavo za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Gledalci** si lahko ogledajo samo obstoječe izvoze, ne morejo pa jih ustvariti.
 
-## <a name="view-export-destinations"></a>Pogled ciljev za izvoz
+### <a name="define-a-new-export"></a>Določitev novega izvoza
 
-Po ustvarjanju ciljev za izvoz jih boste našli v tabeli na zavihku **Moji cilji za izvoz**. Ta tabela ima tri stolpce:
+1. Odprite razdelek **Podatki** > **Izvozi**.
 
-- **Prikazno ime**: ime, ki ste ga vnesli pri ustvarjanju cilja.
-- **Vrsta**: vrsta cilja za izvoz, ki ga nastavite, ko ustvarite cilj.
-- **Ustvarjeno**: datum, ko ste ustvarili cilj.
+1. Izberite možnost **Dodaj izvoz**, da ustvarite nov izvoz.
 
-## <a name="edit-an-export-destination"></a>Urejanje cilja za izvoz
+1. V podoknu **Nastavitev izvoza** izberite, katero povezavo uporabiti. [Povezave](connections.md) upravljajo skrbniki. 
 
-1. Izberite navpične tri pike pri cilju za izvoz, ki ga želite urediti.
+1. Navedite zahtevane podrobnosti in izberite **Shrani**, da ustvarite izvoz.
 
-   > [!div class="mx-imgBorder"]
-   > ![Navpične tri pike](media/export-destinations-page-ellipsis.png "Navpične tri pike")
+### <a name="define-a-new-export-based-on-an-existing-export"></a>Določitev novega izvoza na podlagi obstoječega izvoza
 
-1. V spustnem meniju izberite **Uredi**.
+1. Odprite razdelek **Podatki** > **Izvozi**.
 
-1. Spremenite vrednosti, ki potrebujejo posodobitev, in izberite **Shrani**.
+1. Na seznamu izvozov izberite izvoz, ki ga želite podvojiti.
 
-## <a name="export-data-on-demand"></a>Izvoz podatkov na zahtevo
+1. Izberite **Ustvari dvojnik** v ukazni vrstici, da odprete podokno **Nastavi izvoz** s podrobnostmi izbranega izvoza.
 
-Po konfiguraciji povezovalnika za cilj za izvoz se izvozi zaženejo z vsako [načrtovano osvežitvijo](system.md#schedule-tab).
+1. Preglejte in prilagodite izvoz ter izberite **Shrani**, da ustvarite nov izvoz.
 
-Če želite izvoziti podatke brez čakanja na načrtovano osvežitev, odprite zavihek **Moji cilji za izvoz** v možnosti **Skrbnik** > **Cilji za izvoz**.
+### <a name="edit-an-export"></a>Urejanje izvoza
 
-> [!div class="mx-imgBorder"]
-> ![Navpične tri pike](media/export-destinations-page-ellipsis.png "Navpične tri pike")
+1. Odprite razdelek **Podatki** > **Izvozi**.
 
-- Izberite **Izvozi** nad seznamom, da zaženete izvoz v vse cilje za izvoz hkrati.
-- Izberite tri pike (...) za elementom na seznamu in nato izberite možnost **Izvoz**, da zaženete izvoz za en cilj za izvoz.
+1. Na seznamu izvozov izberite izvoz, ki ga želite urediti.
 
-## <a name="remove-an-export-destination"></a>Odstranjevanje cilja za izvoz
+1. V ukazni vrstici izberite **Uredi**.
 
-Če želite odstraniti cilj za izvoz, začnite na glavni strani **Cilji za izvoz**.
+1. Spremenite vrednosti, ki jih želite posodobiti, in izberite **Shrani**.
 
-1. Izberite navpične tri pike pri cilju za izvoz, ki ga želite odstraniti.
+## <a name="view-exports-and-export-details"></a>Ogled izvozov in podrobnosti izvozov
 
-   > [!div class="mx-imgBorder"]
-   > ![Navpične tri pike](media/export-destinations-page-ellipsis.png "Navpične tri pike")
+Po ustvarjanju ciljev za izvoz so ti navedeni na **Podatki** > **Izvozi**. Vsi uporabniki lahko vidijo, kateri podatki so v skupni rabi in njihovo zadnje stanje.
 
-2. Na spustnem seznamu izberite **Odstrani**.
+1. Odprite razdelek **Podatki** > **Izvozi**.
 
-3. Odstranjevanje potrdite tako, da na potrditvenem zaslonu izberete **Odstrani**.
+1. Uporabniki brez dovoljenja za urejanje naj za ogled podrobnosti o izvozu izberejo možnost **Pogled**, ne pa možnosti **Uredi**.
+
+1. V stranskem podoknu je prikazana konfiguracija izvoza. Brez dovoljenj za urejanje ne morete spreminjati vrednosti. Izberite **Zapri**, da se vrnete na stran z izvozi.
+
+## <a name="schedule-and-run-exports"></a>Načrtovanje in zagon izvozov
+
+Vsak izvoz, ki ga konfigurirate, ima urnik osveževanja. Med osveževanjem sistem išče nove ali posodobljene podatke, ki jih bo vključil v izvoz. Izvozi se privzeto izvajajo kot del vsakega [načrtovanega osveževanja sistema](system.md#schedule-tab). Za ročni zagon izvozov lahko prilagodite urnik osveževanja ali ga izklopite.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+Urniki izvoza so odvisni od stanja vašega okolja. Če so posodobitve v teku v [odvisnostih](system.md#refresh-processes), ko bi se moral načrtovani izvoz začeti, bo sistem najprej dokončal posodobitve, šele nato pa začel z izvozom. V stolpcu **Osveženo** lahko vidite, kdaj je bil izvoz nazadnje osvežen.
+
+### <a name="schedule-exports"></a>Načrtovanje izvozov
+
+Določite lahko urnike osveževanja po meri za posamezen izvoz ali več izvozov hkrati. Trenutno določen urnik je naveden v stolpcu **Načrtovanje** na seznamu izvoza. Dovoljenje za spremembo urnika je enako kot za [urejanje in določanje izvozov](export-destinations.md#set-up-a-new-export). 
+
+1. Odprite razdelek **Podatki** > **Izvozi**.
+
+1. Izberite izvoz, ki ga želite načrtovati.
+
+1. V ukazni vrstici izberite **Načrtovanje**.
+
+1. V podoknu **Načrtovanje izvoza** nastavite **Zagon načrtovanja** na **Vklopljeno**, da samodejno zaženete izvoz. Nastavite ga na **Izklopljeno**, da ga ročno osvežite.
+
+1. Za samodejno osvežene izvoze izberite vrednost **Ponovitev** in določite podrobnosti zanjo. Opredeljeni čas velja za vse primerke ponovitev. To je čas, ko bi se izvoz moral začeti osveževati.
+
+1. Svoje spremembe uveljavite in aktivirajte tako, da izberete **Shrani**.
+
+Pri urejanju urnika za več izvozov morate izbrati eno od možnosti v razdelku **Obdržite ali preglasite razporede**:
+- **Obdržite posamezne razporede**: obdržite predhodno določeni urnik za izbrane izvoze in jih le onemogočite ali omogočite.
+- **Določite nov urnik za vse izbrane izvoze**: preglasite obstoječe urnike izbranih izvozov.
+
+### <a name="run-exports-on-demand"></a>Zaženi izvoze na zahtevo
+
+Za izvoz podatkov brez čakanja na načrtovano osvežitev, pojdite na **Podatki** > **Izvozi**.
+
+- Če želite zagnati vse izvoze, izberite **Zaženi vse** v ukazni vrstici. S tem dejanjem se bodo zagnali samo izvozi z aktivnim urnikom.
+- Če želite zagnati en izvoz, ga izberite na seznamu in kliknite **Zaženi** v ukazni vrstici. Tako boste zagnali izvoze brez aktivnega urnika. 
+
+## <a name="remove-an-export"></a>Odstranjevanje izvoza
+
+1. Odprite razdelek **Podatki** > **Izvozi**.
+
+1. Izberite izvoz, ki ga želite odstraniti.
+
+1. V ukazni vrstici izberite **Odstrani**.
+
+1. Odstranjevanje potrdite tako, da na potrditvenem zaslonu izberete **Odstrani**.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

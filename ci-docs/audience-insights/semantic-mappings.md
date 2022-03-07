@@ -2,19 +2,21 @@
 title: Semantične preslikave (predogledna različica)
 description: Pregled semantičnih preslikav in njihova uporaba.
 ms.date: 12/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- customerInsights
+ms.openlocfilehash: 37696f3e82eb9b75fbf9f78363adc890891efcc3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881850"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353977"
 ---
 # <a name="semantic-mappings-preview"></a>Semantične preslikave (predogledna različica)
 
@@ -106,7 +108,7 @@ Po ustvarjanju a *KontaktProfil* semantično preslikavo entitet, lahko zajamete 
 
 1. Poimenujte dejavnost, izberite izvorno entiteto dejavnosti in izberite primarni ključ entitete dejavnosti.
 
-1. V **Odnosi** korak, ustvarite posredno razmerje med vašimi izvornimi podatki o dejavnosti in računi, pri čemer uporabite svoje kontaktne podatke kot posredniško enoto. Za več informacij glejte [neposrednih in posrednih odnosih](relationships.md#relationship-paths).
+1. V **Odnosi** korak, ustvarite posredno razmerje med vašimi izvornimi podatki o dejavnosti in računi, pri čemer uporabite svoje kontaktne podatke kot posredniško enoto. Za več informacij glejte [neposredne in posredne povezave](relationships.md#relationship-paths).
    - Primer razmerja za dejavnost, ki se imenuje *Nakupi*:
       - **Podatki o izvorni dejavnosti nakupov** > **Kontaktni podatki** na atribut **ID stika**
       - **Kontaktni podatki** > **Podatki o računu** na atribut **ID računa**

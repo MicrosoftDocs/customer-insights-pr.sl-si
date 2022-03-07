@@ -56,6 +56,10 @@
           href: audience-insights/connect-common-data-model.md
         - name: Dodajanje upravljanega podatkovnega jezera Dataverse
           href: audience-insights/connect-dataverse-managed-lake.md
+        - name: Dodaj Azure Synapse Analytics
+          href: audience-insights/connect-synapse.md
+        - name: Obogatitev za vire podatkov
+          href: audience-insights/data-sources-enrichment.md
         - name: Postopna osvežitev za vire podatkov
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Uvoz podatkov v realnem času
@@ -98,6 +102,8 @@
           href: audience-insights/enrichment-here.md
         - name: Obogatitev z Leadspace
           href: audience-insights/enrichment-leadspace.md
+        - name: Obogatite z LiveRamp
+          href: audience-insights/enrichment-liveramp.md
         - name: Obogatitev z družbo Experian
           href: audience-insights/enrichment-experian.md
         - name: Obogatite z Office 365 podatkov
@@ -120,8 +126,12 @@
           href: audience-insights/find-similar-customer-segments.md
     - name: Mere
       items:
-        - name: Določanje ukrepov in KPI-jev
+        - name: Pregled ukrepov
           href: audience-insights/measures.md
+        - name: Ustvarite nov ukrep
+          href: audience-insights/measure-builder.md
+        - name: Uporabite predlogo za merjenje
+          href: audience-insights/measure-templates.md
     - name: Predvidevanja
       items:
         - name: Predvidevanje podatkov s pomočjo UI
@@ -252,8 +262,6 @@
               href: audience-insights/diagnostics.md
     - name: Razširljivost
       items:
-        - name: Integracija spletnih podatkov iz vpogledov interakcij
-          href: audience-insights/integrate-engagement-insights.md
         - name: Pregled shem entitet v rešitvi Common Data Model
           href: audience-insights/entity-schemas.md
         - name: Podatki Customer Insights v okolju Dataverse
@@ -282,7 +290,7 @@
           href: consent-management/set-consent-rules.md
     - name: Upravljajte podatke o privolitvi
       items:
-        - name: Omogoči pravila za soglasje v občinstvo vpogledih
+        - name: Omogoči pravila o soglasju v občinstvo vpogledih
           href: audience-insights/activate-consent.md
         - name: Upravljajte privzeta pravila za soglasje v segmentih občinstvo vpogledov
           href: audience-insights/change-default-consent-rules.md
@@ -297,83 +305,7 @@
         - name: Ustvarite napovedi s podatki o soglasju
           href: consent-management/predictions-consent-data.md
 - name: Vpogledi v interakcije (predogledna različica)
-  items:
-    - name: Središče za pomoč
-      href: engagement-insights/index.yml
-    - name: O vpogledih v interakcije
-      href: engagement-insights/overview.md
-    - name: Začni
-      items:
-        - name: Vodnik za hitri začetek
-          href: engagement-insights/get-started.md
-        - name: Ustvarjanje okolja
-          href: engagement-insights/create-new-environment.md
-        - name: Ustvarjanje delovnega prostora
-          href: engagement-insights/create-workspace.md
-        - name: Zajemite dogodke iz spletnih mest in mobilnih aplikacij
-          href: engagement-insights/developer-resources.md
-        - name: Koncepti in terminologija
-          href: engagement-insights/glossary.md
-    - name: Dogodki
-      items:
-        - name: Ustvarjanje in spreminjanje dogodkov
-          href: engagement-insights/refined-events.md
-        - name: Prepoznavanje spletnih dogodkov obiskovalcev s preverjeno pristnostjo s funkcijo iz neznanega v znano
-          href: engagement-insights/unknown-to-known.md
-        - name: Izvozi dogodke
-          href: engagement-insights/export-events.md
-    - name: Poročila
-      items:
-        - name: Ogled poročil
-          href: engagement-insights/view-reports.md
-        - name: Ustvarjanje poročil po meri
-          href: engagement-insights/custom-reports.md
-        - name: Ustvarjanje poenotenih poročil o profilih
-          href: engagement-insights/profile-reports.md
-        - name: Ogled in ustvarjanje razsežnosti
-          href: engagement-insights/dimensions.md
-        - name: Ogled in ustvarjanje metrik
-          href: engagement-insights/metrics.md
-        - name: Ogled in ustvarjanje segmentov
-          href: engagement-insights/segments.md
-    - name: Analitika poti
-      items:
-        - name: Ustvarjanje in upravljanje poročil o lijakih
-          href: engagement-insights/funnel-reports.md
-    - name: Viri za razvijalce
-      items:
-        - name: Pregled virov za razvijalce
-          href: engagement-insights/developer-resources.md
-        - name: Vadnica za spletni komplet za razvoj programske opreme
-          href: engagement-insights/advanced-SDK-implementation.md
-        - name: Vzorec za spletne storitve SDK
-          href: engagement-insights/websdk-sample.md
-        - name: Vadnica za komplet za razvoj programske opreme za Android
-          href: engagement-insights/get-started-android.md
-        - name: Vzorec kompleta za razvoj programske opreme za Android
-          href: engagement-insights/androidsdk-sample.md
-        - name: Vadnica za komplet za razvoj programske opreme za iOS
-          href: engagement-insights/get-started-ios.md
-        - name: Vzorec kompleta za razvoj programske opreme za iOS
-          href: engagement-insights/iossdk-sample.md
-    - name: Skrbništvo
-      items:
-        - name: Vloge in dovoljenja
-          href: engagement-insights/user-roles.md
-        - name: Upravljanje okolij in delovnih prostorov
-          href: engagement-insights/manage-environments-workspaces.md
-        - name: Upravljanje piškotkov in soglasje uporabnikov
-          href: engagement-insights/user-consent-storage.md
-    - name: Področna dostopnost
-      href: engagement-insights/regional-availability.md
-- name: Skupna raba podatkov med možnostmi
-  items:
-    - name: Povezovanje vpogledov občinstva in vpogledov v interakcije
-      href: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - name: Uporaba segmentov vpogledov občinstva v poročilih o vpogledih v interakcije
-      href: engagement-insights/integrate-audience-insights-segments.md
-    - name: Uporaba demografskih dimenzij za razdelitev vedenjskih podatkov
-      href: engagement-insights/curate-dimensions.md
+  href: engagement-insights/overview.md
 - name: Omejitve storitev
   href: service-limits.md
 - name: Pravice in zahteve DSR

@@ -1,20 +1,19 @@
 ---
 title: Podatke iz storitve Customer Insights izvozite v Sendinblue
 description: Naučite se, kako konfigurirati povezavo in podatke izvoziti v Sendinblue.
-ms.date: 06/29/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: be52554763b57e1c1ef2f960d52bbae79ac9827913c97ac73b429f66bbf4db37
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 8d870ff31ce2d441e619ac18899c4d1b6c69ca41
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036075"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231439"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Izvoz segmentov v Sendinblue (predogledna različica)
 
@@ -29,10 +28,10 @@ Za ustvarjanje akcij, zagotovitev e-poštnega trženja in uporabo določenih sku
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Največ milijon profilov na vsak izvoz v Sendinblue.
+- Do 1 milijon profilov strank na izvoz v storitev Sendinblue.
 - Pri izvažanju v Sendinblue ste omejeni na segmente.
-- Izvoz segmentov z milijonom profilov lahko traja do 90 minut. 
-- Število profilov, ki jih lahko izvozite v Sendinblue, je omejeno s pogodbo, ki ste jo sklenili s podjetjem Sendinblue, od katere je število profilov odvisno.
+- Izvoz segmentov s skupno 1 milijonom profilov strank lahko traja do 90 minut. 
+- Število profilov strank, ki jih lahko izvozite v storitev Sendinblue, je odvisno in omejeno glede na vašo pogodbo s storitvijo Sendinblue.
 
 ## <a name="set-up-connection-to-sendinblue"></a>Vzpostavite povezavo s storitvijo Sendinblue
 
@@ -64,7 +63,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Vnesite svoj ID seznam za **Sendinblue** 
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. 
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. 
 
 1. Za bolj prilagojena e-poštna sporočila vam je na voljo možnost izvoza **imena**, **priimka** in **vsebine telefona**. Izberite **Dodaj atribut** za preslikavo teh polj.
 

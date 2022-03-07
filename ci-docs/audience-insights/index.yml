@@ -4,18 +4,17 @@ summary: Zaužijte, poenotite in organizirajte podatke o strankah iz več virov.
 metadata:
   title: Dokumentacija vpogledov v občinstvo
   description: Središče za pomoč s ključnimi povezavami za vpoglede v občinstvo.
-  ms.service: customer-insights
   ms.subservice: audience-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 10/16/2020
-  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
-  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
-  ms.translationtype: HT
+  ms.date: 03/02/2022
+  ms.openlocfilehash: 44fac5d82313c491cf838404d9641e2d14261366
+  ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+  ms.translationtype: MT
   ms.contentlocale: sl-SI
-  ms.lasthandoff: 12/17/2020
-  ms.locfileid: "4745741"
+  ms.lasthandoff: 02/16/2022
+  ms.locfileid: "8231857"
 landingContent:
 - title: O vpogledih v občinstvo
   linkLists:
@@ -25,8 +24,12 @@ landingContent:
       url: overview.md
     - text: Nove in posodobljene funkcije
       url: whats-new-audience-insights.md
-    - text: Spletno mesto skupnosti
-      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Odkrijte vpoglede občinstva
+      url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
+  - linkListType: learn
+    links:
+    - text: Učna pot Customer Insights
+      url: /learn/paths/build-customer-insights/
 - title: Poenotenje podatkov
   linkLists:
   - linkListType: how-to-guide
@@ -37,7 +40,11 @@ landingContent:
       url: data-unification.md
     - text: Razumevanje entitet
       url: entities.md
-- title: Obogatitev in natančnejša določitev podatkov
+  - linkListType: learn
+    links:
+    - text: Ustvarite enoten profil
+      url: /learn/modules/unified-customer-profile/
+- title: Pridobi vpoglede
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -45,9 +52,13 @@ landingContent:
       url: enrichment-hub.md
     - text: Konfiguriranje odnosov
       url: relationships.md
-    - text: Seznam dejavnosti strank
-      url: activities.md
-- title: Pridobi vpoglede
+    - text: Izpolni podatke s predvidevanji
+      url: predictions.md
+  - linkListType: learn
+    links:
+    - text: Obogatite in napovedujte podatke
+      url: /learn/modules/enrich-data/
+- title: Gradite na svojih podatkih
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -55,8 +66,12 @@ landingContent:
       url: segments.md
     - text: Ustvari ukrepe
       url: measures.md
-    - text: Izpolni podatke s predvidevanji
-      url: predictions.md
+    - text: Seznam dejavnosti strank
+      url: activities.md
+  - linkListType: learn
+    links:
+    - text: Delo z aplikacijo
+      url: /learn/modules/working-with-customer-insights/
 - title: Izvoz podatkov o stranki
   linkLists:
   - linkListType: how-to-guide
@@ -67,6 +82,10 @@ landingContent:
       url: customer-card-add-in.md
     - text: Povezovalnik Power BI
       url: export-power-bi.md
+  - linkListType: learn
+    links:
+    - text: Upravljajte zunanje povezave
+      url: /learn/modules/configure-third-party-connections/
 - title: Upravljanje aplikacije
   linkLists:
   - linkListType: how-to-guide
@@ -77,3 +96,7 @@ landingContent:
       url: permissions.md
     - text: Upravljanje več okolij
       url: manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Skrbništvo rešitve Customer Insights
+      url: /learn/modules/administer-customer-data-platform/

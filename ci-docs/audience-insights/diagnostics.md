@@ -3,22 +3,24 @@ title: revizija Dynamics 365 Customer Insights z Azure Monitor
 description: Naučite se pošiljati dnevnike na Microsoft Azure Monitor.
 ms.date: 12/14/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: article
 author: brndkfr
 ms.author: bkief
 manager: shellyha
-ms.openlocfilehash: d962c359d70a068fcf939b61e340f86de088b419
-ms.sourcegitcommit: 0c3c473e0220de9ee3c1f1ee1825de0b3b3663c3
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/14/2021
-ms.locfileid: "7920878"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354428"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Posredovanje dnevnika Dynamics 365 Customer Insights z Azure Monitor (predogled)
 
-Dynamics 365 Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ali jih pretakajte na [Azure Središča za dogodke](https://azure.microsoft.com/services/event-hubs/).
+Dynamics 365 Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ali jih pretočno predvajajte [Azure Središča za dogodke](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights pošilja naslednje dnevnike dogodkov:
 
@@ -85,7 +87,7 @@ Dnevniška shema sledi [Skupna shema Azure Monitor](/azure/azure-monitor/platfor
 Customer Insights ponuja dve kategoriji:
 
 - **Revizijski dogodki** :[API dogodki](#api-event-schema) za sledenje spremembam konfiguracije storitve. `POST|PUT|DELETE|PATCH` operacije spadajo v to kategorijo.
-- **Operativni dogodki** :[API dogodki](#api-event-schema) oz [dogodki poteka dela](#workflow-event-schema) ki nastane med uporabo storitve.  Na primer`GET` zahteve ali izvedbene dogodke delovnega toka.
+- **Operativni dogodki** :[API dogodki](#api-event-schema) oz [dogodki poteka dela](#workflow-event-schema) ustvarjeno med uporabo storitve.  Na primer`GET` zahteve ali izvedbene dogodke delovnega toka.
 
 ## <a name="configuration-on-the-destination-resource"></a>Konfiguracija ciljnega vira
 
@@ -167,7 +169,7 @@ The`identity` Objekt JSON ima naslednjo strukturo
 
 | Polje                        | Description                                                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `properties.eventType`       | Nenehno`ApiEvent`, kar označi dogodek dnevnika kot dogodek API.                                                                 |
+| `properties.eventType`       | Nenehno`ApiEvent`, ki dogodek v dnevniku označi kot dogodek API.                                                                 |
 | `properties.userAgent`       | Agent brskalnika, ki pošlje zahtevo oz `unknown`.                                                                        |
 | `properties.method`          | Metoda HTTP:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
 | `properties.path`            | Relativna pot zahteve.                                                                                          |
@@ -227,7 +229,7 @@ Dogodki poteka dela imajo naslednje lastnosti.
 | Polje              | Workflow | opravilo, | Description            |
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Da      | Da  | Nenehno`WorkflowEvent`, ki dogodek označi kot dogodek poteka dela.                                                                                                                                                                                                |
-| `properties.workflowJobId`                   | Da      | Da  | Identifikator poteka delovnega toka. Vsi dogodki poteka dela in opravil v okviru izvajanja poteka dela imajo enake `workflowJobId`.                                                                                                                                   |
+| `properties.workflowJobId`                   | Da      | Da  | Identifikator poteka poteka dela. Vsi dogodki poteka dela in opravil v okviru izvajanja poteka dela imajo enake `workflowJobId`.                                                                                                                                   |
 | `properties.operationType`                   | Da      | Da  | Identifikator operacije, glejte [Vrste operacij].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Da      | No   | Samo potek dela. Število opravil, ki jih sproži potek dela.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Da      | No   | Izbirno. Samo dogodki poteka dela. The Azure Active Directory [objectId uporabnika](/azure/marketplace/find-tenant-object-id#find-user-object-id) kdo je sprožil potek dela, glejte tudi `properties.workflowSubmissionKind`.                                   |
@@ -238,7 +240,7 @@ Dogodki poteka dela imajo naslednje lastnosti.
 | `properties.endTimestamp`                    | Da      | Da  | Časovni žig UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Da      | Da  | Časovni žig UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.instanceId`                      | Da      | Da  | Vpogled v stranke`instanceId`                                                                                                                                                                                                                              |  |
-| `properties.identifier`                      | No       | Da  | - Za OperationType =`Export`, je identifikator vodilo konfiguracije izvoza. <br> - Za OperationType =`Enrichment`, je vodilo za obogatitev <br> - Za OperationType`Measures` in`Segmentation`, identifikator je ime entitete. |
+| `properties.identifier`                      | No       | Da  | - Za OperationType =`Export`, je identifikator vodilo konfiguracije izvoza. <br> - Za OperationType =`Enrichment`, je vodilo pri obogatitvi <br> - Za OperationType`Measures` in`Segmentation`, identifikator je ime entitete. |
 | `properties.friendlyName`                    | No       | Da  | Uporabniku prijazno ime izvoza ali subjekta, ki se obdeluje.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Da  | Izbirno. Sporočilo o napaki z več podrobnostmi.                                                                                                                                                                                                                  |
 | `properties.additionalInfo.Kind`             | No       | Da  | Izbirno. Za OperationType`Export` samo. Označuje vrsto izvoza. Za več informacij glejte [pregled izvoznih destinacij](export-destinations.md).                                                                                          |

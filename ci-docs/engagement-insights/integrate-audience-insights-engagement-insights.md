@@ -2,18 +2,17 @@
 title: Ustvarjanje povezave med vpogledi občinstva in vpogledi v interakcije
 description: Ustvarjanje aktivne povezave med vpogledi občinstva in vpogledi v interakcije za omogočanje dvosmerne izmenjave podatkov.
 ms.date: 09/08/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
-ms.translationtype: HT
+ms.openlocfilehash: 56adc206d83bc6e34a55f11383393b5ac66da531
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487127"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229892"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Ustvarjanje povezave med vpogledi občinstva in vpogledi v interakcije
 
@@ -25,8 +24,8 @@ Uporabite poenotene profile in segmente iz vpogledov občinstva za več možnost
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Profili vpogledov občinstva morajo biti shranjeni v računu Azure Data Lake Storage, ki ga imate, ali v jezeru podatkov, s katerim upravlja storitev [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-- Vaše okolje vpogledov v občinstvo mora imeti povezano okolje storitve Dataverse. Če to okolje prav tako uporablja storitev Dataverse za shranjevanje podatkov, preverite, da ste izbrali možnost **Omogočite skupno rabo podatkov** v vpogledih v občinstvo. Za več informacij glejte [Ustvarjanje in konfiguriranje plačljivega okolja v vpogledih v občinstvo](../audience-insights/get-started-paid.md).
+- Občinstvo profili vpogledov morajo biti shranjeni v Azure Data Lake Storage račun, ki ga imate, ali v a [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash; upravljano podatkovno jezero. 
+- Vaše okolje vpogledov v občinstvo mora imeti povezano okolje storitve Dataverse. Če to okolje prav tako uporablja storitev Dataverse za shranjevanje podatkov, preverite, da ste izbrali možnost **Omogočite skupno rabo podatkov** v vpogledih v občinstvo. Za več informacij glejte razdelek [Ustvarjanje in konfiguriranje okolja v vpogledih v občinstvo](../audience-insights/create-environment.md).
 - Potrebujete skrbniška dovoljenja za okolja vpogledov v interakcije in vpogledov občinstva.
 - Povezana okolja morajo biti v isti geografski regiji.
 
@@ -54,6 +53,9 @@ Povezavo okolja lahko ustvarite tako, da posodobite nastavitve v razdelku **Skrb
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Omogočite atribute in segmente poenotenih profilov vpogledov občinstva
 
 Ko povežete okolja, lahko izberete izbirne funkcije za povezana okolja. Te funkcije omogočajo poenotene atribute profila in segmente iz vpogledov občinstva za interaktivno analizo podatkov o strankah.
+
+> [!IMPORTANT]
+> Če želite, da se segmenti vpogledov občinstva prikažejo v vpogledih v interakcije, morate najprej [zagnati združevanje in postopke iz strežnika](../audience-insights/merge-entities.md). Postopki iz strežnika so pomembni, ker ustvarjajo edinstveno tabelo, ki pripravlja segmente vpogledov občinstva za skupno rabo z vpogledi v interakcije. (Če je načrtovana osvežitev sistema, se bodo samodejno vključili postopki iz strežnika.)
 
 **Za analizo spletnih podatkov v vpogledih v interakcije**
 

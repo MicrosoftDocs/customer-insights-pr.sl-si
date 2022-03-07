@@ -3,18 +3,17 @@ title: Sheme entitet Customer Insights v rešitvi Common Data Model
 description: Delo z entitetami v rešitvi Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2cdbe11a1c0cc5d65434fb2ae3a3f38c18f31cf4
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
-ms.translationtype: HT
+ms.openlocfilehash: f0af2a6d8a90ff01ea9d4eeb29f34113261fd0d4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046537"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231077"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Sheme entitet v rešitvi Common Data Model
 

@@ -1,22 +1,21 @@
 ---
 title: Predvidevanje priporočil izdelkov
 description: Predvidite, katere izdelke bo stranka verjetno kupila ali imela z njimi interakcije.
-ms.date: 03/17/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
-ms.translationtype: HT
+ms.openlocfilehash: b9a9c7eb4ee3f2f0510a609757a36e5d5796a2f7
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6556144"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355771"
 ---
-# <a name="product-recommendation-prediction-preview"></a>Predvidevanje priporočil izdelkov (predogled)
+# <a name="product-recommendation-prediction"></a>Predvidevanje priporočil izdelkov
 
 Model priporočil izdelkov ustvarja sklope predvidenih priporočil izdelkov. Priporočila temeljijo na predhodnem nakupovalnem vedenju in strankah s podobnimi vzorci nakupovanja. Na strani **Obveščanje** > **Predvidevanje** lahko ustvarite nova predvidevanja priporočil izdelkov. Izberite **Moja predvidevanja**, da si ogledate druga predvidevanja, ki ste jih ustvarili.
 
@@ -54,7 +53,7 @@ Poleg tega bodo v izhodnih podatkih tega modela podana priporočila na podlagi I
 
 > [!NOTE]
 > - Model potrebuje zgodovino transakcij vaših strank. Definicija transakcije je precej prilagodljiva. Vsi podatki, ki opisujejo interakcijo med uporabnikom in izdelkom, lahko delujejo kot vhodni podatki. Na primer nakup izdelka, udeležba na tečaju ali obisk dogodka.
-> - Trenutno je mogoče konfigurirati samo eno entiteto zgodovine transakcij. Če je več entitet nakupov, jih pred uvozom podatkov združite v storitvi Power Query.
+> - Trenutno je mogoče konfigurirati samo eno entiteto zgodovine transakcij. Če obstaja več nabavnih subjektov, jih združite Power Query pred zaužitjem podatkov.
 > - Če sta entiteti naročila in podrobnosti naročila različni, ju pred uporabo v modelu združite. Model ne deluje, če ima v entiteti samo ID naročila ali ID prejema.
 
 
@@ -62,7 +61,7 @@ Poleg tega bodo v izhodnih podatkih tega modela podana priporočila na podlagi I
 
 1. V rešitvi Customer Insights pojdite na **Obveščanje** > **Predvidevanja**.
 
-1. Izberite ploščico **Model priporočil izdelkov (predogled)** in izberite možnost **Uporabi ta model**.
+1. Izberite **Model priporočil za izdelke** ploščico in izberite **Uporabite ta model**.
    > [!div class="mx-imgBorder"]
    > ![Ploščica modela priporočil izdelkov z gumbom Uporabi ta model.](media/product-recommendation-usethismodel.PNG "Ploščica modela priporočil izdelkov z gumbom Uporabi ta model")
 
@@ -79,33 +78,34 @@ Poleg tega bodo v izhodnih podatkih tega modela podana priporočila na podlagi I
 1. Nastavite **število izdelkov**, ki jih želite priporočiti stranki. Ta vrednost je odvisna od tega, kako način dostavljanja izpolnjuje podatke. Če lahko priporočite tri izdelke, ustrezno nastavite to vrednost.
    
    >[!TIP]
-   > Kadar koli lahko izberete možnost **Shrani in zapri**, da shranite predvidevanje kot osnutek. Osnutek predvidevanja najdete na zavihku **Moja predvidevanja**.
+   > Lahko izberete **Shrani osnutek** kadar koli shranite predvidevanje kot osnutek. Osnutek predvidevanja najdete na zavihku **Moja predvidevanja**.
 
-1. Izberite, ali želite **predlagati izdelke, ki so jih stranke nedavno kupile**.
+1. Izberite, ali želite izdelke, ki so jih stranke nedavno kupile, vključiti v **Pričakovani ponovni nakupi** polje.
 
-1. Če se izbrali, da *ne* boste priporočali nedavno kupljenih izdelkov, nastavite **Okno za pogled nazaj**. Ta nastavitev določa časovni okvir, ki ga model upošteva, preden izdelek ponovno priporoči uporabniku. Napišite na primer, da stranka kupi prenosnik vsaki dve leti. To okno si bo ogledalo zgodovino nakupov v zadnjih dveh letih in če bo našlo ustrezen izdelek, ga bo filtriralo iz priporočil.
+1. Nastavite **Poglej nazaj okno**. Ta nastavitev določa časovni okvir, ki ga model upošteva, preden izdelek ponovno priporoči uporabniku. Napišite na primer, da stranka kupi prenosnik vsaki dve leti. To okno si bo ogledalo zgodovino nakupov v zadnjih dveh letih in če bo našlo ustrezen izdelek, ga bo filtriralo iz priporočil.
 
 1. Izberite **Naprej**
 
 ### <a name="add-required-data"></a>Dodajanje zahtevanih podatkov
 
-1. Izberite možnost **Dodaj podatke** za **zgodovino transakcij stranke** in izberite entiteto, ki zagotavlja podatke o zgodovini transakcij/nakupov, kot je opisano v [zahtevah](#prerequisites).
+1. Izberite **Dodaj podatke** in izberite vrsto dejavnosti v stranskem podoknu, ki vsebuje zahtevane podatke o transakcijah ali zgodovini nakupov.
 
-1. Preslikajte semantična polja v atribute v entiteti vaše zgodovine nakupov in izberite **Naprej**. Za opise polj si oglejte [pogoje](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Določite odnos entitete.](media/product-recommendation-purchasehistorymapping.PNG "Stran z zgodovino nakupov, ki prikazuje semantične atribute, ki so preslikani v polja v izbrani entiteti zgodovine nakupov")
+1. V razdelku **Izbor dejavnosti** izberite določene dejavnosti iz izbrane dejavnosti, na katere želite, da se osredotoči izračun.
 
-1. Če polja niso izpolnjena, konfigurirajte odnos med entiteto zgodovine nakupov in entiteto *stranke*.
-    1. Izberite **Entiteta zgodovine nakupov**.
-    1. Izberite **Polje**, ki prepozna kupca v entiteti zgodovine nakupov. Povezovati se mora s primarnim ID-jem stranke vaše entitete *stranke*.
-    1. Izberite **Entiteto stranke**, ki se ujema z vašo primarno entiteto stranke.
-    1. Vnesite ime, ki opisuje odnos.
-       > [!div class="mx-imgBorder"]
-       > ![Stran z zgodovino nakupov, ki prikazuje vzpostavitev odnosa s stranko.](media/model-purchase-join.png "Stran z zgodovino nakupov, ki prikazuje vzpostavitev odnosa s stranko")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Stransko podokno prikazuje izbiro določenih dejavnosti pod semantično vrsto.":::
+
+1. Če dejavnosti še niste preslikali v semantično vrsto, izberite **Uredi**, da to storite. Odpre se vodena izkušnja za preslikavo semantičnih dejavnosti. Podatke preslikajte v ustrezna polja izbrane vrste dejavnosti.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Vrsta dejavnosti nastavitve strani.":::
+
+1. Ko preslikate dejavnost na ustrezno semantično vrsto, izberite **Naprej**, da nadaljujete 
+ 
+1. Preslikajte semantične atribute v polja, ki so potrebna za zagon modela.
 
 1. Izberite **Shrani**.
 
 1. Izberite **Naprej**.
+
 
 ### <a name="configure-product-filters"></a>Konfiguracija filtrov izdelkov
 
@@ -145,7 +145,7 @@ Včasih so samo nekateri izdelki koristni ali primerni za vrsto predvidevanja, k
 
 1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
    > [!div class="mx-imgBorder"]
-   > ![Pogled strani Moja predvidevanja.](media/product-recommendation-mypredictions.PNG "Pogled strani »Moja predvidevanja«")
+   > ![Pogled strani »Moja predvidevanja«.](media/product-recommendation-mypredictions.PNG "Pogled strani »Moja predvidevanja«")
 
 1. Izberite predvidevanje, ki ga želite pregledati.
    - **Ime predvidevanja:** ime predvidevanja, navedeno pri ustvarjanju.

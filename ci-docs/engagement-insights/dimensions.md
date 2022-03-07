@@ -4,17 +4,16 @@ description: Kako ustvariti, urediti in izbrisati razsežnosti.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: d35c72f73d2f3e202ae3c5a5ef26e9db89360084
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034017"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226327"
 ---
 # <a name="view-and-create-dimensions"></a>Ogled in ustvarjanje razsežnosti
 
@@ -22,7 +21,7 @@ ms.locfileid: "7034017"
 
 Razsežnost je atribut dogodka, ki lahko opiše, filtrira ali združuje podatke. Če na svojem spletnem mestu izvajate marketinško promocijo, lahko z razsežnostmi razvrstite obiskovalce po novih uporabnikih in povratnikih.  
 
-Vpogledi v interakcijo vključujejo vnaprej pripravljene razsežnosti za lastnosti dogodka. Primeri vključujejo:
+Vpogledi v interakcije vključujejo vnaprej pripravljene (OOB) dimenzij za lastnosti dogodka. Primeri vključujejo:
 
 - Ime brskalnika
 - Ime strani
@@ -44,17 +43,21 @@ Razsežnosti temeljijo na obstoječih lastnostih dogodkov. Ko za vpogled v inter
 Poleg sistemsko ustvarjenih razsežnosti lahko skrbniki okolja in delovnega prostora ustvarjajo tudi razsežnosti po meri. Razsežnosti po meri temeljijo na privzetih lastnostih osnovnih dogodkov ali pa lahko uporabljajo [lastnosti dogodka po meri](advanced-SDK-implementation.md).
 
 1. Odprite **Podatki** > **Razsežnosti**.
-1. Izberite **Dodaj razsežnost**.
+1. Izberite **Nova dimenzija**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Dodajte dimenzijo dogodku.":::
 
 1. V podoknu **Ustvarjanje razsežnosti** izberite lastnost, na kateri bo temeljila razsežnost. Na seznamu lastnosti bodo prikazane vse lastnosti v delovnem prostoru, ki niso dodeljene razsežnosti.
-1. Vnesite ime v polje **Ime prikaza**. Po želji lahko dodate tudi opis.
-1. Izberite možnost **Ustvari**, da shranite razsežnost. Preden lahko uporabite razsežnost v [poročilu po meri](custom-reports.md) ali [segmentu](segments.md), lahko traja do eno minuto. 
+   
+   :::image type="content" source="media/create-new-dimension.png" alt-text="Ustvarite novo dimenzijo.":::
+      
+3. Vnesite ime v polje **Ime prikaza**. Po želji lahko dodate tudi **opis**.
+4. Izberite možnost **Ustvari**, da shranite razsežnost. Preden lahko uporabite razsežnost v [poročilu po meri](custom-reports.md) ali [segmentu](segments.md), lahko traja do eno minuto. 
 
 ## <a name="edit-a-dimension"></a>Urejanje razsežnosti
 
-Ime in opis razsežnosti lahko spremenite.
+Ime in opis razsežnosti lahko spremenite. Urejate lahko samo dimenzije, ki jih ustvarijo uporabniki, ne morete pa urejati dimenzij sistema.
+
 
 1. Odprite **Podatki** > **Razsežnosti**.
 1. Izberite razsežnost, ki jo želite izbrisati.

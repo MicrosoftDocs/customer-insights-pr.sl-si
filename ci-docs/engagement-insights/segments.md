@@ -4,17 +4,16 @@ description: Kako ustvariti, urediti in izbrisati segmente in kje jih uporabiti.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e99c04e6c92d8ca16c2d69957e0f5b7dba0ac757
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036168"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225396"
 ---
 # <a name="view-and-create-segments"></a>Ogled in ustvarjanje segmentov
 
@@ -44,22 +43,27 @@ Ta razdelek opisuje, kako ustvariti *prazen segment* od začetka.
 
 1. Izberite **Nov segment**.
 
-1. V razdelku **Knjižnica virov** izberite atribut, po katerem želite filtrirati. Trenutno lahko ustvarite le segmente na podlagi razsežnosti.
+1. V razdelku **Knjižnica virov** izberite (+) poleg atributa, po katerem želite filtrirati. Trenutno lahko ustvarite le segmente na podlagi razsežnosti.
 
-1. Izberite operator in vrednost za izbrani atribut. Podprte so naslednje operacije.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Ustvarjanje novega segmenta.":::
+
+1. V razdelku **Pravilo** izberite operatorja in vrednost za izbrani atribut. Podprte so naslednje operacije.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Izberite operatorja za svoj novi segment.":::
+
    - **je**: zahteva natančno ujemanje za vključitev vrednosti. Uporablja **je enako** za eno vrednost oz. **kateri koli od** za vključitev več vrednosti.
    - **ni**: zahteva natančno ujemanje za izključitev vrednosti. Uporablja **je enako** za eno vrednost oz. **kateri koli od** za vključitev več vrednosti.
    - **se začne z**: niz, s katerim se začnejo ujemajoče se vrednosti.
    - **se konča z**: niz, s katerim se končajo ujemajoče se vrednosti.
    - **vsebuje**: niz, vključen v ujemajoče se vrednosti.
 
-1. Če želite v skupino dodati več pogojev, lahko uporabite dva logična operaterja. Predvideni atributi se upoštevajo pri uporabi operatorjev nabora.
+1. Če želite skupini dodati več pogojev, lahko uporabite logične operatorje. Predvideni atributi se upoštevajo pri uporabi operatorjev nabora.
    - Operator **IN**: oba pogoja morata biti izpolnjena kot del postopka segmentacije. Ta možnost je najbolj uporabna, če določite pogoje v različnih entitetah.
    - Operator **ALI**: izpolnjen mora biti kateri koli od pogojev kot del postopka segmentacije. Ta možnost je najbolj uporabna, če določite več pogojev za isto entiteto.
 
 1. Izberite **Shrani** in poimenujte segment. 
 
-Segment bo naveden na strani Segmenti in ga lahko uporabite za vsa poročila in lijake v delovnem prostoru.
+Segment bo naveden na strani **Segmenti** in ga lahko uporabite za vsa poročila in lijake v delovnem prostoru.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Uporaba segmenta v poročilu ali lijaku
 
@@ -67,7 +71,7 @@ Segmente lahko uporabite za poročilo ali lijak, da jih filtrirate glede na pogo
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Poročilo o ogledih strani z razširjenim spustnim seznamom, v katerem lahko izberete segmente, ki jih želite uporabiti.":::
 
-Če želite uporabiti segment, odprite poročilo ali lijak. Izberite **Dodaj pogoj** in **Filtriraj po segmentih**. Na seznamu izberite segment, ki ga želite uporabiti. Segment bo uporabljen v poročilu. Če grafikon ne podpira segmenta, se prikaže napaka.
+Če želite uporabiti segment, odprite poročilo ali lijak. Izberite **+ Dodaj pogoj** in **Filtriraj po segmentih**. Na seznamu izberite segment, ki ga želite uporabiti. Segment bo uporabljen v poročilu. Če grafikon ne podpira segmenta, se prikaže napaka. Za več informacij glejte [Ustvarjanje in upravljanje poročil o lijakih](funnel-reports.md).
  
 V poročilu ali lijaku lahko uporabite *do tri segmente*.
 
@@ -91,5 +95,7 @@ V poročilu ali lijaku lahko uporabite *do tri segmente*.
 1. Na seznamu segmentov izberite **Več [...]**. 
 1. Na spustnem seznamu izberite možnost **Izbriši**.
 1. Izberite **Izbriši**, da potrdite izbiro.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,22 +1,24 @@
 ---
-title: Postopno osveževanje za vire podatkov, ki temeljijo na storitvi Power Query
-description: Osvežite nove in posodobljene podatke za velike vire podatkov, ki temeljijo na orodju Power Query.
+title: Postopno osveževanje za Power Query - viri podatkov
+description: Osvežite nove in posodobljene podatke za velike vire podatkov, ki temeljijo na Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900305"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353725"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Postopno osveževanje za vire podatkov, ki temeljijo na orodju Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Postopno osveževanje za vire podatkov na podlagi Power Query
 
 Ta članek obravnava, kako konfigurirati postopno osveževanje za vire podatkov na podlagi Power Query.
 
@@ -28,9 +30,9 @@ Postopno osveževanje za vire podatkov zagotavlja naslednje prednosti:
 
 ## <a name="configure-incremental-refresh"></a>Konfiguriranje postopnega osveževanja
 
-Vpogledi v občinstvo omogočajo postopno osveževanje za vire podatkov, uvožene prek storitve Power Query, ki podpirajo postopen uvoz. Na primer, zbirke podatkov Azure SQL s polji datuma in časa, ki označujejo, kdaj so bili podatkovni zapisi nazadnje posodobljeni.
+Občinstvo Insights omogoča postopno osveževanje za vire podatkov, uvožene prek Power Query ki podpirajo postopno zaužitje. Na primer, zbirke podatkov Azure SQL s polji datuma in časa, ki označujejo, kdaj so bili podatkovni zapisi nazadnje posodobljeni.
 
-1. [Ustvarjanje novega vira podatkov, ki temelji na orodju Power Query](connect-power-query.md).
+1. [Ustvarite nov vir podatkov na podlagi Power Query](connect-power-query.md).
 
 1. Zagotovite a **ime** za vir podatkov.
 

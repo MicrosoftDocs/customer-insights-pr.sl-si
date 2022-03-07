@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648137"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225467"
 ---
 # <a name="create-a-new-environment"></a>Ustvarite novo okolje 
 
@@ -40,13 +39,13 @@ Okolje je prostor, kjer upravljate s svojimi delovnimi prostori in povezavami. K
 
 1. Izberite **Regija** in izberite **Naprej**. 
 
-1. Vnesite **ime delovnega prostora**, ki vam omogoča zbiranje podatkov za določeno spletno mesto ali aplikacije. Za več informacij glejte razdelek [Ustvarjanje delovnega prostora](create-workspace.md).
+1. Vnesite a **Ime delovnega prostora**, ki vam omogoča zbiranje podatkov za določena spletna mesta ali aplikacije. Za več informacij glejte razdelek [Ustvarjanje delovnega prostora](create-workspace.md).
 
-1. Izberite **vrsto delovnega prostora** (spletno ali mobilno), ki ga želite ustvariti. 
+1. Izberite **Vrsta delovnega prostora** (splet ali mobilni), ki ga želite ustvariti. 
 
 1. Izberite možnost **Prikaz naprednih nastavitev**, če želite omogočiti ali onemogočiti te izbirne nastavitve:
 
-   - Preklopite možnost **Iz neznanega v znano** na »omogočeno«, da povežete spletne dogodke z uporabniki, ki že imajo preverjeno pristnost. Za več informacij odprite razdelek [Prepoznavanje spletnih dogodkov za obiskovalce, ki že imajo preverjeno pristnost](unknown-to-known.md)
+   - Preklopite možnost **Iz neznanega v znano** na »omogočeno«, da povežete spletne dogodke z uporabniki, ki že imajo preverjeno pristnost. Za več informacij glejte [Prepoznajte spletne dogodke od predhodno overjenih obiskovalcev](unknown-to-known.md).
    - Preklopite možnost **Filtriranje prometa botov** na »omogočeno«, da odstranite spletni promet botov za ta delovni prostor. 
 
 1. Ko končate, izberite možnost **Dokončaj**. 

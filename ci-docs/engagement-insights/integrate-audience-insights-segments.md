@@ -2,18 +2,17 @@
 title: Uporaba segmentov vpogledov občinstva za filtriranje poročil o vpogledih v interakcije
 description: Segmente vpogledov občinstva uporabite v interaktivnih analizah vedenjskih podatkov, zajetih z vpogledom v interakcije na spletnem mestu stranke.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bdd5641bb17384725491f22f70ae967ad90b1696
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 9c8c7a1a9216e04ebee100c548afbc745af396ec
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461078"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230506"
 ---
 # <a name="use-audience-insights-segments-to-filter-engagement-insights-reports"></a>Uporaba segmentov vpogledov občinstva za filtriranje poročil o vpogledih v interakcije
 

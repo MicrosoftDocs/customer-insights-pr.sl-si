@@ -2,19 +2,23 @@
 title: Začetek uporabe poslovnih kupcev kot primarno ciljno občinstvo
 description: Preberite, kako uporabljati poslovne kupce kot primarno ciljno občinstvo Dynamics 365 Customer Insights.
 ms.date: 10/19/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
+ms.custom: intro-internal
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- ci-connections
+- customerInsights
+ms.openlocfilehash: 88882dc727c37262c9f204fbc8049abe17bd21a3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673707"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353563"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Delo s poslovnimi kupci v vpogledih v občinstvo
 

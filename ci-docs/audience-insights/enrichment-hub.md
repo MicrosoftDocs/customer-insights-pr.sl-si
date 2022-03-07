@@ -1,21 +1,25 @@
 ---
 title: Obogatitev poenotenih profilov strank
 description: Uporabite zmogljivosti za obogatitev podatkov o strankah.
-ms.date: 11/05/2021
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770144"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372739"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogatitev profilov strank (predogled)
 
@@ -37,6 +41,8 @@ V zavihku **Odkrivanje** boste našli vse podprte možnosti obogatitve.
 - [Demografski podatki](enrichment-experian.md), ki jih zagotavlja Experian
 - [Podatki po meri](enrichment-SFTP-custom-import.md) s protokolom za varen prenos datotek (SFTP) 
 - [Storitev Zemljevidi Azure](enrichment-azure-maps.md) zagotavlja Microsoft
+- [Podatki o lokaciji](enrichment-here.md), ki jih zagotavlja HERE Technologies 
+- [Identiteta](enrichment-liveramp.md) zagotavlja LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
 
@@ -46,6 +52,7 @@ V zavihku **Odkrivanje** boste našli vse podprte možnosti obogatitve.
 - [Podatki o lokaciji](enrichment-here.md), ki jih zagotavlja HERE Technologies 
 - [Podatki po meri](enrichment-SFTP-custom-import.md) s protokolom za varen prenos datotek (SFTP) 
 - [Storitev Zemljevidi Azure](enrichment-azure-maps.md) zagotavlja Microsoft
+- [Podatki o udeležbi na računu](enrichment-office.md) zagotavlja Microsoft
 
 ---
 
@@ -75,9 +82,13 @@ Obogatitve neodvisnih ponudnikov so konfigurirane z uporabo [povezav](connection
 
 Entiteta, ki jo je treba obogatiti, je določena med konfiguriranjem obogatitve, ki omogoča obogatiti samo podmnožico vseh profilov. Obogatiti je na primer mogoče samo podatke za točno določeni segment. Konfigurirate lahko več obogatitev iste vrste in znova uporabite isto povezavo. Nekatere obogatitve imajo omejitev števila obogatitev iste vrste, ki jih je mogoče ustvariti. Omejitve in trenutno uporabo si lahko ogledate na strani **Obogatitev**.
 
+## <a name="enrich-data-sources-before-unification"></a>Obogatite vire podatkov pred poenotenjem
+
+Podatke o strankah lahko obogatite pred poenotenjem podatkov, da izboljšate kakovost ujemanja podatkov. Za več informacij glejte [vir podatkov obogatitev](data-sources-enrichment.md).
+
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Oglejte si napredek postopka obogatitve
 
-Podrobnosti o obdelavi obogatitve, vključno s stanjem in možnimi težavami, lahko najdete med osveževanjem ali po končani osvežitvi. Spoznajte, kateri postopki so potrebni za osvežitev obogatitve in koliko časa je trajalo, da so se postopki izvedli. Stanje obogatitve je podprto za Experian, Leadspace, HERE Technologies, SFTP Import in Azure Maps.
+Podrobnosti o obdelavi obogatitve, vključno s stanjem in možnimi težavami, lahko najdete med osveževanjem ali po končani osvežitvi. Spoznajte, kateri postopki so potrebni za osvežitev obogatitve in koliko časa je trajalo, da so se postopki izvedli. Stanje obogatitve je podprto za družbe Experian, Leadspace, HERE Technologies, SFTP Import in storitev Zemljevidi Azure.
 
 Če si želite ogledati stanje obogatitve:
 

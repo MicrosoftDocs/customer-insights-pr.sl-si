@@ -1,72 +1,95 @@
 ---
-title: Izvozite podatke Customer Insights v Upravitelja oglasov za Facebook
-description: Preberite, kako konfigurirati povezavo z Upraviteljem oglasov za Facebook.
-ms.date: 06/05/2020
-ms.reviewer: philk
-ms.service: customer-insights
+title: Izvozi podatke Customer Insights v Facebook Upravitelj oglasov (vsebuje video)
+description: Naučite se, kako konfigurirati povezavo in izvažati v Upravitelja oglasov za Facebook.
+ms.date: 04/15/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c839f9dc7e403412c0e3d936392d45a43bc63545
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: 781cf10e1bb5ddaf82d4a17c7a77e0c43c41a1c2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269994"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226515"
 ---
-# <a name="connector-for-facebook-ads-manager-preview"></a>Povezovalnik za Upravitelja oglasov za Facebook (predogled)
+# <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Izvoz seznamov segmentov v Upravitelja oglasov za Facebook (predogledna različica)
 
 Izvozite segmente poenotenih profilov strank v Upravitelja oglasov za Facebook za ustvarjanje oglaševalskih akcij v storitvama Facebook in Instagram.
 
-## <a name="prerequisites"></a>Zahteve
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
-- Imeti morate [**račun za oglaševanje v storitvi Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), ki vključuje [**poslovni račun Facebook**](https://business.facebook.com/).
-- Biti morate skrbnik [**računa za oglaševanje v storitvi Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+## <a name="prerequisites-for-connection"></a>Predpogoji za povezavo
 
-## <a name="connect-to-facebook-ads-manager"></a>Poveži z Upraviteljem oglasov za Facebook
+- Potrebujete račun [**Facebook oglaševalski račun**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account), ki vključuje poslovni račun za [**Facebook**](https://business.facebook.com/).
+- Morate biti skrbnik oglaševalskega računa [**Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
-1. Izberite **Skrbnik** > **Cilji za izvoz**.
+## <a name="known-limitations"></a>Znane omejitve
 
-1. V razdelku **Upravitelj oglasov za Facebook** izberite **Nastavi**.
+- Do 10 milijonov profilov strank na izvoz v upravitelju oglaševanja Facebook.
+- Izvoz v Upravitelja oglasov za Facebook je omejen na segmente.
+- Ustvarite ali posodobite samo občinstva po meri v storitvi Facebook vrste *seznam strank*.
+- Izvoz segmentov s skupno 10 milijonov profilov strank lahko traja do 90 minut.
 
-1. Dajte svojemu cilju izvoza prepoznavno ime v polju **Prikazno ime**.
+## <a name="set-up-connection-to-facebook-ads-manager"></a>Nastavitev povezave z Upraviteljem oglasov za Facebook
 
-1. Izberite **Nadaljujte z računom Facebook**, da se prijavite v račun za oglaševanje v storitvi Facebook.
+Preden lahko uporabniki ustvarijo izvoz, mora skrbnik konfigurirati povezavo s storitvijo in dovoliti udeležencem, da uporabljajo povezavo.
 
-1. Omogočite dovoljenje **ads_management** po preverjanju pristnosti s storitvijo Facebook.
+1. Odprite razdelek **Skrbnik** > **Povezave**.
 
-1. Izberite **račun za oglaševanje v storitvi Facebook**, s katerim želite delati.
+1. Izberite **Dodajanje povezave** in izberite **Upravitelj oglasov za Facebook** za konfiguracijo povezave.
 
-1. Izberite **Obstoječe občinstvo po meri** s spustnega seznama ali ustvarite **Novo občinstvo po meri**. Za več informacij glejte [**Občinstvo v Upravitelju oglasov za Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**. Ime in vrsta povezave opisujeta to povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
 
-1. Izberite potrditveno polje **Strinjam se**, da potrdite **Zasebnost in skladnost podatkov**.
+1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Izberite **Naslednji** za nastavitev izvoza.
+1. Preverjanje pristnosti z oglasi za Facebook: 
 
-## <a name="configure-the-connector"></a>Konfiguracija povezovalnika
+   1. Izberite možnost **Nadaljujte s storitvijo Facebook** za prijavo v svoj oglaševalski račun Facebook.
 
-1. V polju **Izberi polje identifikatorja ključa** izberite **E-poštni naslov**, **Ime in naslov** ali **Telefon** , da pošljete podatke Upravitelju oglasov za Facebook.
+   1. Omogočite dovoljenje **ads_management** po preverjanju pristnosti s storitvijo Facebook.
+
+   1. Izberite **račun za oglaševanje v storitvi Facebook**, s katerim želite delati.
+
+   1. Na spustnem seznamu izberite možnost **Trenutno občinstvo po meri** ali ustvarite **Novo občinstvo po meri**. Za več informacij glejte [**Občinstvo v Upravitelju oglasov za Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+      > [!NOTE]
+      > S tem izvozom lahko ustvarite ali posodobite samo občinstva po meri v storitvi Facebook vrste *seznam strank*. V nekaterih primerih spustni seznam vsebuje občinstva po meri različnih vrst. Če izberete drugo vrsto kot *seznam strank*, izvoz ne bo uspel. 
+
+1. Preglejte **Zasebnost podatkov in skladnost** in izberite **Strinjam se**.
+
+1. Izberite možnost **Shrani**, da dokončate povezavo.
+
+## <a name="configure-an-export"></a>Konfiguriranje izvoza
+
+Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Odprite razdelek **Podatki** > **Izvozi**.
+
+1. Za ustvarjanje novega izvoza izberite **Dodaj cilj**. 
+
+1. V možnosti **Povezava za izvoz** izberite povezavo v razdelku **Upravitelj oglasov za Facebook**. Če se vam poimenovanje tega odseka ne prikaže, to pomeni, da vam ni na voljo nobena tovrstna povezava.
+
+1. V polju **Izberi polje identifikatorja ključa** izberite **E-poštni naslov**, **Ime in naslov** ali **Telefon** , da pošljete podatke Upravitelju oglasov za Facebook. 
+
+1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**.
 
 1. Preslikajte pripadajoče atribute iz poenotene entitete stranke za izbrani identifikator ključa.
-   > [TIP] Če izberete **E-poštni naslov** kot identifikator ključa, imate največ možnosti za ujemanje. Dodajanje dodatnih identifikatorjev lahko izboljša ujemanje.
+   > [!TIP]
+   > Največ možnosti za ujemanje boste dosegli, če za identifikator ključa izberete možnost **E-poštni naslov**. Dodajanje dodatnih identifikatorjev lahko izboljša ujemanje.
 
-1. Izberite **Dodaj atribut** za preslikavo dodatnih atributov, ki jih želite poslati Upravitelju oglasov za Facebook. Atributi Upravitelja oglasov za Facebook se preslikajo na naslednja uporabnikom prijazna imena: **FN** = **Ime**, **LN** = **Priimek**, **FI** = **Prva začetnica**, **TELEFON** = **Telefon**, **GEN** = **Spol**, **DOB** = **Datum rojstva**, **ST** = **Zvezna država**, **CT** = **Mesto**, **ZIP** = **Poštna številka**, **DRŽAVA** = **Država/regija**
+1. Izberite **Dodajanje atributa** za preslikavo več atributov za pošiljanje v Upravitelja oglasov za Facebook. Atributi upravitelja oglasov za Facebook se preslikajo v naslednja uporabnikom prijazna imena: **IM** = **Ime**, **PR** = **Priimek**, **ZI** = **Začetnica imena**, **TELEFON** = **Telefon**, **SP** = **Spol**, **DR** = **Datum rojstva**, **DRŽ** = **Država**, **MST** = **Mesto**, **PŠ** = **Poštna številka**, **DRŽAVA** = **Država/regija**
 
 1. Izberite segmente, ki jih želite izvoziti.
 
 1. Izberite **Shrani**.
 
-## <a name="export-the-data"></a>Izvoz podatkov
+S shranjevanjem izvoza se ta ne zažene takoj.
 
-Lahko [izvozite podatke na zahtevo](export-destinations.md). Izvoz se bo zagnal tudi z vsakim [načrtovanim osveževanjem](system.md#schedule-tab).
+Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). 
 
-## <a name="known-limitations"></a>Znane omejitve
-
-- Do 10 milijonov profilov strank na posamezen izvoz v upravitelja oglasov za Facebook 
-- Izvoz v upravitelja oglasov za Facebook je omejen na segmente
-- Izvoz segmentov s skupno 10 milijonom profilov lahko traja do 90 minut
+Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 

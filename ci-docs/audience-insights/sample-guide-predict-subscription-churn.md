@@ -3,26 +3,28 @@ title: Vzorčni vodnik za predvidevanje izgube naročnin
 description: S tem vzorčnim vodnikom preizkusite vnaprej pripravljeni model za predvidevanje izgube naročnin.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+searchScope:
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 5de57155b47b74efa4c5ef2fe63a3c87505644be
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306323"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355633"
 ---
-# <a name="subscription-churn-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube naročnin (predogled)
+# <a name="subscription-churn-prediction-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube naročnin
 
 S spodnjimi vzorčnimi podatki vam bomo razložili celovit primer predvidevanja izgube naročnin. 
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek svoje spletne strani Contoso Coffee. Pred kratkim so začeli naročniško dejavnost, s katero so stranke redno dobivale kavo. Njihov cilj je razumeti, katere naročene stranke bi lahko v naslednjih nekaj mesecih odpovedale naročnino. Znanje o tem, katere stranke se bodo **verjetno izgubile**, jim lahko pomaga, da bolje izkoristijo tržna prizadevanja tako, da se osredotočijo na njihovo ohranitev.
+Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek njihovega spletnega mesta Contoso Coffee. Pred kratkim so začeli naročniško dejavnost, s katero so stranke redno dobivale kavo. Njihov cilj je razumeti, katere naročene stranke bi lahko v naslednjih nekaj mesecih odpovedale naročnino. Znanje o tem, katere stranke se bodo **verjetno izgubile**, jim lahko pomaga, da bolje izkoristijo tržna prizadevanja tako, da se osredotočijo na njihovo ohranitev.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -31,7 +33,7 @@ Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki ji
 
 ## <a name="task-1---ingest-data"></a>1. opravilo – vnos podatkov
 
-Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu virov podatkov z uporabo povezovalnikov Power Query](connect-power-query.md). Z naslednjimi informacijami domnevamo, da ste na splošno seznanjeni z vnosom podatkov. 
+Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih virov z uporabo Power Query konektorji](connect-power-query.md) posebej. Z naslednjimi informacijami domnevamo, da ste na splošno seznanjeni z vnosom podatkov. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Vnos podatkov o strankah s platforme elektronskega poslovanja
 
@@ -168,7 +170,7 @@ Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdel
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>3. opravilo – konfiguracija predvidevanja izgube naročnin
 
-Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje izgube naročnin. Za podrobne korake glejte članek [Predvidevanje izgube naročnin (predogled)](predict-subscription-churn.md). 
+Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje izgube naročnin. Za podrobne korake glejte [Odliv naročnin predvidevanje](predict-subscription-churn.md) Članek. 
 
 1. Odprite **Obveščanje** > **Odkrivanje** in izberite uporabo možnosti **Model izgube strank**.
 

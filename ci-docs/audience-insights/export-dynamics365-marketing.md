@@ -1,26 +1,30 @@
 ---
 title: Izvozite podatke Customer Insights v Dynamics 365 Marketing
 description: Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Marketing.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-export
+- customerInsights
+ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692501"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353931"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Uporaba segmentov v storitvi Dynamics 365 Marketing (predogledna različica)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-S [segmenti](segments.md) ustvarite akcije in stopite v stik z določenimi skupinami strank s storitvijo Dynamics 365 Marketing. Za več informacij glejte razdelek [Uporaba segmentov iz storitve Dynamics 365 Customer Insights s storitvijo Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
+
+S [segmenti](segments.md) ustvarite akcije in stopite v stik z določenimi skupinami strank s storitvijo Dynamics 365 Marketing. Za več informacij glejte razdelek [Uporaba segmentov iz storitve Dynamics 365 Customer Insights s storitvijo Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+
+Če uporabljate nove zmogljivosti storitve Dynamics 365 Marketing za sprotno organiziranje dejavnosti strank v organizaciji storitve Dataverse, vam ni treba ustvariti standardnega izvoza za storitev Dynamics 365 Marketing. Stiki in segmenti iz vpogledov občinstva so na voljo neposredno v storitvi Dynamics 365 Marketing, potem ko povežete storitvi Marketing in Customer Insights. Preden izbrišete obstoječi izvoz, preglejte dokumentacijo o tem, [kako povezati vpoglede občinstva in sprotno organiziranje dejavnosti strank storitve Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Predpogoj za povezavo
 
@@ -43,7 +47,7 @@ S [segmenti](segments.md) ustvarite akcije in stopite v stik z določenimi skupi
 
 1. V razdelku **Skrbniški račun strežnika** izberite **Vpis** in izberite račun Dynamics 365 Marketing.
 
-1. Polje za ID stranke preslikajte v ID stika za Dynamics 365.
+1. Preslikajte polje ID stika v entiteti Stranka v ID stika Dynamics 365.
 
 1. Izberite možnost **Shrani**, da dokončate povezavo. 
 

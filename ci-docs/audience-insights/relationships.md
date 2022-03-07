@@ -3,18 +3,30 @@ title: Odnosi med entitetami in poti entitet
 description: Ustvarite in upravljajte odnose med entitetami iz več virov podatkov.
 ms.date: 09/27/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
-ms.translationtype: HT
+searchScope:
+- ci-semantic-mapping
+- ci-entities
+- ci-relationships
+- ci-activities
+- ci-activities-wizard
+- ci-measures
+- ci-segments
+- ci-segment-builder
+- ci-measure-builder
+- ci-measure-template
+- ci-permissions
+- customerInsights
+ms.openlocfilehash: db8822aa9e89afb9dc16428af6ca202de789ba1c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557372"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355725"
 ---
 # <a name="relationships-between-entities"></a>Odnosi med entitetami
 
@@ -68,6 +80,20 @@ Odnos je sestavljen iz *izvorne entitete*, ki vsebuje tuji ključ, in *ciljne en
 
 4. Izberite možnost **Shrani**, da ustvarite odnos po meri.
 
+## <a name="set-up-account-hierarchies"></a>Nastavitev hierarhij računov
+
+Okolja, ki so konfigurirana za uporabo poslovnih računov kot primarno ciljno občinstvo, lahko konfigurirajo hierarhije računov za povezane poslovne račune. Na primer podjetje, ki ima ločene poslovne enote. 
+
+Organizacije ustvarjajo hierarhije računov za boljše upravljanje računov in njihovih odnosov med seboj. Zmogljivost vpogledov v občinstvo podpira hierarhije računov nadrejeni-podrejeni, ki že obstajajo v uvoženih podatkih o strankah. Na primer računi iz storitve Dynamics 365 Sales. Te hierarhije je mogoče konfigurirati na strani **Odnosi** v vpogledih v občinstvo v zavihku hierarhija računov.
+
+1. Odprite razdelek **Podatki** > **Odnosi**.
+1. Izberite zavihek **Hierarhija računa**.
+1. Izberite **Nova hierarhija računa**. 
+1. V podoknu **Hierarhija računa** vnesite ime za hierarhijo. Sistem ustvari ime za izhodno entiteto. Lahko spremenite ime izhodne entitete.
+1. Izberite entiteto, ki vsebuje hierarhijo vašega računa. Običajno je v isti entiteti, ki vsebuje račune.
+1. Izberite **ID računa** in **ID nadrejenega računa** iz izbrane entitete 
+1. Izberite **Shrani** za uporabo nastavitev in dokončajte hierarhijo računa.
+
 ## <a name="view-relationships"></a>Ogled odnosov
 
 Na strani Odnosi so navedeni vsi ustvarjeni odnosi. Vsaka vrstica predstavlja odnos, ki vključuje tudi podrobnosti o izvorni entiteti, ciljni entiteti in kardinalnosti. 
@@ -105,7 +131,7 @@ Na primer entiteta *eCommerce_eCommercePurchases* ima do poenotenega profila ent
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Stranka
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Stranka 
 
-Pot odnosa določa, katere entitete lahko uporabite pri ustvarjanju pravil za ukrepe ali segmente. Izbira možnosti z najdaljšo potjo odnosa bo verjetno prinesla manj rezultatov, ker morajo biti ujemajoči se zapisi del vseh entitet. V tem primeru mora stranka kupiti izdelke prek e-trgovine (eCommerce_eCommercePurchases), na prodajnem mestu (POS_posPurchases) in sodelovati v našem programu zvestobe (loyaltyScheme_loyCustomers). Če bi izbrali prvo možnost, bi verjetno dobili več rezultatov, ker morajo stranke obstajati le v eni dodatni entiteti.
+Pot odnosa določa, katere entitete lahko uporabite pri ustvarjanju pravil za ukrepe ali segmente. Izbira možnosti z najdaljšo potjo odnosa bo verjetno prinesla manj rezultatov, ker morajo biti ujemajoči se zapisi del vseh entitet. V tem primeru mora stranka kupiti izdelke prek e-trgovine (eCommerce_eCommercePurchases) na prodajnem mestu (POS_posPurchases) in sodelovati v našem programu zvestobe (loyaltyScheme_loyCustomers). Če bi izbrali prvo možnost, bi verjetno dobili več rezultatov, ker morajo stranke obstajati le v eni dodatni entiteti.
 
 ### <a name="direct-relationship"></a>Neposredni odnos
 

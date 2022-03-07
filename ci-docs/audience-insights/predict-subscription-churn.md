@@ -1,22 +1,21 @@
 ---
-title: Odliv naročnin predvidevanje (video)
+title: Odtok naročnin predvidevanje (vsebuje video)
 description: Predvidite, ali za stranko obstaja tveganje, da ne bo več uporabljala izdelkov ali storitev naročnine vašega podjetja.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904045"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354717"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Predvidevanje izgube naročnine (predogled)
+# <a name="subscription-churn-prediction"></a>Predvidevanje odpovedi naročnin
 
 Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tveganje, da ne bo več uporabljala izdelkov ali storitev naročnine vašega podjetja. Na strani **Obveščanje** > **Predvidevanja** lahko ustvarite novo predvidevanje izgube naročnine. Izberite **Moja predvidevanja**, da si ogledate druga predvidevanja, ki ste jih ustvarili.
 
@@ -63,7 +62,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
 ## <a name="create-a-subscription-churn-prediction"></a>Ustvarjanje predvidevanja izgube naročnine
 
 1. Pri vpogledih v občinstvo izberite **Obveščanje** > **Predvidevanja**.
-1. Izberite ploščico **Model izgube naročnine (predogled)** in izberite **Uporabi ta model**.
+1. Izberite **Model odliva naročnin** ploščico in izberite **Uporabite ta model**.
    > [!div class="mx-imgBorder"]
    > ![Ploščica »Model izgube naročnine« z gumbom »Uporabi ta model«.](media/subscription-churn-usethismodel.PNG "Ploščica »Model izgube naročnine« z gumbom »Uporabi ta model«")
 
@@ -77,7 +76,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
 1. Vnesite število za možnost **Dnevi od konca naročnine**, da lahko vaše podjetje šteje, da je stranka v stanju izgube. To obdobje je običajno primerno za poslovne dejavnosti, kot so ponudbe ali druga tržna prizadevanja, ki poskušajo preprečiti izgubo stranke.
 1. Vnesite število za možnost **Dnevi v prihodnosti za napoved možnosti izgube strank**, da nastavite časovno okno za napoved izgube. Tako lahko na primer izberete napoved možnosti izgube strank v naslednjih 90 dneh, da lahko temu prilagodite trženje z namenom obdržanja strank. Napovedovanje tveganja izgube za daljša ali krajša obdobja lahko oteži obravnavo dejavnikov v vašem profilu tveganja izgube, odvisno od vaših poslovnih potreb. Če želite nadaljevati, izberite **Naprej**.
    >[!TIP]
-   > Kadar koli lahko izberete možnost **Shrani in zapri**, da shranite predvidevanje kot osnutek. Osnutek predvidevanja boste lahko našli na zavihku **Moja predvidevanja** za nadaljevanje.
+   > Lahko izberete **Shrani osnutek** kadar koli shranite predvidevanje kot osnutek. Osnutek predvidevanja boste lahko našli na zavihku **Moja predvidevanja** za nadaljevanje.
 
 ### <a name="add-required-data"></a>Dodajanje zahtevanih podatkov
 

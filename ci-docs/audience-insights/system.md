@@ -1,20 +1,26 @@
 ---
 title: Konfiguracija sistema pri vpogledih v občinstvo
-description: Več o sistemskih nastavitvah v Dynamics 365 Customer Insights občinstvo zmožnosti vpogledov.
+description: Preberite več o sistemskih nastavitvah pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732390"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354253"
 ---
 # <a name="system-configuration"></a>Konfiguracija sistema
 
@@ -49,18 +55,18 @@ Sistem uporablja naslednja stanja za opravila in procese:
 |Preklicano |Uporabnik je obdelavo preklical, preden se je končala.   |
 |Neuspelo   |Pri uvozu podatkov je prišlo do napak.         |
 |Ni uspelo  |Obdelava ni uspela.  |
-|Se ni začelo   |Vir podatkov še nima vključenih podatkov ali je še v načinu osnutka.         |
+|Ni začeto   |Vir podatkov še nima vključenih podatkov ali je še v načinu osnutka.         |
 |Predelava  |Naloga ali proces je v teku.  |
 |Osveževanje    |Uvažanje podatkov je v teku. Ta postopek lahko prekličete tako, da v stolpcu **Dejanja** izberete **Ustavi osveževanje**. Ustavitev osveževanja vira podatkov bo povrnjena na zadnje stanje osveževanja.       |
 |Preskočeno  |Naloga ali proces je bil preskočen. Eden ali več nadaljnjih postopkov, od katerih je odvisno opravilo, ne uspe ali ste jih preskočili.|
-|Uspešno  |Naloga ali proces je bil uspešno zaključen. Za vire podatkov označuje, da so bili podatki uspešno prevzeti, če je čas omenjen v **Osveženo** stolpec.|
+|Uspelo  |Naloga ali proces je uspešno zaključen. Za vire podatkov označuje, da so bili podatki uspešno prevzeti, če je čas omenjen v **Osveženo** stolpec.|
 |V čakalni vrsti | Obdelava je v čakalni vrsti in se bo začela, ko bodo končana vsa nadaljnja opravila in procesi. Za več informacij glejte [Osvežite procese](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Osvežite procese
 
 Osvežitev nalog in procesov se izvaja v skladu z [konfiguriran urnik](#schedule-tab). 
 
-|Postopek  |Opis  |
+|Obdelaj  |Description  |
 |---------|---------|
 |Dejavnost  |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja. Vpogledi so odvisni od njegove obdelave.|
 |Povezava analize |Teče ročno (enkratna osvežitev). Odvisno od segmentov.  |
@@ -77,14 +83,18 @@ Osvežitev nalog in procesov se izvaja v skladu z [konfiguriran urnik](#schedule
 |Profili   |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja. |
 |Poišči   |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja. |
 |Segmenti  |Teče ročno (enkratna osvežitev). Odvisno od postopka spajanja. Vpogledi so odvisni od njegove obdelave.|
-|Sistemsko   |Odvisno je od dokončanja postopka ujemanja. Segmenti, mere, obogatitev, iskanje, dejavnosti, predvidevanja in priprava podatkov so odvisni od uspešnega dokončanja tega postopka.   |
-|Uporabnik  |Teče ročno (enkratna osvežitev). Odvisno od subjektov.  |
+|Sistem   |Odvisno je od dokončanja postopka ujemanja. Segmenti, mere, obogatitev, iskanje, dejavnosti, predvidevanja in priprava podatkov so odvisni od uspešnega dokončanja tega postopka.   |
+|uporabnik.  |Teče ročno (enkratna osvežitev). Odvisno od subjektov.  |
 
 Izberite stanje procesa, da si ogledate podrobnosti o napredku celotnega opravila, v katerem je bil. Zgornji postopki osveževanja vam lahko pomagajo razumeti, kaj lahko storite za reševanje a **Preskočeno** oz **V čakalni vrsti** nalogo ali proces.
 
 ## <a name="schedule-tab"></a>Zavihek razporeda
 
 Uporabite zavihek **Razpored** za razporejanje samodejnih osveževanj za vse [vnesene vire podatkov](data-sources.md). Samodejno osveževanje pomaga zagotoviti, da se posodobitve iz virov podatkov odražajo v vaših poenotenih profilih strank.
+
+> [!NOTE]
+> Viri podatkov, ki jih upravljate, se osvežujejo po svojih urnikih. Če želite načrtovati osveževanje virov podatkov, ki jih upravljate, konfigurirajte nastavitve osveževanja za to določeno vir podatkov iz **Viri podatkov** stran.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Nastavitve osveževanja podatkovnega toka.":::
 
 1. Pri vpogledih v občinstvo odprite **Skrbnik** > **Sistem** in izberite zavihek **Razpored**.
 

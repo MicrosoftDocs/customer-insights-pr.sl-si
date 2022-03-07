@@ -1,20 +1,19 @@
 ---
 title: Podatke iz storitve Customer Insights izvozite v Saleforce Marketing Cloud
 description: Naučite se, kako konfigurirati povezavo in podatke izvoziti v Salesforce Marketing Cloud.
-ms.date: 06/24/2021
+ms.date: 07/23/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
-ms.translationtype: HT
+ms.openlocfilehash: 17a608a64433cdc395e0b503a42b6290db5c39ec
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314675"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230224"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>Izvoz segmentov in drugih podatkov v Salesforce Marketing Cloud (predogled)
 
@@ -23,11 +22,6 @@ Podatke o strankah uporabite v programu Salesforce Marketing Cloud tako, da jih 
 ## <a name="prerequisites-for-connection"></a>Predpogoji za povezavo
 
 - Razpoložljivost gostitelja SFTP in ustreznih skrbniških poverilnic. [Kako nastaviti lokacije SFTP za Salesforce Marketing Cloud](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
-
-## <a name="known-limitations"></a>Znane omejitve
-
-- Trajanje izvoza je odvisno od zmogljivosti vašega sistema. Kot minimalno konfiguracijo strežnika priporočamo dvojedrni procesor in 1 Gb pomnilnika. 
-- Izvoz entitet z največ 100 milijoni profilov strank lahko ob uporabi priporočene minimalne konfiguracije traja 90 minut. 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>Vzpostavite povezavo s storitvijo Salesforce Marketing Cloud
 

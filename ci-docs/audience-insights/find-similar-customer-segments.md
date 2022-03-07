@@ -1,24 +1,29 @@
 ---
-title: Poišči podobne stranke z umetno inteligenco
+title: Poiščite podobne stranke z AI (vsebuje video)
 description: Poiščite podobne segmente strank z umetno inteligenco.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b9b2e7fa862b595c6a364a7208e42295b4f9df83
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268890"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355265"
 ---
 # <a name="similar-customers-preview"></a>Podobne stranke (predogled)
 
 Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdete podobne stranke. Za uporabo te funkcije morate ustvariti vsaj en segment. Razširjanje meril obstoječega segmenta pomaga najti stranke, ki so podobne temu segmentu.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > Storitev *Poiščite podobne stranke* uporablja avtomatizirana sredstva za ocenjevanje podatkov in delanje prognoze na podlagi teh podatkov, zato se lahko uporabi kot metoda profiliranja, saj je ta izraz opredeljen v Splošni uredbi o varstvu podatkov ("GDPR"). Za strankino uporabo te funkcije za obdelavo podatkov lahko velja GDPR ali drugi zakoni ali predpisi. Sami ste odgovorni za to, da je vaša uporaba storitve Dynamics 365 Customer Insights, vključno s predvidevanji, v skladu z vsemi veljavnimi zakoni in predpisi, vključno z zakoni v zvezi z zasebnostjo, osebnimi podatki, biometričnimi podatki, varstvom podatkov in zaupnostjo komunikacij.
@@ -50,7 +55,7 @@ Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdet
 Po obdelavi podobnega segmenta boste novi segment našli na seznamu na strani **Segmenti**.
 
 > [!div class="mx-imgBorder"]
-> ![Segment podobnih strank](media/expanded-segment.png "Segment podobnih strank")
+> ![Segment podobnih strank.](media/expanded-segment.png "Segment podobnih strank")
 
 V delovni vrstici izberite **Pogled**, da odprete podrobnosti o segmentu. Ta pogled vsebuje informacije o porazdelitvi rezultatov v [ocenah podobnosti](#about-similarity-scores). Vrednosti ocen podobnosti boste našli tudi v **Predogledu članov segmenta**.
 

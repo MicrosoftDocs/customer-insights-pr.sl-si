@@ -3,18 +3,17 @@ title: Zahteve posameznikov, na katere se nanašajo podatki, (DSR) v skladu z ur
 description: Odgovorite na zahteve posameznikov, na katere se nanašajo podatki, za zmogljivost vpogledov v občinstvo Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483708"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350289"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahteve posameznikov, na katere se nanašajo podatki, (DSR) v skladu z uredbo GDPR
 
@@ -79,71 +78,78 @@ Skrbnik najemnika lahko za izvoz podatkov upošteva ta navodila:
 2. Potrdite potrditev izvoza podatkov za zahtevanega uporabnika.
 3. Prejmite izvožene podatke prek e-poštnega naslova skrbnika najemnika.
 
-## <a name="engagement-insights"></a>Vpogledi v interakcije
+## <a name="consent-management-preview"></a>Upravljanje privolitve (predogled)
 
-### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Brisanje in izvoz podatkov o dogodkih, ki vsebujejo podatke, ki omogočajo identifikacijo končnega uporabnika
+Zmožnost upravljanja privolitve ne zbira uporabniških podatkov neposredno. Uvaža in obdeluje samo podatke o privolitvi, ki jih zagotovijo uporabniki v drugih aplikacijah.
 
-Naslednji razdelki opisujejo, kako izbrisati in izvoziti podatke o dogodkih, ki bi lahko vsebovali osebne podatke.
+Če želite odstraniti podatke o soglasju o določenih uporabnikih, jih odstranite v virih podatkov, ki jih prevzame zmožnost upravljanja privolitve. Po osvežitvi vir podatkov bodo odstranjeni podatki izbrisani tudi v središču za soglasje. Aplikacije, ki uporabljajo entiteto za soglasje, bodo izbrisale tudi podatke, ki so bili odstranjeni iz vira po a [osveži](audience-insights/system.md#refresh-processes). Priporočamo, da po odzivu na zahtevo posameznika, na katerega se osebni podatki nanašajo, hitro osvežite vire podatkov za odstranitev uporabnikovih podatkov iz vseh drugih procesov in aplikacij.
 
-Brisanje ali izvoz podatkov:
 
-1. Označite lastnosti dogodka, ki vsebujejo osebne podatke.
-2. Izbrišite ali izvozite podatke, povezane s posebnimi vrednostmi (na primer: določeni ID uporabnika).
+<!-- ## Engagement insights (preview)
 
-#### <a name="tag-and-update-event-properties"></a>Označite in posodobite lastnosti dogodka
+### Deleting and exporting event data containing end user identifiable information
 
-Osebni podatki so označeni na ravni lastnosti dogodka. Najprej označite lastnosti, ki se štejejo za brisanje ali izvoz.
+The following sections describe how to delete and export event data that might contain personal data.
 
-Če želite lastnost dogodka označiti kot vsebino z osebnimi podatki, sledite tem korakom:
+To delete or export data:
 
-1. Odprite delovni prostor, ki vsebuje dogodek.
+1. Tag event properties that contain data with personal information.
+2. Delete or export data associated with specific values (for example: a specified user ID).
 
-1. Odprite **Podatki** > **Dogodki**, da si ogledate seznam dogodkov v izbranem delovnem prostoru.
+#### Tag and update event properties
+
+Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+
+To tag an event property as containing personal information, follow these steps:
+
+1. Open the workspace containing the event.
+
+1. Go to **Data** > **Events** to see the list of events in the selected workspace.
   
-1. Izberite dogodek, ki ga želite označiti.
+1. Select the event you want to tag.
 
-1. Izberite **Uredi lastnosti**, da odprete podokno s seznamom vseh lastnosti izbranega dogodka.
+1. Select **Edit properties** to open the pane listing all properties of the selected event.
      
-1. Izberite **...** in nato izberite **Uredi** za dostop do pogovornega okna **Posodobi lastnost**.
+1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
 
-   ![Uredite dogodek.](engagement-insights/media/edit-event.png "Uredi dogodek")
+   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
 
-1. V oknu **Posodobi lastnost** izberite **...** v zgornjem desnem kotu in nato izberite polje **Vsebuje EUII** (tj. podatki, ki omogočajo identifikacijo končnega uporabnika). Za shranjevanje sprememb izberite **Posodobi**.
+1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
 
-   ![Shranite spremembe.](engagement-insights/media/update-property.png "Shranite spremembe")
+   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
 
    > [!NOTE]
-   > Vsakič, ko se shema dogodkov spremeni ali ustvarite nov dogodek, je priporočljivo, da ocenite povezane lastnosti dogodka in jih po potrebi označite oz. prekličete njihovo oznako kot vsebino z osebnimi podatki.
+   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
 
-#### <a name="delete-or-export-tagged-event-data"></a>Izbrišite ali izvozite označene podatke o dogodkih
+#### Delete or export tagged event data
 
-Če so bile vse lastnosti dogodka označene ustrezno, kot je opisano v prejšnjem koraku, lahko skrbnik okolja izda zahtevo za izbris proti označenim podatkom dogodka.
+If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
 
-Za upravljanje zahtev za izbris ali izvoz EUII
+To manage EUII deletion or export requests
 
-1. Odprite možnost **Skrbnik** > **Okolje** > **Nastavitve**.
+1. Go to **Admin** > **Environment** > **Settings**.
 
-1. V razdelku **Upravljanje podatkov, ki omogočajo identifikacijo končnega uporabnika (EUII)** izberite **Upravljanje EUII**.
+1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
 
-##### <a name="deletion"></a>Brisanje
+##### Deletion
 
-Za brisanje lahko v razdelku **Brisanje podatkov, ki omogočajo identifikacijo končnega uporabnika (EUII)** vnesete seznam uporabniških ID-jev, ločenih z vejico. Nato se bodo ti ID-ji primerjali z vsemi označenimi lastnostmi dogodkov vseh projektov v trenutnem okolju s pomočjo natančnega ujemanja nizov. 
+For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
 
-Če se vrednost lastnosti ujema z enim od podanih ID-jev, bo povezani dogodek trajno izbrisan. Zaradi nepovratnosti tega dejanja morate potrditi brisanje po izbiri možnosti **Izbriši**.
+If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
 
-##### <a name="export"></a>Export
+##### Export
 
-Postopek izvoza je enak postopku brisanja, ko gre za določanje vrednosti lastnosti dogodka v razdelku **Brisanje podatkov, ki omogočajo identifikacijo končnega uporabnika (EUII)**. Poleg tega boste morali navesti **URL shrambe zbirke dvojiških podatkov Azure** za določitev izvoznega cilja. URL zbirke dvojiških podatkov Azure mora vsebovati [podpis dostopa v skupni rabi (SAS)](/azure/storage/common/storage-sas-overview).
+The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
 
-Po izbiri možnosti **Izvozi** bodo vsi dogodki trenutne ekipe, ki vsebujejo ujemajoče se označene lastnosti, izvoženi v obliki CSV na cilj izvoza.
+After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
 
-### <a name="good-practices"></a>Dobre prakse
+### Good practices
 
-* Izogibajte se pošiljanju kakršnih koli dogodkov, ki vsebujejo osebne podatke.
-* Če morate poslati dogodke, ki vsebujejo podatke EUII, omejite število dogodkov in lastnosti dogodkov, ki vsebujejo podatke EUII. V idealnem primeru se omejite na en tak dogodek.
-* Poskrbite, da bo imelo dostop do poslanih osebnih podatkov čim manj ljudi.
-* Za dogodke, ki vsebujejo osebne podatke, nastavite, da ena lastnost oddaja enoličen identifikator, ki ga je mogoče enostavno povezati z določenim uporabnikom (na primer ID uporabnika). To olajša ločevanje podatkov in izvoz ali brisanje pravih podatkov.
-* Na dogodek označite samo eno lastnost, ki vsebuje osebne podatke. V idealnem primeru tak, ki vsebuje samo enoličen identifikator.
-* Ne označujte lastnosti, ki vsebujejo podrobne vrednosti (na primer celotno telo zahteve). Zmogljivost vpogledov v interakcije uporablja natančno ujemanje nizov pri odločanju, katere dogodke izbrisati ali izvoziti.
+* Try to avoid sending any events that contain personal data.
+* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
+* Make sure that as few people as possible have access to the sent personal data.
+* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
+* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
+* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

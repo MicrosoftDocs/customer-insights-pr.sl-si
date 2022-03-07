@@ -1,21 +1,23 @@
 ---
 title: Ustvarjanje okolij v rešitvi Customer Insights
 description: Koraki za ustvarjanje okolij z naročnino na storitev Dynamics 365 Customer Insights, za katero imate licenco.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088133"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354115"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Ustvarite okolje v vpogledih v občinstvo
 
@@ -76,12 +78,14 @@ Ko so procesi sistema, na primer uvoz podatkov, končani, sistem ustvari ustrezn
    
 Korak **Microsoft Dataverse** vam omogoča, da povežete Customer Insights s svojim okoljem Dataverse.
 
-Če želite uporabiti [pripravljene modele predvidevanja](predictions-overview.md#out-of-box-models), konfigurirajte skupno rabo podatkov z okoljem Dataverse. Ali pa omogočite uvoz podatkov iz virov podatkov na mestu uporabe, ki zagotavljajo URL za okolje Microsoft Dataverse, ki ga upravlja vaša organizacija. Izberite možnost **Omogoči skupno rabo podatkov** za skupno rabo izhodnih podatkov Customer Insights z upravljanim jezerom podatkov Dataverse.
+Ponudite svoje Microsoft Dataverse okolje za izmenjavo podatkov (profilov in vpogledov) s poslovnimi aplikacijami, ki temeljijo na Dataverse, kot je Dynamics 365 Marketing ali modelsko vodene aplikacije v Power Apps. Pustite to polje prazno, če nimate svojega Dataverse okolje in mi ga bomo zagotovili za vas.
+
+Povezovanje z vašim Dataverse okolje vam tudi omogoča [prenesite podatke iz virov podatkov na mestu uporabe z uporabo Power Platform podatkovni tokovi in prehodi](data-sources.md#add-data-from-on-premises-data-sources). Lahko tudi uporabite [gotovi modeli predvidevanje](predictions-overview.md?tabs=b2c#out-of-box-models) s povezovanjem na a Dataverse okolje.
 
 > [!IMPORTANT]
 > Vpogled v stranke in Dataverse morajo biti v isti regiji, da omogočite skupno rabo podatkov.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Možnosti konfiguracije za omogočanje skupne rabe podatkov s storitvijo Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podatkov z Microsoft Dataverse samodejno omogočeno za neto nove primerke.":::
 
 > [!NOTE]
 > Storitev Customer Insights ne podpira naslednjih primerov skupne rabe podatkov.

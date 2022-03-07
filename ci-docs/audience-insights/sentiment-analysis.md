@@ -2,23 +2,22 @@
 title: Analiza občutkov za povratne informacije strank
 description: Naučite se uporabljati model analize razpoloženja na povratnih informacijah strank v Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
-ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
-ms.translationtype: HT
+ms.openlocfilehash: b06613b00a512a31479f9d30d539a010e17d33ba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8008785"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231485"
 ---
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analizirajte razpoloženje v povratnih informacijah strank (predogled)
 
-Kupci danes pričakujejo visoko kakovostne izdelke, storitve in izkušnje. Še posebej stranke, ki delijo svoje povratne informacije. Za organizacije je zelo zahtevno analizirati naraščajočo količino podatkov, ne da bi zmanjšali natančnost in zvišali stroške dela. Dynamics 365 Customer Insights ponuja model analize razpoloženja za povratne informacije strank, ki omogoča organizacijam, da natančneje in z nižjimi stroški analizirajo svoje podatke.
+Kupci danes pričakujejo visoko kakovostne izdelke, storitve in izkušnje. Še posebej stranke, ki delijo svoje povratne informacije. Za organizacije je zelo zahtevno analizirati vse večji obseg podatkov, ne da bi zmanjšali natančnost in zvišali stroške dela. Dynamics 365 Customer Insights ponuja model analize razpoloženja za povratne informacije strank, ki omogoča organizacijam, da natančneje in z nižjimi stroški analizirajo svoje podatke.
 
 Analiza občutkov vam omogoča, da sintetizirate počutje strank in prepoznate poslovne vidike kot priložnosti za izboljšave. Ta funkcija Customer Insights vam pomaga razumeti, kaj deluje dobro in kaj morate obravnavati. Osredotočite se na najbolj pomembna in najbolj vplivna področja poslovanja, da izboljšate izkušnjo za svoje stranke. Navsezadnje vam lahko pomaga pri spodbujanju poslovnih dejanj, ki omogočajo izkušnje, ki vodijo v visoko zadovoljstvo in zvestobo strank.
 
@@ -54,7 +53,7 @@ Vnaprej določeni poslovni vidiki za model, ki ga je treba povezati s povratnimi
 -   Kakovost spletnega mesta/aplikacije
 
 > [!NOTE]
-> Trenutno podpiramo samo analizo razpoloženja na podlagi povratnih informacij strank v angleškem jeziku. V prihodnosti bo podprtih več jezikov. Če so povratne informacije v drugih jezikih naložene, bo model še vedno vrnil rezultate. Vendar ti rezultati ne bodo točni. 
+> Trenutno podpiramo samo analizo razpoloženja na podlagi povratnih informacij strank v angleškem jeziku. V prihodnosti bo podprtih več jezikov. Če so naložene povratne informacije v drugih jezikih, bo model še vedno vrnil rezultate. Vendar ti rezultati ne bodo točni. 
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -101,7 +100,7 @@ Zahtevani so naslednji atributi podatkov:
 
 1. Vidite stanje preslikave podatkov. Če želite nadaljevati, izberite **Naprej**. 
 
-1. V **Preglejte podrobnosti svojega modela** korak, potrdite konfiguracijo vaše analize razpoloženja. Vrnete se lahko na kateri koli del konfiguracije predvidevanje. Izberite **Shranite in zaženite** za začetek analize. 
+1. V **Preglejte podrobnosti svojega modela** korak, potrdite konfiguracijo vaše analize razpoloženja. Lahko se vrnete na kateri koli del konfiguracije predvidevanje. Izberite **Shranite in zaženite** za začetek analize. 
 
    :::image type="content" source="media/sentiment-model-review-config.png" alt-text="Korak pregleda za model razpoloženja, ki prikazuje vse konfigurirane elemente.":::
 
@@ -151,7 +150,7 @@ Na strani z rezultati so štirje primarni razdelki podatkov.
 
   :::image type="content" source="media/sentiment-score-over-time.png" alt-text="grafikon zgodovine z oceno razpoloženja skozi čas, predstavljeno kot črta.":::
  
-- **Razpoloženje med poslovnimi vidiki** : Ta tabela navaja povprečno razpoloženje po poslovnih vidikih. Lahko vam pomaga oceniti, kateri vidiki vašega podjetja že zadovoljujejo stranke ali vidiki, ki zahtevajo več pozornosti. Zapisi povratnih informacij, ki se ne ujemajo z nobenim od podprtih poslovnih vidikov, so razvrščeni pod **Drugo**. Tabela je privzeto razvrščena po abecedi. Razvrščanje lahko spremenite tako, da izberete glavo tabele.
+- **Razpoloženje med poslovnimi vidiki** : Ta tabela navaja povprečno razpoloženje po poslovnih vidikih. Lahko vam pomaga oceniti, kateri vidiki vašega podjetja že zadovoljujejo stranke ali vidiki, ki zahtevajo več pozornosti. Zapisi povratnih informacij, ki se ne ujemajo z nobenim od podprtih poslovnih vidikov, so razvrščeni v kategorijo **Drugo**. Tabela je privzeto razvrščena po abecedi. Razvrščanje lahko spremenite tako, da izberete glavo tabele.
 
   :::image type="content" source="media/sentiment-across-business-aspects.png" alt-text="Seznam poslovnih vidikov s povezanim vrednost mnenja in številom strank, ki ga omenjajo.":::
  

@@ -2,21 +2,24 @@
 title: Vzorčni vodnik za predvidevanje priporočil za izdelke
 description: Uporabite ta vzorčni vodnik, da preskusite model predvidevanja priporočil za vnaprej pripravljene izdelke.
 ms.date: 02/10/2021
-ms.reviewer: digranad
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 0ee873d9b7caa5f891cb2d5b8c665dec90ad0e59
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270534"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354667"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje priporočil za izdelke (predogled)
+# <a name="product-recommendation-prediction-sample-guide"></a>Vzorčni vodnik za predvidevanje priporočil za izdelke
 
 S pomočjo spodnjih vzorčnih podatkov vas bomo vodili skozi celotni primer predvidevanja priporočil za izdelke.
 
@@ -31,7 +34,7 @@ Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki ji
 
 ## <a name="task-1---ingest-data"></a>1. opravilo – vnos podatkov
 
-Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu virov podatkov z uporabo povezovalnikov Power Query](connect-power-query.md). Z naslednjimi informacijami domnevamo, da ste na splošno seznanjeni z vnosom podatkov.
+Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih virov z uporabo Power Query konektorji](connect-power-query.md) posebej. Z naslednjimi informacijami domnevamo, da ste na splošno seznanjeni z vnosom podatkov.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Vnos podatkov o strankah s platforme elektronskega poslovanja
 
@@ -65,7 +68,7 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
 
 1. V stranskem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **NakupiEPoslovanja**.
 
-1. Shranite vir podatkov.
+1. **Shranite** vir podatkov.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Vnos podatkov o strankah iz sheme za zvestobo
@@ -83,11 +86,11 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
 
 1. V desnem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **zvesteStranke**.
 
-1. Shranite vir podatkov.
+1. **Shranite** vir podatkov.
 
 ## <a name="task-2---data-unification"></a>2. opravilo – poenotenje podatkov
 
-Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdelavo poenotenega profila stranke. Če želite več informacij, glejte [Poenotenje podatkov](data-unification.md).
+Po uvozu podatkov se začne postopek poenotenja podatkov za ustvarjanje enotnega profila stranke. Če želite več informacij, glejte [Poenotenje podatkov](data-unification.md).
 
 ### <a name="map"></a>Preslikava
 
@@ -105,9 +108,9 @@ Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdel
 
 1. Izberite zavihek **Ujemanje** in izberite **Nastavi vrstni red**.
 
-2. Na spustnem seznamu **Primarno** izberite **StikiEPoslovanja: EPoslovanje** kot primarni vir in vključite vse zapise.
+2. Na spustnem seznamu izberite možnost **Primarni** ter za primarni vir določite **eCommerceContacts: eCommerce** in vključite vse zapise.
 
-3. Na spustnem seznamu **Entiteta 2** izberite **zvesteStranke: ShemaZvestobe** in vključite vse zapise.
+3. Na spustnem seznamu izberite možnost **Entiteta 2**, nato pa **loyCustomers: LoyaltyScheme** in vključite vse zapise.
 
    ![Poenotenje ujemanja elektronskega poslovanja in zvestobe.](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdel
 
 5. Dodajte svoj prvi pogoj z možnostjo FullName.
 
-   - Za StikiEPoslovanja izberite **FullName** v spustnem meniju.
-   - Za zvesteStranke izberite **FullName** v spustnem meniju.
+   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite **FullName**.
+   - Za entiteto zvesteStranke na spustnem seznamu izberite **FullName**.
    - Izberite spustni meni **Normaliziraj** in izberite **Vrsta (telefon, ime, naslov, ...)**.
    - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 
 6. Vnesite ime **FullName, Email** za novo pravilo.
 
    - Dodajte drugi pogoj za e-poštni naslov tako, da izberete **Dodaj pogoj**.
-   - Za StikiEPoslovanja entitete izberite **E-pošta** v spustnem meniju.
-   - Za zvesteStranke entitete izberite **E-pošta** v spustnem meniju.
+   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite možnost **E-pošta**.
+   - Za entiteto zvesteStranke na spustnem seznamu izberite možnost **E-pošta**.
    - Pustite polje Normaliziraj prazno.
    - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
 
@@ -156,7 +159,7 @@ Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje 
 
    - **Število izdelkov**: nastavite to vrednost na **5**. Ta nastavitev določi, koliko izdelkov želite priporočiti svojim strankam.
 
-   - **Ali želite predlagati izdelke, ki so jih vaše stranke nedavno kupile?**: izberite **Da**, če želite, da so v priporočilu vključeni izdelki, ki so jih stranke že kupile.
+   - **Pričakovani ponovljeni nakupi**: izberite **Da**, če želite izdelke vključiti v priporočilo izdelkov, ki so jih vaše stranke že kupile.
 
    - **Obdobje zajema podatkov:** izberite vsaj **365 dni**. Ta nastavitev določa obdobje zajema podatkov strankine dejavnosti, ki ga bo model upošteval pri vnosu priporočil.
    

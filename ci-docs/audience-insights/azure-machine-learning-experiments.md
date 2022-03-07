@@ -1,24 +1,23 @@
 ---
 title: Eksperimentiranje s strojnim učenjem Azure
 description: Uporabite modele, ki temeljijo na strojnem učenju Azure, v storitvi Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
-ms.service: customer-insights
+ms.date: 12/02/2021
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
-ms.translationtype: HT
+ms.openlocfilehash: 3c3bed3dca40be748140a8b339191e6a42725714
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554455"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228908"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Uporaba modelov, ki temeljijo na strojnem učenju Azure
 
-Združeni podatki v storitvi Dynamics 365 Customer Insights so vir za gradnjo modelov strojnega učenja, ki lahko ustvarijo dodatne vpoglede v poslovanje. Customer Insights se integrira s studiom za strojno učenje (klasični način) in storitvijo Strojno učenje Azure, da lahko uporabljate lastne modele po meri. Glejte [Eksperimentiranje s studiom za strojno učenje (klasični način)](machine-learning-studio-experiments.md) za primere poskusov, ustvarjenih v studiu za strojno učenje (klasični način). 
+Združeni podatki v storitvi Dynamics 365 Customer Insights so vir za gradnjo modelov strojnega učenja, ki lahko ustvarijo dodatne vpoglede v poslovanje. Storitev Customer Insights se integrira s strojnim učenjem Azure, da uporabi vaše lastne modele po meri.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -35,7 +34,7 @@ Združeni podatki v storitvi Dynamics 365 Customer Insights so vir za gradnjo mo
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Delo z oblikovalnikom za strojno učenje Azure
 
-Oblikovalnik za strojno učenje Azure ponuja vizualno delovno območje, kamor lahko povlečete in spustite nabore podatkov in module, podobno kot pri studiu za strojno učenje (klasični način). Prodajni lijak paketa, ustvarjen v oblikovalniku, je mogoče integrirati s storitvijo Customer Insights, če sta ustrezno konfigurirana. 
+Oblikovalec Azure Strojno učenje ponuja vizualno platno, kamor lahko povlečete in spustite nabore podatkov in module. Prodajni lijak paketa, ustvarjen v oblikovalniku, je mogoče integrirati s storitvijo Customer Insights, če sta ustrezno konfigurirana. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Delo s SDK-jem za strojno učenje Azure
 

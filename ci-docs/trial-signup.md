@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 09/30/2021
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: dc1ea94ad55886c605d27caea031e00964f6f7c8
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1b50da077cb0584ca9f277b276d0e9ebb46b2c5d
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645511"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350243"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Prijava za brezplačno preskusno različico Dynamics 365 Customer Insights
 
@@ -32,23 +31,12 @@ Aplikacijo lahko začnete uporabljati, potem ko se preskusna različica naloži 
 
 V vašem preskusnem okolju so iste funkcije, ki so na voljo v plačljivi različici. Na spodnjih povezavah so predstavljene nekatere ključne funkcije.
 
-### <a name="audience-insights"></a>Vpogledi v občinstvo
-
 - [Hitri začetek za vpoglede v občinstvo.](audience-insights/get-started.md)
 - [Dodajte več uporabnikov in dodelite dovoljenja.](audience-insights/permissions.md)
 - [Uvozite svoje vire podatkov](audience-insights/data-sources.md) in jih vodite skozi [postopek poenotenja podatkov](audience-insights/data-unification.md), da nastanejo [enotni profili strank](audience-insights/customer-profiles.md).
 - [Obogatite poenotene profile strank](audience-insights/enrichment-hub.md) ali [zaženite modele predvidevanja](audience-insights/predictions-overview.md).
 - Ustvarite [segmente](audience-insights/segments.md) za združevanje strank in [mere](audience-insights/measures.md) za pregled KPI-jev.
 - Nastavite [povezave](audience-insights/connections.md) in [izvoz](audience-insights/export-destinations.md) za obdelavo podmnožic vaših podatkov v drugih aplikacijah.
-
-### <a name="engagement-insights"></a>Vpogledi v interakcije
-
-- [Hitri začetek za vpoglede v interakcije.](engagement-insights/get-started.md)
-- [Ustvarite delovni prostor](engagement-insights/create-workspace.md) in dodajte člane.
-- [Dodajte kodo na svoje spletno mesto](engagement-insights/instrument-website.md) ali v [mobilno aplikacijo](engagement-insights/developer-resources.md#capture-events-from-mobile-apps).
-- Oglejte si [sprotno poročilo](engagement-insights/view-reports.md) ali ustvarite [poročila po meri](engagement-insights/custom-reports.md).
-- [Ustvarite izboljšane dogodke](engagement-insights/refined-events.md) za izvoz.
-- [Izvozite podatke](engagement-insights/export-events.md) v Azure Data Lake Storage.
 
 ## <a name="additional-resources"></a>Dodatni viri
 

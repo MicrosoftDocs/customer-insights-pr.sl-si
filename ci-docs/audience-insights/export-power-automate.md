@@ -1,20 +1,19 @@
 ---
 title: Povezovalnik Power Automate | Microsoftovo gradivo
-description: Ustvarite poteke v storitvi Microsoft Power Automate iz Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
-ms.service: customer-insights
+description: Ustvarjajte tokove v storitvi Microsoft Power Automate iz storitve Dynamics 365 Customer Insights.
+ms.date: 06/24/2021
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268844"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226734"
 ---
 # <a name="power-automate-connector-preview"></a>Povezovalnik za Power Automate (predogled)
 
@@ -27,14 +26,15 @@ Uporabite sprožilce za ustvarjanje tokov za oblake in avtomatizacijo ponavljajo
 - Sproži, ko osvežitev vira podatkov ne uspe. 
 - Sproži, ko osvežitev vira podatkov uspe.
 - Sproži, ko je prag segmenta presežen. Sprožilec je omejen na preseganje praga.
-- Sproži, ko je prag presežen v poslovni meri. Sprožilec je omejen s preseganjem praga.
-- Sprožilec, ko je opravljeno polno osveževanje (viri podatkov, segmenti, mere, ...).
+- Sproži, ko je prag presežen v poslovni meri. Podprte so samo poslovne mere brez razsežnosti. Sprožilec je omejen na preseganje praga.
+- Sproži po končanem polnem osveževanju (virov podatkov, segmentov, mer, ...).
 - Sproži, ko je dokončana osvežitev postopka poenotenja (preslikava, ujemanje, spajanje).
 
-[Konfigurirajte sprožilce v storitvi Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
+[Svoje sprožilce konfigurirajte v storitvi Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
 ## <a name="power-automate-actions"></a>Dejanja Power Automate
-Povezovalnik za Power Automate poleg razpoložljivih sprožilcev zagotavlja še druga dejanja. Če želite več informacij, glejte [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
+
+Povezovalnik za Power Automate poleg razpoložljivih sprožilcev zagotavlja še druga dejanja. Če želite več informacij, glejte [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Ustvarjanje toka storitve Power Automate
 
@@ -44,7 +44,7 @@ Povezovalnik za Power Automate poleg razpoložljivih sprožilcev zagotavlja še 
 
 1. V storitvi Power Automate se odpre Customer Insights Connector (predogled). **Vpišite se** v storitev Power Automate.
 
-1. Izberite enega od razpoložljivih sprožilcev in dodajte več korakov v novi tok. Za več informacij glejte razdelek [Ustvarjanje toka za oblak v storitvi Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+1. Izberite enega od razpoložljivih sprožilcev in dodajte več korakov v novi tok. Za več informacij glejte razdelek [Ustvarjanje toka za oblak v storitvi Power Automate](/power-automate/get-started-logic-flow).
 
 Primeri uporabe tokov: 
 - Pošljite sporočilo v kanal storitve Microsoft Teams, če osvežitev vira podatkov ne uspe. 

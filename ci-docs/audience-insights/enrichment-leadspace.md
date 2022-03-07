@@ -3,22 +3,21 @@ title: Obogatitev profilov podjetij z neodvisnimi obogatitvami Leadspace
 description: Splošne informacije o neodvisni obogatitvi Leadspace.
 ms.date: 09/30/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: f89ef6842c21cf6b78154586f818beffbcdcffb9
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617474"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8230654"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obogatitev profilov podjetja z Leadspace (predogled)
 
-Leadspace je podjetje, ki se ukvarja s podatki in zagotavlja platformo s podatki o strankah za prodajo podjetjem. Omogoča, da okolja s poenotenimi profili strank na podlagi računov obogatijo njihove podatke. Obogatite *profile strank* z atributi, kot so velikost podjetja, lokacija ali panoga. Obogatite *profile stika* z atributi, kot so preverjanje naslova, osebe ali e-poštnega naslova.
+Leadspace je podjetje za podatkovne znanosti, ki ponuja platformo za podatke o strankah »podjetja podjetjem«. Omogoča, da okolja s poenotenimi profili strank na podlagi računov obogatijo njihove podatke. Obogatite *profile strank* z atributi, kot so velikost podjetja, lokacija ali panoga. Obogatite *profile stika* z atributi, kot so preverjanje naslova, osebe ali e-poštnega naslova.
 
 ## <a name="prerequisites"></a>Zahteve
 

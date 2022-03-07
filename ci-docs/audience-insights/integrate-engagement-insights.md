@@ -2,21 +2,23 @@
 title: Integracija spletnih podatkov iz vpogledov v interakcije z vpogledi v občinstvo
 description: Prenesite spletne podatke o strankah iz vpogledov v interakcije v vpoglede v občinstvo.
 ms.date: 06/24/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 76a53a897e90152707a7c1255ed5ed93a5f3b5a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+ms.openlocfilehash: 037e264658bc354618cff56a89645ef7552aeb13
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305038"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350565"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integracija spletnih podatkov iz vpogledov v interakcije z vpogledi v občinstvo
+
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../engagement-insights/includes/cc-beta-prerelease-disclaimer.md)]
 
 Stranke vsakodnevne transakcije pogosto opravljajo na spletnih mestih. Možnost vpogledov v interakcije (predogledna različica) v storitvi Dynamics 365 Customer Insights je priročna rešitev za integracijo spletnih podatkov kot vira. Poleg možnosti ogleda transakcijskih, demografskih ali vedenjskih podatkov lahko dejavnosti v spletu vidimo v enotnih profilih strank. Te profile lahko uporabimo za pridobitev dodatnih vpogledov, kot so segmenti, ukrepi ali predvidevanja za aktivacijo občinstva.
 
