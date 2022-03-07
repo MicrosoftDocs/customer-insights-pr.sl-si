@@ -5,16 +5,16 @@ ms.date: 06/25/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: JimsonChalissery
-ms.author: jimsonc
-ms.reviewer: mhart
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: jimsonc
 manager: shellyha
-ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b9b2e7fa862b595c6a364a7208e42295b4f9df83
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034563"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268890"
 ---
 # <a name="similar-customers-preview"></a>Podobne stranke (predogled)
 
@@ -50,7 +50,7 @@ Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdet
 Po obdelavi podobnega segmenta boste novi segment našli na seznamu na strani **Segmenti**.
 
 > [!div class="mx-imgBorder"]
-> ![Segment podobnih strank.](media/expanded-segment.png "Segment podobnih strank")
+> ![Segment podobnih strank](media/expanded-segment.png "Segment podobnih strank")
 
 V delovni vrstici izberite **Pogled**, da odprete podrobnosti o segmentu. Ta pogled vsebuje informacije o porazdelitvi rezultatov v [ocenah podobnosti](#about-similarity-scores). Vrednosti ocen podobnosti boste našli tudi v **Predogledu članov segmenta**.
 

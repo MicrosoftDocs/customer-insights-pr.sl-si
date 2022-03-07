@@ -1,26 +1,24 @@
 ---
 title: Vključitev podatkov prek povezovalnika Power Query
 description: Povezovalniki za podatkovne vire, ki temeljijo na Power Query.
-ms.date: 11/01/2020
-ms.reviewer: mhart
+ms.date: 09/29/2020
+ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732238"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406971"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezava z virom podatkov Power Query
 
-Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Večino teh konektorjev podpira Dynamics 365 Customer Insights. Dodajanje virov podatkov na podlagi povezovalnikov Power Query običajno sledi korakom, opisanim v naslednjem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Za več informacij glejte dokumentacijo o posameznih povezovalnikih v [sklicih na povezovalnike Power Query](/power-query/connectors/).
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
+Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Dynamics 365 Customer Insights podpira večino teh povezovalnikov. Dodajanje virov podatkov na podlagi povezovalnikov Power Query običajno sledi korakom, opisanim v naslednjem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Za več informacij glejte dokumentacijo o posameznih povezovalnikih v [sklicih na povezovalnike Power Query](https://docs.microsoft.com/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Ustvarjanje novega vira podatkov
 
@@ -30,10 +28,7 @@ Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Večino teh kon
 
 1. Izberite način **Uvozi podatke** in nato **Naprej**.
 
-1. Vnesite **Ime** za vir podatkov in izberite **Naprej**, da ustvarite vir podatkov. Smernice za poimenovanje: 
-   - Začnite s črko.
-   - Uporabljajte samo črke in številke. Posebni znaki in presledki niso dovoljeni.
-   - Uporabite od 3 do 64 znakov.
+1. Vnesite **Ime** za vir podatkov in izberite **Naprej**, da ustvarite vir podatkov.
 
 1. Izberite enega od [razpoložljivih povezovalnikov](#available-power-query-data-sources). Za ta primer izberemo povezovalnik **Besedilo/CSV**.
 
@@ -44,9 +39,9 @@ Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Večino teh kon
 1. Pogovorno okno **Power Query - Urejanje poizvedb** omogoča pregled in natančnejše določanje podatkov. Entitete, ki jih sistemi, opredeljeni v izbranem viru podatkov, prikažejo v levem podoknu.
 
    > [!div class="mx-imgBorder"]
-   > ![Pogovorno okno za urejanje poizvedb.](media/data-manager-configure-edit-queries.png "Pogovorno okno urejanja poizvedb")
+   > ![Pogovorno okno urejanja poizvedb](media/data-manager-configure-edit-queries.png "Pogovorno okno urejanja poizvedb")
 
-1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v oknu Power Query, da uporabite pretvorbe. Vsaka pretvorba je navedena pod **Uporabljeni koraki**. Power Query ponuja številne vnaprej vgrajene možnosti preoblikovanja. Če želite več informacij, glejte razdelek [Pretvorbe Power Query](/power-query/power-query-what-is-power-query#transformations).
+1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v oknu Power Query, da uporabite pretvorbe. Vsaka pretvorba je navedena pod **Uporabljeni koraki**. Power Query ponuja številne vnaprej vgrajene možnosti preoblikovanja. Če želite več informacij, glejte razdelek [Pretvorbe Power Query](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
 
 1. Virom podatkov lahko dodate dodatne entitete tako, da izberete **Pridobi podatke** v pogovornem oknu **Urejanje poizvedb**.
 
@@ -61,7 +56,7 @@ Power Query ponuja širok nabor povezovalnikov za uvoz podatkov. Večino teh kon
 
 ## <a name="available-power-query-data-sources"></a>Razpoložljivi viri podatkov Power Query
 
-Glejte [sklicevanje na povezovalnik Power Query](/power-query/connectors/) za posodobljen seznam povezovalnikov, ki jih lahko izberete za uvoz podatkov v Customer Insights. 
+Glejte [sklicevanje na povezovalnik Power Query](https://docs.microsoft.com/power-query/connectors/) za posodobljen seznam povezovalnikov, ki jih lahko izberete za uvoz podatkov v Customer Insights. 
 
 Povezovalniki s kljukico v stolpcu **Customer Insights (podatkovni toki)** so na voljo za ustvarjanje novih virov podatkov, ki temeljijo na Power Query. Preglejte dokumentacijo določenega povezovalnika, če želite izvedeti več o njegovih predpogojih, omejitvah in drugih podrobnostih.
 
@@ -74,16 +69,11 @@ Povezovalniki s kljukico v stolpcu **Customer Insights (podatkovni toki)** so na
 
 1. Pri vpogledih v občinstvo izberite **Podatki** > **Viri podatkov**.
 
-2. Izberite navpične tri pike poleg tistega vira podatkov, ki ga želite spremeniti, nato pa v spustnem meniju izberite **Uredi**.
+2. Izberite navpične tri pike poleg vira podatkov, ki ga želite spremeniti, in na spustnem meniju izberite **Uredi**.
 
    > [!div class="mx-imgBorder"]
-   > ![Možnost urejanja.](media/edit-option-data-sources.png "Možnost urejanja")
+   > ![Možnost urejanja](media/edit-option-data-sources.png "Možnost urejanja")
 
-   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
-   
 3. Uporabite svoje spremembe in pretvorbe v pogovornem oknu **Power Query - Urejanje poizvedb**, kot je opisano v razdelku [Ustvari nov vir podatkov](#create-a-new-data-source).
 
 4. Izberite **Shrani** v Power Query po zaključitvi sprememb, da shranite spremembe.
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

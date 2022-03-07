@@ -2,19 +2,19 @@
 title: Predvidevanje življenjske vrednosti stranke (CLV)
 description: Predvidevajte prihodnje potencialne prihodke za aktivne stranke.
 ms.date: 02/05/2021
-ms.reviewer: mhart
+ms.reviewer: wameng
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: wameng
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035389"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268614"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predvidevanje življenjske vrednosti stranke (CLV) (predogled)
 
@@ -38,11 +38,11 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
 - Identifikator stranke: enolični identifikator, ki ustreza transakcijam posamezni stranki
 
 - Zgodovina transakcij: dnevnik zgodovine transakcij s spodnjo semantično podatkovno shemo
-    - **ID transakcije**: enolični identifikator vsake transakcije
-    - **Datum transakcije**: datum, po možnosti časovni žig vsake transakcije
-    - **Transakcijski znesek**: denarna vrednost (na primer prihodek ali stopnja dobička) vsake transakcije
-    - **Oznaka, dodeljena vračilom** (neobvezno): logična vrednost, ki označuje, ali je transakcija vračilo 
-    - **ID izdelka** (neobvezno): ID izdelka, vključenega v transakcijo
+    - ID transakcije: enolični identifikator vsake transakcije
+    - Datum transakcije: datum, po možnosti časovni žig vsake transakcije
+    - Transakcijski znesek: denarna vrednost (na primer prihodek ali stopnja dobička) vsake transakcije
+    - Oznaka, dodeljena vračilom (neobvezno): logična vrednost, ki označuje, ali je transakcija vračilo 
+    - ID izdelka (neobvezno): ID izdelka, vključenega v transakcijo
 
 - Dodatni podatki (izbirno), na primer
     - Spletne dejavnosti: zgodovina obiska spletnega mesta, zgodovina e-pošte
@@ -53,20 +53,10 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
     - Identifikatorji strank za preslikavo dejavnosti v stranke
     - Podatki o dejavnosti, ki vsebujejo ime in datum dejavnosti
     - Semantična podatkovna shema za dejavnosti vključuje: 
-        - **Primarni ključ**: enolični identifikator dejavnosti
-        - **Časovni žig**: datum in ura dogodka, ki ga je prepoznal primarni ključ
-        - **Dogodek (ime aktivnosti)**: ime dogodka, ki ga želite uporabiti
-        - **Podrobnosti (znesek ali vrednost)**: podrobnosti o dejavnosti stranke
-
-- Predlagane lastnosti podatkov:
-    - Zadostni zgodovinski podatki: vsaj eno leto transakcijskih podatkov. Po možnosti dve do tri leta transakcijskih podatkov za predvidevanje življenjske vrednostni strank za eno leto.
-    - Več nakupov na stranko: v idealnem primeru vsaj dve do tri transakcije na ID stranke, po možnosti na več datumov.
-    - Število strank: vsaj 100 enoličnih strank, po možnosti več kot 10.000 strank. Model bo propadel z manj kot 100 strankami in nezadostnimi zgodovinskimi podatki
-    - Popolnost podatkov: manj kot 20 % manjkajočih vrednosti v obveznih poljih vhodnih podatkov   
-
-> [!NOTE]
-> - Model potrebuje zgodovino transakcij vaših strank. Trenutno je mogoče konfigurirati samo eno entiteto zgodovine transakcij. Če je več entitet nakupov/transakcij, jih lahko pred uvozom podatkov združite v storitvi Power Query.
-> - Za dodatne podatke o dejavnostih strank (neobvezno) pa lahko dodate toliko entitet dejavnosti strank, kolikor želite, da jih model upošteva.
+        - Primarni ključ: enolični identifikator dejavnosti
+        - Časovni žig: datum in ura dogodka, ki ga je prepoznal primarni ključ
+        - Dogodek (ime aktivnosti): ime dogodka, ki ga želite uporabiti
+        - Podrobnosti (znesek ali vrednost): podrobnosti o dejavnosti stranke
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Ustvarjanje predvidevanja življenjske vrednosti stranke
 
@@ -86,7 +76,7 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
    Privzeto je enota nastavljena na mesece. Spremenite jo lahko v leta, da pogledate dlje v prihodnost.
 
    > [!TIP]
-   > Če želite natančno napovedati življenjsko vrednost stranke za nastavljeno časovno obdobje, potrebujete zgodovinske podatke o primerljivem obdobju. Če želite na primer ustvariti predvidevanje življenjske vrednostni strank za naslednjih 12 mesecev, je priporočljivo, da imate vsaj 18–24 mesecev zgodovinskih podatkov.
+   > Če želite natančno napovedati življenjsko vrednost stranke za nastavljeno časovno obdobje, potrebujete zgodovinske podatke o primerljivem obdobju. Če želite na primer ustvariti predvidevanje za naslednjih 12 mesecev, je priporočljivo, da imate vsaj 18–24 mesecev zgodovinskih podatkov.
 
 1. Navedite, kaj **aktivne stranke** pomenijo v vašem podjetju. Nastavite časovni okvir, v katerem mora imeti stranka vsaj eno transakcijo, da se šteje za aktivno stranko. Model bo življenjsko vrednost stranke napovedal samo za aktivne stranke. 
    - **Naj model izračuna interval nakupa (priporočljivo)**: model analizira podatke in določi časovno obdobje na podlagi preteklih nakupov.
@@ -149,6 +139,7 @@ Podatki, ki odražajo interakcije ključnih strank (na primer dnevnike za splet,
 
 1. Izberite **Naprej**.
 
+
 ### <a name="review-and-run-the-model-configuration"></a>Pregled in zagon konfiguracije modela
 
 1. Pri koraku **Pregled podrobnosti o modelu** preverite veljavnost konfiguracije predvidevanja. Na kateri koli del konfiguracije predvidevanja se lahko vrnete tako, da izberete možnost **Uredi** pod prikazano vrednostjo. Korak konfiguracije lahko izberete tudi s kazalnika napredka.
@@ -169,10 +160,11 @@ Podatki, ki odražajo interakcije ključnih strank (na primer dnevnike za splet,
 - **Stanje:** stanje izvajanja predvidevanja.
     - **V čakalni vrsti:** predvidevanje čaka, da se zaključijo drugi postopki.
     - **Osveževanje:** predvidevanje se trenutno izvaja za ustvarjanje rezultatov, ki bodo združeni v izhodni entiteti.
-    - **Ni uspelo:** izvajanje predvidevanja ni uspelo. [Preglejte dnevniške datoteke](manage-predictions.md#troubleshoot-a-failed-prediction) za več podrobnosti.
+    - **Ni uspelo:** izvajanje predvidevanja ni uspelo. [Preglejte dnevniške datoteke](#troubleshoot-a-failed-prediction) za več podrobnosti.
     - **Uspelo:** predvidevanje je uspelo. Pod navpičnimi tremi pikami izberite možnost **Pogled** za pregled rezultatov predvidevanja.
 - **Urejeno**: datum, ko je bila spremenjena konfiguracija predvidevanja.
 - **Nazadnje osveženo**: datum, ko je predvidevanje osvežilo rezultate v izhodni entiteti.
+
 
 ### <a name="review-prediction-results"></a>Pregled rezultatov predvidevanja
 
@@ -189,24 +181,24 @@ Na strani z rezultati so trije primarni razdelki podatkov.
   Na podlagi definicije strank z visoko vrednostjo, ki je bila podana med konfiguriranjem predvidevanja, sistem oceni, kako je model umetne inteligence deloval pri napovedovanju strank z visoko vrednostjo v primerjavi z osnovnim modelom.    
 
   Ocene so določene na podlagi naslednjih pravil:
-  - **A**, če model natančno napove vsaj 5 % več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
-  - **B**, če model natančno napove 0–5 % več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
-  - **C**, če model natančno napove manj kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
+  - A, če model natančno napove vsaj 5% več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
+  - B, če model natančno napove 0–5 % več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
+  - A, če model natančno napove manj kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
 
   Podokno **Ocena modela** prikazuje nadaljnje podrobnosti o zmogljivosti modela umetne inteligence in osnovnega modela. Osnovni model uporablja pristop, ki ne temelji na umetni inteligenci, za izračun življenjske vrednosti strank, ki temelji predvsem na preteklih nakupih, ki jih opravijo stranke.     
   Standardna formula, ki se uporablja za izračun življenjske vrednosti strank v osnovnem modelu:    
 
-  _**Življenjska vrednost stranke za posamezno stranko** = povprečni znesek mesečnega nakupa, ki ga stranka opravi v oknu dejavnih strank * število mesecev v obdobju predvidevanja življenjske vrednostni strank * splošna stopnja ohranitve vseh strank_
+  *Življenjska vrednost stranke za posamezno stranko = povprečni znesek mesečnega nakupa, ki ga stranka opravi v oknu dejavnih strank * število mesecev v obdobju predvidevanja življenjske vrednostni strank * splošna stopnja ohranitve vseh strank*
 
   Model umetne inteligence se primerja z osnovnim modelom na podlagi dveh meritev uspešnosti modela.
   
   - **Uspešnost pri predvidevanju strank z visoko vrednostjo**
 
-    Oglejte si razliko pri napovedovanju kupcev z visoko vrednostjo z uporabo modela umetne inteligence v primerjavi z osnovnim modelom. 84-odstotna stopnja uspešnosti na primer pomeni, da je od vseh strank z visoko vrednostjo v podatkih za usposabljanje model umetne inteligence lahko natančno zajel 84 % strank. Nato to stopnjo uspešnosti primerjamo s stopnjo uspešnosti osnovnega modela, da poročamo o relativni spremembi. Ta vrednost se uporablja za dodelitev ocene modelu.
+  Oglejte si razliko pri napovedovanju kupcev z visoko vrednostjo z uporabo modela umetne inteligence v primerjavi z osnovnim modelom. 84-odstotna stopnja uspešnosti na primer pomeni, da je od vseh strank z visoko vrednostjo v podatkih za usposabljanje model umetne inteligence lahko natančno zajel 84 % strank. Nato to stopnjo uspešnosti primerjamo s stopnjo uspešnosti osnovnega modela, da poročamo o relativni spremembi. Ta vrednost se uporablja za dodelitev ocene modelu.
 
   - **Metrika napak**
     
-    Druga meritev omogoča pregled splošne uspešnosti modela z vidika napak pri predvidevanju prihodnjih vrednosti. Za oceno te napake uporabljamo meritev korena povprečne kvadratne napake (RMSE). Meritev RMSE je standardni način merjenja napak modela pri predvidevanju kvantitativnih podatkov. Meritev RMSE modela umetne inteligence se primerja z meritvijo RMSE osnovnega modela, poročana pa je relativna razlika.
+  Druga meritev omogoča pregled splošne uspešnosti modela z vidika napak pri predvidevanju prihodnjih vrednosti. Za oceno te napake uporabljamo meritev korena povprečne kvadratne napake (RMSE). Meritev RMSE je standardni način merjenja napak modela pri predvidevanju kvantitativnih podatkov. Meritev RMSE modela umetne inteligence se primerja z meritvijo RMSE osnovnega modela, poročana pa je relativna razlika.
 
   Model umetne inteligence daje prednost natančnemu razvrščanju strank glede na vrednost, ki jo prinašajo podjetju. Tako se za pridobitev končne ocene modela uporablja le stopnja uspešnosti predvidevanja strank z visoko vrednostjo. Meritev RMSE je občutljiva na odstopanja. V primerih, ko imate majhen delež strank z izjemno visokimi vrednostmi nakupa, splošna meritev RMSE morda ne zagotovi celotne slike o uspešnosti modela.   
 
@@ -214,8 +206,28 @@ Na strani z rezultati so trije primarni razdelki podatkov.
 
 - **Najvplivnejši dejavniki** : pri ustvarjanju predvidevanja življenjske vrednosti stranke upoštevamo različne dejavnike na podlagi vhodnih podatkov, posredovanih modelu umetne inteligence. Za vsakega od dejavnikov je izračunan pomen za združena predvidevanja, ki jih ustvari model. Te dejavnike lahko uporabite za pomoč pri preverjanju rezultatov predvidevanja. Ti dejavniki omogočajo tudi večji vpogled v najvplivnejše dejavnike, ki so prispevali k predvidevanju življenjske vrednosti stranke za vse vaše stranke.
 
-## <a name="manage-predictions"></a>Upravljanje predvidevanj
+## <a name="refresh-a-prediction"></a>Osveževanje predvidevanja
 
-Predvidevanja je mogoče optimizirati, zanje odpraviti napake, osvežiti ali izbrisati. Preglejte poročilo o uporabnosti vhodnih podatkov, če želite izvedeti, kako narediti predvidevanje hitrejše in zanesljivejše. Za več informacij glejte razdelek [Upravljanje predvidevanj](manage-predictions.md).
+Napovedi se samodejno osvežijo glede na isti [urnik osveževanja podatkov](system.md#schedule-tab), kot je konfiguriran v nastavitvah. Lahko jih osvežite tudi ročno.
+
+1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
+2. Izberite navpične tri pike poleg predvidevanja, ki ga želite osvežiti.
+3. Izberite **Osveži**.
+
+## <a name="delete-a-prediction"></a>Brisanje predvidevanja
+
+Če izbrišete predvidevanje, odstranite tudi njegovo izhodno entiteto.
+
+1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
+2. Izberite navpične tri pike poleg predvidevanja, ki ga želite izbrisati.
+3. Izberite **Izbriši**.
+
+## <a name="troubleshoot-a-failed-prediction"></a>Odpravite težave z neuspešnim predvidevanjem
+
+1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
+2. Izberite navpične tri pike poleg predvidevanja, za katere si želite ogledati dnevnike napak.
+3. Izberite **Dnevniki**.
+4. Preglejte vse napake. Pride lahko do več vrst napak, ki opisujejo, kakšno stanje je povzročilo napako. Napaka, za katero ni dovolj podatkov za natančno predvidevanje, se na primer običajno reši z nalaganjem dodatnih podatkov v vpoglede v občinstvo.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

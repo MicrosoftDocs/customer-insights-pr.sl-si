@@ -1,19 +1,20 @@
 ---
 title: Izboljšanje podatkov o podjetju
 description: Obogatite in normalizirajte podatke podjetja z Microsoftovimi modeli.
-ms.date: 01/19/2022
+ms.date: 11/15/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229423"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813937"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obogatitev profilov podjetij z izboljšanimi podatki o podjetju
 
@@ -63,7 +64,7 @@ Pri izboljšanih podatkih obstaja nekaj omejitev. Model ne podpira elementov na 
 
 1. Izberite možnost **Nabor podatkov o stranki** in izberite entiteto, ki vsebuje naslove, ki jih želite obogatiti. Izberete lahko entiteto *Stranka* za obogatitev naslovov v vseh vaših profilih strank ali pa entiteto segmenta za obogatitev naslovov samo v profilih strank v tem segmentu.
 
-1. Izberite, katere vrste polj iz profilov vašega podjetja naj se uporabljajo za ujemanje z Microsoftovimi zbranimi podatki o podjetju. Ta izbira vpliva na polja za preslikavo, do katerih imate dostop v naslednjem koraku.
+1. Izberite vrsto polj iz profilov vašega podjetja za primerjavo z Microsoftovimi zbranimi podatki o podjetju. Ta izbira vpliva na polja za preslikavo, do katerih imate dostop v naslednjem koraku.
 
 1.  Preslikajte polja podjetja iz vaše enotne stranke. Več ključnih identifikatorjev in polj preslikate, večja je verjetnost za višjo stopnjo ujemanja.
 
@@ -81,17 +82,7 @@ Pri izboljšanih podatkih obstaja nekaj omejitev. Model ne podpira elementov na 
 
 Po končanem postopku obogatitve lahko podatke o na novo obogatenih profilih strank pregledate v možnosti **Moje obogatitve**. Poleg tega boste našli čas zadnje posodobitve in število obogatenih profilov.
 
-Vzorec obogatenih podatkov si lahko ogledate v **Obogaten predogled strank** ploščice. Izberite **Poglej več** in izberite **Podatki** zavihek za dostop do podrobnega pogleda vsakega obogatenega profila.
-
-### <a name="overview-card"></a>Pregledna kartica
-
-Pregledna kartica prikazuje podrobnosti o kritju obogatitve. 
-
-* **Podjetja obdelana in spremenjena** : Število uspešno obogatenih profilov podjetij strank.
-
-* **Podjetja obdelana in nespremenjena** : število profilov podjetij strank, ki so bili prepoznani, vendar nespremenjeni. To se običajno zgodi, ko so vhodni podatki veljavni in jih z obogatitvijo ni mogoče izboljšati.
-
-* **Podjetja niso obdelana in nespremenjena** : Število profilov podjetij strank, ki niso bili prepoznani. To se običajno zgodi za vhodne podatke, ki so neveljavni ali jih obogatitev ne podpira.
+Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izberete **Ogled obogatenih podatkov**.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

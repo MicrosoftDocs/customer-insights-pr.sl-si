@@ -2,19 +2,19 @@
 title: Izvozite podatke Customer Insights v DotDigital
 description: Preberite o konfiguraciji povezave s storitvijo DotDigital.
 ms.date: 11/14/2020
-ms.reviewer: philk
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ed6bd40e8575fc90258f79f60abffe54f136d274
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 51a28bdf0de34f0555d8ad7e3d13b2ef8911d417
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644468"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598037"
 ---
 # <a name="connector-for-dotdigital-preview"></a>Povezovalnik za DotDigital (predogled)
 
@@ -72,3 +72,6 @@ Lahko [izvozite podatke na zahtevo](export-destinations.md). Izvoz se bo zagnal 
 
 Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v DotDigital, dovoljujete prenos podatkov izven meje zagotavljanja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da DotDigital izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš skrbnik za Dynamics 365 Customer Insights lahko kadar koli odstrani ta cilj izvoza in s tem prekine uporabljati to funkcijo.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

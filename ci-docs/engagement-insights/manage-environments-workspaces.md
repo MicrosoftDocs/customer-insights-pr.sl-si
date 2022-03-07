@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645466"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673817"
 ---
 # <a name="manage-environments-and-workspaces"></a>Upravljanje okolij in delovnih prostorov
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645466"
 
 Ta tema predstavlja, kako upravljati delovne prostore in okolja, ko so že ustvarjena. 
 
-- *Delovni prostor* je prostor za shranjevanje ter upravljanje dogodkov in poročil. Tam si lahko v realnem času ogledate dejavnost uporabnikov. Ko ustvarite delovni prostor, izberete vrsto podatkov, ki jo boste poslali delovnemu prostoru. Trenutno so podprti spletni podatki in mobilne aplikacije. Za več informacij glejte razdelek [Ustvarjanje delovnega prostora in dodajanje članov](create-workspace.md).
+- *Delovni prostor* je prostor za shranjevanje ter upravljanje dogodkov in poročil. Tam si lahko v realnem času ogledate dejavnost uporabnikov. Ko ustvarite delovni prostor, izberete vrsto podatkov, ki jo boste poslali delovnemu prostoru. Trenutno so podprti spletni podatki in mobilne aplikacije. Za več informacij glejte [Ustvarite nov delovni prostor in dodajte člane](create-workspace.md).
 
 - *Okolje* je prostor, kjer upravljate s svojimi delovnimi prostori in povezavami. Za več informacij glejte [Ustvarjanje novega okolja](create-new-environment.md).
 
@@ -47,7 +47,7 @@ V okolju lahko hkrati vzdržujete več delovnih prostorov. Od vaše [vloge](user
 
 ### <a name="delete-a-workspace"></a>Brisanje delovnega prostora
 
-Če izbrišete delovni prostor, boste trajno odstranili vso vsebino, podatke, nastavitve in dovoljenja tega prostora. Tega ni mogoče razveljaviti.
+Če izbrišete delovni prostor, trajno odstranite vso njegovo vsebino, podatke, nastavitve in dovoljenja. Tega ni mogoče razveljaviti.
 
 1. Odprite **Skrbnik** > **Delovni prostor** in izberite **Nastavitve**.
 
@@ -71,19 +71,11 @@ Kot skrbnik okolja lahko do okolja dostopate v levem podoknu za krmarjenje. Konf
 
 :::image type="content" source="media/environment-edit.png" alt-text="Skrbniško središče za okolje.":::
 
-### <a name="rename-an-environment"></a>Preimenovanje okolja
+### <a name="edit-an-environment-name"></a>Uredite ime okolja
 
 1. Odprite **Skrbnik** > **Okolje** in izberite **Nastavitve**.
 
 1. Posodobite **Ime okolja** in izberite **Shrani**, da uveljavite spremembe.
-
-### <a name="manage-environment-members"></a>Upravljanje članov okolja
-
-1. Odprite **Skrbnik** > **Okolje** in izberite **Člani**.
-
-1. Izberite **Dodaj člane**, da posodobite člane in [dodelite vloge](user-roles.md). Trenutno je na voljo samo **Skrbnik okolja**.
-
-1. Izberite **Dodaj člane**, da jih dodate v svoje okolje.
 
 ### <a name="delete-an-environment"></a>Brisanje okolja
 
@@ -97,6 +89,14 @@ Skrbniki okolja lahko izbrišejo okolja. Preden lahko izbrišete okolje, morate 
 
 1. Izberite **Izbriši** za trajen izbris okolja.
 
+### <a name="manage-environment-members"></a>Upravljanje članov okolja
+
+1. Odprite **Skrbnik** > **Okolje** in izberite **Člani**.
+
+1. Izberite **Dodaj člane**, da posodobite člane in [dodelite vloge](user-roles.md). Trenutno je na voljo samo **Skrbnik okolja**.
+
+1. Izberite **Dodaj člane**, da jih dodate v svoje okolje.
+
 ## <a name="manage-connections"></a>Upravljanje povezav
 
 Vzpostavitev povezav z vpogledi v občinstvo vam omogoča, da si ogledate poročila v vpogledih v občinstvo na podlagi poenotenih profilov strank. 
@@ -107,7 +107,6 @@ Za več informacij glejte [Ustvarjanje povezave med vpogledi občinstva in vpogl
 
 Če želite zaščititi osebne podatke svoje stranke, lahko izbrišete ali izvozite podatke, ki omogočajo prepoznavanje končnega uporabnika.
 
-Za več informacije glejte [Brisanje in izvoz podatkov o dogodkih, ki vsebujejo osebne podatke](delete-export-personal-data.md).
-
+Za več informacije glejte [Brisanje in izvoz podatkov o dogodkih, ki vsebujejo osebne podatke](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

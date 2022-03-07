@@ -2,19 +2,19 @@
 title: Vzorčni vodnik za predvidevanje priporočil za izdelke
 description: Uporabite ta vzorčni vodnik, da preskusite model predvidevanja priporočil za vnaprej pripravljene izdelke.
 ms.date: 02/10/2021
-ms.reviewer: mhart
+ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 0ee873d9b7caa5f891cb2d5b8c665dec90ad0e59
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129919"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270534"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje priporočil za izdelke (predogled)
 
@@ -22,7 +22,7 @@ S pomočjo spodnjih vzorčnih podatkov vas bomo vodili skozi celotni primer pred
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek svoje spletne strani Contoso Coffee. Njihov cilj je razumeti, katere izdelke priporočiti svojim rednim strankam. Če vedo, katere izdelke stranke bolj **verjetno kupujejo**, si prihranijo tržna prizadevanja, saj se lahko osredotočijo na določene izdelke.
+Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek njihovega spletnega mesta Contoso Coffee. Njihov cilj je razumeti, katere izdelke priporočiti svojim rednim strankam. Če vedo, katere izdelke stranke bolj **verjetno kupujejo**, si prihranijo tržna prizadevanja, saj se lahko osredotočijo na določene izdelke.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -65,7 +65,7 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
 
 1. V stranskem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **NakupiEPoslovanja**.
 
-1. **Shranite** vir podatkov.
+1. Shranite vir podatkov.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Vnos podatkov o strankah iz sheme za zvestobo
@@ -83,11 +83,11 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
 
 1. V desnem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **zvesteStranke**.
 
-1. **Shranite** vir podatkov.
+1. Shranite vir podatkov.
 
 ## <a name="task-2---data-unification"></a>2. opravilo – poenotenje podatkov
 
-Po uvozu podatkov se začne postopek poenotenja podatkov za ustvarjanje enotnega profila stranke. Če želite več informacij, glejte [Poenotenje podatkov](data-unification.md).
+Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdelavo poenotenega profila stranke. Če želite več informacij, glejte [Poenotenje podatkov](data-unification.md).
 
 ### <a name="map"></a>Preslikava
 
@@ -156,7 +156,7 @@ Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje 
 
    - **Število izdelkov**: nastavite to vrednost na **5**. Ta nastavitev določi, koliko izdelkov želite priporočiti svojim strankam.
 
-   - **Pričakovani ponovljeni nakupi**: izberite **Da**, če želite izdelke vključiti v priporočilo izdelkov, ki so jih vaše stranke že kupile.
+   - **Ali želite predlagati izdelke, ki so jih vaše stranke nedavno kupile?**: izberite **Da**, če želite, da so v priporočilu vključeni izdelki, ki so jih stranke že kupile.
 
    - **Obdobje zajema podatkov:** izberite vsaj **365 dni**. Ta nastavitev določa obdobje zajema podatkov strankine dejavnosti, ki ga bo model upošteval pri vnosu priporočil.
    

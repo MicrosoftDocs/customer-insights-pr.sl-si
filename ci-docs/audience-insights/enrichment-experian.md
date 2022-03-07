@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: fabc3cc9faf4e11f46c396782b561ef61cd0f6d5
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: c54f6a00cb28b0ab11716c02aa8761dfa382f07e3360183b5d38b9720e890c21
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618541"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032640"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Profile strank obogatite z demografskimi podatki iz storitve Experian (predogled)
 
@@ -91,7 +91,7 @@ Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izber
 
 ## <a name="next-steps"></a>Naslednji koraki
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Nadgradite svoje obogatene podatke o strankah. Ustvarite [segmente](segments.md) in [mere](measures.md) ter celo [izvozite podatke](export-destinations.md) in tako svojim strankam zagotovite prilagojeno izkušnjo.
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 

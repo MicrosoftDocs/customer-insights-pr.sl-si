@@ -1,20 +1,20 @@
 ---
 title: Predvidevanje priporočil izdelkov
 description: Predvidite, katere izdelke bo stranka verjetno kupila ali imela z njimi interakcije.
-ms.date: 09/13/2021
+ms.date: 03/17/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: wmelewong
-ms.author: wameng
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494559"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556144"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predvidevanje priporočil izdelkov (predogled)
 
@@ -89,24 +89,23 @@ Poleg tega bodo v izhodnih podatkih tega modela podana priporočila na podlagi I
 
 ### <a name="add-required-data"></a>Dodajanje zahtevanih podatkov
 
-1. Izberite **Dodaj podatke** in izberite vrsto dejavnosti v stranskem podoknu, ki vsebuje zahtevane podatke o transakcijah ali zgodovini nakupov.
+1. Izberite možnost **Dodaj podatke** za **zgodovino transakcij stranke** in izberite entiteto, ki zagotavlja podatke o zgodovini transakcij/nakupov, kot je opisano v [zahtevah](#prerequisites).
 
-1. V razdelku **Izbor dejavnosti** izberite določene dejavnosti iz izbrane dejavnosti, na katere želite, da se osredotoči izračun.
+1. Preslikajte semantična polja v atribute v entiteti vaše zgodovine nakupov in izberite **Naprej**. Za opise polj si oglejte [pogoje](#prerequisites).
+   > [!div class="mx-imgBorder"]
+   > ![Določite odnos entitete.](media/product-recommendation-purchasehistorymapping.PNG "Stran z zgodovino nakupov, ki prikazuje semantične atribute, ki so preslikani v polja v izbrani entiteti zgodovine nakupov")
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Stransko podokno prikazuje izbiro določenih dejavnosti pod semantično vrsto.":::
-
-1. Če dejavnosti še niste preslikali v semantično vrsto, izberite **Uredi**, da to storite. Odpre se vodena izkušnja za preslikavo semantičnih dejavnosti. Podatke preslikajte v ustrezna polja izbrane vrste dejavnosti.
-
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Vrsta dejavnosti nastavitve strani.":::
-
-1. Ko preslikate dejavnost na ustrezno semantično vrsto, izberite **Naprej**, da nadaljujete 
- 
-1. Preslikajte semantične atribute v polja, ki so potrebna za zagon modela.
+1. Če polja niso izpolnjena, konfigurirajte odnos med entiteto zgodovine nakupov in entiteto *stranke*.
+    1. Izberite **Entiteta zgodovine nakupov**.
+    1. Izberite **Polje**, ki prepozna kupca v entiteti zgodovine nakupov. Povezovati se mora s primarnim ID-jem stranke vaše entitete *stranke*.
+    1. Izberite **Entiteto stranke**, ki se ujema z vašo primarno entiteto stranke.
+    1. Vnesite ime, ki opisuje odnos.
+       > [!div class="mx-imgBorder"]
+       > ![Stran z zgodovino nakupov, ki prikazuje vzpostavitev odnosa s stranko.](media/model-purchase-join.png "Stran z zgodovino nakupov, ki prikazuje vzpostavitev odnosa s stranko")
 
 1. Izberite **Shrani**.
 
 1. Izberite **Naprej**.
-
 
 ### <a name="configure-product-filters"></a>Konfiguracija filtrov izdelkov
 
@@ -146,7 +145,7 @@ Včasih so samo nekateri izdelki koristni ali primerni za vrsto predvidevanja, k
 
 1. Pojdite na zavihek **Moja predvidevanja** v možnosti **Obveščanje** > **Predvidevanja**.
    > [!div class="mx-imgBorder"]
-   > ![Pogled strani »Moja predvidevanja«.](media/product-recommendation-mypredictions.PNG "Pogled strani »Moja predvidevanja«")
+   > ![Pogled strani Moja predvidevanja.](media/product-recommendation-mypredictions.PNG "Pogled strani »Moja predvidevanja«")
 
 1. Izberite predvidevanje, ki ga želite pregledati.
    - **Ime predvidevanja:** ime predvidevanja, navedeno pri ustvarjanju.

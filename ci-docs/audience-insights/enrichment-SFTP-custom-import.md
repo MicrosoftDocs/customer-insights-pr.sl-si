@@ -1,75 +1,56 @@
 ---
 title: Obogatitev z uvozom po meri SFTP
 description: Splošne informacije o obogatitvi uvoza po meri SFTP.
-ms.date: 04/09/2021
-ms.reviewer: mhart
+ms.date: 11/18/2020
+ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: jodahlMSFT
-ms.author: jodahl
+author: jdahl
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f92b36ac5364ea8586f9cbba7ba03178641555c0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f25dcc08d96d36507e47af0d7b184003ae095819
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304670"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269626"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogatite profile strank s podatki po meri (predogled)
 
-Uvoz po meri s protokolom za varen prenos datotek (SFTP) vam omogoča uvoz podatkov, ki jim ni treba iti skozi postopek poenotenja podatkov. To je prilagodljiv, varen in enostaven način za vnos podatkov. Uvoz po meri SFTP se lahko uporablja v kombinaciji z [izvozom SFTP](export-sftp.md), ki vam omogoča izvoz podatkov o profilih strank, ki so potrebni za obogatitev. Podatke je nato mogoče obdelati in obogatiti, s pomočjo uvoza po meri SFTP pa obogatene podatke vrniti nazaj k možnosti vpogledov občinstva Dynamics 365 Customer Insights.
+Uvoz po meri s protokolom za varen prenos datotek (SFTP) vam omogoča uvoz podatkov, ki jim ni treba iti skozi postopek poenotenja podatkov. To je prilagodljiv, varen in enostaven način za vnos podatkov. Uvoz po meri SFTP se lahko uporablja v kombinaciji z [izvozom SFTP](export-sftp.md), ki vam omogoča izvoz podatkov o profilih strank, ki so potrebni za obogatitev. Podatke lahko nato obdelamo in obogatimo ter uporabimo uvoz po meri SFTP, da obogatene podatke vrnemo nazaj k zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Zahteve
 
 Za konfiguracijo uvoza po meri SFTP morajo biti izpolnjeni naslednji predpogoji:
 
-- Ime in mesto (pot) datoteke, ki jo je treba uvoziti, se nahajata v gostitelju SFTP .
-- Obstaja datoteka z obliko zapisa *model.json*, ki določa [shemo za podatkovni model Common Data Model](/common-data-model/) za uvoz podatkov. Ta datoteka mora biti v istem imeniku kot datoteka za uvoz.
-- Skrbnik je že konfiguriral povezavo SFTP *oziroma* imate vi [skrbniška](permissions.md#administrator) dovoljenja. Potrebujete uporabniške poverilnice, URL in številko vrat za lokacijo SFTP, iz katere želite uvoziti podatke.
+- Imate uporabniške poverilnice (uporabniško ime in geslo) za lokacijo SFTP, od koder bodo uvoženi podatki.
+- Imate URL in številko vrat (običajno 22) za gostitelja STFP.
+- Pri gostitelju SFTP imate ime in lokacijo datoteke, ki jo želite uvoziti.
+- Tam je datoteka *model.json*, ki določa shemo za podatke, ki jih želite uvoziti. Ta datoteka mora biti v istem imeniku kot datoteka za uvoz.
+- Imate [skrbniško](permissions.md#administrator) dovoljenje.
 
-
-## <a name="configure-the-import"></a>Konfiguriranje uvoza
+## <a name="configuration"></a>Konfiguracija
 
 1. Pojdite v **Podatki** > **Obogatitev** in izberite zavihek **Odkrivanje**.
 
-1. Na **ploščici za uvoz po meri SFTP** izberite možnost **Obogatitev podatkov** in nato izberite možnost **Začetek**.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Ploščica za uvoz po meri SFTP.":::
-
-1. Na spustnem seznamu izberite možnost [povezava](connections.md). Če ni na voljo nobena povezava, se obrnite na skrbnika. Če ste skrbnik, lahko povezavo vzpostavite tako, da na spustnem seznamu izberete možnost **Dodaj povezavo**, nato pa **Uvoz po meri SFTP**.
-
-1. Izberite možnost **Poveži z uvozom po meri** za potrditev izbrane povezave.
-
-1.  Izberite **Naprej** in vnesite **Pot** ter **Ime podatkovne datoteke**, ki jo želite uvoziti.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Posnetek zaslona vnosa lokacije podatkov.":::
-
-1. Izberite možnost **Naprej** ter navedite ime obogatitve in izhodne entitete. 
-
-1. Po pregledu svoje izbire izberite možnost **Shrani obogatitev**.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfiguriranje povezave za uvoz uvoz po meri SFTP 
-
-Za konfiguriranje povezav morate biti skrbnik. Pri konfiguriranju obogatitve izberite možnost **Dodaj povezavo** *ali* odprite razdelek **Skrbnik** > **Povezave** in na ploščici Uvoz po meri izberite možnost **Nastavitev**.
-
-1. Vnesite ime povezave v polje za **prikazno ime**.
-
-1. Vnesite veljavno uporabniško ime, geslo in URL gostitelja za strežnik SFTP, v katerem se nahajajo podatki, ki jih želite uvoziti.
-
-1. Preberite in podajte soglasje za **Zasebnost podatkov in skladnost** tako, da potrdite polje **Strinjam se**.
-
-1. Izberite možnost **Potrdi** za potrditev konfiguracije.
-
-1. Ko zaključite s preverjanjem, lahko povezavo shranite tako, da izberete možnost **Shrani**.
+1. V **ploščici za uvoz po meri SFTP** izberite **Obogatitev podatkov**.
 
    > [!div class="mx-imgBorder"]
-   > ![Experian – stran za konfiguracijo povezave](media/enrichment-SFTP-connection.png "Experian – stran za konfiguracijo povezave")
+   > ![Ploščica za uvoz po meri SFTP](media/SFTP_Custom_Import_tile.png "Ploščica za uvoz po meri SFTP")
 
+1. Izberite **Začetek** in vnesite poverilnice in naslov strežnika SFTP. Na primer sftp://mysftpserver.com:22.
+
+1. Vnesite ime datoteke, ki vsebuje podatke in pot do datoteke v strežniku SFTP, če ni v korenski mapi.
+
+1. Potrdite vse vnose z izbiro možnosti **Povezovanje z uvozom po meri**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Pojavni meni za konfiguracijo uvoza po meri SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Pojavni meni za konfiguracijo uvoza po meri SFTP")
 
 ## <a name="defining-field-mappings"></a>Opredelitev preslikav polja 
 
-Imenik, ki vsebuje datoteko za uvoz v strežnik SFTP, mora vsebovati tudi datoteko *model.json*. Ta datoteka definira shemo za uvoz podatkov. Da bi določili preslikavo polja, mora biti za shemo uporabljen [Common Data Model](/common-data-model/). Preprost primer datoteke model.json je videti takole:
+Imenik, ki vsebuje datoteko za uvoz v strežnik SFTP, mora vsebovati tudi datoteko *model.json*. Ta datoteka definira shemo za uvoz podatkov. Shema mora uporabiti [Common Data Model](https://docs.microsoft.com/common-data-model/) za določanje preslikave polja. Preprost primer datoteke model.json je videti takole:
 
 ```
 {
@@ -123,6 +104,9 @@ Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izber
 
 ## <a name="next-steps"></a>Naslednji koraki
 
-Nadgradite svoje obogatene podatke o strankah. Ustvarite [segmente](segments.md) in [mere](measures.md) ter celo [izvozite podatke](export-destinations.md) in tako svojim strankam zagotovite prilagojeno izkušnjo.
+Nadgradite svoje obogatene podatke o strankah. Ustvarite [segmente](segments.md), [mere](measures.md) in [izvozite podatke](export-destinations.md), da svojim strankam zagotovite prilagojene izkušnje.
+
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

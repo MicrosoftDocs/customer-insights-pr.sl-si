@@ -1,7 +1,7 @@
 ---
-title: Obogatitev naslova (vsebuje video)
+title: Obogatitev izboljšave naslova
 description: Z Microsoftovimi modeli obogatite in uravnotežite podatke o naslovih za profile strank.
-ms.date: 12/16/2021
+ms.date: 04/21/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934943"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305452"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogatitev profilov strank z izboljšanimi naslovi
 
@@ -23,8 +23,6 @@ Naslovi v vaših podatkih so lahko nestrukturirani, nepopolni ali napačni. Upor
 ## <a name="how-we-enhance-addresses"></a>Kako izboljšujemo naslove?
 
 Naš model gre skozi dvostopenjski postopek za izboljšanje naslova. Najprej razčleni naslov, da prepozna njegove komponente, in jih postavi v strukturirano obliko. Nato s pomočjo umetne inteligence popravimo, dopolnimo in standardiziramo vrednosti v naslovu.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Primer
 
@@ -60,10 +58,6 @@ Trenutno podpiramo obogatitev naslovov v teh državah ali regijah:
 
 - Avstralija
 - Kanada
-- Francija
-- Nemčija
-- Italija
-- Japonska
 - Združeno kraljestvo
 - Združene države
 
@@ -102,18 +96,8 @@ Po končanem postopku obogatitve lahko podatke o na novo obogatenih profilih str
 
 Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izberete **Ogled obogatenih podatkov**.
 
-### <a name="overview-card"></a>Pregledna kartica
-
-Pregledna kartica prikazuje podrobnosti o kritju obogatitve. 
-
-* **Stranke obdelane in spremenjene** : število uspešno obogatenih profilov strank.
-
-* **Stranke obdelane in niso spremenjene** : število profilov strank, ki so bili prepoznani, vendar nespremenjeni. Običajno se zgodi, ko so vhodni podatki veljavni in jih z obogatitvijo ni mogoče izboljšati.
-
-* **Stranke niso obdelane in niso spremenjene** : Število profilov, ki niso bili prepoznani. Običajno za vhodne podatke, ki so neveljavni ali niso podprti z obogatitvijo.
-
 ## <a name="next-steps"></a>Naslednji koraki
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Nadgradite svoje obogatene podatke o strankah. Ustvarite [segmente](segments.md) in [mere](measures.md) ter celo [izvozite podatke](export-destinations.md) in tako svojim strankam zagotovite prilagojeno izkušnjo.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

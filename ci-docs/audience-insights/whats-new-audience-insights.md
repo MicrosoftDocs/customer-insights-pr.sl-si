@@ -1,7 +1,7 @@
 ---
 title: Nove in prihajajoče funkcije
 description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
-ms.date: 11/02/2020
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4650024"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598502"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Navdušeno sporočamo, da so najnovejše posodobitve pripravljene! V tem članku so povzete funkcije predogledne različice za javnost, splošne izboljšave razpoložljivosti in posodobitve funkcij. Če si želite ogledati dolgoročne načrte za funkcije, glejte [Načrti za izdajo storitev Dynamics 365 in Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Navdušeno sporočamo, da so najnovejše posodobitve pripravljene! V tem članku so povzete funkcije predogledne različice za javnost, splošne izboljšave razpoložljivosti in posodobitve funkcij. Če si želite ogledati dolgoročne načrte za funkcije, glejte [Načrti za izdajo storitev Dynamics 365 in Power Platform](/dynamics365/release-plans/).
 
 Če želite izvedeti več o zmogljivostih, načrtovanih v zadnjih šestih mesecih, si lahko ogledate tudi naslednji videoposnetek.
 
@@ -30,6 +30,111 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Posodobitve februarja 2021
+
+Posodobitve v februarju 2021 vključujejo več funkcij, nadgradnje zmogljivosti in popravke napak.
+
+#### <a name="extensibility"></a>Razširljivost
+
+- **Izvoz segmentov v AdRoll**
+
+  Cilje za izvoz smo razširili na storitev AdRoll. Zdaj lahko izvozite segmente iz Customer Insights v občinstva AdRoll in jih uporabite kot osnovni model za oglaševanje. Če želite več informacij, glejte razdelek [Povezovalnik za AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmenti
+ 
+- **Podvajanje segmenta**
+  
+  Če želite na podlagi obstoječega segmenta ustvariti novega, lahko segment podvojite segment in ga uredite, da ga še izboljšate. 
+
+- **Dodajanje dodatnih atributov segmentu**
+
+  Zdaj lahko v izhod segmenta vključite atribute, tudi če ti atributi niso del profila stranke. Vključite na primer ID-je naročnin v segment, čeprav je del naročniške entitete, ki ima razmerje M:1 z entiteto stranke. Dokler atribut pripada entiteti, povezani z entiteto stranke, lahko te atribute vključite.  
+
+#### <a name="predictions"></a>Predvidevanja
+
+- **Ustvarjanje predvidenih priporočil izdelkov**
+
+  Eden prvih korakov za izboljšanje poslovnega prihodka in povečanje zvestobe strank s prilagajanjem in sodelovanjem je razumeti, za nakup česa se zanimajo stranke. Podajanje priporočil za izdelke, ki niso usklajeni z interesi vaše stranke, lahko ustvari občutek nepovezanosti med stranko in vašim podjetjem ter na koncu omeji skupni potencialni prihodek in izkušnjo stranke. 
+
+  Z lastnimi podatki lahko zdaj ustvarite predvidevanja za izdelke, ki jih bodo vaše stranke verjetno kupile v prihodnosti. Za več informacij glejte [Predvidevanje priporočil izdelkov](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Skrbništvo sistema
+
+- **Okolje za kopiranje podpira več vrst virov podatkov**
+
+  Skrbniki lahko kopirajo konfiguracije okolja v novo okolje v isti organizaciji. Ta funkcija razširja funkcionalnost okolja za kopiranje za primere, v katerih so uporabljeni viri podatkov, ki temeljijo na jezeru podatkov Common Data Service, ali mapa Common Data Model.
+
+## <a name="january-2021-updates"></a>Posodobitve v januarju 2021
+
+Posodobitve v januarju 2021 vključujejo številne funkcije, nadgradnje učinkovitosti delovanja in popravke napak.
+
+#### <a name="extensibility"></a>Razširljivost
+
+- **Razširjena funkcionalnost in izboljšana učinkovitost delovanja za izvoz SFTP** Zdaj lahko izvozite vse izhodne entitete rešitve Customer Insights v gostitelja SFTP. Izvoz je bil predhodno omejen na segmentne entitete. Poleg tega učinkovitost delovanja izvoza SFTP omogoča večjo količino podatkov v krajšem času, odvisno od učinkovitosti delovanja vašega gostitelja SFTP.    
+  Za več informacij glejte [Povezovalnik za SFTP (predogled)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmenti
+
+- **Predlagani segmenti za izboljšanje meritev, ki jih omogoča strojno učenje** Obstaja nov način odkrivanja in ustvarjanja segmentov. Sistem uporablja model umetne inteligence za predlaganje segmentov, ki lahko pomagajo izboljšati KPI (mera), kateremu že sledite. Prikazujemo obseg vpliva atributov, ki jih izberete na eno mero ali drug primarni atribut. Ti podatki pomagajo najti morebitne segmente, ki predstavljajo priložnosti.    
+  Za več informacij glejte [Predlagani segmenti (predogled)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Poenotenje podatkov
+
+- **Izboljšana izkušnja povezovanja** Izkušnja povezovanja je bila posodobljena v območju poenotenja podatkov. Omogoča vam konfiguriranje in ogled pravil za povezovanje, vključno s podrobnimi statističnimi podatki, ki dodatno pojasnijo, kako deluje povezovanje. Obstajajo možnosti, da onemogočite pravilo za povezovanje, tako da ni več aktivno, hkrati pa ohranite konfiguracijo, pravila za povezovanje »povleci in spusti« in še več.
+  Za več informacij glejte [Povezovanje entitet](match-entities.md).
+
+- **Rezultat odstranjevanja podvojenih elementov iz postopka ujemanja je na voljo kot entiteta** Rezultat odstranjevanja podvojenih elementov iz postopka ujemanja je za nadaljnjo analizo zapisan v ločeno entiteto. Ta entiteta je sestavljena iz polj, uporabljenih v postopku odstranjevanja podvojenih elementov, in zapisa zmagovalca ter ustreznih nadomestnih zapisov, ki se spojijo z zapisom zmagovalca.
+  Za več informacij glejte [Rezultat odstranjevanja podvojenih elementov kot entiteta](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Skrbništvo sistema
+
+- **Brezhibno deljenje podatkov s storitvijo Microsoft Dataverse** Zdaj lahko rezultate storitve Customer Insights delite z aplikacijami Microsoft Dataverse z uporabo shrambe Data Lake, ki jo upravlja rešitev Microsoft Dataverse. Ko okolje Dataverse povežete s storitvijo Customer Insights, lahko omogočite skupno rabo podatkov.
+  Za več informacij glejte [Upravljanje okolij](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>Posodobitve v decembru 2020
+
+Posodobitve v decembru 2020 vključujejo številne funkcije, nadgradnje učinkovitosti delovanja in popravke napak.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Nove in posodobljene funkcije v decembru 2020
+
+#### <a name="data-enrichment"></a>Obogatitev podatkov
+
+- **Izboljšana obogatitev afinitete blagovnih znamk in zanimanj**
+  
+  Poenostavili smo ocene afinitete, da jih je mogoče lažje razumeti in uporabljati. Zdaj lahko stranke hitro prepoznate glede na njihovo afiniteto do določene blagovne znamke ali zanimanja.
+
+  Poleg tega smo dodali nove možnosti konfiguracije za boljši nadzor nad tem, kako želite obogatiti profile strank. 
+
+  Za več informacij glejte [Obogatitev profilov strank s priljubljenimi blagovnimi znamkami in zanimanji](enrichment-microsoft-graph.md).
+
+- **Upravljanje obogatitve profilov**
+
+  Zdaj lahko obogatite samo podmnožico svojih profilov strank z možnostjo izbire entitete segmenta namesto privzete entitete stranke. Ustvarite segment s profili strank, ki jih želite obogatiti, in ga izberite v konfiguraciji obogatitve za svoj nabor podatkov o strankah.
+  Ta funkcija je trenutno na voljo samo za obogatitve, ki jih zagotavljata družbi Experian in HERE Technologies. Kmalu bomo to možnost omogočili več obogatitvam.
+
+  Za več informacij glejte [Obogatitev profilov strank z demografskimi podatki podjetja Experian](enrichment-experian.md) ali [Obogatitev profilov strank s podjetjem HERE Technologies](enrichment-here.md).
+
+#### <a name="extensibility"></a>Razširljivost
+
+- **Aktiviranje segmentov prek rešitve Autopilot**
+
+  Izvozite segmente v rešitev Autopilot in jih uporabite za tržne namene. Za več informacij glejte [Povezovalnik za rešitev Autopilot (predogled)](export-autopilot.md).
+
+- **Aktiviranje segmentov prek storitve SendGrid**
+
+  Izvozite segmente v storitev SendGrid in jih uporabite za tržne namene. Za več informacij glejte [Povezovalnik za SendGrid](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Skrbništvo sistema
+
+- **Posodobljena izkušnja za upravljanje okolja**
+  
+  Zdaj lahko ustvarjate, urejate, brišete in ponastavljate okolja neposredno iz izbirnika okolja v glavi aplikacije. 
+  
+  Poleg tega bo okolje, ki ga uporabljate, pripeto na vrhu plošče okolja, tako da vam ga ni treba več iskati.
+
+  Za več informacij glejte [Upravljanje okolij](manage-environments.md).
 
 ## <a name="november-2020-updates"></a>Posodobitve v novembru 2020
 
@@ -41,7 +146,7 @@ Posodobitve v novembru 2020 vključujejo več funkcij, nadgradnje zmogljivosti i
 
 - **Prek uvoza po meri s protokolom za varen prenos datotek (SFTP) pridobite lastne podatke za obogatitev**
   
-  Uvoz po meri SFTP vam omogoča uvoz podatkov za obogatitev, ki jim ni treba iti skozi postopek poenotenja podatkov. Preberite več o uvozu po meri SFTP.
+  Uvoz po meri SFTP omogoča uvoz podatkov o obogatitvi, ki jim ni treba opraviti postopka poenotenja podatkov. Preberite več o uvozu po meri SFTP.
 
   Za več informacij glejte [Obogatite profile strank s podatki po meri (predogled)](enrichment-SFTP-custom-import.md).
  
@@ -165,7 +270,7 @@ Za več informacij glejte [Obogatitev profilov strank z demografskimi podatki po
 Podokno s podrobnostmi opravila vam omogoča ogled podrobnosti o opravilih, ki jih sistem izvaja. To je priročen način za prepoznavanje težav s konfiguracijo in iskanje rešitev.
 Preglejte sporočila o napakah in preverite, kako lahko odpravite morebitne težave.
  
-- **Obdelava informacij dodana na dodatne strani**
+- **Obdelava informacij na voljo na več straneh**
 
 Ta izboljšava dodaja informacije o stanju vaših entitet na strani **Entitete** in **Stranke**.
  
@@ -202,9 +307,9 @@ Posodobitve v avgustu 2020 vključujejo več funkcij, nadgradnje zmogljivosti in
 
 #### <a name="enrichment"></a>Obogatitev
 
-- **Obogatitev s priljubljenimi interesi na voljo na dodatnih trgih**
+- **Obogatitev afinitet zanimanj na voljo na več trgih**
 
-  Razpoložljivost obogatitve s priljubljenimi interesi širimo zunaj ZDA na pet dodatnih trgov: Kanada, Avstralija, Združeno kraljestvo, Francija in Nemčija. S to razširitvijo lahko svoje podatke o strankah obogatite z dodatnimi interesi, ki veljajo za te trge. Obogatili bomo tudi profile strank, ki se nahajajo na teh trgih, z uporabo lokalnih lastniških podatkov iz storitve Microsoft Graph.
+  Razširjamo razpoložljivost obogatitve afinitet zanimanj zunaj ZDA na pet drugih trgov: Kanada, Avstralija, Združeno kraljestvo, Francija in Nemčija. S to razširitvijo lahko svoje podatke o strankah obogatite z več zanimanji, ki veljajo za te trge. Obogatili bomo tudi profile strank, ki se nahajajo na teh trgih, z uporabo lokalnih lastniških podatkov iz storitve Microsoft Graph.
   Za več informacij glejte [Obogatitev profilov strank s priljubljenimi blagovnimi znamkami in zanimanji](enrichment-microsoft-graph.md)
 
 
@@ -223,9 +328,9 @@ Posodobitve v juliju 2020 vključujejo številne funkcije, nadgradnje zmogljivos
 
 #### <a name="enrichment"></a>Obogatitev
 
-- **Obogatitev priljubljenih blagovnih znamk je na voljo na dodatnih trgih**
+- **Obogatitev afinitet blagovnih znamk na voljo na več trgih**
 
-  Obogatitev priljubljenih blagovnih znamk širimo na pet dodatnih trgov (poleg ameriškega): kanadski, avstralski, britanski, francoski, nemški in trg Združenega kraljestva. S to razširitvijo lahko obogatite podatke o strankah z lokalnimi blagovnimi znamkami na teh trgih. Obogatili bomo tudi profile strank, ki se nahajajo na teh trgih, z uporabo lokalnih lastniških podatkov iz storitve Microsoft Graph.
+  Razširjamo razpoložljivost obogatitve afinitet blagovnih znamk zunaj ZDA na pet drugih trgov: Kanada, Avstralija, Združeno kraljestvo, Francija in Nemčija. S to razširitvijo lahko obogatite podatke o strankah z lokalnimi blagovnimi znamkami na teh trgih. Obogatili bomo tudi profile strank, ki se nahajajo na teh trgih, z uporabo lokalnih lastniških podatkov iz storitve Microsoft Graph.
   Za več informacij glejte [Obogatitev profilov strank s priljubljenimi blagovnimi znamkami in zanimanji](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>Posodobitve za junij 2020
@@ -238,7 +343,7 @@ Posodobitve v juniju 2020 vključujejo številne funkcije, nadgradnje zmogljivos
 
 - **Obogatitev s podatki podjetja, ki jih zagotavlja družba Leadspace**
   
-  Določite polja v poenotenih profilih strank, ki se uporabljajo za iskanje povezanih podatkov podjetja, ki jih zagotavlja družba Leadspace. Po izvedbi postopka obogatitve so profili za prodajo podjetjem obogateni z dodatnimi atributi, vključno z velikostjo podjetja, lokacijo, industrijo in drugo.    
+  Določite polja v poenotenih profilih strank, ki se uporabljajo za iskanje povezanih podatkov podjetja, ki jih zagotavlja družba Leadspace. Po zagonu procesa obogatitve so profili o prodaji podjetjem obogateni z več atributi, vključno z velikostjo podjetja, lokacijo, panogo in drugimi.    
   To sodelovanje vam omogoča, da izboljšate kakovost svojih podatkov s podatki, ki jih zagotavljajo storitve neodvisnih ponudnikov. Za uporabo te obogatitve potrebujete licenco družbe Leadspace, da lahko dostopate do njihovih podatkov podjetja o prodaji podjetjem. Sistem bo to licenco uporabljal za stalno obogatitev vaših podatkov.    
   Za več informacij glejte [Obogatitev profilov podjetij z družbo Leadspace](enrichment-leadspace.md).
 
@@ -264,7 +369,7 @@ Posodobitve v juniju 2020 vključujejo številne funkcije, nadgradnje zmogljivos
   Nov kontrolnik v dodatku za kartice strank v Dynamics 365 vam omogoča, da stikom v aplikacijah za sodelovanje s strankami v Dynamics 365 prikažete obogatitve blagovnih znamk in zanimanj.    
   Za več informacij glejte [Dodatek za kartico stranke](customer-card-add-in.md).
 
-- **Dodatni sprožilci storitve Power Automate**
+- **Več sprožilcev za Power Automate**
 
   Sprožilce za Power Automate smo podaljšali in dodali naslednje sprožilce:
   - Prejem obvestila ali izvedba dejanja, ko se dokonča samodejna polna osvežitev (viri podatkov, poenotenje, segmenti, mere, izvozi)
@@ -295,12 +400,12 @@ Posodobitve v juniju 2020 vključujejo številne funkcije, nadgradnje zmogljivos
   
   Poiščite podobne stranke v vaši bazi strank z umetno inteligenco. Model strojnega učenja dvojiške razvrstitve dodeli oceno podobnosti strankam v razširjenem segmentu. Rezultat temelji na podobnosti s strankami v izvornem segmentu. Profili strank se glede na oceno podobnosti dodajo na novo ustvarjen segment.
 
-  Digitalni marketing uporablja model umetne inteligence za modeliranje podobnih ciljnih skupin tako, da z njim poišče stranke, ki so podobne drugemu segmentu vaših strank, in faktorizira dodatne atribute. Izbirate lahko atribute in določite največje število dovoljenih strank v novem segmentu. Model umetne inteligence bo nato izračunal ocene podobnosti za vsako stranko na podlagi izbranih atributov in poiskal stranke, ki imajo višjo povprečno oceno podobnosti. Izbrani segment bo vključeval stranke, ki so podobne strankam v izvirnem segmentu.    
+  »Iskanje podobnih uporabnikov«, kot ga imenujejo v digitalnem trženju, uporablja model umetne inteligence, ki pri iskanju strank, ki so podobne drugemu segmentu vaših strank, upošteva več atributov. Izbirate lahko atribute in določite največje število dovoljenih strank v novem segmentu. Model umetne inteligence bo nato izračunal ocene podobnosti za vsako stranko na podlagi izbranih atributov in poiskal stranke, ki imajo višjo povprečno oceno podobnosti. Izbrani segment bo vključeval stranke, ki so podobne strankam v izvirnem segmentu.    
   Če želite več informacij, glejte [Podobne stranke](find-similar-customer-segments.md).
 
 - **Prekrivanje segmentov in diferenciatorji**
 
-  Prekrivanje segmentov vam omogoča, da vidite, koliko strank je skupnih dvema segmentoma (ali več segmentov) in katere stranke so to. Vidite lahko na primer, kako se segment strank, ki veliko porabijo, prekriva s segmentom strank z visokim zadovoljstvom ali kako se segment strank, ki odpovejo naročnino, prekriva s segmentom strank z nizkim zadovoljstvom. Poleg tega lahko analizirate, kako se prekrivanje spreminja na podlagi dodatnega atributa po vaši izbiri.
+  Prekrivanje segmentov vam omogoča, da vidite, koliko strank je skupnih dvema segmentoma (ali več segmentov) in katere stranke so to. Vidite lahko na primer, kako se segment strank, ki veliko porabijo, prekriva s segmentom strank z visokim zadovoljstvom ali kako se segment strank, ki odpovejo naročnino, prekriva s segmentom strank z nizkim zadovoljstvom. Poleg tega lahko analizirate, kako se prekrivanje spremeni na podlagi dodatnega atributa po vaši izbiri.
 
   Diferenciatorji segmentov razkrivajo, kaj razlikuje en segment od ostalih strank ali drugega segmenta. Vse, kar morate storiti, je določiti segment in sistem bo določil atribute profila in mere za razlikovanje segmenta v obliki razvrščenega seznama diferenciatorjev – od najmočnejšega diferenciatorja do najšibkejšega.    
   Za več informacij glejte [Vpogledi v segmente (predogledna različica)](segment-insights.md).
@@ -333,7 +438,7 @@ Posodobitve v maju 2020 vključujejo številne funkcije, nadgradnje delovanja in
 
 - **Posodobljena časovnica in oštevilčevanje strani v dodatku za kartico stranke**
 
-  Časovnica rešitve za dodatek za kartico stranke se ujema s časovnico dejavnosti. Izboljšalo se je oštevilčevanje strani časovnice, zdaj prikazuje do 50 dejavnosti hkrati. Omogoča tudi nalaganje dodatnih dejavnosti na časovnici.    
+  Časovnica rešitve za dodatek za kartico stranke se ujema s časovnico dejavnosti. Izboljšalo se je oštevilčevanje strani časovnice, zdaj prikazuje do 50 dejavnosti hkrati. Omogoča tudi nalaganje več dejavnosti v časovnici.    
   Za več informacij glejte [Dodatek za kartico stranke](customer-card-add-in.md).
 
 - **Sprožilec Power Automate za spremembe segmenta**
@@ -412,7 +517,7 @@ Posodobitve v aprilu 2020 vključujejo številne funkcije, nadgradnje delovanja 
 
 - **Izvozi v LiveRamp**
 
-  Aktivirajte svoje podatke v rešitvi LiveRamp®, da povežete več kot 500 platform po digitalnih, družabnih in televizijskih ekosistemih. Uporabite svoje podatke v rešitvi LiveRamp za ciljanje, prekinjanje in prilagajanje oglaševalskih akcij.    
+  Aktivirajte svoje podatke v rešitvi LiveRamp®, da povežete več kot 500 platform po digitalnih, družabnih in televizijskih ekosistemih. Uporabite svoje podatke na platformi LiveRamp za ciljanje, prekinjanje in prilagajanje oglaševalskih akcij.    
   Za več informacij glejte [Povezovalnik za LiveRamp&reg;](export-liveramp.md).
 
 - **Dodatek za ekipe aplikacije Customer Insights**
@@ -433,7 +538,7 @@ Posodobitve v aprilu 2020 vključujejo številne funkcije, nadgradnje delovanja 
 
 #### <a name="segments"></a>Segmenti
 
-- **Dodaten operator**
+- **Drug operator**
   
   Operator v naboru omogoča segmentacijo za stranke glede na več možnih vrednosti nizov. Preden je bil dodan ta operator, ste morali sestaviti take segmente z več pogoji ALI. Operator v naboru omogoča, da to uredite z enim pogojem.    
   Za več informacij glejte [Ustvarjanje in upravljanje segmentov](segments.md).
@@ -444,3 +549,6 @@ Posodobitve v aprilu 2020 vključujejo številne funkcije, nadgradnje delovanja 
   
   Kopirajte konfiguracijo iz enega okolja v drugo. Med ustvarjanjem novega okolja lahko izberete obstoječe okolje, iz katerega želite kopirati konfiguracijo. Trenutno podpiramo vire podatkov, poenotenje podatkov, odnose, ukrepe in segmente, ki jih je treba kopirati. Poverilnice vira podatkov in dejanski podatki niso kopirani.    
   Za več informacij glejte [Upravljanje okolij](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Predlagani segmenti, ki jih omogoča strojno učenje
 description: Naj vam strojno učenje pomaga pri iskanju novih in zanimivih segmentov, ki temeljijo na atributih strank.
-ms.date: 10/15/2021
-ms.reviewer: mhart
+ms.date: 02/01/2021
+ms.reviewer: jimsonc
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: JimsonChalissery
-ms.author: jimsonc
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 54655d57f4f0f723b497fe47891fd397ccb9dbf4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673203"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268246"
 ---
 # <a name="suggested-segments-preview"></a>Predlagani segmenti (predogled)
 
@@ -23,7 +23,7 @@ Odkrijte zanimive segmente svojih strank z modelom umetne inteligence. Funkcija,
 > [!NOTE]
 > Funkcija predlaganja segmentov uporablja avtomatizirana sredstva za ocenjevanje podatkov in ustvarjanje predvidevanj na podlagi teh podatkov, zato se lahko uporablja kot način profiliranja, saj je ta izraz opredeljen v Splošni uredbi o varstvu podatkov (»GDPR«). Za uporabo te funkcije za obdelavo podatkov lahko veljajo načela splošne uredbe o varstvu podatkov ali drugi zakoni oz. predpisi. Odgovorni ste za zagotovitev, da je vaša uporaba storitve Dynamics 365 Customer Insights, vključno s to funkcijo, v skladu z vsemi veljavnimi zakoni in predpisi, vključno z zakoni v zvezi z zasebnostjo, osebnimi podatki, biometričnimi podatki, varstvom podatkov in zaupnostjo komunikacij.
 
-:::image type="content" source="media/suggested-segments.png" alt-text="Stran s predlaganimi segmenti, ki prikazuje podrobnosti predloga v stranskem podoknu.":::
+:::image type="content" source="media/suggested-segments-details.png" alt-text="Stran »Predlagani segmenti« v storitvi Customer Insights, ki v stranskem podoknu prikazuje podrobnosti predloga.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Predlagani segmenti za izboljšanje KPI-jev
 
@@ -49,7 +49,7 @@ Predlogi za segmente se razlikujejo, če za primarni atribut izberete številski
 
 Z numeričnim atributom, kot sta *letni dohodek* ali *obdobje članstva* kot primarni atribut, sistem predlaga segmente, ki imajo višjo ali nižjo povprečno vrednost numeričnega atributa v primerjavi z vsemi strankami.
 
-Posledica kategoričnega atributa, kot je *zadovoljstvo strank* kot primarni atribut, so predlagani segmenti, ki imajo večji ali manjši odstotek strank, ki pripadajo določeni kategoriji, v primerjavi z odstotkom vseh strank, ki pripadajo isti kategoriji. na primer: kot primarni atribut je izbran atribut *zadovoljstvo strank*, ki je sestavljen iz treh kategorij (*Nizko*, *Srednje* in *Visoko*). Za vsako kategorijo bodo predlagani segmenti, ki imajo višji ali nižji odstotek strank, ki pripadajo tej kategoriji, v primerjavi z deležem vseh strank v isti kategoriji. Če je 22 % vseh strank *visoko* zadovoljnih, bodo za to kategorijo predlagani le segmenti, ki imajo večji ali manjši delež strank z *visokim* zadovoljstvom v primerjavi z 22 %. Za vsako drugo kategorijo (*Nizko* in *Srednje*) bodo na podoben način predlagani segmenti, če so statistično pomembni.
+Posledica kategoričnega atributa, kot je *zadovoljstvo strank* kot primarni atribut, so predlagani segmenti, ki imajo večji ali manjši odstotek strank, ki pripadajo določeni kategoriji, v primerjavi z odstotkom vseh strank, ki pripadajo isti kategoriji. na primer: kot primarni atribut je izbran atribut *zadovoljstvo strank*, ki je sestavljen iz treh kategorij (*Nizko*, *Srednje* in *Visoko*). Za vsako kategorijo bodo predlagani segmenti, ki imajo bistveno večji ali nižji odstotek strank, ki pripadajo tej kategoriji, v primerjavi z deležem vseh strank v isti kategoriji. Če ima 22 % vseh strank *Visoko* zadovoljstvo, bodo za to kategorijo predlagani samo segmenti, ki imajo bistveno večji ali manjši delež strank z *Visokim* zadovoljstvom v primerjavi z 22 %. Za vsako drugo kategorijo (*Nizko* in *Srednje*) bodo na podoben način predlagani segmenti, če so statistično pomembni.
 
 > [!NOTE]
 > Trenutno podpiramo samo primarne kategorične atribute, ki imajo največ 10 kategorij. Če želite videti predloge za segmente, ki temeljijo na primarnem atributu z več kot 10 kategorijami, priporočamo, da nekatere kategorije razvrstite v skupine, da zmanjšate število kategorij na 10 ali manj. Ta omejitev velja samo za primarne atribute. Za vplivne kategorične atribute trenutno podpiramo največ 100 kategorij.
@@ -77,7 +77,7 @@ Posledica kategoričnega atributa, kot je *zadovoljstvo strank* kot primarni atr
 
 Ko bo model umetne inteligence ustvaril predloge, jih boste našli na seznamu **Segmenti** > **Predlogi (predogled)**.
  
-Izberite predlagani segment, če želite pregledati podrobnosti tega predloga. Prav tako lahko pregledate vrednosti ali pravila atributov, ki se jih je model umetne inteligence naučil za predlaganje izbranega segmenta.
+Izberite predlagani segment, da si ogledate podrobnosti tega predloga, vključno s primerjavo povprečne vrednosti in števila članov segmenta. Prav tako lahko pregledate vrednosti ali pravila atributov, ki se jih je model umetne inteligence naučil za predlaganje izbranega segmenta.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Shranjevanje predloga kot segmenta
 

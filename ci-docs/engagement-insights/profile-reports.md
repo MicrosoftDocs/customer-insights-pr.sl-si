@@ -1,39 +1,34 @@
 ---
-title: Omogočanje vnaprej pripravljenih poročil o profilih
-description: Kako ustvariti vnaprej pripravljena poročila o profilih, razvrščena po spolu, starosti in okrožju ali izvorni regiji.
+title: Omogočanje vnaprej pripravljenih poročil o profilih (OOB)
+description: Kako ustvariti vnaprej pripravljena poročila o profilih (OOB), razvrščena po spolu, starosti in občini ali izvorni regiji.
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 05/03/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: bf2ec67c9fb99918b87841d3c0b131934e31b58b
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: cba2c112e9e475ceb047fe627fb41e6c8a27e1e7
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486140"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582806"
 ---
-# <a name="out-of-box-profile-reports"></a>Vnaprej pripravljena poročila o profilih
+# <a name="out-of-box-oob-unified-profile-reports"></a>Vnaprej pripravljena poenotena poročila o profilih (OOB)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Poročilo je zbirka upodobitev podatkov, ki vam pomagajo razumeti vedenje uporabnikov. Če se povežete z zmogljivostjo vpogledov v občinstvo Customer Insights, lahko pri vpogledih v interakcije prikažete poročilo z informacijami o poenotenih profilih strank. To poročilo vključuje število vaših profilov, razvrščenih po spolu, starosti in zemljepisnem položaju.
+Poenoteno poročilo o profilu je zbirka upodobitev podatkov, ki vam pomaga razumeti, kako se obnašajo uporabniki. Če se povežete z zmogljivostjo vpogledi v občinstvo storitve Customer Insights, lahko vpogledi v interakcije prikažejo poročila OOB z informacijami o poenotenih profilih strank. To poročilo vključuje število vaših profilov, razvrščenih po spolu, starosti in zemljepisnem položaju. Za informacije o profilih strank glejte [Profili strank](../audience-insights/customer-profiles.md).
 
 ## <a name="prerequisites"></a>Zahteve
 
-V okolju z vpogledi v občinstvo morajo biti podatki shranjeni v računu, ki ga upravlja stranka Azure Data Lake Storage.
-
-Če uporabljate preskusno različico zmogljivosti vpogledov v občinstvo ali okolje v upravljanem podatkovnem jezeru Customer Insights, se za pomoč [obrnite na nas](https://go.microsoft.com/fwlink/?linkid=2145734).  
-
+Skrbnik okolja mora [ustvariti povezavo med vpogledi v interakcije in vpogledi v občinstvo](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="enable-the-customer-profile-report"></a>Omogočite poročilo o profilu stranke
 
-Skrbnik okolja mora [povezati vpoglede v interakcije in vpoglede v občinstvo](integrate-audience-insights-engagement-insights.md).
-
-Po določitvi podrobnosti o povezavi lahko skrbnik drugim osebam v organizaciji odobri dostop do poročila. Skrbnik okolja, ki vzpostavi povezavo, ima samodejno dostop do poročila. 
+Ko skrbnik določi povezavo med vpogledi v interakcije in vpogledi v občinstvo, lahko odobri dostop drugim ljudem v organizaciji, da si lahko ogledajo poročilo. Skrbnik okolja, ki vzpostavi povezavo, ima samodejno dostop do poročila. 
 
 Po končani povezavi bo funkcija **Profili** na voljo v levem podoknu za krmarjenje. 
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 977d250e5f8c52551b9f3ae9c5e805e946f2579fbe7b04f97fbac880debbac2a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035911"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595354"
 ---
 # <a name="segment-insights-preview"></a>Vpogled v segmente (predogledna različica)
 
@@ -44,13 +44,13 @@ Analizirate lahko tudi, kako se prekrivanje spreminja za posamezne atribute.
 Po končani analizi poiščite podrobnosti o tem vpogledu v razdelku **Segmenti** > **Vpogled (predogled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Podrobnosti vpogleda v prekrivanje segmentov.":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Podrobnosti vpogleda v prekrivanje segmentov":::
 
 Izberite vpogled za prikaz rezultatov analize:
 
 - Število članov, ki se prekrivajo v segmentih, izbranih za analizo.
 - Število članov, vključenih v enega od segmentov, ne pa v ostale segmente.
-- Če ste med konfiguriranjem analize prekrivanja izbrali polja, jih boste našli na ustreznih zavihkih. S pomočjo spustnega seznama filtrov lahko izberete katerokoli pomembno raven zanimanja, pri čemer vam bo tabela na dnu prikazala ustrezne podatke.
+- Če ste med konfiguriranjem analize prekrivanja izbrali polja, jih boste našli na ustreznih zavihkih. S spustnim menijem za filtriranje lahko izberete katero koli stopnjo zanimanja in v spodnji tabeli se bodo prikazali ustrezni podatki.
 
 ## <a name="segment-differentiators"></a>Diferenciatorji segmentov
 
@@ -77,7 +77,7 @@ Diferenciatorji segmentov vam pomagajo ugotoviti, kako se segment razlikuje od o
 Po končani analizi poiščite podrobnosti o tem vpogledu v razdelku **Segmenti** > **Vpogled (predogled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Podrobnosti vpogleda v razlikovalnik segmentov.":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Podrobnosti vpogleda v diferenciatorje segmentov":::
 
 Izberite vpogled za prikaz rezultatov analize. Analiza diferenciatorjev ima dva zavihka. Na zavihku **Atributi** je seznam atributov profila, ki so obravnavani kot diferenciatorji. Na zavihku **Mere** je seznam diferenciatorjev. Oba zavihka vsebuje naslednje podrobnosti:
 

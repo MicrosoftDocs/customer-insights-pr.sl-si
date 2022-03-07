@@ -1,7 +1,7 @@
 ---
 title: Obogatitev poenotenih profilov strank
 description: Uporabite zmogljivosti za obogatitev podatkov o strankah.
-ms.date: 09/30/2021
+ms.date: 11/05/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
+ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673019"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "7770144"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogatitev profilov strank (predogled)
 
@@ -42,6 +42,7 @@ V zavihku **Odkrivanje** boste našli vse podprte možnosti obogatitve.
 
 - [Podatki o podjetju](enrichment-leadspace.md), ki jih zagotavlja Leadspace
 - [Izboljšani naslovi](enrichment-enhanced-addresses.md), ki jih zagotavlja Microsoft 
+- [Izboljšani podatki o podjetju](enrichment-enhanced-company-data.md) zagotavlja Microsoft
 - [Podatki o lokaciji](enrichment-here.md), ki jih zagotavlja HERE Technologies 
 - [Podatki po meri](enrichment-SFTP-custom-import.md) s protokolom za varen prenos datotek (SFTP) 
 - [Storitev Zemljevidi Azure](enrichment-azure-maps.md) zagotavlja Microsoft
@@ -76,7 +77,7 @@ Entiteta, ki jo je treba obogatiti, je določena med konfiguriranjem obogatitve,
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Oglejte si napredek postopka obogatitve
 
-Podrobnosti o obdelavi obogatitve, vključno s stanjem in možnimi težavami, lahko najdete med osveževanjem ali po končani osvežitvi. Spoznajte, kateri postopki so potrebni za osvežitev obogatitve in koliko časa je trajalo, da so se postopki izvedli. Stanje obogatitve je podprto za družbe Experian, Leadspace, HERE Technologies, SFTP Import in storitev Zemljevidi Azure.
+Podrobnosti o obdelavi obogatitve, vključno s stanjem in možnimi težavami, lahko najdete med osveževanjem ali po končani osvežitvi. Spoznajte, kateri postopki so potrebni za osvežitev obogatitve in koliko časa je trajalo, da so se postopki izvedli. Stanje obogatitve je podprto za Experian, Leadspace, HERE Technologies, SFTP Import in Azure Maps.
 
 Če si želite ogledati stanje obogatitve:
 

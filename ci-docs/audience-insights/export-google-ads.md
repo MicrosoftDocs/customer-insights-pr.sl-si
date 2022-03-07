@@ -5,30 +5,31 @@ ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
+author: phkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c16967bf8ea1fd02b3f991d7b7d3715a71fa8681
-ms.sourcegitcommit: 9a99e48e96dfb3d895db428f37c30ae55eea66b7
+ms.openlocfilehash: f4c094e486577d00d8c0c64e8527829820b335f6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/14/2021
-ms.locfileid: "6604297"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759795"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Izvoz segmentov v Google Ads (predogledna različica)
 
-Segmente poenotenih profilov strank izvozite na seznam občinstva Google Ads in jih uporabite za oglaševanje v iskalniku Google, v storitvah Gmail, YouTube in v iskalnem omrežju Google. 
+Izvozite segmente poenotenih profilov strank na seznam občinstva storitve Google Ads in jih uporabite za oglaševanje v Googlovem iskalniku ter storitvah Gmail, YouTube in Google Display Network. 
 
 ## <a name="prerequisites-for-connection"></a>Predpogoji za povezavo
 
 -   Imate [račun za Google Ads](https://ads.google.com/) in ustrezne skrbniške poverilnice.
--   Imate [odobreni žeton razvijalca v storitvi Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
--   Izpolnjujete zahteve, ki jih določa [Pravilnik o ujemanju strank](https://support.google.com/adspolicy/answer/6299717).
--   Izpolnjujete zahteve [velikosti seznama za ponovno trženje](https://support.google.com/google-ads/answer/7558048).
+-   Imate [odobreni žeton razvijalca v storitvi Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
+-   Izpolnjujete zahteve [pravilnika o ujemanju strank](https://support.google.com/adspolicy/answer/6299717)
+-   Izpolnjujete zahteve [velikosti seznamov za trženje](https://support.google.com/google-ads/answer/7558048) 
+
 -   V storitvi Google Ads so na voljo obstoječa občinstva in ustrezni ID-ji. Če želite več informacij, glejte razdelek [Občinstva Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Imate [konfigurirane segmente](segments.md).
--   Poenoteni profili strank v izvoženih segmentih vsebujejo polja, ki predstavljajo e-poštni naslov ter ime in priimek.
+-   Imate [konfigurirane segmente](segments.md)
+-   Poenoteni profili strank v izvoženih segmentih vsebujejo polja, ki predstavljajo e-poštni naslov, ime in priimek.
 
 ## <a name="known-limitations"></a>Znane omejitve
 
@@ -67,19 +68,17 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Za ustvarjanje novega izvoza izberite **Dodaj cilj**.
 
-1. V polju **Povezava za izvoz** izberite povezavo v razdelku Google Ads. Če se vam poimenovanje tega odseka ne prikaže, to pomeni, da vam ni na voljo nobena tovrstna povezava.
+1. V polju **Povezava za izvoz** izberite povezavo v razdelku Google Ads. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
 
 1. Vnesite **[ID občinstva za Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** in izberite **Poveži**, da inicializirate povezavo s storitvijo Google Ads.
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke.
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje v poenotenem profilu strank, ki predstavlja e-poštni naslov stranke. Ponovite iste korake za polji **Ime** in **Priimek**.
 
 1. Izberite segmente, ki jih želite izvoziti. V Google Ads lahko izvozite do 1 milijon profilov strank.
 
 S shranjevanjem izvoza se ta ne zažene takoj.
 
-Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). 
-
-Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
+Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 

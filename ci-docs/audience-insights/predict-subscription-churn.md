@@ -1,5 +1,5 @@
 ---
-title: Odtok naročnin predvidevanje (vsebuje video)
+title: Odliv naročnin predvidevanje (video)
 description: Predvidite, ali za stranko obstaja tveganje, da ne bo več uporabljala izdelkov ali storitev naročnine vašega podjetja.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967721"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7904045"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predvidevanje izgube naročnine (predogled)
 
@@ -77,7 +77,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
 1. Vnesite število za možnost **Dnevi od konca naročnine**, da lahko vaše podjetje šteje, da je stranka v stanju izgube. To obdobje je običajno primerno za poslovne dejavnosti, kot so ponudbe ali druga tržna prizadevanja, ki poskušajo preprečiti izgubo stranke.
 1. Vnesite število za možnost **Dnevi v prihodnosti za napoved možnosti izgube strank**, da nastavite časovno okno za napoved izgube. Tako lahko na primer izberete napoved možnosti izgube strank v naslednjih 90 dneh, da lahko temu prilagodite trženje z namenom obdržanja strank. Napovedovanje tveganja izgube za daljša ali krajša obdobja lahko oteži obravnavo dejavnikov v vašem profilu tveganja izgube, odvisno od vaših poslovnih potreb. Če želite nadaljevati, izberite **Naprej**.
    >[!TIP]
-   > Lahko izberete **Shrani osnutek** kadar koli shranite predvidevanje kot osnutek. Osnutek predvidevanja boste lahko našli na zavihku **Moja predvidevanja** za nadaljevanje.
+   > Kadar koli lahko izberete možnost **Shrani in zapri**, da shranite predvidevanje kot osnutek. Osnutek predvidevanja boste lahko našli na zavihku **Moja predvidevanja** za nadaljevanje.
 
 ### <a name="add-required-data"></a>Dodajanje zahtevanih podatkov
 

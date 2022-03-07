@@ -1,27 +1,27 @@
 ---
 title: Bot za Microsoft Teams
 description: Poiščite poenotene profile strank v storitvi Microsoft Teams s pomočjo bota.
-ms.date: 04/21/2020
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: cff696834e3dad00ce5b0f1b5bcb13d86354a4e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406980"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617621"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Bot Teams za Dynamics 365 Customer Insights (predogled)
 
 Povežite se s storitvijo Microsoft Teams, da bot dovoli iskanje poenotenih profilov strank v kanalih Teams.
 
 > [!div class="mx-imgBorder"]
-> ![Bot za Teams, ki prikazuje zapis stranke](media/teams-bot.png "Bot za Teams, ki prikazuje zapis stranke")
+> ![Bot za Teams, ki prikazuje zapis stranke.](media/teams-bot.png "Bot za Teams, ki prikazuje zapis stranke")
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -31,6 +31,7 @@ Za nastavitev in konfiguracijo bota morajo biti izpolnjeni ti pogoji:
 - [Postopek poenotenja](data-unification.md) je dokončan.
 - Polja so dodana v [kazalo za iskanje in filtriranje](search-filter-index.md).
 - Aplikaciji Customer Insights in Teams sta v isti organizaciji.
+- V vašem okolju je primarno ciljno občinstvo nastavljeno na posamezne stranke. Poslovni računi niso podprti.
 
 ## <a name="configure-the-bot"></a>Konfiguracija bota
 
@@ -52,3 +53,6 @@ Bot ponuja možnosti iskanja za poenotene profile strank.
 - Če vaša organizacija ohranja več okolij Customer Insights v isti organizaciji, lahko vnesete **switchinstance**, da izberete, v katero okolje želite povezati bot.
 
 - Če si želite ogledati seznam ukazov, ki so na voljo za bot, vnesite **pomoč**.  
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

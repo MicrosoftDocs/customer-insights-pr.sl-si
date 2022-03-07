@@ -1,113 +1,247 @@
 ---
-title: Ustvarjanje in urejanje mer
-description: Določite mere, povezane s strankami, za analizo in odraz uspešnosti določenih poslovnih področij.
-ms.date: 10/15/2020
+title: Ustvarjanje in upravljanje mer
+description: Določite mere za analizo in odraz uspešnosti vašega podjetja.
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406990"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732746"
 ---
 # <a name="define-and-manage-measures"></a>Določanje in upravljanje mer
 
-**Mere** predstavljajo ključne kazalnike uspešnosti (KPI), ki odražajo uspešnost in stanje določenih poslovnih področij. Vpogledi v občinstvo ponujajo intuitivno izkušnjo za ustvarjanje različnih vrst mer z uporabo graditelja poizvedb, ki ne zahteva ročnega kodiranja ali preverjanja veljavnosti mer. Na strani **Osnovno** lahko spremljate svoje poslovne mere, na strani **Kartica stranke** si lahko ogledate mere za določeno stranko, na strani **Segmenti** pa lahko uporabite mere za opredelitev segmentov stranke.
+Ukrepi vam pomagajo bolje razumeti vedenje strank in poslovno uspešnost. Upoštevajo relevantne vrednosti iz [poenotenih profilov](data-unification.md). Da bi podjetje razumelo zgodovino nakupov posamezne stranke, ga zanima, *koliko je določena stranka porabila*, za lažje razumevanje svojih svojega skupnega dohodka pa lahko izmeri *celotni obseg svoje prodaje*.  
 
-## <a name="create-a-measure"></a>Ustvarjanje mere
+Mere so ustvarjene z graditeljem mer, platformo za poizvedbe po podatkih z različnimi operatorji in enostavnimi možnostmi preslikave. Omogoča filtriranje podatkov, združevanje rezultatov v skupine, zaznavanje [poti odnosov entitet](relationships.md) in predogled rezultatov.
 
-V tem razdelku so navodila za ustvarjanje mere povsem od začetka. Mere lahko ustvarite s podatki iz več virov podatkov, ki so povezani prek entitete stranke. Veljajo nekatere [omejitve storitev](service-limits.md).
+Uporabite graditelja mer za načrtovanje poslovnih dejavnosti s poizvedbami po podatkih o strankah in pridobivanjem vpogledov. Ustvarjanje na primer mer za *skupno porabo na stranko* in *skupni donos na stranko* pomaga prepoznati skupino strank z visoko porabo, ki pa so hkrati zelo donosne. Mogoče je [ustvariti segment](segments.md) za spodbujanje drugih priporočenih dejanj. 
+
+## <a name="build-your-own-measure-from-scratch"></a>Ustvarjanje ukrepa od začetka
+
+V tem razdelku je opisano ustvarjanje novega mere od začetka. Ustvarite lahko mero z atributi podatkov iz entitet podatkov, ki imajo nastavljen odnos za povezavo s poenoteno entiteto profila stranke.
+
+# <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
 
 1. Pri vpogledih v občinstvo izberite **Mere**.
 
-2. Izberite **Nova mera**.
+1. Izberite **Novo** in nato še **Ustvarite si svojega**.
 
-3. Izberite **vrsto** mere:
+1. Izberite možnost **Uredi ime** in navedite **ime** za mero. 
 
-   - **Atribut stranke**: eno polje na stranko, ki odraža rezultat, vrednost ali stanje za stranko. Atributi strank so ustvarjeni kot atributi v novi sistemski entiteti, imenovani **Customer_Measure**.
+1. V območju konfiguracije, in sicer v spustnem meniju **Izbira funkcije**, izberite združevalno funkcijo. Združevalne funkcije vključujejo: 
+   - **Vsota**
+   - **Povprečje**
+   - **Število**
+   - **Št. enoličnih**
+   - **Maksimum**
+   - **Min**
+   - **Najprej**: vzame prvo vrednost podatkovnega zapisa
+   - **Zadnje**: vzame zadnjo vrednost, ki je bila dodana v podatkovni zapis
 
-   - **Mera stranke**: vpogledi v vedenje stranke z razčlenitvijo po izbranih dimenzijah. Za vsako mero se ustvari nova entiteta, lahko tudi z več zapisi na stranko.
+   :::image type="content" source="media/measure-operators.png" alt-text="Operatorji za izračun mer.":::
 
-   - **Poslovna mera**: spremlja poslovno uspešnost in stanje poslovanja. Poslovne mere imajo lahko dva različna rezultata: številski rezultat, ki je prikazan na strani **Osnovno**, ali novo entiteto, ki jo najdete na strani **Entitete**.
+1. Izberite možnost **Dodaj atribut**, da izberete podatke, ki jih potrebujete za izdelavo te mere.
+   
+   1. Izberite zavihek **Atributi**. 
+   1. Podatkovna entiteta: izberite entiteto, ki vključuje atribut, ki ga želite izmeriti. 
+   1. Atribut podatkov: izberite atribut, ki ga želite uporabiti v združevalni funkciji za izračun mere. Naenkrat lahko izberete le en atribut.
+   1. Atribut podatkov lahko izberete tudi iz obstoječe mere tako, da odprete zavihek **Mere** ali poiščete ime entitete ali mere. 
+   1. Izberite možnost **Dodaj**, da meri dodate izbrani atribut.
 
-4. Vnesite **ime** in po želji še **Prikazno ime** ter izberite **Naprej**.
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Izberite atribut, ki ga želite uporabiti pri izračunih.":::
 
-5. Na spustnem seznamu v razdelku **Entitete** izberite prvo entiteto. Na tej točki se morate odločiti, ali so v okviru vaše opredelitve mere potrebne dodatne entitete.
+1. Če želite zgraditi bolj zapletene mere, lahko v funkcijo mere dodate več atributov ali uporabite matematične operatorje.
 
-   > [!div class="mx-imgBorder"]
-   > ![Definicija mere](media/measure-definition.png "Definicija mere")
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Ustvarjanje zapletene mere z matematičnimi operatorji.":::
 
-   Če želite dodati več entitet, izberite **Dodaj entiteto** in izberite entitete, ki jih želite uporabiti za mero.
+1. Če želite dodati filtre, v konfiguracijskem območju izberite možnost **Filter**. 
+  
+   1. V razdelku **Dodaj atribut**, in sicer v podoknu **Filtri**, izberite atribut, ki ga želite uporabiti za ustvarjanje filtrov.
+   1. Nastavite operatorje filtrov, da določite filter za vsak izbrani atribut.
+   1. Izberite možnost **Dodaj**, da meri dodate filter.
 
-   > [!NOTE]
-   > Izberite lahko samo entitete, ki imajo odnos z vašo začetno entiteto. Če želite več informacij o opredelitvi odnosov, glejte [Odnosi](relationships.md).
+1. Če želite dodati razsežnosti, v območju za konfiguracijo izberite možnost **Razsežnosti**. Dimenzije bodo prikazane kot stolpci v entiteti izhodnih mer.
+ 
+   1. Izberite možnost **Uredi razsežnosti**, da dodate atribute podatkov, po katerih želite vrednosti mer razvrstiti v skupine. Na primer po mestu ali spolu. Privzeto je razsežnost *CustomerID* izbrana za ustvarjanje *ukrepov na ravni kupca*. Če želite ustvariti *ukrepe na ravni podjetja*, lahko odstranite privzeto dimenzijo.
+   1. Izberite možnost **Končano**, da meri dodate razsežnosti.
 
-6. Po želji lahko konfigurirate spremenljivke. V razdelku **Spremenljivke** izberite **Nova spremenljivka**.
+1. Če so v vaših podatkih vrednosti, ki jih morate zamenjati s celim številom, izberite **Pravila**. Konfigurirajte pravilo in se prepričajte, da jih nadomestite le s celimi števili. Zamenjajte na primer *null* z *0*.
 
-   Spremenljivke so izračuni, ki so narejeni na vsakem od vaših izbranih zapisov. Na primer povzetek prodaje na prodajnem mestu (POS) in v spletu za vsakega od zapisov vaše stranke.
+1. Če med podatkovno entiteto, ki ste jo preslikali, in *entiteto* stranke obstaja več poti, morate izbrati eno od prepoznanih [poti odnosov entitet](relationships.md). Rezultati mere se lahko razlikujejo glede na izbrano pot. 
+   
+   1. Izberite **Pot odnosa** in nato pot entitete, ki jo je treba uporabiti za identifikacijo vaše mere. Če obstaja samo ena pot do entitete *stranke*, ta nadzor ne bo prikazan.
+   1. Izberite možnost **Končano**, da uporabite izbor. 
 
-7. Vnesite **ime** za spremenljivko.
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Izberite pot entitete za mero.":::
 
-8. V območju **Izraz** izberite polje, s katerim boste začeli izračun.
+1. Če želite dodati več izračunov za mero, izberite možnost **Nov izračun**. Entitete z isto potjo lahko uporabite samo za nove izračune. Dodatni izračuni bodo prikazani kot novi stolpci v entiteti izhodnih mer.
 
-9. Vnesite izraz v območje **Izraz** in izberite več polj, ki bodo vključena v vaš izračun.
+1. V izračunu izberite tri pike **...**, da **podvojite**, **preimenujete** ali **odstranite** izračun iz mere.
 
-   > [!NOTE]
-   > Trenutno so podprti samo aritmetični izrazi. Poleg tega izračun spremenljivk ni podprt za entitete z različnih [poti entitet](relationships.md).
+1. Na območju **predogleda** boste videli podatkovno shemo entitete izhodnih mer, vključno s filtri in razsežnostmi. Predogled se dinamično odziva na spremembe v konfiguraciji.
 
-10. Izberite **Dokončano**.
+1. Izberite možnost **Zaženi** za izračun rezultatov za konfigurirano mero. Izberite možnost **Shrani in zapri**, če želite obdržati trenutno konfiguracijo in mero zagnati pozneje.
 
-11. V razdelku **Opredelitev mere** določite, kako so izbrane entitete in izračunane spremenljivke združene v novi entiteti ali atributu mere.
+1. Na strani **Mere** si na seznamu oglejte novo ustvarjeno mero.
 
-12. Izberite **Nova dimenzija**. Dimenzijo si lahko predstavljate kot funkcijo *združi po*. Rezultati podatkov entitete ali atributa mere bodo združeni po vseh vaših opredeljenih dimenzijah.
+# <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
 
-    > [!div class="mx-imgBorder"]
-    > ![Izbira cikla združevanja](media/measures-businessreport-measure-definition2.png "Izbira cikla združevanja")
+1. Pri vpogledih v občinstvo izberite **Mere**.
 
-    Kot del definicije dimenzije izberite ali vnesite te podatke:
+1. Izberite **Novo** in nato še **Ustvarite si svojega**.
 
-    - **Entiteta**: če določite entiteto mere, mora vključevati vsaj en atribut. Če določite atribut mere, bo privzeto vseboval le en atribut. Pri tem izboru gre za izbiro entitete, ki vključuje ta atribut.
-    - **Polje**: izberite atribut, ki bo vključen v entiteto ali atribut mere.
-    - **Vedro**: izberite, ali želite združiti podatke na dnevni, mesečni ali letni osnovi. Ta izbira je obvezna le, če ste izbrali atribut vrste datuma.
-    - **Kot**: določa ime vašega novega polja.
-    - **Prikazno ime**: določa prikazno ime vašega polja.
+1. Izberite možnost **Uredi ime** in navedite **ime** za mero. 
 
-    > [!NOTE]
-    > Vaša poslovna mera bo shranjena kot entiteta z eno številko in bo prikazana na strani **Osnovno**, razen če v mero dodate več dimenzij. Ko dodate več dimenzij, mera *ni* prikazana na strani **Domov**.
+1. V območju konfiguracije, in sicer v spustnem meniju **Izbira funkcije**, izberite združevalno funkcijo. Združevalne funkcije vključujejo: 
+   - **Vsota**
+   - **Povprečje**
+   - **Število**
+   - **Št. enoličnih**
+   - **Maksimum**
+   - **Min**
+   - **Najprej**: vzame prvo vrednost podatkovnega zapisa
+   - **Zadnje**: vzame zadnjo vrednost, ki je bila dodana v podatkovni zapis
 
-13. Po želji dodajte funkcije združevanja. Vsako združevanje, ki ga ustvarite, ustvari novo vrednost v entiteti ali atributu »Mere«. Podprte funkcije združevanja so: **Min.**, **Maks.**, **Povprečno**, **Mediana**, **Vsota**, **Št. enoličnih**, **Prvi** (uporabi prvi zapis vrednosti dimenzije) in **Zadnji** (uporabi zadnji zapis, dodan v vrednost dimenzije).
+   :::image type="content" source="media/measure-operators.png" alt-text="Operatorji za izračun mer.":::
 
-14. Izberite **Shrani**, da uporabite spremembe v meri.
+1. Izberite možnost **Dodaj atribut**, da izberete podatke, ki jih potrebujete za izdelavo te mere.
+   
+   1. Izberite zavihek **Atributi**. 
+   1. Podatkovna entiteta: izberite entiteto, ki vključuje atribut, ki ga želite izmeriti. 
+   1. Atribut podatkov: izberite atribut, ki ga želite uporabiti v združevalni funkciji za izračun mere. Naenkrat lahko izberete le en atribut.
+   1. Atribut podatkov lahko izberete tudi iz obstoječe mere tako, da odprete zavihek **Mere** ali poiščete ime entitete ali mere. 
+   1. Izberite možnost **Dodaj**, da meri dodate izbrani atribut.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Izberite atribut, ki ga želite uporabiti pri izračunih.":::
+
+1. Če želite zgraditi bolj zapletene mere, lahko v funkcijo mere dodate več atributov ali uporabite matematične operatorje.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Ustvarjanje zapletene mere z matematičnimi operatorji.":::
+
+1. Če želite dodati filtre, v konfiguracijskem območju izberite možnost **Filter**. 
+  
+   1. V razdelku **Dodaj atribut**, in sicer v podoknu **Filtri**, izberite atribut, ki ga želite uporabiti za ustvarjanje filtrov.
+   1. Nastavite operatorje filtrov, da določite filter za vsak izbrani atribut.
+   1. Izberite možnost **Dodaj**, da meri dodate filter.
+
+1. Če želite dodati razsežnosti, v območju za konfiguracijo izberite možnost **Razsežnosti**. Dimenzije bodo prikazane kot stolpci v entiteti izhodnih mer.
+ 
+   1. Izberite možnost **Uredi razsežnosti**, da dodate atribute podatkov, po katerih želite vrednosti mer razvrstiti v skupine. Na primer po mestu ali spolu. Privzeto je razsežnost *CustomerID* izbrana za ustvarjanje *ukrepov na ravni kupca*. Če želite ustvariti *ukrepe na ravni podjetja*, lahko odstranite privzeto dimenzijo.
+   1. Izberite možnost **Končano**, da meri dodate razsežnosti.
+
+1. Če so v vaših podatkih vrednosti, ki jih morate zamenjati s celim številom, izberite **Pravila**. Konfigurirajte pravilo in se prepričajte, da jih nadomestite le s celimi števili. Zamenjajte na primer *null* z *0*.
+
+1. Uporabite lahko preklop **Zbiranje podračunov**, če [uporabljajte račune s hierarhijo](relationships.md#set-up-account-hierarchies).
+   - Če je nastavljen na **Izklopljeno**, se mera izračuna za vsak račun. Vsak račun dobi svoj rezultat.
+   - Če je nastavljen na **Vklopljeno**, izberite **Uredi** za izbiro hierarhije računa glede na uvožene hierarhije. Mera bo zagotovila le en rezultat, ker je združena s podračuni.
+
+1. Če med podatkovno entiteto, ki ste jo preslikali, in *entiteto* stranke obstaja več poti, morate izbrati eno od prepoznanih [poti odnosov entitet](relationships.md). Rezultati mere se lahko razlikujejo glede na izbrano pot. 
+   
+   1. Izberite **Pot odnosa** in nato pot entitete, ki jo je treba uporabiti za identifikacijo vaše mere. Če obstaja samo ena pot do entitete *stranke*, ta nadzor ne bo prikazan.
+   1. Izberite možnost **Končano**, da uporabite izbor. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Izberite pot entitete za mero.":::
+
+1. V izračunu izberite tri pike **...**, da **podvojite**, **preimenujete** ali **odstranite** izračun iz mere.
+
+1. Na območju **predogleda** boste videli podatkovno shemo entitete izhodnih mer, vključno s filtri in razsežnostmi. Predogled se dinamično odziva na spremembe v konfiguraciji.
+
+1. Izberite možnost **Zaženi** za izračun rezultatov za konfigurirano mero. Izberite možnost **Shrani in zapri**, če želite obdržati trenutno konfiguracijo in mero zagnati pozneje.
+
+1. Na strani **Mere** si na seznamu oglejte novo ustvarjeno mero.
+
+---
+
+## <a name="use-a-template-to-build-a-measure"></a>Uporaba predloge za izdelavo ukrepa
+
+Za ustvarjanje ukrepov lahko uporabite vnaprej določene predloge pogosto uporabljenih ukrepov. Podrobni opisi predlog in vodena izkušnja vam pomagajo pri učinkovitem ustvarjanju ukrepov. Predloge temeljijo na preslikanih podatkih iz entitete *Poenotena dejavnost*. Prepričajte se, da ste konfigurirali [dejavnosti strank](activities.md), preden ustvarite ukrep iz predloge.
+
+# <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
+
+Za ustvarjanje ukrepov lahko uporabite vnaprej določene predloge pogosto uporabljenih ukrepov. Podrobni opisi predlog in vodena izkušnja vam pomagajo pri učinkovitem ustvarjanju ukrepov. Predloge temeljijo na preslikanih podatkih iz entitete *Poenotena dejavnost*. Prepričajte se, da ste konfigurirali [dejavnosti strank](activities.md), preden ustvarite ukrep iz predloge.
+
+Razpoložljive predloge ukrepov: 
+- Povprečna vrednost transakcije (ATV)
+- Skupna vrednost transakcije
+- Povprečni dnevni prihodek
+- Povprečni letni prihodek
+- Število transakcij
+- Prislužene točke zvestobe
+- Izkoriščene točke zvestobe
+- Stanje točk zvestobe
+- Življenjska doba dejavne stranke
+- Trajanje članstva v programu zvestobe
+- Čas od zadnjega nakupa
+
+V naslednjem postopku so opisani koraki za ustvarjanje novega ukrepa s pomočjo predloge.
+
+1. Pri vpogledih v občinstvo izberite **Mere**.
+
+1. Izberite **Novo** in nato **Izberi predlogo**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Posnetek zaslona spustnega menija pri ustvarjanju nove mere z oznako na predlogi.":::
+
+1. Poiščite predlogo, ki ustreza vašim potrebam, in izberite **Izberi predlogo**.
+
+1. Preglejte zahtevane podatke in izberite **Začetek**, če imate na voljo vse podatke.
+
+1. V podoknu **Uredi ime** nastavite ime za vaš ukrep in izhodno entiteto. 
+
+1. Izberite **Dokončano**.
+
+1. V razdelku **Nastavi časovno obdobje** določite časovni okvir podatkov, ki jih želite uporabiti. Če želite, da nova mera pokrije celoten nabor podatkov, izberite možnost **Ves čas**, ali pa se odločite, da se mera osredotoči na **Določeno časovno obdobje**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Posnetek zaslona, ki prikazuje razdelek časovnega obdobja pri konfiguriranju ukrepa iz predloge.":::
+
+1. V naslednjem razdelku izberite **Dodaj podatke**, če želite izbrati dejavnosti in preslikati ustrezne podatke iz vaše entitete *Poenotena dejavnost*.
+
+    1. Korak 1 od 2: v razdelku **Vrsta dejavnosti** izberite vrsto entitete, ki jo želite uporabiti. Za **Dejavnosti** izberite entitete, ki jih želite preslikati.
+    1. Korak 2 od 2: izberite atribut v entiteti *Poenotena dejavnost* za komponento, ki jo zahteva formula. Za povprečno vrednost transakcije je to na primer atribut, ki predstavlja vrednost transakcije. Za **Časovni žig dejavnosti** izberite atribut iz entitete poenotene dejavnosti, ki predstavlja datum in čas dejavnosti.
+   
+1. Ko je preslikava podatkov uspešno zaključena, se prikaže stanje **Dokončano** skupaj z imenom preslikanih dejavnosti in atributov.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Posnetek zaslona dokončane konfiguracije predloge ukrepa.":::
+
+1. Zdaj lahko izberete **Zaženi**, da izračunate rezultate ukrepa. Če jih želite pozneje prilagoditi, izberite **Shrani osnutek**.
+
+# <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
+
+Ta funkcija je na voljo samo za mere, ustvarjene v okoljih s posameznimi strankami kot primarno ciljno občinstvo.
+
+---
 
 ## <a name="manage-your-measures"></a>Upravljajte svoje mere
 
-Ko ustvarite vsaj eno mero, boste na strani **Mere** videli seznam mer.
+Seznam ukrepov najdete na strani **Ukrepi**.
 
-Na voljo so informacije o vrsti mere, ustvarjalcu, datumu in času nastanka, datumu in času zadnjega urejanja, stanju (ali je mera dejavna, nedejavna ali neuspešna) in datumu in času zadnjega osveževanja. Ko s seznama izberete mero, si lahko ogledate njen predogled.
+Našli boste podatke o vrsti mere, ustvarjalcu, datumu ustvarjanja, statusu in stanju. Ko na seznamu izberete mero, si lahko vnaprej ogledate izhod in prenesete datoteko CSV.
 
 Če želite hkrati osvežiti vse svoje mere, izberite **Osveži vse**, ne da bi izbrali posamezno mero.
 
 > [!div class="mx-imgBorder"]
-> ![Dejanja za upravljanje posameznih mer](media/measure-actions.png "Dejanja za upravljanje posameznih mer")
+> ![Dejanja za upravljanje posameznih mer.](media/measure-actions.png "Dejanja za upravljanje posameznih mer.")
 
-S seznama lahko tudi izberete mero in opravite enega od naslednjih dejanj:
+Na seznamu izberite mero za naslednje možnosti:
 
 - Za prikaz podrobnosti izberite ime mere.
 - Izberete lahko možnost **Uredi** in uredite konfiguracijo mere.
+- **Osveži** mero na podlagi najnovejših podatkov.
 - Mero lahko preimenujete prek možnosti **Preimenuj**.
 - Za brisanje mere je na voljo **Izbriši**.
-- Izberite tri pike (...) in nato **Osveži**, da začnete postopek osveževanja za mero.
-- Izberite tri pike (...) in nato **Prenesi**, če želite pridobiti datoteko .CSV mere.
+- **Aktiviraj** ali **deaktiviraj**. Nedejavne mere se med [načrtovano osvežitvijo](system.md#schedule-tab) ne bodo osvežile.
 
-> [!TIP]
-> Na voljo je [šest vrst stanja](system.md#status-types) za opravila/postopke. Poleg tega je večina postopkov [odvisna od drugih nadaljnjih postopkov](system.md#refresh-policies). Izberete lahko stanje postopka in si ogledate podrobnosti o poteku celotnega posla. Ko za enega izmed poslov izberete **Prikaži podrobnosti**, se prikažejo dodatne informacije: čas obdelave, zadnji datum obdelave ter vse napake in opozorila, povezana z opravilom.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="next-step"></a>Naslednji korak
 
-Obstoječe mere lahko uporabite za ustvarjanje prvega segmenta stranke na strani **Segmenti**. Če želite več informacij, glejte [Segmenti](segments.md).
+Za ustvarjanje [segmenta stranke](segments.md) lahko uporabite obstoječe mere.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

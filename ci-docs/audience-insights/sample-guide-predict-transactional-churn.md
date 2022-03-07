@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029465"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306140"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube glede transakcij (predogled)
 
@@ -46,7 +46,8 @@ Preglejte specifične članke [o vnosu podatkov](data-sources.md) in [uvozu viro
    - **DateOfBirth**: datum
    - **CreatedOn**: datum/čas/časovni pas
 
-   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Spremeni datum rojstva v datum.":::
+   [!div class="mx-imgBorder"]
+   ![Spremeni datum rojstva v datum](media/ecommerce-dob-date.PNG "Spremeni datum rojstva v datum")
 
 1. V polju **Ime** v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **StikiEPoslovanja**
 

@@ -1,20 +1,20 @@
 ---
 title: Povezovalnik Power BI
 description: Seznanite se z uporabo povezovalnika Dynamics 365 Customer Insights v storitvi Power BI.
-ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.date: 07/23/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+ms.topic: how-to
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406952"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661122"
 ---
 # <a name="connector-for-power-bi-preview"></a>Povezovalnik za Power BI (predogled)
 
@@ -23,7 +23,7 @@ Ustvarite vizualizacije svojih podatkov s storitvijo Power BI Desktop. Ustvarite
 ## <a name="prerequisites"></a>Zahteve
 
 - Imate poenotene profile strank.
-- Najnovejša različica storitve [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je nameščena v računalnik. [Preberite več o storitvi Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Najnovejša različica aplikacije [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je nameščena v vašem računalniku. [Preberite več o storitvi Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konfiguracija povezovalnika za Power BI
 
@@ -31,7 +31,7 @@ Ustvarite vizualizacije svojih podatkov s storitvijo Power BI Desktop. Ustvarite
 
 1. Izberite **Prikaži več** in poiščite storitev **Dynamics 365 Customer Insights**
 
-1. Izberite rezultat in izberite možnost **Poveži**.
+1. Izberite **Vzpostavljanje povezave**.
 
 1. Opravite **Vpis** z enakim računom organizacije, ki ga uporabljate za storitev Customer Insights, in izberite možnost **Poveži**.
    > [!NOTE]
@@ -39,7 +39,7 @@ Ustvarite vizualizacije svojih podatkov s storitvijo Power BI Desktop. Ustvarite
 
 1. V pogovornem oknu **Krmilnik**. Prikazan je seznam vseh okolij, do katerih imate dostop. Razširite okolje in odprite katero koli mapo (entitete, mere, segmenti, obogatitve). Odprite na primer mapo **Entitete** za ogled vseh entitet, ki jih lahko uvozite.
 
-   ![Krmilnik povezovalnika storitve Power BI](media/power-bi-navigator.png "Krmilnik povezovalnika storitve Power BI")
+   ![Krmilnik povezovalnika storitve Power BI.](media/power-bi-navigator.png "Krmilnik povezovalnika storitve Power BI")
 
 1. Izberite potrditvena polja poleg entitet, ki jih želite vključiti, in nato **Naloži**. Izberete lahko več entitet iz več okolij.
 
@@ -47,8 +47,32 @@ Ustvarite vizualizacije svojih podatkov s storitvijo Power BI Desktop. Ustvarite
 
 ## <a name="large-data-sets"></a>Obsežni nabori podatkov
 
-Povezovalnik Customer Insights za Power BI je zasnovan tako, da deluje za nabore podatkov, ki imajo do 1 milijona profilov strank. Uvoz večjih naborov podatkov lahko deluje, vendar traja dolgo. Poleg tega lahko zaradi omejitev storitve Power BI pride do časovnih omejitev. Za več informacij glejte [Power BI: priporočila za obsežne nabore podatkov](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Povezovalnik Customer Insights za Power BI je zasnovan tako, da deluje za nabore podatkov, ki imajo do 1 milijona profilov strank. Uvoz večjih naborov podatkov lahko deluje, vendar traja dolgo. Poleg tega lahko zaradi omejitev storitve Power BI pride do časovnih omejitev. Za več informacij glejte [Power BI: priporočila za obsežne nabore podatkov](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Delo s podmnožico želenih podatkov
 
 Razmislite o delu s podmnožico svojih podatkov. Lahko na primer ustvarite [segmente](segments.md) namesto izvoza vseh zapisov strank v storitev Power BI.
+
+## <a name="troubleshooting"></a>Odpravljanje težav
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Okolje storitve Customer Insights se ne prikaže v storitvi Power BI
+
+Okolja, ki imajo opredeljen več kot en [odnos](relationships.md) med dvema enakima entitetama v vpogledih v občinstvo, ne bodo na voljo v povezovalniku storitve Power BI.
+
+Podvojene odnose lahko prepoznate in jih odstranite.
+
+1. V vpogledih v občinstvo odprite razdelek **Podatki** > **Odnosi** za okolje, ki manjka v storitvi Power BI.
+2. Prepoznajte podvojene odnose:
+   - Preverite, ali je med istima entitetama določen več kot en odnos.
+   - Preverite, ali je odnos ustvarjen med entitetama, ki sta vključeni v postopek poenotenja. Med vsemi entitetami, vključenimi v postopek združevanja, je določen implicitni odnos.
+3. Odstranite vse prepoznane podvojene odnose.
+
+Po odstranitvi podvojenih odnosov poskusite znova konfigurirati povezovalnik storitve Power BI. Okolje bi moralo biti zdaj na voljo.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Napake v datumskih poljih pri nalaganju entitet v Power BI Desktop
+
+Ko nalagate entitete, ki vsebujejo polja z obliko datuma, kot je DD/MM/LLLL, lahko naletite na napake zaradi neusklajenih oblik območnih nastavitev. To neskladje se zgodi, ko je vaša datoteka Power BI Desktop nastavljena na jezik, ki ni angleščina (Združene države), ker se datumska polja v vpogledih občinstva shranijo v ameriškem formatu.
+
+Datoteka Power BI Desktop ima eno območno nastavitev, ki se uporablja pri pridobivanju podatkov. Če želite pravilno razlagati ta datumska polja, nastavite območno nastavitev datoteke .BPI v angleščino (Združene države). [Naučite se spremeniti območno nastavitev namizne datoteke Power BI](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
