@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354428"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376436"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Posredovanje dnevnika Dynamics 365 Customer Insights z Azure Monitor (predogled)
 
@@ -37,7 +37,7 @@ Customer Insights pošilja naslednje dnevnike dogodkov:
 Za konfiguriranje diagnostike v Customer Insights morajo biti izpolnjeni naslednji predpogoji:
 
 - Imate aktivno [Naročnina na Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Imaš [skrbnik](permissions.md#administrator) dovoljenja v Customer Insights.
+- Imaš [skrbnik](permissions.md#admin) dovoljenja v Customer Insights.
 - Imate **sodelavec** in **Skrbnik uporabniškega dostopa** vlogo na ciljnem viru v Azure. Vir je lahko račun Azure Storage, središče dogodkov Azure ali delovni prostor Azure Log Analytics. Za več informacij glejte [Dodajte ali odstranite dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal).
 - [Zahteve za destinacijo](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) za Azure Storage, Azure Event Hub ali Azure Log Analytics met.
 - Imate vsaj **Uporabnik z dovoljenjem za branje** vlogo v skupini virov, ki ji vir pripada.
@@ -87,7 +87,7 @@ Dnevniška shema sledi [Skupna shema Azure Monitor](/azure/azure-monitor/platfor
 Customer Insights ponuja dve kategoriji:
 
 - **Revizijski dogodki** :[API dogodki](#api-event-schema) za sledenje spremembam konfiguracije storitve. `POST|PUT|DELETE|PATCH` operacije spadajo v to kategorijo.
-- **Operativni dogodki** :[API dogodki](#api-event-schema) oz [dogodki poteka dela](#workflow-event-schema) ustvarjeno med uporabo storitve.  Na primer`GET` zahteve ali izvedbene dogodke delovnega toka.
+- **Operativni dogodki** :[API dogodki](#api-event-schema) oz [dogodki poteka dela](#workflow-event-schema) ustvarjena med uporabo storitve.  Na primer`GET` zahteve ali izvedbene dogodke delovnega toka.
 
 ## <a name="configuration-on-the-destination-resource"></a>Konfiguracija ciljnega vira
 
@@ -132,7 +132,7 @@ Dogodki API in dogodki poteka dela imajo skupno strukturo in podrobnosti, kjer s
 | `resultSignature` | String    | Po izbiri          | Status rezultata dogodka. Če operacija ustreza klicu REST API, je to koda stanja HTTP.        | `200`             |
 | `durationMs`      | Dolgo      | Po izbiri          | Trajanje operacije v milisekundah.     | `133`     |
 | `callerIpAddress` | String    | Po izbiri          | IP naslov klicatelja, če operacija ustreza klicu API, ki prihaja z javno dostopnega naslova IP.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Po izbiri          | Objekt JSON, ki opisuje identiteto uporabnika ali aplikacije, ki je opravila operacijo.       | Glej [Identiteta](#identity-schema) oddelek.     |  |
+| `identity`        | String    | Po izbiri          | Objekt JSON, ki opisuje identiteto uporabnika ali aplikacije, ki je opravila operacijo.       | Glej [Identiteta](#identity-schema) oddelek.     |  
 | `properties`      | String    | Po izbiri          | Objekt JSON z več lastnostmi za določeno kategorijo dogodkov.      | Glej [Lastnosti](#api-properties-schema) oddelek.    |
 | `level`           | String    | Zahtevano          | Stopnja resnosti dogodka.    | `Informational`,`Warning`,`Error`, oz `Critical`.           |
 | `uri`             | String    | Po izbiri          | URI absolutne zahteve.    |               |
@@ -230,7 +230,7 @@ Dogodki poteka dela imajo naslednje lastnosti.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Da      | Da  | Nenehno`WorkflowEvent`, ki dogodek označi kot dogodek poteka dela.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Da      | Da  | Identifikator poteka poteka dela. Vsi dogodki poteka dela in opravil v okviru izvajanja poteka dela imajo enake `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Da      | Da  | Identifikator operacije, glejte [Vrste operacij].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Da      | Da  | Identifikator operacije, gl[ Vrste operacij].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Da      | No   | Samo potek dela. Število opravil, ki jih sproži potek dela.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Da      | No   | Izbirno. Samo dogodki poteka dela. The Azure Active Directory [objectId uporabnika](/azure/marketplace/find-tenant-object-id#find-user-object-id) kdo je sprožil potek dela, glejte tudi `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Da      | No   | `full` oz`incremental` osveži.                                                                                                                                                                                                                            |
@@ -239,7 +239,7 @@ Dogodki poteka dela imajo naslednje lastnosti.
 | `properties.startTimestamp`                  | Da      | Da  | Časovni žig UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Da      | Da  | Časovni žig UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Da      | Da  | Časovni žig UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Da      | Da  | Vpogled v stranke`instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Da      | Da  | Vpogled v stranke`instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Da  | - Za OperationType =`Export`, je identifikator vodilo konfiguracije izvoza. <br> - Za OperationType =`Enrichment`, je vodilo pri obogatitvi <br> - Za OperationType`Measures` in`Segmentation`, identifikator je ime entitete. |
 | `properties.friendlyName`                    | No       | Da  | Uporabniku prijazno ime izvoza ali subjekta, ki se obdeluje.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Da  | Izbirno. Sporočilo o napaki z več podrobnostmi.                                                                                                                                                                                                                  |

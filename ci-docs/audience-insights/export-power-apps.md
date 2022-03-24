@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229052"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455972"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Povezovalnik storitve Microsoft Power Apps (predogled)
 
@@ -38,6 +38,8 @@ Ko dodate storitev Customer Insights kot podatkovno povezavo, lahko v storitvi P
 ### <a name="retrievable-entities"></a>Entitete, ki jih je mogoče pridobiti
 
 S povezovalnikom Power Apps lahko pridobite le entitete **Stranka**, **UnifiedActivity**, **Segmenti** in **ContactProfile**. »ContactProfile« je na voljo samo v primerkih vpogledov v občinstvo za poslovne račune. Prikazane so druge entitete, ker jih osnovni povezovalnik podpira prek sprožilcev v storitvi Power Automate.
+
+Opravite lahko največ 100 klicev na 60 sekund. API končna točka lahko pokličete večkrat z uporabo parametra $skip. [Preberite več o parametru $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Pooblastitev
 

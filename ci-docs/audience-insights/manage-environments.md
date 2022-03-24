@@ -1,7 +1,7 @@
 ---
 title: Ustvarjanje in upravljanje okolij
 description: Naučite se, kako se prijaviti za storitev in kako upravljati okolja.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354299"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376896"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
-
-
 
 ## <a name="switch-environments"></a>Zamenjava okolja
 
@@ -98,9 +96,29 @@ Ko osvežite vire podatkov, se pomaknite na možnost **Podatki** > **Poenoti**. 
 
 Ko je poenotenje podatkov dokončano, odprite možnost **Mere** in **Segmenti**, da ju prav tako osvežite.
 
+## <a name="change-the-owner-of-an-environment"></a>Spremenite lastnika okolja
+
+Medtem ko ima lahko več uporabnikov skrbniška dovoljenja v Customer Insights, je samo en uporabnik lastnik okolja. Privzeto je skrbnik tisti, ki prvotno ustvari okolje. Kot skrbnik okolja lahko dodelite lastništvo drugemu uporabniku s skrbniškimi dovoljenji.
+
+1. V glavi aplikacije izberite izbirnik **Okolje**.
+
+1. Izberite ikono za **urejanje**.
+
+1. V **Uredi okolje** polje, pojdite na **Osnovni podatki** korak.
+
+1. V **Zamenjajte lastnika okolja** polje, izberite novega lastnika okolja.  
+
+1. Izberite **Preglejte in dokončajte**, potem **Nadgradnja** za uveljavitev sprememb. 
+
+## <a name="claim-ownership-of-an-environment"></a>Zahtevajte lastništvo okolja
+
+Če lastnik okolja zapusti organizacijo ali je njegov uporabniški račun izbrisan, okolje ne bo imelo lastnika. Uporabnik s skrbniškimi dovoljenji lahko zahteva lastništvo in postane novi lastnik. Še naprej si lahko lastijo okolje oz [spremeni lastništvo drugemu skrbniku](#change-the-owner-of-an-environment). 
+
+Če želite zahtevati lastništvo, izberite **Prevzemi lastništvo** gumb, ki se prikaže na vrhu vsake strani v Customer Insights, ko je prvotni lastnik zapustil organizacijo.
+
 ## <a name="reset-an-existing-environment"></a>Ponastavitev obstoječega okolja
 
-Če želite izbrisati vse konfiguracije in odstraniti vključene podatke, lahko kot administrator okolje ponastavite v prazno stanje.
+Kot lastnik okolja lahko okolje ponastavite na prazno stanje, če želite izbrisati vse konfiguracije in odstraniti vnesene podatke.
 
 1.  V glavi aplikacije izberite izbirnik **Okolje**. 
 
@@ -112,7 +130,7 @@ Ko je poenotenje podatkov dokončano, odprite možnost **Mere** in **Segmenti**,
 
 ## <a name="delete-an-existing-environment"></a>Brisanje obstoječega okolja
 
-Kot skrbnik lahko izbrišete okolja, katerih skrbnik ste.
+Kot lastnik okolja lahko izbrišete okolje, ki ga upravljate.
 
 1.  V glavi aplikacije izberite izbirnik **Okolje**.
 

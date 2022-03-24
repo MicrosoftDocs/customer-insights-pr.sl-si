@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372647"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376942"
 ---
 # <a name="match-entities"></a>Ujemanje entitet
 
@@ -184,6 +184,8 @@ Izhodna entiteta brez podvajanj vsebuje naslednje informacije:
 ## <a name="include-enriched-entities-preview"></a>Vključi obogatene entitete (predogled)
 
 Če ste obogatili entitete na ravni vir podatkov, jih izberite, preden zaženete postopek ujemanja. Obogatene entitete lahko izboljšajo vaše rezultate združevanja. Za več informacij glejte [Obogatitev za vire podatkov](data-sources-enrichment.md). 
+
+Obogatena entiteta vsebuje izvirna polja vir podatkov in obogatena polja. Če se torej odločite za delo z obogateno entiteto, to ne vpliva na obstoječo konfiguracijo. Vendar pa boste morda morali posodobiti pravila ujemanja, da boste namesto tega uporabljali obogatena polja.
 
 1. Pojdi do **Podatki** > **Poenoti** > **Tekma** in izberite **Uporabite obogatene entitete** na vrhu strani.
 

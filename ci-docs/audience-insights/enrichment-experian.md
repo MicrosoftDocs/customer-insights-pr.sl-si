@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229989"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376712"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Profile strank obogatite z demografskimi podatki iz storitve Experian (predogled)
 
@@ -25,7 +25,7 @@ Da bi lahko konfigurirali Experian, morate izpolnjevati naslednje predpogoje:
 
 - Imeti morate aktivno naročnino na Experian. Če se želite naročiti, [se obrnite neposredno na Experian](https://www.experian.com/marketing-services/contact). [Več informacij o obogatitvi podatkov Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- Povezavo Experian je konfiguriral skrbnik, *v nasprotnem primeru* pa imate [skrbnikovo](permissions.md#administrator) dovoljenje vi. Potrebujete tudi ID uporabnika, ID stranke in številko modela za račun storitve Secure Transport (ST) z omogočeno funkcijo SSH, ki ga je za vas ustvaril Experian.
+- Povezavo Experian je konfiguriral skrbnik, *v nasprotnem primeru* pa imate [skrbnikovo](permissions.md#admin) dovoljenje vi. Potrebujete tudi ID uporabnika, ID stranke in številko modela za račun storitve Secure Transport (ST) z omogočeno funkcijo SSH, ki ga je za vas ustvaril Experian.
 
 ## <a name="supported-countriesregions"></a>Podprte države/regije
 

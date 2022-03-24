@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355911"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376528"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Uporaba lastne shrambe ključev Azure (predogledna različica)
 
@@ -31,7 +31,7 @@ Za konfiguracijo shrambe ključev v vpogledih v občinstvo morajo biti izpolnjen
 
 - Imate aktivno naročnino na Azure.
 
-- Imeti morate vlogo [skrbnika](permissions.md#administrator) v vpogledih v občinstvo. Preberite več o [uporabniških dovoljenjih v vpogledih v občinstvo](permissions.md#assign-roles-and-permissions).
+- Imeti morate vlogo [skrbnika](permissions.md#admin) v vpogledih v občinstvo. Preberite več o [uporabniških dovoljenjih v vpogledih v občinstvo](permissions.md#assign-roles-and-permissions).
 
 - Imate vlogo [Sodelavec](/azure/role-based-access-control/built-in-roles#contributor) in [Skrbniški dostop uporabnika](/azure/role-based-access-control/built-in-roles#user-access-administrator) v shrambi ključev ali skupini virov, ki ji pripada shramba ključev. Za več informacij obiščite [Dodajanje ali odstranitev dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal). Če nimate vloge Skrbniški dostop uporabnika v shrambi ključev, morate za glavno ime storitve Azure ločeno nastaviti dovoljenja za nadzor dostopa, ki temeljijo na vlogi, za storitev Dynamics 365 Customer Insights. Upoštevajte postopke, da [uporabite glavno ime storitve Azure](connect-service-principal.md) za shrambo ključev, ki jo je treba povezati.
 

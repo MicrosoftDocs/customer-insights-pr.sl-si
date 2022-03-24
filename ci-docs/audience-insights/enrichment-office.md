@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228494"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376850"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Obogatite profile strank s podatki o angažiranosti (predogled)
 
@@ -28,7 +28,7 @@ Za konfiguracijo obogatitve morajo biti izpolnjeni naslednji predpogoji:
 - Imate aktivno Office 365 licenca v oblaku.
 - Imaš [enotni profili strank](customer-profiles.md) temelji na [poslovne račune](work-with-business-accounts.md).
 - Vaše okolje Customer Insights mora imeti a [Microsoft Dataverse organizacija priložena](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- Imaš [skrbnik](permissions.md#administrator) dovoljenja.
+- Imaš [skrbnik](permissions.md#admin) dovoljenja.
 - Imate ali lahko dobite soglasje od svojega Office 365 skrbnik najemnika za uporabo Office 365 podatke, ki jih je treba zagotoviti **Vpogled v organizacijo** znotraj aplikacij Dynamics 365.
 
 ## <a name="configure-the-enrichment"></a>Konfiguriranje obogatitve
@@ -59,7 +59,7 @@ Privolitev od Office 365 Za aktiviranje obogatitve je potreben skrbnik najemnika
 
 Ko se obogatitev začne prvič, po Office 365 skrbnik najemnika je dal soglasje, prenos podatkov iz Office 365 se začne. Ta postopek traja nekaj časa. Prva obogatitvena vožnja bo predvidoma izvedena s šesturno zamudo. Število dni, ki jih zajemajo podatki, si lahko ogledate na strani s pregledom dejavnosti računa po končani obogatitvi. Če imate veliko količino podatkov, po nekaj dneh znova zaženite obogatitev. Zagotavlja, da so podatki popolni za celotno časovno okno, ki je eno leto.
 
-Če želite začeti postopek, izberite **teci** na strani za konfiguracijo dejavnosti računa. Poleg tega lahko dovolite sistemu, da samodejno zažene obogatitev kot del a [načrtovana osvežitev](system.md#schedule-tab). Privzeto se obogatitev izvaja enkrat na teden.
+Za začetek postopka izberite **teci** na strani za konfiguracijo dejavnosti računa. Poleg tega lahko dovolite sistemu, da samodejno zažene obogatitev kot del a [načrtovana osvežitev](system.md#schedule-tab). Privzeto se obogatitev izvaja enkrat na teden.
 
 Odvisno od velikosti vaših Officeovih podatkov lahko traja nekaj ur, da se dokončanje obogatitve.
 

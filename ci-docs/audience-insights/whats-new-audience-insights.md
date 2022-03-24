@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232724"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376482"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
-
-
 
 Navdušeno sporočamo, da so najnovejše posodobitve pripravljene! V tem članku so povzete funkcije predogledne različice za javnost, splošne izboljšave razpoložljivosti in posodobitve funkcij. Če si želite ogledati dolgoročne načrte za funkcije, glejte [Načrti za izdajo storitev Dynamics 365 in Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +24,62 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="february-2022-updates"></a>Posodobitve februarja 2022
+
+Posodobitve februarja 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="general-availability-for-prediction-models"></a>Splošna razpoložljivost za modele predvidevanje
+
+Izdelani modeli predvidevanje, vključno z **odtok naročnin**, **odliv**, in **življenjska vrednost stranke (CLV)** postanejo splošno dostopni kot del Customer Insights. 
+
+Za več informacij glejte [Pregled napovedi](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Novo vir podatkov: Integracija z Azure Synapse Analytics (predogled)
+
+Azure Synapse Analytics je analitična storitev podjetja, ki pospeši čas do vpogledov v podatkovna skladišča in sisteme velikih podatkov.
+
+Če vaša organizacija že uporablja napredne analitične zmogljivosti Azure Synapse Analytics in shrani izhod v podatkovne baze podatkovnega jezera, te podatke lahko preprosto vnesete v Customer Insights. Za več informacij glejte [Povežite an Azure Synapse vir podatkov (predogled)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Obogatitev LiveRamp (predogled)
+
+LiveRamp zagotavlja deterministično ločevanje identitete brez povezave in konsolidacijo podatkov strank. Osebne identifikatorje v svojih podatkih o strankah lahko preslikate v graf identitete AbiliTec in prejmete AbiliTec ID-je. Te ID-je lahko nato uporabite za boljše poenotenje podatkov vaših strank.
+
+Za več informacij glejte [Obogatite profile strank s podatki o identiteti iz LiveRamp (predogled)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Obogatitev za vire podatkov (predogled)
+
+Uporabite podatke iz virov, kot so Microsoft in drugi partnerji, da obogatite svoje podatke o strankah pred poenotenjem podatkov. Obogatitve vir podatkov pomagajo ustvariti večjo popolnost in kakovost podatkov, kar lahko pomaga doseči boljše rezultate, ko poenotite svoje podatke.
+
+Za več informacij glejte [Obogatitev za vire podatkov (predogled)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Sprememba lastnika okolja
+
+Medtem ko ima lahko več uporabnikov skrbniška dovoljenja v Customer Insights, je samo en uporabnik lastnik okolja. Izboljšana izkušnja vam omogoča, da zamenjate lastnike okolja in zahtevate lastništvo, če je nekdanji lastnik zapustil organizacijo. 
+
+Za več informacij glejte [Spremenite lastnika okolja](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Postopek priprave podatkov navaja razloge za korupcijo za poškodovane zapise
+
+Postopek priprave podatkov zdaj za lažjo identifikacijo pokaže razlog za korupcijo za vsa polja s poškodovanimi podatki na ravni posameznega zapisa. 
+
+Za več informacij glejte [Poškodovani viri podatkov](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Konec predogleda za funkcije poročanja v zmožnosti vpogleda v dejavnost
+
+The Dynamics 365 Customer Insights Predogled zmogljivosti vpogledov v angažiranost se je končal 15. februarja 2022.  
+Ta sprememba pomeni, da preizkusna izkušnja Customer Insights ne vključuje več možnosti ustvarjanja tokov ali drugih funkcij poročanja.
+
+Vabimo vas, da raziščete in ocenite številne druge lastnosti [Vpogled v stranke](https://dynamics.microsoft.com/ai/customer-insights/), Microsoftova platforma za podatke o strankah (CDP).    
+ 
+V prehodnem obdobju imajo obstoječi udeleženci predogleda še vedno dostop do nekaterih zmožnosti in funkcionalnosti predogleda:
+
+- Pridobite kodo za instrumentiranje spletnega mesta ali mobilne aplikacije 
+- Oglejte si dogodke in lastnosti dogodkov 
+- Izboljšajte poenotene profile s prevzetimi in izpopolnjenimi dogodki, da izkoristite polno vrednost svojih podatkov o strankah
+  
+V prehodnem obdobju se zajeti dogodki še vedno pretakajo v povezano podatkovno jezero. Ko je ta funkcija izklopljena, se skupna raba podatkov med vpogledi v dejavnost in vpogledi občinstvo ustavi in v povezani pomnilnik se ne pošiljajo novi dogodki.
+Če imate vprašanja o koncu predogleda zmogljivosti, se obrnite neposredno na skupino za Microsoftov račun. Vaša skupina za račun vas bo obveščala o prihodnjih izdajah. 
 
 ## <a name="january-2022-updates"></a>Posodobitve v januarju 2022
 
@@ -42,7 +96,7 @@ Za več informacij glejte [Analizirajte razpoloženje v povratnih informacijah s
 
 Posodobitve decembra 2021 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
 
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Posredujte dnevnike Customer Insights v Azure Monitor
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Posreduj dnevnike Customer Insights v Azure Monitor
 
 Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Ta funkcija vključuje revizijske dogodke in operativne dogodke. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov v Azure Storage, Azure Log Analytics ali jih pretakate v Azure Središča za dogodke.
 
@@ -99,7 +153,7 @@ Posodobitve oktobra 2021 vključujejo nove funkcije, nadgradnje zmogljivosti in 
 
 ### <a name="b-to-b"></a>B-do-B
 
-Od oktobra 2021 lahko delate s poslovnimi računi in povezanimi stiki v storitvi Customer Insights. Prej je bila aplikacija večinoma prilagojena posameznim potrošnikom. Več funkcijskih področij je bilo posodobljenih za podporo scenarijev B-to-B poleg novega tipa okolja. Za pregled podprtih funkcij B-to-B glejte [Delajte s poslovnimi računi v občinstvo vpogledih](work-with-business-accounts.md).
+Od oktobra 2021 lahko delate s poslovnimi računi in povezanimi stiki v storitvi Customer Insights. Prej je bila aplikacija večinoma prilagojena posameznim potrošnikom. Več funkcijskih področij je bilo posodobljenih za podporo scenarijev B-to-B poleg novega tipa okolja. Za pregled podprtih funkcij B-to-B glejte [Delo s poslovnimi računi v občinstvo insights](work-with-business-accounts.md).
 
 Naslednji razdelki poudarjajo nekatera ključna področja, ki so bila prilagojena za podporo poslovnim računom in posameznim potrošnikom.
 
@@ -121,7 +175,7 @@ Graditelj segmentov vam omogoča ustvarjanje segmentov poslovnih računov, ki po
 
 #### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Ohranite svoje poslovne račune z globokim vpogledom v njihovo nagnjenost k odlivu
 
-Model odliva strank predvidevanje zdaj podpira tudi poslovne račune. Tveganje odtoka lahko ocenite ne samo za račun, temveč za kombinacijo računa in kategorije izdelkov ali storitev, ki jih kupijo pri vas. Ta dodatek vam pomaga razumeti, ali je večja verjetnost, da bo račun prenehal kupovati pri vas na splošno ali samo za določeno kategorijo blaga ali storitev. Za dodatno pomoč pri uporabi tega modela umetne inteligence so navedeni tudi razlogi, zakaj bo račun verjetno odtekel. Za več informacij glejte [Pretok transakcij predvidevanje (predogled)](predict-transactional-churn.md).
+Model odliva strank predvidevanje zdaj podpira tudi poslovne račune. Tveganje odtoka lahko ocenite ne samo za račun, ampak za kombinacijo računa in kategorije izdelkov ali storitev, ki jih kupijo pri vas. Ta dodatek vam pomaga razumeti, ali je večja verjetnost, da bo račun prenehal kupovati pri vas na splošno ali samo za določeno kategorijo blaga ali storitev. Za dodatno pomoč pri uporabi tega modela umetne inteligence so navedeni tudi razlogi, zakaj bo račun verjetno odtekel. Za več informacij glejte [Pretok transakcij predvidevanje (predogled)](predict-transactional-churn.md).
 
 #### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Oglejte si stike poslovnega računa v pogledu strank
 

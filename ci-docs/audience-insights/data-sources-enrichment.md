@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: eebaaf18795e80dd1ba16a15a23844d685c94c6e
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8373083"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376599"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obogatitev za vire podatkov (predogled)
 
@@ -33,14 +33,14 @@ Za ustvarjanje ali urejanje obogatitev morate imeti dovoljenja sodelavec ali skr
 
    The **Odkrij** zavihek prikaže [podprte možnosti obogatitve vir podatkov](#supported-data-source-enrichments).
 
-1. Izberite **Obogatite moje podatke** za konfiguriranje obogatitve vir podatkov. Ime izhodne entitete se samodejno izpolni.
+1. Izberite **Obogatite moje podatke** da konfigurirate obogatitev vir podatkov. Ime izhodne entitete se samodejno izpolni.
 
 ## <a name="supported-data-source-enrichments"></a>Podprte obogatitve vir podatkov
 
 Za vire podatkov so trenutno na voljo naslednje obogatitve. Preglejte podrobne korake za obogatitev, da se naučite, kako jo konfigurirati.
 
 - [Izboljšani naslovi](enrichment-enhanced-addresses.md)
-- [Podatki o identiteti iz LiveRamp](enrichment-liveramp.md)
+- [Izboljšani podatki podjetja](enrichment-enhanced-company-data.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Upravljajte obstoječe vir podatkov obogatitve
 

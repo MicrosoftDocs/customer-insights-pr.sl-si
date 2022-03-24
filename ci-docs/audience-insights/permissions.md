@@ -1,7 +1,7 @@
 ---
 title: Upravljanje uporabniških dovoljenj
 description: Preberite o dovoljenjih in uporabniških vlogah.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355957"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376758"
 ---
 # <a name="user-permissions"></a>Uporabniška dovoljenja
 
@@ -48,7 +48,7 @@ Na voljo so tri vrste vlog:
 - Upravljajte konfiguracijo in obogatite profile strank s strani **Obogatitev** (samo za obogatitve proizvajalca).
 - Upravljajte in ustvarjajte izvoze na podlagi povezav v skupni rabi s sodelavci. [Preberite več o tem, kako skrbniki dovolijo sodelavcem, da uporabljajo povezavo za izvoze](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Skrbnik
+## <a name="admin"></a>Admin
 
 - Vsa dovoljenja, ki so na voljo sodelavcu.
 - Spremenite nastavitve na strani **Sistem**, vključno z delovnim jezikom in urniki osveževanja za sistemske procese.
@@ -60,6 +60,12 @@ Na voljo so tri vrste vlog:
 - Namestite in uporabite **dodatek za kartice strank**.
 - Dodajte in uporabite **povezovalnik Power Apps**.
 - Omogočite uporabo [API-jev za Customer Insights](apis.md).
+- [Dodeli lastništvo okolja](manage-environments.md#change-the-owner-of-an-environment) drugemu administratorju.
+
+## <a name="admin-owner"></a>Skrbnik (lastnik)
+
+- Vsa dovoljenja, ki so na voljo skrbniku.
+- [Ponastavi in izbriši](manage-environments.md#reset-an-existing-environment) okolje.
 
 ## <a name="assign-roles-and-permissions"></a>Dodeljevanje vlog in dovoljenj
 
