@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232011"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487535"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Izvoz segmentov v Marketo (predogledna različica)
 
@@ -63,7 +63,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Vnesite svoj **[ID seznama za Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID seznama je zgolj številčna vrednost. Če je na primer vaš ID seznama za Marketo ST12345A7, odstranite znak pred in za številkami ter vnesite `12345`. 
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. 
+1. V **Ujemanje podatkov** izberite vsaj eno polje, ki predstavlja e-poštni naslov stranke ali ID stranke Marketo. 
 
 1. Izbirno lahko izvozite **Ime**, **Priimek**, **Mesto**, **Zvezna država** in **Država/regija**, da ustvarite bolj prilagojena e-poštna sporočila. Izberite **Dodaj atribut** za preslikavo teh polj.
 

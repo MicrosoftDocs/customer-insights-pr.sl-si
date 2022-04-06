@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376436"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523689"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Posredovanje dnevnika Dynamics 365 Customer Insights z Azure Monitor (predogled)
 
@@ -169,7 +169,7 @@ The`identity` Objekt JSON ima naslednjo strukturo
 
 | Polje                        | Description                                                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `properties.eventType`       | Nenehno`ApiEvent`, ki dogodek v dnevniku označi kot dogodek API.                                                                 |
+| `properties.eventType`       | Nenehno`ApiEvent`, kar označi dogodek dnevnika kot dogodek API.                                                                 |
 | `properties.userAgent`       | Agent brskalnika, ki pošlje zahtevo oz `unknown`.                                                                        |
 | `properties.method`          | Metoda HTTP:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
 | `properties.path`            | Relativna pot zahteve.                                                                                          |
@@ -229,8 +229,8 @@ Dogodki poteka dela imajo naslednje lastnosti.
 | Polje              | Workflow | opravilo, | Description            |
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Da      | Da  | Nenehno`WorkflowEvent`, ki dogodek označi kot dogodek poteka dela.                                                                                                                                                                                                |
-| `properties.workflowJobId`                   | Da      | Da  | Identifikator poteka poteka dela. Vsi dogodki poteka dela in opravil v okviru izvajanja poteka dela imajo enake `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Da      | Da  | Identifikator operacije, gl[ Vrste operacij].(#operation-types)                                                                                                                                                                                       |
+| `properties.workflowJobId`                   | Da      | Da  | Identifikator poteka delovnega toka. Vsi dogodki poteka dela in opravil v okviru izvajanja poteka dela imajo enake `workflowJobId`.                                                                                                                                   |
+| `properties.operationType`                   | Da      | Da  | Identifikator operacije, gl [Vrste operacij](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Da      | No   | Samo potek dela. Število opravil, ki jih sproži potek dela.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Da      | No   | Izbirno. Samo dogodki poteka dela. The Azure Active Directory [objectId uporabnika](/azure/marketplace/find-tenant-object-id#find-user-object-id) kdo je sprožil potek dela, glejte tudi `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Da      | No   | `full` oz`incremental` osveži.                                                                                                                                                                                                                            |

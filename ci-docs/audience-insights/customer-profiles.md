@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354910"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523757"
 ---
 # <a name="customer-profiles"></a>Profili strank
 
 Stran **Stranke** prikazuje kombiniran pogled na vaše enotne profile strank. Profili strank so na voljo, ko enkrat [ustvarite enotno entiteto stranke](data-unification.md). Na tej strani lahko iščete stranke in določite indeks za to iskanje.
 
-Stranke so lahko posamezniki ali organizacije. Vsak profil stranke je predstavljen s ploščico. Če želite dobiti več zapisov, uporabite kontrolnike za oštevilčevanje strani. Kartica prikazuje polja iz entitete *Stranka*, kot je opredeljeno v **indeksu iskanja in filtriranja**. Izberite ploščico, če si želite ogledati podatke za izbrano stranko na posebni strani, imenovani [Stran s podrobnostmi o stranki](customer-profiles.md#customer-details-page).
+Stranke so lahko posamezniki ali organizacije. Vsak profil stranke je predstavljen s ploščico. Če želite dobiti več zapisov, uporabite kontrolnike za oštevilčevanje strani. Kartica prikazuje polja iz entitete *Stranka*, kot je opredeljeno v **indeksu iskanja in filtriranja**. Vrstni red polj znotraj vsake kartice izbere sistem.
+
+Izberite ploščico, če si želite ogledati podatke za izbrano stranko na posebni strani, imenovani [Stran s podrobnostmi o stranki](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Stran strank, ki prikazuje ploščice z rezultati](media/customers-page-result-tiles-B2C.png "Stran strank, ki prikazuje ploščice z rezultati")

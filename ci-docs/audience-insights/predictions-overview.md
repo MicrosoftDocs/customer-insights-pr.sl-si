@@ -1,19 +1,19 @@
 ---
 title: Pregled podprtih scenarijev predvidevanja
 description: Scenariji in možnosti predvidevanja, ki jih zajema aplikacija Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228264"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487555"
 ---
 # <a name="predictions-overview"></a>Pregled predvidevanj
 
@@ -36,6 +36,11 @@ Najlažji način za začetek napovedovanja podatkov predstavljajo vnaprej določ
 - [Izguba transakcij](predict-transactional-churn.md): predvidi, ali stranka ne bo več kupovala vaših izdelkov ali storitev v določenem časovnem okviru.
 
 ---
+
+> [!TIP]
+> Priporočamo, da redno posodabljate že pripravljene modele s posodobljenimi podatki, da zagotovite, da bodo natančno obveščali o vašem primeru poslovne uporabe. Podatki se osvežijo ad hoc, ko sistem zaužije nove ali posodobljene vire podatkov. Vendar bodo modeli samo v tem primeru ponovno ocenili in še naprej uporabljali obstoječe podatke o usposabljanju.
+> 
+> Konfigurirate lahko **Posodobitev urnika** z nastavitvijo urnika ponovnega usposabljanja modela v konfiguracijski izkušnji. Model se bo ponovno usposobil in ocenil po tem urniku, ki ga lahko kadar koli spremenite.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integracija strojnega učenja Azure

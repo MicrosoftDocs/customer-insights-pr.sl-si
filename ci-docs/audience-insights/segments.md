@@ -1,7 +1,7 @@
 ---
 title: Segmenti v vpogledih v občinstvo
 description: Pregled segmentov ter napotki, kako jih ustvariti in upravljati.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8356003"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508586"
 ---
 # <a name="segments-overview"></a>Pregled segmentov
 
@@ -68,7 +68,9 @@ Ko izberete segment, je na voljo naslednje dejanje:
 
 ## <a name="refresh-segments"></a>Osveževanje segmentov
 
-Vse segmente lahko osvežite naenkrat tako, da izberete **Osveži vse** na strani **Segmenti**, ali pa lahko osvežite enega ali več segmentov, ko jih izberete in nato izberete **Osveži** v možnostih. Lahko pa konfigurirate ponavljajoče se osveževanje prek možnosti **Skrbnik** > **Sistem** > **Načrtovanje**.
+Vse segmente lahko osvežite naenkrat tako, da izberete **Osveži vse** na strani **Segmenti**, ali pa lahko osvežite enega ali več segmentov, ko jih izberete in nato izberete **Osveži** v možnostih. Lahko pa konfigurirate ponavljajoče se osveževanje prek možnosti **Skrbnik** > **Sistem** > **Načrtovanje**. Ko je konfigurirana ponavljajoča se osvežitev, veljajo naslednja pravila:
+- Vsi segmenti z vrsto **Dinamično** oz **Razširitev** se bo samodejno osvežilo pri nastavljeni kadenci. Ko je osvežitev končana, **Stanje** označuje, ali je prišlo do težav pri osveževanju segmenta. The **Nazadnje osveženo** prikazuje časovni žig zadnje uspešne osvežitve. Če pride do napake, izberite napako, da si ogledate podrobnosti o tem, kaj se je zgodilo.
+- Segmenti z vrsto **Statično** *ne bo* se samodejno osveži. The **Nazadnje osveženo** prikazuje časovni žig zadnjega ročnega zagona ali osveževanja statičnih segmentov.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

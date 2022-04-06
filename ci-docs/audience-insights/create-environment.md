@@ -1,23 +1,23 @@
 ---
 title: Ustvarjanje okolij v rešitvi Customer Insights
 description: Koraki za ustvarjanje okolij z naročnino na storitev Dynamics 365 Customer Insights, za katero imate licenco.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354115"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491938"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Ustvarite okolje v vpogledih v občinstvo
 
@@ -83,14 +83,16 @@ Ponudite svoje Microsoft Dataverse okolje za izmenjavo podatkov (profilov in vpo
 Povezovanje z vašim Dataverse okolje vam tudi omogoča [prenesite podatke iz virov podatkov na mestu uporabe z uporabo Power Platform podatkovni tokovi in prehodi](data-sources.md#add-data-from-on-premises-data-sources). Lahko tudi uporabite [gotovi modeli predvidevanje](predictions-overview.md?tabs=b2c#out-of-box-models) s povezovanjem na a Dataverse okolje.
 
 > [!IMPORTANT]
-> Vpogled v stranke in Dataverse morajo biti v isti regiji, da omogočite skupno rabo podatkov.
+> 1. Vpogled v stranke in Dataverse morajo biti v isti regiji, da omogočite skupno rabo podatkov.
+> 1. Imeti morate vlogo globalnega skrbnika v Dataverse okolje. Preverite, če je to [Dataverse okolje je povezano](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) v določene varnostne skupine in se prepričajte, da ste dodani v te varnostne skupine.
+> 1. Nobeno obstoječe okolje Customer Insights ni že povezano s tem Dataverse okolje. Naučite se [odstranite obstoječo povezavo z a Dataverse okolje](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podatkov z Microsoft Dataverse samodejno omogočeno za neto nove primerke.":::
 
-> [!NOTE]
-> Storitev Customer Insights ne podpira naslednjih primerov skupne rabe podatkov.
-> - Če vse podatke shranite v svojo shrambo Azure Data Lake Storage, ne boste mogli omogočiti skupne rabe podatkov z upravljanim jezerom podatkov Dataverse.
-> - Če omogočite skupno rabo podatkov s storitvijo Dataverse, ne boste mogli [ustvariti predvidenih ali manjkajočih vrednosti v entiteti](predictions.md).
+Za več informacij o omogočanju skupne rabe podatkov z Microsoft Dataverse od svojega Azure Data Lake Storage, glej [Poveži z Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+Storitev Customer Insights ne podpira naslednjih primerov skupne rabe podatkov.
+- Če omogočite skupno rabo podatkov s storitvijo Dataverse, ne boste mogli [ustvariti predvidenih ali manjkajočih vrednosti v entiteti](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>4. korak: dokončanje nastavitev
 

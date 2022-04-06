@@ -1,7 +1,7 @@
 ---
 title: Uporaba virov podatkov za vključitev podatkov
 description: Naučite se uvoziti podatke iz različnih virov.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354069"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464094"
 ---
 # <a name="data-sources-overview"></a>Pregled virov podatkov
 
@@ -47,7 +47,18 @@ Viri podatkov, ki so ustvarjeni po povezovanju a Dataverse okolje z uporabo Cust
 
 Prehodi za podatke iz obstoječega okolja storitve Power BI ali Power Apps bodo vidni v storitvi Customer Insights, kjer jih lahko znova uporabite. Na strani z viri podatkov se nahajajo povezave do okolja Microsoft Power Platform, kjer si lahko ogledate prehode za podatke na mestu uporabe ter jih konfigurirate.
 
+> [!IMPORTANT]
+> Prepričajte se, da so vaši prehodi posodobljeni na najnovejšo različico. Lahko namestite posodobitev in ponovno konfigurirate prehod iz poziva, prikazanega na zaslonu prehoda neposredno ali [prenesite najnovejšo različico](https://powerapps.microsoft.com/downloads/). Če ne uporabljate najnovejše različice prehoda, osvežitev toka podatkov ne uspe s sporočili o napakah, kot je **Ključna beseda ni podprta: lastnosti konfiguracije. Ime parametra: ključna beseda**.
+
 ## <a name="review-ingested-data"></a>Pregled zaužitih podatkov
+Če vaše okolje vsebuje Power Platform pretoki podatkov, **Viri podatkov** stran navaja tri razdelke: 
+- **V skupni rabi** : Viri podatkov, ki jih lahko upravljajo vsi skrbniki Customer Insights. Power BI pretokov podatkov, lastnega računa za shranjevanje in pripenjanja na a Dataverse -upravljano podatkovno jezero so primeri skupnih virov podatkov.
+- **Upravljam jaz** :Power Platform ustvarjeni tokovi podatkov in jih lahko upravljate samo vi. Drugi skrbniki Customer Insights si lahko samo ogledajo te tokove podatkov, ne pa jih urejajo, osvežujejo ali brišejo.
+- **Upravljajo drugi** :Power Platform tokovi podatkov, ki so jih ustvarili drugi skrbniki. Lahko si jih samo ogledate. V njem je naveden lastnik toka podatkov, na katerega se lahko obrnete za kakršno koli pomoč.
+> [!NOTE]
+> Vse entitete si lahko ogledajo in uporabljajo drugi uporabniki. Uporabniška kontekstualnost velja samo za vire podatkov in ne za entitete, ki izhajajo iz teh podatkovnih tokov.
+
+Če ne Power Platform se uporabljajo tokovi podatkov, ne boste videli nobenih skupin ali razdelkov. The **Viri podatkov** stran vsebuje le seznam vseh virov podatkov.
 
 Videli boste ime vsakega zaužitega vira podatkov, njegovo stanje in čas, ko so bili podatki za ta vir nazadnje osveženi. Seznam virov podatkov lahko razvrstite po vseh stolpcih.
 

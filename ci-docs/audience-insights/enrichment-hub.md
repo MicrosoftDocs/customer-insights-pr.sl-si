@@ -1,7 +1,7 @@
 ---
 title: Obogatitev poenotenih profilov strank
 description: Uporabite zmogljivosti za obogatitev podatkov o strankah.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372739"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491979"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogatitev profilov strank (predogled)
 
@@ -97,5 +97,19 @@ Podrobnosti o obdelavi obogatitve, vključno s stanjem in možnimi težavami, la
 1. V podoknu **Podrobnosti o napredku** razširite razdelek **Obogatitve**. 
 1. Pod obogatitvijo, za katero želite videti napredek, izberite **Prikaži podrobnosti**. 
 1. V podoknu **Podrobnosti opravila** izberite **Pokaži podrobnosti**, da si ogledate postopke, ki so vključeni v posodabljanje obogatitve, in njihovo stanje. 
+
+## <a name="enrichment-results"></a>Rezultati obogatitve
+
+Po končani obogatitvi lahko pregledate rezultate obogatitve.
+
+1. Pomaknite se na možnost **Podatki** > **Obogatitev**. 
+1. Izberite obogatitev, o kateri želite informacije.
+
+Vse obogatitve prikazujejo osnovne informacije, kot so število obogatenih profilov, predogled ustvarjene entitete obogatitve in število obogatenih profilov skozi čas. Če je na voljo, **Število kupcev, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Stran z rezultati obogatitve.":::
+
+Nekatere obogatitve prikazujejo tudi informacije, specifične za vrsto obogatitve. Za več informacij glejte dokumentacijo za ustrezno obogatitev.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
