@@ -1,23 +1,23 @@
 ---
 title: Poiščite podobne stranke z AI (vsebuje video)
 description: Poiščite podobne segmente strank z umetno inteligenco.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355265"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561590"
 ---
 # <a name="similar-customers-preview"></a>Podobne stranke (predogled)
 
@@ -36,6 +36,8 @@ Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdet
 
 1. Preglejte predlagano ime za novi segment in ga po potrebi spremenite.
 
+1. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) v nov segment.
+
 1. Preglejte polja, ki opredeljujejo novi segment. Ta polja določajo osnovo, na kateri bo sistem skušal najti podobne kupce kot v vašem izvornem segmentu. Sistem bo privzeto izbral priporočena polja.
   Polja, ki lahko znatno zmanjšajo zmogljivost modela, so samodejno izključena:
   
@@ -44,9 +46,9 @@ Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdet
 
 1. Odločite se, če želite v novi segment vključiti **Vse stranke** ali samo stranke v **Specifičnem obstoječem segmentu**.
 
-1. Izključite stranke v izvornem segmentu tako, da izberete potrditveno polje **Izključite vse v izvornem segmentu**.
-
 1. Sistem privzeto predlaga, da v svoj izhod vključite le 20 % velikosti ciljnega občinstva. Ta prag uredite po potrebi. Zvišanje praga bo zmanjšalo natančnost.
+
+1. Vključite stranke v svoj izvorni segment, tako da izberete **Vključite člane iz izvornega segmenta poleg strank s podobnimi atributi** potrditveno polje.
 
 1. Izberite **Zaženi** na dnu strani, da začnete opravilo dvojiške razvrstitve (metoda strojnega učenja), ki analizira nabor podatkov.
 
@@ -67,7 +69,7 @@ Delate lahko [z izhodom podobnega segmenta](segments.md), tako kot pri drugih se
 
 Če želite osvežiti podoben segment, ga izberite na strani **Segmenti** in izberite **Osveži** v vrstici z dejanji.
 
-Če uredite podoben segment, bodo podatki ponovno obdelani. Prejšnji ustvarjeni segment se posodobi z osveženimi podatki.    
+Če uredite podoben segment, bodo podatki ponovno obdelani. Prejšnji ustvarjeni segment se posodobi z osveženimi podatki.
 Če želite urediti podoben segment, ga izberite na strani **Segmenti** in izberite **Uredi** v vrstici z dejanji. Uporabite spremembe in izberite **Zaženi** za začetek obdelave.
 
 ## <a name="delete-a-similar-segment"></a>Izbrišite podoben segment
@@ -84,6 +86,5 @@ Dvojiška razvrstitev modela strojnega učenja dodeli oceno strankam v podobnem 
 - Ocene podobnosti med 0,85 – 1 so stranke, ki jih sistem uvršča kot *zelo podobno*
 
 Stranke z ocenami podobnosti pod 0,4 niso vključeni v izhod modela. Sistem jih ne zaznava kot dovolj podobne izvornemu segmentu.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

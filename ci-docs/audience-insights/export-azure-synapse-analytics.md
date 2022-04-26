@@ -1,19 +1,19 @@
 ---
 title: Izvoz podatkov iz storitve Customer Insights v storitev Azure Synapse Analytics
 description: Naučite se konfigurirati povezavo z Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231332"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560407"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvozi podatke v Azure Synapse Analytics (predogled)
 
@@ -28,27 +28,27 @@ Za konfiguriranje povezave iz rešitve Customer Insights v storitev Azure Synaps
 
 ## <a name="prerequisites-in-customer-insights"></a>Zahteve v rešitvi Customer Insights
 
-* Imeti morate vlogo **skrbnika** v vpogledih v občinstvo. Preberite več o [nastavitvi uporabniških dovoljenj v vpogledih v občinstvo](permissions.md#assign-roles-and-permissions)
+* Vaš Azure Active Directory (AD) uporabniški račun ima **skrbnik** vlogo v Customer Insights. Preberite več o [nastavitvi uporabniških dovoljenj v vpogledih v občinstvo](permissions.md#assign-roles-and-permissions)
 
 V storitvi Azure: 
 
 - Aktivna naročnina na Azure.
 
-- Če uporabljate nov račun za Azure Data Lake Storage Gen2, *glavno ime storitve za vpoglede v občinstvo* potrebuje dovoljenja **sodelujočega za podatke shrambe zbirke dvojiških podatkov**. Preberite več o [povezovanju z računom za Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure za vpoglede v občinstvo](connect-service-principal.md). Data Lake Storage Gen2 **mora imeti** omogočen [hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
+- Če uporabljate novo Azure Data Lake Storage Račun Gen2, *vodja storitve za Customer Insights* potrebe **Podatki blobov za shranjevanje sodelavec** dovoljenja. Preberite več o [povezovanju z računom za Azure Data Lake Storage Gen2 z glavnim imenom storitve Azure za vpoglede v občinstvo](connect-service-principal.md). Data Lake Storage Gen2 **mora imeti** omogočen [hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
 
-- V skupini virov se nahaja delovni prostor Azure Synapse, *glavno ime storitve* in *uporabnik za vpoglede v občinstvo* pa morajo imeti dodeljena vsaj dovoljenja za **branje**. Če želite več informacij, glejte razdelek [Dodelitev vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal).
+- V skupini virov, kjer je Azure Synapse delovni prostor se nahaja, *ravnatelja storitve* in *Azure AD uporabnik s skrbniškimi dovoljenji v Customer Insights* je treba vsaj dodeliti **Uporabnik z dovoljenjem za branje** dovoljenja. Če želite več informacij, glejte razdelek [Dodelitev vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal).
 
-- *Uporabnik* potrebuje dovoljenje **sodelujočega v shrambi zbirke dvojiških podatkov** za račun Azure Data Lake Storage Gen2, kjer se nahajajo podatki, ki so povezani z delovnim prostorom Azure Synapse. Preberite več o [uporabi portala Azure za dodelitev vloge Azure za dostop do zbirke dvojiških podatkov in podatkov o čakalni vrsti](/azure/storage/common/storage-auth-aad-rbac-portal) ter [sodelujočem v shrambi zbirke dvojiških podatkov](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- The *Azure AD uporabnik s skrbniškimi dovoljenji v Customer Insights* potrebe **Podatki blobov za shranjevanje sodelavec** dovoljenja za Azure Data Lake Storage Račun Gen2, kjer se podatki nahajajo in so povezani z Azure Synapse delovni prostor. Preberite več o [uporabi portala Azure za dodelitev vloge Azure za dostop do zbirke dvojiških podatkov in podatkov o čakalni vrsti](/azure/storage/common/storage-auth-aad-rbac-portal) ter [sodelujočem v shrambi zbirke dvojiških podatkov](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Upravljana identiteta za delovni prostor Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* potrebuje dovoljenje **sodelujočega v shrambi zbirke dvojiških podatkov** za račun Azure Data Lake Storage Gen2, kjer se nahajajo podatki, ki so povezani z delovnim prostorom Azure Synapse. Preberite več o [uporabi portala Azure za dodelitev vloge Azure za dostop do zbirke dvojiških podatkov in podatkov o čakalni vrsti](/azure/storage/common/storage-auth-aad-rbac-portal) ter [sodelujočem v shrambi zbirke dvojiških podatkov](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- *Glavno ime storitve za vpoglede v občinstvo* potrebuje v delovnem prostoru Azure Synapse dodeljeno vlogo **skrbnika za Synapse**. Če želite več informacij, glejte razdelek [Kako nastaviti nadzor dostopa za delovni prostor Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Na Azure Synapse delovni prostor, *vodja storitve za Customer Insights* potrebe **Skrbnik Synapse** dodeljena vloga. Če želite več informacij, glejte razdelek [Kako nastaviti nadzor dostopa za delovni prostor Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Nastavitev povezave in izvoz v storitev Azure Synapse
 
 ### <a name="configure-a-connection"></a>Konfiguriranje povezave
 
-Za ustvarjanje povezave potrebujeta principal storitve in uporabniški račun v Customer Insights **Uporabnik z dovoljenjem za branje** dovoljenja za *skupina virov* kjer se nahaja delovni prostor Synapse Analytics. Poleg tega potrebujeta principal storitve in uporabnik v delovnem prostoru Synapse Analytics **Synapse Administrator** dovoljenja. 
+Za ustvarjanje povezave potrebujeta principal storitve in uporabniški račun v Customer Insights **Uporabnik z dovoljenjem za branje** dovoljenja za *skupina virov* kjer se nahaja delovni prostor Synapse Analytics. Poleg tega potrebujeta principal storitve in uporabnik v delovnem prostoru Synapse Analytics **Skrbnik Synapse** dovoljenja. 
 
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 
@@ -64,7 +64,7 @@ Za ustvarjanje povezave potrebujeta principal storitve in uporabniški račun v 
 
 ### <a name="configure-an-export"></a>Konfiguriranje izvoza
 
-Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Če želite konfigurirati izvoz s skupno povezavo, potrebujete vsaj **sodelavec** dovoljenja v Customer Insights. Če želite več informacij, glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Če želite konfigurirati izvoz s povezavo v skupni rabi, potrebujete vsaj **sodelavec** dovoljenja v Customer Insights. Če želite več informacij, glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 

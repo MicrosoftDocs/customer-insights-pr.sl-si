@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225545"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552076"
 ---
 # <a name="connector-for-power-bi-preview"></a>Povezovalnik za Power BI (predogled)
 
@@ -72,6 +72,6 @@ Po odstranitvi podvojenih odnosov poskusite znova konfigurirati povezovalnik sto
 
 Ko nalagate entitete, ki vsebujejo polja z obliko datuma, kot je DD/MM/LLLL, lahko naletite na napake zaradi neusklajenih oblik območnih nastavitev. To neskladje se zgodi, ko je vaša datoteka Power BI Desktop nastavljena na jezik, ki ni angleščina (Združene države), ker se datumska polja v vpogledih občinstva shranijo v ameriškem formatu.
 
-Datoteka Power BI Desktop ima eno območno nastavitev, ki se uporablja pri pridobivanju podatkov. Če želite pravilno razlagati ta datumska polja, nastavite območno nastavitev datoteke .BPI v angleščino (Združene države). [Naučite se spremeniti območno nastavitev namizne datoteke Power BI](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Datoteka Power BI Desktop ima eno območno nastavitev, ki se uporablja pri pridobivanju podatkov. Če želite pravilno razlagati ta datumska polja, nastavite območno nastavitev datoteke .BPI v angleščino (Združene države). [Naučite se spremeniti območno nastavitev namizne datoteke Power BI](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

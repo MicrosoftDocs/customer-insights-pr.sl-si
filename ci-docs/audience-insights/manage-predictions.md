@@ -5,15 +5,15 @@ ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8c5d8b0395452c8da1631f09cffeddfc811e6d29
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 8ff8d70ffb8489def072e5d8a6e43d062594141a
+ms.sourcegitcommit: 696ad9ab6e10046c00f1ac86a7e8fc37386e6fe7
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230812"
+ms.lasthandoff: 04/08/2022
+ms.locfileid: "8555333"
 ---
 # <a name="manage-predictions"></a>Upravljanje predvidevanj
 
@@ -50,9 +50,9 @@ Naslednji stolpci poročila vsebujejo koristne informacije za izboljšanje podat
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Primer poročila o uporabnosti vhodnih podatkov, ki prikazuje tabelo z napakami, opozorili in priporočili.":::
 
 - **ime:** Opisno ime napake, opozorila ali priporočila.
-- **korak:** Model faza, vlak ali rezultat, se nanašajo informacije.
+- **korak:** Faza modela, vlak ali rezultat, na katerega se nanašajo informacije.
 - **Država:** Resnost informacij (napaka, opozorilo, priporočilo).
-- **Ime stolpca:** Stolpec v entiteti, ki jo je treba spremeniti, da se izboljša zmogljivost modela.
+- **Ime stolpca:** Stolpec v entiteti, ki ga je treba spremeniti, da se izboljša zmogljivost modela.
 - **Ime subjekta:** Ime entitete, ki jo je treba spremeniti za izboljšanje zmogljivosti modela.
 - **Podrobnosti:** Podrobnosti o napaki, opozorilu ali priporočilu.
 

@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Raziskovanje vpogledov v občinstvo
           href: audience-insights/home.md
+        - name: Delo z oznakami in stolpci
+          href: audience-insights/work-with-tags-columns.md
         - name: Delo s poslovnimi računi
           href: audience-insights/work-with-business-accounts.md
     - name: Viri podatkov

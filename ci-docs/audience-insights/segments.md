@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508586"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529559"
 ---
 # <a name="segments-overview"></a>Pregled segmentov
 
@@ -47,24 +47,30 @@ Nov segment lahko ustvarite na več načinov:
 
 ## <a name="manage-existing-segments"></a>Upravljanje obstoječih segmentov
 
-Odprite stran **Segmenti**, da si ogledate vse shranjene segmente in jih upravljate.
+Pojdite na **segmenti** stran za ogled vseh shranjenih segmentov in njihovo upravljanje.
 
 Vsak segment predstavlja vrstica, ki vključuje dodatne informacije o segmentu.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Izbrani segment s spustnim seznamom možnosti in razpoložljivimi možnostmi.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Izbrani segment s spustnim seznamom možnosti in razpoložljivimi možnostmi." lightbox="media/segments-selected-segment.png":::
 
-Ko izberete segment, je na voljo naslednje dejanje:
+Ko izberete segment, so na voljo naslednja dejanja:
 
 - Na voljo je **Prikaz** podrobnosti o odsekih, vključno s trendom števila članov in predogledom članov segmenta.
+- Na voljo je možnost **Prenesi** za prenos seznama članov kot datoteke .CSV.
 - Za spreminjanje lastnosti segmenta lahko uporabite možnost **Uredi**.
 - **Ustvarjanje dvojnika** segmenta. Takoj lahko uredite njegove lastnosti ali preprosto shranite dvojnik.
 - Za vključitev najnovejših podatkov lahko izberete **Osveži**.
-- Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Segmenti imajo dve možni stanji - aktivno ali neaktivno. Stanji sta vam lahko v pomoč pri urejanju segmenta. Za neaktivne segmente definicija segmenta obstaja, vendar še ne vsebuje nobene stranke. Ko aktivirate segment, se njegovo stanje spremeni iz »neaktiven« v »aktiven« in začne iskati stranke, ki ustrezajo definiciji segmenta. Če je konfigurirana [načrtovana osvežitev](system.md#schedule-tab), je **Stanje** neaktivnih segmentov navedeno kot **Preskočeno**, kar pomeni, da poskusa osveževanja sploh ni bilo. Ko se aktivira neaktivni segment, se bo osvežil in bo vključen v načrtovane osvežitve.
+- Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Za neaktivne segmente definicija segmenta obstaja, vendar še ne vsebuje nobene stranke. Aktivni segment išče stranke, ki ustrezajo definiciji segmenta. Če je konfigurirana [načrtovana osvežitev](system.md#schedule-tab), je **Stanje** neaktivnih segmentov navedeno kot **Preskočeno**, kar pomeni, da poskusa osveževanja sploh ni bilo. Ko se aktivira neaktivni segment, se bo osvežil in bo vključen v načrtovane osvežitve.
   Lahko pa uporabite funkcijo **Razporedi pozneje** v spustnem meniju **Aktiviraj/Deaktivira**, da določite datum in čas v prihodnosti za aktiviranje in deaktiviranje določenega segmenta.
+- **[Poiščite podobne stranke](find-similar-customer-segments.md)** iz segmenta.
 - Prek možnosti **Preimenuj** lahko segment preimenujete.
+- **Oznaka** do [upravljati oznake](work-with-tags-columns.md#manage-tags) za segment.
 - Na voljo je možnost **Prenesi** za prenos seznama članov kot datoteke .CSV.
 - Izberite **Upravljanje izvozov**, da se vam prikaže segment, povezan z izvozi, ki jih lahko upravljate. [Preberite več o izvozih.](export-destinations.md)
 - Za brisanje je na voljo možnost **Izbriši**.
+- **Stolpci** do [prilagodite stolpce](work-with-tags-columns.md#customize-columns) tisti zaslon.
+- **Filter** do [filter na oznakah](work-with-tags-columns.md#filter-on-tags).
+- **Išči ime** za iskanje po imenu segmenta.
 
 ## <a name="refresh-segments"></a>Osveževanje segmentov
 

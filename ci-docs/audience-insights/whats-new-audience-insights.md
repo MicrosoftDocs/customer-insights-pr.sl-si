@@ -1,19 +1,19 @@
 ---
 title: Nove in prihajajoče funkcije
 description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
-ms.date: 03/02/2022
+ms.date: 04/05/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
-ms.reviewer: midevane
+ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
-ms.translationtype: HT
+ms.openlocfilehash: 2f081306271a170cf3e250fc1a193cedb70aeec6
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376482"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547692"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Kaj je novega pri zmogljivosti vpogledov v občinstvo Dynamics 365 Customer Insights
 
@@ -23,6 +23,42 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="march-2022-updates"></a>Posodobitve marca 2022
+
+Posodobitve marca 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="liveramp-abilitec-enrichment-preview"></a>Obogatitev LiveRamp AbiliTec (predogled)
+
+LiveRamp zagotavlja razrešitev identitete in konsolidacijo podatkov o strankah. Osebne identifikatorje v svojih podatkih o strankah lahko preslikate v graf identitete AbiliTec in prejmete AbiliTec ID-je. Te ID-je lahko nato uporabite za boljše poenotenje podatkov vaših strank.
+
+Za več informacij glejte [Obogatite profile strank s podatki o identiteti iz LiveRamp (Predogled)](enrichment-liveramp.md).
+
+### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organizirajte segmente in mere z oznakami in filtri
+Če vaša organizacija vzdržuje veliko segmentov ali ukrepov, je iskanje pravega včasih težko. Ta nova funkcija vam omogoča organiziranje seznamov z uporabo oznak in stolpcev. Pomaga pri hitrem in preprostem iskanju podatkov ter prilagajanju pogledov.
+
+Za več informacij glejte [Delo z oznakami in stolpci](work-with-tags-columns.md).
+
+### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Omogoči skupno rabo podatkov z Dataverse pri uporabi lastnega računa za shranjevanje
+
+Če vaše okolje uporablja Azure Data Lake Storage za shranjevanje podatkov Customer Insights, skupno rabo podatkov Microsoft Dataverse potrebuje dodatno konfiguracijo.
+Prej ste lahko omogočili samo skupno rabo podatkov z Dataverse ko so bili vaši podatki shranjeni v našem upravljanem podatkovnem jezeru. 
+
+Za več informacij glejte [Omogoči skupno rabo podatkov z Dataverse od svojega Azure Data Lake Storage (predogled)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+
+### <a name="new-export-destinations-iterable-and-braze"></a>Nove izvozne destinacije: Iterable in Braze
+
+Še naprej širimo naš ekosistem izvoznih destinacij z novimi povezavami. Sedaj lahko izvozite segmente v Iterable in Braze, da uporabite njihove aktivacijske storitve.
+
+Za več informacij glejte [Izvozi segmente v Iterable (predogled)](export-iterable.md) in [Izvozi segmente v Braze (predogled)](export-braze.md).
+
+### <a name="improvements-to-marketo-and-google-ads-export"></a>Izboljšave izvoza Marketo in Google Ads
+
+Sprememba API-jev v povezanih storitvah vodi do posodobitev za zanesljivo in nemoteno delovanje priključkov. Izdali smo nekaj posodobitev za izvoz v storitve Marketo in Google Ads:
+
+- Google Ads: Nova različica priključka za izvoz Google Ads poenostavlja izkušnjo preverjanja pristnosti in vam zdaj omogoča samodejno ustvarjanje novih ciljnih skupin Google Ads. 
+- Marketo: Nova različica priključka za izvoz Marketo zagotavlja podporo za ID Marketo, ki vam omogoča, da se izognete podvajanju podatkov, posodobite obstoječe zapise in ustvarite nove zapise v Marketu. 
 
 
 ## <a name="february-2022-updates"></a>Posodobitve februarja 2022
@@ -39,13 +75,15 @@ Za več informacij glejte [Pregled napovedi](predictions-overview.md).
 
 Azure Synapse Analytics je analitična storitev podjetja, ki pospeši čas do vpogledov v podatkovna skladišča in sisteme velikih podatkov.
 
-Če vaša organizacija že uporablja napredne analitične zmogljivosti Azure Synapse Analytics in shrani izhod v podatkovne baze podatkovnega jezera, te podatke lahko preprosto vnesete v Customer Insights. Za več informacij glejte [Povežite an Azure Synapse vir podatkov (predogled)](connect-synapse.md).
+Organizacije, ki že uporabljajo Azure Synapse Analytics lahko te podatke vnese v Customer Insights. 
+
+Za več informacij glejte [Povežite an Azure Synapse vir podatkov (predogled)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>Obogatitev LiveRamp (predogled)
 
-LiveRamp zagotavlja deterministično ločevanje identitete brez povezave in konsolidacijo podatkov strank. Osebne identifikatorje v svojih podatkih o strankah lahko preslikate v graf identitete AbiliTec in prejmete AbiliTec ID-je. Te ID-je lahko nato uporabite za boljše poenotenje podatkov vaših strank.
+LiveRamp zagotavlja razrešitev identitete in konsolidacijo podatkov o strankah. Osebne identifikatorje v svojih podatkih o strankah lahko preslikate v graf identitete AbiliTec in prejmete AbiliTec ID-je. Te ID-je lahko nato uporabite za boljše poenotenje podatkov vaših strank.
 
-Za več informacij glejte [Obogatite profile strank s podatki o identiteti iz LiveRamp (predogled)](enrichment-liveramp.md).
+Za več informacij glejte [Obogatite profile strank s podatki o identiteti iz LiveRamp (Predogled)](enrichment-liveramp.md).
 
 ### <a name="enrichment-for-data-sources-preview"></a>Obogatitev za vire podatkov (predogled)
 
@@ -59,9 +97,9 @@ Medtem ko ima lahko več uporabnikov skrbniška dovoljenja v Customer Insights, 
 
 Za več informacij glejte [Spremenite lastnika okolja](manage-environments.md#change-the-owner-of-an-environment).
 
-### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Postopek priprave podatkov navaja razloge za korupcijo za poškodovane zapise
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Postopek priprave podatkov navaja razloge za poškodovanje zapisov
 
-Postopek priprave podatkov zdaj za lažjo identifikacijo pokaže razlog za korupcijo za vsa polja s poškodovanimi podatki na ravni posameznega zapisa. 
+Priprava podatkov zdaj pokaže razlog za korupcijo za vsa polja s poškodovanimi podatki. Informacije so na voljo na ravni posameznega zapisa za enostavno identifikacijo. 
 
 Za več informacij glejte [Poškodovani viri podatkov](entities.md#corrupted-data-sources).
 
@@ -90,316 +128,6 @@ Posodobitve januarja 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in
 Customer Insights ponuja novo funkcijo, ki jo poganja umetna inteligenca, za sintetiziranje razpoloženja strank in prepoznavanje posebnih poslovnih vidikov kot priložnosti za ciljno usmerjene izboljšave. Z analizo pisnih povratnih informacij vaših strank lahko dobite natančne vpoglede po nizki ceni. Analiza občutkov, ki jo poganjajo modeli obdelave naravnega jezika (NLP), ki ustvarjajo dva izpeljana vpogleda za vsak ID stranke. Ocena razpoloženja (od –5 do 5) in seznam veljavnih poslovnih vidikov. 
 
 Za več informacij glejte [Analizirajte razpoloženje v povratnih informacijah strank (predogled)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>Posodobitve v decembru 2021
-
-Posodobitve decembra 2021 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Posreduj dnevnike Customer Insights v Azure Monitor
-
-Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Ta funkcija vključuje revizijske dogodke in operativne dogodke. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov v Azure Storage, Azure Log Analytics ali jih pretakate v Azure Središča za dogodke.
-
-Za več informacij glejte [Posredovanje dnevnika Dynamics 365 Customer Insights z Azure Monitor (predogled)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Obogatite profile strank s podatki o angažiranosti
-
-Uporabite podatke iz Microsoft Office 365 obogatiti profile računa strank z vpogledi v dejavnosti prek Office 365 aplikacije. Podatki o udeležbi so sestavljeni iz e-pošte in dejavnosti sestankov, ki so združeni na ravni računa. Na primer število e-poštnih sporočil iz poslovnega računa ali število sestankov z računom. Podatki o posameznih uporabnikih se ne delijo. Ta obogatitev je na voljo v naslednjih regijah: Združeno kraljestvo, Evropa, Severna Amerika.
-
-Za več informacij glejte [Obogatite profile strank s podatki o angažiranosti (predogled)](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Napredne funkcije združevanja podatkov
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Omogoči politike reševanja sporov na ravni posameznega atributa
-
-Pri odstranjevanju podvojenih zapisov strank znotraj entitete morda ne boste želeli izbrati celotnega zapisa kot zmagovalca. Zdaj vam omogočamo, da združite najboljša polja iz različnih zapisov na podlagi pravil za vsak atribut. Izberete lahko na primer, da obdržite najnovejšo e-pošto IN najbolj popoln naslov iz različnih zapisov. 
-
-Zdaj lahko definirate ločena pravila spajanja za posamezne atribute, medtem ko odpravljate podvojene in združujete zapise znotraj ene same entitete. Prej smo vam dovolili, da izberete samo eno pravilo združevanja (vodenje evidence na podlagi popolnosti podatkov o nedavnih podatkih) in to pravilo je bilo uporabljeno na ravni zapisa za vse atribute. To ni idealno, če so nekateri podatki, ki jih želite obdržati, v zapisu A, drugi dobri pa v zapisu B.
-
-Za več informacij glejte [Opredelitev odstranjevanja podvajanj za entiteto ujemanja](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Pravila po meri za ujemanje
-
-Včasih morate določiti izjemo od splošnih pravil, da se zapisi NE ujemajo. To se lahko zgodi, ko si več posameznikov deli dovolj informacij, da bi jih sistem ujemal kot enega posameznika. Na primer, dvojčka z istim priimek, ki živita v istem mestu in imata isti datum rojstva.
-
-Izjeme zagotavljajo, da je napačno poenotenje podatkov mogoče obravnavati v pravilih poenotenja. Pravilu lahko dodate več izjem.
-
-Za več informacij glejte [Pravilu dodajte izjeme](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Zagotovite dodatne pravilnike za reševanje sporov in omogočite združevanje atributov
-
-Ta funkcija vam omogoča, da skupino polj obravnavate kot eno samo enoto. Na primer, če naši zapisi vsebujejo polja Naslov1, Naslov2, Mesto, Država in Zip. Najverjetneje se ne želimo združiti v naslov2 drugega zapisa, ker mislimo, da bi tako naši podatki postali popolnejši.
-
-Zdaj lahko združite skupino sorodnih polj in za skupino uporabite eno samo politiko spajanja. 
-
-Za več informacij glejte [Združite skupino polj](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>Posodobitve v novembru 2021
-
-Posodobitve novembra 2021 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>Segmentno članstvo je zdaj na voljo v Dataverse
-
-Informacije o članstvu v segmentih za profile strank so zdaj na voljo v Dataverse skupaj s profili strank in vpogledi. Aplikacije za dejanja Dynamics 365 in aplikacije, ki temeljijo na modelu, lahko uporabljajo te podatke za iskanje podrobnosti o članstvu v segmentu za dano stranko.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Dejavnosti podpirajo podrobnosti na ravni stika za poslovne račune
-
-Zdaj lahko konfigurirate, prikažete in filtrirate dejavnosti za stike na časovnici dejavnosti vašega poslovnega računa, da bolje razumete, kateri stiki v računu so sodelovali pri določenih dejavnostih.
-
-## <a name="october-2021-updates"></a>Posodobitve v oktobru 2021
-
-Posodobitve oktobra 2021 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
-
-### <a name="b-to-b"></a>B-do-B
-
-Od oktobra 2021 lahko delate s poslovnimi računi in povezanimi stiki v storitvi Customer Insights. Prej je bila aplikacija večinoma prilagojena posameznim potrošnikom. Več funkcijskih področij je bilo posodobljenih za podporo scenarijev B-to-B poleg novega tipa okolja. Za pregled podprtih funkcij B-to-B glejte [Delo s poslovnimi računi v občinstvo insights](work-with-business-accounts.md).
-
-Naslednji razdelki poudarjajo nekatera ključna področja, ki so bila prilagojena za podporo poslovnim računom in posameznim potrošnikom.
-
-#### <a name="export-segments-based-on-business-accounts"></a>Izvozi segmente na podlagi poslovnih računov
-
-Vsi izvozi segmentov v občinstvo vpogledi so na voljo v okviru poslovnih računov. Večina izvozov segmentov zahteva dodatno konfiguracijo in [predvidene kontaktne informacije](segment-builder.md#create-a-new-segment) v osnovnih segmentih velja za poslovne račune. Za več informacij glejte [Izvozi segmente](export-destinations.md#export-segments).
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Uporabite izvoz oglasov LinkedIn s poslovnimi računi
-
-Izvoz oglasov LinkedIn je zdaj na voljo za ciljanje na stike in podjetja v okviru poslovnih računov. Ko izberete ciljanje na podjetja kot svoj primarni fokus izvoza LinkedIn, lahko izvozite segmente, zgrajene na poslovnih računih, ne da bi vam bilo treba projicirati kontaktne podatke. Za več informacij pojdite v dokumente o [Izvoz oglasov LinkedIn](export-linkedin-ads.md) in razlika med [ciljanje na stik](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) in [ciljanje na podjetje](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Ustvarite ukrepe na podlagi poslovnih računov in njihove hierarhije
-
-Graditelj meril vam omogoča, da ustvarite ukrepe okoli poslovnih računov in po želji uporabite informacije o hierarhiji. Podatki o hierarhiji se uporabljajo za združevanje izračuna meritve v računu in vseh z njim povezanih podračunih. Ustvarite lahko na primer meritve, kot je skupni prihodek za vsako skupino poslovnih računov, ki jih identificira njihova hierarhija. Za več informacij glejte [Določanje in upravljanje mer](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Ustvarite segmente na podlagi poslovnih računov in njihove hierarhije
-
-Graditelj segmentov vam omogoča ustvarjanje segmentov poslovnih računov, ki po želji vključujejo kontaktne podatke za vsak račun v segmentu. Če imate nastavljeno hierarhijo računa, lahko pri ustvarjanju segmenta uporabite informacije o hierarhiji računa. Za več informacij glejte [Ustvarite nov segment](segment-builder.md#create-a-new-segment).
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Ohranite svoje poslovne račune z globokim vpogledom v njihovo nagnjenost k odlivu
-
-Model odliva strank predvidevanje zdaj podpira tudi poslovne račune. Tveganje odtoka lahko ocenite ne samo za račun, ampak za kombinacijo računa in kategorije izdelkov ali storitev, ki jih kupijo pri vas. Ta dodatek vam pomaga razumeti, ali je večja verjetnost, da bo račun prenehal kupovati pri vas na splošno ali samo za določeno kategorijo blaga ali storitev. Za dodatno pomoč pri uporabi tega modela umetne inteligence so navedeni tudi razlogi, zakaj bo račun verjetno odtekel. Za več informacij glejte [Pretok transakcij predvidevanje (predogled)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Oglejte si stike poslovnega računa v pogledu strank
-
-Če so poslovni računi preslikani v povezane račune, aplikacija Customer Insights prikaže te povezane stike kot del pogleda s podrobnostmi o stranki. Za več informacij glejte [Profili strank](customer-profiles.md).
-
-
-## <a name="september-2021-updates"></a>Posodobitve v septembru 2021
-
-Posodobitve v septembru 2021 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
-
-### <a name="activities"></a>dejavnosti
-
-- **Izboljšave časovnice dejavnosti** Filtre za časovnico dejavnosti smo razširili na profile strank. Poleg tega lahko z novim podoknom za filtriranje filtrirate po vrsti dejavnosti in datumu. Datume je mogoče filtrirati z različnimi pogoji. Za več informacij glejte [Ogled časovnice dejavnosti v profilih strank](activities.md#view-activity-timelines-on-customer-profiles).
-
-### <a name="relationships"></a>Odnosi
-
-- **Podpora za odnos z več skoki** Pri konfiguriranju dejavnosti in določanju odnosov med entitetami uporabite odnose z več skoki. Odnosi z več skoki uporabljajo vmesno entiteto za povezavo dveh entitet. Ko konfigurirate dejavnost, lahko z odnosom z več skoki povežete entiteto dejavnosti z vmesno entiteto in nato z entiteto stranke. Odnose z več skoki lahko združite z odnosi z več potmi. Za več informacij glejte [Odnos z več skoki](relationships.md#multi-hop-relationship).
-
-- **Podpora za odnos z več potmi** Pri konfiguriranju dejavnosti in določanju odnosov med entitetami uporabite odnose z več potmi. Odnosi z več potmi povezujejo izvorno entiteto z več entitetami. Ko konfigurirate dejavnost, lahko z odnosom z več potmi povežete entiteto dejavnosti z več entitetami strank. Odnose z več potmi lahko združite z odnosi z več skoki. Za več informacij glejte [Odnos z več potmi](relationships.md#multi-path-relationship).
-
-## <a name="august-2021-updates"></a>Posodobitve v avgustu 2021
-
-Posodobitve v juliju in avgustu 2021 vključujejo novo funkcijo, nadgradnjo zmogljivosti in popravke napak.
-
-### <a name="extensibility"></a>Razširljivost
-
-- **Izvozite segmente v storitev Klaviyo** Razširili smo svoje [cilje za izvoz in vključili storitev Klaviyo](export-klaviyo.md). S storitvijo Klaviyo zdaj lahko izvažate segmente, da ustvarite akcije, izvedete e-poštno trženje in uporabite določene skupine strank. 
-
-
-## <a name="june-2021-updates"></a>Posodobitve za junij 2021
-
-Posodobitve v juniju 2021 vključujejo številne funkcije, nadgradnje zmogljivosti in popravke napak.
-
-### <a name="data-ingestion"></a>Uvoz podatkov
-
-- **Izboljšane posodobitve napredka pri poenotenju podatkov** Zdaj si lahko ogledate preglednejše in izboljšane dinamične posodobitve stanja korakov za [postopek poenotenja podatkov](data-unification.md). Ta funkcija vam omogoča, da spremljate podroben napredek, razumete potek postopka in po potrebi ukrepate pri posameznem koraku.
-
-### <a name="extensibility"></a>Razširljivost
-
-- **Izvozite segmente in druge podatke v Salesforce Marketing Cloud** Cilje za izvoz smo razširili tudi na [Salesforce Marketing Cloud](export-salesforce.md). Sedaj lahko izvažate segmente in druge vrste podatkov v Salesforce Marketing Cloud z izvozom blagovne znamke SFTP. V Salesforceu lahko uvoz podatkov popolnoma avtomatizirate in uporabite za ustvarjanje učinkovitejših trženjskih akcij.  
- 
-- **Izvozite segmente v ActiveCampaign** Cilje za izvoz smo razširili tudi na [Active Campaign](export-active-campaign.md). S storitvijo ActiveCampaign zdaj lahko izvažate segmente, da ustvarite akcije, izvedete e-poštno trženje in sodelujete z določenimi skupinami strank.
- 
-- **Izvozite segmente v Sendinblue** Cilje za izvoz smo razširili tudi na [Sendinblue](export-sendinblue.md). S storitvijo Sendinblue zdaj lahko izvažate segmente, da ustvarite akcije, izvedete e-poštno trženje in sodelujete z določenimi skupinami strank.
- 
-### <a name="ux-updates"></a>Posodobitve uporabniških izkušenj 
-
-- **Nova in izboljšana stran »Stranke« in stran s podrobnostmi o profilu** Za boljšo uporabniško izkušnjo in izboljšano učinkovitost smo prenovili stran »Stranke« in stran s podrobnostmi o profilu. Te spremembe vam omogočajo ogled, razvrščanje, iskanje in filtriranje strank. Filtri so zdaj predstavljeni v URL-ju za nemoteno skupno rabo rezultatov iskanja z drugimi uporabniki. Rezultate iskanja lahko shranite tudi kot segment.    
-  Stran s podrobnostmi za profile strank zdaj združuje podatke v različnih podrazdelkih, kot so demografski podatki, ID-ji in drugi atributi profila za boljšo berljivost. Drugi razdelki na strani s podrobnostmi o profilu so zdaj bolj interaktivni. Na primer razdelek dejavnosti zdaj omogoča filtriranje in razvrščanje.
-
-
-## <a name="may-2021-updates"></a>Posodobitve za maj 2021
-
-Posodobitve maja 2021 vključujejo številne funkcije, nadgradnje zmogljivosti in popravke napak.
-
-### <a name="data-ingestion"></a>Uvoz podatkov
-
-- **Ogled ali sprememba metapodatkov ali definicije entitete, ko pripenjate podatke iz Azure Data Lake Storage** Zdaj si lahko ogledujete in urejate metapodatke ali definicijo entitete v vpogledih za občinstvo, ko pripenjate podatke iz mape Common Data Model v vaši storitvi Azure Data Lake Storage. Ta zmogljivost zagotavlja povratne informacije v realnem času, preverjanje modelov in preverjanje napak. Omogoča vam nemoteno urejanje model.json in manifest.json.
-
-### <a name="extensibility"></a>Razširljivost
-
-- **Izboljšan izvoz segmentov, razpored po meri in podvajanje** Zdaj si lahko [ogledate vse izvoze za določen segment](export-destinations.md#view-exports-and-export-details) na seznamu. Ta novi pogled pomaga pri upravljanju uporabe določenega segmenta in prilagajanju obstoječih ali ustvarjanju novih izvozov.    
-  [Določite lahko urnike osveževanja po meri](export-destinations.md#schedule-and-run-exports) za posamezen izvoz ali več izvozov hkrati. Do zdaj so se izvozi izvajali ob vsakem osveževanju sistema.    
-  Namesto da bi ustvarili nov izvoz brez predloge, lahko začnete na podlagi obstoječega in s tem prihranite nekaj časa.
-
-- **Izvoz segmentov v Microsoft Advertising** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi Microsoft Advertising. V storitvi Microsoft Advertising lahko s poenotenimi podatki o profilih strank ustvarite ciljne skupine storitve Customer Match in jih uporabite za svoje oglaševalske akcije. Če želite več informacij, glejte [Izvoz segmentov v Microsoft Advertising](export-microsoft-advertising.md).
-
-- **Izvoz segmentov v LinkedIn Ads** Izvozne cilje smo razširili, tako da vključujejo oglase LinkedIn Ads in vam omogočili, da prek LinkedIna odklenete ciljanje stikov in ciljanje podjetij z izvozom vaših poenotenih podatkov o profilih strank. Če želite več informacij, glejte [Izvoz segmentov v LinkedIn Ads](export-linkedin-ads.md).
-
-
-- **Izvoz segmentov v Omnisend** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi Omnisend. S segmenti, ustvarjenimi v vpogledih občinstva, ustvarite akcije, zagotovite e-poštno trženje in uporabite določene skupine strank s storitvijo Omnisend. Če želite več informacij, glejte [Izvoz segmentov v Omnisend](export-omnisend.md)
-
-### <a name="predictions"></a>Predvidevanja
-
-- **Poročilo o uporabnosti vhodnih podatkov** Poročilo o uporabnosti vhodnih podatkov ponuja strnjen prikaz napak in opozoril, ki jih lahko ustvarijo vaše vnaprej pripravljene napovedi. Prav tako daje priporočila, kako izboljšati zmogljivost modela.    
-  Poročilo je na voljo, ko model zaključi s postopkom kvalificiranja. Ustvarjeno je za vsak model posebej, ne glede na to, ali je bilo uspešno zaključeno ali ne.
-  Trenutno je ta funkcija na voljo samo za model izgube transakcije. Za več informacij glejte [Poročilo o uporabnosti vhodnih podatkov](manage-predictions.md#input-data-usability-report).
-
-### <a name="relationships"></a>Odnosi
-
-- **Vizualizator odnosov** Pogled vizualizatorja odnosov vam omogoča, da vidite vse obstoječe odnose med entitetami in njihovo kardinalnostjo. Odnosi so zdaj organizirani v skupine: ustvaril uporabnik, sistem in podedovani odnosi. Pogled lahko izvozite tudi kot sliko. Več informacij najdete v razdelku [Ogled odnosov](relationships.md#view-relationships). 
-
-## <a name="april-2021-updates"></a>Posodobitve iz aprila 2021
-
-Posodobitve aprila 2021 vključujejo številne funkcije, nadgradnje zmogljivosti in popravke napak.
-
-### <a name="data-unification"></a>Poenotenje podatkov
- 
-- **Izboljšana izkušnja spajanja za poenotenje podatkov**    
-  
-   Zdaj imamo izboljšano uporabniško izkušnjo pri konfiguraciji spajanja za postopek poenotenja podatkov. Spremembe vključujejo intuitivno urejanje spojenih polj in podrobne statistične podatke o združenih in enojnih poljih.
-
-- **Preurejanje entitete in konfiguriranje vseh izvornih zapisov v entiteto stranke**  
-      
-   Zdaj lahko v postopku poenotenja podatkov preuredite in odstranite entitete iz obstoječega načrta združitve. To omogoča prilagoditev preurejanja entitet v postopku ujemanja glede na poslovne potrebe. Poleg tega omogočamo vključitev vseh neujemajočih se zapisov v končno entiteto *stranke*, kar omogoča opredelitev določitve nabora podatkov o profilih strank.
-
-### <a name="enrichments"></a>Obogatitve
-
- - **Nova obogatitev: obogateni naslovi**    
-  
-   Z veseljem predstavljamo novo obogatitev za izboljšanje naslovov v podatkih o strankah. Naslovi v vaših podatkih so lahko nestrukturirani, nepopolni ali napačni. Ta funkcija uporablja Microsoftove modele za normalizacijo in obogatitev naslovov v obliko Common Data Model za boljšo natančnost in vpoglede.
- 
-   Če želite več informacij, glejte razdelek [Obogatitev profilov strank z izboljšanimi naslovi](enrichment-enhanced-addresses.md).
-
-- **Izkušnja vodene konfiguracije za obogatitve**    
-  
-   Vrnili smo se k izkušnji konfiguracije za obogatitve s preprosto vodeno izkušnjo. Zdaj imate jasen postopek po korakih za ustvarjanje in urejanje obogatitev.
- 
-   Poleg tega smo ločili konfiguracijo povezav za obogatitve drugih proizvajalcev, da omogočimo uporabo iste povezave za več obogatitev. Nove povezave lahko konfigurirajo samo skrbniki, vendar so ustvarjene povezave na voljo tako skrbnikom kot sodelavcem.    
-
-   Če želite več informacij, glejte razdelek [Pregled povezav](connections.md).
-
-- **Več obogatitev iste vrste**    
-  
-   Zdaj uporabnikom omogočamo ustvarjanje in upravljanje več obogatitev iste vrste obogatitve. Zdaj lahko na primer ustvarite dve ločeni obogatitvi naslova, da obogatite dva različna segmenta strank. Omejitve veljajo za število obogatitev iste vrste, ki jih lahko ustvarite, in se lahko razlikujejo glede na vrsto obogatitve.
-  
-   Za več informacij glejte [Obogatitev za profile strank](enrichment-hub.md).
-
-## <a name="march-2021-updates"></a>Posodobitve marca 2021
-
-Posodobitve marca 2021 vključujejo številne funkcije, nadgradnje zmogljivosti in popravke napak.
-
-### <a name="activities"></a>dejavnosti
-
-- **Čarovnik za dejavnosti in semantične vrste**
-
-   Izboljšali in posodobili smo izkušnjo preslikave dejavnosti, da bi vodili in poenostavili ustvarjanje preslikave dejavnosti. V tej novi izkušnji uporabniki dobijo vodeno izkušnjo, ki jim pomaga dokončati posamezni korak postopka. V koraku za preslikavo dejavnosti lahko uporabnik poleg izbire med številnimi vrstami dejavnosti izbere tudi semantično preslikavo podatkov za atribut *Naročnina* in/ali *SalesOrderLine* v industrijske standardne sheme, ki se lahko uporabljajo za nadaljnjo porabo.   
-
-   Za več informacij glejte [Dejavnosti stranke](activities.md).
-
-### <a name="data-ingestion"></a>Uvoz podatkov
-
-- **Povezava s podatkovnimi viri na mestu uporabe prek podatkovnih tokov in prehodov Power Platform** Z veseljem objavljamo predogled podatkovnih tokov Power Platform in povezljivosti na mestu uporabe z uporabo prehodov v storitvi Customer Insights s povezanim okoljem Power Platform ali Dataverse. Vsi novi viri podatkov, ustvarjeni v okolju Customer Insights s povezanim okoljem Dataverse bodo privzeto nastavljeni na podatkovne tokove Power Platform, ki zagotavljajo podatkovno povezljivost na mestu uporabe in bogat nabor povezovalnikov in zmogljivosti preoblikovanja.
-
-### <a name="extensibility"></a>Razširljivost
-
-- **Izvozi, združeni v povezave in izvoze** Spremenili smo ime strani **Izvozne destinacije** na **Povezave** in dodali ločeno stran **Izvozi**. Kot del te posodobitve bomo obstoječe izvoze preoblikovali v pare iz povezave in izvoza, ki uporablja to povezavo. Skrbnikom imajo tako jasnejši pregled nad odhodnimi podatki na strani **Povezave**. Vse uporabniške vloge imajo dostop do strani **Izvozi**, vendar lahko samo skrbniki dovolijo, da sodelavci urejajo določene izvoze s povezavami v skupni rabi.     
-  Za več informacij glejte [Pregled povezav](connections.md) in [Pregled izvozov](export-destinations.md).
-
-- **Izvoz segmentov v Campaign Monitor** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi Campaign Monitor. Zdaj lahko izvozite segmente iz Customer Insights na sezname Campaign Monitor in jih uporabite kot izhodišče za svoje tržne kampanje.    
-   Če želite več informacij, glejte [Izvoz v Campaign Monitor](export-campaign-monitor.md).
-
-- **Izvoz segmentov v Constant Contact** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi Constant Contact. Zdaj lahko izvozite segmente iz Customer Insights na sezname Constant Contact in jih uporabite kot izhodišče za svoje tržne kampanje.   
-   Če želite več informacij, glejte [Izvoz v Constant Contact](export-constant-contact.md).
-
-- **Izvoz segmentov v RollWorks** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi RollWorks. Zdaj lahko izvozite segmente iz storitve Customer Insights v občinstva RollWorks in jih uporabite kot izhodišče za vaše oglaševanje »podjetja podjetjem«.    
-   Če želite več informacij, glejte [Izvoz v RollWorks](export-rollworks.md).
-
-- **Izvoz segmentov v Snapchat** Ciljne lokacije za izvoz smo razširili, da vključujejo tudi Snapchat. Zdaj lahko izvozite segmente iz Customer Insights v občinstva Snapchat in jih uporabite kot izhodišče za oglaševanje.     
-   Če želite več informacij, glejte [Izvoz v Snapchat](export-snapchat.md).
-
-### <a name="predictions"></a>Predvidevanja
-
-- **Uporaba filtrov za izdelke v napovednih priporočilih izdelkov** V naš model priporočil izdelkov smo dodali možnost uporabe filtrov za izdelke. Zdaj lahko ustvarite predvidevanje, ki uporablja samo podmnožico vaših izdelkov.    
-   Za več informacij glejte [Konfiguriranje filtrov izdelkov](predict-product-recommendation.md#configure-product-filters).
-
-- **Ustvarjanje segmentov iz modelov predvidevanja** Dodali smo hiter način za ustvarjanje segmentov z rezultati modela predvidevanja. Na strani z rezultati modela lahko enostavno ustvarite nov segment, tako da izberete novo možnost **Ustvari segment**.    
-  Za več informacij glejte [Ustvarjanje segmenta na podlagi modela predvidevanja](prediction-based-segment.md).
-
-- **Pojasnila za priporočila izdelkov** Dodali smo informacije, ki pojasnjujejo ključne dejavnike, ki se jih je model umetne inteligence naučil za oblikovanje priporočil izdelkov, in stopnjo, s katero ti dejavniki prispevajo k priporočilom izdelkov. Te informacije se dodajo na zaslon z rezultati modela.    
-   Za več informacij glejte [Pregled stanja in rezultatov predvidevanja](predict-product-recommendation.md#review-a-prediction-status-and-results).
-
-## <a name="february-2021-updates"></a>Posodobitve februarja 2021
-
-Posodobitve v februarju 2021 vključujejo več funkcij, nadgradnje zmogljivosti in popravke napak.
-
-#### <a name="extensibility"></a>Razširljivost
-
-- **Izvoz segmentov v AdRoll**
-
-  Cilje za izvoz smo razširili na storitev AdRoll. Zdaj lahko izvozite segmente iz Customer Insights v občinstva AdRoll in jih uporabite kot osnovni model za oglaševanje. Če želite več informacij, glejte razdelek [Povezovalnik za AdRoll](export-adroll.md).
-
-#### <a name="segments"></a>Segmenti
- 
-- **Podvajanje segmenta**
-  
-  Če želite na podlagi obstoječega segmenta ustvariti novega, lahko segment podvojite segment in ga uredite, da ga še izboljšate. 
-
-- **Dodajanje dodatnih atributov segmentu**
-
-  Zdaj lahko v izhod segmenta vključite atribute, tudi če ti atributi niso del profila stranke. Vključite na primer ID-je naročnin v segment, čeprav je del naročniške entitete, ki ima razmerje M:1 z entiteto stranke. Dokler atribut pripada entiteti, povezani z entiteto stranke, lahko te atribute vključite.  
-
-#### <a name="predictions"></a>Predvidevanja
-
-- **Ustvarjanje predvidenih priporočil izdelkov**
-
-  Eden prvih korakov za izboljšanje poslovnega prihodka in povečanje zvestobe strank s prilagajanjem in sodelovanjem je razumeti, za nakup česa se zanimajo stranke. Podajanje priporočil za izdelke, ki niso usklajeni z interesi vaše stranke, lahko ustvari občutek nepovezanosti med stranko in vašim podjetjem ter na koncu omeji skupni potencialni prihodek in izkušnjo stranke. 
-
-  Z lastnimi podatki lahko zdaj ustvarite predvidevanja za izdelke, ki jih bodo vaše stranke verjetno kupile v prihodnosti. Za več informacij glejte [Predvidevanje priporočil izdelkov](predict-product-recommendation.md).
-
-#### <a name="system-administration"></a>Skrbništvo sistema
-
-- **Okolje za kopiranje podpira več vrst virov podatkov**
-
-  Skrbniki lahko kopirajo konfiguracije okolja v novo okolje v isti organizaciji. Ta funkcija razširja funkcionalnost kopiranja okolja v primerih, ko so v uporabi viri podatkov na podlagi podatkovnega jezera, ki ga upravlja Microsoft Dataverse, ali mape Common Data Model.
-
-## <a name="january-2021-updates"></a>Posodobitve v januarju 2021
-
-Posodobitve v januarju 2021 vključujejo številne funkcije, nadgradnje učinkovitosti delovanja in popravke napak.
-
-#### <a name="extensibility"></a>Razširljivost
-
-- **Razširjena funkcionalnost in izboljšana učinkovitost delovanja za izvoz SFTP** Zdaj lahko izvozite vse izhodne entitete rešitve Customer Insights v gostitelja SFTP. Izvoz je bil predhodno omejen na segmentne entitete. Poleg tega učinkovitost delovanja izvoza SFTP omogoča večjo količino podatkov v krajšem času, odvisno od učinkovitosti delovanja vašega gostitelja SFTP.    
-  Za več informacij glejte [Povezovalnik za SFTP (predogled)](export-sftp.md).  
-
-#### <a name="segments"></a>Segmenti
-
-- **Predlagani segmenti za izboljšanje meritev, ki jih omogoča strojno učenje** Obstaja nov način odkrivanja in ustvarjanja segmentov. Sistem uporablja model umetne inteligence za predlaganje segmentov, ki lahko pomagajo izboljšati KPI (mera), kateremu že sledite. Prikazujemo obseg vpliva atributov, ki jih izberete na eno mero ali drug primarni atribut. Ti podatki pomagajo najti morebitne segmente, ki predstavljajo priložnosti.    
-  Za več informacij glejte [Predlagani segmenti (predogled)](suggested-segments.md).
-
-#### <a name="data-unification"></a>Poenotenje podatkov
-
-- **Izboljšana izkušnja povezovanja** Izkušnja povezovanja je bila posodobljena v območju poenotenja podatkov. Omogoča vam konfiguriranje in ogled pravil za povezovanje, vključno s podrobnimi statističnimi podatki, ki dodatno pojasnijo, kako deluje povezovanje. Obstajajo možnosti, da onemogočite pravilo za povezovanje, tako da ni več aktivno, hkrati pa ohranite konfiguracijo, pravila za povezovanje »povleci in spusti« in še več.
-  Za več informacij glejte [Povezovanje entitet](match-entities.md).
-
-- **Rezultat odstranjevanja podvojenih elementov iz postopka ujemanja je na voljo kot entiteta** Rezultat odstranjevanja podvojenih elementov iz postopka ujemanja je za nadaljnjo analizo zapisan v ločeno entiteto. Ta entiteta je sestavljena iz polj, uporabljenih v postopku odstranjevanja podvojenih elementov, in zapisa zmagovalca ter ustreznih nadomestnih zapisov, ki se spojijo z zapisom zmagovalca.
-  Za več informacij glejte [Rezultat odstranjevanja podvojenih elementov kot entiteta](match-entities.md#deduplication-output-as-an-entity).
-
-#### <a name="system-administration"></a>Skrbništvo sistema
-
-- **Brezhibno deljenje podatkov s storitvijo Microsoft Dataverse** Zdaj lahko rezultate storitve Customer Insights delite z aplikacijami Microsoft Dataverse z uporabo shrambe Data Lake, ki jo upravlja rešitev Microsoft Dataverse. Ko okolje Dataverse povežete s storitvijo Customer Insights, lahko omogočite skupno rabo podatkov.
-  Za več informacij glejte [Upravljanje okolij](manage-environments.md).
-
-
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
