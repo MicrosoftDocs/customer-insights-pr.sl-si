@@ -1,39 +1,41 @@
 ---
-title: Pregled izdelka
+title: Dynamics 365 Customer Insights pregled izdelka
 author: m-hartmann
-description: Pridobite pregled storitve Dynamics 365 Customer Insights in njenih zmogljivosti.
+description: Pridobite pregled za Dynamics 365 Customer Insights in njegove glavne značilnosti.
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560453"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641920"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Pregled izdelka za Dynamics 365 Customer Insights
 
-[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je del Microsoftove platforme za podatke o strankah (CDP), ki pomaga zagotavljati prilagojene izkušnje strank. Zmogljivosti platforme omogočajo vpogled v to, kdo so vaše stranke in kake interakcije imajo na vaši platformi. Poenotite podatke o strankah iz več virov, da pridobite ločen pogled strank.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je Microsoftova platforma za podatke o strankah (CDP), ki pomaga zagotavljati prilagojeno uporabniško izkušnjo. Aplikacija ponuja celosten pogled na stranke z neprimerljivim časom za vpogled. Pridobite najbolj izčrpen pogled na svoje stranke tako, da podatke o strankah poenotite z operativnimi in IoT podatki v realnem času. Obogatite profile strank s prvimi in zunanjimi viri podatkov. 
 
-[Vpogledi v občinstvo](audience-insights/overview.md) vam pomagajo preoblikovati podjetje v organizacijo, ki je osredotočeno na stranko. Strokovnjaki za trženje, prodajo in storitve pridobijo vpoglede, ki so potrebni za prilagajanje izkušenj. Povežite podatke iz virov transakcij, vedenja in opazovanja, da ustvarite 360-stopinjski pogled stranke. Hitreje si oglejte rezultate s platformo CDP, ki je zasnovana tako, da daje vpoglede, ki jih je mogoče upoštevati. 
-
-[Vpogledi v sodelovanje](engagement-insights/overview.md) je bila zmožnost predogleda v Customer Insights, ki se osredotoča na zbiranje spletnih in mobilnih dogodkov za dodatne vpoglede. Predogled se je končal 15. februarja 2022.
+Customer Insights vam pomaga preoblikovati vaše podjetje v stranko osredotočeno organizacijo, tako da omogoči vašim strokovnjakom za trženje, prodajo in storitve, da prilagodijo interakcije 1:1 v obsegu. Integracije na ključ z Microsoftovimi aplikacijami in aplikacijami tretjih oseb se lahko uporabijo za aktiviranje vpogledov v realnem času za spodbujanje smiselnih dejanj.
  
-## <a name="choose-a-capability"></a>Izbira zmožnosti
+Povežite podatke iz transakcijskih, vedenjskih in demografskih virov podatkov, da ustvarite 360-stopinjske poglede strank. Pridobite nenavadne vpoglede z vnaprej izdelanimi modeli umetne inteligence ali hitro zgradite, preizkusite in uveljavite modele AI/ML po meri z uporabo naprednih analitičnih rešitev v neomejenem obsegu.
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Stran v storitvi Customer Insights, ki omogoča krmarjenje do vpogledov v občinstvo ali vpogledov v interakcije.":::
-
-Za izbiro zmožnosti
-
-1. V podoknu za krmarjenje izberite možnost **Vse aplikacije**, da odprete okno **Izbira osredotočenosti**.
-1. Izberite možnost **Pojdi zdaj** za krmarjenje do zmožnosti po vaši izbiri.
+Ohranite popoln nadzor nad svojimi podatki o strankah, da zagotovite najvišjo raven upravljanja podatkov in skladnost s samopostrežnim CDP za podjetja, ki temelji na Microsoft Azure. Podprite Splošno uredbo o varstvu podatkov (GDPR) ter druge zakonodajne zahteve in industrijske standarde z vgrajenimi orodji za zasebnost, varnost in upravljanje ter privolitev.
 
 ## <a name="pricing-and-licensing"></a>Cene in licenciranje
+Customer Insights je licenciran na posameznega najemnika in vključuje zmogljivosti med podjetji za potrošnike (B2C) in med podjetji (B2B). Dodatno zmogljivost lahko kupite z licencami za dodatke, da povečate število profilov in računov.
 
-Storitev Customer Insights je licencirana na najemnika in vključuje več zmogljivosti. Za povečanje privzete kvote lahko kupite dodatne zmogljivosti in licenco. 
 - [Pregled cen](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - Zmogljivost in upravičenosti: [Vodnik za licenciranje za Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Spletno mesto za Microsoftovo količinsko licenciranje](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>Preizkusite Customer Insights in začnite
+
+Začnite a [brezplačna preizkusna različica Customer Insights](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) danes, da preizkusite aplikacijo z lastnimi podatki strank. [Ugotovite, kako lahko hitro dostopate do številnih ključnih funkcij aplikacije in jih raziščete](trial-signup.md). 
+
+Prebrskaj [predstavljeni učni viri](https://dynamics.microsoft.com/ai/customer-insights/resources/) vključno s poročili analitikov, spletnimi seminarji na zahtevo in zgodbami strank.
+
+Naučite se, kako lahko z našimi ustvarite globlje razumevanje svojih strank [vodnik za začetek](get-started.md).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

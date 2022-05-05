@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
-ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "8456018"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641874"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Uvod po nakupu storitve Customer Insights
 
@@ -34,9 +34,8 @@ Izkušnja ob prvem zagonu vam pomaga izbrati začetno osredotočenost s storitvi
 
 1. Odprite [URL storitve Customer Insights](https://home.ci.ai.dynamics.com).
 1. Vpišite se s šolskim ali službenim računom. 
-1. Strinjajte se s pogoji storitve in nastavite nastavitve vsebine za svoj primerek storitve Customer Insights.
-1. Izberite zmogljivost, na katero se boste osredotočili, dokler ne pridete na začetno stran za izbrano zmogljivost.
+1. Strinjajte se s pogoji storitve in nastavite nastavitve vsebine za svoje okolje Customer Insights.
 
 ## <a name="create-your-own-environment"></a>Ustvarite lastno okolje
 
-Po prvem vpisu boste videli okolje z vzorčnimi podatki. S temi podatki lahko raziščete funkcije in se seznanite z aplikacijo. Če želite uporabljati lastne podatke, morate [ustvariti okolje](/dynamics365/customer-insights/audience-insights/create-environment).
+Po prvem vpisu boste videli okolje z vzorčnimi podatki. S temi podatki lahko raziščete funkcije in se seznanite z aplikacijo. Če želite uporabljati lastne podatke, morate [ustvariti okolje](create-environment.md).

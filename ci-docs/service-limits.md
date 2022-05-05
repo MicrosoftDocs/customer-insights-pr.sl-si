@@ -8,38 +8,23 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9bf8f03b785fb3035e3fc979a3304d4e98fd8d28
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.openlocfilehash: e2e7fc3033c25646693831d4c4c800d84ae6d6da
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350427"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641782"
 ---
-# <a name="service-limits-in-customer-insights-capabilities"></a>Omejitve storitve v zmogljivostih storitve Customer Insights
+# <a name="service-limits-in-customer-insights"></a>Omejitve storitev v Customer Insights
 
 V tem članku so opisane vgrajene omejitve storitve Customer Insights, ki so zasnovane, da zagotavljajo zanesljivost in stabilnost storitve. Vse zahteve za spremembe pošljite v naš [forum za zamisli](https://go.microsoft.com/fwlink/?linkid=2074172). 
 
-## <a name="audience-insights"></a>Vpogledi v občinstvo
+## <a name="customer-insights"></a>Customer Insights
 
 | Površina  | Omejitve  | Beležke |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenti, meritve in napovedi | 300  | Skupno število [segmentih](audience-insights/segments.md),[ukrepe](audience-insights/measures.md), in [napovedi](audience-insights/predictions.md) skupaj ne sme presegati 300.  |
-| Relacije | 20 stopenj globine v odnosih poti entitete. | Pri ustvarjanju [segmentov](audience-insights/segments.md) ali [ukrepov](audience-insights/measures.md) z uporabo vmesnika za gradnjo imajo lahko poti entitet do 20 povezav med začetno in ciljno entiteto.  |
+| Segmenti, meritve in napovedi | 300  | Skupno število [segmentih](segments.md),[ukrepe](measures.md), in [napovedi](predictions.md) skupaj ne sme presegati 300.  |
+| Relacije | 20 stopenj globine v odnosih poti entitete. | Pri ustvarjanju [segmentov](segments.md) ali [ukrepov](measures.md) z uporabo vmesnika za gradnjo imajo lahko poti entitet do 20 povezav med začetno in ciljno entiteto.  |
 
-<!--
-## Engagement insights
 
-### Workspace and event quotas
-
-Engagement insights is a highly scalable application that can support millions of events per second. During public preview, events have a volume threshold. There's also a limit to the number of workspaces in an organization.
-
-### Engagement insights limits
-
-- Maximum event volume per workspace  = 100 events per second
-
-- Maximum number of workspaces per organization = 100
-
-When events exceed the threshold, it can lead to loss of data in reports based on those events. You can [contact support](https://go.microsoft.com/fwlink/?linkid=2145734) to request a volume increase before you exceed limits. We'll work with you to determine your need for a volume increase and support your request.
--->
-
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[!INCLUDE [footer-include](includes/footer-banner.md)]
