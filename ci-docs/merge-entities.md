@@ -1,188 +1,168 @@
 ---
-title: Združevanje entitet za poenotenje podatkov
+title: Poenoti polja stranke ali računa
 description: Združite entitete za ustvarjanje poenotenih profilov strank.
-ms.date: 01/28/2022
+recommendations: false
+ms.date: 05/04/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
-- ci-match
 - ci-merge
+- ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 978a7c9bc440398fa39e9fa1d366d74e5c7aaea0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643860"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740877"
 ---
-# <a name="merge-entities"></a>Združevanje entitet
+# <a name="unify-customer-fields"></a>Poenoti polja strank
 
-Faza spajanja je zadnja faza v postopku poenotenja podatkov. Njen namen je uskladitev podatkov v sporu. Primer podatkov v sporu je na primer ime stranke, ki ga najdemo v dveh zbirkah podatkov, vendar je v vsaki prikazan nekoliko drugače (»Grant Marshall« v primerjavi z »Grant Marshal«), ali telefonska številka, ki se razlikuje v obliki zapisa (617-803-091X v primerjavi s 617803091X). Spajanje teh podatkovnih točk v sporu poteka na osnovi »atribut za atributom«.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-:::image type="content" source="media/merge-fields-page.png" alt-text="Stran za spajanje v postopku poenotenja podatkov, ki prikazuje tabelo s spojenimi polji, ki določajo poenoten profil kupca.":::
+V tem koraku postopka združevanja izberite in izključite atribute, ki jih želite združiti v enoti enotnega profila. Na primer, če so imeli tri entitete e-poštne podatke, boste morda želeli obdržati vsa tri ločena e-poštna polja ali jih združiti v eno e-poštno polje za enoten profil. Nekatere atribute sistem samodejno kombinira. Ustvarite lahko stabilne in edinstvene ID-je strank ter združite povezane profile v gručo.
 
-Po zaključku [faze ujemanja](match-entities.md) fazo spajanja začnete tako, da izberete ploščico **Spajanje** na strani **Poenotenje**.
+:::image type="content" source="media/m3_unify.png" alt-text="Stran za spajanje v postopku poenotenja podatkov, ki prikazuje tabelo s spojenimi polji, ki določajo poenoten profil kupca.":::
 
-## <a name="review-system-recommendations"></a>Pregled priporočil sistema
+## <a name="review-and-update-the-customer-fields"></a>Preglejte in posodobite polja za stranke
 
-V zavihku **Podatki** > **Poenotenje** > **Spajanje** izberete in izključite atribute za spojitev znotraj vaše entitete poenotenega profila kupca. Poenoten profil stranke je rezultat postopka poenotenja podatkov. Sistem samodejno spoji nekatere atribute.
+1. Preglejte seznam polj, ki bodo združena pod **Polja za stranke** zavihek tabele. Po potrebi naredite kakršne koli spremembe.
 
-Če si želite ogledati atribute, ki so vključeni v enega od vaših samodejno spojenih atributov, izberite ta spojeni atribut v zavihku **Polja za stranke** v tabeli. Atributi, ki sestavljajo ta spojeni atribut, bodo prikazani v dveh novih vrsticah pod spojenim atributom.
+   1. Za vsa kombinirana polja lahko:
+      - [Urejanje](#edit-a-merged-field)
+      - [Preimenuj](#rename-fields)
+      - [Loči](#separate-merged-fields)
+      - [Izključi](#exclude-fields)
+      - [Premaknite se navzgor ali navzdol](#change-the-order-of-fields)
 
-## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Ločevanje, preimenovanje, izključevanje in urejanje spojenih polj
+   1. Za katera koli posamezna polja lahko:
+      - [Združitev polj](#combine-fields-manually)
+      - [Združite skupino polj](#combine-a-group-of-fields)
+      - [Preimenuj](#rename-fields)
+      - [Izključi](#exclude-fields)
+      - [Premaknite se navzgor ali navzdol](#change-the-order-of-fields)
 
-Spremenite lahko, kako sistem obdeluje spojene atribute, da ustvari poenoten profil stranke. Izberite možnost **Pokaži več** in izberite, kaj želite spremeniti.
+1. Po želji, [ustvarite konfiguracijo ID-ja stranke](#configure-customer-id-generation).
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Možnosti v spustnem meniju Prikaži več za upravljanje spojenih atributov.":::
+1. Po želji, [združite profile v gospodinjstva ali grozde](#group-profiles-into-households-or-clusters).
 
-Če želite več informacij, glejte naslednje razdelke.
+> [!div class="nextstepaction"]
+> [Naslednji korak: preglejte poenotenje](review-unification.md)
 
-## <a name="separate-merged-fields"></a>Ločevanje spojenih polj
+### <a name="edit-a-merged-field"></a>Urejanje spojenega polja
 
-Če želite ločiti spojena polja, v tabeli poiščite atribut. Ločena polja so prikazana kot posamezne podatkovne točke na poenotenem profilu stranke. 
+1. Izberite združeno polje in izberite **Uredi**. Prikaže se podokno Združi polja.
 
-1. Izberite spojeno polje.
-  
-1. Izberite možnost **Pokaži več** in **Loči polja**.
- 
-1. Potrdite ločevanje.
-
-1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb.
-
-## <a name="rename-merged-fields"></a>Preimenovanje spojenih polj
-
-Spremenite prikazno ime spojenih atributov. Imen izhodne entitete ni mogoče spremeniti.
-
-1. Izberite spojeno polje.
-  
-1. Izberite možnost **Pokaži več** in **Preimenuj**.
-
-1. Potrdite spremenjeno prikazno ime. 
-
-1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb.
-
-## <a name="exclude-merged-fields"></a>Izključevanje spojenih polj
-
-Iz poenotenega profila stranke izključite atribut. Če se polje uporablja v drugih procesih, na primer v segmentu, ga odstranite iz teh procesov, preden ga izključite iz profila stranke. 
-
-1. Izberite spojeno polje.
-  
-1. Izberite možnost **Pokaži več** in **Izključi**.
-
-1. Potrdite izključitev.
-
-1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb. 
-
-Na strani za **spajanje** izberite **Izključena polja** za ogled seznama vseh izključenih polj. To podokno vam omogoča vnovično dodajanje izključenih polj.
-
-## <a name="edit-a-merged-field"></a>Urejanje spojenega polja
-
-1.  Izberite spojeno polje.
-
-1.  Izberite možnost **Pokaži več** in **Uredi**.
-
-1.  Določite, kako združiti ali spojiti polja z eno od treh možnosti:
+1. Določite, kako združiti ali spojiti polja z eno od treh možnosti:
     - **Pomembnost**: Določi zmagovalno vrednost na podlagi uvrstitve pomembnosti, določene za vključena polja. To je privzeta možnost spajanja. Izberite **Premakni gor/dol**, da določite razvrstitev pomembnosti.
-    :::image type="content" source="media/importance-merge-option.png" alt-text="Možnost pomembnosti v dialogu za spajanje polj."::: 
+
+      :::image type="content" source="media/importance-merge-option.png" alt-text="Možnost pomembnosti v dialogu za spajanje polj.":::
+
     - **Najnovejše**: Določi zmagovalno vrednost na podlagi najnovejših. Zahteva datum ali številsko polje za vsako vključeno entiteto v obsegu spajanja polj za določitev nedavnosti.
-    :::image type="content" source="media/recency-merge-option.png" alt-text="Možnost nedavnosti v dialogu za spajanje polj.":::
+
+      :::image type="content" source="media/recency-merge-option.png" alt-text="Možnost nedavnosti v dialogu za spajanje polj.":::
+
     - **Najstarejše**: Določi zmagovalno vrednost na podlagi najstarejših. Zahteva datum ali številsko polje za vsako vključeno entiteto v obsegu spajanja polj za določitev nedavnosti.
 
-1.  Če želite sodelovati v postopku spajanja, lahko dodate več polj.
+1. Če želite sodelovati v postopku spajanja, lahko dodate več polj.
 
-1.  Spojeno polje lahko preimenujete.
+1. Spojeno polje lahko preimenujete.
 
 1. Če želite uporabiti spremembe, izberite **Dokončaj**.
 
-1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb. 
+### <a name="rename-fields"></a>Preimenuj polja
 
-## <a name="combine-fields-manually"></a>Ročno združi polja
+Spremenite prikazno ime združenih ali ločenih polj. Imen izhodne entitete ni mogoče spremeniti.
 
-Ročno določite spojeni atribut.
+1. Izberite polje in izberite **Preimenuj**.
 
-1. Na **Združi** stran, izberite **Združite**.
+1. Vnesite novo prikazno ime.
 
-1. Izberite **Polja** možnost.
+1. Izberite **Dokončano**.
+
+### <a name="separate-merged-fields"></a>Ločevanje spojenih polj
+
+Če želite ločiti spojena polja, v tabeli poiščite atribut. Ločena polja so prikazana kot posamezne podatkovne točke na poenotenem profilu stranke.
+
+1. Izberite združeno polje in izberite **Ločena polja**.
+
+1. Potrdite ločevanje.
+
+### <a name="exclude-fields"></a>Izključi polja
+
+Iz enotnega profila stranke izključite združeno ali ločeno polje. Če se polje uporablja v drugih procesih, na primer v segmentu, ga odstranite iz teh procesov, preden ga izključite iz profila stranke.
+
+1. Izberite polje in izberite **Izključi**.
+
+1. Potrdite izključitev.
+
+Če si želite ogledati seznam vseh izključenih polj, izberite **Izključena polja**. Po potrebi lahko preberete izključeno polje.
+
+### <a name="change-the-order-of-fields"></a>Spreminjanje vrstnega reda polj
+
+Nekatere entitete vsebujejo več podrobnosti kot druge. Če entiteta vključuje najnovejše podatke o polju, jo lahko pri spajanju vrednosti prednostno obravnavate pred drugimi entitetami.
+
+1. Izberite polje.
+  
+1. Izberite **Pomik gor/dol** da nastavite vrstni red ali jih povlecite in spustite na želeni položaj.
+
+### <a name="combine-fields-manually"></a>Ročno združi polja
+
+Združite ločena polja, da ustvarite združen atribut.
+
+1. Izberite **Združite** > **Polja**. Prikaže se podokno Združi polja.
 
 1. Pravilnik zmagovalnega spajanja določite v spustnem meniju **Združi polja glede na**.
 
-1. Izberite polje, ki ga želite dodati. Izberite možnost **Dodaj polja**, če želite združiti več polj.
+1. Izberite **Dodaj polje** združiti več polj.
 
 1. Navedite **Ime** in **Ime izhodnega polja**.
 
 1. Če želite uporabiti spremembe, izberite **Dokončaj**.
 
-1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb. 
+### <a name="combine-a-group-of-fields"></a>Združite skupino polj
 
-## <a name="combine-a-group-of-fields"></a>Združite skupino polj
+Skupino polj obravnavajte kot eno samo enoto. Na primer, če naši zapisi vsebujejo polja Naslov1, Naslov2, Mesto, Država in Poštna številka, se ne želimo združiti z naslovom Address2 drugega zapisa, ker mislimo, da bi naši podatki postali popolnejši.
 
-Skupino polj obravnavajte kot eno samo enoto. Na primer, če naši zapisi vsebujejo polja Naslov1, Naslov2, Mesto, Država in Zip. Verjetno se ne želimo združiti v naslov2 drugega zapisa, ker mislimo, da bi tako naši podatki postali popolnejši
-
-1. Na **Združi** stran, izberite **Združite**.
-
-1. Izberite **Skupina polj** možnost.
+1. Izberite **Združite** > **Skupina polj**.
 
 1. Določite politiko zmagovalca spajanja v **Razvrstite skupine po** spustni meni.
 
-1. Izberite **Dodaj** in izberite, ali želite v polja dodati več polj ali dodatnih skupin.
+1. Izberite **Dodaj** in izberite, ali želite v polja dodati več polj ali skupin.
 
 1. Zagotovite a **ime** in an **Ime izhoda** za vsako kombinirano polje.
 
-1. Zagotovite a **ime** za skupino polj. 
+1. Zagotovite a **ime** za skupino polj.
 
 1. Če želite uporabiti spremembe, izberite **Dokončaj**.
 
-1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb.
+## <a name="configure-customer-id-generation"></a>Konfigurirajte ustvarjanje ID-ja stranke
 
-## <a name="change-the-order-of-fields"></a>Spreminjanje vrstnega reda polj
+Določite, kako ustvariti vrednosti ID-ja stranke, edinstvene identifikatorje profila stranke. Korak poenotenih polj v postopku poenotenja podatkov ustvari edinstven identifikator profila stranke. Identifikator je *Identifikacijska številka stranke* v *Stranka* subjekt, ki izhaja iz postopka poenotenja podatkov.
 
-Nekatere entitete vsebujejo več podrobnosti kot druge. Če entiteta vključuje najnovejše podatke o polju, jo lahko pri spajanju vrednosti prednostno obravnavate pred drugimi entitetami.
-
-1. Izberite spojeno polje.
-  
-1. Izberite možnost **Pokaži več** in **Uredi**.
-
-1. V podoknu **Združevanje polj** izberite možnost **Premik gor/dol**, da nastavite vrstni red, ali pa jih povlecite in spustite na želeni položaj.
-
-1. Potrdite spremembo.
-
-1. Izberite možnost **Shrani** in **Zaženi** za obdelavo sprememb.
-
-## <a name="configure-customer-id-generation"></a>Konfiguriranje generacije ID-ja stranke 
-
-Ko konfigurirate polja za spajanje, lahko določite, kako ustvariti vrednosti CustomerId, edinstvene identifikatorje profila stranke. Korak spajanja v postopku poenotenja podatkov ustvari edinstven identifikator profila stranke. Identifikator je CustomerId v entiteti *Stranka*, ki je rezultat postopka poenotenja podatkov. 
-
-CustomerId v entiteti Stranka temelji na razprševanju prve vrednosti primarnih zmagovalnih ključev, ki niso »null«. Ti ključi prihajajo iz entitet, uporabljenih v fazi ujemanja in spajanja, nanje pa vpliva vrstni red ujemanja.Tako se lahko ustvarjeni ID stranke spremeni, ko se vrednost primarnega ključa spremeni v primarni entiteti vrstnega reda ujemanja. Vrednost primarnega ključa morda ne predstavlja vedno iste stranke.
+The *Identifikacijska številka stranke*  temelji na zgoščevanju prve vrednosti primarnih ključev zmagovalca, ki ni nič. Ti ključi prihajajo iz entitet, ki se uporabljajo pri poenotenju podatkov, in nanje vpliva vrstni red ujemanja.Tako se lahko ustvarjeni ID stranke spremeni, ko se spremeni vrednost primarnega ključa v primarni entiteti naročila ujemanja. Vrednost primarnega ključa morda ne predstavlja vedno iste stranke.
 
 Če konfigurirate stabilen ID stranke, se lahko temu izognete.
 
-**Konfiguriranje enoličnega ID-ja stranke**
+1. Izberite zavihek **Ključi**.
 
-1. Odprite razdelek **Poenotenje** > **Spoji**.
-
-1. Izberite zavihek **Ključi**. 
-
-1. Pomaknite se v vrstico **CustomerId** in izberite možnost **Konfiguriraj**.
+1. Premaknite miškin kazalec na **Identifikacijska številka stranke** vrstico in izberite **Konfiguriraj**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Kontrolnik za prilagoditev ID-ja generacije.":::
 
 1. Izberite do pet polj, ki bodo vsebovala edinstven ID stranke in so bolj stabilna. Zapisi, ki se ne ujemajo z vašo konfiguracijo, namesto tega uporabljajo sistemsko konfiguriran ID.  
 
-1. Izberite **Dokončaj** in zaženite postopek spajanja, da uporabite spremembe.
+1. Izberite **Dokončano**.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Združevanje profilov v gospodinjstva ali gruče
 
-Kot del postopka konfiguracije ustvarjanja profila stranke lahko določite pravila za združevanje sorodnih profilov v gručo. Trenutno sta na voljo dve vrsti gruč – gospodinjska in po meri. Sistem samodejno izbere gospodinjstvo z vnaprej določenimi pravili, če entiteta *Stranka* vsebuje semantični polji *Person.LastName* in *Location.Address*. Ustvarite lahko tudi gručo z lastnimi pravili in pogoji, ki so podobni [pravilom za ujemanje](match-entities.md#define-rules-for-match-pairs).
+Določite lahko pravila za združevanje povezanih profilov v gručo. Trenutno sta na voljo dve vrsti gruč – gospodinjska in po meri. Sistem samodejno izbere gospodinjstvo z vnaprej določenimi pravili, če entiteta *Stranka* vsebuje semantični polji *Person.LastName* in *Location.Address*. Ustvarite lahko tudi gručo z lastnimi pravili in pogoji, ki so podobni [pravilom za ujemanje](match-entities.md#define-rules-for-match-pairs).
 
-**Določite gospodinjstvo ali gručo**
-
-1. Odprite razdelek **Poenotenje** > **Spoji**.
-
-1. V zavihku **Spoji** izberite **Napredno** > **Ustvari gručo**.
+1. Izberite **Napredno** > **Ustvari grozd**.
 
    :::image type="content" source="media/create-cluster.png" alt-text="Nadzor za ustvarjanje nove gruče.":::
 
@@ -194,31 +174,9 @@ Kot del postopka konfiguracije ustvarjanja profila stranke lahko določite pravi
 
 1. Določite pravila in pogoje za opredelitev gruče.
 
-1. Izberite **Zaženi**, da zaženete postopek spajanja in ustvarite gručo.
+1. Izberite **Dokončano**. Grozd je ustvarjen, ko je postopek združevanja končan. Identifikatorji gruče so dodani kot nova polja v *Stranka* entiteta.
 
-Po zagonu postopka spajanja se identifikatorji gruče dodajo kot nova polja v entiteto *Stranka*.
-
-## <a name="run-your-merge"></a>Zagon spajanja
-
-Ne glede na to, ali atribute spajate ročno ali jih spoji sistem, lahko vedno zaženete spajanje. Za začetek postopka izberite **Zaženi** na strani **Spajanje**.
-
-> [!div class="mx-imgBorder"]
-> ![Shranjevanje in zagon spajanja podatkov.](media/configure-data-merge-save-run.png "Shranjevanje in zagon spajanja podatkov")
-
-Izberite možnost **Zaženi samo spajanje**, če želite, da se rezultat prikaže samo v poenoteni entiteti stranke. Procesi iz strežnika bodo osveženi, kot je [opredeljeno v načrtovanju osveževanja](system.md#schedule-tab).
-
-Izberite možnost **Zaženi procese spajanja in procese iz strežnika**, da osvežite sistem s svojimi spremembami. Vsi procesi, vključno z obogatitvijo, segmenti in merami, se bodo samodejno ponovili. Po zaključku vseh procesov iz strežnika profili strank prikažejo vse spremembe, ki ste jih naredili.
-
-Če želite narediti več sprememb in ponoviti korak, lahko prekličete spajanje v teku. Izberite **Osveževanje ...**, nato pa **Prekliči posel** v stranskem podoknu, ki se prikaže.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-:::image type="content" source="media/process-detail-path.png" alt-text="Pot do več podrobnosti o obdelavi s povezave do stanja opravila.":::
-
-## <a name="next-step"></a>Naslednji korak
-
-Za pridobitev več vpogledov v stranke konfigurirajte možnosti [Dejavnosti](activities.md), [Obogatitev](enrichment-hub.md) ali [Odnosi](relationships.md).
-
-Če ste že konfigurirali dejavnosti, obogatitev ali segmente, bodo samodejno obdelani za uporabo najnovejših podatkov o strankah.
+> [!div class="nextstepaction"]
+> [Naslednji korak: preglejte poenotenje](review-unification.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

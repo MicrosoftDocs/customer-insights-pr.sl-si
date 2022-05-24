@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643008"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755374"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Obogatitev profilov strank s storitvijo Zemljevidi Azure (predogledna različica)
 
@@ -51,7 +51,7 @@ Storitev Zemljevidi Azure ponuja podatke in storitve, osredotočene na lokacijo,
 
 1. Izberite možnost **Naprej**, da dokončate preslikavo polj.
 
-1. Ocenite, ali želite spremeniti **Dodatne nastavitve**. Te so na voljo za največjo prilagodljivost pri obravnavi naprednih primerov uporabe, vendar bodo privzete vrednosti v večini primerov ustrezne:
+1. Ocenite, ali želite spremeniti **Dodatne nastavitve**. Te nastavitve zagotavljajo največjo prilagodljivost pri obravnavanju naprednih primerov uporabe, vendar bodo privzete vrednosti v večini primerov ustrezne:
    - **Vrsta naslovov**: Nastavljeno je privzeto vedenje, da obogatitev vrne najboljše ujemanje naslova, tudi če je naslov nepopoln. Če želite pridobit samo popolne naslove, na primer naslove, ki vključujejo hišno številko, počistite vsa potrditvena polja razen **Naslovi točke**. 
    - **Jezik**: Naslovi so privzeto vrnjeni v jeziku regije, kateri pripada naslov. Če želite uporabiti standardiziran jezik naslova, v spustnem meniju izberite jezik. Na primer, če izberete **angleščina**, bo vrnjeno **Kopenhagen, Danska**, namesto **København, Danska**.
 
@@ -89,7 +89,7 @@ Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izber
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 
-S tem ko dovolite, da storitev Dynamics 365 Customer Insights podatke prenese storitvi Zemljevidi Azure, omogočite prenos podatkov zunaj omejitve skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo tovrstne podatke prenesel skladno z vašimi navodili, vendar ste vi odgovorni za to, da storitev Zemljevidi Azure izpolni morebitne obveznosti glede zasebnosti ali varnosti. Za več informacij pojdite na [Microsoftova izjava o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+S tem ko dovolite, da storitev Dynamics 365 Customer Insights podatke prenese storitvi Zemljevidi Azure, omogočite prenos podatkov zunaj omejitve skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vaših navodilih, vendar ste odgovorni za zagotovitev, da Azure Maps izpolnjujejo morebitne obveznosti glede zasebnosti ali varnosti. Za več informacij pojdite na [Microsoftova izjava o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli odstrani in s tem prekini uporabo te funkcije.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

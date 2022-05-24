@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643087"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755656"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatek za kartico stranke (predogled)
-
-
 
 Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 365. Če je v podprti aplikaciji Dynamics 365 nameščen dodatek za kartico stranke, lahko izberete prikaz polj profila strank, vpogledov in časovnice dejavnosti. Dodatek bo pridobil podatke iz Customer Insights, ne da bi to vplivalo na podatke v povezani aplikaciji Dynamics 365.
 
@@ -31,14 +29,14 @@ Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 
 ## <a name="prerequisites"></a>Zahteve
 
 - Dodatek deluje samo z aplikacijami Dynamics 365, ki temeljijo na modelu, na primer Sales ali Customer Service, različice 9.0 in novejše.
-- Da bi se vaši podatki Dynamics 365 preslikali v profile strank Customer Insights, priporočamo, da [vneseno iz aplikacije Dynamics 365 z uporabo Microsoft Dataverse konektor](connect-power-query.md). Če za vnos stikov (ali računov) Dynamics 365 uporabljate drugačen način, se morate prepričati,`contactid` (oz`accountid`) polje je nastavljeno kot [primarni ključ za ta vir podatkov v koraku zemljevida postopka združevanja podatkov](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Da bi se vaši podatki Dynamics 365 preslikali v profile strank Customer Insights, priporočamo, da [vneseno iz aplikacije Dynamics 365 z uporabo Microsoft Dataverse konektor](connect-power-query.md). Če za vnos stikov (ali računov) Dynamics 365 uporabljate drugačen način, se morate prepričati,`contactid` (oz`accountid`) polje je nastavljeno kot [primarni ključ za ta vir podatkov v koraku zemljevida postopka združevanja podatkov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Vsi uporabniki Dynamics 365 dodatka za kartico stranke morajo biti [dodani kot uporabniki](permissions.md) v Customer Insights, da si ogledate podatke.
 - [Konfigurirane zmožnosti iskanja in filtriranja](search-filter-index.md) v Customer Insights so potrebni za delovanje iskanja podatkov.
-- Vsak nadzor nad dodatki se opira na določene podatke v Customer Insights. Nekateri podatki in kontrolniki so na voljo samo v okoljih določenih vrst. Konfiguracija dodatka vas bo obvestila, če kontrolnik zaradi izbrane vrste okolja ni na voljo. Več informacij o [primerih uporabe okolja](work-with-business-accounts.md).
+- Vsak nadzor nad dodatki se opira na določene podatke v Customer Insights. Nekateri podatki in kontrolniki so na voljo samo v okoljih določenih vrst. Konfiguracija dodatka vas bo obvestila, če kontrolnik ni na voljo zaradi izbrane vrste okolja. Več informacij o [primerih uporabe okolja](work-with-business-accounts.md).
   - **Nadzor meritev**: zahteva [konfigurirana merila](measures.md) za vrsto atributov stranke.
   - **Nadzor inteligence** : Zahteva podatke, ustvarjene z uporabo [napovedi ali modeli po meri](predictions-overview.md).
   - **Kontrolnik podrobnosti stranke**: vsa polja iz profila so na voljo v poenotenem profilu stranke.
-  - **Kontrolnik obogatitve**: zahteva, da so za profile strank uporabljene aktivne [obogatitve](enrichment-hub.md). Dodatek za kartice podpira te obogatitve: [Blagovne znamke](enrichment-microsoft.md) zagotavlja Microsoft, [Zanimanja](enrichment-microsoft.md) ki ga zagotavlja Microsoft, in [Podatki o poslovanju s pisarno](enrichment-office.md) zagotavlja Microsoft.
+  - **Kontrolnik obogatitve**: zahteva, da so za profile strank uporabljene aktivne [obogatitve](enrichment-hub.md). Dodatek za kartice podpira te obogatitve: [Blagovne znamke](enrichment-microsoft.md) zagotavlja Microsoft, [Zanimanja](enrichment-microsoft.md) ki jih zagotavlja Microsoft, in [Podatki o poslovanju s pisarno](enrichment-office.md) zagotavlja Microsoft.
   - **Kontrolnik stikov**: zahteva opredelitev pomenske entitete vrste stikov.
   - **Kontrolnik časovnice**: zahteva [konfigurirane dejavnosti](activities.md).
 
@@ -132,16 +130,16 @@ Tudi s pravilno konfiguriranimi ID polji kontrolniki ne najdejo podatkov za nobe
 
 **Rešitev:**
 
-1. Prepričajte se, da ste konfigurirali dodatek za kartice v skladu z navodili: [Konfigurirajte dodatek za kartico stranke](#configure-the-customer-card-add-in) 
+1. Prepričajte se, da ste konfigurirali dodatek za kartice v skladu z navodili: [Konfigurirajte dodatek za kartico stranke](#configure-the-customer-card-add-in)
 
-1. Preglejte konfiguracijo za vnos podatkov. Uredite vir podatkov za sistem Dynamics 365, ki vsebuje GUID ID stika. Če je ID stika GUID prikazan z velikimi črkami v Power Query urejevalnik, poskusite naslednje: 
+1. Preglejte konfiguracijo za vnos podatkov. Uredite vir podatkov za sistem Dynamics 365, ki vsebuje GUID ID stika. Če je ID stika GUID prikazan z velikimi črkami v Power Query urejevalnika, poskusite z naslednjimi koraki:
     1. Uredite vir podatkov, da odprete vir podatkov v Power Query Urednik.
     1. Izberite stolpec ID stika.
-    1. Izberite **Preoblikovanje** v vrstici glave, da si ogledate razpoložljiva dejanja.
+    1. Izberite **Preoblikovanje** v naslovni vrstici, da si ogledate razpoložljiva dejanja.
     1. Izberite **male črke**. Preverite, ali so GUID-ji v tabeli zdaj male črke.
     1. Shranite vir podatkov.
-    1. Zaženite procese vnosa podatkov, poenotenja in nadaljnjih procesov za širjenje sprememb v GUID. 
+    1. Zaženite procese vnosa podatkov, poenotenja in nadaljnjih procesov za širjenje sprememb v GUID.
 
-Po zaključku popolne osvežitve morajo kontrolniki dodatka za kartico stranke prikazati pričakovane podatke. 
+Ko sistem dokonča popolno osvežitev, morajo kontrolniki dodatka za kartico stranke prikazati pričakovane podatke.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643601"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740739"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Dopolnite svoje delne podatke s predvidevanji (opuščeno)
 
@@ -37,7 +37,7 @@ Preden lahko vaša organizacija uporablja funkcijo predvidevanj, morajo biti izp
 
 1. Vaša organizacija ima primerek, [nastavljen v Microsoft Dataverse](/ai-builder/build-model#prerequisites), ki je v isti organizaciji kot Customer Insights.
 
-2. Vaše okolje za vpogled občinstva je povezano z vašim primerkom Dataverse.
+2. Vaše okolje Customer Insights je pripeto v vaš primerek Dataverse.
 
 Za več informacij glejte [Ustvarjanje novega okolja](create-environment.md).
 

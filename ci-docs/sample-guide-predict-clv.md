@@ -1,19 +1,19 @@
 ---
 title: Vzorčni priročnik za predvidevanje vrednosti življenjske dobe stranke
 description: Uporabite ta vzorčni priročnik, da preizkusite model za predvidevanje vrednosti življenjske dobe stranke.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643600"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740831"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Vzorčni priročnik za predvidevanje vrednosti življenjske dobe stranke (CLV)
 
@@ -21,7 +21,7 @@ Ta priročnik vam bo z vzorčnimi podatki v celoti razložil primer predvidevanj
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je podjetje, ki proizvaja visokokakovostne aparate za kavo in kavo. Izdelke prodajajo preko svoje spletne strani Contoso Coffee. Podjetje želi predvideti vrednost (prihodek), ki jo lahko njihove stranke ustvarijo v naslednjih 12 mesecih. Poznavanje pričakovane vrednosti njihovih strank v naslednjih 12 mesecih jim pomaga usmeriti svoja tržna prizadevanja na stranke z visoko vrednostjo.
+Contoso je podjetje, ki proizvaja visokokakovostne aparate za kavo in kavo. Izdelke prodajajo prek svoje spletne strani Contoso Coffee. Podjetje želi predvideti vrednost (prihodek), ki jo lahko njihove stranke ustvarijo v naslednjih 12 mesecih. Poznavanje pričakovane vrednosti njihovih strank v naslednjih 12 mesecih jim pomaga usmeriti svoja tržna prizadevanja na stranke z visoko vrednostjo.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -102,64 +102,7 @@ Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih v
 
 ## <a name="task-2---data-unification"></a>2. opravilo – poenotenje podatkov
 
-Po uvozu podatkov se začne postopek poenotenja podatkov za ustvarjanje enotnega profila stranke. Če želite več informacij, glejte [Poenotenje podatkov](data-unification.md).
-
-### <a name="map"></a>Preslikava
-
-1. Po vnosu podatkov preslikajte stike iz podatkov o elektronskem poslovanju in zvestobi v običajne vrste podatkov. Izberite **Podatki** > **Poenotenje** > **Preslikava**.
-
-1. Izberite entitete, ki predstavljajo profil stranke – **StikiEPoslovanja** in **zvesteStranke**. Nato izberite **Uporabi**.
-
-   ![Poenotenje virov podatkov o elektronskem poslovanju in zvestobi.](media/unify-ecommerce-loyalty.png)
-
-1. Izberite **IDstika** kot primarni ključ za **StikiEPoslovanja** in **ID zvestobe** kot primarni ključ za **zvesteStranke**.
-
-   ![Poenotite IDzvestobe kot primarni ključ.](media/unify-loyaltyid.png)
-
-1. Izberite **Shrani**.
-
-### <a name="match"></a>Povezovanje
-
-1. Izberite zavihek **Ujemanje** in izberite **Nastavi vrstni red**.
-
-1. Na spustnem seznamu izberite možnost **Primarni** ter za primarni vir določite **eCommerceContacts: eCommerce** in vključite vse zapise.
-
-1. Na spustnem seznamu izberite možnost **Entiteta 2**, nato pa **loyCustomers: LoyaltyScheme** in vključite vse zapise.
-
-   ![Poenotenje ujemanja elektronskega poslovanja in zvestobe.](media/unify-match-order.png)
-
-1. Izberite **Dodaj pravilo**
-
-1. Dodajte svoj prvi pogoj z možnostjo FullName.
-
-   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite **FullName**.
-   - Za entiteto zvesteStranke na spustnem seznamu izberite **FullName**.
-   - Na spustnem seznamu izberite možnost **Normaliziraj**, nato pa **Vrsta (telefon, ime, naslov, ...)**.
-   - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
-
-1. Vnesite ime **FullName, Email** za novo pravilo.
-
-   - Dodajte drugi pogoj za e-poštni naslov tako, da izberete **Dodaj pogoj**.
-   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite možnost **E-pošta**.
-   - Za entiteto zvesteStranke na spustnem seznamu izberite možnost **E-pošta**.
-   - Pustite polje Normaliziraj prazno.
-   - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
-
-   ![Poenotenje pravila ujemanja za ime in e-pošto.](media/unify-match-rule.png)
-
-1. Izberite **Dokončano**.
-
-1. Izberite **Shrani** in **Zaženi**.
-
-### <a name="merge"></a>Spajanje
-
-1. Odprite zavihek **Spajanje**.
-
-1. Pri **IDstranke** za entiteto **zvesteStranke** spremenite prikazno ime v **ZVESTOBAIDstranke**, da se razlikuje od ostalih vnesenih ID-jev.
-
-   ![Preimenujte ID stika iz ID-ja zvestobe.](media/unify-merge-contactid.png)
-
-1. Izberite **Shrani** in **Zaženi združevanje in postopke iz strežnika**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>3. naloga – Konfiguriranje predvidevanja vrednosti življenjske dobe stranke
 

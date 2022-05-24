@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643284"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755518"
 ---
 # <a name="customer-activities"></a>Dejavnosti stranke
 
-Združite dejavnosti strank iz [različnih virov podatkov](data-sources.md) v rešitvi Dynamics 365 Customer Insights, da ustvarite časovnico, ki dejavnosti našteva v časovnem zaporedju. V aplikacijah Dynamics 365 vključite časovnico z rešitvijo [Dodatek za kartico stranke](customer-card-add-in.md) ali v nadzorni plošči storitve Power BI.
+Združite dejavnosti stranke iz [različnih virov podatkov](data-sources.md) v storitvi Dynamics 365 Customer Insights. Ustvarite časovnico, ki navaja dejavnosti kronološko. Vključite časovno os v aplikacije Dynamics 365 z [Dodatek za kartico stranke](customer-card-add-in.md) rešitev.
 
 ## <a name="define-an-activity"></a>Določanje dejavnosti
 
@@ -78,7 +78,7 @@ Entiteta mora imeti vsaj en atribut vrste **Datum**, da je lahko vključena na �
 
 1. Izberite možnost **Naprej** za pomik na naslednji korak. Izberete lahko možnost **Zaključek in pregled**, da takoj shranite dejavnost z vrsto dejavnosti, nastavljeno na možnost **Drugo**. 
 
-1. V koraku **Vrsta dejavnosti** izberite vrsto dejavnosti in po želji izberite, ali želite semantično preslikati nekatere vrste dejavnosti za uporabo na drugih področjih storitve Customer Insights. Po potrditvi, da se strinjate s preslikavo polj, je mogoče vrste dejavnosti *Povratne informacije*, *Zvestoba*, *SalesOrder*, *SalesOrderLine* in *Naročnina* semantično preslikati. Če vrsta dejavnosti za novo dejavnost ni pomembna, lahko izberete možnost *Drugo* ali *Ustvari novo* za prilagojeno vrsto dejavnosti.
+1. V koraku **Vrsta dejavnosti** izberite vrsto dejavnosti in po želji izberite, ali želite semantično preslikati nekatere vrste dejavnosti za uporabo na drugih področjih storitve Customer Insights. trenutno *Povratne informacije*, *·*, *nalog*, *·*, in *Naročnina* vrste dejavnosti podpirajo semantiko, potem ko se strinjate s preslikavo polj. Če vrsta dejavnosti za novo dejavnost ni pomembna, lahko izberete možnost *Drugo* ali *Ustvari novo* za prilagojeno vrsto dejavnosti.
 
 1. Izberite možnost **Naprej** za pomik na naslednji korak. 
 
@@ -110,7 +110,7 @@ Ko konfigurirate dejavnosti strank, izberite **Prikaz na časovnici dejavnosti**
 
 Če želite odpreti časovnico za stranko, odprite razdelek **Stranke** in izberite profil stranke, ki si ga želite ogledati.
 
-Če je stranka sodelovala pri dejavnosti, ki ste jo konfigurirali, jo boste našli v razdelku **Časovnica dejavnosti**.
+Če je stranka sodelovala v konfigurirani dejavnosti, jo boste našli v **Časovnica dejavnosti** oddelek.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Oglejte si konfigurirane dejavnosti v profilih strank.":::
 

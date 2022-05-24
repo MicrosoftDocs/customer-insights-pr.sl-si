@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 85995cbd7f797810bfb6ecdc8a24d56542f0b5a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643085"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741385"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Delo s podatki Customer Insights v okolju Microsoft Dataverse
 
@@ -26,12 +26,12 @@ Storitev Customer Insights nudi možnost omogočanja izhodnih entitet v okolju [
 
 **Obstoječa organizacija**
 
-Skrbniki lahko konfigurirajo Customer Insights za [uporabite obstoječo Dataverse okolje](create-environment.md) ko ustvarijo okolje Customer Insights. Z posredovanjem URL-ja za Dataverse okolju, se povezuje z njihovim novim okoljem Customer Insights. Vpogled v stranke in Dataverse okolja morajo gostovati v isti regiji. 
+Skrbniki lahko konfigurirajo Customer Insights na [uporabite obstoječo Dataverse okolje](create-environment.md) ko ustvarijo okolje Customer Insights. Z posredovanjem URL-ja za Dataverse okolju, se povezuje z njihovim novim okoljem Customer Insights. Vpogled v stranke in Dataverse okolja morajo gostovati v isti regiji. 
 
 Če ne želite uporabiti obstoječega Dataverse okolje, sistem ustvari novo okolje za podatke Customer Insights v vašem najemniku. 
 
 > [!NOTE]
-> Če vaša organizacija že uporablja Dataverse pri njihovem najemniku je pomembno, da se tega spomnite [Dataverse ustvarjanje okolja nadzoruje skrbnik](/power-platform/admin/control-environment-creation) . Na primer, če nastavljate novo okolje Customer Insights s svojim računom organizacije in je skrbnik onemogočil ustvarjanje Dataverse poskusna okolja za vse, razen za skrbnike, ne morete ustvariti novega preizkusnega okolja.
+> Če vaša organizacija že uporablja Dataverse pri njihovem najemniku je pomembno, da se tega spomnite [Dataverse ustvarjanje okolja nadzoruje skrbnik](/power-platform/admin/control-environment-creation) . Na primer, če s svojim organizacijskim računom nastavljate novo okolje Customer Insights in je skrbnik onemogočil ustvarjanje Dataverse preizkusna okolja za vse, razen za skrbnike, ne morete ustvariti novega preizkusnega okolja.
 > 
 > Preizkusna okolja Dataverse, ustvarjena v Customer Insights, imajo 3 GB prostora za shranjevanje, kar se ne bo vštelo v celotno zmogljivost, ki pripada najemniku. Plačljive naročnine so upravičene do okolja Dataverse s 15 GB prostora za zbirko podatkov in 20 GB prostora za shranjevanje datotek.
 
@@ -54,7 +54,7 @@ Nekatere izhodne entitete iz Customer Insights so na voljo kot tabele v Datavers
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Ta tabela vsebuje poenoteni profil stranke iz Customer Insights. Shema za poenoteni profil stranke je odvisna od entitet in atributov, uporabljenih v postopku združevanja. Shema profila stranke običajno vsebuje podmnožico atributov iz [definicije Common Data Model atributa CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Ta tabela vsebuje poenoteni profil stranke iz Customer Insights. Shema za poenoten profil stranke je odvisna od entitet in atributov, uporabljenih v postopku poenotenja podatkov. Shema profila stranke običajno vsebuje podmnožico atributov iz [definicije Common Data Model atributa CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
 
 ### <a name="alternatekey"></a>AlternateKey
 

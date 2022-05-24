@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643104"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712922"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Ustvarite okolje v Customer Insights
 
@@ -63,8 +63,7 @@ Na voljo imate dve možnosti: **Shramba storitve Customer Insights** (jezero pod
 S shranjevanjem podatkov v Azure Data Lake Storage se strinjate, da bodo podatki preneseni in shranjeni na ustrezni geografski lokaciji za ta račun za shrambo Azure. Ta lokacija se lahko razlikuje od mesta, kjer so shranjeni podatki storitve Dynamics 365 Customer Insights. Več o tem preberite v [Microsoftovem središču zaupanja](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Storitev Customer Insights trenutno podpira naslednje:
-> - Uvožene entitete iz podatkovnih tokov Power BI, ki so shranjeni v okolju Microsoft Dataverse, ki ga upravlja Data Lake.  
+> Storitev Customer Insights trenutno podpira naslednje:  
 > - Računi Azure Data Lake Storage iz iste regije Azure, ki ste jo izbrali pri ustvarjanju okolja.
 > - Azure Data Lake Storage račune, ki so Gen2 in imajo *hierarhičen imenski prostor* omogočeno. Računi za shranjevanje podatkov Azure Data Lake Gen1 niso podprti.
 
@@ -80,7 +79,7 @@ Korak **Microsoft Dataverse** vam omogoča, da povežete Customer Insights s svo
 
 Ponudite svoje Microsoft Dataverse okolje za izmenjavo podatkov (profilov in vpogledov) s poslovnimi aplikacijami, ki temeljijo na Dataverse, kot je Dynamics 365 Marketing ali modelsko vodene aplikacije v Power Apps. Pustite to polje prazno, če nimate svojega Dataverse okolje in mi ga bomo zagotovili za vas.
 
-Povezovanje z vašim Dataverse okolje vam tudi omogoča [prenesite podatke iz virov podatkov na mestu uporabe z uporabo Power Platform podatkovnih tokov in prehodov](data-sources.md#add-data-from-on-premises-data-sources). Lahko tudi uporabite [gotovi modeli predvidevanje](predictions-overview.md?tabs=b2c#out-of-box-models) s povezovanjem na a Dataverse okolje.
+Povezovanje z vašim Dataverse okolje vam tudi omogoča [prenesite podatke iz virov podatkov na mestu uporabe z uporabo Power Platform podatkovni tokovi in prehodi](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Vpogled v stranke in Dataverse morajo biti v isti regiji, da omogočite skupno rabo podatkov.

@@ -1,7 +1,7 @@
 ---
 title: Vzorčni vodnik za predvidevanje priporočil za izdelke
 description: Uporabite ta vzorčni vodnik, da preskusite model predvidevanja priporočil za vnaprej pripravljene izdelke.
-ms.date: 02/10/2021
+ms.date: 05/16/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 1115bab13bdca4a308a8d9eb5a1dc270801d16be
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643581"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762706"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Vzorčni vodnik za predvidevanje priporočil za izdelke
 
@@ -40,7 +40,7 @@ Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih v
 
 1. Ustvarite vir podatkov z imenom **EPoslovanje**, izberite možnost uvoza in izberite povezovalnik **Besedilo/CSV**.
 
-1. Vnesite URL za stike za elektronsko poslovanje https://aka.ms/ciadclasscontacts.
+1. Vnesite URL za stike e-trgovine: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
 
 1. Med urejanjem podatkov izberite **Pretvori** in potem **Uporabi prvo vrstico kot glavo**.
 
@@ -50,15 +50,15 @@ Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih v
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Pretvorite datum rojstva v datum.":::
 
-5. V polju »Ime« v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **StikiEPoslovanja**.
+1. V polju »Ime« v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **StikiEPoslovanja**.
 
-6. **Shranite** vir podatkov.
+1. **Shranite** vir podatkov.
 
 ### <a name="ingest-online-purchase-data"></a>Vnos podatkov o spletnem nakupu
 
 1. Dodajte še nabor podatkov z istega vira podatkov **EPoslovanje**. Znova izberite povezovalnik **Besedilo/CSV**.
 
-1. Vnesite URL za podatke **Spletni nakupi** https://aka.ms/ciadclassonline.
+1. Vnesite URL za **Spletni nakupi** podatki [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
 
 1. Med urejanjem podatkov izberite **Pretvori** in potem **Uporabi prvo vrstico kot glavo**.
 
@@ -70,12 +70,11 @@ Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih v
 
 1. **Shranite** vir podatkov.
 
-
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Vnos podatkov o strankah iz sheme za zvestobo
 
 1. Ustvarite vir podatkov z imenom **ShemaZvestobe**, izberite možnost uvoza in izberite povezovalnik **Besedilo/CSV**.
 
-1. Vnesite URL za stike za elektronsko poslovanje https://aka.ms/ciadclasscustomerloyalty.
+1. Vnesite URL za stike e-trgovine [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
 
 1. Med urejanjem podatkov izberite **Pretvori** in potem **Uporabi prvo vrstico kot glavo**.
 
@@ -90,64 +89,11 @@ Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih v
 
 ## <a name="task-2---data-unification"></a>2. opravilo – poenotenje podatkov
 
-Po uvozu podatkov se začne postopek poenotenja podatkov za ustvarjanje enotnega profila stranke. Če želite več informacij, glejte [Poenotenje podatkov](data-unification.md).
-
-### <a name="map"></a>Preslikava
-
-1. Po vnosu podatkov preslikajte stike iz podatkov o elektronskem poslovanju in zvestobi v običajne vrste podatkov. Izberite **Podatki** > **Poenotenje** > **Preslikava**.
-
-2. Izberite entitete, ki predstavljajo profil stranke – **StikiEPoslovanja** in **zvesteStranke**.
-
-   ![Poenotenje virov podatkov o elektronskem poslovanju in zvestobi.](media/unify-ecommerce-loyalty.png)
-
-3. Izberite **IDstika** kot primarni ključ za **StikiEPoslovanja** in **ID zvestobe** kot primarni ključ za **zvesteStranke**.
-
-   ![Poenotite IDzvestobe kot primarni ključ.](media/unify-loyaltyid.png)
-
-### <a name="match"></a>Povezovanje
-
-1. Izberite zavihek **Ujemanje** in izberite **Nastavi vrstni red**.
-
-2. Na spustnem seznamu izberite možnost **Primarni** ter za primarni vir določite **eCommerceContacts: eCommerce** in vključite vse zapise.
-
-3. Na spustnem seznamu izberite možnost **Entiteta 2**, nato pa **loyCustomers: LoyaltyScheme** in vključite vse zapise.
-
-   ![Poenotenje ujemanja elektronskega poslovanja in zvestobe.](media/unify-match-order.png)
-
-4. Izberite **Ustvarjanje novega pravila**.
-
-5. Dodajte svoj prvi pogoj z možnostjo FullName.
-
-   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite **FullName**.
-   - Za entiteto zvesteStranke na spustnem seznamu izberite **FullName**.
-   - Izberite spustni meni **Normaliziraj** in izberite **Vrsta (telefon, ime, naslov, ...)**.
-   - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
-
-6. Vnesite ime **FullName, Email** za novo pravilo.
-
-   - Dodajte drugi pogoj za e-poštni naslov tako, da izberete **Dodaj pogoj**.
-   - Za entiteto StikiEPoslovanja na spustnem seznamu izberite možnost **E-pošta**.
-   - Za entiteto zvesteStranke na spustnem seznamu izberite možnost **E-pošta**.
-   - Pustite polje Normaliziraj prazno.
-   - Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
-
-   ![Poenotenje pravila ujemanja za ime in e-pošto.](media/unify-match-rule.png)
-
-7. Izberite **Shrani** in **Zaženi**.
-
-### <a name="merge"></a>Spajanje
-
-1. Odprite zavihek **Spajanje**.
-
-1. Pri **IDstranke** za entiteto **zvesteStranke** spremenite prikazno ime v **ZVESTOBAIDstranke**, da se razlikuje od ostalih vnesenih ID-jev.
-
-   ![Preimenujte ID stika iz ID-ja zvestobe.](media/unify-merge-contactid.png)
-
-1. Izberite **Shrani** in **Zaženi**, da začnete postopek spajanja.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-product-recommendation-prediction"></a>3. opravilo – konfiguracija predvidevanja priporočil za izdelke
 
-Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje izgube naročnin.
+Z vzpostavljenimi enotnimi profili strank lahko zdaj izvajamo priporočilo izdelka predvidevanje.
 
 1. V razdelku **Obveščanje** > **Predvidevanje** izberite **Priporočilo za izdelke**.
 
@@ -162,27 +108,36 @@ Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje 
    - **Pričakovani ponovljeni nakupi**: izberite **Da**, če želite izdelke vključiti v priporočilo izdelkov, ki so jih vaše stranke že kupile.
 
    - **Obdobje zajema podatkov:** izberite vsaj **365 dni**. Ta nastavitev določa obdobje zajema podatkov strankine dejavnosti, ki ga bo model upošteval pri vnosu priporočil.
-   
+
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Oblikujte nastavitve za model s priporočili za izdelke.":::
 
-1. Za zgodovino nakupov izberite **Zahtevani podatki** in nato **Dodajanje podatkov**.
+1. V **Dodajte zahtevane podatke** korak, izberite **Dodajte podatke**.
 
-1. Dodajte entiteto **NakupiEPoslovanja: EPoslovanje** in preslikajte polja iz elektronskega poslovanja v ustrezna polja, ki jih zahteva model.
+1. V **Dodajte podatke** podoknu, izberite **SalesOrderLine** kot subjekt zgodovine nakupov. Na tej točki verjetno še ni konfiguriran. Odprite povezavo v podoknu, da ustvarite dejavnost z naslednjimi koraki:
+   1. Vnesite an **Ime dejavnosti** in izberite *Nakupi e-trgovine: e-trgovina* kot **Subjekt dejavnosti**. The **Primarni ključ** je *PurchaseId*.
+   1. Določite in poimenujte razmerje do *Kontakti e-trgovine: subjekt e-trgovine* in izberite **ContactId** kot tuji ključ.
+   1. Za poenotenje dejavnosti nastavite **Dejavnost dogodka** kot *Skupna cena* in časovni žig do *Kupljeno dne*. Določite lahko več polj, kot je opisano v [Aktivnosti strank](activities.md).
+   1. Za **Vrsta dejavnosti**, izberite *SalesOrderLine*. Preslikajte naslednja polja dejavnosti:
+      - ID vrstice naročila: PurchaseId
+      - ID naročila: PurchaseId
+      - Podatki o naročilu: PurchasedOn
+      - ID izdelka: ProductId
+      - Znesek: TotalPrice
+   1. Preglejte in dokončajte dejavnost, preden se vrnete na konfiguracijo modela.
 
-1. Pridružite entiteto **NakupiEPoslovanja: EPoslovanje** z entiteto **StikiEPoslovanja: EPoslovanje**.
+1. Nazaj v **Izberite dejavnosti** korak, izberite novo ustvarjeno dejavnost v **dejavnosti** oddelek. Izberite **Naslednji** in preslikava atributov je že izpolnjena. Izberite **Shrani**.
 
-   ![Pridružite se entitetam elektronskega poslovanja.](media/model-purchase-join.png)
+1. V tem vzorčnem vodniku preskočimo **Dodajte informacije o izdelku** in **Filtri za izdelke** nastavljeno, ker nimamo podatkov o izdelku.
 
-1. Izberite **Naprej** za nastavitev urnika modela.
+1. V **Posodobitve podatkov** korak, nastavite urnik modela.
 
    Model se mora redno usposabljati, da se nauči novih vzorcev, ko vnese nove podatke. V tem primeru izberite **Mesečno**.
 
-1. Po pregledu vseh podrobnosti izberite **Shrani in zaženi**.
-
+1. Po pregledu vseh podrobnosti izberite **Shrani in zaženi**. Prvi zagon modela bo trajal nekaj minut.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>4. opravilo – preglejte rezultate modela in razlage
 
-Model naj dokonča usposabljanje in ocenjevanje podatkov. Zdaj lahko pregledate pojasnila modela s priporočili za izdelke. Za več informacij glejte [Pregled stanja in rezultatov predvidevanja](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Model naj dokonča usposabljanje in ocenjevanje podatkov. Zdaj lahko pregledate pojasnila modela s priporočili za izdelke. Za več informacij glejte [Pregled stanja in rezultatov predvidevanja](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-purchased-products"></a>5. opravilo – ustvarjanje segmenta najbolj prodajanih izdelkov
 
@@ -190,21 +145,19 @@ Z zagonom produkcijskega modela ustvarite novo entiteto, ki jo lahko vidite v ra
 
 Na podlagi entitete, ki jo je ustvaril model, lahko ustvarite nov segment.
 
-1. Izberite **Segmenti**. Izberite **Novo** in izberite **Ustvari iz** > **Obveščanje**.
+1. Izberite **Segmenti**. Izberite **Novo** in izberite **Ustvarite iz inteligence**.
 
    ![Ustvarjanje segmenta z izhodnimi podatki modela.](media/segment-intelligence.png)
 
 1. Izberite končno točko **ModelPredvidevanjaPriporočilZaVnaprejPripravljeneIzdelke** in določite segment:
 
    - Polje: IDIzdelka
-   - Operator: vrednost
    - Vrednost: izberite najboljše tri ID-je izdelka
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Ustvarite segment iz rezultatov modela.":::
 
-Sedaj imate dinamično posodobljen segment, ki prepozna stranke, ki so bolj pripravljene kupiti tri najbolj priporočene izdelke. 
+Zdaj imate segment, ki se dinamično posodablja in identificira stranke, ki bi jih morda zanimale nakup treh najbolj priporočenih izdelkov.
 
 Za več informacij glejte [Ustvarjanje in upravljanje segmentov](segments.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,24 +11,24 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643028"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755282"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Posredovanje dnevnika Dynamics 365 Customer Insights z Azure Monitor (predogled)
 
-Dynamics 365 Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ali jih pretočno predvajajte [Azure Središča za dogodke](https://azure.microsoft.com/services/event-hubs/).
+Dynamics 365 Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ali jih pretakajte na [Azure Središča za dogodke](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights pošilja naslednje dnevnike dogodkov:
 
 - **Revizijski dogodki**
   - **APIEvent** - omogoča sledenje spremembam preko Dynamics 365 Customer Insights uporabniški vmesnik.
 - **Operativni dogodki**
-  - **WorkflowEvent** - Potek dela omogoča nastavitev [Viri podatkov](data-sources.md),[poenotiti](data-unification.md) in [obogatiti](enrichment-hub.md) in končno [izvoz](export-destinations.md) podatke v druge sisteme. Vse te korake je mogoče izvesti posamezno (npr. sprožiti en sam izvoz) ali organizirati (npr. osvežitev podatkov iz podatkovnih virov, ki sproži proces poenotenja, ki bo potegnil dodatne obogatitve in po končanem izvozu podatkov v drug sistem). Za več podrobnosti si oglejte [Shema dogodka delovnega toka](#workflow-event-schema).
-  - **APIEvent** - vsi klici API-ja do primerka strank Dynamics 365 Customer Insights. Za več podrobnosti si oglejte [APIEvent shema](#api-event-schema).
+  - **WorkflowEvent** - Potek dela vam omogoča nastavitev [Viri podatkov](data-sources.md),[poenotiti](data-unification.md),[obogatiti](enrichment-hub.md), in končno [izvoz](export-destinations.md) podatke v druge sisteme. Vse te korake je mogoče izvesti posamezno (na primer sprožiti en sam izvoz). Lahko deluje tudi orkestrirano (na primer, osvežitev podatkov iz virov podatkov, ki sproži proces poenotenja, ki bo potegnil obogatitve in po končanem izvozu podatkov v drug sistem). Za več informacij glejte [Shema dogodka delovnega toka](#workflow-event-schema).
+  - **APIEvent** - vsi klici API-ja do primerka strank Dynamics 365 Customer Insights. Za več informacij glejte [APIEvent shema](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Nastavite diagnostične nastavitve
 
@@ -87,7 +87,7 @@ Dnevniška shema sledi [Skupna shema Azure Monitor](/azure/azure-monitor/platfor
 Customer Insights ponuja dve kategoriji:
 
 - **Revizijski dogodki** :[API dogodki](#api-event-schema) za sledenje spremembam konfiguracije storitve. `POST|PUT|DELETE|PATCH` operacije spadajo v to kategorijo.
-- **Operativni dogodki** :[API dogodki](#api-event-schema) oz [dogodki poteka dela](#workflow-event-schema) ustvarjeno med uporabo storitve.  Na primer`GET` zahteve ali izvedbene dogodke delovnega toka.
+- **Operativni dogodki** :[API dogodki](#api-event-schema) oz [dogodki poteka dela](#workflow-event-schema) ki nastane med uporabo storitve.  Na primer`GET` zahteve ali izvedbene dogodke delovnega toka.
 
 ## <a name="configuration-on-the-destination-resource"></a>Konfiguracija ciljnega vira
 
@@ -182,7 +182,7 @@ The`identity` Objekt JSON ima naslednjo strukturo
 
 ### <a name="workflow-event-schema"></a>Shema dogodka poteka dela
 
-Potek dela vsebuje več korakov. [Zaužijte vire podatkov](data-sources.md),[poenotiti](data-unification.md),[obogatiti](enrichment-hub.md), in [izvoz](export-destinations.md) podatkov. Vsi ti koraki se lahko izvajajo posamezno ali usklajeno z naslednjimi procesi. 
+Potek dela vsebuje več korakov. [Zaužijte vire podatkov](data-sources.md),[poenotiti](data-unification.md),[obogatiti](enrichment-hub.md), in [izvoz](export-destinations.md) podatkov. Vsi ti koraki se lahko izvajajo posamezno ali usklajeno z naslednjimi procesi.
 
 #### <a name="operation-types"></a>Vrste operacij
 
@@ -215,7 +215,7 @@ Potek dela vsebuje več korakov. [Zaužijte vire podatkov](data-sources.md),[poe
 | `time`          | Časovni žig | Zahtevano          | Časovni žig dogodka (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | String    | Zahtevano          | ResourceId primerka, ki je oddal dogodek.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | String    | Zahtevano          | Ime operacije, ki jo predstavlja ta dogodek. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Glej [Vrste operacij](#operation-types) za referenco. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | String    | Zahtevano          | Kategorija dnevnika dogodka. Nenehno`Operational` za dogodke delovnega toka                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | String    | Zahtevano          | Kategorija dnevnika dogodka. Nenehno`Operational` za dogodke delovnega toka                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | String    | Zahtevano          | Stanje dogodka. `Running`,`Skipped`,`Successful`,`Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Dolgo      | Po izbiri          | Trajanje operacije v milisekundah.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Po izbiri          | Objekt JSON z več lastnostmi za določeno kategorijo dogodkov.                                                                                        | Glej pododdelek [Lastnosti delovnega toka](#workflow-properties-schema)                                                                                                       |

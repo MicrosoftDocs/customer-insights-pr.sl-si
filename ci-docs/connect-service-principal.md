@@ -11,22 +11,22 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643356"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739182"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve Azure
 
-Ta članek govori o tem, kako se povezati Dynamics 365 Customer Insights z Azure Data Lake Storage račun z uporabo principala storitve Azure namesto ključev računa za shranjevanje. 
+Ta članek govori o tem, kako povezati Dynamics 365 Customer Insights z Azure Data Lake Storage račun z uporabo principala storitve Azure namesto ključev računa za shranjevanje. 
 
 Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omejena dovoljenja. Namesto da bi se v aplikacije vpisali kot uporabnik s vsemi pravicami, Azure ponuja glavno ime storitve. Za varno lahko uporabite principe storitev [dodajte ali uredite mapo skupnega podatkovnega modela kot vir podatkov](connect-common-data-model.md) oz [ustvarite ali posodobite okolje](create-environment.md).
 
 > [!IMPORTANT]
 > - Račun Data Lake Storage, ki bo uporabljal principala storitve, mora biti Gen2 in imeti [Imenski prostor hierarhičen je omogočen](/azure/storage/blobs/data-lake-storage-namespace). Računi za shranjevanje podatkov Azure Data Lake Gen1 niso podprti.
-> - Za ustvarjanje principala storitve potrebujete skrbniška dovoljenja za svojo naročnino na Azure.
+> - Za ustvarjanje principala storitve potrebujete skrbniška dovoljenja za naročnino na Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Ustvarjanje glavnega imena storitve Azure za storitev Customer Insights
 
@@ -40,7 +40,7 @@ Preden ustvarite novega principala storitve za Customer Insights, preverite, ali
 
 3. Pod možnostjo **Upravljanje** izberite **Aplikacije za podjetja**.
 
-4. Poiščite ID Microsoftove aplikacije`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` z imenom `Dynamics 365 AI for Customer Insights`.
+4. Dodajte filter za **ID aplikacije se začne z**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` ali poiščite ime `Dynamics 365 AI for Customer Insights`.
 
 5. Če najdete ujemajoči se zapis, to pomeni, da glavno ime storitve že obstaja. 
    

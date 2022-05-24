@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643620"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741061"
 ---
 # <a name="manage-environments"></a>Upravljanje okolij
 
@@ -62,7 +62,7 @@ Omogočanje skupne rabe podatkov z Microsoft Dataverse če izberete potrditveno 
 Če je vaše okolje konfigurirano za uporabo lastnega Azure Data Lake Storage za shranjevanje podatkov Customer Insights, kar omogoča skupno rabo podatkov z Microsoft Dataverse potrebuje dodatno konfiguracijo.
 
 1. Ustvarite dve varnostni skupini v svoji naročnini na Azure – eno **Uporabnik z dovoljenjem za branje** varnostna skupina in ena **sodelavec** varnostno skupino in nastavite Microsoft Dataverse kot lastnik za obe varnostni skupini.
-2. Upravljajte seznam za nadzor dostopa (ACL) v vsebniku CustomerInsights v vašem računu za shranjevanje prek teh varnostnih skupin. Dodajte Microsoft Dataverse storitev in vse Dataverse poslovne aplikacije, kot je Dynamics 365 Marketing za **Uporabnik z dovoljenjem za branje** varnostna skupina z **le za branje** dovoljenja. Dodaj *samo* aplikacijo Customers Insights za **sodelavec** varnostna skupina, ki odobri oboje **beri in piši** dovoljenja za pisanje profilov in vpogledov.
+2. Upravljajte seznam za nadzor dostopa (ACL) v vsebniku CustomerInsights v vašem računu za shranjevanje prek teh varnostnih skupin. Dodajte Microsoft Dataverse storitev in vse Dataverse poslovne aplikacije, kot je Dynamics 365 Marketing za **Uporabnik z dovoljenjem za branje** varnostna skupina z **le za branje** dovoljenja. Dodaj *samo* aplikacijo Customers Insights za **sodelavec** varnostna skupina za odobritev obojega **beri in piši** dovoljenja za pisanje profilov in vpogledov.
    
 #### <a name="prerequisites"></a>Zahteve
 
@@ -89,7 +89,7 @@ Za izvajanje skriptov PowerShell morate imeti uvožene naslednje tri module.
 
     2. `ByolSetup.ps1`
         - Potrebujete *Lastnik podatkov shranjevalnih blokov* dovoljenja na ravni računa za shranjevanje/vsebnika za zagon tega skripta ali pa ga bo ta skript ustvaril za vas. Vašo dodelitev vloge lahko ročno odstranite po uspešnem zagonu skripta.
-        - Ta skript PowerShell doda zahtevani nadzor dostopa na osnovi tole (RBAC) za Microsoft Dataverse storitev in vse Dataverse -poslovne aplikacije. Prav tako posodobi seznam nadzora dostopa (ACL) v vsebniku CustomerInsights za varnostne skupine, ustvarjene z`CreateSecurityGroups.ps1` skripta. Skupina sodelavec bo imela *rwx* dovoljenje in skupina bralcev bo imela *rx* samo dovoljenje.
+        - Ta skript PowerShell doda zahtevan nadzor dostopa na osnovi tole (RBAC) za Microsoft Dataverse storitev in vse Dataverse -poslovne aplikacije. Prav tako posodobi seznam nadzora dostopa (ACL) v vsebniku CustomerInsights za varnostne skupine, ustvarjene z`CreateSecurityGroups.ps1` skripta. Skupina sodelavec bo imela *rwx* dovoljenje in skupina bralcev bo imela *rx* samo dovoljenje.
         - Izvedite ta skript PowerShell v Windows PowerShell tako, da zagotovite ID naročnine Azure, ki vsebuje vaš Azure Data Lake Storage, ime računa za shranjevanje, ime skupine sredstev ter vrednosti ID-ja varnostne skupine Uporabnik z dovoljenjem za branje in sodelavec. Odprite skript PowerShell v urejevalniku, da si ogledate dodatne informacije in implementirano logiko.
         - Kopirajte izhodni niz po uspešnem zagonu skripta. Izhodni niz izgleda takole:`https: //DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
         
@@ -127,11 +127,11 @@ Prikazan bo seznam vseh razpoložljivih okolij iz vaše organizacije, od koder l
 Kopirane so naslednje konfiguracijske nastavitve:
 
 - Vključeni/uvoženi viri podatkov
-- Konfiguracija poenotenja podatkov (preslikava, ujemanje, spajanje)
+- Konfiguracija združevanja podatkov
 - Segmenti
 - Mere
-- Odnosi
-- Dejavnosti
+- Relacije
+- dejavnosti
 - Kazalo za iskanje in filtre
 - Izvoz ciljev
 - Načrtovano osveževanje

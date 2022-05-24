@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: bcc50c6fa8f8e2a66ef6164bfa9022e068c0e374
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643065"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739228"
 ---
 # <a name="data-sources-overview"></a>Pregled virov podatkov
 
@@ -36,9 +36,6 @@ Dodate lahko naslednje vire podatkov:
 - [Iz svojega jezera storitve Microsoft Dataverse](connect-dataverse-managed-lake.md)
 - [Od an Azure Synapse Analytics bazo podatkov](connect-synapse.md)
 
-> [!NOTE]
-> Če uporabljate preizkusno različico, razdelek z načini uvoza vključuje a **Knjižnica podatkov Customer Insights** možnost. Izberite to možnost, da izberete vzorčni nabor podatkov, ki je na voljo za različne panoge. Za več informacij glejte [Dynamics 365 Customer Insights sojenje](trial-signup.md).
-
 ## <a name="add-data-from-on-premises-data-sources"></a>Dodajanje podatkov iz virov podatkov na mestu uporabe
 
 Vnos podatkov iz virov podatkov na mestu uporabe je podprt na podlagi Microsoft Power Platform tokovi podatkov. Tokove podatkov lahko omogočite v Customer Insights z [zagotavljanje Microsoft Dataverse URL okolja](create-environment.md) pri postavljanju okolja.
@@ -52,7 +49,7 @@ Prehodi za podatke iz obstoječega okolja storitve Power BI ali Power Apps bodo 
 
 ## <a name="review-ingested-data"></a>Pregled zaužitih podatkov
 Če vaše okolje vsebuje Power Platform pretoki podatkov, **Viri podatkov** stran navaja tri razdelke: 
-- **V skupni rabi** : Viri podatkov, ki jih lahko upravljajo vsi skrbniki Customer Insights. Power BI podatkovni tokovi, vaš lastni račun za shranjevanje in pritrditev na a Dataverse -upravljano podatkovno jezero so primeri skupnih virov podatkov.
+- **V skupni rabi** : Viri podatkov, ki jih lahko upravljajo vsi skrbniki Customer Insights. Power BI pretokov podatkov, lastnega računa za shranjevanje in pripenjanja na a Dataverse -upravljano podatkovno jezero so primeri skupnih virov podatkov.
 - **Upravljam jaz** :Power Platform ustvarjeni tokovi podatkov in jih lahko upravljate samo vi. Drugi skrbniki Customer Insights si lahko samo ogledajo te tokove podatkov, ne pa jih urejajo, osvežujejo ali brišejo.
 - **Upravljajo drugi** :Power Platform tokovi podatkov, ki so jih ustvarili drugi skrbniki. Lahko si jih samo ogledate. V njem je naveden lastnik toka podatkov, na katerega se lahko obrnete za kakršno koli pomoč.
 > [!NOTE]

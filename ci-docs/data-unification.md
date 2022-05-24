@@ -1,38 +1,46 @@
 ---
 title: Ustvarite poenoten pogled za svoje stranke
-description: Pojdite skozi postopek poenotenja podatkov s svojimi podatki, da ustvarite en sam glavni nabor profilov strank.
-ms.date: 10/18/2021
-ms.reviewer: mhart
+description: Pojdite skozi postopek združevanja podatkov s svojimi podatki, da ustvarite en sam nabor enotnih profilov strank.
+ms.date: 05/10/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: overview
-author: adkuppa
-ms.author: adkuppa
+author: v-wendysmith
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: eb5bbc538f93bc7097581db233d684870ade84a2
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bb8da6f4b9f92f2b265ff9807e04638edae4f814
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643045"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755754"
 ---
 # <a name="data-unification-overview"></a>Pregled poenotenja podatkov
 
-Po [nastavitvi virov podatkov](data-sources.md) lahko podatke poenotite. Poenotenje podatkov vključuje tri korake: **Preslikava**, **Ujemanje** in **Spajanje**.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-Postopek poenotenja podatkov vam omogoča poenotenje nekoč različnih virov podatkov v enoten glavni nabor podatkov, ki zagotavlja enoten pogled na vaše stranke. Poenotenje stopenj je obvezno in izvedeno v naslednjem vrstnem redu:
+Po [nastavitvi virov podatkov](data-sources.md) lahko podatke poenotite. Poenotenje podatkov vam omogoča poenotenje nekoč ločenih virov podatkov v en sam glavni nabor podatkov, ki zagotavlja enoten pogled na te podatke. Za posamezne potrošnike (B-to-C), kjer so podatki osredotočeni na posameznike, poenotenje zagotavlja enoten pogled na vaše stranke. Za poslovne račune (B-to-B), kjer so podatki osredotočeni na račune, poenotenje zagotavlja enoten pogled na vaše račune.
 
-1. [Preslikava](map-entities.md)
-2. [Match](match-entities.md)
-3. [Spoji](merge-entities.md)
+Podatke je mogoče poenotiti na eni sami ali več entitetah. Združitev se izvede v naslednjem vrstnem redu:
 
-Po končanem poenotenju podatkov lahko po želji
+1. [Izvorna polja](map-entities.md) (prej imenovan Zemljevid): v koraku izvornih polj izberite entitete in polja, ki jih želite vključiti v postopek poenotenja. Preslikajte polja v običajen semantični tip, ki opisuje namen polja.
 
-- [nastavite odnose med entitetami](relationships.md) za ustvarjanje naprednih segmentov,
-- [obogatite svoje podatke](enrichment-hub.md), da dobite širši razpon vpogledov v vaše stranke,
-- [opredeliti dejavnosti](activities.md) za nekatere vključene atribute.
+1. [Podvojeni zapisi](remove-duplicates.md) (prej del Match): v koraku podvojenih zapisov po želji določite pravila za odstranitev podvojenih zapisov strank iz vsake entitete.
 
+1. [Ujemanje pogojev](match-entities.md) (prej imenovano Ujemanje): v koraku pogojev ujemanja definirajte pravila, ki se ujemajo z zapisi strank med entitetami. Ko se stranka najde v dveh ali več entitetah, se ustvari en konsolidirani zapis z vsemi stolpci in podatki iz vsake entitete.
+
+1. [Poenotena polja strank](merge-entities.md) (prej imenovano Spajanje): V koraku poenotenih polj strank določite, katera izvorna polja naj bodo vključena, izključena ali združena v enoten profil stranke.  
+
+1. [Pregled](review-unification.md) in ustvarite enoten profil.
+
+Po zaključku poenotenja podatkov lahko po želji:
+
+- [Nastavite Odnosi med entitetami](relationships.md) ustvariti prefinjene segmente.
+- [Obogatite svoje podatke](enrichment-hub.md) da pridobite širši nabor vpogledov o svojih strankah.
+- [Določite dejavnosti](activities.md) iz nekaterih zaužitih atributov.
+- [Zgradite ukrepe](measures.md) za boljše razumevanje vedenja strank in poslovne uspešnosti.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

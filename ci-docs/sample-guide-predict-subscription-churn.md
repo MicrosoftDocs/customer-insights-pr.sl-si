@@ -1,8 +1,8 @@
 ---
 title: Vzorčni vodnik za predvidevanje izgube naročnin
 description: S tem vzorčnim vodnikom preizkusite vnaprej pripravljeni model za predvidevanje izgube naročnin.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643580"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741431"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Vzorčni vodnik za predvidevanje izgube naročnin
 
@@ -112,65 +112,11 @@ Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih v
 
 ## <a name="task-2---data-unification"></a>2. opravilo – poenotenje podatkov
 
-Po vnosu podatkov začnemo s postopkom **Preslikava/ujemanje/spajanje** za izdelavo poenotenega profila stranke. Če želite več informacij, glejte [Poenotenje podatkov](data-unification.md).
-
-### <a name="map"></a>Preslikava
-
-1. Po vnosu podatkov preslikajte stike iz podatkov o elektronskem poslovanju in zvestobi v običajne vrste podatkov. Izberite **Podatki** > **Poenotenje** > **Preslikava**.
-
-1. Izberite entitete, ki predstavljajo profil stranke – **StikiEPoslovanja** in **zvesteStranke**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="Poenotenje virov podatkov o elektronskem poslovanju in zvestobi.":::
-
-1. Izberite **IDstika** kot primarni ključ za **StikiEPoslovanja** in **ID zvestobe** kot primarni ključ za **zvesteStranke**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Poenotite IDzvestobe kot primarni ključ.":::
-
-### <a name="match"></a>Povezovanje
-
-1. Izberite zavihek **Ujemanje** in izberite **Nastavi vrstni red**.
-
-1. Na spustnem seznamu izberite možnost **Primarni** ter za primarni vir določite **eCommerceContacts: eCommerce** in vključite vse zapise.
-
-1. Na spustnem seznamu izberite možnost **Entiteta 2**, nato pa **loyCustomers: LoyaltyScheme** in vključite vse zapise.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Poenotenje ujemanja elektronskega poslovanja in zvestobe.":::
-
-1. Izberite **Ustvarjanje novega pravila**.
-
-1. Dodajte svoj prvi pogoj z možnostjo FullName.
-
-   * Za entiteto StikiEPoslovanja na spustnem seznamu izberite **FullName**.
-   * Za entiteto zvesteStranke na spustnem seznamu izberite **FullName**.
-   * Izberite spustni meni **Normaliziraj** in izberite **Vrsta (telefon, ime, naslov, ...)**.
-   * Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
-
-1. Vnesite ime **FullName, Email** za novo pravilo.
-
-   * Dodajte drugi pogoj za e-poštni naslov tako, da izberete **Dodaj pogoj**.
-   * Za entiteto StikiEPoslovanja na spustnem seznamu izberite možnost **E-pošta**.
-   * Za entiteto zvesteStranke na spustnem seznamu izberite možnost **E-pošta**. 
-   * Pustite polje Normaliziraj prazno. 
-   * Nastavite **Raven natančnosti**: **Osnovno** in **Vrednost**: **Visoko**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Poenotenje pravila ujemanja za ime in e-pošto.":::
-
-7. Izberite **Shrani** in **Zaženi**.
-
-### <a name="merge"></a>Spajanje
-
-1. Odprite zavihek **Spajanje**.
-
-1. Pri **IDstranke** za entiteto **zvesteStranke** spremenite prikazno ime v **ZVESTOBAIDstranke**, da se razlikuje od ostalih vnesenih ID-jev.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Preimenujte ID stika iz ID-ja zvestobe.":::
-
-1. Izberite **Shrani** in **Zaženi**, da začnete postopek spajanja.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>3. opravilo – konfiguracija predvidevanja izgube naročnin
 
-Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje izgube naročnin. Za podrobne korake glejte [Odliv naročnin predvidevanje](predict-subscription-churn.md) Članek. 
+Z vzpostavljenimi poenotenimi profili strank lahko zdaj zaženemo predvidevanje izgube naročnin. Za podrobnejše korake glejte [Odliv naročnin predvidevanje](predict-subscription-churn.md) Članek. 
 
 1. Odprite **Obveščanje** > **Odkrivanje** in izberite uporabo možnosti **Model izgube strank**.
 

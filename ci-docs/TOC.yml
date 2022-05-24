@@ -66,12 +66,18 @@
   items:
     - name: Pregled poenotenja podatkov
       href: data-unification.md
-    - name: Entitete in atributi zemljevida
+    - name: Izberite izvorna polja
       href: map-entities.md
-    - name: Ujemanje entitet
+    - name: Odstranite podvojene zapise
+      href: remove-duplicates.md
+    - name: Pogoji tekme
       href: match-entities.md
-    - name: Združevanje entitet
+    - name: Poenoti polja strank
       href: merge-entities.md
+    - name: Pregled poenotenja podatkov
+      href: review-unification.md
+    - name: Posodobite nastavitve združevanja
+      href: data-unification-update.md
 - name: Obogatitev podatkov
   items:
     - name: Obogatitev profilov strank
@@ -282,6 +288,8 @@
       href: apis.md
     - name: Sklici API-jev
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Vzorčne poizvedbe OData
+      href: odata-examples.md
 - name: Upravljanje privolitve (predogled)
   items:
     - name: Središče za pomoč

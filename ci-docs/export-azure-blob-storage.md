@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643429"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757406"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Izvoz seznamov segmentov in drugih podatkov v shrambo zbirke dvojiških podatkov Azure (predogledna različica)
 
@@ -44,7 +44,7 @@ Podatke iz storitve Customer Insights shranite v shrambi zbirke dvojiških podat
 Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
 
 > [!IMPORTANT]
-> Če ste vklopili nastavitev začasnega brisanja za račun Shrambe zbirke dvojiških podatkov Azure, izvozi ne bodo uspeli. Za izvoz podatkov v zbirko dvojiških podatkov izklopite začasno brisanje. Za več informacij glejte [Omogoči začasno brisanje zbirke dvojiških podatkov](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Če ste vklopili nastavitev začasnega brisanja za račun Shrambe zbirke dvojiških podatkov Azure, izvozi ne bodo uspeli. Za izvoz podatkov v zbirko dvojiških podatkov izklopite začasno brisanje. Za več informacij glejte [Omogoči začasno brisanje zbirke dvojiških podatkov](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 

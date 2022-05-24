@@ -1,23 +1,22 @@
 ---
 title: Aktivirajte pravila za soglasje za segmente
 description: Sledite tem korakom, da povežete podatke o privolitvi in aktivirate preverjanja privolitve v Dynamics 365 Customer Insights. Skrbnik lahko tudi onemogoči preverjanja privolitve.
-ms.date: 11/12/2021
-ms.subservice: audience-insights
+ms.date: 04/27/2022
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: bfa03f4b7b56b300a74ebd04721cd64b893879f1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f82e3a4031fee8bcaa88575cbd68b37385a7fffb
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643122"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755190"
 ---
 # <a name="activate-consent-rules"></a>Aktivirajte pravila o soglasju
 
-The [Center za soglasje (predogled)](consent-management/overview.md) vam pomaga uskladiti podatke o privolitvi iz različnih virov. Uporabite poenoteno *soglasje* subjekt za uporabo privzetih preverjanj privolitve. Po uvozu podatkov o privolitvi v center za privolitev in konfiguriranju pravil za podatke, se *soglasje* entiteta se samodejno sinhronizira z Dynamics 365 Customer Insights.
+The [Center za soglasje (predogled)](consent-management/overview.md) vam pomaga uskladiti podatke o privolitvi iz različnih virov. Uporabite poenoteno *soglasje* subjekt za uporabo privzetih preverjanj privolitve. Po uvozu podatkov o soglasju in konfiguriranju pravil zemljevida se *soglasje* entiteta se samodejno sinhronizira z Dynamics 365 Customer Insights.
 
 ## <a name="enable-consent-checks"></a>Omogočanje preverjanja soglasja
 

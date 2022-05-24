@@ -1,19 +1,19 @@
 ---
 title: Nove in prihajajoče funkcije
 description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
-ms.date: 04/05/2022
+ms.date: 05/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 25c6e2897d836854408871b2c74afa16ecba7435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: HT
+ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
+ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643721"
+ms.lasthandoff: 05/04/2022
+ms.locfileid: "8700957"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novosti v rešitvi Dynamics 365 Customer Insights
 
@@ -24,6 +24,28 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="april-2022-updates"></a>Posodobitve iz aprila 2022
+
+Posodobitve aprila 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="dun--bradstreet-enrichment-preview"></a>Obogatitev Dun & Bradstreet (predogled)
+
+Dun & Bradstreet ponuja komercialne podatke, analitiko in vpoglede za podjetja. Strankam omogoča poenoten profil strank, s katerimi podjetja obogatijo svoje podatke. Obogatitve vključujejo atribute, kot so številka DUNS, velikost podjetja, lokacija, industrija in drugo.
+
+Za več informacij glejte [Obogatitev profilov podjetij z Dun & Bradstreet (Predogled)](enrichment-dnb.md).
+
+### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Pri ustvarjanju nove mere določite vrsto mere
+
+Zdaj lahko ločite med ukrepi za posamezne profile in meritvami v celotnem podjetju. Medtem ko so poslovni ukrepi prikazani na domači strani Customer Insights, so ukrepi strank izpostavljeni na podrobnih pogledih strank.
+
+Za več informacij glejte [Uporabite graditelj meril za ustvarjanje ukrepov iz nič](measure-builder.md).
+
+### <a name="consolidation-of-customer-insights-documentation"></a>Konsolidacija dokumentacije Customer Insights
+
+Ponovno smo pregledali naše članke o dokumentaciji in odstranili omembe vpogledov v sodelovanje in zmožnosti vpogledov občinstvo. V nadaljevanju se bomo dosledno sklicevali na ime izdelka Customer Insights, ko bomo pisali o temeljnih funkcijah aplikacije. Ta sprememba vodi tudi do znatnega prestrukturiranja kazala vsebine, strukture URL-jev in poti datotek v osnovnem repozitoriju dokumentacije. Vsi vaši zaznamki ali obstoječe povezave še naprej delujejo in preusmerjajo na posodobljene URL-je.
+
+Če nam želite sporočiti, kako dojemate to spremembo ali opazite, da nekaj ne deluje po pričakovanjih, nam to sporočite [pošiljanje povratnih informacij za to stran](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Posodobitve marca 2022
 
@@ -99,7 +121,7 @@ Za več informacij glejte [Spremenite lastnika okolja](manage-environments.md#ch
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Postopek priprave podatkov navaja razloge za korupcijo za poškodovane zapise
 
-Priprava podatkov zdaj pokaže razlog za korupcijo za vsa polja s poškodovanimi podatki. Informacije so na voljo na ravni posameznega zapisa za enostavno identifikacijo. 
+Priprava podatkov zdaj pokaže razlog za korupcijo za vsa polja s poškodovanimi podatki. Podatki so na voljo na ravni posameznega zapisa za enostavno identifikacijo. 
 
 Za več informacij glejte [Poškodovani viri podatkov](entities.md#corrupted-data-sources).
 

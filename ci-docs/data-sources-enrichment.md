@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643048"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755706"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obogatitev za vire podatkov (predogled)
 
@@ -26,14 +26,14 @@ Za ustvarjanje ali urejanje obogatitev morate imeti dovoljenja sodelavec ali skr
 1. Pojdi do **Podatki** > **Združite**. Izberite entiteto, ki jo želite obogatiti, in izberite en atribut kot primarni ključ za entiteto. Za več informacij glejte [Izberite primarni ključ](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
- 
+
 1. Izberite navpično tritočko poleg vir podatkov, ki jo želite obogatiti, in izberite **Obogatite**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stran za obogatitev virov podatkov.":::
 
    The **Odkrij** zavihek prikaže [podprte možnosti obogatitve vir podatkov](#supported-data-source-enrichments).
 
-1. Izberite **Obogatite moje podatke** za konfiguriranje obogatitve vir podatkov. Ime izhodne entitete se samodejno izpolni.
+1. Izberite **Obogatite moje podatke** da konfigurirate obogatitev vir podatkov. Ime izhodne entitete se samodejno izpolni.
 
 ## <a name="supported-data-source-enrichments"></a>Podprte obogatitve vir podatkov
 
