@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641536"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808587"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahteve posameznikov, na katere se nanašajo podatki, (DSR) v skladu z uredbo GDPR
 
@@ -41,7 +41,7 @@ Skrbnik storitve Customer Insights lahko upošteva te korake, da odstrani podatk
 1. Vpis v storitev Dynamics 365 Customer Insights.
 2. Pojdi do **Podatki** > **Viri podatkov**
 3. Za vsak vir podatkov na seznamu, ki vsebuje izbrisane podatke strank:
-   1. Izberite možnost (...) in nato **Osveži**.
+   1. Izberite navpično elipso (&vellip;) in nato izberite **Osveži**.
    2. Preverite stanje vira podatkov v razdelku **Stanje**. Kljukica pomeni, da je bila osvežitev uspešna. Opozorilni trikotnik pomeni, da je prišlo do napake. Če se prikaže opozorilni trikotnik, pošljite sporočilo na naslov D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Skrbnik storitve Customer Insights lahko upošteva te korake, da odstrani podatk
 Skrbnik storitve Customer Insights lahko za izbris uporabniških podatkov storitve Customer Insights upošteva te korake:
 
 1. Vpis v storitev Dynamics 365 Customer Insights.
-2. Pojdi do **Admin** > **Dovoljenja**.
+2. Pojdi do **Admin** > **Varnost** > **Dovoljenja**.
 3. Potrdite polje za uporabnika, ki ga želite izbrisati.
 4. Izberite **Odstrani**.
 

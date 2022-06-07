@@ -1,23 +1,23 @@
 ---
 title: Primeri OData za Dynamics 365 Customer Insights API-ji
 description: Pogosto uporabljeni primeri za Open Data Protocol (OData) za poizvedbo v API-jih Customer Insights za pregled podatkov.
-ms.date: 05/10/2022
+ms.date: 05/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 007278e1330e1a8e64d524ded8496acaf83b874c
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740077"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808481"
 ---
 # <a name="odata-query-examples"></a>Primeri poizvedb OData
 
-Open Data Protocol (OData) je protokol za dostop do podatkov, zgrajen na osnovnih protokolih, kot je HTTP. Uporablja splošno sprejete metodologije, kot je REST za splet. Obstajajo različne vrste knjižnic in orodij, ki jih je mogoče uporabiti za uporabo storitev OData.
+Open Data Protocol (OData) je protokol za dostop do podatkov, zgrajen na osnovnih protokolih, kot je HTTP. Uporablja splošno sprejete metodologije, kot je REST za splet. Obstajajo različne vrste knjižnic in orodij, ki se lahko uporabljajo za uporabo storitev OData.
 
 Ta članek navaja nekaj pogosto zahtevanih primerov poizvedb, ki vam bodo v pomoč pri gradnji lastnih implementacij na podlagi [API-ji Customer Insights](apis.md).
 
@@ -33,16 +33,15 @@ Vzorce poizvedb morate spremeniti, da bodo delovali v ciljnih okoljih:
 
 Naslednja tabela vsebuje niz vzorčnih poizvedb za *Stranka* entiteta.
 
-
 |Vrsta poizvedbe |Primer  | opomba,  |
 |---------|---------|---------|
 |ID posamezne stranke     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Nadomestni ključ    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}' `         |  Nadomestni ključi so še vedno v enotni enoti stranke       |
+|Nadomestni ključ    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Nadomestni ključi so še vedno v enotni enoti stranke       |
 |Izberi   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |v    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
 |Nadomestni ključ + In   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Poišči  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Vrne 10 najboljših rezultatov za iskalni niz      |
-|Članstvo v segmentu  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10  `     | Vrne prednastavljeno število vrstic iz entitete segmentacije.      |
+|Članstvo v segmentu  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Vrne prednastavljeno število vrstic iz entitete segmentacije.      |
 
 ## <a name="unified-activity"></a>Enotna dejavnost
 
@@ -53,7 +52,7 @@ Naslednja tabela vsebuje niz vzorčnih poizvedb za *UnifiedActivity* entiteta.
 |Dejavnost CID     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Navaja dejavnosti določenega profila stranke |
 |Dejavnost časovni okvir    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Dejavnosti profila stranke v časovni okvir       |
 |Vrsta dejavnosti    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
-|Dejavnost prikazno ime     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’ `        | |
+|Dejavnost prikazno ime     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |
 |Razvrščanje dejavnosti    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq ‘{CID}’ & $orderby=ActivityTime asc`     |  Razvrstite dejavnosti naraščajoče ali padajoče       |
 |Dejavnost se je razširila iz članstva v segmentu  |   `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId eq '{CID}'`     |         |
 
@@ -67,3 +66,13 @@ Naslednja tabela vsebuje niz vzorčnih poizvedb za druge entitete.
 |Obogatene blagovne znamke CID    | `{serviceRoot}/BrandShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`  |       |
 |Obogateni interesi CID    |   `{serviceRoot}/InterestShareOfVoiceFromMicrosoft?$filter=CustomerId eq '{CID}'`       |         |
 |V stavku + razširitev     | `{serviceRoot}/Customer?$expand=UnifiedActivity,Customer_Measure&$filter=CustomerId in ('{CID}', '{CID}')`         | |
+
+## <a name="not-supported-odata-queries"></a>Poizvedbe OData niso podprte
+
+Customer Insights ne podpira naslednjih poizvedb:
+
+- `$filter` na zaužitih izvornih entitetah. Poizvedbe $filter lahko izvajate samo na sistemskih entitetah, ki jih ustvari Customer Insights.
+- `$expand` od`$search` poizvedba. Primer: `Customer?$expand=UnifiedActivity$top=10&$skip=0&$search="corey"`
+- `$expand` od`$select` če je izbrana samo podmnožica atributov. Primer: `Customer?$select=CustomerId,FullName&$expand=UnifiedActivity&$filter=CustomerId eq '{CID}'`
+- `$expand` obogatene blagovne znamke ali interesne afinitete za dano stranko. Primer: `Customer?$expand=BrandShareOfVoiceFromMicrosoft&$filter=CustomerId eq '518291faaa12f6d853c417835d40eb10'`
+- Poizvedba o izhodnih entitetah modela predvidevanje prek nadomestni ključ. Primer: `OOBModelOutputEntity?$filter=HotelCustomerID eq '{AK}'`

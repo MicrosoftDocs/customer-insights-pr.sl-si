@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739228"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800486"
 ---
 # <a name="data-sources-overview"></a>Pregled virov podatkov
 
@@ -76,7 +76,7 @@ Izberite **Skrbnik** > **Sistem** > [**Načrtovanje**](system.md#schedule-tab) z
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
 
-2. Izberite navpične tri pike poleg tistega vira podatkov, ki ga želite osvežiti, in na spustnem seznamu izberite **Osveži**.
+2. Izberite navpično elipso (&vellip;) poleg vir podatkov, ki ga želite osvežiti in izberite **Osveži** s spustnega seznama.
 
 3. Vir podatkov se zdaj sproži za ročno osvežitev. Če osvežite vir podatkov, se posodobijo tudi shema entitet in podatki za vse entitete, določene v viru podatkov.
 
@@ -86,7 +86,7 @@ Izberite **Skrbnik** > **Sistem** > [**Načrtovanje**](system.md#schedule-tab) z
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
 
-2. Izberite navpične tri pike poleg tistega vira podatkov, ki ga želite odstraniti, in v spustnem meniju izberite **Izbriši**.
+2. Izberite navpično elipso (&vellip;) poleg vir podatkov, ki ga želite odstraniti, in izberite **Izbriši** iz spustnega menija.
 
 3. Potrdite izbris.
 

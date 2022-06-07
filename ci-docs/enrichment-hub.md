@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653543"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800625"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogatitev profilov strank (predogled)
 
@@ -63,7 +63,7 @@ Na zavihku **Moje obogatitve** si lahko ogledate obogatitve, ki ste jih konfigur
 
 Za ogled vseh konfiguriranih obogatitev odprite zavihek **Moje obogatitve**. Vsaka obogatitev je predstavljena kot vrstica, ki vključuje dodatne informacije o obogatitvi.
 
-Izberite obogatitev, da si ogledate razpoložljive možnosti. Za ogled možnosti lahko izberete tudi treh pik (...) na elementu seznama. Če ste konfigurirali več obogatitev, jih lahko hitro poiščete v polju za iskanje.
+Izberite obogatitev, da si ogledate razpoložljive možnosti. Izberete lahko tudi navpično elipso (&vellip;) na element seznama, da si ogledate možnosti. Če ste konfigurirali več obogatitev, jih lahko hitro poiščete v polju za iskanje.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Možnosti upravljanja obogatitev na seznamu obogatitev.":::
 
@@ -85,7 +85,7 @@ Entiteta, ki jo je treba obogatiti, je določena med konfiguriranjem obogatitve,
 
 ## <a name="enrich-data-sources-before-unification"></a>Obogatite vire podatkov pred poenotenjem
 
-Podatke o strankah lahko obogatite pred združevanjem podatkov, da izboljšate kakovost ujemanja podatkov. Za več informacij glejte [vir podatkov obogatitev](data-sources-enrichment.md).
+Podatke o strankah lahko obogatite pred poenotenjem podatkov, da izboljšate kakovost ujemanja podatkov. Za več informacij glejte [vir podatkov obogatitev](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Oglejte si napredek postopka obogatitve
 

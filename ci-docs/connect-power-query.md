@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643357"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800208"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povežite se z a Power Query vir podatkov
 
@@ -76,7 +76,7 @@ Konektorji s kljukico v **Vpogledi strank (tokovi podatkov)** so na voljo za ust
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
 
-2. Izberite navpične tri pike poleg tistega vira podatkov, ki ga želite spremeniti, nato pa v spustnem meniju izberite **Uredi**.
+2. Izberite navpično elipso (&vellip;) poleg vir podatkov, ki ga želite spremeniti, in izberite **Uredi** iz spustnega menija.
 
    > [!div class="mx-imgBorder"]
    > ![Možnost urejanja.](media/edit-option-data-sources.png "Možnost urejanja")

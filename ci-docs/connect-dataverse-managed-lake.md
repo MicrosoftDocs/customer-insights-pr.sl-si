@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643105"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800196"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povezovanje s podatki v upravljanem jezeru podatkov Microsoft Dataverse
 
@@ -62,7 +62,7 @@ Izbor entitet uredite šele po ustvarjanju vira podatkov. Če bi bili na primer 
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
 
-2. Izberite tri pike poleg vira podatkov, ki ga želite posodobiti.
+2. Poleg vir podatkov, ki ga želite posodobiti, izberite navpično tritočko (&vellip;).
 
 3. Na seznamu izberite možnost **Uredi**.
 

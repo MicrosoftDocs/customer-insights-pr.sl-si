@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700957"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833650"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novosti v rešitvi Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ LiveRamp zagotavlja razrešitev identitete in konsolidacijo podatkov o strankah.
 Za več informacij glejte [Obogatite profile strank s podatki o identiteti iz LiveRamp (Predogled)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organizirajte segmente in mere z oznakami in filtri
+
 Če vaša organizacija vzdržuje veliko segmentov ali ukrepov, je iskanje pravega včasih težko. Ta nova funkcija vam omogoča organiziranje seznamov z uporabo oznak in stolpcev. Pomaga pri hitrem in preprostem iskanju podatkov ter prilagajanju pogledov.
 
 Za več informacij glejte [Delo z oznakami in stolpci](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Za več informacij glejte [Delo z oznakami in stolpci](work-with-tags-columns.md
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Omogoči skupno rabo podatkov z Dataverse pri uporabi lastnega računa za shranjevanje
 
 Če vaše okolje uporablja Azure Data Lake Storage za shranjevanje podatkov Customer Insights, skupno rabo podatkov Microsoft Dataverse potrebuje dodatno konfiguracijo.
-Prej ste lahko omogočili samo skupno rabo podatkov z Dataverse ko so bili vaši podatki shranjeni v našem upravljanem podatkovnem jezeru. 
+Prej ste lahko omogočili samo skupno rabo podatkov z Dataverse ko so bili vaši podatki shranjeni v našem upravljanem podatkovnem jezeru.
 
-Za več informacij glejte [Omogoči skupno rabo podatkov z Dataverse od svojega Azure Data Lake Storage (predogled)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Za več informacij glejte [Omogoči skupno rabo podatkov z Dataverse od svojega Azure Data Lake Storage (predogled)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Nove izvozne destinacije: Iterable in Braze
 
@@ -81,7 +82,6 @@ Sprememba API-jev v povezanih storitvah vodi do posodobitev za zanesljivo in nem
 
 - Google Ads: Nova različica priključka za izvoz Google Ads poenostavlja izkušnjo preverjanja pristnosti in vam zdaj omogoča samodejno ustvarjanje novih ciljnih skupin Google Ads. 
 - Marketo: Nova različica priključka za izvoz Marketo zagotavlja podporo za ID Marketo, ki vam omogoča, da se izognete podvajanju podatkov, posodobite obstoječe zapise in ustvarite nove zapise v Marketu. 
-
 
 ## <a name="february-2022-updates"></a>Posodobitve februarja 2022
 
@@ -115,7 +115,7 @@ Za več informacij glejte [Obogatitev za vire podatkov (predogled)](data-sources
 
 ### <a name="change-owner-of-environment"></a>Sprememba lastnika okolja
 
-Medtem ko ima lahko več uporabnikov skrbniška dovoljenja v Customer Insights, je samo en uporabnik lastnik okolja. Izboljšana izkušnja vam omogoča, da spremenite lastnike okolja in zahtevate lastništvo, če je nekdanji lastnik zapustil organizacijo. 
+Medtem ko ima lahko več uporabnikov skrbniška dovoljenja v Customer Insights, je samo en uporabnik lastnik okolja. Izboljšana izkušnja vam omogoča, da zamenjate lastnike okolja in zahtevate lastništvo, če je nekdanji lastnik zapustil organizacijo. 
 
 Za več informacij glejte [Spremenite lastnika okolja](manage-environments.md#change-the-owner-of-an-environment).
 

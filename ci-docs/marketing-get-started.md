@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653826"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833328"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Delo z enotnimi profili strank v Dynamics 365 Marketing
 
@@ -23,7 +23,6 @@ ms.locfileid: "8653826"
 - Osnovajte dinamično vsebino (kot so prilagojeni žetoni) v e-poštnih sporočilih, SMS-ih in potisnih obvestilih o ukrepih, kot so status zvestobe, datum podaljšanja naročnine, nadrejen račun ali kateri koli drug ukrep, ki ste ga zajeli v enotnem profilu Customer Insights.
 - Naložite podatke iz Marketinga v Customer Insights in jih združite s podatki o strankah iz drugih virov.
 - Uporabite orodja za čiščenje, obogatitev in mehko ujemanje podatkov Customer Insights.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Uporabite bogate profile strank pri trženju v realnem času
 
@@ -41,4 +40,4 @@ Nauči se več: [Uporabite segmente iz Dynamics 365 Customer Insights z Dynamics
 
 Če želite s trženjem uporabljati podatke Customer Insights, niste omejeni na shranjevanje v oblaku. Če že imate svojega Azure Data Lake Storage nastavljeno, se lahko povežete s storitvijo Customer Insights, nato pa podatke delite z aplikacijo Marketing, tako kot pri nastavitvi v oblaku.
 
-Nauči se več: [Omogoči skupno rabo podatkov z Dataverse od svojega Azure Data Lake Storage](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Nauči se več: [Omogoči skupno rabo podatkov z Dataverse od svojega Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

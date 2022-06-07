@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643195"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800440"
 ---
 # <a name="custom-machine-learning-models"></a>Modeli strojnega učenja po meri
 
@@ -92,7 +92,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 
 ## <a name="edit-a-workflow"></a>Urejanje poteka dela
 
-1. Na strani **Modeli po meri** izberite navpične tri pike v stolpcu **Dejanja** poleg poteka dela, ki ste ga prej ustvarili, in izberite **Uredi**.
+1. Na **Modeli po meri** strani, izberite navpično tritočko (&vellip;) v **Dejanja** stolpec poleg poteka dela, ki ste ga predhodno ustvarili in izbrali **Uredi**.
 
 1. Prepoznavno ime poteka dela lahko posodobite v polju **Prikazno ime**, vendar ne morete spremeniti konfigurirane spletne storitve ali prodajnega lijaka. Izberite **Naprej**.
 
@@ -108,7 +108,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 
 ## <a name="run-a-workflow"></a>Zagon poteka dela
 
-1. Na strani **Modeli po meri** izberite navpične tri pike v stolpcu **Dejanja** poleg poteka dela, ki ste ga prej ustvarili.
+1. Na **Modeli po meri** strani, izberite navpično tritočko (&vellip;) v **Dejanja** stolpec poleg poteka dela, ki ste ga že ustvarili.
 
 1. Izberite **Zaženi**.
 
@@ -116,7 +116,7 @@ Z vsakim načrtovanim osveževanjem se samodejno zažene tudi vaš potek dela. P
 
 ## <a name="delete-a-workflow"></a>Brisanje poteka dela
 
-1. Na strani **Modeli po meri** izberite navpične tri pike v stolpcu **Dejanja** poleg poteka dela, ki ste ga prej ustvarili.
+1. Na **Modeli po meri** strani, izberite navpično tritočko (&vellip;) v **Dejanja** stolpec poleg poteka dela, ki ste ga že ustvarili.
 
 1. Izberite možnost **Izbriši** in nato potrdite izbris.
 

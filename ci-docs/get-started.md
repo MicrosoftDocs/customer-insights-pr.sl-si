@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: HT
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741153"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833595"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Uvod v rešitev Dynamics 365 Customer Insights
 
@@ -25,21 +25,21 @@ Vpogled v stranke vam lahko pomaga graditi globlje razumevanje vaših strank. Po
 
 ## <a name="step-1-create-an-environment"></a>1. korak: Ustvarjanje okolja
 
-Za začetek morate najprej ustvariti okolje za delo. Če je vaša organizacija že kupila licenco, glejte razdelek [Ustvarjanje okolja](create-environment.md). Če želite začeti preskus za Customer Insights, glejte [Nastavite poskusno okolje](trial-signup.md).
+Najprej ustvarite okolje za delo. Če je vaša organizacija že kupila licenco, glejte razdelek [Ustvarjanje okolja](create-environment.md). Če želite začeti preskus za Customer Insights, glejte [Nastavite poskusno okolje](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>2. korak: Raziščite vpoglede strank
 
-Ko se prvič prijavite v Customer Insights, lahko konfigurirate nastavitve in raziščete izdelek.
+Ko se prvič prijavite v Customer Insights, konfigurirajte nastavitve in raziščite izdelek.
 
 1. [prijavite se v Customer Insights](https://home.ci.ai.dynamics.com) z uporabo vašega Microsofta Azure Active Directory (AAD) uporabniški račun.
 
-1. [Spremenite okolje](manage-environments.md#switch-environments) za ogled demo podatkov in [raziščite vpogled v stranke](home.md).
+1. Spremenite okolje, da si ogledate demo podatke in [raziščite vpogled v stranke](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>3. korak: Vnos, poenotenje in nastavitev odnosov za vaše podatke
 
-Poenoteni profili so osnova za pridobivanje vpogledov in ukrepanje v zvezi s podatki. Vnesite podatke iz različnih virov in zaženite postopek poenotenja podatkov, da združite poenotene profile. Določite odnose med uvoženimi entitetami, uporabite funkcije obogatitve za dodajanje informacij v profile.
+Poenoteni profili so osnova za pridobivanje vpogledov in ukrepanje v zvezi s podatki. Vnesite podatke iz različnih virov in zaženite postopek poenotenja podatkov, da združite poenotene profile. Podajte Odnosi med zaužitimi entitetami in uporabite funkcije obogatitve za dodajanje informacij v profile.
 
-1. Vnesite podatke tako, da ustvarite vire podatkov iz več možnosti. Izbirajte med [Power Query konektorji](connect-power-query.md), a [Mapa skupnega podatkovnega modela](connect-common-data-model.md), oz [Microsoft Dataverse](connect-dataverse-managed-lake.md). 
+1. Vnesite podatke tako, da ustvarite vire podatkov iz več možnosti. Izbirajte med [Power Query konektorji](connect-power-query.md), a [Mapa skupnega podatkovnega modela](connect-common-data-model.md), oz [Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
 1. Zaženite [proces poenotenja podatkov](data-unification.md) z identifikacijo [izvorna polja](map-entities.md), odstranjevanje [dvojniki](remove-duplicates.md),[ujemanje pogojev](match-entities.md), in [povezovalna polja](merge-entities.md).
 
@@ -47,7 +47,7 @@ Poenoteni profili so osnova za pridobivanje vpogledov in ukrepanje v zvezi s pod
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>4. korak: Izboljšajte poenotene profile s predvidevanji, dejavnostmi in merami
 
-Z nastavljenimi poenotenimi profili lahko izboljšate svoje podatke in še povečate informacije, ki jih ponujajo.
+Z nastavljenimi enotnimi profili izboljšajte svoje podatke in dodatno povečajte informacije, ki jih zagotavljajo.
 
 1. V razširjeni knjižnici ponudnikov obogatitve izberite [obogatitev svojih podatkov o strankah](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Z nastavljenimi poenotenimi profili lahko izboljšate svoje podatke in še pove�
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>5. korak: Ustvarite segmente in aktivirajte podatke z različnimi možnostmi izvoza
 
-Zdaj, ko so vaši podatki popolni in vsebujejo širok obseg informacij o vaših strankah, je čas, da poiščete načine za ukrepanje v zvezi s temi podatki.
+Zdaj, ko so vaši podatki popolni in vsebujejo širok nabor informacij o vaših strankah, poiščite načine za ukrepanje glede teh podatkov.
 
 1. [Ustvarite segmente](segments.md), podmnožice vaše baze strank, da zagotovite, da so vaša dejanja ustrezna za ciljne stranke.
 

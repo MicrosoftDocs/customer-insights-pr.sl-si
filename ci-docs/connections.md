@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755329"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800392"
 ---
 # <a name="connections-preview-overview"></a>Pregled povezav (predogledna različica)
 
@@ -69,7 +69,7 @@ Ko nastavljate povezavo za izvoz podatkov ali jo urejate, izberete uporabnike, k
 
 1. Pojdite na zavihek **Povezave**.
 
-1. Izberite navpične tri pike zraven povezave, ki jo želite urediti.
+1. Izberite navpično elipso (&vellip;) za povezavo, ki jo želite urediti.
 
 1. Izberite **Uredi**.
 
@@ -85,7 +85,7 @@ Odstranjene obogatitve in izvozi bodo postali nedejavni. Ponovno jih aktivirate 
 
 1. Pojdite na zavihek **Povezave**.
 
-1. Izberite navpične tri pike zraven povezave, ki jo želite odstraniti.
+1. Izberite navpično elipso (&vellip;) za povezavo, ki jo želite odstraniti.
 
 1. Na spustnem seznamu izberite **Odstrani**. Prikaže se potrditveno pogovorno okno.
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653497"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763599"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Uporaba lastne shrambe ključev Azure (predogledna različica)
 
@@ -31,7 +31,7 @@ Dodeljena shramba ključev se lahko uporablja za pripravo in uporabo skrivnosti 
 
 - Imate aktivno naročnino na Azure.
 
-- Imate [skrbnik](permissions.md#admin) vlogo v Customer Insights. Več o tem [uporabniška dovoljenja v Customer Insights](permissions.md#assign-roles-and-permissions).
+- Imate [skrbnik](permissions.md#admin) vlogo v storitvi Customer Insights. Več o tem [uporabniška dovoljenja v Customer Insights](permissions.md#assign-roles-and-permissions).
 
 - Imate vlogo [Sodelavec](/azure/role-based-access-control/built-in-roles#contributor) in [Skrbniški dostop uporabnika](/azure/role-based-access-control/built-in-roles#user-access-administrator) v shrambi ključev ali skupini virov, ki ji pripada shramba ključev. Za več informacij obiščite [Dodajanje ali odstranitev dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal). Če nimate vloge Skrbniški dostop uporabnika v shrambi ključev, morate za glavno ime storitve Azure ločeno nastaviti dovoljenja za nadzor dostopa, ki temeljijo na vlogi, za storitev Dynamics 365 Customer Insights. Upoštevajte postopke, da [uporabite glavno ime storitve Azure](connect-service-principal.md) za shrambo ključev, ki jo je treba povezati.
 
@@ -83,15 +83,15 @@ Podprte so naslednje povezave za [izvoz](export-destinations.md):
 
 ## <a name="permissions-granted-on-the-key-vault"></a>Dovoljenja, odobrena za trezor ključev
 
-Naslednja dovoljenja so dodeljena Customer Insights na povezanem trezorju ključev, če obstaja [Politika dostopa do ključnega trezorja](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) oz [Nadzor dostopa, ki temelji na vlogah Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) je omogočeno.
+Naslednja dovoljenja so dodeljena Customer Insights na povezanem trezorju ključev, če obstaja [Politika dostopa do Key Vault](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) oz [Nadzor dostopa, ki temelji na vlogah Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) je omogočeno.
 
 ### <a name="key-vault-access-policy"></a>Pravilnik o dostopu za storitev Key Vault
 
 | Vnesi        | Dovoljenja          |
 | ----------- | -------------------- |
-| Tipka         | [Pridobite ključe](/rest/api/keyvault/get-keys), [Pridobite ključ](/rest/api/keyvault/get-key)                                 |
-| Skrivnost      | [Pridobite skrivnosti](/rest/api/keyvault/get-secrets), [Pridobite skrivnost](/rest/api/keyvault/get-secret)                     |
-| Potrdilo | [Pridobite potrdila](/rest/api/keyvault/get-certificates), [Pridobite potrdilo](/rest/api/keyvault/get-certificate) |
+| Tipka         | [Pridobite ključe](/rest/api/keyvault/keys/get-keys/get-keys), [Pridobite ključ](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Skrivnost      | [Pridobite skrivnosti](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Pridobite skrivnost](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Potrdilo | [Pridobite potrdila](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Pridobite potrdilo](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Prejšnje vrednosti so minimalne za navedbo in branje med izvajanjem.
 
@@ -125,7 +125,7 @@ Obvestilo se prikaže v Customer Insights, ko konfigurirana skrivnost iz trezorj
 
 ### <a name="a-connection-doesnt-work-but-my-secret-is-in-the-key-vault-what-might-be-the-cause"></a>Povezava ne deluje, vendar je moja skrivnost v shrambi ključev. Kaj je lahko vzrok?
 
-Obvestilo se prikaže v Customer Insights, ko ne more dostopati do trezorja ključev. Vzrok je lahko:
+Ko ne more dostopati do trezorja ključev, se v storitvi Customer Insights prikaže obvestilo. Vzrok je lahko:
 
 - Dovoljenja za principal storitve Customer Insights so bila odstranjena. Obnoviti jih je treba ročno.
 

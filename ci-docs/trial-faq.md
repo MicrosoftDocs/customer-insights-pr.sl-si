@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641828"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833788"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Pogosta vprašanja o preskusni različici Dynamics 365 Customer Insights
 
@@ -62,9 +62,9 @@ Preskusno različico lahko podaljšate neposredno v aplikaciji. Preskusno obdobj
 
 Na splošno priporočamo, da pri nadgradnji na plačljivo različico Customer Insights začnete na novo z lastnimi podatki. 
 
-Če uporabljate samo Customer Insights, lahko po želji kopirate svoje podatke iz preskusnega okolja, če kupite Customer Insights. Biti morate skrbnik preizkusne različice Customer Insights in globalni skrbnik vašega Microsoft 365 najemnika ali skrbnika Dynamics 365 v vaši organizaciji, da nastavitve preselite iz preizkusnega okolja v plačljivo okolje. 
+Če uporabljate samo Customer Insights, lahko po želji kopirate svoje podatke iz preskusnega okolja, če kupite Customer Insights. Biti morate skrbnik preizkusne različice Customer Insights in globalni skrbnik vašega Microsoft 365 najemnika ali skrbnika Dynamics 365 v vaši organizaciji, da nastavitve preselite iz preizkusnega okolja v plačljivo okolje.
 
-Ko se prvič prijavite v plačljivi primerek storitve Customer Insights, boste morali ustvariti novo okolje. V tem postopku lahko izberete kopiranje konfiguracije iz obstoječega okolja in preselite večino nastavitev. Če imate zgoraj navedena dovoljenja, bo na tem seznamu prikazano preskusno okolje. Za več informacij glejte [Kopirajte konfiguracijo okolja](manage-environments.md#copy-the-environment-configuration).
+Ko se prvič prijavite v plačljivi primerek storitve Customer Insights, boste morali ustvariti novo okolje. V tem postopku lahko izberete kopiranje konfiguracije iz obstoječega okolja in preselite večino nastavitev. Če imate zgoraj navedena dovoljenja, bo na tem seznamu prikazano preskusno okolje. Za več informacij glejte [Kopirajte konfiguracijo okolja](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Kakšne so omejitve in kvote preskusne različice?
 
@@ -81,9 +81,10 @@ Ko se prijavite za uporabo preskusne različice, se odpre glavni zaslon aplikaci
 
 Večina funkcij zmogljivosti Customer Insights je na voljo v preskusni različici.
 
-Naslednje značilnosti so **ni na voljo**: 
+Naslednje značilnosti so **ni na voljo**:
+
 - Ne morete ustvariti novih okolij, ki uporabljajo lasten račun za Azure Data Lake Storage.
-- Preskusnega okolja ne morete izbrisati. 
+- Preizkusnega okolja ne morete izbrisati.
 
 ### <a name="how-long-does-the-trial-last"></a>Kako dolgo traja preskusna različica?
 

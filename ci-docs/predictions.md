@@ -12,14 +12,14 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740739"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800670"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Dopolnite svoje delne podatke s predvidevanji (opuščeno)
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Izpolnite svoje delne podatke s predvidevanji (zastarelo)
 
 > [!IMPORTANT]
 > Ta funkcija bo **zastarel** od **5. november 2021**. Trenutne izvedbe bodo še naprej delovale, dokler funkcija ne bo odstranjena, vendar ne boste mogli ustvariti novih integracij z uporabo spodnjih navodil.
@@ -95,7 +95,7 @@ Kot del tega poteka izberete določen atribut, na katerem utemeljite segment, ko
 
 2. Izberite predvidevanje, ki ga želite pregledati.
 
-3. Izberite tri pike v stolpcu **Dejanja** in izberite **Pogled**.
+3. Izberite navpično elipso (&vellip;) v **Dejanja** stolpec in izberite **Ogled**.
 
 4. Videli boste število podatkovnih točk v pogledu predvidevanja.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Ko ustvarite predvidevanje, lahko prilagodite model v AI Builder povečati učin
 
 2. Izberite predvidevanje, ki ga želite urediti.
 
-3. Izberite tri pike v stolpcu **Dejanja** in izberite **Pogled**.
+3. Izberite navpično elipso (&vellip;) v **Dejanja** stolpec in izberite **Ogled**.
 
 4. Izberite **Prilagodite se AI Builder**.
 
@@ -139,7 +139,7 @@ Ob naslednjem zagonu predvidevanja bo uporabljen ustvarjeni posodobljeni model.
 
 2. Izberite predvidevanje, ki ga želite izbrisati.
 
-3. Izberite tri pike v stolpcu **Dejanja** in izberite **Izbriši**.
+3. Izberite navpično elipso (&vellip;) v **Dejanja** stolpec in izberite **Izbriši**.
 
 4. Potrdite brisanje.
 
@@ -153,7 +153,7 @@ Ob naslednjem zagonu predvidevanja bo uporabljen ustvarjeni posodobljeni model.
 - Dovoljenja za aplikacije niso podeljena.
     1. Obiščite spletno mesto [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Izberite **Okolja**.
-    1. Izberite tri pike poleg okolja, ki mu želite dodati dovoljenje, in izberite **Nastavitve**.
+    1. Izberite navpično elipso (&vellip;) poleg okolja, v katerega želite dodati dovoljenje, in izberite **Nastavitve**.
     1. Razširite možnost **Uporabniki in dovoljenja** ter izberite možnost **Uporabniki**.
     1. Izberite možnost **+ Novo** in nato **Uporabnik**.
     1. Če možnost **Uporabnik aplikacije** še ni izbrana, jo izberite in vnesite naslednje podatke:

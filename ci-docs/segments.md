@@ -1,7 +1,7 @@
 ---
 title: Segmenti v Customer Insights
 description: Pregled segmentov ter napotki, kako jih ustvariti in upravljati.
-ms.date: 03/30/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 9791e971387eb7db91ed7c4e4fe76552656013ba
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643541"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800762"
 ---
 # <a name="segments-overview"></a>Pregled segmentov
 
@@ -58,7 +58,7 @@ Ko izberete segment, so na voljo naslednja dejanja:
 - Na voljo je **Prikaz** podrobnosti o odsekih, vključno s trendom števila članov in predogledom članov segmenta.
 - Na voljo je možnost **Prenesi** za prenos seznama članov kot datoteke .CSV.
 - Za spreminjanje lastnosti segmenta lahko uporabite možnost **Uredi**.
-- **Ustvarjanje dvojnika** segmenta. Takoj lahko uredite njegove lastnosti ali preprosto shranite dvojnik.
+- **Ustvarjanje dvojnika** segmenta. Izberete lahko, da takoj uredite njegove lastnosti ali shranite dvojnik.
 - Za vključitev najnovejših podatkov lahko izberete **Osveži**.
 - Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Za neaktivne segmente definicija segmenta obstaja, vendar še ne vsebuje nobene stranke. Aktivni segment išče stranke, ki ustrezajo definiciji segmenta. Če je konfigurirana [načrtovana osvežitev](system.md#schedule-tab), je **Stanje** neaktivnih segmentov navedeno kot **Preskočeno**, kar pomeni, da poskusa osveževanja sploh ni bilo. Ko se aktivira neaktivni segment, se bo osvežil in bo vključen v načrtovane osvežitve.
   Lahko pa uporabite funkcijo **Razporedi pozneje** v spustnem meniju **Aktiviraj/Deaktivira**, da določite datum in čas v prihodnosti za aktiviranje in deaktiviranje določenega segmenta.
@@ -75,7 +75,8 @@ Ko izberete segment, so na voljo naslednja dejanja:
 ## <a name="refresh-segments"></a>Osveževanje segmentov
 
 Vse segmente lahko osvežite naenkrat tako, da izberete **Osveži vse** na strani **Segmenti**, ali pa lahko osvežite enega ali več segmentov, ko jih izberete in nato izberete **Osveži** v možnostih. Lahko pa konfigurirate ponavljajoče se osveževanje prek možnosti **Skrbnik** > **Sistem** > **Načrtovanje**. Ko je konfigurirana ponavljajoča se osvežitev, veljajo naslednja pravila:
-- Vsi segmenti z vrsto **Dinamično** oz **Razširitev** se bo samodejno osvežilo pri nastavljeni kadenci. Ko je osvežitev končana, **Stanje** označuje, ali je prišlo do težav pri osveževanju segmenta. The **Nazadnje osveženo** prikazuje časovni žig zadnje uspešne osvežitve. Če pride do napake, izberite napako, da si ogledate podrobnosti o tem, kaj se je zgodilo.
+
+- Vsi segmenti z vrsto **Dinamično** oz **Razširitev** se bo samodejno osvežilo ob nastavljeni kadenci. Ko je osvežitev končana, **Stanje** označuje, ali je prišlo do težav pri osveževanju segmenta. The **Nazadnje osveženo** prikazuje časovni žig zadnje uspešne osvežitve. Če pride do napake, izberite napako, da si ogledate podrobnosti o tem, kaj se je zgodilo.
 - Segmenti z vrsto **Statično** *ne bo* se samodejno osveži. The **Nazadnje osveženo** prikazuje časovni žig zadnjega ročnega zagona ali osveževanja statičnih segmentov.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
@@ -86,17 +87,37 @@ Segment lahko izvozite s strani s segmenti ali s [strani z izvozi](export-destin
 
 1. Pojdite na stran **Segmenti**.
 
-1. Izberite **Pokaži več [...]** za segment, ki ga želite izvoziti.
+1. Izberite navpično elipso (&vellip;) za segment, ki ga želite izvoziti.
 
 1. Na spustnem seznamu izberite možnost **Upravljanje izvozov**.
 
 1. Odpre se stran **Izvozi (predogledna različica) za segment**. Ogledate si lahko vse konfigurirane izvoze, razvrščene glede na to, ali vsebujejo trenutni segment ali ne.
 
-   1. Če želite izbranemu segmentu dodati izvoz, izberite **Uredi** za ta izvoz, da izberete ustrezen segment, nato pa ga shranite. V okoljih za posamezne stranke lahko na seznamu izberete izvoz in nato **Dodaj segment**, da bi dosegli enak rezultat.
+   1. Če želite izbranemu segmentu dodati izvoz, izberite **Uredi** za ta izvoz, da izberete ustrezen segment, nato pa ga shranite. V okoljih za posamezne stranke lahko namesto tega izberete izvoz na seznamu in izberete **Dodaj segment** da bi dosegli enak rezultat.
 
    1. Če želite ustvariti nov izvoz z izbranim segmentom, izberite **Dodaj izvoz**. Za več informacij o ustvarjanju izvozov glejte [Nastavitev novega izvoza](export-destinations.md#set-up-a-new-export).
 
 1. Izberite **Nazaj** za vrnitev na glavno stran za segmente.
+
+## <a name="track-usage-of-a-segment"></a>Sledite uporabi segmenta
+
+Če uporabljate segmente v aplikacijah, ki temeljijo na istem Microsoft Dataverse organizaciji, ki je povezana s Customer Insights, lahko spremljate uporabo segmenta. Za [Segmenti Customer Insights, ki se uporabljajo na potovanjih strank Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), vas sistem obvesti o uporabi tega segmenta.
+
+Ko urejate segment, ki se uporablja v okolju Customer Insights ali v dejavnosti strank v marketingu, se pasica v [graditelj segmentov](segment-builder.md) vas obvešča o odvisnostih. Podrobnosti odvisnosti si lahko ogledate neposredno iz pasice ali z izbiro **Uporaba** v graditelju segmentov.
+
+The **Uporaba segmenta** podokno prikazuje podrobnosti o uporabi tega segmenta v Dataverse -osnovane aplikacije. Za segmente, ki se uporabljajo pri poteh strank, boste našli povezavo za pregled poti v Marketingu, kjer se uporablja ta segment. Če imate dovoljenja za dostop do aplikacije Marketing, lahko tam dostopate do več podrobnosti.
+
+:::image type="content" source="media/segment-usage-pane.png" alt-text="Stransko podokno s podrobnostmi o uporabi segmenta v ustvarjalniku segmentov.":::
+
+Sistem vas obvesti o uporabi sledinega segmenta, ko ga poskušate izbrisati. Če je segment, ki ga nameravate izbrisati, uporabljen v dejavnosti strank v trženju, se bo ta pot za vse uporabnike v segmentu ustavila. Če je potovanje del marketinške kampanje, bo izbris vplival na to samo kampanjo. Kljub opozorilom pa lahko segment še vedno izbrišete.
+
+:::image type="content" source="media/segment-usage-delete.png" alt-text="Pogovorno okno za potrditev izbrisa segmenta, ko je segment uporabljen v a Dataverse aplikacijo.":::
+
+### <a name="supported-apps"></a>Podprte aplikacije
+
+Trenutno se uporaba spremlja v naslednjem Dataverse -osnovane aplikacije:
+
+- [Potovanja strank v Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
 
 ## <a name="view-processing-history-and-segment-members"></a>Prikaz zgodovine obdelave in članov segmenta
 
@@ -117,6 +138,5 @@ Spodnji del vsebuje seznam članov segmenta.
 > Polja, ki se prikažejo na tem seznamu, temeljijo na atributih entitet vašega segmenta.
 >
 >Seznam je predogled ujemajočih se članov segmenta in prikazuje prvih 100 zapisov vašega segmenta, tako da ga lahko po potrebi hitro ocenite in pregledate njegove definicije. Če si želite ogledati vse ujemajoče se zapise, morate [izvoziti segment](export-destinations.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

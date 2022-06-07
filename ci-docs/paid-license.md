@@ -1,41 +1,33 @@
 ---
-title: Uvod v plačljivo licenco za storitev Dynamics 365 Customer Insights
+title: Kupite licenco za Dynamics 365 Customer Insights
 author: m-hartmann
-description: Seznanite se z izkušnjami ob prvem zagonu v storitvi Dynamics 365 Customer Insights in raziščite njene zmogljivosti.
+description: Kupite licenco za Dynamics 365 Customer Insights, se prijavite in se seznanite z aplikacijo.
 ms.author: mhart
 ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9c83dc6716abd5f81eb7851d462d7d61791f542b
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641874"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768442"
 ---
-# <a name="get-started-after-purchasing-customer-insights"></a>Uvod po nakupu storitve Customer Insights
+# <a name="purchase-customer-insights"></a>Nakup vpogledov strank
 
-Ta članek pojasnjuje, kako začeti z uporabo storitve Dynamics 365 Customer Insights po tem, ko je vaša organizacija kupila naročnino. Če želite kupiti Customer Insights, za naše možnosti kontakta pojdite na [spletno mesto Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
-
-Po nakupu naročniške licence za Customer Insights, globalni skrbnik spletnega mesta Microsoft 365 najemnik prejme e-pošto, ki ga vabi k ustvarjanju okolja. 
-
-Storitev Customer Insights je licencirana na najemnika in vključuje več zmogljivosti. Za povečanje privzete kvote lahko kupite več zmogljivosti in licenc. 
-- [Pregled cen](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
-- Zmogljivost in upravičenosti: [Vodnik za licenciranje za Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+Kupiti Dynamics 365 Customer Insights, si oglejte naše kontaktne možnosti na [Dynamics 365 Customer Insights Spletna stran](https://dynamics.microsoft.com/ai/customer-insights/).
 
 Če želite preizkusiti storitev in funkcije, glejte [Nastavitev preskusnega okolja](trial-signup.md).
 
-## <a name="start-with-customer-insights"></a>Začnite z uporabo aplikacije Customer Insights
+Storitev Customer Insights je licencirana na najemnika in vključuje več zmogljivosti. Za povečanje privzete kvote lahko kupite več zmogljivosti in licenc.
+- [Pregled cen](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
+- Zmogljivost in upravičenosti: [Vodnik za licenciranje za Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
 
-Izkušnja ob prvem zagonu vam pomaga izbrati začetno osredotočenost s storitvijo Customer Insights in raziskati zmogljivosti z vzorčnimi podatki. V naslednjem koraku lahko ustvarite svoje okolje in delate s svojimi podatki.
-
-**Ko se vpisujete prvič**:
+## <a name="sign-in-for-the-first-time"></a>Se prvič prijavi
 
 1. Odprite [URL storitve Customer Insights](https://home.ci.ai.dynamics.com).
-1. Vpišite se s šolskim ali službenim računom. 
+1. Vpišite se s šolskim ali službenim računom.
 1. Strinjajte se s pogoji storitve in nastavite nastavitve vsebine za svoje okolje Customer Insights.
 
-## <a name="create-your-own-environment"></a>Ustvarite lastno okolje
-
-Po prvem vpisu boste videli okolje z vzorčnimi podatki. S temi podatki lahko raziščete funkcije in se seznanite z aplikacijo. Če želite uporabljati lastne podatke, morate [ustvariti okolje](create-environment.md).
+Po prvem vpisu boste videli okolje z vzorčnimi podatki. Te podatke lahko uporabite za raziskovanje funkcij in seznanitev z aplikacijo. Za uporabo lastnih podatkov, [ustvariti okolje](create-environment.md).

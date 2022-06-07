@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643560"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800116"
 ---
 # <a name="create-segments"></a>Ustvari segmente
 
@@ -134,8 +134,9 @@ Med ustvarjanjem segmenta lahko shranite osnutek. V fazi osnutka se segment shra
 > - Graditelj segmentov ne bo predlagal veljavnih vrednosti iz entitet pri nastavljanju operatorjev za pogoje. Odprete lahko razdelek **Podatki** > **Entitete** in prenesete podatke entitete, da vidite, katere vrednosti so na voljo.
 > - Pogoji, ki temeljijo na datumih, omogočajo preklapljanje med fiksnimi datumi in plavajočim datumskim obsegom.
 > - Če imate za svoj segment več pravil, ima pravilo, ki ga urejate, zraven navpično modro črto.
-> - Pravila in pogoje lahko premaknete na druga mesta v definiciji segmenta. Izberite [...] zraven pravila ali pogoja in izberite, kako in kam ga premakniti.
+> - Pravila in pogoje lahko premaknete na druga mesta v definiciji segmenta. Izberite navpično elipso (&vellip;) poleg pravila ali pogoja in izberite, kako in kam ga želite premakniti.
 > - Kontrolnika **Razveljavi** in **Uveljavi** v ukazni vrstici omogočata razveljavitev sprememb.
+> - Ko ustvarite segment, vam nekateri segmenti to omogočajo [sledite uporabi segmenta](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Hitri segmenti
 

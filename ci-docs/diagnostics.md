@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755282"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807601"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Posredovanje dnevnika Dynamics 365 Customer Insights z Azure Monitor (predogled)
 
-Dynamics 365 Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ali jih pretakajte na [Azure Središča za dogodke](https://azure.microsoft.com/services/event-hubs/).
+Dynamics 365 Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ali jih pretočno predvajajte [Azure Središča za dogodke](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights pošilja naslednje dnevnike dogodkov:
 
@@ -34,11 +34,11 @@ Customer Insights pošilja naslednje dnevnike dogodkov:
 
 ### <a name="prerequisites"></a>Zahteve
 
-Če želite konfigurirati diagnostiko v Customer Insights, morajo biti izpolnjeni naslednji predpogoji:
+Za konfiguriranje diagnostike v Customer Insights morajo biti izpolnjeni naslednji predpogoji:
 
 - Imate aktivno [Naročnina na Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Imaš [skrbnik](permissions.md#admin) dovoljenja v Customer Insights.
-- Imate **sodelavec** in **Skrbnik uporabniškega dostopa** vlogo na ciljnem viru v Azure. Vir je lahko račun Azure Storage, središče dogodkov Azure ali delovni prostor Azure Log Analytics. Za več informacij glejte [Dodajte ali odstranite dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal).
+- Imate **sodelavec** in **Skrbnik uporabniškega dostopa** vlogo na ciljnem viru v Azure. Vir je lahko an Azure Data Lake Storage račun, središče dogodkov Azure ali delovni prostor Azure Log Analytics. Za več informacij glejte [Dodajte ali odstranite dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal). To dovoljenje je potrebno med konfiguriranjem diagnostičnih nastavitev v storitvi Customer Insights, po uspešni nastavitvi ga je mogoče spremeniti.
 - [Zahteve za destinacijo](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) za Azure Storage, Azure Event Hub ali Azure Log Analytics met.
 - Imate vsaj **Uporabnik z dovoljenjem za branje** vlogo v skupini virov, ki ji vir pripada.
 

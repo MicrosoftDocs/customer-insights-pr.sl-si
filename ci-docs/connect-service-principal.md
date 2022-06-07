@@ -1,7 +1,7 @@
 ---
 title: Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve
 description: Uporaba glavnega imena storitve Azure za povezovanje s shrambo Data Lake.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739182"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833417"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve Azure
 
-Ta članek govori o tem, kako povezati Dynamics 365 Customer Insights z Azure Data Lake Storage račun z uporabo principala storitve Azure namesto ključev računa za shranjevanje. 
+Ta članek govori o tem, kako povezati Dynamics 365 Customer Insights z Azure Data Lake Storage račun z uporabo principala storitve Azure namesto ključev računa za shranjevanje.
 
 Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omejena dovoljenja. Namesto da bi se v aplikacije vpisali kot uporabnik s vsemi pravicami, Azure ponuja glavno ime storitve. Za varno lahko uporabite principe storitev [dodajte ali uredite mapo skupnega podatkovnega modela kot vir podatkov](connect-common-data-model.md) oz [ustvarite ali posodobite okolje](create-environment.md).
 
 > [!IMPORTANT]
+>
 > - Račun Data Lake Storage, ki bo uporabljal principala storitve, mora biti Gen2 in imeti [Imenski prostor hierarhičen je omogočen](/azure/storage/blobs/data-lake-storage-namespace). Računi za shranjevanje podatkov Azure Data Lake Gen1 niso podprti.
-> - Za ustvarjanje principala storitve potrebujete skrbniška dovoljenja za naročnino na Azure.
+> - Za ustvarjanje principala storitve potrebujete skrbniška dovoljenja za najemnik imenika Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Ustvarjanje glavnega imena storitve Azure za storitev Customer Insights
 
@@ -38,29 +39,15 @@ Preden ustvarite novega principala storitve za Customer Insights, preverite, ali
 
 2. Iz **storitev Azure** izberite **Azure Active Directory**.
 
-3. Pod možnostjo **Upravljanje** izberite **Aplikacije za podjetja**.
+3. Spodaj **Upravljaj**, izberite **Microsoftova aplikacija**.
 
 4. Dodajte filter za **ID aplikacije se začne z**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` ali poiščite ime `Dynamics 365 AI for Customer Insights`.
 
-5. Če najdete ujemajoči se zapis, to pomeni, da glavno ime storitve že obstaja. 
-   
+5. Če najdete ujemajoči se zapis, to pomeni, da glavno ime storitve že obstaja.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Posnetek zaslona, ki prikazuje obstoječe glavno ime storitve.":::
-   
-6. Če se ne vrnejo nobeni rezultati, ustvarite novo glavno ime storitve.
 
-### <a name="create-a-new-service-principal"></a>Ustvari novo glavno ime storitve
-
-1. Namestite najnovejšo različico storitve Azure Active Directory PowerShell for Graph. Za več informacij pojdite na [Namestitev storitve Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
-
-   1. V računalniku izberite tipko Windows na tipkovnici in poiščite **Windows PowerShell** in izberite **Zaženi kot skrbnik**.
-   
-   1. V oknu PowerShell, ki se odpre, vnesite `Install-Module AzureAD`.
-
-2. Ustvarite glavno ime storitve za Customer Insights z modulom Azure AD PowerShell.
-
-   1. V oknu PowerShell vnesite `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Zamenjati *[vaš imenik ID]* z dejanskim ID-jem imenika vaše naročnine na Azure, kjer želite ustvariti principala storitve. Parameter z imenom okolja, `AzureEnvironmentName`, je izbiren.
-  
-   1. Vnesite `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Ta ukaz ustvari principal storitve za Customer Insights za izbrano naročnino Azure. 
+6. Če se rezultati ne vrnejo, lahko [ustvarite novega principala storitve](#create-a-new-service-principal). V večini primerov že obstaja in za dostop do pomnilniškega računa morate dodeliti samo dovoljenja principu storitve.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Dodelite dovoljenja glavnemu imenu storitve za dostop do računa za shranjevanje
 
@@ -77,9 +64,9 @@ Pojdite na portal Azure, da podelite dovoljenja principalu storitve za račun za
 1. V podoknu **Dodaj dodelitev vlog** nastavite naslednje lastnosti:
    - Vloga: **Sodelujoči v shrambi zbirke dvojiških podatkov**
    - Dodeli dostop za: **uporabnik, skupina ali glavno ime storitve**
-   - Izberite člane: **Dynamics 365 AI for Customer Insights** ([ravnatelja storitve](#create-a-new-service-principal) ste ustvarili prej v tem postopku)
+   - Izberite člane: **Dynamics 365 AI for Customer Insights** ([ravnatelja storitve](#create-a-new-service-principal) ste pogledali prej v tem postopku)
 
-1.  Izberite **Pregled + dodelitev**.
+1. Izberite **Pregled + dodelitev**.
 
 Uvedba sprememb lahko traja do 15 minut.
 
@@ -91,7 +78,7 @@ Račun Data Lake Storage v storitvi Customer Insights lahko pripnete [shraniti i
 
 1. Odprite [skrbniški portal Azure](https://portal.azure.com), se vpišite v svojo naročnino in odprite račun za shranjevanje.
 
-1. V levem podoknu pojdite v razdelek **Nastavitve** > **Lastnosti**.
+1. V levem podoknu pojdite na **Nastavitve** > **Končne točke**.
 
 1. Kopirajte vrednost ID-ja vira računa za shranjevanje.
 
@@ -115,5 +102,18 @@ Račun Data Lake Storage v storitvi Customer Insights lahko pripnete [shraniti i
 
 1. Nadaljujte s preostalimi koraki v Customer Insights, da priložite račun za shranjevanje.
 
+### <a name="create-a-new-service-principal"></a>Ustvari novo glavno ime storitve
+
+1. Namestite najnovejšo različico storitve Azure Active Directory PowerShell for Graph. Za več informacij pojdite na [Namestitev storitve Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
+
+   1. V računalniku pritisnite tipko Windows na tipkovnici in poiščite **Windows PowerShell** in izberite **Zaženi kot skrbnik**.
+
+   1. V oknu PowerShell, ki se odpre, vnesite `Install-Module AzureAD`.
+
+2. Ustvarite glavno ime storitve za Customer Insights z modulom Azure AD PowerShell.
+
+   1. V oknu PowerShell vnesite `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Zamenjati *[vaš imenik ID]* z dejanskim ID-jem imenika vaše naročnine na Azure, kjer želite ustvariti principala storitve. Parameter z imenom okolja, `AzureEnvironmentName`, je izbiren.
+  
+   1. Vnesite `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Ta ukaz ustvari principal storitve za Customer Insights za izbrano naročnino Azure.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

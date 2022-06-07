@@ -1,19 +1,19 @@
 ---
 title: Vir podatkov obogatitev
 description: Obogatite vire podatkov, preden greste skozi postopek poenotenja podatkov.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755706"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800301"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obogatitev za vire podatkov (predogled)
 
@@ -27,13 +27,13 @@ Za ustvarjanje ali urejanje obogatitev morate imeti dovoljenja sodelavec ali skr
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
 
-1. Izberite navpično tritočko poleg vir podatkov, ki jo želite obogatiti, in izberite **Obogatite**.
+1. Izberite navpično elipso (&vellip;) poleg vir podatkov, ki ga želite obogatiti in izbrati **Obogatite**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stran za obogatitev virov podatkov.":::
 
    The **Odkrij** zavihek prikaže [podprte možnosti obogatitve vir podatkov](#supported-data-source-enrichments).
 
-1. Izberite **Obogatite moje podatke** da konfigurirate obogatitev vir podatkov. Ime izhodne entitete se samodejno izpolni.
+1. Izberite **Obogatite moje podatke** za konfiguriranje obogatitve vir podatkov. Ime izhodne entitete se samodejno izpolni.
 
 ## <a name="supported-data-source-enrichments"></a>Podprte obogatitve vir podatkov
 
@@ -41,11 +41,12 @@ Za vire podatkov so trenutno na voljo naslednje obogatitve. Preglejte podrobne k
 
 - [Izboljšani naslovi](enrichment-enhanced-addresses.md)
 - [Izboljšani podatki podjetja](enrichment-enhanced-company-data.md)
+- [Podatki o identiteti iz LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Upravljajte obstoječe vir podatkov obogatitve
 
 Za ogled vseh konfiguriranih obogatitev odprite zavihek **Moje obogatitve**.
 
-Izberite obogatitev, da si ogledate razpoložljive možnosti. Za ogled možnosti lahko izberete tudi treh pik (...) na elementu seznama. Če ste konfigurirali več obogatitev, jih lahko hitro poiščete v polju za iskanje.
+Izberite obogatitev, da si ogledate razpoložljive možnosti. Izberete lahko tudi navpično elipso (&vellip;) na element seznama, da si ogledate možnosti. Če ste konfigurirali več obogatitev, jih lahko hitro poiščete v polju za iskanje.
 
 Ogledate si lahko, uredite, zaženete ali izbrišete obogatitev vir podatkov. Za več informacij glejte [Upravljajte obstoječe obogatitve](enrichment-hub.md).

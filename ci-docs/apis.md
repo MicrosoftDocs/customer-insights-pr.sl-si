@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755470"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808547"
 ---
 # <a name="work-with-customer-insights-apis"></a>Delo z API-ji za Customer Insights
 
@@ -31,11 +31,11 @@ Ta članek opisuje, kako dostopati do API-jev Customer Insights, ustvariti regis
 
 1. [Vpišite se](https://home.ci.ai.dynamics.com) v aplikacijo Customer Insights. Če še nimate naročnine, [se prijavite za preskusno različico aplikacije Customer Insights](https://aka.ms/tryci).
 
-1. Če želite omogočiti API-je v okolju Customer Insights, izberite **Skrbnik** > **Dovoljenja**. Za to boste potrebovali skrbniška dovoljenja.
+1. Če želite omogočiti API-je v okolju Customer Insights, pojdite na **Admin** > **Varnost**. Za to boste potrebovali skrbniška dovoljenja.
 
 1. Izberite zavihek **API-ji** in izberite gumb **Omogoči**.    
  
-   Z omogočanjem API-jev se ustvari primarni in sekundarni naročniški ključ za vaš primerek, ki se uporablja v zahtevah API-ja. Ključe lahko znova ustvarite tako, da izberete **Znova ustvari primarnega** ali **Znova ustvari sekundarnega** v razdelku **Skrbnik** > **Dovoljenja** > **API-ji**.
+   Z omogočanjem API-jev se ustvari primarni in sekundarni naročniški ključ za vaš primerek, ki se uporablja v zahtevah API-ja. Ključe lahko regenerirate tako, da izberete **Regenerirajte primarno** oz **Regenerirajte sekundarno** na **Admin** > **Varnost** > **API-ji**.
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Ti koraki vam bodo omogočili enostavnejšo prvo uporabo API-jev storitve Custom
 1. Na levi izberite **Registracije aplikacij**.
 
 1. Izberite možnost **Nova registracija**, navedite ime aplikacije in izberite vrsto računa.
- 
+
    Lahko tudi dodate URL za preusmeritev. http://localhost zadostuje za razvoj aplikacije v vašem lokalnem računalniku.
 
 1. V razdelku za registracijo nove aplikacije izberite **Dovoljenja za API**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Izberite **Dodaj dovoljenje** in zatem **Customer Insights** v stranskem podoknu.
+1. Izberite **Dodajte dovoljenje** in izberite **Dynamics 365 AI for Customer Insights** v stranskem podoknu.
 
 1. Za **Vrsto dovoljenja** izberite **Dodeljena dovoljenja**, nato pa dovoljenje **poosebljanje_uporabnika**.
 
@@ -109,7 +107,7 @@ Za informacije o uporabi API-jev v naših odjemalskih knjižnicah si oglejte [od
 
 1. Na koncu moramo še dodati ime registracije aplikacije kot uporabnik v storitvi Customer Insights.  
    
-   Odprite Customer Insights, izberite **Skrbnik** > **Dovoljenja** in izberite **Dodaj uporabnika**.
+   Odprite Customer Insights, pojdite na **Admin** > **Varnost** in izberite **Dodaj uporabnika**.
 
 1. Poiščite ime registracije za svojo aplikacijo, izberite ga med rezultati iskanja in izberite **Shrani**.
 
@@ -151,7 +149,7 @@ Naučite se uporabljati odjemalske knjižnice C# storitve NuGet.org. Za več inf
 
 1. Z odjemalcem prikličite »načine razširitve« – na primer `GetAllInstancesAsync`. Če je zaželen dostop do temeljne možnosti `Microsoft.Rest.HttpOperationResponse`, uporabite »načine sporočil http« — na primer `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Vrsta odziva bo verjetno `object`, ker lahko ta način vrne več vrst (na primer `IList<InstanceInfo>` in `ApiErrorResult`). Če želite preveriti vrsto vrnitve, uporabite objekte v vrstah odgovorov, določenih na [Stran s podrobnostmi o API-ju](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) za to operacijo.    
+1. Vrsta odziva bo verjetno `object`, ker lahko ta način vrne več vrst (na primer `IList<InstanceInfo>` in `ApiErrorResult`). Če želite preveriti vrsto vrnitve, uporabite objekte v vrstah odgovorov, določenih na [stran s podrobnostmi o API-ju](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) za to operacijo.    
    
    Če potrebujete več informacij o zahtevi, uporabite **načine sporočil http** za dostop do predmeta neobdelanega odziva.
 
