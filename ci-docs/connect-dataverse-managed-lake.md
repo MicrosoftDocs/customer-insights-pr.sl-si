@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800196"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011723"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povezovanje s podatki v upravljanem jezeru podatkov Microsoft Dataverse
 
-Ta članek vsebuje informacije o tem, kako Dataverse uporabniki se lahko hitro povežejo z analitičnimi entitetami v a Microsoft Dataverse upravljano jezero. 
+Microsoft Dataverse uporabniki se lahko hitro povežejo z analitičnimi entitetami v a Microsoft Dataverse upravljano jezero.
 
 > [!NOTE]
 > Morate biti admin na Dataverse organizacije, da nadaljujete in si ogledate seznam subjektov, ki so na voljo v upravljanem jezeru.
@@ -32,40 +32,34 @@ Ta članek vsebuje informacije o tem, kako Dataverse uporabniki se lahko hitro p
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Povezava z upravljanim jezerom Dataverse
 
-1. V rešitvi Customer Insights pojdite na **Podatki** > **Viri podatkov**.
+1. Pojdite na **Podatki** > **Viri podatkov**.
 
-2. Izberite **Dodaj vir podatkov**.
+1. Izberite **Dodaj vir podatkov**.
 
-3. Izberite **Microsoft Dataverse** in izberite **Naslednji**.
+1. Izberite **Microsoft Dataverse**.
 
-4. Vnesite **ime** za vir podatkov in izberite **Naprej**. 
+1. Vnesite a **ime** za vir podatkov in izbirno **Opis**.
 
-5. Navedite **Naslov strežnika** za organizacijo Dataverse in izberite **Vpis**.
+1. Navedite **Naslov strežnika** za organizacijo Dataverse in izberite **Vpis**.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Zaslon v koraku uvoza podatkov, v katerega lahko uporabnik vnese URL okolja Dataverse.":::
-
-6. Na seznamu, ki je na voljo, izberite tabele, ki jih želite vnesti kot entitete v Customer Insights.    
+1. Na seznamu, ki je na voljo, izberite tabele, ki jih želite prenesti kot entitete v Customer Insights.
 
    > [!NOTE]
    > Če so nekatere tabele že izbrane, jih morda uporabljajo druge aplikacije Dynamics 365 (na primer Dynamics 365 Sales Insights ali Customer Service Insights). Tega izbora ni mogoče spremeniti. Te tabele bodo na voljo kot entitete, ko bo ustvarjen vir podatkov.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Pogovorno okno s seznamom entitet v okolju Dataverse.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Pogovorno okno s seznamom entitet v okolju Dataverse.":::
 
-7. Shranite svoj izbor, da začnete sinhronizacijo izbranih tabel iz Dataverse. Novo dodano povezavo najdete na strani **Viri podatkov**. Dodane bodo v čakalno vrsto za osvežitev, število entitet pa bo prikazano kot 0, dokler se ne sinhronizirajo vse izbrane tabele.
+1. Shranite svoj izbor, da začnete sinhronizacijo izbranih tabel iz Dataverse. Novo dodano povezavo najdete na strani **Viri podatkov**. Dodane bodo v čakalno vrsto za osvežitev, število entitet pa bo prikazano kot 0, dokler se ne sinhronizirajo vse izbrane tabele.
 
 Samo en vir podatkov okolja lahko istočasno uporablja isto upravljano jezero Dataverse.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Urejanje vira podatkov upravljanega jezera Dataverse
 
-Izbor entitet uredite šele po ustvarjanju vira podatkov. Če bi bili na primer dodane dodatne entitete v Dataverse in želite uvoziti tudi njih.    
+Izbor entitet uredite šele po ustvarjanju vira podatkov. Če bi bili na primer dodane dodatne entitete v Dataverse in želite uvoziti tudi njih.
 Če se želite povezati z drugim podatkovnim jezerom Dataverse, [ustvarite nov vir podatkov](#connect-to-a-dataverse-managed-lake).
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
 
-2. Poleg vir podatkov, ki ga želite posodobiti, izberite navpično tritočko (&vellip;).
+1. Zraven vir podatkov, ki ga želite posodobiti, izberite **Uredi**.
 
-3. Na seznamu izberite možnost **Uredi**.
-
-4. Izberite dodatne entitete z razpoložljivega seznama entitet in izberite **Shrani**.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Izberite dodatne entitete z razpoložljivega seznama entitet in izberite **Shrani**.

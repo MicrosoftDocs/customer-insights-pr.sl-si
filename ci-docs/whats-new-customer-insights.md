@@ -1,19 +1,19 @@
 ---
-title: Nove in prihajajoče funkcije
+title: Nove in posodobljene funkcije
 description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833650"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843367"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novosti v rešitvi Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Posodobitve za maj 2022
+
+Posodobitve maja 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="updated-data-unification-experience"></a>Posodobljena izkušnja združevanja podatkov
+
+ Poenotenje podatkov vam omogoča poenotenje nekoč ločenih virov podatkov v en sam glavni nabor podatkov, ki zagotavlja enoten pogled na te podatke. Podatke je mogoče poenotiti na eni sami ali več entitetah. Najprej ti [izberite entitete in izvorna polja](map-entities.md),[odstranite podvojene zapise](remove-duplicates.md), določite pravila za [ujemanje pogojev](match-entities.md), in definiraj katero [polja za vključitev v enotne profile strank](merge-entities.md).
+
+Za več informacij glejte [Pregled poenotenja podatkov](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Osvežena domača stran v storitvi Customer Insights
+
+**Domov** vas vodi skozi proces konfiguracije za ključne funkcije in nudi pregled segmentov, meritev in podatkov o obogatitvi. Osvežili smo izkušnjo, da bi na prvi pogled zagotovili ustreznejše informacije.
+
+Za več informacij glejte [Raziščite vpogled v stranke](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Sledite uporabi segmenta
+
+Zdaj lahko [sledite uporabi segmenta](segments.md#track-usage-of-a-segment) v aplikacijah, ki temeljijo na Dataverse organizacija, ki je povezana s Customer Insights. Za [Segmenti Customer Insights, ki se uporabljajo na potovanjih strank Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), vas sistem obvesti o uporabi tega segmenta.
+
+### <a name="export-to-criteo"></a>Izvozi v Criteo
+
+Criteo je spletna platforma, ki uporabnikom pomaga upravljati digitalno oglaševanje. Zdaj lahko izvozite segmente enotnih profilov strank za ustvarjanje akcij, zagotavljanje e-poštnega trženja in uporabo posebnih skupin strank s Criteo.
+
+Za več informacij glejte [Izvozi segmente v Criteo (predogled)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Izpopolnjena struktura dokumentacije za ustvarjanje okolja
+
+Ponovno smo pregledali dokumente pomoči v zvezi z ustvarjanjem in upravljanjem okolij v storitvi Customer Insights. Članki so zdaj združeni pod vozliščem Okolja v kazalu vsebine. Prestrukturirani članki zagotavljajo več smernic za različne načine za nastavitev okolij in imajo jasnejšo strukturo. Če želite deliti povratne informacije, nam to sporočite prek kontrolnikov na koncu člankov pomoči.
+
+Za več informacij glejte [Kako: ustvariti novo okolje](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Posodobitve iz aprila 2022
 
@@ -33,7 +64,7 @@ Posodobitve aprila 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in p
 
 Dun & Bradstreet ponuja komercialne podatke, analitiko in vpoglede za podjetja. Strankam omogoča poenoten profil strank, s katerimi podjetja obogatijo svoje podatke. Obogatitve vključujejo atribute, kot so številka DUNS, velikost podjetja, lokacija, industrija in drugo.
 
-Za več informacij glejte [Obogatitev profilov podjetij z Dun & Bradstreet (Predogled)](enrichment-dnb.md).
+Za več informacij glejte [Obogatitev profilov podjetij z Dun & Bradstreet (predogled)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Pri ustvarjanju nove mere določite vrsto mere
 
@@ -55,7 +86,7 @@ Posodobitve marca 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in po
 
 LiveRamp zagotavlja razrešitev identitete in konsolidacijo podatkov o strankah. Osebne identifikatorje v svojih podatkih o strankah lahko preslikate v graf identitete AbiliTec in prejmete AbiliTec ID-je. Te ID-je lahko nato uporabite za boljše poenotenje podatkov vaših strank.
 
-Za več informacij glejte [Obogatite profile strank s podatki o identiteti iz LiveRamp (Predogled)](enrichment-liveramp.md).
+Za več informacij glejte [Obogatite profile strank s podatki o identiteti iz LiveRamp (predogled)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organizirajte segmente in mere z oznakami in filtri
 
@@ -81,7 +112,7 @@ Za več informacij glejte [Izvozi segmente v Iterable (predogled)](export-iterab
 Sprememba API-jev v povezanih storitvah vodi do posodobitev za zanesljivo in nemoteno delovanje priključkov. Izdali smo nekaj posodobitev za izvoz v storitve Marketo in Google Ads:
 
 - Google Ads: Nova različica priključka za izvoz Google Ads poenostavlja izkušnjo preverjanja pristnosti in vam zdaj omogoča samodejno ustvarjanje novih ciljnih skupin Google Ads. 
-- Marketo: Nova različica priključka za izvoz Marketo zagotavlja podporo za ID Marketo, ki vam omogoča, da se izognete podvajanju podatkov, posodobite obstoječe zapise in ustvarite nove zapise v Marketu. 
+- Marketo: Nova različica priključka za izvoz Marketo zagotavlja podporo za ID Marketo, kar vam omogoča, da se izognete podvajanju podatkov, posodobite obstoječe zapise in ustvarite nove zapise v Marketu. 
 
 ## <a name="february-2022-updates"></a>Posodobitve februarja 2022
 
@@ -105,7 +136,7 @@ Za več informacij glejte [Povežite an Azure Synapse vir podatkov (predogled)](
 
 LiveRamp zagotavlja razrešitev identitete in konsolidacijo podatkov o strankah. Osebne identifikatorje v svojih podatkih o strankah lahko preslikate v graf identitete AbiliTec in prejmete AbiliTec ID-je. Te ID-je lahko nato uporabite za boljše poenotenje podatkov vaših strank.
 
-Za več informacij glejte [Obogatite profile strank s podatki o identiteti iz LiveRamp (Predogled)](enrichment-liveramp.md).
+Za več informacij glejte [Obogatite profile strank s podatki o identiteti iz LiveRamp (predogled)](enrichment-liveramp.md).
 
 ### <a name="enrichment-for-data-sources-preview"></a>Obogatitev za vire podatkov (predogled)
 
@@ -115,13 +146,13 @@ Za več informacij glejte [Obogatitev za vire podatkov (predogled)](data-sources
 
 ### <a name="change-owner-of-environment"></a>Sprememba lastnika okolja
 
-Medtem ko ima lahko več uporabnikov skrbniška dovoljenja v Customer Insights, je samo en uporabnik lastnik okolja. Izboljšana izkušnja vam omogoča, da zamenjate lastnike okolja in zahtevate lastništvo, če je nekdanji lastnik zapustil organizacijo. 
+Medtem ko ima lahko več uporabnikov skrbniška dovoljenja v Customer Insights, je samo en uporabnik lastnik okolja. Izboljšana izkušnja vam omogoča, da spremenite lastnike okolja in zahtevate lastništvo, če je nekdanji lastnik zapustil organizacijo. 
 
 Za več informacij glejte [Spremenite lastnika okolja](manage-environments.md#change-the-owner-of-an-environment).
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Postopek priprave podatkov navaja razloge za korupcijo za poškodovane zapise
 
-Priprava podatkov zdaj pokaže razlog za korupcijo za vsa polja s poškodovanimi podatki. Podatki so na voljo na ravni posameznega zapisa za enostavno identifikacijo. 
+Priprava podatkov zdaj pokaže razlog za korupcijo za vsa polja s poškodovanimi podatki. Informacije so na voljo na ravni posameznega zapisa za enostavno identifikacijo. 
 
 Za več informacij glejte [Poškodovani viri podatkov](entities.md#corrupted-data-sources).
 

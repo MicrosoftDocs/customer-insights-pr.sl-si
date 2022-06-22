@@ -1,19 +1,19 @@
 ---
 title: Izvoz podatkov Customer Insights v Snapchat
 description: Naučite se, kako konfigurirati povezavo in izvažati v Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643621"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947296"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Izvoz segmentov v Snapchat (predogledna različica)
 
@@ -21,7 +21,8 @@ Izvozite segmente poenotenih profilov strank v Snapchat in jih uporabite za ogla
 
 ## <a name="prerequisites-for-a-connection"></a>Predpogoji za povezavo
 
--   Imate [račun za Snapchat Business](https://business.snapchat.com/), [račun za Snapchat Ads](https://ads.snapchat.com/) in pripadajoče skrbniške poverilnice.
+-   Imate [račun za Snapchat Business](https://business.snapchat.com/), [račun za Snapchat Ads](https://ads.snapchat.com/) in pripadajoče skrbniške poverilnice. Biti morate vsaj član organizacijskega računa in upravitelj podatkov določenega računa oglasov. 
+-   V Snapchatu imate vsaj enega upravitelja občinstvo občinstvo tipa SAM (Snap občinstvo Match). 
 -   Imaš [konfigurirani segmenti](segments.md) v Customer Insights.
 -   Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
 
@@ -60,7 +61,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. V polju **Povezava za izvoz** izberite povezavo v razdelku Snapchat. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
 
-1. Vnesite [**ID občinstva storitve Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Vnesite [**ID segmenta Snapchat/občinstvo**](https://businesshelp.snapchat.com/s/article/custom-audiences). ID občinstvo lahko najdete v URL-ju, ko izberete občinstvo v upravitelju Snapchat občinstvo. 
 
 1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. To je obvezno za izvoz segmentov Snapchat.
 

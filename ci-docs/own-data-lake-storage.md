@@ -3,17 +3,17 @@ title: Uporabite svoje Azure Data Lake Storage Račun 2. generacije
 author: mukeshpo
 description: Preberite več o zahtevah za uporabo lastnega Azure Data Lake Storage račun za shranjevanje podatkov Customer Insights.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833956"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011953"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Uporabite svoje Azure Data Lake Storage Račun 2. generacije
 
@@ -37,6 +37,7 @@ Ko ustvarite novo okolje, se prepričajte, da račun Data Lake Storage obstaja i
 1. Izberite, kako **Povežite svoj prostor za shranjevanje**. Za preverjanje pristnosti lahko izbirate med možnostjo, ki temelji na virih, in možnostjo, ki temelji na naročnini. Za več informacij glejte [Povežite se z an Azure Data Lake Storage račun z uporabo principala storitve Azure](connect-service-principal.md).
    - Za **Naročnina na Azure**, izberite **Naročnina**, **virov**, in **Račun za shranjevanje** ki vsebuje`customerinsights` posoda.
    - Za **Ključ računa**, zagotovite **Ime računa** in **Ključ računa** za račun Data Lake Storage. Uporaba te metode preverjanja pristnosti pomeni, da ste obveščeni, če vaša organizacija vrti ključe. Moraš [posodobite konfiguracijo okolja](manage-environments.md#edit-an-existing-environment) z novim ključem, ko ga zavrtite.
+1. Izberite, ali želite uporabiti Azure Private Link za povezavo z računom za shranjevanje in [ustvarite povezavo z zasebno povezavo](security-overview.md#private-links-tab) z dvostopenjskim postopkom.
 
 Ko se sistemski procesi, kot je vnos podatkov, zaključijo, sistem ustvari ustrezne mape v računu za shranjevanje. Ustvarijo se podatkovne datoteke in datoteke *model.json*, ki so na podlagi imena procesa dodane v mape.
 

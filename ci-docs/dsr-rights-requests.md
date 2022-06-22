@@ -1,19 +1,19 @@
 ---
 title: Zahteve posameznikov, na katere se nanašajo podatki, (DSR) v skladu z uredbo GDPR | Microsoftovo gradivo
 description: Odzovite se na zahteve posameznikov, na katere se nanašajo podatki, za Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808587"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947388"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahteve posameznikov, na katere se nanašajo podatki, (DSR) v skladu z uredbo GDPR
 
@@ -77,11 +77,5 @@ Skrbnik najemnika lahko za izvoz podatkov upošteva ta navodila:
 1. Pošljite e-poštno sporočilo na naslov D365CI@microsoft.com ter v zahtevi navedite e-poštni naslov uporabnika. Ekipa Customer Insights bo na registrirani e-poštni naslov skrbnika najemnika poslala e-poštno sporočilo s prošnjo za potrditev izvoza podatkov.
 2. Potrdite potrditev izvoza podatkov za zahtevanega uporabnika.
 3. Prejmite izvožene podatke prek e-poštnega naslova skrbnika najemnika.
-
-## <a name="consent-management-preview"></a>Upravljanje privolitve (predogled)
-
-Zmožnost upravljanja privolitve ne zbira uporabniških podatkov neposredno. Uvaža in obdeluje samo podatke o privolitvi, ki jih zagotovijo uporabniki v drugih aplikacijah.
-
-Če želite odstraniti podatke o soglasju o določenih uporabnikih, jih odstranite v virih podatkov, ki jih prevzame zmožnost upravljanja privolitve. Po osvežitvi vir podatkov bodo odstranjeni podatki izbrisani tudi v središču za soglasje. Aplikacije, ki uporabljajo entiteto za soglasje, bodo izbrisale tudi podatke, ki so bili odstranjeni iz vira po a [osveži](system.md#refresh-processes). Priporočamo, da po odzivu na zahtevo posameznika, na katerega se osebni podatki nanašajo, hitro osvežite vire podatkov za odstranitev uporabnikovih podatkov iz vseh drugih procesov in aplikacij.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

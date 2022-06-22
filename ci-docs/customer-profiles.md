@@ -1,7 +1,7 @@
 ---
 title: Ogled profilov strank
 description: Pridobite kombiniran pogled vaših poenotenih podatkov o strankah.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755802"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947066"
 ---
 # <a name="customer-profiles"></a>Profili strank
 
@@ -55,9 +55,9 @@ Stranke lahko filtrirate po polju entitete *Stranka*. Podobno kot pri iskanju mo
 
 Izberite katero koli ploščico stranke, da odprete **stran s podrobnostmi o stranki**. Ta pogled vsebuje poenotene podatke za izbrano stranko. Podatki o strankah vključujejo naslednjo vsebino:
 
-**Ploščica profila stranke**: ta ploščica prikazuje različne vrednosti poenotene entitete *Stranka*. Če polje nima vrednosti za izbrani profil stranke, se ploščica ne prikaže. Ploščica je razdeljena v razdelke:
+**Ploščica profila stranke**: ta ploščica prikazuje različne vrednosti poenotene entitete *Stranka*. Če polje nima vrednosti za izbrani profil stranke, se ne bo prikazalo razen v polju za naslov. Ploščica je razdeljena v razdelke:
 
-- Prvi razdelek prikazuje vnaprej določen niz polj, ki mu sledijo vsa polja, ki so del indeksa iskanja in filtriranja. Vsa polja, povezana z naslovom, so združena v eno vrstico, če profil vsebuje ta polja.
+- Prvi razdelek prikazuje vnaprej določen niz polj, ki mu sledijo vsa polja, ki so del indeksa iskanja in filtriranja. Vsa polja, povezana z naslovom, so združena v eno vrstico, ki je prikazana tudi, če profil ne vsebuje informacij o naslovu.
 - **Stiki za to stranko**: v okoljih za poslovne račune bodo v drugem razdelku prikazani vsi povezani stiki za to stranko. Vsak stik je prikazan s svojimi polji. Prazna polja so skrita.
 - **Dodatna polja**: prikaže preostala polja izbrane stranke, razen ID-jev.
 - **ID-ji**: navede vse ID-je pod ustreznim imenom entitete. Polja so po semantiki identificirana kot ID-ji, ki jih kot take razvrščajo.

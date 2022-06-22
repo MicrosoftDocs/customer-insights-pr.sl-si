@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643249"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947250"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Izvoz seznama segmentov in drugih podatkov v storitev Azure Data Lake Storage Gen2 (predogledna različica)
 
@@ -21,11 +21,9 @@ Podatke iz storitve Customer Insights shranite v račun Data Lake Storage Gen2 a
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-1. Za storitev Azure Data Lake Storage Gen2 lahko izbirate med [ravnjo standardne učinkovitosti delovanja in učinkovitosti delovanja Premium](/azure/storage/blobs/create-data-lake-storage-account), ko ustvarjate račun za shranjevanje za jezero podatkov. Če izberete raven učinkovitosti delovanja Premium, izberite bloke zbirke dvojiških podatkov za različico premium kot vrsto računa. 
+1. Za storitev Azure Data Lake Storage Gen2 lahko izbirate med [ravnjo standardne učinkovitosti delovanja in učinkovitosti delovanja Premium](/azure/storage/blobs/create-data-lake-storage-account), ko ustvarjate račun za shranjevanje za jezero podatkov. Če izberete raven učinkovitosti delovanja Premium, izberite bloke zbirke dvojiških podatkov za različico premium kot vrsto računa.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nastavitev povezave s storitvijo Azure Data Lake Storage Gen2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Nastavitev povezave s storitvijo Azure Data Lake Storage Gen2
 
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 
@@ -39,7 +37,7 @@ Podatke iz storitve Customer Insights shranite v račun Data Lake Storage Gen2 a
     - Če želite izvedeti, kako ustvariti račun za shrambo za uporabo v storitvi Azure Data Lake Storage Gen2, glejte razdelek [Ustvarjanje računa za shrambo](/azure/storage/blobs/create-data-lake-storage-account). 
     - Za več informacij imenu računa in ključa računa shrambe Azure Data Lake Gen2 glejte [Upravljanje nastavitev računa shrambe v portalu Azure](/azure/storage/common/storage-account-manage).
 
-1. Izberite možnost **Shrani**, da dokončate povezavo. 
+1. Izberite možnost **Shrani**, da dokončate povezavo.
 
 ## <a name="configure-an-export"></a>Konfiguriranje izvoza
 
@@ -57,8 +55,12 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 S shranjevanjem izvoza se ta ne zažene takoj.
 
-Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
+Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab).
+Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand).
 
-Izvoženi podatki so shranjeni v vsebniku za shrambo Azure Data Lake Gen 2, ki ste ga konfigurirali. 
+Izvoženi podatki so shranjeni v vsebniku za shrambo Azure Data Lake Gen 2, ki ste ga konfigurirali.
+
+> [!TIP]
+> Izvoz entitet, ki vsebujejo veliko količino podatkov, lahko pri vsakem izvozu povzroči več datotek CSV v isti mapi. Delitev izvozov se zgodi zaradi učinkovitosti, da se čim bolj zmanjša čas, potreben za dokončanje izvoza.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

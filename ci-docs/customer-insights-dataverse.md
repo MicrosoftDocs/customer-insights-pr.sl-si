@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833696"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011572"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Delo s podatki Customer Insights v okolju Microsoft Dataverse
 
 Customer Insights ponuja možnost, da izhodne entitete omogočite kot [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Ta integracija omogoča preprosto izmenjavo podatkov in razvoj po meri s pristopom z nizko kodo/brez kode. The [izhodne entitete](#output-entities) so na voljo kot tabele v a Dataverse okolje. Podatke lahko uporabite za katero koli drugo aplikacijo, ki temelji na Dataverse mize. Te tabele omogočajo scenarije, kot so avtomatizirani potek dela Power Automate ali ustvarjanje aplikacij z Power Apps.
 
-Povezovanje z vašim Dataverse okolje vam tudi omogoča [prenesite podatke iz virov podatkov na mestu uporabe z uporabo Power Platform podatkovnih tokov in prehodov](data-sources.md#add-data-from-on-premises-data-sources).
+Povezovanje z vašim Dataverse okolje vam tudi omogoča [prenesite podatke iz virov podatkov na mestu uporabe z uporabo Power Platform podatkovnih tokov in prehodov](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -35,15 +35,15 @@ Povezovanje z vašim Dataverse okolje vam tudi omogoča [prenesite podatke iz vi
 
 The **Microsoft Dataverse** korak vam omogoča, da povežete Customer Insights z vašim Dataverse okolje, medtem ko [ustvarjanje okolja Customer Insights](create-environment.md).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podatkov z Microsoft Dataverse samodejno omogočeno za net nova okolja.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podatkov z Microsoft Dataverse samodejno omogočeno za nova okolja v omrežju.":::
 
 Skrbniki lahko konfigurirajo Customer Insights za povezavo obstoječega Dataverse okolje. Z posredovanjem URL-ja za Dataverse okolju, se povezuje z njihovim novim okoljem Customer Insights.
 
 Če ne želite uporabiti obstoječega Dataverse okolje, sistem ustvari novo okolje za podatke Customer Insights v vašem najemniku. [Power Platform skrbniki lahko nadzorujejo, kdo lahko ustvarja okolja](/power-platform/admin/control-environment-creation). Ko nastavljate novo okolje Customer Insights in je skrbnik onemogočil ustvarjanje Dataverse okolja za vse, razen za skrbnike, morda ne boste mogli ustvariti novega okolja.
 
-**Omogoči skupno rabo podatkov** z Dataverse tako, da izberete potrditveno polje za izmenjavo podatkov.
+**Omogoči skupno rabo podatkov** z Dataverse tako, da izberete potrditveno polje za skupno rabo podatkov.
 
-Če uporabljate svoj račun Data Lake Storage, potrebujete tudi **Identifikator dovoljenj**. Za več informacij o tem, kako pridobiti identifikator dovoljenja, preberite naslednji razdelek.
+Če uporabljate svoj račun Data Lake Storage, potrebujete tudi **Identifikator dovoljenj**. Za več informacij o tem, kako pridobiti identifikator dovoljenja, si oglejte naslednji razdelek.
 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Omogoči skupno rabo podatkov z Dataverse od svojega Azure Data Lake Storage (predogled)
 
@@ -57,7 +57,7 @@ Omogočanje skupne rabe podatkov z Microsoft Dataverse ko vaše okolje [uporablj
 Pri uporabi sta dve omejitvi Dataverse s svojimi Azure Data Lake Storage račun:
 
 - Obstaja preslikava ena proti ena med a Dataverse organizacija in an Azure Data Lake Storage račun. Enkrat a Dataverse je organizacija povezana z računom za shranjevanje, se ne more povezati z drugim računom za shranjevanje. Ta omejitev preprečuje, da bi a Dataverse ne zapolni več računov za shranjevanje.
-- Skupna raba podatkov ne bo delovala, če je za dostop do vašega računa za shranjevanje podatkov Azure Data Lake potrebna nastavitev zasebne povezave Azure, ker je za požarnim zidom. Dataverse trenutno ne podpira povezave z zasebnimi končnimi točkami prek zasebne povezave.
+- Skupna raba podatkov ne bo delovala, če je za dostop do vaše zasebne povezave potrebna nastavitev Azure Private Link Azure Data Lake Storage račun, ker je za požarnim zidom. Dataverse trenutno ne podpira povezave z zasebnimi končnimi točkami prek zasebne povezave.
 
 ### <a name="set-up-powershell"></a>Nastavite PowerShell
 
@@ -123,7 +123,7 @@ Nekatere izhodne entitete iz Customer Insights so na voljo kot tabele v Datavers
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Ta tabela vsebuje poenoteni profil stranke iz Customer Insights. Shema za poenoten profil stranke je odvisna od entitet in atributov, uporabljenih v postopku poenotenja podatkov. Shema profila stranke običajno vsebuje podmnožico atributov iz [definicije Common Data Model atributa CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Ta tabela vsebuje poenoteni profil stranke iz Customer Insights. Shema za enoten profil stranke je odvisna od entitet in atributov, uporabljenih v postopku poenotenja podatkov. Shema profila stranke običajno vsebuje podmnožico atributov iz [definicije Common Data Model atributa CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
 
 ### <a name="alternatekey"></a>AlternateKey
 

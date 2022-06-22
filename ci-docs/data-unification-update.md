@@ -1,7 +1,7 @@
 ---
 title: Posodobite nastavitve združevanja
 description: Posodobite podvojena pravila, pravila ujemanja ali poenotena polja v nastavitvah združevanja.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755610"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844060"
 ---
 # <a name="update-the-unification-settings"></a>Posodobite nastavitve združevanja
 
@@ -43,8 +43,9 @@ ms.locfileid: "8755610"
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Posnetek zaslona strani Data Unify z označenimi možnostmi Unify.":::
 
-   - Če želite posodobiti enoten profil stranke (z odvisnostmi ali brez), glejte [Zaženite posodobitve profila stranke](#run-updates-to-the-unified-customer-profile).
-   - Če želite oceniti kakovost pogojev ujemanja brez posodabljanja enotnega profila, glejte [Zaženite pogoje ujemanja](#run-matching-conditions). The **Zaženite samo pogoje ujemanja** možnost se ne prikaže za posamezno entiteto.
+   - [Zaženite pogoje ujemanja](#run-matching-conditions) da hitro ocenite kakovost vaših pogojev ujemanja (odstranitev podvajanja in pravila ujemanja) brez posodabljanja enotnega profila. The **Zaženite samo pogoje ujemanja** možnost se ne prikaže za posamezno entiteto.
+   - [Poenoti profile strank](#run-updates-to-the-unified-customer-profile) za izvajanje pogojev ujemanja in posodobitev enotnega profila stranke brez vpliva na odvisnosti (kot so obogatitve, segmenti ali ukrepi). Odvisni procesi se ne izvajajo, ampak bodo osveženi kot [določeno v urniku osveževanja](system.md#schedule-tab).
+   - [Poenoti profile strank in odvisnosti](#run-updates-to-the-unified-customer-profile) za izvajanje pogojev ujemanja in posodobitev enotnega profila stranke in vseh odvisnosti (kot so obogatitve, segmenti ali ukrepi). Vsi procesi se samodejno znova zaženejo.
 
 ## <a name="edit-source-fields"></a>Uredite izvorna polja
 
@@ -80,7 +81,7 @@ Atributa ali entitete ne morete odstraniti, če sta že poenotena.
    - **Podvojite pravilo** : Izberite pravilo in nato **Podvojeno** ustvariti podobno pravilo s spremembami.
    - **Izbriši pravilo** : Izberite pravilo in nato **Izbriši**.
 
-1. Če želite spremeniti nastavitve spajanja, izberite entiteto. Nastavitve lahko spremenite samo, če je ustvarjeno pravilo.
+1. Če želite spremeniti nastavitve spajanja, izberite entiteto. Nastavitve lahko spremenite samo, če je pravilo ustvarjeno.
    1. Izberite **Uredite nastavitve spajanja** in spremenite **Zapis za shranjevanje** možnost.
    1. Če želite spremeniti nastavitve spajanja za posamezne atribute entitete, izberite **Napredno** in naredite potrebne spremembe.
 
@@ -135,11 +136,13 @@ Večino parametrov ujemanja lahko znova konfigurirate in prilagodite. Entitet ne
 
 ## <a name="run-matching-conditions"></a>Zaženite pogoje ujemanja
 
+Zaženite samo odstranjevanje podvajanj za izvedbe pogojev ujemanja in pravila ujemanja ter posodobite entiteti *Deduplication_* in *ConflationMatchPair*.
+
 1. Iz **Podatki** > **Poenoti** stran, izberite **Zaženite samo pogoje ujemanja**.
 
-   The **Podvojeni zapisi** in **Ujemanje pogojev** razstava ploščic **V čakalni vrsti** oz **Osvežujoče**.
+   The **Podvojeni zapisi** in **Ujemanje pogojev** razstava ploščic **V čakalni vrsti** oz **Osvežujoče** stanje.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Ko je postopek ujemanja končan, izberite **Uredi** na **Ujemanje pogojev** ploščice.
 
@@ -153,10 +156,12 @@ Večino parametrov ujemanja lahko znova konfigurirate in prilagodite. Entitet ne
 
 1. Iz **Podatki** > **Poenoti** stran, izberite:
 
-   - **Poenoti profile strank** : posodobi enotno enoto profila stranke, ne da bi vplivala na odvisnosti (kot so obogatitve, segmenti ali ukrepi). Odvisni procesi se ne izvajajo, ampak bodo osveženi kot [določeno v urniku osveževanja](system.md#schedule-tab).
+   - **Poenoti profile strank** : Zažene ujemajoče se pogoje in posodablja enoto enotnega profila stranke brez vpliva na odvisnosti (kot so obogatitve, segmenti ali ukrepi). Odvisni procesi se ne izvajajo, ampak bodo osveženi kot [določeno v urniku osveževanja](system.md#schedule-tab).
 
-   - **Poenoti profile strank in odvisnosti** : Posodobi enoten profil in vse odvisnosti. Vsi procesi se samodejno znova zaženejo. Ko so vsi nadaljnji procesi zaključeni, profil stranke odraža posodobljene podatke.
+   - **Poenoti profile strank in odvisnosti** : Zažene ujemajoče se pogoje in posodobi enoten profil in vse odvisnosti. Vsi procesi se samodejno znova zaženejo. Ko so vsi nadaljnji procesi zaključeni, profil stranke odraža posodobljene podatke.
 
-   The **Podvojeni zapisi**, **pogojev**, in **Poenotena polja strank** razstava ploščic **V čakalni vrsti** oz **Osvežujoče**.
+   The **Podvojeni zapisi**, **pogojev**, in **Poenotena polja strank** razstava ploščic **V čakalni vrsti** oz **Osvežujoče** stanje.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Rezultati uspešnega teka se prikažejo na **Poenoti** stran, ki prikazuje število enotnih profilov strank.

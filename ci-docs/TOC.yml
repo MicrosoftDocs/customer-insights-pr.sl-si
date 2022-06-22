@@ -48,14 +48,14 @@
   items:
     - name: Pregled virov podatkov
       href: data-sources.md
+    - name: Vzpostavljanje povezave s podatki v storitvi Azure Data Lake Storage
+      href: connect-common-data-model.md
+    - name: Vzpostavljanje povezave s storitvijo Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Povezovanje s podatki v upravljanem jezeru podatkov Microsoft Dataverse
+      href: connect-dataverse-managed-lake.md
     - name: Dodajte vire podatkov prek Power Query konektorji
       href: connect-power-query.md
-    - name: Dodajanje mape Common Data Model kot vira podatkov
-      href: connect-common-data-model.md
-    - name: Dodajanje upravljanega podatkovnega jezera Dataverse
-      href: connect-dataverse-managed-lake.md
-    - name: Dodaj Azure Synapse Analytics
-      href: connect-synapse.md
     - name: Obogatitev za vire podatkov
       href: data-sources-enrichment.md
     - name: Postopna osvežitev za vire podatkov
@@ -82,27 +82,27 @@
   items:
     - name: Obogatitev profilov strank
       href: enrichment-hub.md
+    - name: Računi od Office 365 podatkov
+      href: enrichment-office.md
     - name: Blagovne znamke in interesi
       href: enrichment-microsoft.md
+    - name: Podatki o podjetju Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Podatke podjetja zagotavlja Leadspace
+      href: enrichment-leadspace.md
+    - name: Demografija z Experian
+      href: enrichment-experian.md
     - name: Izboljšani naslovi
       href: enrichment-enhanced-addresses.md
     - name: Izboljšani podatki podjetja
       href: enrichment-enhanced-company-data.md
-    - name: Obogatitev s storitvijo Zemljevidi Azure
-      href: enrichment-azure-maps.md
-    - name: Obogatite z Dun & Bradstreet
-      href: enrichment-dnb.md
-    - name: Obogatitev z družbo HERE Technologies
-      href: enrichment-here.md
-    - name: Obogatitev z Leadspace
-      href: enrichment-leadspace.md
-    - name: Obogatite z LiveRamp
+    - name: Identiteta z LiveRamp
       href: enrichment-liveramp.md
-    - name: Obogatitev z družbo Experian
-      href: enrichment-experian.md
-    - name: Obogatite z Office 365 podatkov
-      href: enrichment-office.md
-    - name: Obogatitev z uvozom po meri SFTP
+    - name: Lokacija iz Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Lokacijo zagotavlja družba HERE Technologies
+      href: enrichment-here.md
+    - name: Uvoz po meri SFTP
       href: enrichment-SFTP-custom-import.md
 - name: Poenoteni profili
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Določite dejavnosti strank
       href: activities.md
+    - name: Upravljanje privolitve za Customer Insights
+      href: consent-management.md
 - name: Segmenti
   items:
     - name: Pregled segmentov
@@ -248,7 +250,7 @@
           href: export-power-apps.md
         - name: Power Automate
           href: export-power-automate.md
-        - name: Storitev Power BI
+        - name: Power BI
           href: export-power-bi.md
 - name: Entitete
   items:
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: Vzorčne poizvedbe OData
       href: odata-examples.md
-- name: Upravljanje privolitve (predogled)
-  items:
-    - name: Središče za pomoč
-      href: consent-management/index.yml
-    - name: Pregled zmogljivosti
-      href: consent-management/overview.md
-    - name: Začni
-      items:
-        - name: Začni
-          href: consent-management/get-started.md
-        - name: Koncepti in terminologija
-          href: consent-management/glossary.md
-    - name: Uvoz podatkov o soglasju
-      items:
-        - name: Uvoz podatkov o soglasju
-          href: consent-management/import-consent-data.md
-        - name: Nastavite podatke o soglasju in uporabite nastavitve privolitve
-          href: consent-management/set-consent-rules.md
-    - name: Upravljajte podatke o privolitvi
-      items:
-        - name: Omogočite pravila o soglasju v storitvi Customer Insights
-          href: activate-consent.md
-        - name: Upravljajte privzeta pravila za soglasje v segmentih Customer Insights
-          href: change-default-consent-rules.md
-    - name: Upravljajte nastavitve in uporabnike
-      items:
-        - name: Konfigurirajte sistemske nastavitve
-          href: consent-management/system-settings.md
-        - name: Upravljajte uporabnike in dovoljenja
-          href: consent-management/manage-users.md
-    - name: Uporabite podatke o privolitvi
-      items:
-        - name: Ustvarite napovedi s podatki o soglasju
-          href: consent-management/predictions-consent-data.md
 - name: Omejitve storitev
   href: service-limits.md
 - name: Pravice in zahteve DSR

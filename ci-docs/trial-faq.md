@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833788"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011907"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Pogosta vprašanja o preskusni različici Dynamics 365 Customer Insights
 
@@ -68,7 +68,7 @@ Ko se prvič prijavite v plačljivi primerek storitve Customer Insights, boste m
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Kakšne so omejitve in kvote preskusne različice?
 
-- Za shranjevanje izhodnih podatkov med preizkusno različico Customer Insights ne morete uporabiti lastnega računa za shranjevanje podatkov Azure Data Lake. Lahko pa uvozite podatke iz računa za shrambo Data Lake.
+- Svojega ne morete uporabiti Azure Data Lake Storage račun za shranjevanje izhodnih podatkov med preskusno različico Customer Insights. Vendar pa lahko zaužijete podatke iz računa Data Lake Storage.
 - V okolje Dataverse lahko shranite do 3 GB podatkov, ki so samodejno omogočeni, ko začnete s preskusno različico za storitev Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Vprašanja, ki se nanašajo na storitev Customer Insights
@@ -83,7 +83,7 @@ Večina funkcij zmogljivosti Customer Insights je na voljo v preskusni različic
 
 Naslednje značilnosti so **ni na voljo**:
 
-- Ne morete ustvariti novih okolij, ki uporabljajo lasten račun za Azure Data Lake Storage.
+- Ne morete ustvariti novih okolij, ki uporabljajo svoje Azure Data Lake Storage račun.
 - Preizkusnega okolja ne morete izbrisati.
 
 ### <a name="how-long-does-the-trial-last"></a>Kako dolgo traja preskusna različica?

@@ -1,19 +1,19 @@
 ---
 title: Obogatitev z uvozom po meri SFTP
 description: Splošne informacije o obogatitvi uvoza po meri SFTP.
-ms.date: 04/09/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: f52d24cbe793bee7948ad2af31059cd3edf40f94
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643025"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953739"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogatite profile strank s podatki po meri (predogled)
 
@@ -21,54 +21,13 @@ Uvoz po meri s protokolom za varen prenos datotek (SFTP) vam omogoča uvoz podat
 
 ## <a name="prerequisites"></a>Zahteve
 
-Za konfiguracijo uvoza po meri SFTP morajo biti izpolnjeni naslednji predpogoji:
+- Znano je ime datoteke in lokacija (pot) datoteke, ki jo je treba uvoziti na gostitelja SFTP.
 
-- Ime in mesto (pot) datoteke, ki jo je treba uvoziti, se nahajata v gostitelju SFTP .
-- Obstaja datoteka z obliko zapisa *model.json*, ki določa [shemo za podatkovni model Common Data Model](/common-data-model/) za uvoz podatkov. Ta datoteka mora biti v istem imeniku kot datoteka za uvoz.
-- Skrbnik je že konfiguriral povezavo SFTP *oziroma* imate vi [skrbniška](permissions.md#admin) dovoljenja. Potrebujete uporabniške poverilnice, URL in številko vrat za lokacijo SFTP, iz katere želite uvoziti podatke.
+- A *model.json* na voljo je datoteka, ki določa shemo skupnega podatkovnega modela za podatke, ki jih je treba uvoziti. Ta datoteka mora biti v istem imeniku kot datoteka za uvoz.
 
+- SFTP [povezavo](connections.md) je [konfiguriran](#configure-the-connection-for-sftp-custom-import).
 
-## <a name="configure-the-import"></a>Konfiguriranje uvoza
-
-1. Pojdite v **Podatki** > **Obogatitev** in izberite zavihek **Odkrivanje**.
-
-1. Na **ploščici za uvoz po meri SFTP** izberite možnost **Obogatitev podatkov** in nato izberite možnost **Začetek**.
-
-   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Ploščica za uvoz po meri SFTP.":::
-
-1. Na spustnem seznamu izberite možnost [povezava](connections.md). Če ni na voljo nobena povezava, se obrnite na skrbnika. Če ste skrbnik, lahko povezavo vzpostavite tako, da na spustnem seznamu izberete možnost **Dodaj povezavo**, nato pa **Uvoz po meri SFTP**.
-
-1. Izberite možnost **Poveži z uvozom po meri** za potrditev izbrane povezave.
-
-1.  Izberite **Naprej** in vnesite **Pot** ter **Ime podatkovne datoteke**, ki jo želite uvoziti.
-
-    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Posnetek zaslona vnosa lokacije podatkov.":::
-
-1. Izberite možnost **Naprej** in izberite nabor podatkov o strankah. To so lahko vsi profili strank ali segment.
-
-1. Izberite možnost **Naprej** ter navedite ime obogatitve in izhodne entitete. 
-
-1. Po pregledu svoje izbire izberite možnost **Shrani obogatitev**.
-
-## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfiguriranje povezave za uvoz uvoz po meri SFTP 
-
-Za konfiguriranje povezav morate biti skrbnik. Pri konfiguriranju obogatitve izberite možnost **Dodaj povezavo** *ali* odprite razdelek **Skrbnik** > **Povezave** in na ploščici Uvoz po meri izberite možnost **Nastavitev**.
-
-1. Vnesite ime povezave v polje za **prikazno ime**.
-
-1. Vnesite veljavno uporabniško ime, geslo in URL gostitelja za strežnik SFTP, v katerem se nahajajo podatki, ki jih želite uvoziti.
-
-1. Preberite in podajte soglasje za **Zasebnost podatkov in skladnost** tako, da potrdite polje **Strinjam se**.
-
-1. Izberite možnost **Potrdi** za potrditev konfiguracije.
-
-1. Ko zaključite s preverjanjem, lahko povezavo shranite tako, da izberete možnost **Shrani**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Stran za konfiguracijo povezave Experian.](media/enrichment-SFTP-connection.png "Experian – stran za konfiguracijo povezave")
-
-
-## <a name="defining-field-mappings"></a>Opredelitev preslikav polja 
+## <a name="file-schema-example"></a>Primer datotečne sheme
 
 Imenik, ki vsebuje datoteko za uvoz v strežnik SFTP, mora vsebovati tudi datoteko *model.json*. Ta datoteka definira shemo za uvoz podatkov. Da bi določili preslikavo polja, mora biti za shemo uporabljen [Common Data Model](/common-data-model/). Preprost primer datoteke model.json je videti takole:
 
@@ -82,12 +41,12 @@ Imenik, ki vsebuje datoteko za uvoz v strežnik SFTP, mora vsebovati tudi datote
             "attributes": [
                 {
                     "name": "CustomerId",
-                    "friendlyName": "Client id",
+                    "friendlyName": "Client ID",
                     "dataType": "string"
                 },
                 {
                     "name": "PreferredCity",
-                    "friendlyName": "Preferred City for vacation",
+                    "friendlyName": "Preferred city for vacation",
                     "dataType": "string"
                 },
                 {
@@ -114,13 +73,56 @@ Imenik, ki vsebuje datoteko za uvoz v strežnik SFTP, mora vsebovati tudi datote
 }
 ```
 
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Konfiguriranje povezave za uvoz uvoz po meri SFTP
+
+Moraš biti [skrbnik](permissions.md#admin) v Customer Insights in imejte uporabniške poverilnice, URL in številko vrat za lokacijo SFTP, iz katere želite uvoziti podatke.
+
+1. Izberite **Dodajte povezavo** ko konfigurirate obogatitev ali pojdite na **Admin** > **Povezave** in izberite **Nastaviti** na ploščici Uvoz po meri.
+
+   :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Stran za konfiguracijo povezave za uvoz po meri.":::
+
+1. Vnesite ime za povezavo.
+
+1. Vnesite veljavno uporabniško ime, geslo in URL gostitelja za strežnik SFTP, v katerem se nahajajo podatki, ki jih želite uvoziti.
+
+1. Preglejte in podajte soglasje, tako da v razdelku [Zasebnost in skladnost podatkov](#data-privacy-and-compliance) izberete možnost **Strinjam se**.
+
+1. Izberite **Preverite** da preverite konfiguracijo in nato izberite **Shrani**.
+
+### <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
+
+Ko omogočite Dynamics 365 Customer Insights za prenos podatkov z uporabo uvoza po meri dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo takšne podatke prenesel po vašem navodilu, vendar ste odgovorni za zagotovitev, da podatki izpolnjujejo morebitne obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadarkoli odstrani, s čimer je uporaba te funkcije prekinjena.
+
+## <a name="configure-the-import"></a>Konfiguriranje uvoza
+
+1. Pojdite v **Podatki** > **Obogatitev** in izberite zavihek **Odkrivanje**.
+
+1. Izberite **Obogatite moje podatke** na **Uvoz po meri SFTP** ploščice.
+
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Ploščica za uvoz po meri SFTP.":::
+
+1. Preglejte pregled in nato izberite **Naslednji**.
+
+1. Izberite povezavo. Obrnite se na skrbnika, če ta ni na voljo.
+
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+
+1. Izberite **Naprej**.
+
+1. Vnesite **Pot** in **Ime datoteke** podatkovne datoteke, ki jo želite uvoziti.
+
+1. Izberite **Naprej**.
+
+1. Zagotovite a **ime** za obogatitev in **Ime izhodne entitete**.
+
+1. Po pregledu svoje izbire izberite možnost **Shrani obogatitev**.
+
+1. Izberite **teci** za začetek procesa obogatitve ali blizu vrnitve na **Obogatitve** stran.
+
 ## <a name="enrichment-results"></a>Rezultati obogatitve
 
-Če želite začeti postopek obogatitve, izberite **Zaženi** v ukazni vrstici. Sistem lahko obogatitev samodejno zažene tudi kot del [načrtovane osvežitve](system.md#schedule-tab). Čas obdelave bo odvisen od velikosti podatkov, ki jih želite uvoziti, in povezave s strežnikom SFTP.
-
-Po končanem postopku obogatitve lahko svoje novo uvožene podatke obogatitve po meri pregledate v razdelku **Moje obogatitve**. Poleg tega boste našli čas zadnje posodobitve in število obogatenih profilov.
-
-Do podrobnega prikaza vsakega obogatenega profila lahko dostopate tako, da izberete **Ogled obogatenih podatkov**.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Naslednji koraki
 

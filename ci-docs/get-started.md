@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833595"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011999"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Uvod v rešitev Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Ko se prvič prijavite v Customer Insights, konfigurirajte nastavitve in raziš�
 
 Poenoteni profili so osnova za pridobivanje vpogledov in ukrepanje v zvezi s podatki. Vnesite podatke iz različnih virov in zaženite postopek poenotenja podatkov, da združite poenotene profile. Podajte Odnosi med zaužitimi entitetami in uporabite funkcije obogatitve za dodajanje informacij v profile.
 
-1. Vnesite podatke tako, da ustvarite vire podatkov iz več možnosti. Izbirajte med [Power Query konektorji](connect-power-query.md), a [Mapa skupnega podatkovnega modela](connect-common-data-model.md), oz [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Vnesite podatke tako, da ustvarite vire podatkov iz več možnosti. Izbirajte med [Azure Data Lake Storage, vključno s skupnim podatkovnim modelom](connect-common-data-model.md),[Azure Synapse Analytics](connect-synapse.md),[Microsoft Dataverse](connect-dataverse-managed-lake.md), oz [Power Query konektorji](connect-power-query.md).
 
 1. Zaženite [proces poenotenja podatkov](data-unification.md) z identifikacijo [izvorna polja](map-entities.md), odstranjevanje [dvojniki](remove-duplicates.md),[ujemanje pogojev](match-entities.md), in [povezovalna polja](merge-entities.md).
 
@@ -47,7 +47,7 @@ Poenoteni profili so osnova za pridobivanje vpogledov in ukrepanje v zvezi s pod
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>4. korak: Izboljšajte poenotene profile s predvidevanji, dejavnostmi in merami
 
-Z nastavljenimi enotnimi profili izboljšajte svoje podatke in dodatno povečajte informacije, ki jih zagotavljajo.
+Z nastavljenimi enotnimi profili izboljšajte svoje podatke in dodatno povečajte informacije, ki jih ponujajo.
 
 1. V razširjeni knjižnici ponudnikov obogatitve izberite [obogatitev svojih podatkov o strankah](enrichment-hub.md).
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833417"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011861"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve Azure
 
@@ -47,11 +47,17 @@ Preden ustvarite novega principala storitve za Customer Insights, preverite, ali
 
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Posnetek zaslona, ki prikazuje obstoječe glavno ime storitve.":::
 
-6. Če se rezultati ne vrnejo, lahko [ustvarite novega principala storitve](#create-a-new-service-principal). V večini primerov že obstaja in za dostop do pomnilniškega računa morate dodeliti samo dovoljenja principu storitve.
+6. Če se rezultati ne vrnejo, lahko [ustvarite novega principala storitve](#create-a-new-service-principal). V večini primerov že obstaja in za dostop do pomnilniškega računa morate dodeliti samo dovoljenja principalu storitve.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Dodelite dovoljenja glavnemu imenu storitve za dostop do računa za shranjevanje
 
-Pojdite na portal Azure, da podelite dovoljenja principalu storitve za račun za shranjevanje, ki ga želite uporabiti v Customer Insights.
+Pojdite na portal Azure, da podelite dovoljenja principalu storitve za račun za shranjevanje, ki ga želite uporabiti v Customer Insights. Računu za shranjevanje ali vsebniku mora biti dodeljena ena od naslednjih vlog:
+
+|Poverilnica|Zahteve|
+|----------|------------|
+|Trenutno prijavljen uporabnik|**Vloga** : Storage Blob Data Uporabnik z dovoljenjem za branje, Storage Blob sodelavec ali Lastnik Storage Blob.<br>**Raven** : Dovoljenja se lahko dodelijo za račun za shranjevanje ali vsebnik.</br>|
+|Vodja storitve Customer Insights -<br>Uporaba Azure Data Lake Storage kot vir podatkov</br>|Možnost 1<ul><li>**Vloga** : Storage Blob Data Uporabnik z dovoljenjem za branje, Storage Blob Data sodelavec ali Lastnik podatkov Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>2. možnost *(brez deljenja dostopa glavnega servisa do računa za shranjevanje)*<ul><li>**1. vloga** : Storage Blob Data Uporabnik z dovoljenjem za branje, Storage Blob Data sodelavec ali Lastnik podatkov Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za vsebnik.</li><li>**2. vloga** : Delegator podatkov blobov za shranjevanje.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>|
+|Vodja storitve Customer Insights - <br>Uporaba Azure Data Lake Storage kot izhod ali cilj</br>|Možnost 1<ul><li>**Vloga** : Storage Blob Data sodelavec ali Lastnik Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>2. možnost *(brez deljenja dostopa glavnega servisa do računa za shranjevanje)*<ul><li>**Vloga** : Storage Blob Data sodelavec ali Lastnik Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za vsebnik.</li><li>**2. vloga** : Delegator Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>|
 
 1. Odprite [skrbniški portal Azure](https://portal.azure.com) in se vpišite v svojo organizacijo.
 
@@ -62,7 +68,7 @@ Pojdite na portal Azure, da podelite dovoljenja principalu storitve za račun za
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Posnetek zaslona, ki prikazuje portal Azure med dodajanjem dodelitve vloge.":::
 
 1. V podoknu **Dodaj dodelitev vlog** nastavite naslednje lastnosti:
-   - Vloga: **Sodelujoči v shrambi zbirke dvojiških podatkov**
+   - Vloga: Storage Blob Data Uporabnik z dovoljenjem za branje, Storage Blob sodelavec ali Lastnik Storage Blob na podlagi poverilnic, navedenih zgoraj.
    - Dodeli dostop za: **uporabnik, skupina ali glavno ime storitve**
    - Izberite člane: **Dynamics 365 AI for Customer Insights** ([ravnatelja storitve](#create-a-new-service-principal) ste pogledali prej v tem postopku)
 
