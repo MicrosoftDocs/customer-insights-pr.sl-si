@@ -1,5 +1,5 @@
 ---
-title: Delo z API-ji
+title: Delo z API-ji za Customer Insights
 description: Uporaba API-jev in razumevanje omejitev.
 ms.date: 05/10/2021
 ms.reviewer: wimohabb
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 8e8bd590d3bba9dc7b1644b6ff42b9fc53237ca9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808547"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054084"
 ---
 # <a name="work-with-customer-insights-apis"></a>Delo z API-ji za Customer Insights
 
@@ -139,7 +139,7 @@ Naučite se uporabljati odjemalske knjižnice C# storitve NuGet.org. Za več inf
 
 1. Uporabite knjižnico [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview), da prejmete `AccessToken` z uporabo obstoječe [registracije aplikacije Azure](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Po uspešni avtentikaciji in pridobitvi žetona sestavite nov ali uporabite obstoječega`HttpClient` z **DefaultRequestHeaders "Avtorizacija"** nastavljena **Nosilec "žeton za dostop"** in **Ocp-Apim-Naročniški ključ** nastavljeno na [**naročniški ključ** iz vašega okolja Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. Po uspešni avtentikaciji in pridobitvi žetona izdelajte novega ali uporabite obstoječega`HttpClient` z **DefaultRequestHeaders "Avtorizacija"** nastavljena **Nosilec "žeton za dostop"** in **Ocp-Apim-Naročniški ključ** nastavljeno na [**naročniški ključ** iz vašega okolja Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Ponastavite glavo **Avtorizacija**, kadar je to primerno. Na primer, ko je žeton potekel.
 
@@ -149,7 +149,7 @@ Naučite se uporabljati odjemalske knjižnice C# storitve NuGet.org. Za več inf
 
 1. Z odjemalcem prikličite »načine razširitve« – na primer `GetAllInstancesAsync`. Če je zaželen dostop do temeljne možnosti `Microsoft.Rest.HttpOperationResponse`, uporabite »načine sporočil http« — na primer `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Vrsta odziva bo verjetno `object`, ker lahko ta način vrne več vrst (na primer `IList<InstanceInfo>` in `ApiErrorResult`). Če želite preveriti vrsto vrnitve, uporabite objekte v vrstah odgovorov, določenih na [stran s podrobnostmi o API-ju](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) za to operacijo.    
+1. Vrsta odziva bo verjetno `object`, ker lahko ta način vrne več vrst (na primer `IList<InstanceInfo>` in `ApiErrorResult`). Če želite preveriti vrsto vrnitve, uporabite objekte v vrstah odgovorov, določenih na [Stran s podrobnostmi o API-ju](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) za to operacijo.    
    
    Če potrebujete več informacij o zahtevi, uporabite **načine sporočil http** za dostop do predmeta neobdelanega odziva.
 

@@ -1,5 +1,5 @@
 ---
-title: Izvozite podatke Customer Insights v Criteo
+title: Izvoz segmentov v Criteo (predogled)
 description: Naučite se konfigurirati povezavo in izvoziti v Criteo.
 ms.date: 05/27/2022
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 854f5f0c53f053fc5d742d69a045db1926fec00c
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: ace9056d200a3179e442132004324a01f0d247b6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808801"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082795"
 ---
-# <a name="export-segments-to-criteo-preview"></a>Izvozi segmente v Criteo (predogled)
+# <a name="export-segments-to-criteo-preview"></a>Izvoz segmentov v Criteo (predogled)
 
-Izvozite segmente enotnih profilov strank za ustvarjanje akcij, zagotavljanje e-poštnega trženja in uporabo posebnih skupin strank s Criteom.
+Izvozite segmente enotnih profilov strank za ustvarjanje kampanj, zagotavljanje e-poštnega trženja in uporabo posebnih skupin strank s Criteom.
 
 ## <a name="prerequisites-for-connection"></a>Predpogoji za povezavo
 
@@ -74,7 +74,7 @@ Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahk
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 
-Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v Criteo dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vašem navodilu, vendar ste odgovorni za zagotovitev, da Criteo izpolnjuje vse vaše obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v Criteo dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vašem navodilu, vendar ste odgovorni za zagotovitev, da Criteo izpolnjuje morebitne obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš skrbnik za Dynamics 365 Customer Insights lahko kadar koli odstrani ta cilj izvoza in s tem prekine uporabljati to funkcijo.
 
 

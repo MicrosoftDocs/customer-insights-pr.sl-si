@@ -1,5 +1,5 @@
 ---
-title: Izpolnite delne podatke z uporabo predvidevanj
+title: Delne podatke dopolnite s predvidevanji
 description: Z predvidevanji izpolnite nepopolne podatke o strankah.
 ms.date: 11/01/2021
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 7e93670007db27d13b84d7516f56830988da083e
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800670"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082522"
 ---
-# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Izpolnite svoje delne podatke s predvidevanji (zastarelo)
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Dopolnite svoje delne podatke s predvidevanji (opuščeno)
 
 > [!IMPORTANT]
 > Ta funkcija bo **zastarel** od **5. november 2021**. Trenutne izvedbe bodo še naprej delovale, dokler funkcija ne bo odstranjena, vendar ne boste mogli ustvariti novih integracij z uporabo spodnjih navodil.

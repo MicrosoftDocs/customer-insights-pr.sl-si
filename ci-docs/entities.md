@@ -1,5 +1,5 @@
 ---
-title: Entitete in nabori podatkov
+title: Entitete v storitvi Customer Insights
 description: Oglejte si podatke na strani Entitete.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: c1094bc2f6d137087b317ed20d0615289d6f1187
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4abb7704710ac269a4f3c9463fe905fa6eec3234
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643428"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082732"
 ---
 # <a name="entities-in-customer-insights"></a>Entitete v storitvi Customer Insights
 
@@ -26,7 +26,7 @@ The **Entitete** stran navaja entitete in vključuje te stolpce:
 
 - **ime** : Ime podatkovne entitete. Če poleg imena entitete vidite opozorilni simbol, to pomeni, da se podatki za to entiteto niso uspešno naložili.
 - **Vir** : Vrsta vir podatkov, ki je prenesla entiteto.
-- **Posodobljeno** : Čas, ko je bila entiteta nazadnje posodobljena.
+- **Posodobljeno** : čas, ko je bila entiteta nazadnje posodobljena.
 - **Stanje** : Podrobnosti o zadnji posodobitvi entitete.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
@@ -83,7 +83,7 @@ Za odkrivanje poškodovanih zapisov se izvajajo naslednja preverjanja uvoženih 
 
 - Vrednost polja se ne ujema z vrsto podatkov njegovega stolpca.
 - Polja vsebujejo znake, zaradi katerih se stolpci ne ujemajo s pričakovano shemo. Na primer: napačno oblikovani narekovaji, nespremenjeni narekovaji ali znaki nove vrstice.
-- Če obstajajo stolpci datetime/date/datetimeoffset, je treba njihov format navesti v modelu, če ne sledi standardnemu formatu ISO.
+- Če obstajajo stolpci datetime/date/datetimeoffset, je treba njihov format določiti v modelu, če ne sledi standardnemu formatu ISO.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

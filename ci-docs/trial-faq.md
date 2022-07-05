@@ -1,5 +1,5 @@
 ---
-title: Pogosta vprašanja o preskusni različici – Dynamics 365 Customer Insights
+title: Pogosta vprašanja o preskusni različici Dynamics 365 Customer Insights
 description: Rešitve za pogosta vprašanja, povezana z namestitvijo preskusne različice storitve Customer Insights in z njenim upravljanjem. Preberite več o tem, kako odpraviti težave, povezane s platformami in aplikacijami.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 41f112466d54c9923d0daf7c55d343f9b5c81d98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011907"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051519"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Pogosta vprašanja o preskusni različici Dynamics 365 Customer Insights
 
@@ -62,7 +62,7 @@ Preskusno različico lahko podaljšate neposredno v aplikaciji. Preskusno obdobj
 
 Na splošno priporočamo, da pri nadgradnji na plačljivo različico Customer Insights začnete na novo z lastnimi podatki. 
 
-Če uporabljate samo Customer Insights, lahko po želji kopirate svoje podatke iz preskusnega okolja, če kupite Customer Insights. Biti morate skrbnik preizkusne različice Customer Insights in globalni skrbnik vašega Microsoft 365 najemnika ali skrbnika Dynamics 365 v vaši organizaciji, da nastavitve preselite iz preizkusnega okolja v plačljivo okolje.
+Če uporabljate samo Customer Insights, lahko po želji kopirate svoje podatke iz preskusnega okolja, če kupite Customer Insights. Biti morate skrbnik preizkusne različice Customer Insights in globalni skrbnik vašega Microsoft 365 najemnik ali skrbnik Dynamics 365 v vaši organizaciji za selitev nastavitev iz preizkusnega okolja v plačljivo okolje.
 
 Ko se prvič prijavite v plačljivi primerek storitve Customer Insights, boste morali ustvariti novo okolje. V tem postopku lahko izberete kopiranje konfiguracije iz obstoječega okolja in preselite večino nastavitev. Če imate zgoraj navedena dovoljenja, bo na tem seznamu prikazano preskusno okolje. Za več informacij glejte [Kopirajte konfiguracijo okolja](create-environment.md#copy-the-environment-configuration).
 

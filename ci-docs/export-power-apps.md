@@ -1,5 +1,5 @@
 ---
-title: Povezovalnik Power Apps
+title: Povezovalnik storitve Power Apps (predogled)
 description: Povezava s storitvama Power Apps in Power Automate.
 ms.date: 10/01/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: e99d7d4f231eb2ade67f27c9e52c61af3a21b99d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 0b71f723d1e491d422d24b1be6616d2f33c95d40
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643941"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055280"
 ---
-# <a name="microsoft-power-apps-connector-preview"></a>Povezovalnik storitve Microsoft Power Apps (predogled)
+# <a name="power-apps-connector-preview"></a>Povezovalnik storitve Power Apps (predogled)
 
-Vnesite poenotene profile strank v svoje prilagojene aplikacije s storitvijo Power Apps.
+Vnesite poenotene profile strank v svoje prilagojene aplikacije s storitvijo Microsoft Power Apps.
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Povezava storitev Power Apps in Dynamics 365 Customer Insights
 
@@ -37,7 +37,7 @@ Ko dodate storitev Customer Insights kot podatkovno povezavo, lahko v storitvi P
 
 ### <a name="retrievable-entities"></a>Entitete, ki jih je mogoče pridobiti
 
-S povezovalnikom Power Apps lahko pridobite le entitete **Stranka**, **UnifiedActivity**, **Segmenti** in **ContactProfile**. ContactProfile je na voljo samo v primeru Customer Insights za poslovne račune. Prikazane so druge entitete, ker jih osnovni povezovalnik podpira prek sprožilcev v storitvi Power Automate.
+S povezovalnikom Power Apps lahko pridobite le entitete **Stranka**, **UnifiedActivity**, **Segmenti** in **ContactProfile**. ContactProfile je na voljo samo v primerku Customer Insights za poslovne račune. Prikazane so druge entitete, ker jih osnovni povezovalnik podpira prek sprožilcev v storitvi Power Automate.
 
 Opravite lahko največ 100 klicev na 60 sekund. API končna točka lahko pokličete večkrat z uporabo parametra $skip. [Preberite več o parametru $skip](/connectors/customerinsights/#get-items-from-an-entity).
 

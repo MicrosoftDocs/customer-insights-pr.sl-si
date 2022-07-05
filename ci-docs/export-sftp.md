@@ -1,5 +1,5 @@
 ---
-title: Izvozi podatke Customer Insights v gostitelje SFTP (vsebuje video)
+title: Izvozi podatke v gostitelje SFTP (predogled) (vsebuje video)
 description: Naučite se, kako konfigurirati povezavo in izvažati na lokacijo SFTP.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947204"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082774"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>Izvoz segmentov in drugih podatkov v SFTP (predogledna različica)
+# <a name="export-data-to-sftp-preview"></a>Izvozi podatke v SFTP (predogled)
 
 Uporabite svoje podatke o strankah v aplikacijah drugih ponudnikov tako, da jih izvozite na lokacijo protokola za varen prenos datotek (SFTP).
 
@@ -74,7 +74,7 @@ Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab).
 Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand).
 
 > [!TIP]
-> Izvoz entitet, ki vsebujejo veliko količino podatkov, lahko pri vsakem izvozu povzroči več datotek CSV v isti mapi. Delitev izvozov se zgodi zaradi učinkovitosti, da se čim bolj zmanjša čas, potreben za dokončanje izvoza.
+> Izvoz entitet, ki vsebujejo veliko količino podatkov, lahko pri vsakem izvozu povzroči več datotek CSV v isti mapi. Delitev izvozov se zgodi zaradi učinkovitosti, da se zmanjša čas, potreben za dokončanje izvoza.
 
 ## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 

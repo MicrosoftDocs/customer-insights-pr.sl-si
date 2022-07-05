@@ -1,5 +1,5 @@
 ---
-title: Obogatitev podatkov o identiteti LiveRamp
+title: Obogatite profile strank s podatki o identiteti iz LiveRamp (predogled)
 description: Obogatite profile strank s podatki LiveRamp.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954015"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082207"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Obogatite profile strank s podatki o identiteti iz LiveRamp (predogled)
 
-LiveRamp zagotavlja deterministično ločevanje identitete brez povezave in konsolidacijo podatkov strank. Osebne identifikatorje v svojih podatkih o strankah lahko preslikate v graf identitete AbiliTec in prejmete AbiliTec ID-je. Te ID-je lahko nato uporabite za boljše poenotenje podatkov vaših strank.
+LiveRamp zagotavlja deterministično razrešitev identitete brez povezave in konsolidacijo podatkov strank. Osebne identifikatorje v svojih podatkih o strankah lahko preslikate v graf identitete AbiliTec in prejmete AbiliTec ID-je. Te ID-je lahko nato uporabite za boljše poenotenje podatkov vaših strank.
 
 ## <a name="supported-countriesregions"></a>Podprte države/regije
 
@@ -47,7 +47,7 @@ Moraš biti [skrbnik](permissions.md#admin) v Customer Insights in imajo aktivni
 
 ### <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 
-Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v LiveRamp dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vašem navodilu, vendar ste odgovorni za zagotovitev, da LiveRamp izpolnjuje vse vaše obveznosti glede zasebnosti ali varnosti. Za več informacij si oglejte [Microsoftova izjava o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732). Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli odstrani in s tem prekini uporabo te funkcije.
+Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v LiveRamp dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vašem navodilu, vendar ste odgovorni za zagotovitev, da LiveRamp izpolnjuje morebitne obveznosti glede zasebnosti ali varnosti. Za več informacij si oglejte [Microsoftova izjava o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732). Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli odstrani in s tem prekini uporabo te funkcije.
 
 ## <a name="configure-the-enrichment"></a>Konfiguriranje obogatitve
 
@@ -63,7 +63,7 @@ Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v LiveRamp dovol
 
 1. Izberite **Naprej**.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki o identiteti iz LiveRamp. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki o identiteti iz LiveRamp. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
 
 1. Določite, katero vrsto polj iz svojih enotnih profilov želite uporabiti za ujemanje podatkov o identiteti iz LiveRamp. Vsaj eno od polj **Ime in naslov**, **-naslov**, oz **Telefon** je potrebno. Za večjo natančnost ujemanja dodajte druga polja. Izberite **Naprej**.
 
@@ -79,11 +79,11 @@ Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v LiveRamp dovol
 
 1. Izberite **teci** za začetek procesa obogatitve ali blizu vrnitve na **Obogatitve** stran.
 
-## <a name="enrichment-results"></a>Rezultati obogatitve
+## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-The **Število kupcev, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
+The **Število strank, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

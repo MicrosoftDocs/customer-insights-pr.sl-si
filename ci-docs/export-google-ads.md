@@ -1,5 +1,5 @@
 ---
-title: Izvozite podatke Customer Insights v Google Ads
+title: Izvoz segmentov v Google Ads (predogledna različica)
 description: Naučite se, kako konfigurirati povezavo in izvažati v Google Ads.
 ms.date: 03/31/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3e0eb91be97d69a999e90708d29c572f0055527e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b7f08936d7d90322cb4e62396a2961fe06273b76
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643393"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083005"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Izvoz segmentov v Google Ads (predogledna različica)
 
@@ -64,7 +64,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. V polju **Povezava za izvoz** izberite povezavo v razdelku Google Ads. Če se vam poimenovanje tega odseka ne prikaže, to pomeni, da vam ni na voljo nobena tovrstna povezava.
 
-1. Če želite ustvariti nov občinstvo, pustite polje ID Google občinstvo prazno. V vašem računu Google Ads bomo samodejno ustvarili nov občinstvo in uporabili ime izvoženega segmenta. Če želite posodobiti obstoječi Google Ads občinstvo, vnesite svoj [ID programa Google Ads občinstvo](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
+1. Če želite ustvariti nov občinstvo, pustite polje ID Googla občinstvo prazno. V vašem računu Google Ads bomo samodejno ustvarili nov občinstvo in uporabili ime izvoženega segmenta. Če želite posodobiti obstoječi Google Ads občinstvo, vnesite svoj [ID programa Google Ads občinstvo](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
 
 1. V **Ujemanje podatkov** izberite eno ali več podatkovnih polj za izvoz in izberite polje, ki predstavlja ustrezna podatkovna polja v Customer Insights.
 

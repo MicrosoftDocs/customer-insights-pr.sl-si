@@ -1,5 +1,5 @@
 ---
-title: Ujemanje entitet za poenotenje podatkov
+title: Pogoji ujemanja za poenotenje podatkov
 description: Zagotovite ujemanje entitet za ustvarjanje poenotenih profilov strank.
 recommendations: false
 ms.date: 05/05/2022
@@ -14,21 +14,21 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: bc470dd932c2c981adc5840bb52d60f8dfe0de61
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740969"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082417"
 ---
-# <a name="match-conditions"></a>Pogoji tekme
+# <a name="match-conditions-for-data-unification"></a>Pogoji ujemanja za poenotenje podatkov
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Ta korak pri poenotenju določa vrstni red ujemanja in pravila za ujemanje med entitetami. Ta korak zahteva vsaj dve entiteti.
 
 > [!NOTE]
-> Ko ustvarite pogoje ujemanja in izberete **Naslednji**, ne morete odstraniti izbrane entitete ali atributa. Po potrebi izberite **nazaj** da pred nadaljevanjem pregledate izbrane entitete in atribute.
+> Ko ustvarite pogoje ujemanja in izberete **Naslednji**, ne morete odstraniti izbrane entitete ali atributa. Po potrebi izberite **Nazaj** da pred nadaljevanjem pregledate izbrane entitete in atribute.
 
 ## <a name="include-enriched-entities-preview"></a>Vključi obogatene entitete (predogled)
 
@@ -45,11 +45,11 @@ Ta korak pri poenotenju določa vrstni red ujemanja in pravila za ujemanje med e
 Vsako ujemanje združi dve ali več entitet v eno, konsolidirano entiteto. Hkrati skrbi za enolične zapise strank. Vrstni red ujemanja označuje vrstni red, v katerem sistem poskuša uskladiti zapise.
 
 > [!IMPORTANT]
-> Prva entiteta na seznamu se imenuje primarna entiteta. Primarna entiteta služi kot osnova za vaš poenoten nabor podatkov o profilih. Tej entiteti bodo dodane dodatne izbrane entitete.
+> Prva entiteta na seznamu se imenuje primarna entiteta. Primarna entiteta služi kot osnova za vaš nabor podatkov poenotenih profilov. Tej entiteti bodo dodane dodatne izbrane entitete.
 >
 > Pomembni premisleki:
 >
-> - Kot primarni subjekt izberite subjekt z najbolj popolnimi in zanesljivimi profilnimi podatki o vaših strankah.
+> - Kot primarni subjekt izberite subjekt z najbolj popolnimi in zanesljivimi profili vaših strank.
 > - Za primarno entiteto izberite entiteto, ki ima več skupnih atributov z drugimi entitetami (na primer ime, telefonska številka ali e-poštni naslov).
 
 1. Na **Ujemanje pogojev** strani, uporabite puščice za premikanje navzgor in navzdol, da premaknete entitete v želenem vrstnem redu ali jih povlecite in spustite. Na primer, izberite **Kontakti: e-trgovina** kot primarni subjekt in **Zvestoba strank: zvestoba** kot drugi subjekt.
@@ -66,7 +66,7 @@ Pravila ujemanja določajo logiko, po kateri bo povezan določen par entitet. Pr
 
 Opozorilo poleg imena entitete pomeni, da za par ujemanja ni definirano pravilo ujemanja.
 
-1. Izberite **Dodajte pravilo** za par entitet za definiranje pravil ujemanja.
+1. Izberite **Dodajte pravilo** za par subjektov za definiranje pravil ujemanja.
 
 1. V **Dodajte pravilo** podoknu, konfigurirajte pogoje za pravilo.
 
@@ -118,7 +118,7 @@ Pravila ujemanja predstavljajo nabore pogojev. Če želite povezati entitete po 
 
 ### <a name="add-exceptions-to-a-rule"></a>Pravilu dodajte izjeme
 
-V večini primerov ujemanje subjektov vodi do edinstvenih profilov strank s konsolidiranimi podatki. Za dinamično obravnavanje redkih primerov lažno pozitivnih in lažno negativnih rezultatov lahko definirate izjeme za pravilo ujemanja. Izjeme se uveljavijo po obdelavi pravil ujemanja in se izognemo ujemanju vseh zapisov, ki izpolnjujejo merila izjem.
+V večini primerov ujemanje subjektov vodi do edinstvenih profilov strank s konsolidiranimi podatki. Za dinamično obravnavanje redkih primerov lažno pozitivnih in lažno negativnih rezultatov lahko definirate izjeme za pravilo ujemanja. Izjeme se uveljavijo po obdelavi pravil ujemanja in preprečijo ujemanje vseh zapisov, ki izpolnjujejo kriterije izjeme.
 
 Na primer, če vaše pravilo ujemanja združuje priimek, mesto in datum rojstva, bi sistem identificiral dvojčka z istim priimek, ki živita v istem mestu kot isti profil. Določite lahko izjemo, ki se ne ujema s profili, če ime v entitetah, ki jih združite, nista enaka.
 

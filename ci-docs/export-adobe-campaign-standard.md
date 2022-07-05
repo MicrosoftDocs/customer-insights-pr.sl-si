@@ -1,5 +1,5 @@
 ---
-title: Izvoz podatkov iz storitve Customer Insights v aplikacijo Adobe Campaign Standard
+title: Izvozi segmente Customer Insights v Adobe Standard oglaševalske akcije (predogled)
 description: Naučite se uporabljati segmente Customer Insights v Adobe Standard kampanje.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,24 +8,24 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643447"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082354"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Uporaba segmentov storitve Customer Insights v aplikaciji Adobe Campaign Standard (predogledna različica)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Izvozi segmente Customer Insights v Adobe Standard oglaševalske akcije (predogled)
 
-Kot uporabnik Dynamics 365 Customer Insights, ste morda ustvarili segmente, da bodo vaše marketinške kampanje učinkovitejše s ciljanjem na ustrezno občinstvo. Če želite uporabiti segment iz Customer Insights v Adobe Experience Platform in aplikacije, kot so Adobe Campaign Standard, morate slediti nekaj korakom, opisanim v tem članku.
+Kot uporabnik Dynamics 365 Customer Insights, ste morda ustvarili segmente, da bodo vaše marketinške kampanje učinkovitejše s ciljanjem na ustrezne ciljne skupine. Če želite uporabiti segment iz Customer Insights v Adobe Experience Platform in aplikacije, kot so Adobe Campaign Standard, morate slediti nekaj korakom, opisanim v tem članku.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagram postopka korakov, opisanih v tem članku.":::
 
 ## <a name="prerequisites"></a>Zahteve
 
--   Licenca za Dynamics 365 Customer Insights
--   Licenca za aplikacijo Adobe Campaign Standard
--   Račun za shrambo zbirke dvojiških podatkov Azure
+- Licenca za Dynamics 365 Customer Insights
+- Licenca za aplikacijo Adobe Campaign Standard
+- Račun za shrambo zbirke dvojiških podatkov Azure
 
 ## <a name="campaign-overview"></a>Pregled akcije
 
@@ -39,7 +39,7 @@ V tem primeru želimo promocijsko e-poštno akcijo izvesti enkrat. Ta članek ne
 
 V našem scenariju predvidevamo, da so e-poštni naslovi strank na voljo in da so bile analizirane njihove promocijske nastavitve, da se identificirajo člani segmenta.
 
-The [segment, ki ste ga definirali v Customer Insights](segments.md) se imenuje **ChurnProneCustomers** in nameravate tem strankam poslati promocijo po e-pošti.
+The [segment, ki ste ga določili v Customer Insights](segments.md) je poklican **ChurnProneCustomers** in nameravate tem strankam poslati promocijo po e-pošti.
 
 :::image type="content" source="media/churn-prone-customers-segment.png" alt-text="Posnetek zaslona strani s segmenti z ustvarjenim segmentom ChurnProneCustomers.":::
 
@@ -87,11 +87,11 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. Izberite **Naprej**.
 
-1. Zdaj preslikamo **Vir** polja iz segmenta Customer Insights v **Tarča** imena polj v Adobe Standardna shema profila oglaševalske akcije.
+1. Zdaj preslikamo **Vir** polja iz segmenta Customer Insights v **Tarča** imena polj v Adobe Standardna profilna shema oglaševalske akcije.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Preslikava polj za povezovalnik aplikacije Adobe Campaign Standard.":::
 
-   Če želite dodati več atributov, izberite **Dodaj atribut**. Ciljno ime se lahko razlikuje od imena izvornega polja, tako da lahko še vedno preslikate izhod segmenta iz Customer Insights v Adobe Standard oglaševalske akcije, če polja v obeh sistemih nimata enakega imena.
+   Če želite dodati več atributov, izberite **Dodaj atribut**. Ciljno ime se lahko razlikuje od imena izvornega polja, tako da lahko še vedno preslikate izhod segmenta iz Customer Insights v Adobe Standardna oglaševalska akcija, če polja v obeh sistemih nimata enakega imena.
 
    > [!NOTE]
    > E-poštni naslov se uporablja kot polje identitete, vendar lahko uporabite kateri koli drug identifikator iz profila stranke za preslikavo podatkov v Adobe Standard kampanje.
@@ -125,9 +125,9 @@ Ta polja bomo uporabili za identifikacijo profilov v aplikaciji Adobe Campaign S
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Uvozite podatke v aplikacijo Adobe Campaign Standard
 
-Zdaj, ko je vse na svojem mestu, moramo uvoziti pripravljene podatke občinstvo iz Customer Insights v Adobe Campaign Standard za ustvarjanje profilov. Preberite, [kako uvoziti profile v aplikacijo Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) z uporabo poteka dela.
+Zdaj, ko je vse na svojem mestu, moramo uvoziti pripravljene občinstvo podatke iz Customer Insights v Adobe Campaign Standard za ustvarjanje profilov. Preberite, [kako uvoziti profile v aplikacijo Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) z uporabo poteka dela.
 
-Potek dela uvoza na spodnji sliki je bil konfiguriran tako, da se izvaja vsakih osem ur in išče izvožene segmente Customer Insights (datoteka .csv v shrambi blobov Azure). Potek dela izvleče vsebino datoteke .csv v določenem vrstnem redu stolpcev. Ta potek dela je bil izdelan za obravnavo osnovnih napak in zagotavljanje, da ima vsak zapis e-poštni naslov, preden vnesemo podatke v aplikacijo Adobe Campaign Standard. Potek dela prav tako iz imena datoteke izvleče ime segmenta, preden ga vstavi v podatke profila aplikacije Adobe Campaign Standard.
+Delovni potek uvoza na spodnji sliki je bil konfiguriran tako, da se izvaja vsakih osem ur in išče izvožene segmente Customer Insights (datoteka .csv v shrambi blobov Azure). Potek dela izvleče vsebino datoteke .csv v določenem vrstnem redu stolpcev. Ta potek dela je bil izdelan za obravnavo osnovnih napak in zagotavljanje, da ima vsak zapis e-poštni naslov, preden vnesemo podatke v aplikacijo Adobe Campaign Standard. Potek dela prav tako iz imena datoteke izvleče ime segmenta, preden ga vstavi v podatke profila aplikacije Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Posnetek zaslona poteka dela uvoza v uporabniški vmesnik aplikacije Adobe Campaign Standard.":::
 

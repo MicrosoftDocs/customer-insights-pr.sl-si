@@ -1,5 +1,5 @@
 ---
-title: Izvozite podatke Customer Insights v Dynamics 365 Sales
+title: Izvoz segmentov v Dynamics 365 Sales (predogled)
 description: Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 987690283090ec83ca75f50bf8f3cd8da9295887
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643320"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082396"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Uporaba segmentov v storitvi Dynamics 365 Sales (predogledna različica)
-
-
+# <a name="export-segments-to-dynamics-365-sales-preview"></a>Izvoz segmentov v Dynamics 365 Sales (predogled)
 
 Na podlagi podatkov o strankah z aplikacijo Dynamics 365 Sales ustvarjajte sezname za trženje in postopke za nadaljnje delo ter pošiljajte promocijske vsebine.
 
@@ -34,7 +32,7 @@ Na podlagi podatkov o strankah z aplikacijo Dynamics 365 Sales ustvarjajte sezna
 1. Zapisi o stikih morajo biti prisotni v storitvi Dynamics 365 Sales, preden lahko izvozite segment iz rešitve Customer Insights v Sales. Preberite več o tem, kako vnesti stike iz [Dynamics 365 Sales z uporabo Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
-   > Izvoz segmentov iz Customer Insights v Sales ne bo ustvaril novih kontaktnih zapisov v primerkih Sales. Zapise o stikih iz prodaje je treba prenesti v Customer Insights in jih uporabiti kot vir podatkov. Prav tako jih je treba vključiti v enotno entiteto stranke, da se ID-ji strank preslikajo v ID-je stikov, preden je segmente mogoče izvoziti.
+   > Izvoz segmentov iz Customer Insights v Sales ne bo ustvaril novih zapisov stikov v primerkih Sales. Zapise o stikih iz prodaje je treba prenesti v Customer Insights in jih uporabiti kot vir podatkov. Prav tako jih je treba vključiti v enotno entiteto stranke, da se ID-ji strank preslikajo v ID-je stikov, preden je segmente mogoče izvoziti.
 
 ## <a name="set-up-the-connection-to-sales"></a>Nastavitev povezave s storitvijo Sales
 

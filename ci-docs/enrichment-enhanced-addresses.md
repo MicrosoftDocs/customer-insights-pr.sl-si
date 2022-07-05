@@ -1,5 +1,5 @@
 ---
-title: Obogatitev naslova (vsebuje video)
+title: Obogatite profile strank z izboljšanimi naslovi (vsebuje video)
 description: Z Microsoftovimi modeli obogatite in uravnotežite podatke o naslovih za profile strank.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,14 +14,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953831"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082081"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogatitev profilov strank z izboljšanimi naslovi
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Obogatite profile strank z izboljšanimi naslovi
 
 Naslovi v vaših podatkih so lahko nestrukturirani, nepopolni ali napačni. Uporabite Microsoftove modele za uravnoteženje in obogatitev naslovov v [obliki Common Data Model](/common-data-model/schema/core/applicationcommon/address) za boljšo natančnost in vpoglede.
 
@@ -84,7 +84,7 @@ Trenutno podpiramo obogatitev naslovov v teh državah ali regijah:
 
 1. Preglejte pregled in nato izberite **Naslednji**.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
 
 1. Izberite način oblikovanja naslovov v naboru podatkih. Izberite **Naslov z enim atributom**, če naslovi v vaših podatkih uporabljajo eno samo polje. Izberite **Naslov z več atributi**, če naslovi v vaših podatkih uporabljajo več kot eno podatkovno polje.
 
@@ -101,11 +101,11 @@ Trenutno podpiramo obogatitev naslovov v teh državah ali regijah:
 
 1. Po pregledu svoje izbire izberite možnost **Shrani obogatitev**.
 
-## <a name="enrichment-results"></a>Rezultati obogatitve
+## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-The **Število kupcev, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
+The **Število strank, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
 
 ### <a name="overview-card"></a>Pregledna kartica
 
@@ -113,7 +113,7 @@ The **Pregled sprememb strank** kartica prikazuje podrobnosti o kritju obogatitv
 
 - **Naslovi obdelani in spremenjeni** : Število profilov strank z naslovi, ki so bili uspešno obogateni.
 - **Naslovi so obdelani in niso spremenjeni** : Število profilov strank z naslovi, ki so bili prepoznani, vendar nespremenjeni. Običajno se zgodi, ko so vhodni podatki veljavni in jih z obogatitvijo ni mogoče izboljšati.
-- **Naslovi niso obdelani in nespremenjeni** : število profilov z naslovi, ki niso bili prepoznani. Običajno za vhodne podatke, ki so neveljavni ali niso podprti z obogatitvijo.
+- **Naslovi niso obdelani in niso spremenjeni** : število profilov z naslovi, ki niso bili prepoznani. Običajno za vhodne podatke, ki so neveljavni ali niso podprti z obogatitvijo.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

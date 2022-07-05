@@ -1,5 +1,5 @@
 ---
-title: Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve
+title: Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve Azure
 description: Uporaba glavnega imena storitve Azure za povezovanje s shrambo Data Lake.
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011861"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082249"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezava z računom Azure Data Lake Storage z uporabo glavnega imena storitve Azure
 
@@ -26,7 +26,7 @@ Avtomatizirana orodja, ki uporabljajo storitve Azure, bi morala imeti vedno omej
 
 > [!IMPORTANT]
 >
-> - Račun Data Lake Storage, ki bo uporabljal principala storitve, mora biti Gen2 in imeti [Imenski prostor hierarhičen je omogočen](/azure/storage/blobs/data-lake-storage-namespace). Računi za shranjevanje podatkov Azure Data Lake Gen1 niso podprti.
+> - Račun Data Lake Storage, ki bo uporabljal principala storitve, mora biti Gen2 in imeti [hierarhičen imenski prostor je omogočen](/azure/storage/blobs/data-lake-storage-namespace). Računi za shranjevanje podatkov Azure Data Lake Gen1 niso podprti.
 > - Za ustvarjanje principala storitve potrebujete skrbniška dovoljenja za najemnik imenika Azure.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Ustvarjanje glavnega imena storitve Azure za storitev Customer Insights
@@ -57,7 +57,7 @@ Pojdite na portal Azure, da podelite dovoljenja principalu storitve za račun za
 |----------|------------|
 |Trenutno prijavljen uporabnik|**Vloga** : Storage Blob Data Uporabnik z dovoljenjem za branje, Storage Blob sodelavec ali Lastnik Storage Blob.<br>**Raven** : Dovoljenja se lahko dodelijo za račun za shranjevanje ali vsebnik.</br>|
 |Vodja storitve Customer Insights -<br>Uporaba Azure Data Lake Storage kot vir podatkov</br>|Možnost 1<ul><li>**Vloga** : Storage Blob Data Uporabnik z dovoljenjem za branje, Storage Blob Data sodelavec ali Lastnik podatkov Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>2. možnost *(brez deljenja dostopa glavnega servisa do računa za shranjevanje)*<ul><li>**1. vloga** : Storage Blob Data Uporabnik z dovoljenjem za branje, Storage Blob Data sodelavec ali Lastnik podatkov Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za vsebnik.</li><li>**2. vloga** : Delegator podatkov blobov za shranjevanje.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>|
-|Vodja storitve Customer Insights - <br>Uporaba Azure Data Lake Storage kot izhod ali cilj</br>|Možnost 1<ul><li>**Vloga** : Storage Blob Data sodelavec ali Lastnik Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>2. možnost *(brez deljenja dostopa glavnega servisa do računa za shranjevanje)*<ul><li>**Vloga** : Storage Blob Data sodelavec ali Lastnik Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za vsebnik.</li><li>**2. vloga** : Delegator Storage Blob.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>|
+|Vodja storitve Customer Insights - <br>Uporaba Azure Data Lake Storage kot izhod ali cilj</br>|Možnost 1<ul><li>**Vloga** : Storage Blob Data sodelavec ali Storage Blob Lastnik.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>2. možnost *(brez deljenja dostopa glavnega servisa do računa za shranjevanje)*<ul><li>**Vloga** : Storage Blob Data sodelavec ali Storage Blob Lastnik.</li><li>**Raven** : Dovoljenja je treba odobriti za vsebnik.</li><li>**2. vloga** : Delegator blobov za shranjevanje.</li><li>**Raven** : Dovoljenja je treba odobriti za račun za shranjevanje.</li></ul>|
 
 1. Odprite [skrbniški portal Azure](https://portal.azure.com) in se vpišite v svojo organizacijo.
 
@@ -118,7 +118,7 @@ Račun Data Lake Storage v storitvi Customer Insights lahko pripnete [shraniti i
 
 2. Ustvarite glavno ime storitve za Customer Insights z modulom Azure AD PowerShell.
 
-   1. V oknu PowerShell vnesite `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Zamenjati *[vaš imenik ID]* z dejanskim ID-jem imenika vaše naročnine na Azure, kjer želite ustvariti principala storitve. Parameter z imenom okolja, `AzureEnvironmentName`, je izbiren.
+   1. V oknu PowerShell vnesite `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. Zamenjati *[vaš ID imenika]* z dejanskim ID-jem imenika vaše naročnine na Azure, kjer želite ustvariti principala storitve. Parameter z imenom okolja, `AzureEnvironmentName`, je izbiren.
   
    1. Vnesite `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Ta ukaz ustvari principal storitve za Customer Insights za izbrano naročnino Azure.
 

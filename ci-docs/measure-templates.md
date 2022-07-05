@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: eeabd889f7b694f8d809894169a3cdc068acc340
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643140"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051704"
 ---
-# <a name="use-a-template-to-build-a-measure"></a>Uporaba predloge za izdelavo ukrepa
+# <a name="create-measures-from-templates"></a>Ustvarite mere iz predlog
 
 Uporabite lahko vnaprej določene predloge, ki se pogosto uporabljajo [ukrepe](measures.md) jih ustvariti. Podrobni opisi predlog in vodena izkušnja vam pomagajo pri učinkovitem ustvarjanju ukrepov. Predloge temeljijo na preslikanih podatkih iz entitete *Poenotena dejavnost*. Prepričajte se, da ste konfigurirali [dejavnosti strank](activities.md), preden ustvarite ukrep iz predloge.
 
@@ -51,7 +51,7 @@ Razpoložljive predloge ukrepov:
 
 1. Preglejte zahtevane podatke in izberite **Začetek**, če imate na voljo vse podatke.
 
-1. Izberite **Uredite podrobnosti** poleg Ime mere. Navedite ime za ukrep. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) po meri.
+1. Izberite **Uredite podrobnosti** poleg Ime ukrepa. Navedite ime za ukrep. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) do mere.
 
    :::image type="content" source="media/measures_edit_details.png" alt-text="Pogovorno okno Uredi podrobnosti.":::
 

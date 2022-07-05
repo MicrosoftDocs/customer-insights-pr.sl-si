@@ -1,5 +1,5 @@
 ---
-title: Izvoz podatkov Customer Insights v storitev Azure Data Lake Storage Gen2
+title: Izvozi podatke v Azure Data Lake Storage Gen2 (predogled)
 description: Preberite o konfiguraciji povezave s storitvijo Azure Data Lake Storage Gen2.
 ms.date: 10/06/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: c2446fba425203d2910b82134b73543a73c7ecf8
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947250"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082669"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Izvoz seznama segmentov in drugih podatkov v storitev Azure Data Lake Storage Gen2 (predogledna različica)
+# <a name="export-data-to-azure-data-lake-storage-gen2-preview"></a>Izvozi podatke v Azure Data Lake Storage Gen2 (predogled)
 
 Podatke iz storitve Customer Insights shranite v račun Data Lake Storage Gen2 ali jih uporabite za prenos podatkov v druge aplikacije.
 
@@ -61,6 +61,6 @@ Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-d
 Izvoženi podatki so shranjeni v vsebniku za shrambo Azure Data Lake Gen 2, ki ste ga konfigurirali.
 
 > [!TIP]
-> Izvoz entitet, ki vsebujejo veliko količino podatkov, lahko pri vsakem izvozu povzroči več datotek CSV v isti mapi. Delitev izvozov se zgodi zaradi učinkovitosti, da se čim bolj zmanjša čas, potreben za dokončanje izvoza.
+> Izvoz entitet, ki vsebujejo veliko količino podatkov, lahko pri vsakem izvozu povzroči več datotek CSV v isti mapi. Delitev izvozov se zgodi zaradi učinkovitosti, da se zmanjša čas, potreben za dokončanje izvoza.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

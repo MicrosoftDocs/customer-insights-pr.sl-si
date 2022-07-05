@@ -1,5 +1,5 @@
 ---
-title: Vir podatkov obogatitev
+title: Obogatitev za vire podatkov (predogled)
 description: Obogatite vire podatkov, preden greste skozi postopek poenotenja podatkov.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011493"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082123"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obogatitev za vire podatkov (predogled)
 
@@ -23,7 +23,7 @@ Uporabite podatke iz virov, kot so Microsoft in drugi partnerji, da obogatite sv
 
 Za ustvarjanje ali urejanje obogatitev morate imeti dovoljenja sodelavec ali skrbnika. Za več informacij glejte razdelek [Dovoljenja](permissions.md).  
 
-1. Pojdi do **Podatki** > **Združite**. Izberite entiteto, ki jo želite obogatiti, in izberite en atribut kot primarni ključ za entiteto. Za več informacij glejte [Izberite primarni ključ](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Pojdi do **Podatki** > **Poenoti**. Izberite entiteto, ki jo želite obogatiti, in izberite en atribut kot primarni ključ za entiteto. Za več informacij glejte [Izberite primarni ključ](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
 
@@ -31,7 +31,7 @@ Za ustvarjanje ali urejanje obogatitev morate imeti dovoljenja sodelavec ali skr
 
    :::image type="content" source="media/data_sources_enrich.png" alt-text="Stran z viri podatkov z označeno Obogati":::
 
-   The **Odkrij** zavihek prikaže [podprte možnosti obogatitve vir podatkov](#supported-data-source-enrichments).
+   The **Odkrijte** zavihek prikaže [podprte možnosti obogatitve vir podatkov](#supported-data-source-enrichments).
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stran za obogatitev virov podatkov.":::
 
@@ -39,13 +39,13 @@ Za ustvarjanje ali urejanje obogatitev morate imeti dovoljenja sodelavec ali skr
 
 ## <a name="supported-data-source-enrichments"></a>Podprte obogatitve vir podatkov
 
-Za vire podatkov so trenutno na voljo naslednje obogatitve. Preglejte podrobne korake za obogatitev, da se naučite, kako jo konfigurirati.
+Za vire podatkov so trenutno na voljo naslednje obogatitve. Oglejte si podrobne korake za obogatitev, da se naučite, kako jo konfigurirati.
 
 - [Izboljšani naslovi](enrichment-enhanced-addresses.md)
 - [Izboljšani podatki podjetja](enrichment-enhanced-company-data.md)
 - [Podatki o identiteti iz LiveRamp](enrichment-liveramp.md)
 
-## <a name="manage-existing-data-source-enrichments"></a>Upravljajte obstoječe vir podatkov obogatitve
+## <a name="manage-existing-data-source-enrichments"></a>Upravljajte obstoječe obogatitve vir podatkov
 
 Za ogled vseh konfiguriranih obogatitev odprite zavihek **Moje obogatitve**.
 

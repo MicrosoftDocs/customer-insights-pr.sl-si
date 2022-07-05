@@ -1,5 +1,5 @@
 ---
-title: Dodatek za kartico stranke za aplikacije Dynamics 365 (vsebuje video)
+title: Dodatek za kartico stranke za aplikacije Dynamics 365 (predogled) (vsebuje video)
 description: Pokažite podatke o profilu stranke iz Customer Insights v aplikacijah Dynamics 365 s tem dodatkom.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755656"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082144"
 ---
-# <a name="customer-card-add-in-preview"></a>Dodatek za kartico stranke (predogled)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dodatek za kartico stranke za aplikacije Dynamics 365 (predogled)
 
 Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 365. Če je v podprti aplikaciji Dynamics 365 nameščen dodatek za kartico stranke, lahko izberete prikaz polj profila strank, vpogledov in časovnice dejavnosti. Dodatek bo pridobil podatke iz Customer Insights, ne da bi to vplivalo na podatke v povezani aplikaciji Dynamics 365.
 
@@ -29,7 +29,7 @@ Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 
 ## <a name="prerequisites"></a>Zahteve
 
 - Dodatek deluje samo z aplikacijami Dynamics 365, ki temeljijo na modelu, na primer Sales ali Customer Service, različice 9.0 in novejše.
-- Da bi se vaši podatki Dynamics 365 preslikali v profile strank Customer Insights, priporočamo, da [vneseno iz aplikacije Dynamics 365 z uporabo Microsoft Dataverse konektor](connect-power-query.md). Če za vnos stikov (ali računov) Dynamics 365 uporabljate drugačen način, se morate prepričati,`contactid` (oz`accountid`) polje je nastavljeno kot [primarni ključ za ta vir podatkov v koraku zemljevida postopka združevanja podatkov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Za preslikavo vaših podatkov Dynamics 365 v profile strank Customer Insights priporočamo, da [vneseno iz aplikacije Dynamics 365 z uporabo Microsoft Dataverse priključek](connect-power-query.md). Če za vnos stikov (ali računov) Dynamics 365 uporabljate drugačen način, se morate prepričati,`contactid` (oz`accountid`) polje je nastavljeno kot [primarni ključ za ta vir podatkov v koraku zemljevida postopka združevanja podatkov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Vsi uporabniki Dynamics 365 dodatka za kartico stranke morajo biti [dodani kot uporabniki](permissions.md) v Customer Insights, da si ogledate podatke.
 - [Konfigurirane zmožnosti iskanja in filtriranja](search-filter-index.md) v Customer Insights so potrebni za delovanje iskanja podatkov.
 - Vsak nadzor nad dodatki se opira na določene podatke v Customer Insights. Nekateri podatki in kontrolniki so na voljo samo v okoljih določenih vrst. Konfiguracija dodatka vas bo obvestila, če kontrolnik ni na voljo zaradi izbrane vrste okolja. Več informacij o [primerih uporabe okolja](work-with-business-accounts.md).
@@ -132,13 +132,13 @@ Tudi s pravilno konfiguriranimi ID polji kontrolniki ne najdejo podatkov za nobe
 
 1. Prepričajte se, da ste konfigurirali dodatek za kartice v skladu z navodili: [Konfigurirajte dodatek za kartico stranke](#configure-the-customer-card-add-in)
 
-1. Preglejte konfiguracijo za vnos podatkov. Uredite vir podatkov za sistem Dynamics 365, ki vsebuje GUID ID stika. Če je ID stika GUID prikazan z velikimi črkami v Power Query urejevalnika, poskusite z naslednjimi koraki:
+1. Preglejte konfiguracijo vnosa podatkov. Uredite vir podatkov za sistem Dynamics 365, ki vsebuje GUID ID stika. Če je ID stika GUID prikazan z velikimi črkami v Power Query urejevalnika, poskusite z naslednjimi koraki:
     1. Uredite vir podatkov, da odprete vir podatkov v Power Query Urednik.
     1. Izberite stolpec ID stika.
     1. Izberite **Preoblikovanje** v naslovni vrstici, da si ogledate razpoložljiva dejanja.
     1. Izberite **male črke**. Preverite, ali so GUID-ji v tabeli zdaj male črke.
     1. Shranite vir podatkov.
-    1. Zaženite procese vnosa podatkov, poenotenja in nadaljnjih procesov za širjenje sprememb v GUID.
+    1. Zaženite procese vnosa podatkov, poenotenja in nadaljnjih postopkov za širjenje sprememb v GUID.
 
 Ko sistem dokonča popolno osvežitev, morajo kontrolniki dodatka za kartico stranke prikazati pričakovane podatke.
 

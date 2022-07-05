@@ -1,5 +1,5 @@
 ---
-title: Segmenti v Customer Insights
+title: Pregled segmentov
 description: Pregled segmentov ter napotki, kako jih ustvariti in upravljati.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: d616ec8273115203dddb59334a348c66e72fa678
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 8b2c2f9b84bf8b7f37d1468b871946ecb3e6aa98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800762"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050967"
 ---
 # <a name="segments-overview"></a>Pregled segmentov
 
@@ -76,7 +76,7 @@ Ko izberete segment, so na voljo naslednja dejanja:
 
 Vse segmente lahko osvežite naenkrat tako, da izberete **Osveži vse** na strani **Segmenti**, ali pa lahko osvežite enega ali več segmentov, ko jih izberete in nato izberete **Osveži** v možnostih. Lahko pa konfigurirate ponavljajoče se osveževanje prek možnosti **Skrbnik** > **Sistem** > **Načrtovanje**. Ko je konfigurirana ponavljajoča se osvežitev, veljajo naslednja pravila:
 
-- Vsi segmenti z vrsto **Dinamično** oz **Razširitev** se bo samodejno osvežilo ob nastavljeni kadenci. Ko je osvežitev končana, **Stanje** označuje, ali je prišlo do težav pri osveževanju segmenta. The **Nazadnje osveženo** prikazuje časovni žig zadnje uspešne osvežitve. Če pride do napake, izberite napako, da si ogledate podrobnosti o tem, kaj se je zgodilo.
+- Vsi segmenti z vrsto **Dinamično** oz **Razširitev** se samodejno osveži ob nastavljeni kadenci. Ko je osvežitev končana, **Stanje** označuje, ali je prišlo do težav pri osveževanju segmenta. The **Nazadnje osveženo** prikazuje časovni žig zadnje uspešne osvežitve. Če pride do napake, izberite napako, da si ogledate podrobnosti o tem, kaj se je zgodilo.
 - Segmenti z vrsto **Statično** *ne bo* se samodejno osveži. The **Nazadnje osveženo** prikazuje časovni žig zadnjega ročnega zagona ali osveževanja statičnih segmentov.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
@@ -101,21 +101,21 @@ Segment lahko izvozite s strani s segmenti ali s [strani z izvozi](export-destin
 
 ## <a name="track-usage-of-a-segment"></a>Sledite uporabi segmenta
 
-Če uporabljate segmente v aplikacijah, ki temeljijo na istem Microsoft Dataverse organizaciji, ki je povezana s Customer Insights, lahko spremljate uporabo segmenta. Za [Segmenti Customer Insights, ki se uporabljajo na potovanjih strank Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), vas sistem obvesti o uporabi tega segmenta.
+Če uporabljate segmente v aplikacijah, ki temeljijo na istem Microsoft Dataverse organizaciji, ki je povezana s Customer Insights, lahko spremljate uporabo segmenta. Za [Segmenti Customer Insights, ki se uporabljajo na poteh strank v Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), vas sistem obvesti o uporabi tega segmenta.
 
 Ko urejate segment, ki se uporablja v okolju Customer Insights ali v dejavnosti strank v marketingu, se pasica v [graditelj segmentov](segment-builder.md) vas obvešča o odvisnostih. Podrobnosti odvisnosti si lahko ogledate neposredno iz pasice ali z izbiro **Uporaba** v graditelju segmentov.
 
-The **Uporaba segmenta** podokno prikazuje podrobnosti o uporabi tega segmenta v Dataverse -osnovane aplikacije. Za segmente, ki se uporabljajo pri poteh strank, boste našli povezavo za pregled poti v Marketingu, kjer se uporablja ta segment. Če imate dovoljenja za dostop do aplikacije Marketing, lahko tam dostopate do več podrobnosti.
+The **Uporaba segmenta** podokno prikazuje podrobnosti o uporabi tega segmenta v Dataverse -osnovane aplikacije. Za segmente, ki se uporabljajo pri poteh strank, boste našli povezavo za pregled poti v Marketingu, kjer se ta segment uporablja. Če imate dovoljenja za dostop do aplikacije Marketing, lahko tam dostopate do več podrobnosti.
 
 :::image type="content" source="media/segment-usage-pane.png" alt-text="Stransko podokno s podrobnostmi o uporabi segmenta v ustvarjalniku segmentov.":::
 
-Sistem vas obvesti o uporabi sledinega segmenta, ko ga poskušate izbrisati. Če je segment, ki ga nameravate izbrisati, uporabljen v dejavnosti strank v trženju, se bo ta pot za vse uporabnike v segmentu ustavila. Če je potovanje del marketinške kampanje, bo izbris vplival na to samo kampanjo. Kljub opozorilom pa lahko segment še vedno izbrišete.
+Sistem vas obvesti o uporabi sledinega segmenta, ko ga poskušate izbrisati. Če je segment, ki ga nameravate izbrisati, uporabljen v dejavnosti strank v trženju, se bo to pot ustavilo za vse uporabnike v segmentu. Če je potovanje del marketinške kampanje, bo izbris vplival na to samo kampanjo. Kljub opozorilom pa lahko segment še vedno izbrišete.
 
 :::image type="content" source="media/segment-usage-delete.png" alt-text="Pogovorno okno za potrditev izbrisa segmenta, ko je segment uporabljen v a Dataverse aplikacijo.":::
 
 ### <a name="supported-apps"></a>Podprte aplikacije
 
-Trenutno se uporaba spremlja v naslednjem Dataverse -osnovane aplikacije:
+Poraba se trenutno spremlja v naslednjem Dataverse -osnovane aplikacije:
 
 - [Potovanja strank v Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile)
 

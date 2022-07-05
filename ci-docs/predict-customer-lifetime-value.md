@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643821"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055234"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predvidevanje življenjske vrednosti stranke (CLV)
 
-Predvidite potencialno vrednost (prihodek), ki jo bodo posamezne aktivne stranke prispevale vašemu podjetju v določenem prihodnjem časovnem obdobju. Ta funkcija vam lahko pomaga doseči različne cilje: 
+Predvidite potencialno vrednost (prihodek), ki jo bodo posamezne aktivne stranke prispevale vašemu podjetju v določenem prihodnjem časovnem obdobju. Ta funkcija vam lahko pomaga doseči različne cilje:
 - prepoznati stranke z visoko vrednostjo in obdelavo tega vpogleda,
 - ustvariti strateške segmente strank na podlagi njihove potencialne vrednosti za vodenje prilagojenih akcij s ciljno usmerjenimi prodajnimi, trženjskimi in podpornimi prizadevanji,
 - usmerjati razvoj izdelkov s poudarkom na funkcijah, ki povečujejo vrednost kupca,

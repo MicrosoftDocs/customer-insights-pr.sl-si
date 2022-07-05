@@ -1,5 +1,5 @@
 ---
-title: Poenoti polja stranke ali računa
+title: Poenoti polja strank za poenotenje podatkov
 description: Združite entitete za ustvarjanje poenotenih profilov strank.
 recommendations: false
 ms.date: 05/04/2022
@@ -14,14 +14,14 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740877"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082963"
 ---
-# <a name="unify-customer-fields"></a>Poenoti polja strank
+# <a name="unify-customer-fields-for-data-unification"></a>Poenoti polja strank za poenotenje podatkov
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
@@ -40,7 +40,7 @@ V tem koraku postopka združevanja izberite in izključite atribute, ki jih žel
       - [Izključi](#exclude-fields)
       - [Premaknite se navzgor ali navzdol](#change-the-order-of-fields)
 
-   1. Za katera koli posamezna polja lahko:
+   1. Za posamezna polja lahko:
       - [Združitev polj](#combine-fields-manually)
       - [Združite skupino polj](#combine-a-group-of-fields)
       - [Preimenuj](#rename-fields)
@@ -145,7 +145,7 @@ Skupino polj obravnavajte kot eno samo enoto. Na primer, če naši zapisi vsebuj
 
 Določite, kako ustvariti vrednosti ID-ja stranke, edinstvene identifikatorje profila stranke. Korak poenotenih polj v postopku poenotenja podatkov ustvari edinstven identifikator profila stranke. Identifikator je *Identifikacijska številka stranke* v *Stranka* subjekt, ki izhaja iz postopka poenotenja podatkov.
 
-The *Identifikacijska številka stranke*  temelji na zgoščevanju prve vrednosti primarnih ključev zmagovalca, ki ni nič. Ti ključi prihajajo iz entitet, ki se uporabljajo pri poenotenju podatkov, in nanje vpliva vrstni red ujemanja.Tako se lahko ustvarjeni ID stranke spremeni, ko se spremeni vrednost primarnega ključa v primarni entiteti naročila ujemanja. Vrednost primarnega ključa morda ne predstavlja vedno iste stranke.
+The *Identifikacijska številka stranke*  temelji na zgoščevanju prve vrednosti primarnih ključev zmagovalca, ki ni nič. Ti ključi prihajajo iz entitet, ki se uporabljajo pri združevanju podatkov, in nanje vpliva vrstni red ujemanja.Tako se lahko ustvarjeni ID stranke spremeni, ko se spremeni vrednost primarnega ključa v primarni entiteti naročila ujemanja. Vrednost primarnega ključa morda ne predstavlja vedno iste stranke.
 
 Če konfigurirate stabilen ID stranke, se lahko temu izognete.
 

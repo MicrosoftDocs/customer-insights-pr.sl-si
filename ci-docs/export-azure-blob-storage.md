@@ -1,5 +1,5 @@
 ---
-title: Izvoz podatkov Customer Insights v shrambo zbirke dvojiških podatkov Azure
+title: Izvoz podatkov v Azure Blob Storage (predogled)
 description: Naučite se, kako konfigurirati povezavo in izvažati v shrambo zbirke dvojiških podatkov.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947158"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055510"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Izvoz seznamov segmentov in drugih podatkov v shrambo zbirke dvojiških podatkov Azure (predogledna različica)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Izvoz podatkov v Azure Blob Storage (predogled)
 
 Podatke iz storitve Customer Insights shranite v shrambi zbirke dvojiških podatkov Azure ali jih uporabite za prenos podatkov v druge aplikacije.
 
@@ -69,7 +69,7 @@ Izvoženi podatki so shranjeni v vsebniku za Shrambo zbirke dvojiških podatkov,
   - Primer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
   
   > [!TIP]
-  > Izvoz entitet, ki vsebujejo veliko količino podatkov, lahko pri vsakem izvozu povzroči več datotek CSV v isti mapi. Delitev izvozov se zgodi zaradi učinkovitosti, da se čim bolj zmanjša čas, potreben za dokončanje izvoza.
+  > Izvoz entitet, ki vsebujejo veliko količino podatkov, lahko pri vsakem izvozu povzroči več datotek CSV v isti mapi. Delitev izvozov se zgodi zaradi učinkovitosti, da se zmanjša čas, potreben za dokončanje izvoza.
 
 - Datoteka model.json za izvožene entitete bo na ravni %ExportDestinationName%.  
   - Primer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`

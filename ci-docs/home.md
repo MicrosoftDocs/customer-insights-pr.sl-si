@@ -1,5 +1,5 @@
 ---
-title: Domača stran v storitvi Customer Insights
+title: Raziščite vpogled v stranke
 description: Začnite raziskovati aplikacijo na domači strani.
 ms.date: 05/11/2022
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
-ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.openlocfilehash: 13b4bfa2f0b0cd69454c025e2f59de3dd6bb75a3
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "8768370"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053317"
 ---
 # <a name="explore-customer-insights"></a>Raziščite vpogled v stranke
 
@@ -38,7 +38,7 @@ The **Okolje** izbirnik prikazuje okolje, v katerem delate, in vam omogoča ustv
 
 Ikona smeška je **Povratne informacije** nadzor. Izberite ga, da nam poveste o svoji izkušnji s storitvijo Customer Insights. Aktivno poslušamo vaše povratne informacije in se vam vnaprej zahvaljujemo, da ste nam sporočili, kaj vam je všeč in kako lahko izboljšamo.
 
-The **Nastavitve** nadzor, ki ga predstavlja ikona zobnika, vam omogoča zbiranje podrobnosti seje za Customer Insights in konfiguriranje Globalne nastavitve za vaš Microsoft 365 profil.
+The **Nastavitve** nadzor, ki ga predstavlja ikona zobnika, vam omogoča zbiranje podrobnosti seje za Customer Insights in konfiguriranje Globalne nastavitve za Microsoft 365 profil.
 
 **Pomagaj** možnosti, vizualizirane z ikono vprašaja, zagotavljajo kontekstualne povezave pomoči in druge koristne vire.
 
@@ -46,11 +46,11 @@ Vaša profilna slika odpre **Upravitelj računa** Za vašo Microsoft 365 profil.
 
 ## <a name="getting-started-with-customer-insights-section"></a>Začetek z razdelkom Customer Insights
 
-Ta razdelek vsebuje kartice, ki vam pomagajo skozi postopek nastavljanja okolja Customer Insights.
+Ta razdelek vsebuje kartice, ki vam pomagajo skozi postopek nastavitve okolja Customer Insights.
 
 1. The **Dodajte podatke** kartica vam pomaga pri uvozu podatkov. Customer Insights podpira [več možnosti za vnos podatkov o vaših strankah](data-sources.md). Izberite **Dodajte vire podatkov** za začetek.
 1. Ko se uvoz začetnih podatkov uspešno zaključi, lahko uporabite datoteko **Poenoti podatke** kartico za uskladitev podatkov in [ustvarite enotne profile strank](data-unification.md) iz različnih virov. 
-1. Z vzpostavljenimi enotnimi profili strank je čas za pregled **Analizirajte podatke** možnosti in pridobite dodatne vpoglede. Poskusite ustvariti [poslovni ukrepi](measures.md) za sledenje KPI-jem, [definirati segmente](segments.md) doseči določeno občinstvo, oz [konfigurirajte napovedi](predictions-overview.md) s pomočjo AI.
+1. Z enotnimi profili strank je čas za pregled **Analizirajte podatke** možnosti in pridobite dodatne vpoglede. Poskusite ustvariti [poslovni ukrepi](measures.md) za sledenje KPI-jem, [definirati segmente](segments.md) doseči določeno občinstvo, oz [konfigurirajte napovedi](predictions-overview.md) s pomočjo AI.
 1. Zdaj, ko so vaši podatki o strankah uvoženi, poenoteni in lepo strukturirani, uporabljate naše [različne izvozne destinacije](export-destinations.md) ukrepati glede podatkov. Izberite **Dodajte povezave** da povežete svoje najljubše storitve. Na primer, izvozite podatke v Dynamics 365 Marketing, da ustvarite izhodne marketinške kampanje ali zgradite potovanja strank. 
 
 ## <a name="your-customer-insights-section"></a>Vaš razdelek z vpogledi v stranke

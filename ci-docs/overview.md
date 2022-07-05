@@ -1,25 +1,25 @@
 ---
-title: Dynamics 365 Customer Insights pregled izdelka
+title: Pregled izdelka za Dynamics 365 Customer Insights
 author: m-hartmann
 description: Pridobite pregled za Dynamics 365 Customer Insights in njegove glavne značilnosti.
 ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: a8b982d761b6598fb5c582963dbc00852089a396
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947112"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051151"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Pregled izdelka za Dynamics 365 Customer Insights
 
 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je Microsoftova platforma za podatke o strankah (CDP), ki pomaga zagotavljati prilagojeno uporabniško izkušnjo. Aplikacija ponuja celosten pogled na stranke z neprimerljivim časom za vpogled. Pridobite najbolj izčrpen pogled na svoje stranke tako, da podatke o strankah poenotite z operativnimi in IoT podatki v realnem času. Obogatite profile strank s prvimi in zunanjimi viri podatkov. 
 
-Customer Insights vam pomaga preoblikovati vaše podjetje v stranko osredotočeno organizacijo, tako da omogoči vašim strokovnjakom za trženje, prodajo in storitve, da prilagodijo interakcije 1:1 v obsegu. Integracije na ključ z Microsoftovimi aplikacijami in aplikacijami tretjih oseb se lahko uporabijo za aktiviranje vpogledov v realnem času za spodbujanje smiselnih dejanj.
+Customer Insights vam pomaga preoblikovati vaše podjetje v stranko osredotočeno organizacijo, tako da svojim strokovnjakom za trženje, prodajo in storitve omogoči prilagajanje interakcij 1:1 v velikem obsegu. Integracije na ključ z Microsoftovimi aplikacijami in aplikacijami tretjih oseb se lahko uporabijo za aktiviranje vpogledov v realnem času za spodbujanje smiselnih dejanj.
 
-Povežite podatke iz transakcijskih, vedenjskih in demografskih virov podatkov, da ustvarite 360-stopinjske poglede strank. Pridobite nenavadne vpoglede z vnaprej izdelanimi modeli umetne inteligence ali hitro zgradite, preizkusite in uveljavite modele AI/ML po meri z uporabo naprednih analitičnih rešitev v neomejenem obsegu.
+Povežite podatke iz transakcijskih, vedenjskih in demografskih virov podatkov, da ustvarite 360-stopinjske poglede strank. Z vnaprej izdelanimi modeli umetne inteligence pridobite nenavadne vpoglede ali hitro zgradite, preizkusite in uveljavite modele AI/ML po meri z uporabo naprednih analitičnih rešitev v neomejenem obsegu.
 
 Ohranite popoln nadzor nad svojimi podatki o strankah, da zagotovite najvišjo raven upravljanja podatkov in skladnost s samopostrežnim CDP za podjetja, ki temelji na Microsoft Azure. Podprite Splošno uredbo o varstvu podatkov (GDPR) ter druge zakonodajne zahteve in industrijske standarde z vgrajenimi orodji za zasebnost, varnost in upravljanje.
 

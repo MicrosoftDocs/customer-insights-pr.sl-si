@@ -1,5 +1,5 @@
 ---
-title: revizija Dynamics 365 Customer Insights z Azure Monitor
+title: Posredovanje dnevnika Dynamics 365 Customer Insights z Azure Monitor (predogled)
 description: Naučite se pošiljati dnevnike na Microsoft Azure Monitor.
 ms.date: 12/14/2021
 ms.reviewer: mhart
@@ -11,34 +11,34 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807601"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052673"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Posredovanje dnevnika Dynamics 365 Customer Insights z Azure Monitor (predogled)
 
-Dynamics 365 Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ali jih pretočno predvajajte [Azure Središča za dogodke](https://azure.microsoft.com/services/event-hubs/).
+Dynamics 365 Customer Insights zagotavlja neposredno integracijo z Azure Monitor. Dnevniki virov Azure Monitor vam omogočajo spremljanje in pošiljanje dnevnikov [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), ali jih pretakajte na [Azure Središča za dogodke](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights pošilja naslednje dnevnike dogodkov:
 
 - **Revizijski dogodki**
   - **APIEvent** - omogoča sledenje spremembam preko Dynamics 365 Customer Insights uporabniški vmesnik.
 - **Operativni dogodki**
-  - **WorkflowEvent** - Potek dela vam omogoča nastavitev [Viri podatkov](data-sources.md),[poenotiti](data-unification.md),[obogatiti](enrichment-hub.md), in končno [izvoz](export-destinations.md) podatke v druge sisteme. Vse te korake je mogoče izvesti posamezno (na primer sprožiti en sam izvoz). Lahko deluje tudi orkestrirano (na primer, osvežitev podatkov iz virov podatkov, ki sproži proces poenotenja, ki bo potegnil obogatitve in po končanem izvozu podatkov v drug sistem). Za več informacij glejte [Shema dogodka delovnega toka](#workflow-event-schema).
+  - **WorkflowEvent** - Potek dela vam omogoča nastavitev [Viri podatkov](data-sources.md),[poenotiti](data-unification.md),[obogatiti](enrichment-hub.md), in končno [izvoz](export-destinations.md) podatke v druge sisteme. Vse te korake je mogoče izvesti posamezno (na primer sprožiti en izvoz). Lahko se izvaja tudi orkestrirano (na primer, osvežitev podatkov iz virov podatkov, ki sproži proces poenotenja, ki bo potegnil obogatitve in po končanem izvozu podatkov v drug sistem). Za več informacij glejte [Shema dogodka delovnega toka](#workflow-event-schema).
   - **APIEvent** - vsi klici API-ja do primerka strank Dynamics 365 Customer Insights. Za več informacij glejte [APIEvent shema](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Nastavite diagnostične nastavitve
 
 ### <a name="prerequisites"></a>Zahteve
 
-Za konfiguriranje diagnostike v Customer Insights morajo biti izpolnjeni naslednji predpogoji:
+Če želite konfigurirati diagnostiko v Customer Insights, morajo biti izpolnjeni naslednji predpogoji:
 
 - Imate aktivno [Naročnina na Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Imaš [skrbnik](permissions.md#admin) dovoljenja v Customer Insights.
-- Imate **sodelavec** in **Skrbnik uporabniškega dostopa** vlogo na ciljnem viru v Azure. Vir je lahko an Azure Data Lake Storage račun, središče dogodkov Azure ali delovni prostor Azure Log Analytics. Za več informacij glejte [Dodajte ali odstranite dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal). To dovoljenje je potrebno med konfiguriranjem diagnostičnih nastavitev v storitvi Customer Insights, po uspešni nastavitvi ga je mogoče spremeniti.
+- Imate **sodelavec** in **Skrbnik uporabniškega dostopa** vlogo na ciljnem viru v Azure. Vir je lahko an Azure Data Lake Storage račun, središče dogodkov Azure ali delovni prostor Azure Log Analytics. Za več informacij glejte [Dodajte ali odstranite dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal). To dovoljenje je potrebno med konfiguriranjem diagnostičnih nastavitev v Customer Insights, po uspešni nastavitvi ga je mogoče spremeniti.
 - [Zahteve za destinacijo](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) za Azure Storage, Azure Event Hub ali Azure Log Analytics met.
 - Imate vsaj **Uporabnik z dovoljenjem za branje** vlogo v skupini virov, ki ji vir pripada.
 
@@ -73,7 +73,7 @@ Za konfiguriranje diagnostike v Customer Insights morajo biti izpolnjeni nasledn
 
 1. Na seznamu izberite cilj diagnostike.
 
-1. V **Dejanja** stolpec, izberite **Izbriši** ikona.
+1. V **Dejanja** stolpec, izberite **Izbriši** ikono.
 
 1. Potrdite izbris, da ustavite posredovanje dnevnika. Vir v naročnini Azure ne bo izbrisan. Povezavo lahko izberete v **Dejanja** stolpec, da odprete portal Azure za izbrani vir in ga tam izbrišete.
 
@@ -95,21 +95,21 @@ Glede na vašo izbiro vrste vira bodo samodejno uporabljeni naslednji koraki:
 
 ### <a name="storage-account"></a>Račun za shrambo
 
-Direktor storitve Customer Insights prejme **Račun za shranjevanje sodelavec** dovoljenje za izbrani vir in ustvari dva vsebnika pod izbranim imenskim prostorom:
+Direktor storitve Customer Insights dobi **Račun za shranjevanje sodelavec** dovoljenje za izbrani vir in ustvari dva vsebnika pod izbranim imenskim prostorom:
 
 - `insight-logs-audit` ki vsebuje **revizijske dogodke**
 - `insight-logs-operational` ki vsebuje **operativni dogodki**
 
 ### <a name="event-hub"></a>Središče za dogodke
 
-Direktor storitve Customer Insights prejme **Lastnik podatkov Azure Središča za dogodke** dovoljenje za vir in bo ustvaril dva Središča za dogodke pod izbranim imenskim prostorom:
+Direktor storitve Customer Insights dobi **Lastnik podatkov Azure Središča za dogodke** dovoljenje za vir in bo ustvaril dva Središča za dogodke pod izbranim imenskim prostorom:
 
 - `insight-logs-audit` ki vsebuje **revizijske dogodke**
 - `insight-logs-operational` ki vsebuje **operativni dogodki**
 
 ### <a name="log-analytics"></a>Log Analytics
 
-Direktor storitve Customer Insights prejme **Log Analytics sodelavec** dovoljenje za vir. Dnevniki bodo na voljo pod **Dnevniki** > **mize** > **Upravljanje dnevnikov** na izbranem delovnem prostoru Log Analytics. Razširite **Upravljanje dnevnikov** rešitev in poiščite`CIEventsAudit` in`CIEventsOperational` mize.
+Direktor storitve Customer Insights dobi **Log Analytics sodelavec** dovoljenje za vir. Dnevniki bodo na voljo pod **Dnevniki** > **mize** > **Upravljanje dnevnikov** na izbranem delovnem prostoru Log Analytics. Razširite **Upravljanje dnevnikov** rešitev in poiščite`CIEventsAudit` in`CIEventsOperational` mize.
 
 - `CIEventsAudit` ki vsebuje **revizijske dogodke**
 - `CIEventsOperational` ki vsebuje **operativni dogodki**
@@ -118,7 +118,7 @@ Pod **Poizvedbe** okno, razširite **revizija** rešitev in poiščite primere p
 
 ## <a name="event-schemas"></a>Sheme dogodkov
 
-Dogodki API in dogodki poteka dela imajo skupno strukturo in podrobnosti, kjer se razlikujejo, glej [Shema dogodkov API](#api-event-schema) oz [shema dogodkov poteka dela](#workflow-event-schema).
+Dogodki API in dogodki delovnega toka imajo skupno strukturo in podrobnosti, kjer se razlikujejo, glej [Shema dogodkov API](#api-event-schema) oz [shema dogodkov poteka dela](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Shema dogodkov API
 
@@ -180,7 +180,7 @@ The`identity` Objekt JSON ima naslednjo strukturo
 | `properties.callerObjectId`  | Azure Active Directory ObjectId klicatelja.                                                                         |
 | `properties.instanceId`      | Vpogled v stranke`instanceId`                                                                                         |
 
-### <a name="workflow-event-schema"></a>Shema dogodka poteka dela
+### <a name="workflow-event-schema"></a>Shema dogodkov poteka dela
 
 Potek dela vsebuje več korakov. [Zaužijte vire podatkov](data-sources.md),[poenotiti](data-unification.md),[obogatiti](enrichment-hub.md), in [izvoz](export-destinations.md) podatkov. Vsi ti koraki se lahko izvajajo posamezno ali usklajeno z naslednjimi procesi.
 
@@ -229,7 +229,7 @@ Dogodki poteka dela imajo naslednje lastnosti.
 | Polje              | Workflow | opravilo, | Description            |
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Da      | Da  | Nenehno`WorkflowEvent`, ki dogodek označi kot dogodek poteka dela.                                                                                                                                                                                                |
-| `properties.workflowJobId`                   | Da      | Da  | Identifikator poteka poteka dela. Vsi dogodki poteka dela in opravil v okviru izvajanja poteka dela imajo enake `workflowJobId`.                                                                                                                                   |
+| `properties.workflowJobId`                   | Da      | Da  | Identifikator izvajanja delovnega toka. Vsi dogodki poteka dela in opravil v okviru izvajanja poteka dela imajo enake `workflowJobId`.                                                                                                                                   |
 | `properties.operationType`                   | Da      | Da  | Identifikator operacije, gl [Vrste operacij](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Da      | No   | Samo potek dela. Število opravil, ki jih sproži potek dela.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Da      | No   | Izbirno. Samo dogodki poteka dela. The Azure Active Directory [objectId uporabnika](/azure/marketplace/find-tenant-object-id#find-user-object-id) kdo je sprožil potek dela, glejte tudi `properties.workflowSubmissionKind`.                                   |
@@ -240,7 +240,7 @@ Dogodki poteka dela imajo naslednje lastnosti.
 | `properties.endTimestamp`                    | Da      | Da  | Časovni žig UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Da      | Da  | Časovni žig UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.instanceId`                      | Da      | Da  | Vpogled v stranke`instanceId`                                                                                                                                                                                                                              |  
-| `properties.identifier`                      | No       | Da  | - Za OperationType =`Export`, je identifikator vodilo konfiguracije izvoza. <br> - Za OperationType =`Enrichment`, je vodilo pri obogatitvi <br> - Za OperationType`Measures` in`Segmentation`, identifikator je ime entitete. |
+| `properties.identifier`                      | No       | Da  | - Za OperationType =`Export`, je identifikator vodilo konfiguracije izvoza. <br> - Za OperationType =`Enrichment`, je vodilo za obogatitev <br> - Za OperationType`Measures` in`Segmentation`, identifikator je ime entitete. |
 | `properties.friendlyName`                    | No       | Da  | Uporabniku prijazno ime izvoza ali subjekta, ki se obdeluje.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Da  | Izbirno. Sporočilo o napaki z več podrobnostmi.                                                                                                                                                                                                                  |
 | `properties.additionalInfo.Kind`             | No       | Da  | Izbirno. Za OperationType`Export` samo. Označuje vrsto izvoza. Za več informacij glejte [pregled izvoznih destinacij](export-destinations.md).                                                                                          |

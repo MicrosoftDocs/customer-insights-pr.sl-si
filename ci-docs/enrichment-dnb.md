@@ -1,5 +1,5 @@
 ---
-title: Obogatitev profilov podjetij z Dun & Bradstreet
+title: Obogatite profile podjetij z Dun & Bradstreet (predogled)
 description: Splošne informacije o obogatitvi tretjih oseb Dun & Bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953911"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082564"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Obogatitev profilov podjetij z Dun & Bradstreet (predogled)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Obogatite profile podjetij z Dun & Bradstreet (predogled)
 
 Dun & Bradstreet ponuja komercialne podatke, analitiko in vpoglede za podjetja. Strankam omogoča poenoten profil strank, s katerimi podjetja obogatijo svoje podatke. Obogatitve vključujejo atribute, kot so številka DUNS, velikost podjetja, lokacija, industrija in drugo.
 
@@ -33,11 +33,11 @@ Kot licencirani uporabnik Dun & Bradstreet lahko nastavite projekt v [Dun & Brad
 
 1. Prijavite se v [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights). Za pridobitev poverilnic, [obnovite svoje geslo](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights).
 
-1. Prenesi [naša datoteka predloge csv](https://c360devenrichment.blob.core.windows.net/mapping/DnBCIdatamapping.csv) ki bo uporabljen za preslikavo polj Customer Insights v ustrezna polja Dun & Bradstreet.
+1. Prenesi [naša datoteka predloge csv](https://c360devenrichment.blob.core.windows.net/mapping/DnBCIdatamapping.csv) ki bo uporabljena za preslikavo polj Customer Insights v ustrezna polja Dun & Bradstreet.
 
 1. Naložite datoteko v **Naložite podatke** korak izkušnje ustvarjanja projekta Dun & Bradstreet.
 
-1. Izberite vodoravne pike pod ustreznimi **vir** v novoustvarjenem projektu Dun & Bradstreet, da si ogledate razpoložljive možnosti.
+1. Izberite vodoravne pike pod ustreznimi **vir** v novo ustvarjenem projektu Dun & Bradstreet, da si ogledate razpoložljive možnosti.
 
    :::image type="content" source="media/enrichment-dnb-dots.png" alt-text="Posnetek zaslona pik v projektu Dun & Bradstreet.":::
 
@@ -63,7 +63,7 @@ Moraš biti [skrbnik](permissions.md#admin) v Customer Insights in imajo poveril
 
 ### <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 
-Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v Dun & Bradstreet dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vašem navodilu, vendar ste odgovorni za zagotovitev, da Dun & Bradstreet izpolnjuje morebitne obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v Dun & Bradstreet dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vaših navodilih, vendar ste odgovorni za zagotovitev, da Dun & Bradstreet izpolnjuje vse vaše obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadarkoli odstrani, s čimer je uporaba te funkcije prekinjena.
 
 ## <a name="supported-countries-or-regions"></a>Podprte države ali regije
@@ -84,7 +84,7 @@ Trenutno podpiramo naslednje možnosti države/regije: Kanada (angleščina) ali
 
 1. Izberite **Naprej**.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki podjetja Dun & Bradstreet. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki podjetja Dun & Bradstreet. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
 
 1. Določite, katere vrste polj iz svojih enotnih profilov boste uporabili za ujemanje podatkov podjetja Dun & Bradstreet. Zahtevano je vsaj eno od naslednjih polj: **Ime in naslov**, **Telefon** ali **E-poštni naslov**.
 
@@ -102,7 +102,7 @@ Trenutno podpiramo naslednje možnosti države/regije: Kanada (angleščina) ali
 
 1. Izberite **teci** za začetek procesa obogatitve ali blizu vrnitve na **Obogatitve** stran.
 
-## <a name="enrichment-results"></a>Rezultati obogatitve
+## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

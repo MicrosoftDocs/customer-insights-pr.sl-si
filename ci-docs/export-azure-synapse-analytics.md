@@ -1,19 +1,19 @@
 ---
-title: Izvoz podatkov iz storitve Customer Insights v storitev Azure Synapse Analytics
+title: Izvozi podatke v Azure Synapse Analytics (predogled)
 description: Naučite se konfigurirati povezavo z Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741523"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082879"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvozi podatke v Azure Synapse Analytics (predogled)
 
@@ -28,13 +28,13 @@ Za konfiguriranje povezave iz rešitve Customer Insights v storitev Azure Synaps
 
 ## <a name="prerequisites-in-customer-insights"></a>Zahteve v rešitvi Customer Insights
 
-* Vaš Azure Active Directory (AD) uporabniški račun ima **skrbnik** vlogo v Customer Insights. Več o tem [nastavitev uporabniških dovoljenj](permissions.md#assign-roles-and-permissions).
+* Vaš Azure Active Directory (AD) uporabniški račun ima **skrbnik** vlogo v storitvi Customer Insights. Več o tem [nastavitev uporabniških dovoljenj](permissions.md#assign-roles-and-permissions).
 
 V storitvi Azure: 
 
 - Aktivna naročnina na Azure.
 
-- Če uporabljate novo Azure Data Lake Storage Račun Gen2, *vodja storitve za Customer Insights* potrebe **Podatki blobov za shranjevanje sodelavec** dovoljenja. Več o tem [povezovanje z an Azure Data Lake Storage Račun 2. generacije z principalom storitve Azure za Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **mora imeti** omogočen [hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
+- Če uporabljate novo Azure Data Lake Storage Račun Gen2, *vodja storitve za vpogled v stranke* potrebe **Podatki blobov za shranjevanje sodelavec** dovoljenja. Več o tem [povezovanje z an Azure Data Lake Storage Račun 2. generacije z principalom storitve Azure za Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **mora imeti** omogočen [hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
 
 - V skupini virov, kjer je Azure Synapse delovni prostor se nahaja, *ravnatelja storitve* in *Azure AD uporabnik s skrbniškimi dovoljenji v Customer Insights* je treba vsaj dodeliti **Uporabnik z dovoljenjem za branje** dovoljenja. Če želite več informacij, glejte razdelek [Dodelitev vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal).
 
@@ -64,7 +64,7 @@ Za ustvarjanje povezave potrebujeta principal storitve in uporabniški račun v 
 
 ### <a name="configure-an-export"></a>Konfiguriranje izvoza
 
-Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Če želite konfigurirati izvoz s skupno povezavo, potrebujete vsaj **sodelavec** dovoljenja v Customer Insights. Če želite več informacij, glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Če želite konfigurirati izvoz s povezavo v skupni rabi, potrebujete vsaj **sodelavec** dovoljenja v Customer Insights. Če želite več informacij, glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 
@@ -72,13 +72,13 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Če želite
 
 1. V **Povezava za izvoz** polje, izberite povezavo med **Azure Synapse Analytics** oddelek. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna [povezava](connections.md).
 
-1. Zagotovite prepoznavno **prikazno ime** za vaš izvoz in **ime baze podatkov**.
+1. Zagotovite prepoznavno **prikazno ime** za vaš izvoz in **ime baze podatkov**. Izvoz bo ustvaril novo [Azure Synapse baza podatkov o jezerih](/azure/synapse-analytics/database-designer/concepts-lake-database) v delovnem prostoru, določenem v povezavi.
 
 1. Izberite, v katere entitete želite izvoziti Azure Synapse Analytics.
    > [!NOTE]
    > Viri podatkov na podlagi [mape Common Data Model](connect-common-data-model.md) niso podprti.
 
-2. Izberite **Shrani**.
+1. Izberite **Shrani**.
 
 S shranjevanjem izvoza se ta ne zažene takoj.
 

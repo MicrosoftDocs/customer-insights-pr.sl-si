@@ -1,5 +1,5 @@
 ---
-title: Povezovanje podatkov Common Data Model z računom Azure Data Lake
+title: Povezava z mapo Common Data Model z uporabo računa Azure Data Lake
 description: Delo s podatki Common Data Model z uporabo storitve Azure Data Lake Storage.
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011593"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082270"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Vzpostavljanje povezave s podatki v storitvi Azure Data Lake Storage
 
@@ -27,7 +27,7 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo svojega Azure Data La
 
 - Podpira vnos podatkov Azure Data Lake Storage *Gen2* izključno račune. Za vnos podatkov ne morete uporabiti računov Data Lake Storage Gen1.
 
-- The Azure Data Lake Storage račun mora imeti [Imenski prostor hierarhičen je omogočen](/azure/storage/blobs/data-lake-storage-namespace). Podatki morajo biti shranjeni v formatu mape hierarhičen, ki definira korensko mapo in ima podmape za vsako entiteto. Podmape imajo lahko polne podatke ali mape z inkrementalnimi podatki.
+- The Azure Data Lake Storage račun mora imeti [hierarhičen imenski prostor je omogočen](/azure/storage/blobs/data-lake-storage-namespace). Podatki morajo biti shranjeni v formatu mape hierarhičen, ki definira korensko mapo in ima podmape za vsako entiteto. Podmape imajo lahko polne podatke ali mape z inkrementalnimi podatki.
 
 - Če želite preveriti pristnost z glavnim imenom storitve Azure, preverite, ali je konfiguriran v najemniku. Za več informacij glejte [Povežite se z an Azure Data Lake Storage Račun 2. generacije z principalom storitve Azure](connect-service-principal.md).
 
@@ -52,18 +52,18 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo svojega Azure Data La
 
    :::image type="content" source="media/data_sources_ADLS.png" alt-text="Pogovorno okno za vnos podrobnosti povezave za Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Vnesite a **ime** za vir podatkov in izbirno **Opis**. Ime enolično identificira vir podatkov in se sklicuje na nadaljnjih procesih in ga ni mogoče spremeniti.
+1. Vnesite a **ime** za vir podatkov in izbirno **Opis**. Ime enolično identificira vir podatkov in se sklicuje na procese na nižji stopnji in ga ni mogoče spremeniti.
 
 1. Izberite eno od naslednjih možnosti za **Povežite svoj prostor za shranjevanje s pomočjo**. Za več informacij glejte [Povežite Customer Insights z Azure Data Lake Storage Račun 2. generacije z principalom storitve Azure](connect-service-principal.md).
 
    - **Vir Azure** : Vnesite **Id. vira** . Izbirno, če želite prenesti podatke iz računa za shranjevanje prek zasebne povezave Azure, izberite **Omogoči zasebno povezavo**. Za več informacij glejte [Zasebne povezave](security-overview.md#private-links-tab).
-   - **Naročnina na Azure** : Izberite **Naročnina** in nato **Skupina virov** in **Račun za shranjevanje**. Izbirno, če želite prenesti podatke iz računa za shranjevanje prek zasebne povezave Azure, izberite **Omogoči zasebno povezavo**. Za več informacij glejte [Zasebne povezave](security-overview.md#private-links-tab).
+   - **Naročnina na Azure** : Izberite **Naročnina** in nato še **Skupina virov** in **Račun za shranjevanje**. Izbirno, če želite prenesti podatke iz računa za shranjevanje prek zasebne povezave Azure, izberite **Omogoči zasebno povezavo**. Za več informacij glejte [Zasebne povezave](security-overview.md#private-links-tab).
   
    > [!NOTE]
    > Za ustvarjanje vir podatkov potrebujete eno od naslednjih vlog za vsebnik ali račun za shranjevanje:
    >
-   >  - Podatki shranjevalnih blokov Uporabnik z dovoljenjem za branje zadostujejo za branje iz računa za shranjevanje in vnos podatkov v Customer Insights. 
-   >  - Podatki shranjevalnih blokov sodelavec ali lastnik so potrebni, če želite datoteke manifestov urejati neposredno v Customer Insights.  
+   >  - Podatki shranjevalnih blokov Uporabnik z dovoljenjem za branje zadostujejo za branje iz računa za shranjevanje in zaužitje podatkov v Customer Insights. 
+   >  - Podatki shranjevalnih blokov sodelavec ali lastnik so potrebni, če želite datoteke manifesta urejati neposredno v Customer Insights.  
   
 1. Izberite ime za **Vsebnik** ki vsebuje podatke in shemo (datoteka model.json ali manifest.json) za uvoz podatkov in izberite **Naslednji**.
    > [!NOTE]
@@ -86,7 +86,7 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo svojega Azure Data La
 
 1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopno osveževanje**. Za vsako od teh entitet glej [Konfigurirajte postopno osveževanje za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
 
-1. Za izbrane entitete, pri katerih primarni ključ ni bil definiran, **Obvezno** prikaže pod **Primarni ključ**. Za vsakega od teh subjektov:
+1. Za izbrane entitete, pri katerih primarni ključ ni bil definiran, **Obvezno** prikaže pod **Primarni ključ**. Za vsako od teh entitet:
    1. Izberite **Obvezno**. The **Uredi entiteto** panelni zasloni.
    1. Izberite **Primarni ključ**. Primarni ključ je edinstven atribut za entiteto. Atribut je veljaven primarni ključ samo v primeru, če ne vsebuje podvojenih vrednosti, manjkajočih vrednosti ali ničelnih vrednosti. Kot primarni ključi so podprti atributi vrste podatkov niz, celo število in GUID.
    1. Po želji spremenite vzorec particije.
@@ -124,7 +124,7 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo svojega Azure Data La
 
    1. Ko so atributi samodejno ustvarjeni, izberite **Pregledajte atribute**. The **Upravljajte atribute** prikaže stran.
 
-   1. Prepričajte se, da je oblika podatkov pravilna za vsak atribut.
+   1. Zagotovite, da je oblika podatkov pravilna za vsak atribut.
 
    1. Če želite omogočiti analitiko in druge zmogljivosti, izberite **Profiliranje podatkov** za celotno entiteto ali za posebne atribute. Privzeto nobena entiteta ni omogočena za profiliranje podatkov.
 
@@ -140,7 +140,7 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo svojega Azure Data La
 
 1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopno osveževanje**. Za vsako od teh entitet glej [Konfigurirajte postopno osveževanje za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
 
-1. Za izbrane entitete, pri katerih primarni ključ ni bil definiran, **Obvezno** prikaže pod **Primarni ključ**. Za vsakega od teh subjektov:
+1. Za izbrane entitete, pri katerih primarni ključ ni bil definiran, **Obvezno** prikaže pod **Primarni ključ**. Za vsako od teh entitet:
    1. Izberite **Obvezno**. The **Uredi entiteto** panelni zasloni.
    1. Izberite **Primarni ključ**. Primarni ključ je edinstven atribut za entiteto. Atribut je veljaven primarni ključ samo v primeru, če ne vsebuje podvojenih vrednosti, manjkajočih vrednosti ali ničelnih vrednosti. Kot primarni ključi so podprti atributi vrste podatkov niz, celo število in GUID.
    1. Po želji spremenite vzorec particije.

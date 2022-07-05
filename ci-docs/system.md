@@ -1,5 +1,5 @@
 ---
-title: Konfiguracija sistema v Customer Insights
+title: Konfiguracija sistema
 description: Preberite več o sistemskih nastavitvah v storitvi Dynamics 365 Customer Insights.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,12 +15,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653636"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050691"
 ---
 # <a name="system-configuration"></a>Konfiguracija sistema
 
@@ -58,7 +58,7 @@ Sistem uporablja naslednja stanja za opravila in procese:
 |Predelava  |Naloga ali proces je v teku.  |
 |Osveževanje    |Uvažanje podatkov je v teku. Ta postopek lahko prekličete tako, da v stolpcu **Dejanja** izberete **Ustavi osveževanje**. Ustavitev osveževanja vira podatkov bo povrnjena na zadnje stanje osveževanja.       |
 |Preskočeno  |Naloga ali proces je bil preskočen. Eden ali več nadaljnjih postopkov, od katerih je odvisno opravilo, ne uspe ali ste jih preskočili.|
-|Uspelo  |Naloga ali proces je uspešno zaključen. Za vire podatkov označuje, da so bili podatki uspešno prevzeti, če je čas omenjen v **Osveženo** stolpec.|
+|Uspelo  |Naloga ali proces je bil uspešno zaključen. Za vire podatkov označuje, da so bili podatki uspešno prevzeti, če je čas omenjen v **Osveženo** stolpec.|
 |V čakalni vrsti | Obdelava je v čakalni vrsti in se bo začela, ko bodo končana vsa nadaljnja opravila in procesi. Za več informacij glejte [Osvežite procese](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Osvežite procese

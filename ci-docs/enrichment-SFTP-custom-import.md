@@ -1,5 +1,5 @@
 ---
-title: Obogatitev z uvozom po meri SFTP
+title: Obogatite profile strank z uvozom po meri SFTP (predogled)
 description: Splošne informacije o obogatitvi uvoza po meri SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953739"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082333"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogatite profile strank s podatki po meri (predogled)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Obogatite profile strank z uvozom po meri SFTP (predogled)
 
 Uvoz po meri s protokolom za varen prenos datotek (SFTP) vam omogoča uvoz podatkov, ki jim ni treba iti skozi postopek poenotenja podatkov. To je prilagodljiv, varen in enostaven način za vnos podatkov. Uvoz po meri SFTP se lahko uporablja v kombinaciji z [izvozom SFTP](export-sftp.md), ki vam omogoča izvoz podatkov o profilih strank, ki so potrebni za obogatitev. Podatke je mogoče nato obdelati in obogatiti, uvoz po meri SFTP pa se lahko uporabi za vrnitev obogatenih podatkov v Dynamics 365 Customer Insights.
 
@@ -106,7 +106,7 @@ Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadarkoli ods
 
 1. Izberite povezavo. Obrnite se na skrbnika, če ta ni na voljo.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
 
 1. Izberite **Naprej**.
 
@@ -120,7 +120,7 @@ Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadarkoli ods
 
 1. Izberite **teci** za začetek procesa obogatitve ali blizu vrnitve na **Obogatitve** stran.
 
-## <a name="enrichment-results"></a>Rezultati obogatitve
+## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

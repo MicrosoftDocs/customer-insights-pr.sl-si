@@ -11,26 +11,26 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800346"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083026"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Uporabite graditelj meril za ustvarjanje ukrepov iz nič
+# <a name="create-new-measures-with-the-measure-builder"></a>Ustvarite nove ukrepe z gradnikom meril
 
-Ta članek pojasnjuje, kako ustvariti novo [meriti](measures.md) iz nič. Graditelj meril vam omogoča definiranje izračunov z uporabo matematičnih operaterjev, funkcij združevanja in filtrov. Merilo lahko zgradite z atributi iz entitet, ki so povezane s poenotenim *Stranka* entiteta.
+Ta članek pojasnjuje, kako ustvariti novo [meriti](measures.md) iz nič. Graditelj meril vam omogoča definiranje izračunov z uporabo matematičnih operaterjev, funkcij združevanja in filtrov. Mero lahko zgradite z atributi iz entitet, ki so povezane z poenotenim *Stranka* entiteta.
 
 Ustvarjanje ukrepov v okoljih B-to-C in B-to-B deluje na enak način. Vendar, če ste B-to-B okolje [uporablja račune s hierarhijo](relationships.md#set-up-account-hierarchies), se lahko odločite, da boste merilo združili po povezanih podračunih.
 
-Mero lahko tudi hitro ustvarite tako, da izberete iz nabora pogosto uporabljenih in vnaprej določenih mer. Za več informacij glejte [Za izdelavo merila uporabite predlogo](measure-templates.md).
+Mero lahko tudi hitro ustvarite tako, da izberete iz nabora pogosto uporabljenih in vnaprej določenih mer. Za več informacij glejte [Uporabite predlogo za izdelavo merila](measure-templates.md).
 
 # <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
 
 Mere lahko ustvarite na ravni posamezne stranke (atribut stranke, meritev stranke) ali na ravni podjetja/organizacije (poslovni ukrep). Atribut stranke in meritev stranke sta dve vrsti, ki vam omogočata spremljanje uspešnosti na stranko. Na primer, skupna poraba vsake stranke. Poslovni ukrepi vam omogočajo spremljanje uspešnosti posameznega podjetja. Na primer skupni prihodek podjetja.
 
-- Atribut stranke: ustvari izhod kot nov atribut, ki se shrani kot nov stolpec v sistemsko ustvarjeni entiteti z imenom *Customer_Measure*. Ko osvežite atribut stranke, se vsi drugi atributi stranke v *Customer_Measure* hkrati osveži entiteto. Poleg tega so atributi stranke prikazani na kartici profila stranke. Ko je atribut stranke zagnan ali shranjen, ga ne morete spremeniti v meritev stranke.
+- Atribut stranke: ustvari izhod kot nov atribut, ki se shrani kot nov stolpec v sistemsko ustvarjeni entiteti z imenom *Customer_Measure*. Ko osvežite atribut stranke, vsi drugi atributi stranke v *Customer_Measure* hkrati osveži entiteto. Poleg tega so atributi stranke prikazani na kartici profila stranke. Ko atribut stranke zaženete ali shranite, ga ne morete spremeniti v merilo stranke.
 
 - Merilo stranke: generira izhod kot lastno entiteto in ga ne morete spremeniti v atribut stranke, ko ga enkrat zaženete ali shranite. Meritve stranke niso prikazane na kartici profila stranke.
 
@@ -42,9 +42,9 @@ Mere lahko ustvarite na ravni posamezne stranke (atribut stranke, meritev strank
 
    :::image type="content" source="media/measure-b2c.png" alt-text="Prazen konfiguracijski zaslon za ukrep B-to-C." lightbox="media/measure-b2c.png":::
 
-1. Če želite spremljati uspešnost na ravni podjetja, preklopite **Vrsta meritve** do **Poslovna raven**. **Raven strank** je privzeto izbran. **Raven strank** samodejno doda *Identifikacijska številka stranke* atributom Dimensions while **Poslovna raven** samodejno odstrani.
+1. Če želite spremljati uspešnost na ravni podjetja, preklopite **Vrsta meritve** do **Poslovna raven**. **Raven strank** je privzeto izbran. **Raven strank** samodejno doda *Identifikacijska številka stranke* atribut Dimensions while **Poslovna raven** samodejno odstrani.
 
-1. V konfiguracijskem območju izberite funkcijo združevanja iz možnosti **Izberite funkcijo** spustni meni. Združevalne funkcije vključujejo:
+1. V konfiguracijskem območju izberite funkcijo združevanja iz **Izberite funkcijo** spustni meni. Združevalne funkcije vključujejo:
    - **Vsota**
    - **Povprečje**
    - **Število**
@@ -72,7 +72,7 @@ Mere lahko ustvarite na ravni posamezne stranke (atribut stranke, meritev strank
    1. Nastavite operatorje filtrov, da določite filter za vsak izbrani atribut.
    1. Izberite možnost **Dodaj**, da meri dodate filter.
 
-1. Izberite **Dimenzija** da izberete več polj, ki so dodana kot stolpci v izhodno entiteto merila.
+1. Izberite **Dimenzija** da izberete več polj, ki so dodana kot stolpci izhodni entiteti merila.
 
    1. Izberite možnost **Uredi razsežnosti**, da dodate atribute podatkov, po katerih želite vrednosti mer razvrstiti v skupine. Na primer po mestu ali spolu.
    > [!TIP]
@@ -92,7 +92,7 @@ Mere lahko ustvarite na ravni posamezne stranke (atribut stranke, meritev strank
 
 1. Na območju **predogleda** boste videli podatkovno shemo entitete izhodnih mer, vključno s filtri in razsežnostmi. Predogled se dinamično odziva na spremembe v konfiguraciji.
 
-1. Izberite **Uredite podrobnosti** poleg Neimenovane mere. Navedite ime za ukrep. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) po meri.
+1. Izberite **Uredite podrobnosti** poleg Neimenovane mere. Navedite ime za ukrep. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) do mere.
 
    :::image type="content" source="media/measures_edit_details.png" alt-text="Pogovorno okno Uredi podrobnosti.":::
 
@@ -104,7 +104,7 @@ Mere lahko ustvarite na ravni posamezne stranke (atribut stranke, meritev strank
 
 Ukrepe lahko ustvarite na ravni posameznih računov (ukrep strank) ali na ravni vseh računov (poslovni ukrep).
 
-- Ukrep stranke: generira rezultate kot lastno entiteto. Meritve stranke niso prikazane na kartici profila stranke.
+- Ukrep za stranke: ustvari izhod kot lastno entiteto. Meritve stranke niso prikazane na kartici profila stranke.
 
 - Poslovni ukrep: ustvari izhod kot lastno entiteto in se prikaže na domači strani vašega okolja Customer Insights.
 
@@ -114,7 +114,7 @@ Ukrepe lahko ustvarite na ravni posameznih računov (ukrep strank) ali na ravni 
 
    :::image type="content" source="media/measure-b2b.png" alt-text="Prazen konfiguracijski zaslon za ukrep B-to-B.":::
 
-1. V konfiguracijskem območju izberite funkcijo združevanja iz možnosti **Izberite funkcijo** spustni meni. Združevalne funkcije vključujejo:
+1. V konfiguracijskem območju izberite funkcijo združevanja iz **Izberite funkcijo** spustni meni. Združevalne funkcije vključujejo:
    - **Vsota**
    - **Povprečje**
    - **Število**
@@ -140,7 +140,7 @@ Ukrepe lahko ustvarite na ravni posameznih računov (ukrep strank) ali na ravni 
    1. Nastavite operatorje filtrov, da določite filter za vsak izbrani atribut.
    1. Izberite možnost **Dodaj**, da meri dodate filter.
 
-1. Izberite **Dimenzija** da izberete več polj, ki so dodana kot stolpci v izhodno entiteto merila.
+1. Izberite **Dimenzija** da izberete več polj, ki so dodana kot stolpci izhodni entiteti merila.
 
    1. Izberite možnost **Uredi razsežnosti**, da dodate atribute podatkov, po katerih želite vrednosti mer razvrstiti v skupine. Na primer po mestu ali spolu.
       > [!TIP]
@@ -162,7 +162,7 @@ Ukrepe lahko ustvarite na ravni posameznih računov (ukrep strank) ali na ravni 
 
 1. Na območju **predogleda** boste videli podatkovno shemo entitete izhodnih mer, vključno s filtri in razsežnostmi. Predogled se dinamično odziva na spremembe v konfiguraciji.
 
-1. Izberite **Uredite podrobnosti** poleg Neimenovane mere. Navedite ime za ukrep. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) po meri.
+1. Izberite **Uredite podrobnosti** poleg Neimenovane mere. Navedite ime za ukrep. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) do mere.
 
    :::image type="content" source="media/measures_edit_details.png" alt-text="Pogovorno okno Uredi podrobnosti.":::
 

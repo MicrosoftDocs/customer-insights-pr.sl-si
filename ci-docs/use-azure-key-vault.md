@@ -1,6 +1,6 @@
 ---
-title: Uporaba lastne shrambe ključev Azure za upravljanje skrivnosti
-description: Preberite, kako konfigurirati storitev Customer Insights za uporabo lastne shrambe ključev Azure.
+title: Uporaba lastne shrambe ključev Azure (predogledna različica)
+description: Naučite se, kako konfigurirati Customer Insights za uporabo lastnega trezorja ključev Azure za upravljanje skrivnosti.
 ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
-ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
+ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "8763599"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082648"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Uporaba lastne shrambe ključev Azure (predogledna različica)
 
@@ -31,7 +31,7 @@ Dodeljena shramba ključev se lahko uporablja za pripravo in uporabo skrivnosti 
 
 - Imate aktivno naročnino na Azure.
 
-- Imate [skrbnik](permissions.md#admin) vlogo v storitvi Customer Insights. Več o tem [uporabniška dovoljenja v Customer Insights](permissions.md#assign-roles-and-permissions).
+- Imate [skrbnik](permissions.md#admin) vlogo v Customer Insights. Več o tem [uporabniška dovoljenja v Customer Insights](permissions.md#assign-roles-and-permissions).
 
 - Imate vlogo [Sodelavec](/azure/role-based-access-control/built-in-roles#contributor) in [Skrbniški dostop uporabnika](/azure/role-based-access-control/built-in-roles#user-access-administrator) v shrambi ključev ali skupini virov, ki ji pripada shramba ključev. Za več informacij obiščite [Dodajanje ali odstranitev dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal). Če nimate vloge Skrbniški dostop uporabnika v shrambi ključev, morate za glavno ime storitve Azure ločeno nastaviti dovoljenja za nadzor dostopa, ki temeljijo na vlogi, za storitev Dynamics 365 Customer Insights. Upoštevajte postopke, da [uporabite glavno ime storitve Azure](connect-service-principal.md) za shrambo ključev, ki jo je treba povezati.
 
@@ -48,7 +48,7 @@ Dodeljena shramba ključev se lahko uporablja za pripravo in uporabo skrivnosti 
 1. Sprejmite izjavo **Zasebnost podatkov in skladnost**.
 1. Izberite **Shrani**.
 
-:::image type="content" source="media/set-up-azure-key-vault.png" alt-text="Koraki za nastavitev povezanega trezorja ključev v Customer Insights.":::
+:::image type="content" source="media/set-up-azure-key-vault.png" alt-text="Koraki za nastavitev povezanega trezorja ključev v storitvi Customer Insights.":::
 
 Ploščica **Key Vault** zdaj prikazuje povezano ime shrambe ključev, skupino virov in naročnino. Pripravljena je za uporabo v nastavitvah povezave.
 Za podrobnosti o tem, katera dovoljenja za trezor ključev so dodeljena Customer Insights, pojdite na [Dovoljenja, odobrena za trezor ključev](#permissions-granted-on-the-key-vault), kasneje v tem članku.

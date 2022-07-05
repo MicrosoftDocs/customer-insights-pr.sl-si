@@ -1,5 +1,5 @@
 ---
-title: Kako - Upravljati okolja
+title: 'Kako: upravljati okolja'
 description: Naučite se upravljati obstoječa okolja Customer Insights kot skrbnik."
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: 62a5856edac5e66e5e42c93313d78fa6826469b3
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: fc3b3f404cf0ac84c782778414494289c803babe
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833512"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083068"
 ---
 # <a name="how-to-manage-environments"></a>Kako: upravljati okolja
 
@@ -56,7 +56,7 @@ Več uporabnikov ima lahko skrbniška dovoljenja, vendar je samo en uporabnik la
 
 Če želite zahtevati lastništvo, izberite **Prevzemi lastništvo** gumb, ki se prikaže na vrhu vsake strani v Customer Insights, ko je prvotni lastnik zapustil organizacijo.
 
-## <a name="reset-an-existing-environment-preview"></a>Ponastavitev obstoječega okolja (predogled)
+## <a name="reset-an-existing-environment-preview"></a>Ponastavi obstoječe okolje (predogled)
 
 Kot lastnik okolja lahko okolje ponastavite na prazno stanje, če želite izbrisati vse konfiguracije in odstraniti vnesene podatke.
 

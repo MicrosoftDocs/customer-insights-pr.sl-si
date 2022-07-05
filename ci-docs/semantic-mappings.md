@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643540"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083152"
 ---
 # <a name="semantic-mappings-preview"></a>Semantične preslikave (predogledna različica)
 
-Semantične preslikave vam omogočajo preslikavo podatkov o nedejavnosti v vnaprej določene sheme. Te sheme pomagajo Customer Insights, da bolje razumejo atribute vaših podatkov. Semantično preslikavo in posredovani podatki omogočajo nove vpoglede in funkcije v Customer Insights. Če želite podatke o dejavnosti preslikati v sheme, preglejte dokumentacijo [dejavnosti](activities.md).
+Semantične preslikave vam omogočajo preslikavo podatkov o nedejavnosti v vnaprej določene sheme. Te sheme pomagajo Customer Insights bolje razumeti atribute vaših podatkov. Semantično preslikavo in posredovani podatki omogočajo nove vpoglede in funkcije v Customer Insights. Če želite podatke o dejavnosti preslikati v sheme, preglejte dokumentacijo [dejavnosti](activities.md).
 
 **Semantične preslikave so trenutno omogočene za okolja, ki temeljijo na poslovnih računih**. *KontaktProfil* je edina vrsta semantičnega preslikavanja, ki je trenutno na voljo v Customer Insights.
 
@@ -102,18 +102,18 @@ Po ustvarjanju a *KontaktProfil* semantično preslikavo entitet, lahko zajamete 
 
 1. [Definiraj a *KontaktProfil* preslikava semantičnih entitet.](#define-a-contactprofile-semantic-entity-mapping) In zaženite semantično preslikavo.
 
-1. Pojdi do **Podatki** > **dejavnosti**.
+1. Pojdi do **Podatki** > **Dejavnosti**.
 
 1. Izberite **Dodaj dejavnost** ustvariti novo dejavnost.
 
 1. Poimenujte dejavnost, izberite izvorno entiteto dejavnosti in izberite primarni ključ entitete dejavnosti.
 
-1. V **Odnosi** korak, ustvarite posredno razmerje med vašimi izvornimi podatki o dejavnosti in računi, pri čemer uporabite svoje kontaktne podatke kot posredniško enoto. Za več informacij glejte [neposredne in posredne povezave](relationships.md#relationship-paths).
+1. V **Odnosi** korak, ustvarite posredno razmerje med vašimi izvornimi podatki o dejavnosti in računi, pri čemer uporabite svoje kontaktne podatke kot posredniško enoto. Za več informacij glejte [neposrednih in posrednih odnosih](relationships.md#relationship-paths).
    - Primer razmerja za dejavnost, ki se imenuje *Nakupi*:
       - **Podatki o izvorni dejavnosti nakupov** > **Kontaktni podatki** na atribut **ID stika**
       - **Kontaktni podatki** > **Podatki o računu** na atribut **ID računa**
 
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Primer nastavitve razmerja.":::
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Primer postavitve razmerja.":::
 
 1. Ko nastavite Odnosi, izberite **Naslednji** in dokončajte konfiguracijo preslikave dejavnosti. Za podrobne korake pri ustvarjanju dejavnosti glejte [opredeliti dejavnost](activities.md).
 

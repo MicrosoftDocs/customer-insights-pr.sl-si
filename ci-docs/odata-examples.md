@@ -1,5 +1,5 @@
 ---
-title: Primeri OData za Dynamics 365 Customer Insights API-ji
+title: Primeri poizvedb OData za API-je Customer Insights
 description: Pogosto uporabljeni primeri za Open Data Protocol (OData) za poizvedbo v API-jih Customer Insights za pregled podatkov.
 ms.date: 05/25/2022
 ms.subservice: audience-insights
@@ -8,18 +8,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808481"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083173"
 ---
-# <a name="odata-query-examples"></a>Primeri poizvedb OData
+# <a name="odata-query-examples-for-customer-insights-apis"></a>Primeri poizvedb OData za API-je Customer Insights
 
-Open Data Protocol (OData) je protokol za dostop do podatkov, zgrajen na osnovnih protokolih, kot je HTTP. Uporablja splošno sprejete metodologije, kot je REST za splet. Obstajajo različne vrste knjižnic in orodij, ki se lahko uporabljajo za uporabo storitev OData.
+Open Data Protocol (OData) je protokol za dostop do podatkov, zgrajen na osnovnih protokolih, kot je HTTP. Uporablja splošno sprejete metodologije, kot je REST za splet. Obstajajo različne vrste knjižnic in orodij, ki jih je mogoče uporabiti za uporabo storitev OData.
 
-Ta članek navaja nekaj pogosto zahtevanih primerov poizvedb, ki vam bodo v pomoč pri gradnji lastnih implementacij na podlagi [API-ji Customer Insights](apis.md).
+Ta članek navaja nekaj pogosto zahtevanih primerov poizvedb, ki vam bodo v pomoč pri gradnji lastnih izvedb na podlagi [API-ji Customer Insights](apis.md).
 
 Vzorce poizvedb morate spremeniti, da bodo delovali v ciljnih okoljih: 
 

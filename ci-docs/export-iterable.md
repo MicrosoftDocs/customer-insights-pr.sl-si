@@ -1,5 +1,5 @@
 ---
-title: Izvozite podatke Customer Insights v Iterable
+title: Izvozi segmente v Iterable (predogled)
 description: Naučite se konfigurirati povezavo in izvoziti v Iterable.
 ms.date: 03/29/2022
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 714a1323521be7d2f29ccaacd7799b2174e2937d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 98d5aeab6b0e932d291213053d509ec72da82e47
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643900"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052255"
 ---
-# <a name="export-segment-lists-to-iterable-preview"></a>Izvozi sezname segmentov v Iterable (predogled)
+# <a name="export-segments-to-iterable-preview"></a>Izvozi segmente v Iterable (predogled)
 
-Izvozite segmente enotnih profilov strank v Iterable in jih uporabite za marketinške dejavnosti.
+Izvozite segmente enotnih profilov strank v Iterable in jih uporabite za tržne dejavnosti.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -61,7 +61,7 @@ Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več inf
 
 1. V **Povezava za izvoz** polje, izberite povezavo v razdelku Iterable. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
 
-3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. Segmente je treba izvoziti v Iterable. Seznam, ustvarjen v Iterable, bo prejel popolnoma enako ime kot ime vašega segmenta v Dynamics 365 Customer Insights.
+3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. Segmente je potrebno izvoziti v Iterable. Seznam, ustvarjen v Iterable, bo prejel popolnoma enako ime kot ime vašega segmenta v Dynamics 365 Customer Insights.
 
 1. Izberite **Shrani**.
 

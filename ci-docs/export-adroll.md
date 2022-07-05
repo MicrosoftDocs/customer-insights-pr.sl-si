@@ -1,5 +1,5 @@
 ---
-title: Izvoz podatkov storitve Customer Insights v storitev AdRoll
+title: Izvoz segmentov v AdRoll (predogledna različica)
 description: Naučite se, kako konfigurirati povezavo in izvažati v storitev AdRoll.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643177"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082837"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Izvoz segmentov v AdRoll (predogledna različica)
 
@@ -21,9 +21,9 @@ Izvozite segmente poenotenih profilov strank v storitev AdRoll in jih uporabite 
 
 ## <a name="prerequisites-for-a-connection"></a>Predpogoji za povezavo
 
--   Imate [račun za AdRoll](https://www.adroll.com/) in ustrezne skrbniške poverilnice.
--   Imaš [konfigurirani segmenti](segments.md) v Customer Insights.
--   Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
+- Imate [račun za AdRoll](https://www.adroll.com/) in ustrezne skrbniške poverilnice.
+- Imaš [konfigurirani segmenti](segments.md) v Customer Insights.
+- Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
 
 ## <a name="known-limitations"></a>Znane omejitve
 

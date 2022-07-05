@@ -1,5 +1,5 @@
 ---
-title: Obogatitev profilov strank s podatki o lokaciji iz storitve Zemljevidi Azure
+title: Obogatite profile strank z podatki o lokaciji iz Azure Maps (predogled)
 description: Splošne informacije o obogatitvi proizvajalca storitve Zemljevidi Azure.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953648"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052627"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Obogatitev profilov strank s storitvijo Zemljevidi Azure (predogledna različica)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Obogatite profile strank z podatki o lokaciji iz Azure Maps (predogled)
 
 Zemljevidi Azure zagotavljajo podatke in storitve, osredotočene na lokacijo, za zagotavljanje izkušenj na podlagi geoprostorskih podatkov z vgrajeno lokacijsko inteligenco. Storitve obogatitve podatkov v storitvi Zemljevidi Azure izboljšajo natančnost podatkov o lokaciji vaših strank. Prinaša zmogljivosti, kot so normaliziranje naslovov ter ekstrahiranje zemljepisne širine in dolžine v storitev Dynamics 365 Customer Insights.
 
@@ -41,7 +41,7 @@ Moraš biti [skrbnik](permissions.md#admin) v Customer Insights in imeti aktiven
 
 ### <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
 
-S tem ko dovolite, da storitev Dynamics 365 Customer Insights podatke prenese storitvi Zemljevidi Azure, omogočite prenos podatkov zunaj omejitve skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vaših navodilih, vendar ste odgovorni za zagotovitev, da Azure Maps izpolnjujejo morebitne obveznosti glede zasebnosti ali varnosti. Za več informacij pojdite na [Microsoftova izjava o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+S tem ko dovolite, da storitev Dynamics 365 Customer Insights podatke prenese storitvi Zemljevidi Azure, omogočite prenos podatkov zunaj omejitve skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vašem navodilu, vendar ste odgovorni za zagotovitev, da Azure Maps izpolnjujejo morebitne obveznosti glede zasebnosti ali varnosti. Za več informacij pojdite na [Microsoftova izjava o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
 Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli odstrani in s tem prekini uporabo te funkcije.
 
 ## <a name="configure-the-enrichment"></a>Konfiguriranje obogatitve
@@ -58,9 +58,9 @@ Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli od
 
 1. Izberite **Naprej**.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki iz Microsofta. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki iz Microsofta. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
 
-1. Določite, katero vrsto polj iz svojih enotnih profilov želite uporabiti za ujemanje: primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj in obogatite profile za vsak naslov posebej. Na primer za domači naslov in poslovni naslov. Izberite **Naprej**.
+1. Določite, katero vrsto polj iz vaših enotnih profilov želite uporabiti za ujemanje: primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj in obogatite profile za vsak naslov posebej. Na primer za domači in poslovni naslov. Izberite **Naprej**.
 
 1. Preslikajte svoja polja na podatki o lokaciji iz Azure Maps. Polji **Ulica 1** in **Poštna številka** sta obvezni za izbrani primarni in/ali sekundarni naslov. Za večjo natančnost ujemanja dodajte več polj.
 
@@ -68,7 +68,7 @@ Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli od
 
 1. Izberite možnost **Naprej**, da dokončate preslikavo polj.
 
-1. Pregled **Napredne nastavitve** ki ponujajo največjo prilagodljivost za obravnavo naprednih primerov uporabe. Vendar naslednjih privzetih vrednosti običajno ni treba spreminjati.
+1. Pregled **Napredne nastavitve** ki nudijo največjo fleksibilnost za obravnavanje naprednih primerov uporabe. Vendar naslednjih privzetih vrednosti običajno ni treba spreminjati.
 
    - **Vrsta naslovov** : Vrne se najboljše ujemanje naslova, tudi če je nepopolno. Če želite pridobit samo popolne naslove, na primer naslove, ki vključujejo hišno številko, počistite vsa potrditvena polja razen **Naslovi točke**.
    - **Jezik** : Naslovi se vrnejo v jeziku, ki temelji na naslovnem območju. Če želite uporabiti standardiziran jezik naslova, v spustnem meniju izberite jezik. Na primer, izbiranje **angleščina** vrne **Kopenhagen, Danska** namesto **København, Danska**.
@@ -82,11 +82,11 @@ Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli od
 
 1. Izberite **teci** za začetek procesa obogatitve ali blizu vrnitve na **Obogatitve** stran.
 
-## <a name="enrichment-results"></a>Rezultati obogatitve
+## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-The **Število kupcev, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
+The **Število strank, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

@@ -1,5 +1,5 @@
 ---
-title: Obogatitev z neodvisno obogatitvijo HERE Technologies
+title: Obogatite profile strank s HERE Technologies (predogled)
 description: Splošne informacije o neodvisni obogatitvi HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,20 +8,20 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953693"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052071"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Obogatitev profilov strank v sodelovanju z družbo HERE Technologies (predogled)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Obogatite profile strank s HERE Technologies (predogled)
 
 HERE Technologies je podjetje z lokacijsko platformo, ki ponuja lokacijsko usmerjene podatke in storitve. Storitve obogatitve podatkov HERE Technologies izboljšujejo natančnost informacij o lokaciji vaših strank. Zagotavlja normalizacijo naslova, ekstrakcijo zemljepisne širine in dolžine in še več.
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Aktivna naročnina HERE Technologies. Če želite dobiti naročnino, [prijavi se tukaj](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) oz [kontaktirajte TUKAJ Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) neposredno. [Preberite več o obogatitvi lokacije HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
+- Aktivna naročnina na HERE Technologies. Če želite dobiti naročnino, [prijavi se tukaj](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) oz [kontaktirajte TUKAJ Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) neposredno. [Preberite več o obogatitvi lokacije HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
 - A TUKAJ [povezavo](connections.md) je [konfiguriran](#configure-the-connection-for-here-technologies) s strani skrbnika.
 
@@ -58,9 +58,9 @@ Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadarkoli ods
 
 1. Izberite **Naprej**.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki HERE Technologies. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki HERE Technologies. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
 
-1. Določite, katero vrsto polj iz svojih enotnih profilov želite uporabiti za ujemanje: primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj in obogatite profile za vsak naslov posebej. Na primer za domači naslov in poslovni naslov. Izberite **Naprej**.
+1. Določite, katero vrsto polj iz vaših enotnih profilov želite uporabiti za ujemanje: primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj in obogatite profile za vsak naslov posebej. Na primer za domači in poslovni naslov. Izberite **Naprej**.
 
 1. Preslikajte svoja polja na podatke HERE Technologies. Polji **Ulica 1** in **Poštna številka** sta obvezni za izbrani primarni in/ali sekundarni naslov. Za večjo natančnost ujemanja dodajte več polj.
 
@@ -72,11 +72,11 @@ Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadarkoli ods
 
 1. Izberite **teci** za začetek procesa obogatitve ali blizu vrnitve na **Obogatitve** stran.
 
-## <a name="enrichment-results"></a>Rezultati obogatitve
+## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-The **Število kupcev, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
+The **Število strank, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

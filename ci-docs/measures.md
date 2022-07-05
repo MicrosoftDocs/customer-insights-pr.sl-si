@@ -1,5 +1,5 @@
 ---
-title: Razumeti in upravljati ukrepe
+title: Pregled ukrepov
 description: Naučite se, kako ukrepi pomagajo analizirati in odražati uspešnost vašega podjetja.
 ms.date: 03/24/2022
 ms.subservice: audience-insights
@@ -14,18 +14,18 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 84a3a10a2517258c1f895800882b9c67391ec3de
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643303"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083131"
 ---
 # <a name="measures-overview"></a>Pregled ukrepov
 
 Ukrepi vam pomagajo bolje razumeti vedenje strank in poslovno uspešnost. Upoštevajo relevantne vrednosti iz [poenotenih profilov](data-unification.md). Da bi podjetje razumelo zgodovino nakupov posamezne stranke, ga zanima, *koliko je določena stranka porabila*, za lažje razumevanje svojih svojega skupnega dohodka pa lahko izmeri *celotni obseg svoje prodaje*.  
 
-Ukrepi so ustvarjeni [z uporabo graditelja meril](measure-builder.md), platforma za poizvedbe podatkov z različnimi operaterji in preprostimi možnostmi preslikave. Omogoča filtriranje podatkov, združevanje rezultatov v skupine, zaznavanje [poti odnosov entitet](relationships.md) in predogled rezultatov. Ti lahko [uporabite vnaprej določene predloge](measure-templates.md) za učinkovito konfiguracijo pogosto uporabljenih ukrepov.
+Ukrepi so ustvarjeni [z uporabo graditelja meril](measure-builder.md), platforma za podatkovne poizvedbe z različnimi operaterji in preprostimi možnostmi preslikave. Omogoča filtriranje podatkov, združevanje rezultatov v skupine, zaznavanje [poti odnosov entitet](relationships.md) in predogled rezultatov. Ti lahko [uporabite vnaprej določene predloge](measure-templates.md) za učinkovito konfiguracijo pogosto uporabljenih ukrepov.
 
 Uporabite graditelja mer za načrtovanje poslovnih dejavnosti s poizvedbami po podatkih o strankah in pridobivanjem vpogledov. Ustvarjanje na primer mer za *skupno porabo na stranko* in *skupni donos na stranko* pomaga prepoznati skupino strank z visoko porabo, ki pa so hkrati zelo donosne. Ti lahko [ustvariti segment](segments.md) na podlagi teh ukrepov za spodbujanje naslednjih najboljših ukrepov.
 

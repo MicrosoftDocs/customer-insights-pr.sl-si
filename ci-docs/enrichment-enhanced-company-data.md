@@ -1,5 +1,5 @@
 ---
-title: Izboljšanje podatkov o podjetju
+title: Obogatite profile podjetij z izboljšanimi podatki o podjetju
 description: Obogatite in normalizirajte podatke podjetja z Microsoftovimi modeli.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,24 +8,24 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 131ef3d1e123628779609ddec368cfef8f4d607e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953969"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054268"
 ---
-# <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obogatitev profilov podjetij z izboljšanimi podatki o podjetju
+# <a name="enrich-company-profiles-with-enhanced-company-data"></a>Obogatite profile podjetij z izboljšanimi podatki o podjetju
 
 Uporabite Microsoftove modele in zbrane podatke podjetja, da popravite, dopolnite in standardizirate profile vašega podjetja. Uporabili bomo [Format skupnega podatkovnega modela](/common-data-model/schema/core/applicationcommon/account) za boljšo natančnost in vpoglede.
 
 Lahko tudi [izboljšati podatke podjetja o virih podatkov](data-sources-enrichment.md) izboljšati natančnost ujemanja v procesu poenotenja podatkov.
 
-Za javna podjetja v Združenih državah Amerike so na voljo informacije, kot so prihodki, delnica, industrija in drugo.  
+Za javna podjetja v Združenih državah so na voljo informacije, kot so prihodki, borzni podatki, industrija in drugo.  
 
 ## <a name="how-we-enhance-company-data"></a>Kako izboljšamo podatke o podjetju
 
-Naš model gre skozi postopek v dveh korakih za izboljšanje profila podjetja. Prvič, normalizira ime podjetja. Na primer *Microsoft Corp* bo popravljeno in standardizirano *Microsoft Corporation*. Poskuša najti ujemanje v Microsoftovih zbranih podatkih podjetja. Če najdemo ujemanje, obogatimo profil podjetja z informacijami iz naših zbranih podatkov podjetja, vključno z imenom podjetja.
+Naš model gre skozi postopek v dveh korakih za izboljšanje profila podjetja. Prvič, normalizira ime podjetja. Na primer *Microsoft Corp* bo popravljeno in standardizirano *Microsoft Corporation*. Poskuša najti ujemanje v Microsoftovih zbranih podatkih podjetja. Če najdemo ujemanje, obogatimo profil podjetja z informacijami iz naših zbranih podatkov o podjetju, vključno z imenom podjetja.
 
 ### <a name="example"></a>Primer
 
@@ -66,7 +66,7 @@ Model ne izvaja naslednjega:
 
 1. Preglejte pregled in nato izberite **Naslednji**.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
 
 1. Izberite vrsto polj iz profilov vašega podjetja, ki jih želite uporabiti za ujemanje z Microsoftovimi zbranimi podatki o podjetju. Ta izbira vpliva na polja za preslikavo, do katerih imate dostop v naslednjem koraku.
 
@@ -84,7 +84,7 @@ Model ne izvaja naslednjega:
 
 1. Izberite **teci** za začetek procesa obogatitve ali blizu vrnitve na **Obogatitve** stran.
 
-## <a name="enrichment-results"></a>Rezultati obogatitve
+## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

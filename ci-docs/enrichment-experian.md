@@ -1,5 +1,5 @@
 ---
-title: Obogatitev z neodvisno obogatitvijo Experian
+title: Profile strank obogatite z demografskimi podatki iz storitve Experian (predogled)
 description: Splošne informacije o neodvisni obogatitvi Experian.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954107"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053041"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Profile strank obogatite z demografskimi podatki iz storitve Experian (predogled)
 
@@ -29,7 +29,7 @@ Obogatitev profilov strank trenutno omogočamo samo v ZDA.
 
 - An Experian [povezavo](connections.md) je [konfiguriran](#configure-the-connection-for-experian) s strani skrbnika.
 
-- Experian ID uporabnika, ID stranke in številka modela za vaš račun za varni transport (ST), ki podpira SSH Experian ustvarjeno za vas.
+- Experian Uporabniški ID, ID stranke in številka modela za vaš račun za varni transport (ST), ki podpira SSH, ki Experian ustvarjeno za vas.
 
 ## <a name="configure-the-connection-for-experian"></a>Konfigurirajte povezavo za Experian
 
@@ -63,7 +63,7 @@ S tem ko dovolite, da Dynamics 365 Customer Insights podatke prenese storitvi Ex
 
 1. Izberite **Naprej**.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, iz katerega želite obogatiti z demografskimi podatki Experian. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti z demografskimi podatki Experian. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Posnetek zaslona izbire nabora podatkov o strankah.":::
 
@@ -79,11 +79,11 @@ S tem ko dovolite, da Dynamics 365 Customer Insights podatke prenese storitvi Ex
 
 1. Izberite **teci** za začetek procesa obogatitve ali blizu vrnitve na **Obogatitve** stran.
 
-## <a name="enrichment-results"></a>Rezultati obogatitve
+## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-The **Število kupcev, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
+The **Število strank, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

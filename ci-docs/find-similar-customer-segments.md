@@ -1,5 +1,5 @@
 ---
-title: Poiščite podobne stranke z AI (vsebuje video)
+title: Poiščite podobne stranke z AI (predogled) (vsebuje video)
 description: Poiščite podobne segmente strank z umetno inteligenco.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
@@ -12,14 +12,14 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 7877349817829f7486a63a1355a81361e1cb2c13
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643392"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054826"
 ---
-# <a name="similar-customers-preview"></a>Podobne stranke (predogled)
+# <a name="find-similar-customers-with-ai-preview"></a>Poiščite podobne stranke z AI (predogled)
 
 Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdete podobne stranke. Za uporabo te funkcije morate ustvariti vsaj en segment. Razširjanje meril obstoječega segmenta pomaga najti stranke, ki so podobne temu segmentu.
 

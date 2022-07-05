@@ -1,5 +1,5 @@
 ---
-title: Izvoz podatkov iz storitve Customer Insights v storitev Adobe Experience Platform
+title: Izvozi segmente v Adobe Experience Platform (predogled)
 description: Naučite se uporabljati segmente Customer Insights v Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 42a4e0c6bce67a63b449a541299620ef2f4a3259
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c29b8264019669ffd954a298ce3a633c852477fa
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643740"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052531"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Uporaba segmentov iz aplikacije Customer Insights v aplikaciji Adobe Experience Platform (predogledna različica)
+# <a name="export-segments-to-adobe-experience-platform-preview"></a>Izvozi segmente v Adobe Experience Platform (predogled)
 
-Kot uporabnik Dynamics 365 Customer Insights, ste morda ustvarili segmente, da bodo vaše marketinške kampanje učinkovitejše s ciljanjem na ustrezno občinstvo. Če želite uporabiti segment iz Customer Insights v Adobe Experience Platform in aplikacije, kot so Adobe Campaign Standard, morate slediti nekaj korakom, opisanim v tem članku.
+Kot uporabnik Dynamics 365 Customer Insights, ste morda ustvarili segmente, da bodo vaše marketinške kampanje učinkovitejše s ciljanjem na ustrezne ciljne skupine. Če želite uporabiti segment iz Customer Insights v Adobe Experience Platform in aplikacije, kot so Adobe Campaign Standard, morate slediti nekaj korakom, opisanim v tem članku.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagram postopka korakov, opisanih v tem članku.":::
 
@@ -40,7 +40,7 @@ V tem primeru želimo promocijsko e-poštno akcijo izvesti enkrat. Ta članek ne
 
 V našem scenariju predvidevamo, da so e-poštni naslovi strank na voljo v Customer Insights in da so bile analizirane njihove promocijske nastavitve, da se identificirajo člani segmenta.
 
-The [segment, ki ste ga definirali v Customer Insights](segments.md) se imenuje **ChurnProneCustomers** in nameravate tem strankam poslati promocijo po e-pošti.
+The [segment, ki ste ga določili v Customer Insights](segments.md) je poklican **ChurnProneCustomers** in nameravate tem strankam poslati promocijo po e-pošti.
 
 :::image type="content" source="media/churn-prone-customers-segment.png" alt-text="Posnetek zaslona strani s segmenti z ustvarjenim segmentom ChurnProneCustomers.":::
 
@@ -112,7 +112,7 @@ Spoznajte [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/
 
 ## <a name="import-data-into-adobe-experience-platform"></a>Uvoz podatkov v aplikacijo Adobe Experience Platform
 
-Zdaj, ko je vse na svojem mestu, moramo uvoziti pripravljene podatke občinstvo iz Customer Insights v Adobe Experience Platform.
+Zdaj, ko je vse na svojem mestu, moramo uvoziti pripravljene občinstvo podatke iz Customer Insights v Adobe Experience Platform.
 
 Najprej [ustvarite izvorno povezavo za shrambo zbirke dvojiških podatkov Azure](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 

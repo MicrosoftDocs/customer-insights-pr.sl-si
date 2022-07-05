@@ -1,5 +1,5 @@
 ---
-title: Obogatite profile strank z Microsoftovimi podatki o blagovnih znamkah in zanimanjih
+title: Obogatite profile strank z Microsoftovimi podatki o blagovnih znamkah in zanimanjih (predogled)
 description: Uporabite Microsoftove lastniške podatke, da obogatite svoje podatke o strankah z afinitetami in Delež prisotnosti.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953785"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082711"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obogatite profile strank z afinitetami in Delež prisotnosti (predogled)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Obogatite profile strank z Microsoftovimi podatki o blagovnih znamkah in zanimanjih (predogled)
 
 Uporabite Microsoftove lastniške podatke, da obogatite svoje podatke o strankah z afinitetami blagovnih znamk, interesnimi afinitetami in Delež prisotnosti (SoV). Te afinitete in SoV temeljijo na podatkih ljudi s podobnimi demografskimi podatki kot vaše stranke. Te informacije vam pomagajo bolje razumeti in segmentirati svoje stranke glede na njihove afinitete ali SoV do določenih blagovnih znamk in interesov.
 
@@ -29,7 +29,7 @@ Microsoftove podatke spletnega iskanja uporabljamo za iskanje afinitet in SoV za
 
 - Afiniteta je primerjava med demografskimi segmenti. Te podatke lahko uporabite za prepoznavanje demografskih segmentov, ki imajo največjo afiniteto do določene blagovne znamke ali zanimanja v primerjavi z drugimi segmenti.
 
-- Delež prisotnosti je primerjava med vašimi izbranimi blagovnimi znamkami ali zanimanji. S temi informacijami lahko ugotovite, katera blagovna znamka ali zanimanje ima najvišji delež glasov za določen demografski segment v primerjavi z drugimi blagovnimi znamkami ali zanimanji, ki ste jih izbrali.
+- Delež prisotnosti je primerjava vaših izbranih blagovnih znamk ali zanimanj. S temi informacijami lahko ugotovite, katera blagovna znamka ali zanimanje ima najvišji delež glasov za določen demografski segment v primerjavi z drugimi blagovnimi znamkami ali zanimanji, ki ste jih izbrali.
 
 ## <a name="affinity-level-and-score"></a>Stopnja afinitete in ocena
 
@@ -67,7 +67,7 @@ Trenutno podpiramo naslednje države/regije: Avstralija, Kanada (angleščina), 
 
 1. Preglejte pregled in nato izberite **Naslednji**.
 
-1. Če želite spremeniti državo ali regijo, izberite **Spremeni se** zraven **Država/regija**. V podoknu **Nastavitve države/regije** izberite [podprto državo/regijo](#supported-countriesregions) in izberite **Uporabi**.
+1. Če želite spremeniti državo ali regijo, izberite **Spremeni se** zraven **Država/regija**. V podoknu **Nastavitve države/regije** izberite [podprto državo/regijo](#supported-countriesregions) in nato možnost **Uporabi**.
 
    > [!NOTE]
    > Pri izbiri lastnih blagovnih znamk sistem ponuja predloge glede na izbrano državo ali regijo. Pri izbiri panoge boste pridobili najbolj ustrezne blagovne znamke ali interese glede na izbrano državo oziroma regijo.
@@ -83,7 +83,7 @@ Trenutno podpiramo naslednje države/regije: Avstralija, Kanada (angleščina), 
 
 1. Izberite **Naprej**.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki iz Microsofta. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki iz Microsofta. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
 
 1. Izberite **Naprej**.
 
@@ -104,19 +104,19 @@ Trenutno podpiramo naslednje države/regije: Avstralija, Kanada (angleščina), 
 
    Med obogatitvijo profilov bomo obogatili vse profile strank, za katere dobimo podatke za izbrane blagovne znamke in interese, vključno s profili, ki niso v izbrani državi ali regiji. Če na primer izberete Nemčijo, bomo obogatili profile iz Združenih državah Amerike, če imamo na voljo podatke o izbranih blagovnih znamkah in interesih v ZDA.
 
-## <a name="enrichment-results"></a>Rezultati obogatitve
+## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Predogled rezultatov po zagonu postopka obogatitve.":::
 
-Rezultati vključujejo **Raven afinitete** oz **Delež prisotnosti** grafikoni.
+Rezultati vključujejo **Raven afinitete** oz **Delež prisotnosti** karte.
 
-Subjekti, ustvarjeni iz obogatitev, so navedeni pod **Obogatitev** skupina v **Podatki** > **Entitete**. Obogateni podatki za blagovne znamke gredo v **BrandAffinityFromMicrosoft** in **BrandShareOfVoiceFromMicrosoft** subjekti. Podatki za interese so v **InterestAffinityOd Microsofta** in **InterestShareOfVoiceFromMicrosoft** subjekti.
+Entitete, ustvarjene iz obogatitev, so navedene pod **Obogatitev** skupina v **Podatki** > **Entitete**. Obogateni podatki za blagovne znamke gredo v **Blagovna znamkaAffinityFromMicrosoft** in **BrandShareOfVoiceFromMicrosoft** subjekti. Podatki za interese so v **InterestAffinity iz Microsofta** in **InterestShareOfVoiceFromMicrosoft** subjekti.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Glejte podatke o obogatitvi na kartici stranke
 
-Blagovna znamka in interes SoV si lahko ogledate tudi na posameznih karticah strank. Odprite možnost **Stranke** in izberite profil stranke. V kartici stranke boste našli grafikone za blagovno znamko ali zanimanje SoV na podlagi ljudi v demografskem profilu te stranke.
+Blagovna znamka in interes SoV si lahko ogledate tudi na posameznih karticah strank. Odprite možnost **Stranke** in izberite profil stranke. Na kartici stranke boste našli grafikone za blagovno znamko ali zanimanje SoV na podlagi ljudi v demografskem profilu te stranke.
 
 :::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartica stranke z obogatenimi podatki.":::
 

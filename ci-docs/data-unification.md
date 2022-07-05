@@ -1,6 +1,6 @@
 ---
-title: Ustvarite poenoten pogled za svoje stranke
-description: Pojdite skozi postopek združevanja podatkov s svojimi podatki, da ustvarite en sam nabor enotnih profilov strank.
+title: Pregled poenotenja podatkov
+description: Pojdite skozi postopek poenotenja podatkov s svojimi podatki, da ustvarite en sam nabor enotnih profilov strank.
 ms.date: 05/10/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: bb8da6f4b9f92f2b265ff9807e04638edae4f814
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755754"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082228"
 ---
 # <a name="data-unification-overview"></a>Pregled poenotenja podatkov
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-Po [nastavitvi virov podatkov](data-sources.md) lahko podatke poenotite. Poenotenje podatkov vam omogoča poenotenje nekoč ločenih virov podatkov v en sam glavni nabor podatkov, ki zagotavlja enoten pogled na te podatke. Za posamezne potrošnike (B-to-C), kjer so podatki osredotočeni na posameznike, poenotenje zagotavlja enoten pogled na vaše stranke. Za poslovne račune (B-to-B), kjer so podatki osredotočeni na račune, poenotenje zagotavlja enoten pogled na vaše račune.
+Po [nastavitvi virov podatkov](data-sources.md) lahko podatke poenotite. Združevanje podatkov vam omogoča poenotenje nekoč ločenih virov podatkov v en sam glavni nabor podatkov, ki zagotavlja enoten pogled na te podatke. Za posamezne potrošnike (B-to-C), kjer so podatki osredotočeni na posameznike, poenotenje zagotavlja enoten pogled na vaše stranke. Za poslovne račune (B-to-B), kjer so podatki osredotočeni na račune, poenotenje zagotavlja enoten pogled na vaše račune.
 
 Podatke je mogoče poenotiti na eni sami ali več entitetah. Združitev se izvede v naslednjem vrstnem redu:
 
@@ -30,7 +30,7 @@ Podatke je mogoče poenotiti na eni sami ali več entitetah. Združitev se izved
 
 1. [Podvojeni zapisi](remove-duplicates.md) (prej del Match): v koraku podvojenih zapisov po želji določite pravila za odstranitev podvojenih zapisov strank iz vsake entitete.
 
-1. [Ujemanje pogojev](match-entities.md) (prej imenovano Ujemanje): v koraku pogojev ujemanja definirajte pravila, ki se ujemajo z zapisi strank med entitetami. Ko se stranka najde v dveh ali več entitetah, se ustvari en konsolidirani zapis z vsemi stolpci in podatki iz vsake entitete.
+1. [Ujemanje pogojev](match-entities.md) (prej imenovano Ujemanje): v koraku pogojev ujemanja definirajte pravila, ki se ujemajo z zapisi strank med entitetami. Ko stranko najdemo v dveh ali več entitetah, se ustvari en konsolidirani zapis z vsemi stolpci in podatki iz vsake entitete.
 
 1. [Poenotena polja strank](merge-entities.md) (prej imenovano Spajanje): V koraku poenotenih polj strank določite, katera izvorna polja naj bodo vključena, izključena ali združena v enoten profil stranke.  
 

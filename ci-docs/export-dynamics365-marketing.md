@@ -1,5 +1,5 @@
 ---
-title: Izvozite podatke Customer Insights v Dynamics 365 Marketing
+title: Izvoz segmentov v Dynamics 365 Marketing (predogled)
 description: Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Marketing.
 ms.date: 08/24/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 7227f3f9e7699a9b5ad546789de5e568b56da579
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: fed4ae1b017cca2b6060c4dda155859cd77e0daf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642965"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054636"
 ---
-# <a name="use-segments-in-dynamics-365-marketing-preview"></a>Uporaba segmentov v storitvi Dynamics 365 Marketing (predogledna različica)
-
-
+# <a name="export-segments-to-dynamics-365-marketing-preview"></a>Izvoz segmentov v Dynamics 365 Marketing (predogled)
 
 S [segmenti](segments.md) ustvarite akcije in stopite v stik z določenimi skupinami strank s storitvijo Dynamics 365 Marketing. Za več informacij glejte razdelek [Uporaba segmentov iz storitve Dynamics 365 Customer Insights s storitvijo Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
 
@@ -31,7 +29,7 @@ S [segmenti](segments.md) ustvarite akcije in stopite v stik z določenimi skupi
 - Zapisi o stikih morajo biti prisotni v storitvi Dynamics 365 Marketing, preden lahko izvozite segment iz rešitve Customer Insights v Marketing. Preberite več o vključevanju stikov v storitvi [Dynamics 365 Marketing z uporabo rešitve Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
-  > Izvoz segmentov iz Customer Insights v Marketing ne bo ustvaril novih kontaktnih zapisov v primerih Marketing. Zapise o stikih iz Marketinga je treba prenesti v Customer Insights in jih uporabiti kot vir podatkov. Prav tako jih je treba vključiti v enotno entiteto stranke, da se ID-ji strank preslikajo v ID-je stikov, preden je segmente mogoče izvoziti.
+  > Z izvozom segmentov iz Customer Insights v Marketing ne boste ustvarili novih zapisov stikov v primerkih Marketing. Zapise o stikih iz Marketinga je treba prenesti v Customer Insights in jih uporabiti kot vir podatkov. Prav tako jih je treba vključiti v enotno entiteto stranke, da se ID-ji strank preslikajo v ID-je stikov, preden je segmente mogoče izvoziti.
 
 ## <a name="set-up-connection-to-marketing"></a>Nastavitev povezave s storitvijo Marketing
 

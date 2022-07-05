@@ -1,6 +1,6 @@
 ---
-title: Kako - Ustvarite novo okolje
-description: Koraki za ustvarjanje okolij z za Dynamics 365 Customer Insights.
+title: 'Kako: ustvariti novo okolje'
+description: Koraki za ustvarjanje okolja v Dynamics 365 Customer Insights.
 ms.date: 05/31/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -12,18 +12,18 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 6dfaa09cd80498e9a4e4dea6a07ce6e9d29105e2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 62969527ceed906ff06fb9be90b972496323ce0a
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011631"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052811"
 ---
 # <a name="how-to-create-a-new-environment"></a>Kako: ustvariti novo okolje
 
-Po [nakup naročniške licence za Dynamics 365 Customer Insights](paid-license.md), globalni skrbnik Microsoft 365 najemnik prejme e-pošto, ki ga vabi k ustvarjanju okolja. Za začetek pojdite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). V tem scenariju lahko greste neposredno na [1. korak: Navedite osnovne informacije](#step-1-provide-basic-information).
+Po [nakup naročniške licence za Dynamics 365 Customer Insights](paid-license.md), globalni skrbnik Microsoft 365 najemnik prejme e-pošto, ki ga vabi k ustvarjanju okolja. Za začetek pojdite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start). V tem primeru lahko greste neposredno na [1. korak: Navedite osnovne informacije](#step-1-provide-basic-information).
 
-Ko je prvo okolje ustvarjeno, se globalni skrbnik datoteke Microsoft 365 najemnik lahko [dodaj uporabnike iz svoje organizacije kot skrbnike](permissions.md). V prihodnje lahko ti skrbniki upravljajo uporabnike in okolja. Če vaša organizacija kupi več kot eno licenco za Customer Insights, [kontaktirajte našo ekipo za podporo](https://go.microsoft.com/fwlink/?linkid=2079641) povečati število razpoložljivih okolij. Za več informacij o zmogljivosti in dodatni zmogljivosti si oglejte [Vodnik za licenciranje Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+Ko je prvo okolje ustvarjeno, globalni skrbnik za Microsoft 365 najemnik lahko [dodajte uporabnike iz svoje organizacije kot skrbnike](permissions.md). V prihodnje lahko ti skrbniki upravljajo uporabnike in okolja. Če vaša organizacija kupi več kot eno licenco za Customer Insights, [kontaktirajte našo ekipo za podporo](https://go.microsoft.com/fwlink/?linkid=2079641) povečati število razpoložljivih okolij. Za več informacij o zmogljivosti in dodatni zmogljivosti si oglejte [Vodnik za licenciranje Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
 
 > [!TIP]
 > Če želite preizkusiti storitev, glejte razdelek [Nastavitev preizkusnega okolja](trial-signup.md).
@@ -38,7 +38,7 @@ Potrebujete [skrbniška dovoljenja](permissions.md) v Customer Insights za ustva
   
    :::image type="content" source="media/environment-picker.png" alt-text="Izberite izbirnik okolja.":::
 
-1. Sledite vodeni izkušnji, opisani v naslednjih razdelkih, da zagotovite vse potrebne informacije za novo okolje. Če ste okolje konfigurirali prej, lahko tudi [kopirajte konfiguracijo](#copy-the-environment-configuration).
+1. Sledite vodeni izkušnji, opisani v naslednjih razdelkih, da zagotovite vse potrebne informacije za novo okolje. Če ste predhodno konfigurirali okolje, lahko tudi [kopirajte konfiguracijo](#copy-the-environment-configuration).
 
 ## <a name="step-1-provide-basic-information"></a>1. korak: Navedite osnovne informacije
 
@@ -49,9 +49,9 @@ V koraku **Osnovni podatki** izberite, ali želite ustvariti okolje od začetka 
 Navedite naslednje podrobnosti:
 
 - **Ime**: ime tega okolja. To polje je že izpolnjeno, če ste kopirali iz obstoječega okolja, lahko pa ga spremenite.
-- **Izberite svoje podjetje**: izberite primarno občinstvo za novo okolje. Sodelujete lahko s posameznimi potrošniki (prodaja strankam) ali [poslovnimi kupci](work-with-business-accounts.md) (podjetja podjetjem). Če vaša organizacija posluje predvsem s posamezniki, na primer s trgovcem na drobno ali kavarnami, izberite posamezne potrošnike. Če so vaša glavna občinstvo druga podjetja, na primer proizvajalec avtomobilov ali papirnica, izberite poslovne račune.
+- **Izberite svoje podjetje**: izberite primarno občinstvo za novo okolje. Sodelujete lahko s posameznimi potrošniki (prodaja strankam) ali [poslovnimi kupci](work-with-business-accounts.md) (podjetja podjetjem). Če vaša organizacija posluje večinoma s posamezniki, kot je trgovec na drobno ali kavarna, izberite posamezne potrošnike. Če so vaša glavna občinstvo druga podjetja, na primer proizvajalec avtomobilov ali papirnica, izberite poslovne račune.
 - **Vrsta**: izberite, ali želite ustvariti produkcijsko ali preizkusno okolje. Preizkusna okolja ne dovoljujejo načrtovanega osveževanja podatkov in so namenjena predhodni implementaciji in testiranju. Okolja peskovnika uporabljajo isto primarno občinstvo kot trenutno izbrano produkcijsko okolje.
-- **Območje**: območje, v katerem je storitev uvedena in gostovana. Za [uporabite svoje Azure Data Lake Storage račun](own-data-lake-storage.md) oz [povezati z obstoječim Microsoft Dataverse organizacija](customer-insights-dataverse.md), mora biti okolje Customer Insights v isti regiji.
+- **Območje**: območje, v katerem je storitev uvedena in gostovana. Za [uporabite svoje Azure Data Lake Storage račun](own-data-lake-storage.md) oz [povezati z obstoječo Microsoft Dataverse organizacija](customer-insights-dataverse.md), mora biti okolje Customer Insights v isti regiji.
 
 ## <a name="step-2-configure-data-storage"></a>2. korak: konfiguracija shranjevanja podatkov
 
@@ -69,11 +69,11 @@ Izbirate lahko med dvema možnostma:
 Korak **Microsoft Dataverse** vam omogoča, da povežete Customer Insights s svojim okoljem Dataverse. Delite podatke z Dataverse za uporabo s poslovnimi aplikacijami, ki temeljijo na Dataverse, kot je Dynamics 365 Marketing ali modelsko vodene aplikacije v Power Apps.
 
 
-Pustite to polje prazno, če nimate svojega Dataverse okolje in ustvarili ga bomo za vas.
+To polje pustite prazno, če nimate svojega Dataverse okolje in ustvarili ga bomo za vas.
 
 Za več informacij glejte [Delajte s podatki Customer Insights v Microsoft Dataverse](customer-insights-dataverse.md).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podatkov z Microsoft Dataverse samodejno omogočeno za nova okolja v omrežju.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podatkov z Microsoft Dataverse samodejno omogočeno za net nova okolja.":::
 
 ### <a name="step-4-finalize-the-settings"></a>4. korak: dokončanje nastavitev
 
