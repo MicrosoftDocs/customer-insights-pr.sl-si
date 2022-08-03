@@ -1,51 +1,53 @@
 ---
 title: Izvozi segmente v Iterable (predogled)
 description: Naučite se konfigurirati povezavo in izvoziti v Iterable.
-ms.date: 03/29/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 98d5aeab6b0e932d291213053d509ec72da82e47
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052255"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195449"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Izvozi segmente v Iterable (predogled)
 
-Izvozite segmente enotnih profilov strank v Iterable in jih uporabite za tržne dejavnosti.
+Izvozite segmente poenotenih profilov strank v Iterable in jih uporabite za marketinške aktivnosti.
 
 ## <a name="prerequisites"></a>Zahteve
 
--   Imate [Iterable račun](https://iterable.com/) in ustrezne skrbniške poverilnice.
--   Imaš [konfigurirani segmenti](segments.md) v Customer Insights.
--   Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
+- An [Ponovljiv račun](https://iterable.com/) in ustrezne skrbniške poverilnice.
+- An [Ponovljivi ključ API](https://support.iterable.com/hc/en-us/articles/360043464871)
+- [Konfigurirani segmenti](segments.md) v Customer Insights.
+- Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Izvoz v Iterable je omejen na segmente.
-- Izvoz do 1 milijona profilov strank v Iterable lahko traja do 30 minut. 
-- Število profilov strank, ki jih lahko izvozite v Iterable, je odvisno in omejeno od vaše pogodbe z Iterable.
+- Do 1 milijon profilov strank v Iterable, kar lahko traja do 30 minut. Število profilov strank, ki jih lahko izvozite v Iterable, je odvisno od vaše pogodbe z Iterable.
+- Samo segmenti.
 
 ## <a name="set-up-connection-to-iterable"></a>Nastavite povezavo z Iterable
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 
-1. Izberite **Dodajte povezavo** in izberite **Iterable** da konfigurirate povezavo.
+1. Izberite **Dodajte povezavo** in izberite **Ponovljivo**.
 
 1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**. Ime in vrsta povezave opisujeta to povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
 
-1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Izberite, kdo lahko uporablja to povezavo. Privzeto jo lahko uporabljajo samo skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Ponudite svoje [Iterable API ključ](https://support.iterable.com/hc/en-us/articles/360043464871) za nadaljevanje prijave. 
+1. Za nadaljevanje prijave vnesite svoj ključ API-ja Iterable.
 
-1. Izberite potrditveno polje **Strinjam se**, da potrdite **Zasebnost in skladnost podatkov**.
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
 
-1. Izberite **Povežite se** za inicializacijo povezave z Iterable.
+1. Izberite **Povežite se** za inicializacijo povezave.
 
 1. Izberite **Dodajte sebe kot uporabnika za izvoz** in vnesite svoje poverilnice Customer Insights.
 
@@ -53,25 +55,22 @@ Izvozite segmente enotnih profilov strank v Iterable in jih uporabite za tržne 
 
 ## <a name="configure-an-export"></a>Konfiguriranje izvoza
 
-Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 
-1. Za ustvarjanje novega izvoza izberite **Dodaj cilj**.
+1. Izberite **Dodaj izvoz**.
 
-1. V **Povezava za izvoz** polje, izberite povezavo v razdelku Iterable. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
+1. V **Povezava za izvoz** izberite povezavo v razdelku Iterable. Če ni na voljo nobena povezava, se obrnite na skrbnika.
 
-3. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. Segmente je potrebno izvoziti v Iterable. Seznam, ustvarjen v Iterable, bo prejel popolnoma enako ime kot ime vašega segmenta v Dynamics 365 Customer Insights.
+1. Vnesite ime za izvoz.
+
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. Seznam, ustvarjen v Iterable, bo prejel popolnoma enako ime kot ime vašega segmenta Dynamics 365 Customer Insights.
+
+1. Izberite segmente, ki jih želite izvoziti.
 
 1. Izberite **Shrani**.
 
-S shranjevanjem izvoza se ta ne zažene takoj.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
-
-Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v Iterable dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo takšne podatke prenesel po vašem navodilu, vendar ste odgovorni za zagotovitev, da Iterable izpolnjuje vse vaše obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Vaš skrbnik za Dynamics 365 Customer Insights lahko kadar koli odstrani ta cilj izvoza in s tem prekine uporabljati to funkcijo.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

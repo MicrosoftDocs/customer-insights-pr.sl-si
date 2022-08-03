@@ -1,6 +1,6 @@
 ---
 title: Ustvarite mere iz predlog
-description: Določite ukrepe z uporabo predlog za običajne primere uporabe.
+description: Določite mere z uporabo predlog za pogoste primere uporabe.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051704"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170793"
 ---
 # <a name="create-measures-from-templates"></a>Ustvarite mere iz predlog
 
-Uporabite lahko vnaprej določene predloge, ki se pogosto uporabljajo [ukrepe](measures.md) jih ustvariti. Podrobni opisi predlog in vodena izkušnja vam pomagajo pri učinkovitem ustvarjanju ukrepov. Predloge temeljijo na preslikanih podatkih iz entitete *Poenotena dejavnost*. Prepričajte se, da ste konfigurirali [dejavnosti strank](activities.md), preden ustvarite ukrep iz predloge.
+Uporabite vnaprej določene predloge pogosto uporabljenih [ukrepe](measures.md) da jih ustvarite. Predloge temeljijo na preslikanih podatkih iz entitete *Poenotena dejavnost*. Prepričajte se, da ste konfigurirali [dejavnosti strank](activities.md), preden ustvarite ukrep iz predloge.
 
-Če želite ustvariti meritve po meri, glejte [Uporabite graditelj meril za ustvarjanje ukrepov iz nič](measure-builder.md).
+Predloge meritev so podprte samo v okoljih za **posamezne stranke**. Če želite ustvariti mere po meri ali ustvariti mere za B-to-B, glejte [Uporabite graditelj mer](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
-
-Razpoložljive predloge ukrepov: 
+Razpoložljive predloge ukrepov:
 - Povprečna vrednost transakcije (ATV)
 - Skupna vrednost transakcije
 - Povprečni dnevni prihodek
+- Povprečni mesečni prihodek
 - Povprečni letni prihodek
 - Število transakcij
 - Prislužene točke zvestobe
@@ -39,7 +38,7 @@ Razpoložljive predloge ukrepov:
 - Trajanje članstva v programu zvestobe
 - Čas od zadnjega nakupa
 
-## <a name="build-a-new-measure-using-a-template"></a>Z uporabo predloge ustvarite novo mero
+## <a name="build-a-new-measure-using-a-template"></a>S pomočjo predloge sestavite novo mero
 
 1. Pojdi do **Ukrepi**.
 
@@ -51,27 +50,28 @@ Razpoložljive predloge ukrepov:
 
 1. Preglejte zahtevane podatke in izberite **Začetek**, če imate na voljo vse podatke.
 
-1. Izberite **Uredite podrobnosti** poleg Ime ukrepa. Navedite ime za ukrep. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) do mere.
+1. Izberite **Uredi podrobnosti** poleg imena mere. Vnesite ime za mero. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) po meri.
 
-   :::image type="content" source="media/measures_edit_details.png" alt-text="Pogovorno okno Uredi podrobnosti.":::
+   :::image type="content" source="media/measures_edit_details.png" alt-text="Pogovorno okno za urejanje podrobnosti.":::
 
 1. Izberite **Dokončano**.
 
-1. V razdelku **Nastavi časovno obdobje** določite časovni okvir podatkov, ki jih želite uporabiti. Če želite, da nova mera pokrije celoten nabor podatkov, izberite možnost **Ves čas**, ali pa se odločite, da se mera osredotoči na **Določeno časovno obdobje**.
+1. V **Nastavite časovno obdobje** razdelku določite časovni okvir podatkov. Če želite, da nova mera pokrije celoten nabor podatkov, izberite možnost **Ves čas**, ali pa se odločite, da se mera osredotoči na **Določeno časovno obdobje**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Posnetek zaslona, ki prikazuje razdelek časovnega obdobja pri konfiguriranju ukrepa iz predloge.":::
 
 1. V naslednjem razdelku izberite **Dodaj podatke**, če želite izbrati dejavnosti in preslikati ustrezne podatke iz vaše entitete *Poenotena dejavnost*.
 
-    1. Korak 1 od 2: v razdelku **Vrsta dejavnosti** izberite vrsto entitete, ki jo želite uporabiti. Za **Dejavnosti** izberite entitete, ki jih želite preslikati.
-    1. Korak 2 od 2: izberite atribut v entiteti *Poenotena dejavnost* za komponento, ki jo zahteva formula. Za povprečno vrednost transakcije je to na primer atribut, ki predstavlja vrednost transakcije. Za **Časovni žig dejavnosti** izberite atribut iz entitete poenotene dejavnosti, ki predstavlja datum in čas dejavnosti.
-   
-1. Ko je preslikava podatkov uspešno zaključena, se prikaže stanje **Dokončano** skupaj z imenom preslikanih dejavnosti in atributov.
+    1. Korak 1 od 2: v razdelku **Vrsta dejavnosti** izberite vrsto entitete, ki jo želite uporabiti. Za **dejavnosti**, izberite entitete, ki jih želite preslikati, in nato izberite **Naslednji**.
+    1. Korak 2 od 2: izberite atribut v entiteti *Poenotena dejavnost* za komponento, ki jo zahteva formula. Za povprečno vrednost transakcije je to na primer atribut, ki predstavlja vrednost transakcije. Za **Časovni žig dejavnosti**, izberite atribut iz *Enotna dejavnost* entiteta, ki predstavlja datum in čas dejavnosti.
+    1. Izberite **Shrani**.
 
-1. Zdaj lahko izberete **Zaženi**, da izračunate rezultate ukrepa. Če jih želite pozneje prilagoditi, izberite **Shrani osnutek**.
+    Ko je preslikava podatkov uspešna, se prikaže stanje **Popolna** ter ime preslikanih dejavnosti in prikaz atributov.
 
-# <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
+1. Izberite **Teči** za izračun rezultatov ukrepa. Izberite **Shrani osnutek** če želite obdržati trenutno konfiguracijo in zagnati ukrep pozneje. The **Ukrepi** prikazi strani.
 
-Ta funkcija je na voljo samo za mere, ustvarjene v okoljih s posameznimi strankami kot primarno ciljno občinstvo.
+## <a name="next-step"></a>Naslednji korak
 
----
+Za ustvarjanje uporabite obstoječe ukrepe [segment strank](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

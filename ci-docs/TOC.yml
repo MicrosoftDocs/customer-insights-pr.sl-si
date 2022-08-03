@@ -6,7 +6,7 @@
   href: whats-new-customer-insights.md
 - name: Učni katalog
   items:
-    - name: Certificirajte se kot strokovnjak za Microsoftovo platformo za podatke o strankah
+    - name: Pridobite certifikat Microsoft Customer Data Platform Specialist
       href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
     - name: Uvod v storitev Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
@@ -14,7 +14,7 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: Ustvarite poenoten profil stranke
       href: /learn/modules/unified-customer-profile/
-    - name: Sodelujte z vpogledi strank
+    - name: Sodelujte s Customer Insights
       href: /learn/modules/working-with-customer-insights/
     - name: Obogatite podatke in naredite napovedi
       href: /learn/modules/enrich-data/
@@ -36,13 +36,13 @@
       href: get-started.md
     - name: Začnite s plačljivo licenco
       href: paid-license.md
-    - name: Raziščite vpogled v stranke
+    - name: Raziščite Customer Insights
       href: home.md
-    - name: Delo z oznakami in stolpci
+    - name: Delajte z oznakami in stolpci
       href: work-with-tags-columns.md
     - name: Delo s poslovnimi računi
       href: work-with-business-accounts.md
-    - name: Integrirajte z Dynamics 365 Marketing
+    - name: Integracija z Dynamics 365 Marketing
       href: marketing-get-started.md
 - name: Viri podatkov
   items:
@@ -54,9 +54,9 @@
       href: connect-synapse.md
     - name: Povezovanje s podatki v upravljanem jezeru podatkov Microsoft Dataverse
       href: connect-dataverse-managed-lake.md
-    - name: Dodajte vire podatkov prek Power Query konektorji
+    - name: Dodajte vire podatkov prek Power Query priključki
       href: connect-power-query.md
-    - name: Obogatitev za vire podatkov
+    - name: Obogatitev podatkovnih virov
       href: data-sources-enrichment.md
     - name: Postopna osvežitev za vire podatkov
       href: incremental-refresh-data-sources.md
@@ -72,7 +72,7 @@
       href: remove-duplicates.md
     - name: Pogoji tekme
       href: match-entities.md
-    - name: Poenoti polja strank
+    - name: Poenotite polja strank
       href: merge-entities.md
     - name: Pregled poenotenja podatkov
       href: review-unification.md
@@ -82,11 +82,11 @@
   items:
     - name: Pregled obogatitve podatkov
       href: enrichment-hub.md
-    - name: Računi od Office 365 podatkov
+    - name: Računi iz Office 365 podatke
       href: enrichment-office.md
     - name: Blagovne znamke in interesi
       href: enrichment-microsoft.md
-    - name: Podatki o podjetju Dun & Bradstreet
+    - name: Podatki podjetja Dun & Bradstreet
       href: enrichment-dnb.md
     - name: Podatke podjetja zagotavlja Leadspace
       href: enrichment-leadspace.md
@@ -96,30 +96,34 @@
       href: enrichment-enhanced-addresses.md
     - name: Izboljšani podatki podjetja
       href: enrichment-enhanced-company-data.md
-    - name: Identiteta z LiveRamp
+    - name: Identiteta z LiveRampom
       href: enrichment-liveramp.md
-    - name: Lokacija iz Azure Maps
+    - name: Lokacija iz zemljevidov Azure
       href: enrichment-azure-maps.md
     - name: Lokacijo zagotavlja družba HERE Technologies
       href: enrichment-here.md
     - name: Uvoz po meri SFTP
       href: enrichment-SFTP-custom-import.md
-- name: Poenoteni profili
+- name: Profili strank in dejavnosti
   items:
-    - name: Pregled poenotenih profilov strank
+    - name: Ogled profilov strank
       href: customer-profiles.md
-    - name: Filtriranje poenotenih profilov strank
+    - name: Upravljanje indeksa iskanja in filtriranja
       href: search-filter-index.md
     - name: Določite dejavnosti strank
       href: activities.md
     - name: Uporabite upravljanje privolitve
       href: consent-management.md
+    - name: Uporabite spletne podatke za personalizacijo
+      href: unknown-to-known.md
 - name: Segmenti
   items:
     - name: Pregled segmentov
       href: segments.md
-    - name: Ustvari segmente
+    - name: Ustvarite z graditeljem segmentov
       href: segment-builder.md
+    - name: Ustvarite s hitrimi segmenti
+      href: segment-quick.md
     - name: 'Predlagani segmenti, ki temeljijo na meritvah'
       href: suggested-segments.md
     - name: 'Predlagani segmenti, ki temeljijo na dejavnosti'
@@ -132,9 +136,9 @@
   items:
     - name: Pregled ukrepov
       href: measures.md
-    - name: Ustvari nov ukrep
+    - name: Ustvarite z graditeljem mer
       href: measure-builder.md
-    - name: Uporabite predlogo za merjenje
+    - name: Ustvarjajte s predlogami
       href: measure-templates.md
 - name: Predvidevanja
   items:
@@ -180,6 +184,10 @@
           href: export-destinations.md
         - name: Dejavna akcija
           href: export-active-campaign.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
         - name: AdRoll
           href: export-adroll.md
         - name: Avtopilot
@@ -190,11 +198,7 @@
           href: export-azure-data-lake-storage-gen2.md
         - name: Azure Synapse Analytics
           href: export-azure-synapse-analytics.md
-        - name: Adobe Campaign Standard
-          href: export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: export-adobe-experience-platform.md
-        - name: Braze
+        - name: Spajkanje
           href: export-braze.md
         - name: Storitev Campaign Monitor
           href: export-campaign-monitor.md
@@ -214,7 +218,7 @@
           href: export-google-ads.md
         - name: InMobi
           href: export-inmobi.md
-        - name: Iterable
+        - name: Ponovljivo
           href: export-iterable.md
         - name: Klaviyo
           href: export-klaviyo.md
@@ -228,6 +232,8 @@
           href: export-marketo.md
         - name: Microsoft Advertising
           href: export-microsoft-advertising.md
+        - name: MoEngage
+          href: export-moengage.md
         - name: Omnisend
           href: export-omnisend.md
         - name: RollWorks
@@ -270,11 +276,11 @@
       href: create-environment.md
     - name: Vzpostavljanje povezave s programom Microsoft Dataverse
       href: customer-insights-dataverse.md
-    - name: Uporabite svoje Azure Data Lake Storage
+    - name: Uporabite svojega Azure Data Lake Storage
       href: own-data-lake-storage.md
     - name: Upravljanje nastavitev okolja
       href: manage-environments.md
-    - name: Povežite se z računom za shranjevanje prek storitve Principal
+    - name: Povežite se z računom za shranjevanje s pomočjo Service Principal
       href: connect-service-principal.md
 - name: Skrbništvo
   items:
@@ -286,7 +292,7 @@
       href: permissions.md
     - name: Prinesite svojo storitev Key Vault
       href: use-azure-key-vault.md
-    - name: Izvozi diagnostične dnevnike
+    - name: Izvoz diagnostičnih dnevnikov
       href: diagnostics.md
     - name: Pregled povezav
       href: connections.md

@@ -1,7 +1,7 @@
 ---
-title: Izvoz segmentov v Dynamics 365 Marketing (predogled)
+title: Izvozi segmente v Dynamics 365 Marketing (predogled)
 description: Naučite se, kako konfigurirati povezavo in izvažati v Dynamics 365 Marketing.
-ms.date: 08/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -11,35 +11,37 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: fed4ae1b017cca2b6060c4dda155859cd77e0daf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 123b565421a7d096e7341a8f600f91e59aefe8d0
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054636"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196644"
 ---
-# <a name="export-segments-to-dynamics-365-marketing-preview"></a>Izvoz segmentov v Dynamics 365 Marketing (predogled)
+# <a name="export-segments-to-dynamics-365-marketing-preview"></a>Izvozi segmente v Dynamics 365 Marketing (predogled)
 
-S [segmenti](segments.md) ustvarite akcije in stopite v stik z določenimi skupinami strank s storitvijo Dynamics 365 Marketing. Za več informacij glejte razdelek [Uporaba segmentov iz storitve Dynamics 365 Customer Insights s storitvijo Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+Uporaba [segmenti](segments.md) za ustvarjanje kampanj in stik s posebnimi skupinami strank [Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
 
-Če uporabljate nove zmogljivosti storitve Dynamics 365 Marketing za sprotno organiziranje dejavnosti strank v organizaciji storitve Dataverse, vam ni treba ustvariti standardnega izvoza za storitev Dynamics 365 Marketing. Stiki in segmenti iz Customer Insights so na voljo neposredno v Dynamics 365 Marketing po povezovanju Marketing in Customer Insights. Preden izbrišete obstoječe izvoze, preglejte dokumentacijo na [kako povezati Customer Insights in Dynamics 365 Marketing dejavnosti strank orkestracijo](/dynamics365/marketing/real-time-marketing-ci-profile).
+Če uporabljate nove zmogljivosti storitve Dynamics 365 Marketing za sprotno organiziranje dejavnosti strank v organizaciji storitve Dataverse, vam ni treba ustvariti standardnega izvoza za storitev Dynamics 365 Marketing. Stiki in segmenti iz Customer Insights so na voljo neposredno v Dynamics 365 Marketing po povezavi Marketing in Customer Insights. Preden izbrišete obstoječe izvoze, preglejte dokumentacijo o [kako povezati Customer Insights in Dynamics 365 Marketing dejavnosti strank orkestracijo](/dynamics365/marketing/real-time-marketing-ci-profile).
 
-## <a name="prerequisite-for-a-connection"></a>Predpogoj za povezavo
+## <a name="prerequisite"></a>Predpogoj
 
-- Zapisi o stikih morajo biti prisotni v storitvi Dynamics 365 Marketing, preden lahko izvozite segment iz rešitve Customer Insights v Marketing. Preberite več o vključevanju stikov v storitvi [Dynamics 365 Marketing z uporabo rešitve Microsoft Dataverse](connect-dataverse-managed-lake.md).
+Zapisi o stikih morajo biti prisotni v storitvi Dynamics 365 Marketing, preden lahko izvozite segment iz rešitve Customer Insights v Marketing. Preberite več o vključevanju stikov v storitvi [Dynamics 365 Marketing z uporabo rešitve Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
-  > [!NOTE]
-  > Z izvozom segmentov iz Customer Insights v Marketing ne boste ustvarili novih zapisov stikov v primerkih Marketing. Zapise o stikih iz Marketinga je treba prenesti v Customer Insights in jih uporabiti kot vir podatkov. Prav tako jih je treba vključiti v enotno entiteto stranke, da se ID-ji strank preslikajo v ID-je stikov, preden je segmente mogoče izvoziti.
+> [!NOTE]
+> Z izvozom segmentov iz storitve Customer Insights v Marketing ne boste ustvarili novih zapisov stikov v instancah Marketing. Zapise stikov iz Marketinga je treba vnesti v Customer Insights in uporabiti kot vir podatkov. Prav tako jih je treba vključiti v enotno entiteto stranke, da se ID-ji strank preslikajo v ID-je stikov, preden je segmente mogoče izvoziti.
 
 ## <a name="set-up-connection-to-marketing"></a>Nastavitev povezave s storitvijo Marketing
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 
-1. Izberite **Dodajanje povezave** in izberite **Dynamics 365 Marketing** za konfiguracijo povezave.
+1. Izberite **Dodajte povezavo** in izberite **Dynamics 365 Marketing**.
 
 1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**. Ime in vrsta povezave opisujeta to povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
 
-1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Izberite, kdo lahko uporablja to povezavo. Privzeto jo lahko uporabljajo samo skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Vnesite URL za Marketing vaše organizacije v polje **Naslov strežnika**.
 
@@ -47,24 +49,28 @@ S [segmenti](segments.md) ustvarite akcije in stopite v stik z določenimi skupi
 
 1. Preslikajte polje ID stika v entiteti Stranka v ID stika Dynamics 365.
 
-1. Izberite možnost **Shrani**, da dokončate povezavo. 
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
+
+1. Izberite možnost **Shrani**, da dokončate povezavo.
 
 ## <a name="configure-an-export"></a>Konfiguriranje izvoza
 
-Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 
-1. Za ustvarjanje novega izvoza izberite **Dodaj cilj**.
+1. Izberite **Dodaj izvoz**.
 
-1. V polju **Povezava za izvoz** izberite povezavo v razdelku Dynamics 365 Marketing. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
+1. V polju **Povezava za izvoz** izberite povezavo v razdelku Dynamics 365 Marketing. Če ni na voljo nobena povezava, se obrnite na skrbnika.
 
-1. Izberite enega ali več segmentov.
+1. Vnesite ime za izvoz.
+
+1. Izberite polje ID stika v entiteti stranke, ki se ujema z ID-jem stika Dynamics 365.
+
+1. Izberite segmente, ki jih želite izvoziti.
 
 1. Izberite **Shrani**.
 
-S shranjevanjem izvoza se ta ne zažene takoj.
-
-Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

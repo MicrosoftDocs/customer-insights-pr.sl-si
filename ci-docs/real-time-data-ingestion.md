@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083194"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195678"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Uvoz podatkov v realnem času (predogled)
 
@@ -28,7 +28,7 @@ Funkcija v realnem času zagotavlja podatke takoj za porabo, dokler naslednje na
 
 Posodobitve v realnem času imajo čas poteka, po katerem ne preglasijo vrednosti iz vira podatkov:
 
-- Posodobitve profilov bodo shranjene 4 ure
+- Posodobitve profila bodo shranjene štiri ure
 - Dejavnosti bodo shranjene 30 dni
 
 Te vrednosti so parametri klicev API-jev, ki jih lahko spremenite. Njihov cilj je zagotoviti, da vaši izvorni podatki ostanejo vaš vir resnice. Če želite, da so posodobitve v realnem času vključene dlje časa, jih morate dodati v vir podatkov, da bodo vzete med naslednjo načrtovano osvežitvijo.

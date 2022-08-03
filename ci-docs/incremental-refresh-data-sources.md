@@ -1,6 +1,6 @@
 ---
-title: Postopno osveževanje za Power Query in viri podatkov Azure Data Lake
-description: Osvežite nove in posodobljene podatke za velike vire podatkov na podlagi Power Query ali viri podatkov podatkovnega jezera Azure.
+title: Postopna osvežitev za Power Query in vire podatkov Azure Data Lake
+description: Osveži nove in posodobljene podatke za velike vire podatkov na podlagi Power Query ali viri podatkov Azure data lake.
 ms.date: 05/30/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012045"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207157"
 ---
-# <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Postopno osveževanje za Power Query in viri podatkov Azure Data Lake
+# <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Postopna osvežitev za Power Query in vire podatkov Azure Data Lake
 
-Ta članek obravnava, kako konfigurirati postopno osveževanje za vire podatkov na podlagi Power Query ali Azure Data Lake.
-
-Postopno osveževanje za vire podatkov zagotavlja naslednje prednosti:
+Postopna osvežitev za vire podatkov na podlagi Power Query ali Azure Data Lake ponuja naslednje prednosti:
 
 - **Hitrejša osveževanja** – Osvežijo se sami podatki, ki so spremenjeni. Na primer, morda se osveži samo zadnjih pet dni zgodovinskega nabora podatkov.
 - **Povečana zanesljivost** – Z manjšimi osveževanji vam ni treba tako dolgo vzdrževati povezav do spremenljivih sistemov virov, zato se zmanjša tveganje za težave pri povezavi.
@@ -30,9 +28,9 @@ Postopno osveževanje za vire podatkov zagotavlja naslednje prednosti:
 
 ## <a name="configure-incremental-refresh-for-data-sources-based-on-power-query"></a>Konfigurirajte postopno osveževanje za vire podatkov na podlagi Power Query
 
-Customer Insights omogoča postopno osveževanje virov podatkov, uvoženih prek Power Query ki podpirajo postopno zaužitje. Na primer, zbirke podatkov Azure SQL s polji datuma in časa, ki označujejo, kdaj so bili podatkovni zapisi nazadnje posodobljeni.
+Customer Insights omogoča postopno osveževanje podatkovnih virov, uvoženih prek Power Query ki podpirajo postopno zaužitje. Na primer, zbirke podatkov Azure SQL s polji datuma in časa, ki označujejo, kdaj so bili podatkovni zapisi nazadnje posodobljeni.
 
-1. [Ustvarite nov vir podatkov na podlagi Power Query](connect-power-query.md).
+1. [Ustvari nov vir podatkov na podlagi Power Query](connect-power-query.md).
 
 1. Izberite vir podatkov, ki podpira postopno osveževanje, kot je npr.[Baza podatkov Azure SQL](/power-query/connectors/azuresqldatabase).
 
@@ -58,26 +56,27 @@ Customer Insights omogoča postopno osveževanje virov podatkov, uvoženih prek 
 
 ## <a name="configure-incremental-refresh-for-azure-data-lake-data-sources"></a>Konfigurirajte postopno osveževanje za vire podatkov Azure Data Lake
 
-Customer Insights omogoča postopno osveževanje virov podatkov, s katerimi so povezani Azure Data Lake Storage. Če želite uporabiti inkrementalno vstavljanje in osveževanje za entiteto, konfigurirajte to entiteto, ko dodate Azure Data Lake vir podatkov ali pozneje, ko urejate vir podatkov. Mapa s podatki o entiteti mora vsebovati naslednje mape:
+Customer Insights omogoča postopno osveževanje za povezane vire podatkov Azure Data Lake Storage. Če želite uporabiti inkrementalno vnos in osvežitev za entiteto, konfigurirajte to entiteto, ko dodajate podatkovno jezero Azure vir podatkov ali pozneje, ko urejate vir podatkov. Mapa podatkov entitete mora vsebovati naslednje mape:
 
-- **FullData** : mapa s podatkovnimi datotekami, ki vsebujejo začetne zapise
-- **Inkrementalni podatki** : mapa z mapami s hierarhijo datuma/časa **llll/mm/dd/hh** format, ki vsebuje postopne posodobitve. **hh** predstavlja uro UTC posodobitev in vsebuje **Upserts** in **Izbriše** mape. **Upserts** vsebuje podatkovne datoteke s posodobitvami obstoječih ali novih zapisov. **Izbriše** vsebuje podatkovne datoteke z zapisi, ki jih je treba odstraniti.
+- **FullData** : Mapa s podatkovnimi datotekami, ki vsebujejo začetne zapise
+- **Inkrementalni podatki** : Mapa z mapami hierarhije datuma/časa **llll/mm/dd/hh** format, ki vsebuje postopne posodobitve. **hh** predstavlja uro UTC posodobitev in vsebuje **Upserts** in **Izbriše** mape. **Upserts** vsebuje podatkovne datoteke s posodobitvami obstoječih zapisov ali novih zapisov. **Izbriše** vsebuje podatkovne datoteke z zapisi, ki jih je treba odstraniti.
 
 1. Ko dodajate ali urejate vir podatkov, se pomaknite do **Lastnosti** podokno za entiteto.
 
-1. Preglejte atribute. Prepričajte se, da je ustvarjen ali nazadnje posodobljen atribut datuma nastavljen z a *Datum čas* **Format podatkov** in a *Koledar.Datum* **Semantična vrsta**. Po potrebi uredite atribut in izberite **Končano**.
+1. Preglejte atribute. Prepričajte se, da je ustvarjen ali nazadnje posodobljen atribut datuma nastavljen z a *Datum čas* **Format podatkov** in a *Koledar. Datum* **Semantična vrsta**. Po potrebi uredite atribut in izberite **Končano**.
 
-1. Iz **Izberite Entitete** podokno, uredite entiteto. The **Postopno zaužitje** potrditveno polje je izbrano.
+1. Iz **Izberite Entitete** podoknu, uredite entiteto. The **Postopno zaužitje** potrditveno polje je izbrano.
 
    :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="Konfiguracija entitet v viru podatkov za postopno osveževanje.":::
 
-   1. Prebrskajte do korenske mape, ki vsebuje datoteke .csv ali .parquet za popolne podatke, inkrementalne dodatke in brisanje inkrementalnih podatkov.
-   1. Vnesite razširitev za celotne podatke in obe inkrementalni datoteki (\. csv oz\. parket).
+   1. Poiščite korensko mapo, ki vsebuje datoteke .csv ali .parquet za celotne podatke, prirastne vstavitve podatkov in prirastne izbrise podatkov.
+   1. Vnesite končnico za celotne podatke in obe inkrementalni datoteki (\. csv oz\. parket).
+   1. Za datoteke .csv izberite ločilo stolpcev in, če želite, prvo vrstico datoteke kot glavo stolpca.
    1. Izberite **Shrani**.
 
-1. Za **Zadnja posodobitev**, izberite atribut datumskega časovnega žiga.
+1. Za **Zadnja posodobitev**, izberite atribut datuma in časovnega žiga.
 
-1. Če **Primarni ključ** ni izbran, izberite primarni ključ. Primarni ključ je edinstven atribut za entiteto. Atribut je veljaven primarni ključ samo v primeru, če ne vsebuje podvojenih vrednosti, manjkajočih vrednosti ali ničelnih vrednosti. Kot primarni ključi so podprti atributi vrste podatkov niz, celo število in GUID.
+1. Če je **Primarni ključ** ni izbran, izberite primarni ključ. Primarni ključ je atribut, edinstven za entiteto. Atribut je veljaven primarni ključ samo v primeru, če ne vsebuje podvojenih vrednosti, manjkajočih vrednosti ali ničelnih vrednosti. Kot primarni ključi so podprti atributi podatkovnega tipa niz, celo število in GUID.
 
 1. Izberite **Zapri** da shranite in zaprete podokno.
 

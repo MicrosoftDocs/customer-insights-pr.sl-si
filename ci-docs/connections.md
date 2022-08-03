@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082102"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195194"
 ---
 # <a name="connections-preview-overview"></a>Pregled povezav (predogledna različica)
 
@@ -27,6 +27,12 @@ Odprite razdelek **Skrbnik** > **Povezave**, da ustvarite povezave in si jih ogl
 V zavihku **Povezave** so prikazane vse dejavne povezave. Na seznamu je prikazana vrstica za vsako posamezno povezavo.
 
 Na zavihku **Odkrivanje** pridobite hiter pregled in opis ter ugotovite, kaj lahko storite s posamezno možnostjo razširljivosti.
+
+## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
+
+Ko omogočite Dynamics 365 Customer Insights za prenos podatkov tretjim osebam ali drugim Microsoftovim izdelkom dovolite prenos podatkov izven meja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vaših navodilih, vendar ste vi odgovorni za zagotovitev, da tretja oseba izpolnjuje morebitne vaše obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Vaš Dynamics 365 Customer Insights skrbnik lahko kadar koli odstrani povezavo in prekine uporabo funkcionalnosti.
 
 ## <a name="exports"></a>Izvozi
 
@@ -41,8 +47,6 @@ Nove povezave lahko konfigurirajo samo skrbniki, vendar so ustvarjene povezave v
 Za dodajanje povezav morate imeti [skrbniška dovoljenja](permissions.md). Če vzpostavite povezavo z drugimi Microsoftovimi storitvami, predvidevamo, da sta obe storitvi del iste organizacije.
 
 1. Odprite razdelek **Skrbnik** > **Povezave (predogled)**.
-
-1. Pojdite na zavihek **Povezave**.
 
 1. Izberite možnost **Dodaj povezavo**, da ustvarite novo povezavo. V spustnem meniju izberite vrsto povezave, ki jo želite ustvariti.
 
@@ -98,4 +102,6 @@ Odstranjene obogatitve in izvozi bodo postali nedejavni. Ponovno jih aktivirate 
 
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Vzpostavitev povezav s skrivnostmi, ki jih upravlja vaša storitev Key Vault
 
-Nekatere povezave potrebujejo skrivnosti, kot so ključi API ali gesla. Nekatere povezave podpirajo skrivnosti, shranjene v vaši storitvi Key Vault. Preberite več o podprtih povezavah in o tem, kako jih nastaviti [svoj lastni trezor ključev za vpogled v stranke](use-azure-key-vault.md).
+Nekatere povezave potrebujejo skrivnosti, kot so ključi API ali gesla. Nekatere povezave podpirajo skrivnosti, shranjene v vaši storitvi Key Vault. Izvedite več o podprtih povezavah in o tem, kako jih nastaviti [svoj lastni trezor ključev za Customer Insights](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

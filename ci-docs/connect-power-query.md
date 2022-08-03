@@ -1,7 +1,7 @@
 ---
 title: Povežite se z a Power Query vir podatkov (vsebuje video)
-description: Zaužijte podatke prek a Power Query priključek (vsebuje video).
-ms.date: 06/13/2022
+description: Vnos podatkov prek a Power Query priključek (vsebuje video).
+ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,18 +12,18 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082186"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207065"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povežite se z a Power Query vir podatkov
 
-Power Query ponuja širok nabor priključkov za vnos podatkov. Dynamics 365 Customer Insights podpira večino teh povezovalnikov.
+Power Query ponuja širok nabor konektorjev za vnos podatkov. Dynamics 365 Customer Insights podpira večino teh povezovalnikov.
 
-Dodajanje podatkovnih virov na podlagi Power Query konektorji na splošno sledi korakom, opisanim v tem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Če želite izvedeti več, glejte dokumentacijo o posameznih konektorjih v [Power Query referenca konektorja](/power-query/connectors/).
+Dodajanje podatkovnih virov na podlagi Power Query priključkov na splošno sledi korakom, opisanim v tem razdelku. Vendar pa so glede na povezovalnik, ki ga uporabljate, potrebne drugačne informacije. Če želite izvedeti več, glejte dokumentacijo o posameznih konektorjih v [Power Query referenca priključka](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -35,59 +35,70 @@ Dodajanje podatkovnih virov na podlagi Power Query konektorji na splošno sledi 
 
 1. Izberite **Microsoft Power Query**.
 
-1. Zagotovite a **ime** in neobvezno **Opis** za vir podatkov in izberite **Naslednji**.
+1. Zagotovite a **Ime** in neobvezno **Opis** za vir podatkov in izberite **Naslednji**.
 
 1. Izberite enega od [razpoložljivih povezovalnikov](#available-power-query-data-sources). V tem primeru izberemo **Besedilo/CSV** priključek.
 
 1. Vnesite zahtevane podrobnosti v **Nastavitve povezave** za izbrani povezovalnik in izberite **Naprej**, da si ogledate predogled podatkov.
 
-1. Izberite **Pretvori podatke**. V tem koraku boste dodali entitete v vir podatkov. Entitete so nabori podatkov. Če imate zbirko podatkov, ki vključuje več naborov podatkov, je vsak nabor podatkov svoja entiteta.
+1. Izberite **Pretvori podatke**.
 
-1. The **Power Query - Uredite poizvedbe** pogovorno okno vam omogoča pregled in izboljšanje podatkov. Entitete, ki jih sistemi, opredeljeni v izbranem viru podatkov, prikažejo v levem podoknu.
+1. The **Power Query - Uredite poizvedbe** vam omogoča pregledovanje in izboljšanje podatkov. Entitete, ki jih sistemi, opredeljeni v izbranem viru podatkov, prikažejo v levem podoknu.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Pogovorno okno urejanja poizvedb":::
 
-1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v Power Query okno za uporabo transformacij. Vsaka transformacija je navedena pod **Uporabljeni koraki**. Power Query ponuja številne vnaprej izdelane možnosti preoblikovanja. Za več informacij glejte [Power Query Transformacije](/power-query/power-query-what-is-power-query#transformations).
+1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v Power Query okno za uporabo transformacij. Vsaka transformacija je navedena pod **Uporabljeni koraki**. Power Query zagotavlja številne [vnaprej zgrajena transformacija](/power-query/power-query-what-is-power-query#transformations) opcije.
 
    Priporočamo, da uporabite naslednje transformacije:
 
-   - Če vnašate podatke iz datoteke CSV, prva vrstica pogosto vsebuje glave. Pojdi do **Preoblikovanje** in izberite **Uporabite prvo vrstico kot glave**.
+   - Če vnašate podatke iz datoteke CSV, prva vrstica pogosto vsebuje glave. Pojdi do **Preobrazba** in izberite **Prvo vrstico uporabite kot glave**.
    - Prepričajte se, da je vrsta podatkov pravilno nastavljena. Na primer, za datumska polja izberite vrsto datuma.
 
-1. Če želite dodati dodatne entitete v svoj vir podatkov v **Uredite poizvedbe** pogovorno okno, pojdite na **Domov** in izberite **Pridobite podatke**. Ponavljajte korake 6-10, dokler ne dodate vseh entitet za to vir podatkov.
+1. Če želite dodati dodatne entitete v svoj vir podatkov v **Uredite poizvedbe** dialog, pojdi na **domov** in izberite **Pridobite podatke**. Ponavljajte korake 5–10, dokler ne dodate vseh entitet za ta vir podatkov. Če imate zbirko podatkov, ki vključuje več naborov podatkov, je vsak nabor podatkov svoja entiteta.
 
-1. Izberite **Shrani**. The **Viri podatkov** odpre se stran z novim vir podatkov v **Osvežujoče** stanje.
+1. Izberite **Shrani**. The **Viri podatkov** odpre se stran, ki prikazuje novo vir podatkov v **Osvežujoče** stanje.
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Nalaganje podatkov lahko traja nekaj časa. Po uspešni osvežitvi lahko vnesene podatke pregledate iz [**Entitete**](entities.md) strani.
+
+> [!CAUTION]
+> Vir podatkov temelji na Power Query ustvarja a [tok podatkov v Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ne spreminjajte imena toka podatkov v Power Platform skrbniško središče, ki se uporablja v Customer Insights. Preimenovanje toka podatkov povzroča težave s sklici med Customer Insights vir podatkov in Dataverse pretok podatkov.
 
 ### <a name="available-power-query-data-sources"></a>Na voljo Power Query viri podatkov
 
-Glej [Power Query referenca konektorja](/power-query/connectors/) za seznam povezovalnikov, ki jih lahko uporabite za uvoz podatkov v Customer Insights.
+Glej [Power Query referenca priključka](/power-query/connectors/) za seznam povezovalnikov, ki jih lahko uporabite za uvoz podatkov v Customer Insights.
 
-Konektorji s kljukico v **Vpogledi strank (tokovi podatkov)** so na voljo za ustvarjanje novih podatkovnih virov na podlagi Power Query. Preglejte dokumentacijo določenega priključka, če želite izvedeti več o njegovih predpogojih, [omejitve poizvedbe](/power-query/power-query-online-limits), in druge podrobnosti.
+Konektorji s kljukico v **Vpogledi strank (podatkovni tokovi)** na voljo za ustvarjanje novih podatkovnih virov na podlagi Power Query. Preglejte dokumentacijo določenega priključka, če želite izvedeti več o njegovih predpogojih, [omejitve poizvedbe](/power-query/power-query-online-limits), in druge podrobnosti.
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Dodajanje podatkov iz virov podatkov na mestu uporabe
 
-Vnos podatkov iz virov podatkov na mestu uporabe je podprt na podlagi Microsoft Power Platform tokovi podatkov (PPDF). Tokove podatkov v Customer Insights lahko omogočite z [zagotavljanje Microsoft Dataverse URL okolja](create-environment.md) pri postavljanju okolja.
+Vnos podatkov iz podatkovnih virov na mestu uporabe je podprt na podlagi Microsoft Power Platform podatkovnih tokov (PPDF). Podatkovne tokove v Customer Insights lahko omogočite tako, da [zagotavljanje Microsoft Dataverse URL okolja](create-environment.md) pri postavljanju okolja.
 
-Viri podatkov, ki so ustvarjeni po povezovanju a Dataverse okolje z uporabo Customer Insights [Power Platform tokovi podatkov](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) privzeto. Za podatkovne tokove je prek prehoda za podatke podprta povezljivost na mestu uporabe. Lahko odstranite in ponovno ustvarite vire podatkov, ki so obstajali pred a Dataverse je bilo povezano okolje [z uporabo podatkovnih prehodov na mestu uporabe](/data-integration/gateway/service-gateway-app).
+Viri podatkov, ki so ustvarjeni po povezovanju a Dataverse okolje z uporabo Customer Insights [Power Platform podatkovnih tokov](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) privzeto. Za podatkovne tokove je prek prehoda za podatke podprta povezljivost na mestu uporabe. Lahko odstranite in znova ustvarite vire podatkov, ki so obstajali pred a Dataverse okolje je bilo povezano [z uporabo na mestu uporabe podatkovnih prehodov](/data-integration/gateway/service-gateway-app).
 
-Prehodi za podatke iz obstoječega okolja storitve Power BI ali Power Apps bodo vidni v storitvi Customer Insights, kjer jih lahko znova uporabite. Na strani z viri podatkov se nahajajo povezave do okolja Microsoft Power Platform, kjer si lahko ogledate prehode za podatke na mestu uporabe ter jih konfigurirate.
+Podatkovni prehodi iz obstoječega Power BI oz Power Apps bodo vidni in jih lahko znova uporabite v Customer Insights. Na strani z viri podatkov se nahajajo povezave do okolja Microsoft Power Platform, kjer si lahko ogledate prehode za podatke na mestu uporabe ter jih konfigurirate.
 
 > [!IMPORTANT]
-> Prepričajte se, da so vaši prehodi posodobljeni na najnovejšo različico. Namestite lahko posodobitev in ponovno konfigurirate prehod neposredno iz poziva, prikazanega na zaslonu prehoda ali [prenesite najnovejšo različico](https://powerapps.microsoft.com/downloads/). Če ne uporabljate najnovejše različice prehoda, osvežitev toka podatkov ne uspe s sporočili o napakah, kot je **Ključna beseda ni podprta: lastnosti konfiguracije. Ime parametra: ključna beseda**.
+> Prepričajte se, da so vaši prehodi posodobljeni na najnovejšo različico. Namestite lahko posodobitev in znova konfigurirate prehod iz poziva, prikazanega na zaslonu prehoda, neposredno ali [prenesite najnovejšo različico](https://powerapps.microsoft.com/downloads/). Če ne uporabljate najnovejše različice prehoda, osvežitev toka podatkov ne uspe s sporočili o napakah, kot je **Ključna beseda ni podprta: lastnosti konfiguracije. Ime parametra: ključna beseda**.
+>
+> Napake s na mestu uporabe podatkovnimi prehodi v Customer Insights so pogosto posledica težav s konfiguracijo. Za več informacij o odpravljanju težav s podatkovnimi prehodi glejte [Odpravite težave s podatkovnim prehodom na mestu uporabe](/data-integration/gateway/service-gateway-tshoot).
 
 ## <a name="edit-power-query-data-sources"></a>Uredi Power Query viri podatkov
 
 > [!NOTE]
-> Morda ne bo mogoče spreminjati virov podatkov, ki se trenutno uporabljajo v enem od procesov aplikacije (na primer *segmentacija*, *ujemanje* ali *spajanje*).
+> Morda ne bo mogoče spremeniti virov podatkov, ki se trenutno uporabljajo v enem od procesov aplikacije (na primer segmentacija ali poenotenje podatkov).
 >
-> V **Nastavitve** strani, lahko spremljate napredek vsakega od aktivnih procesov. Ko se proces zaključi, se lahko vrnete na stran **Viri podatkov** in opravite spremembe.
+> V **nastavitve** strani, lahko spremljate napredek vsakega od aktivnih procesov. Ko se proces zaključi, se lahko vrnete na stran **Viri podatkov** in opravite spremembe.
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
 
-1. Zraven vir podatkov, ki ga želite posodobiti, izberite **Uredi**.
+1. Izberite poleg vir podatkov, ki ga želite posodobiti **Uredi**.
+
+1. Uporabite svoje spremembe in transformacije v **Power Query - Uredite poizvedbe** pogovorno okno, kot je opisano v [Ustvarite nov vir podatkov](#create-a-new-data-source) razdelek.
+
+1. Izberite **Shrani** da uveljavite svoje spremembe in se vrnete na **Viri podatkov** strani.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-1. Uporabite svoje spremembe in transformacije v **Power Query - Uredite poizvedbe** pogovorno okno, kot je opisano v [Ustvarite nov vir podatkov](#create-a-new-data-source) oddelek.
-
-1. Izberite **Shrani** v Power Query po končanem urejanju, da shranite spremembe.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

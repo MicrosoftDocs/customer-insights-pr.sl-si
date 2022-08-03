@@ -1,7 +1,7 @@
 ---
 title: Pregled virov podatkov
-description: Naučite se uvoziti ali zaužiti podatke iz različnih virov.
-ms.date: 05/18/2022
+description: Naučite se uvoziti ali vnesti podatke iz različnih virov.
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,75 +12,69 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051473"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207111"
 ---
 # <a name="data-sources-overview"></a>Pregled virov podatkov
 
 Dynamics 365 Customer Insights zagotavlja povezave za prenos podatkov iz širokega nabora virov. Povezovanje z vir podatkov se pogosto imenuje postopek *zaužitje podatkov*. Po zaužitju podatkov lahko [poenotiti](data-unification.md), ustvarite vpoglede in aktivirajte podatke za ustvarjanje prilagojenih izkušenj.
 
-## <a name="add-data-sources"></a>Dodajanje virov podatkov
+## <a name="add-or-edit-data-sources"></a>Dodajte ali uredite vire podatkov
 
-Vire podatkov lahko priložite ali uvozite v Customer Insights. Na spodnjih povezavah so navodila za dodajanje virov podatkov.
+Vire podatkov lahko priložite ali uvozite v Customer Insights. Na spodnjih povezavah so navodila za dodajanje in urejanje virov podatkov.
 
 **Priložite vir podatkov**
 
-Če imate pripravljene podatke v eni od Microsoftovih podatkovnih storitev Azure, se lahko Customer Insights preprosto poveže z vir podatkov, ne da bi morali znova vnesti podatke. Izberite eno od teh možnosti:
-- [Azure Data Lake Storage(datoteke csv ali parket v mapi Common Data Model)](connect-common-data-model.md)
+Če imate podatke pripravljene v eni od Microsoftovih podatkovnih storitev Azure, se lahko Customer Insights preprosto poveže z vir podatkov, ne da bi morali znova vnesti podatke. Izberite eno od teh možnosti:
+- [Azure Data Lake Storage(datoteke csv ali parquet v mapi Common Data Model)](connect-common-data-model.md)
 - [Azure Synapse Analytics(Baze podatkov o jezerih)](connect-synapse.md)
 - [Microsoft Dataverse podatkovno jezero](connect-dataverse-managed-lake.md)
 
-**Uvozite in preoblikujte**
+**Uvozi in transformiraj**
 
-Če uporabljate lokalne vire podatkov, Microsoft ali podatke tretjih oseb, uvozite in preoblikujte podatke z uporabo Power Query konektorji.
-- [Power Query konektorji](connect-power-query.md)
+Če uporabljate lokalne vire podatkov, podatke Microsofta ali tretjih oseb, uvozite in preoblikujte podatke z uporabo Power Query priključki.
+- [Power Query priključki](connect-power-query.md)
 
 ## <a name="review-data-sources"></a>Preglejte vire podatkov
 
-Če je bilo vaše okolje konfigurirano za uporabo pomnilnika Customer Insights in uporabljate lokalne vire podatkov, uporabite Power Platform tokovi podatkov. Z Power Platform podatkovnih tokov, si lahko ogledate vire podatkov v skupni rabi in vire podatkov, ki jih upravljajo drugi. The **Viri podatkov** stran navaja vire podatkov v treh razdelkih:
-- **V skupni rabi** : viri podatkov, ki jih lahko upravljajo vsi skrbniki Customer Insights. Power Platform podatkovni tokovi, vaš lastni račun za shranjevanje in pritrditev na a Dataverse -upravljano podatkovno jezero so primeri skupnih virov podatkov.
-- **Upravljam jaz** :Power Platform tokovi podatkov, ki jih ustvarite in upravljate samo vi. Drugi skrbniki Customer Insights si lahko samo ogledajo te tokove podatkov, ne pa jih urejajo, osvežujejo ali brišejo.
-- **Upravljajo drugi** :Power Platform tokovi podatkov, ki so jih ustvarili drugi skrbniki. Ogledate si jih lahko samo. V njem je naveden lastnik toka podatkov, na katerega se lahko obrnete za kakršno koli pomoč.
+Če je bilo vaše okolje konfigurirano za uporabo shrambe Customer Insights in uporabljate lokalne vire podatkov, uporabite Power Platform podatkovnih tokov. z Power Platform podatkovnih tokov si lahko ogledate skupne vire podatkov in vire podatkov, ki jih upravljajo drugi. The **Viri podatkov** stran navaja vire podatkov v treh razdelkih:
+- **V skupni rabi** : Viri podatkov, ki jih lahko upravljajo vsi skrbniki Customer Insights. Power Platform podatkovnih tokov, svoj račun za shranjevanje in pripenjanje na a Dataverse -upravljano podatkovno jezero je primer skupnih podatkovnih virov.
+- **Upravljam jaz** :Power Platform podatkovnih tokov, ki jih ustvarite in upravljate samo vi. Drugi skrbniki Customer Insights si lahko samo ogledajo te tokove podatkov, ne pa jih urejajo, osvežujejo ali brišejo.
+- **Upravljajo drugi** :Power Platform podatkovnih tokov, ki so jih ustvarili drugi skrbniki. Lahko si jih samo ogledate. Navaja lastnika podatkovnega toka, na katerega se lahko obrnete za pomoč.
 > [!NOTE]
-> Vse entitete si lahko ogledajo in uporabljajo drugi uporabniki. Medtem ko so viri podatkov v lasti uporabnika, ki jih je ustvaril, lahko entitete, ki nastanejo pri zaužitju podatkov, uporablja vsak uporabnik Customer Insights.
+> Vse entitete si lahko ogledajo in uporabljajo drugi uporabniki. Medtem ko so viri podatkov v lasti uporabnika, ki jih je ustvaril, lahko entitete, ki izhajajo iz vnosa podatkov, uporablja vsak uporabnik Customer Insights.
 
-Če vaše okolje ne uporablja Power Platform pretoki podatkov, **Viri podatkov** stran vsebuje samo seznam vseh virov podatkov. Ni prikazanih razdelkov.
+Če vaše okolje ne uporablja Power Platform podatkovnih tokov, the **Viri podatkov** stran vsebuje le seznam vseh virov podatkov. Ni prikazanih razdelkov.
 
-Pojdi do **Podatki** > **Viri podatkov** če si želite ogledati ime vsakega zaužitega vir podatkov, njegovo stanje in zadnjič osveževanja podatkov za ta vir. Seznam virov podatkov lahko razvrstite po vseh stolpcih.
+## <a name="manage-existing-data-sources"></a>Upravljajte obstoječe vire podatkov
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Vir podatkov je dodan.":::
+Pojdi do **podatki** > **Viri podatkov** za ogled imena vsakega vnesenega vir podatkov, njegovega statusa in zadnjega osveževanja podatkov za ta vir. Seznam podatkovnih virov lahko razvrstite po katerem koli stolpcu ali uporabite iskalno polje, da poiščete vir podatkov, ki ga želite upravljati.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Za ogled razpoložljivih dejanj izberite vir podatkov.
 
-Nalaganje podatkov lahko traja nekaj časa. Po uspešni osvežitvi je mogoče uvožene podatke pregledati na strani **Entitete**. Za več informacij glejte [Entitete](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Vir podatkov je dodan.":::
+
+- [**Uredi**](#add-or-edit-data-sources) vir podatkov, da spremenite njegove lastnosti.
+- [**Osveži**](#refresh-data-sources) vir podatkov za vključitev najnovejših podatkov.
+- [**Obogatiti**](data-sources-enrichment.md) vir podatkov pred združitvijo.
+- **Izbriši** vir podatkov. Vir podatkov je mogoče izbrisati samo, če se podatki ne uporabljajo pri obdelavi, kot so poenotenje, vpogledi, aktivacije ali izvozi.
 
 ## <a name="refresh-data-sources"></a>Osveževanje virov podatkov
 
-Vire podatkov lahko osvežite po samodejnem urniku ali ročno na zahtevo. [Lokalni viri podatkov](connect-power-query.md#add-data-from-on-premises-data-sources) osveževati po svojih urnikih, ki so nastavljeni med vnosom podatkov. Za priložene vire podatkov zaužitje podatkov porabi najnovejše podatke, ki so na voljo od tega vir podatkov.
+Vire podatkov lahko osvežite po samodejnem urniku ali ročno na zahtevo. [Lokalni viri podatkov](connect-power-query.md#add-data-from-on-premises-data-sources) osvežujejo po svojih urnikih, ki so nastavljeni med vnosom podatkov. Za priložene vire podatkov vnos podatkov porabi najnovejše podatke, ki so na voljo iz tega vir podatkov.
 
-Pojdi do **Admin** > **sistem** > [**Urnik**](system.md#schedule-tab) da konfigurirate sistemsko načrtovano osveževanje vaših prevzetih podatkovnih virov.
+Pojdi do **skrbnik** > **Sistem** > [**Urnik**](system.md#schedule-tab) da konfigurirate sistemsko načrtovane osvežitve virov vnesenih podatkov.
 
-Če želite osvežiti vir podatkov na zahtevo, sledite tem korakom:
-
-1. Pojdite na **Podatki** > **Viri podatkov**.
-
-1. Izberite navpično elipso (&vellip;) poleg vir podatkov, ki ga želite osvežiti in izberite **Osveži** s spustnega seznama. Vir podatkov se zdaj sproži za ročno osvežitev. Če osvežite vir podatkov, se posodobijo tudi shema entitet in podatki za vse entitete, določene v viru podatkov.
-
-1. Izberite **Ustavi osveževanje**, če želite preklicati obstoječo osvežitev, in se bo vir podatkov vrnil na zadnje stanje osveževanja.
-
-## <a name="delete-a-data-source"></a>Brisanje vira podatkov
-
-Vir podatkov je mogoče izbrisati samo, če se podatki ne uporabljajo pri nobeni obdelavi, kot so poenotenje, vpogledi, aktivacije ali izvozi.
+Za osvežitev vir podatkov na zahtevo:
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
 
-2. Izberite navpično elipso (&vellip;) poleg vir podatkov, ki ga želite odstraniti, in izberite **Izbriši** iz spustnega menija.
+1. Izberite vir podatkov, ki ga želite osvežiti, in izberite **Osveži**. Vir podatkov se zdaj sproži za ročno osvežitev. Če osvežite vir podatkov, se posodobijo tudi shema entitet in podatki za vse entitete, določene v viru podatkov.
 
-3. Potrdite izbris.
-
+1. Izberite stanje, da odprete **Podrobnosti o napredku** podokno in si oglejte napredek. Za preklic opravila izberite **Prekliči delo** na dnu podokna.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

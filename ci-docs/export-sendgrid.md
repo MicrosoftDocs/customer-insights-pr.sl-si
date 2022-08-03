@@ -1,53 +1,54 @@
 ---
 title: Izvoz segmentov v SendGrid (predogledna različica)
 description: Naučite se, kako konfigurirati povezavo in izvažati v SendGrid.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 669f0fb48b095f6a9faeebf257ee9df3d1c580c7
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f2990ad410dda0cbf952f82f3fc30b3a53a7bcd4
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083047"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9197012"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Izvoz segmentov v SendGrid (predogledna različica)
 
-Izvozite segmente poenotenih profilov strank v seznam strank storitve SendGrid in jih uporabite za akcije ter e-poštno trženje v storitvi SendGrid. 
+Izvozite segmente poenotenih profilov strank v seznam strank storitve SendGrid in jih uporabite za akcije ter e-poštno trženje v storitvi SendGrid.
 
-## <a name="prerequisites-for-a-connection"></a>Predpogoji za povezavo
+## <a name="prerequisites"></a>Zahteve
 
--   Imate [račun za SendGrid](https://sendgrid.com/) in ustrezne skrbniške poverilnice.
--   V storitvi SendGrid so na voljo obstoječi seznami stikov in ustrezni ID-ji. Za več informacij glejte razdelek [SendGrid - upravljanje stikov](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
--   Imaš [konfigurirani segmenti](segments.md) v Customer Insights.
--   Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
+- A [Račun SendGrid](https://sendgrid.com/) in ustrezne skrbniške poverilnice.
+- [Obstoječi seznami stikov v SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts) in ustrezne ID-je.
+- A [Ključ API-ja SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
+- [Konfigurirani segmenti](segments.md) v Customer Insights.
+- Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Skupno do 100.000 profilov strank v storitev SendGrid.
-- Izvoz v storitev SendGrid je omejen na segmente.
-- Izvoz do 100.000 profilov strank v storitev SendGrid lahko traja do nekaj ur. 
-- Število profilov strank, ki jih lahko izvozite v storitev SendGrid, je odvisno in omejeno glede na vašo pogodbo s storitvijo SendGrid.
+- Skupaj do 100.000 profilov strank v SendGrid, kar lahko traja do nekaj ur. Število profilov strank, ki jih lahko izvozite v SendGrid, je odvisno od vaše pogodbe s SendGrid.
+- Samo segmenti.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Nastavitev povezave s storitvijo SendGrid
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 
-1. Izberite **Dodajanje povezave** in izberite **SendGrid** za konfiguracijo povezave.
+1. Izberite **Dodajte povezavo** in izberite **SendGrid**.
 
 1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**. Ime in vrsta povezave opisujeta to povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
 
-1. Izberite, kdo lahko uporablja to povezavo. Če ne izvedete nobenih dejanj, so privzeto izbrani Skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Izberite, kdo lahko uporablja to povezavo. Privzeto jo lahko uporabljajo samo skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Vpiši **ključ za API storitve SendGrid** [Ključ za API storitve SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
+1. Vpišite **Ključ API-ja SendGrid**.
 
-1. Izberite potrditveno polje **Strinjam se**, da potrdite **Zasebnost in skladnost podatkov**.
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
 
-1. Izberite možnost **Poveži**, da inicializirate povezavo s storitvijo SendGrid.
+1. Izberite **Povežite se** za inicializacijo povezave.
 
 1. Izberite **Dodajte sebe kot uporabnika za izvoz** in vnesite svoje poverilnice Customer Insights.
 
@@ -55,30 +56,26 @@ Izvozite segmente poenotenih profilov strank v seznam strank storitve SendGrid i
 
 ## <a name="configure-an-export"></a>Konfiguriranje izvoza
 
-Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 
-1. Za ustvarjanje novega izvoza izberite **Dodaj cilj**.
+1. Izberite **Dodaj izvoz**.
 
-1. V polju **Povezava za izvoz** izberite povezavo v razdelku SendGrid. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
+1. V polju **Povezava za izvoz** izberite povezavo v razdelku SendGrid. Če ni na voljo nobena povezava, se obrnite na skrbnika.
 
-1. Vnesite **[ID seznama SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
+1. Vnesite ime za izvoz.
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke. Ponovite te korake še za druga neobvezna polja, kot so **ime**, **priimek**, **država/regija**, **zvezna država**, **mesto** in **poštna številka**.
+1. Vpišite **ID seznama SendGrid**.
 
-1. Izberite segmente, ki jih želite izvoziti. Močno **priporočamo, da v storitev SendGrid skupno ne izvozite več kot sto tisoč profilov strank**. 
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje, ki predstavlja e-poštni naslov stranke.
+
+1. Po želji izberite polja, kot je npr **ime**, **·**, **/regija**, **·**, **·**, in **Poštna številka**.
+
+1. Izberite segmente, ki jih želite izvoziti, ob upoštevanju znanih omejitev.
 
 1. Izberite **Shrani**.
 
-S shranjevanjem izvoza se ta ne zažene takoj.
-
-Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
-
-Ko storitvi Dynamics 365 Customer Insights omogočite prenos podatkov v storitev SendGrid, dovoljujete prenos podatkov izven meje zagotavljanja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da SendGrid izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš skrbnik za Dynamics 365 Customer Insights lahko kadar koli odstrani ta cilj izvoza in s tem prekine uporabljati to funkcijo.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

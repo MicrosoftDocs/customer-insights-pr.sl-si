@@ -1,7 +1,7 @@
 ---
 title: Predvidevanje življenjske vrednosti stranke (CLV)
 description: Predvidevajte prihodnje potencialne prihodke za aktivne stranke.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055234"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186460"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predvidevanje življenjske vrednosti stranke (CLV)
 
 Predvidite potencialno vrednost (prihodek), ki jo bodo posamezne aktivne stranke prispevale vašemu podjetju v določenem prihodnjem časovnem obdobju. Ta funkcija vam lahko pomaga doseči različne cilje:
+
 - prepoznati stranke z visoko vrednostjo in obdelavo tega vpogleda,
 - ustvariti strateške segmente strank na podlagi njihove potencialne vrednosti za vodenje prilagojenih akcij s ciljno usmerjenimi prodajnimi, trženjskimi in podpornimi prizadevanji,
 - usmerjati razvoj izdelkov s poudarkom na funkcijah, ki povečujejo vrednost kupca,
 - optimizirati prodajno ali tržno strategijo in natančneje dodeliti proračun za doseganje strank,
-- prepoznati in nagraditi stranke z visoko vrednostjo s programi zvestobe ali nagrajevanja. 
+- prepoznati in nagraditi stranke z visoko vrednostjo s programi zvestobe ali nagrajevanja.
 
 ## <a name="prerequisites"></a>Zahteve
 
@@ -35,7 +36,7 @@ Preden začnete, razmislite, kaj življenjska vrednost strank pomeni za vaše po
 
 Ker konfiguracija in zagon modela CLV ne traja veliko časa, razmislite o ustvarjanju več modelov z različnimi vhodnimi nastavitvami ter primerjajte rezultate modelov, da ugotovite, kateri primer modela najbolje ustreza vašim poslovnim potrebam.
 
-###  <a name="data-requirements"></a>Zahteve za podatke
+### <a name="data-requirements"></a>Zahteve za podatke
 
 Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočljivi za večjo zmogljivost modela. Več podatkov ko model lahko obdela, bolj natančno bo predvidevanje. Zato vam priporočamo, da vključite več podatkov o dejavnostih strank, če so ti na voljo.
 
@@ -52,11 +53,12 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
     - Spletne dejavnosti: zgodovina obiska spletnega mesta, zgodovina e-pošte
     - Dejavnosti zvestobe: razmejitev nagradnih točk za zvestobo in zgodovina unovčenja
     - Dnevnik storitev za stranke , servisni klic, pritožba ali zgodovina vračila
+    - Informacije o profilu stranke
 - Podatki o dejavnostih strank (neobvezno):
     - Identifikatorji dejavnosti za razlikovanje med dejavnostmi iste vrste
     - Identifikatorji strank za preslikavo dejavnosti v stranke
     - Podatki o dejavnosti, ki vsebujejo ime in datum dejavnosti
-    - Semantična podatkovna shema za dejavnosti vključuje: 
+    - Semantična podatkovna shema za dejavnosti vključuje:
         - **Primarni ključ**: enolični identifikator dejavnosti
         - **Časovni žig**: datum in ura dogodka, ki ga je prepoznal primarni ključ
         - **Dogodek (ime aktivnosti)**: ime dogodka, ki ga želite uporabiti
@@ -66,10 +68,10 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
     - Zadostni zgodovinski podatki: vsaj eno leto transakcijskih podatkov. Po možnosti dve do tri leta transakcijskih podatkov za predvidevanje življenjske vrednostni strank za eno leto.
     - Več nakupov na stranko: v idealnem primeru vsaj dve do tri transakcije na ID stranke, po možnosti na več datumov.
     - Število strank: vsaj 100 enoličnih strank, po možnosti več kot 10.000 strank. Model bo propadel z manj kot 100 strankami in nezadostnimi zgodovinskimi podatki
-    - Popolnost podatkov: manj kot 20 % manjkajočih vrednosti v obveznih poljih vhodnih podatkov   
+    - Popolnost podatkov: manj kot 20 % manjkajočih vrednosti v obveznih poljih vhodnih podatkov
 
 > [!NOTE]
-> - Model potrebuje zgodovino transakcij vaših strank. Trenutno je mogoče konfigurirati samo eno entiteto zgodovine transakcij. Če obstaja več subjektov za nakup/transakcijo, jih lahko združite Power Query pred zaužitjem podatkov.
+> - Model potrebuje zgodovino transakcij vaših strank. Trenutno je mogoče konfigurirati samo eno entiteto zgodovine transakcij. Če obstaja več subjektov nakupa/transakcije, jih lahko združite Power Query pred vnosom podatkov.
 > - Za dodatne podatke o dejavnostih strank (neobvezno) pa lahko dodate toliko entitet dejavnosti strank, kolikor želite, da jih model upošteva.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Ustvarjanje predvidevanja življenjske vrednosti stranke
@@ -78,7 +80,7 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
 
 1. Izberite ploščico **Življenjska vrednost kupca** in izberite možnost **Uporabi model**. 
 
-1. V **Življenjska vrednost stranke** podokno, izberite **Začeti**.
+1. V **Življenjska vrednost stranke** podoknu izberite **Začeti**.
 
 1. **Poimenujte ta model** in **izhodno ime entitete**, da jih ločite od drugih modelov ali entitet.
 
@@ -122,11 +124,11 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
 
 1. Izberite **Naprej**.
 
-### <a name="add-optional-data"></a>Dodajanje izbirnih podatkov
+### <a name="add-optional-activity-data"></a>Dodajte neobvezne podatke o dejavnosti
 
-Podatki, ki odražajo interakcije ključnih strank (na primer dnevnike za splet, storitve za stranke in dogodke), dodajo kontekst zapisom transakcij. Dodatni vzorci, ki jih najdete v podatkih o dejavnostih vaših strank, lahko izboljšajo natančnost predvidevanja. 
+Podatki, ki odražajo interakcije ključnih strank (na primer dnevnike za splet, storitve za stranke in dogodke), dodajo kontekst zapisom transakcij. Dodatni vzorci, ki jih najdete v podatkih o dejavnostih vaših strank, lahko izboljšajo natančnost predvidevanja.
 
-1. Pri koraku **Dodatni podatki (neobvezno)** izberite možnost **Dodaj podatke**. Izberite entiteto dejavnosti strank, ki zagotavlja podatke o dejavnosti strank, kot je opisano v [zahtevah](#prerequisites).
+1. V **Dodatni podatki (neobvezno)** korak, izberite **Dodajte podatke** Spodaj **Izboljšajte vpogled v model z dodatnimi podatki o dejavnosti**. Izberite entiteto dejavnosti strank, ki zagotavlja podatke o dejavnosti strank, kot je opisano v [zahtevah](#prerequisites).
 
 1. Preslikajte semantična polja v atribute v entiteti dejavnosti strank in izberite **Naprej**.
 
@@ -135,21 +137,40 @@ Podatki, ki odražajo interakcije ključnih strank (na primer dnevnike za splet,
 1. Izberite vrsto dejavnosti, ki se ujema z vrsto dejavnosti stranke, ki jo dodajate. Izberite med obstoječimi vrstami dejavnosti ali dodajte novo vrsto dejavnosti.
 
 1. Konfigurirajte odnos med entiteto dejavnosti kupca in entiteto *stranke*.
-    
+
     1. Izberite polje, ki prepozna stranko v tabeli dejavnosti strank. Lahko je neposredno povezano s primarnim ID-jem stranke za vašo entiteto *stranke*.
     1. Izberite entiteto *stranke*, ki se ujema z vašo primarno entiteto *stranke*.
     1. Vnesite ime, ki opisuje odnos.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Slika koraka v konfiguracijskem toku za dodajanje dodatnih podatkov in konfiguriranje dejavnosti z izpolnjenimi primeri.":::
 
-1. Izberite **Shrani**.    
+1. Izberite **Shrani**.
     Dodajte več podatkov, če želite vključiti še druge dejavnosti strank.
+
+1. Dodajte neobvezne podatke o strankah ali izberite **Naslednji**.
+
+### <a name="add-optional-customer-data"></a>Dodajte neobvezne podatke o strankah
+
+Izberite med 18 pogosto uporabljenimi atributi profila strank, ki jih želite vključiti kot vhod v model. Ti atributi lahko vodijo do bolj prilagojenih, ustreznih in uporabnih rezultatov modela za primere vaše poslovne uporabe.
+
+Na primer: Contoso Coffee želi predvideti življenjsko vrednost kupca, da bi ciljal na stranke visoke vrednosti s prilagojeno ponudbo, povezano z lansiranjem njihovega novega aparata za espresso. Contoso uporablja model CLV in doda vseh 18 atributov profila strank, da vidi, kateri dejavniki vplivajo na njihove stranke z največjo vrednostjo. Ugotavljajo, da je lokacija stranke najvplivnejši dejavnik za te stranke.
+S temi informacijami organizirajo lokalni dogodek za lansiranje aparata za espresso in sodelujejo z lokalnimi prodajalci za prilagojene ponudbe in posebno izkušnjo na dogodku. Brez teh informacij bi Contoso morda pošiljal le splošna marketinška e-poštna sporočila in zamudil priložnost za prilagoditev za ta lokalni segment svojih strank z visoko vrednostjo.
+
+1. V **Dodatni podatki (neobvezno)** korak, izberite **Dodajte podatke** Spodaj **Še bolj povečajte vpogled v model z dodatnimi podatki o strankah**.
+
+1. Za **Entiteta**, izberite **Stranka: CustomerInsights** da izberete poenoteno tabelo profila stranke, ki se preslika v podatke atributov stranke. Za **identifikacijska številka stranke**, izberite **System.Customer.CustomerId**.
+
+1. Preslikajte več polj, če so podatki na voljo v vaših poenotenih profilih strank.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Primer preslikanih polj za podatke profila stranke.":::
+
+1. Izberite **Shrani** po preslikavi atributov, ki naj bi jih model uporabil za pomoč pri napovedovanju življenjske vrednosti stranke.
 
 1. Izberite **Naprej**.
 
 ### <a name="set-update-schedule"></a>Nastavitev urnika posodobitev
 
-1. Pri koraku **Urnik posodobitev podatkov** izberite pogostost za prekvalificiranje modela na podlagi najnovejših podatkov. Ta nastavitev je pomembna za posodabljanje natančnosti napovedi, ko se novi podatki vnesejo v Customer Insights. Večina podjetij se lahko prekvalificira enkrat na mesec in pridobi dobro natančnost svojih predvidevanj.
+1. Pri koraku **Urnik posodobitev podatkov** izberite pogostost za prekvalificiranje modela na podlagi najnovejših podatkov. Ta nastavitev je pomembna za posodobitev točnosti napovedi, ko se v Customer Insights vnesejo novi podatki. Večina podjetij se lahko prekvalificira enkrat na mesec in pridobi dobro natančnost svojih predvidevanj.
 
 1. Izberite **Naprej**.
 

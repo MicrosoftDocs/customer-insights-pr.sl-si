@@ -1,6 +1,6 @@
 ---
 title: Pregled ukrepov
-description: Naučite se, kako ukrepi pomagajo analizirati in odražati uspešnost vašega podjetja.
+description: Naučite se, kako meritve pomagajo analizirati in odražati uspešnost vašega podjetja.
 ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083131"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170869"
 ---
 # <a name="measures-overview"></a>Pregled ukrepov
 
-Ukrepi vam pomagajo bolje razumeti vedenje strank in poslovno uspešnost. Upoštevajo relevantne vrednosti iz [poenotenih profilov](data-unification.md). Da bi podjetje razumelo zgodovino nakupov posamezne stranke, ga zanima, *koliko je določena stranka porabila*, za lažje razumevanje svojih svojega skupnega dohodka pa lahko izmeri *celotni obseg svoje prodaje*.  
+Ukrepi vam pomagajo bolje razumeti vedenje strank in poslovno uspešnost. Upoštevajo relevantne vrednosti iz [poenotenih profilov](data-unification.md). Da bi podjetje razumelo zgodovino nakupov posamezne stranke, ga zanima, *koliko je določena stranka porabila*, za lažje razumevanje svojih svojega skupnega dohodka pa lahko izmeri *celotni obseg svoje prodaje*.
 
-Ukrepi so ustvarjeni [z uporabo graditelja meril](measure-builder.md), platforma za podatkovne poizvedbe z različnimi operaterji in preprostimi možnostmi preslikave. Omogoča filtriranje podatkov, združevanje rezultatov v skupine, zaznavanje [poti odnosov entitet](relationships.md) in predogled rezultatov. Ti lahko [uporabite vnaprej določene predloge](measure-templates.md) za učinkovito konfiguracijo pogosto uporabljenih ukrepov.
+Ustvarite ukrepe za načrtovanje poslovnih dejavnosti s poizvedovanjem po podatkih strank in pridobivanjem vpogledov. Na primer, ustvarite mero *skupna poraba na stranko* in *skupni donos na stranko* za pomoč pri identifikaciji skupine strank z visoko porabo, a visokim donosom. Potem, [ustvarite segment](segments.md) na podlagi teh ukrepov za spodbujanje naslednjih najboljših dejanj.
 
-Uporabite graditelja mer za načrtovanje poslovnih dejavnosti s poizvedbami po podatkih o strankah in pridobivanjem vpogledov. Ustvarjanje na primer mer za *skupno porabo na stranko* in *skupni donos na stranko* pomaga prepoznati skupino strank z visoko porabo, ki pa so hkrati zelo donosne. Ti lahko [ustvariti segment](segments.md) na podlagi teh ukrepov za spodbujanje naslednjih najboljših ukrepov.
+## <a name="create-a-measure"></a>Ustvarjanje mere
 
-## <a name="manage-your-measures"></a>Upravljajte svoje mere
+Izberite, kako ustvariti mero na podlagi cilja občinstvo.
 
-Seznam ukrepov najdete na strani **Ukrepi**.
+# <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
 
-Našli boste podatke o vrsti mere, ustvarjalcu, datumu ustvarjanja, statusu in stanju. Ko na seznamu izberete mero, si lahko vnaprej ogledate izhod in prenesete datoteko CSV.
+- Od začetka z graditeljem mer: [Zgradite svojega](measure-builder.md).
+- Od pogosto uporabljenih ukrepov: [Uporabite vnaprej določene predloge](measure-templates.md).
+
+# <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
+
+Od začetka z graditeljem mer: [Zgradite svojega](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Upravljajte obstoječe ukrepe
+
+Pojdi na **Ukrepi** stran za ogled mer, ki ste jih ustvarili, njihov status, vrsto mere in čas zadnje osvežitve podatkov. Seznam ukrepov lahko razvrstite po katerem koli stolpcu ali uporabite iskalno polje, da poiščete ukrep, ki ga želite upravljati.
+
+Izberite zraven mere, da si ogledate razpoložljiva dejanja. Izberite ime mere za predogled izhoda in prenos datoteke CSV.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Dejanja za upravljanje posameznih mer."lightbox="media/measures-actions.png":::
 
-Ko izberete ukrep, so na voljo naslednja dejanja:
-
-- Izberete lahko možnost **Uredi** in uredite konfiguracijo mere.
-- **Podvojeno** ukrep. Takoj lahko uredite njegove lastnosti ali preprosto shranite dvojnik.
-- **Osveži** mero na podlagi najnovejših podatkov. Če želite hkrati osvežiti vse svoje ukrepe, izberite vse mere in nato **Osveži**.
+- **Uredi** ukrep za spremembo njegovih lastnosti.
+- **Osveži** ukrep za vključitev najnovejših podatkov.
 - Mero lahko preimenujete prek možnosti **Preimenuj**.
-- **Aktiviraj** ali **deaktiviraj**. Nedejavne mere se med [načrtovano osvežitvijo](system.md#schedule-tab) ne bodo osvežile.
-- **Oznaka** do [upravljati oznake](work-with-tags-columns.md#manage-tags) za segment.
+- **Aktiviraj** oz **Deaktiviraj** ukrep. Neaktivni ukrepi se ne bodo osvežili med a [načrtovano osveževanje](system.md#schedule-tab) in imeti **Stanje** naveden kot **Preskočeno**, kar pomeni, da osvežitev sploh ni bila izvedena.
+- **Oznaka** do [upravljanje oznak](work-with-tags-columns.md#manage-tags) za mero.
 - Za brisanje mere je na voljo **Izbriši**.
+- **Stolpci** do [prilagodite stolpce](work-with-tags-columns.md#customize-columns) ta zaslon.
+- **Filter** do [filter po oznakah](work-with-tags-columns.md#filter-on-tags).
+- **Ime iskanja** za iskanje po imenu mere.
+
+## <a name="refresh-measures"></a>Osveži ukrepe
+
+Mere je mogoče osveževati po samodejnem urniku ali ročno na zahtevo. Če želite ročno osvežiti eno ali več mer, jih izberite in izberite **Osveži**. Za [načrtujte samodejno osveževanje](system.md#schedule-tab), Pojdi do **skrbnik** > **Sistem** > **Urnik**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Naslednji korak
-
-Za ustvarjanje [segmenta stranke](segments.md) lahko uporabite obstoječe mere.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

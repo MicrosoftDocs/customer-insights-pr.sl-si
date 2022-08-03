@@ -1,19 +1,19 @@
 ---
-title: Power Automate konektor (predogled) | Microsoft dokumenti
+title: Power Automate priključek (predogled) | Microsoftovi dokumenti
 description: Ustvarjajte tokove v storitvi Microsoft Power Automate iz storitve Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082459"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196138"
 ---
 # <a name="power-automate-connector-preview"></a>Povezovalnik za Power Automate (predogled)
 
@@ -21,18 +21,18 @@ Nastavite sprožilnike za samodejno izvajanje določenih dogodkov, ko se podatki
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Opravite lahko največ 100 klicev na 60 sekund. API končna točka lahko pokličete večkrat z uporabo parametra $skip. [Preberite več o parametru $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Največ 100 klicev na 60 sekund. Uporabi [$skip parameter](/connectors/customerinsights/#get-items-from-an-entity) da večkrat pokličete API končna točka.
 
 ## <a name="power-automate-triggers"></a>Sprožilci za Power Automate
 
-Uporabite sprožilce za ustvarjanje tokov za oblake in avtomatizacijo ponavljajočih se opravil, kot so obvestila ali naprednejša dejanja.
+Uporabite sprožilce za ustvarjanje tokov za oblake in avtomatizacijo ponavljajočih se opravil, kot so obvestila ali naprednejša dejanja. Uporabite sprožilce, ko:
 
-- Sproži, ko osvežitev vira podatkov ne uspe.
-- Sproži, ko osvežitev vira podatkov uspe.
-- Sproži, ko je prag segmenta presežen. Sprožilec je omejen na preseganje praga.
-- Sproži, ko je prag presežen v poslovni meri. Podprte so samo poslovne mere brez razsežnosti. Sprožilec je omejen na preseganje praga.
-- Sproži po končanem polnem osveževanju (virov podatkov, segmentov, mer, ...).
-- Sproži, ko je osvežitev procesa združevanja končana.
+- Osvežitev vir podatkov ne uspe.
+- Osvežitev vir podatkov uspe.
+- Na segmentu je presežen prag. Sprožilec je omejen na preseganje praga.
+- Na poslovnem merilu je presežen prag. Podprte so samo poslovne mere brez razsežnosti. Sprožilec je omejen na preseganje praga.
+- Popolna načrtovana osvežitev je končana. Ta sprožilec ne deluje pri ročno zagnanih osveževanjih.
+- Osvežitev postopka združevanja je končana.
 
 [Svoje sprožilce konfigurirajte v storitvi Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Povezovalnik za Power Automate poleg razpoložljivih sprožilcev zagotavlja še 
 
 ## <a name="create-a-power-automate-flow"></a>Ustvarjanje toka storitve Power Automate
 
-1. Izberite **Skrbnik** > **Cilji za izvoz**.
+1. Odprite razdelek **Skrbnik** > **Povezave**.
 
 1. Na ploščici **Power Automate** izberite možnost **Nastavitev**.
 
@@ -53,7 +53,5 @@ Povezovalnik za Power Automate poleg razpoložljivih sprožilcev zagotavlja še 
 Primeri uporabe tokov: 
 - Pošljite sporočilo v kanal storitve Microsoft Teams, če osvežitev vira podatkov ne uspe. 
 - Ko je prag na segmentu presežen, pošljite e-pošto lastnikom podatkov.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

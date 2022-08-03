@@ -12,69 +12,59 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 09fe36a4da45d114cbfccf8dad1e7b80b4b7e320
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054826"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170747"
 ---
 # <a name="find-similar-customers-with-ai-preview"></a>Poiščite podobne stranke z AI (predogled)
 
-Ta funkcija vam omogoča, da z uporabo umetne inteligence v mreži strank najdete podobne stranke. Za uporabo te funkcije morate ustvariti vsaj en segment. Razširjanje meril obstoječega segmenta pomaga najti stranke, ki so podobne temu segmentu.
+Poiščite podobne stranke v vaši bazi strank z umetno inteligenco. Za uporabo te funkcije morate ustvariti vsaj en segment. Razširitev kriterijev obstoječega segmenta pomaga najti stranke, ki so podobne temu segmentu.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> Storitev *Poiščite podobne stranke* uporablja avtomatizirana sredstva za ocenjevanje podatkov in delanje prognoze na podlagi teh podatkov, zato se lahko uporabi kot metoda profiliranja, saj je ta izraz opredeljen v Splošni uredbi o varstvu podatkov ("GDPR"). Za strankino uporabo te funkcije za obdelavo podatkov lahko velja GDPR ali drugi zakoni ali predpisi. Sami ste odgovorni za to, da je vaša uporaba storitve Dynamics 365 Customer Insights, vključno s predvidevanji, v skladu z vsemi veljavnimi zakoni in predpisi, vključno z zakoni v zvezi z zasebnostjo, osebnimi podatki, biometričnimi podatki, varstvom podatkov in zaupnostjo komunikacij.
+> *Poiščite podobne stranke* uporablja avtomatizirana sredstva za vrednotenje podatkov in napovedovanje na podlagi teh podatkov. Zato se lahko uporablja kot metoda profiliranja, kot je ta izraz opredeljen v Splošni uredbi o varstvu podatkov (»GDPR«). Za strankino uporabo te funkcije za obdelavo podatkov lahko velja GDPR ali drugi zakoni ali predpisi. Sami ste odgovorni za to, da je vaša uporaba storitve Dynamics 365 Customer Insights, vključno s predvidevanji, v skladu z vsemi veljavnimi zakoni in predpisi, vključno z zakoni v zvezi z zasebnostjo, osebnimi podatki, biometričnimi podatki, varstvom podatkov in zaupnostjo komunikacij.
 
-## <a name="finding-similar-customers"></a>Iskanje podobnih strank
+## <a name="find-similar-customers"></a>Poišči podobne stranke
 
-1. Pojdi do **segmenti** in izberite segment, na katerem želite temeljiti svoj novi segment. To je *izvorni segment*.
+1. Pojdi do **Segmenti** in izberite segment, na katerem želite osnovati svoj novi segment. To je *izvorni segment*.
 
-1. V vrstici z dejanji izberite **Poišči podobne stranke**.
+1. Izberite **Poiščite podobne stranke**.
 
 1. Preglejte predlagano ime za novi segment in ga po potrebi spremenite.
 
 1. Po želji dodajte [oznake](work-with-tags-columns.md#manage-tags) v nov segment.
 
-1. Preglejte polja, ki opredeljujejo novi segment. Ta polja določajo osnovo, na kateri bo sistem skušal najti podobne kupce kot v vašem izvornem segmentu. Sistem bo privzeto izbral priporočena polja.
+1. Preglejte polja, ki opredeljujejo novi segment. Ta polja določajo osnovo, na kateri bo sistem skušal najti podobne kupce kot v vašem izvornem segmentu. Sistem privzeto izbere priporočena polja. Po potrebi dodajte več polj.
   Polja, ki lahko znatno zmanjšajo zmogljivost modela, so samodejno izključena:
   
    - Polja z naslednjimi vrstami podatkov: StringType, BooleanType, CharType, LongType, IntType, DoubleType, FloatType, ShortType
    - Polja s kardinalnostjo (število elementov v polju) manjšo od 2 ali večjo kot 30
 
-1. Odločite se, če želite v novi segment vključiti **Vse stranke** ali samo stranke v **Specifičnem obstoječem segmentu**.
+1. Izberite, če želite vključiti **Vse stranke** razen izvornega segmenta ali le stranke v a **drugačen segment** v vašem novem segmentu.
 
 1. Sistem privzeto predlaga, da v svoj izhod vključite le 20 % velikosti ciljnega občinstva. Ta prag uredite po potrebi. Zvišanje praga bo zmanjšalo natančnost.
 
-1. Vključite stranke v svoj izvorni segment, tako da izberete **Vključite člane iz izvornega segmenta poleg strank s podobnimi atributi** potrditveno polje.
+1. Vključite stranke v svoj izvorni segment tako, da izberete **Vključite člane iz izvornega segmenta poleg strank s podobnimi atributi** potrditveno polje.
 
-1. Izberite **Zaženi** na dnu strani, da začnete opravilo dvojiške razvrstitve (metoda strojnega učenja), ki analizira nabor podatkov.
+1. Izberite **Teči** na dnu strani za začetek a [naloga binarne klasifikacije](#about-similarity-scores) (metoda Strojno učenje), ki analizira nabor podatkov.
 
 ## <a name="view-the-similar-segment"></a>Oglejte si podoben segment
 
-Po obdelavi podobnega segmenta boste novi segment našli na seznamu na strani **Segmenti**.
+Po obdelavi podobnega segmenta boste novi segment našli na seznamu **Segmenti** stran z vrsto **Razširitev**.
 
-> [!div class="mx-imgBorder"]
-> ![Segment podobnih strank.](media/expanded-segment.png "Segment podobnih strank")
+Izberite **Pogled** da si ogledate porazdelitev rezultatov [ocene podobnosti](#about-similarity-scores) in vrednosti ocene podobnosti pod **Predogled članov segmenta**.
 
-V delovni vrstici izberite **Pogled**, da odprete podrobnosti o segmentu. Ta pogled vsebuje informacije o porazdelitvi rezultatov v [ocenah podobnosti](#about-similarity-scores). Vrednosti ocen podobnosti boste našli tudi v **Predogledu članov segmenta**.
+:::image type="content" source="media/expanded-segment.png" alt-text="Segment podobnih strank.":::
 
-## <a name="use-the-output-of-a-similar-segment"></a>Uporabite izhod podobnega segmenta
+## <a name="manage-a-similar-segment"></a>Upravljajte podoben segment
 
-Delate lahko [z izhodom podobnega segmenta](segments.md), tako kot pri drugih segmentih. Na primer: izvozite segment ali sestavite mero.
+[Sodelujte s podobnim segmentom in ga upravljajte](segments.md#manage-existing-segments) tako kot pri drugih segmentih. Na primer: izvozite segment ali sestavite mero.
 
-## <a name="refresh-and-edit-a-similar-segment"></a>Osvežite in uredite podoben segment
-
-Če želite osvežiti podoben segment, ga izberite na strani **Segmenti** in izberite **Osveži** v vrstici z dejanji.
-
-Če uredite podoben segment, bodo podatki ponovno obdelani. Prejšnji ustvarjeni segment se posodobi z osveženimi podatki.
-Če želite urediti podoben segment, ga izberite na strani **Segmenti** in izberite **Uredi** v vrstici z dejanji. Uporabite spremembe in izberite **Zaženi** za začetek obdelave.
-
-## <a name="delete-a-similar-segment"></a>Izbrišite podoben segment
-
-Izberite segment na strani **Segmenti** in izberite **Izbriši** v vrstici z dejanji. Nato potrdite izbris.
+Uredite, osvežite, preimenujte, prenesite in izbrišite podoben segment. Urejanje podobnega segmenta ponovno obdela vaše podatke. Prejšnji ustvarjeni segment se posodobi z osveženimi podatki.
 
 ## <a name="about-similarity-scores"></a>O ocenah podobnosti
 

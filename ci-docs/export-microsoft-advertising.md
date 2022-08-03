@@ -1,19 +1,19 @@
 ---
 title: Izvoz segmentov v Microsoft Advertising (predogledna različica)
 description: Naučite se, kako konfigurirati povezavo in izvažati v storitev Microsoft Advertising.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ca37159ec6473ad5c331a0ce1aa8424d277529ff
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 44217e7823ffbe14d232b3e33de1b4ea6ed69dcf
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082816"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196552"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Izvoz segmentov v Microsoft Advertising (predogledna različica)
 
@@ -21,31 +21,34 @@ Izvozite segmente Customer Insights v Microsoft Advertising, da ustvarite ciljne
 
 ## <a name="prerequisites"></a>Zahteve
 
--   Imate [račun za Microsoft Advertising](https://ads.microsoft.com/) in pripadajoče skrbniške poverilnice.
--   Sprejeli ste pogoje uporabe storitve Customer Match. 
--   [Konfigurirani segmenti](segments.md) v Customer Insights.
--   Poenoteni profili strank v izvoženih segmentih vsebujejo polje z e-poštnim naslovom.
+- A [Račun Microsoft Advertising](https://ads.microsoft.com/) in ustrezne skrbniške poverilnice.
+- ID stranke in ID računa Microsoft Advertising. Poiščite ID stranke (`cid`) in ID računa (`aid`) v parametrih URL-ja, ko ste prijavljeni v Microsoft Advertising.
+- Pogoji uporabe Povezovanja strank so sprejeti.
+- [Konfigurirani segmenti](segments.md) v Customer Insights.
+- Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- V storitev Microsoft Advertising lahko izvozite do 500.000 profilov strank na izvoz.
-- Izvoz v Microsoft Advertising je omejen na segmente.
-- Izvoz do 500.000 profilov strank v storitev Microsoft Advertising lahko traja do 10 minut. 
+- Do 500.000 profilov strank na izvoz v Microsoft Advertising, kar lahko traja do 10 minut.
+- Samo segmenti.
 
+## <a name="set-up-connection-to-microsoft-advertising"></a>Nastavite povezavo z Microsoft Advertising
 
-## <a name="set-up-the-connection-to-microsoft-advertising"></a>Nastavitev povezave s storitvijo Microsoft Advertising
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 
-1. Izberite **Dodajanje povezave** in izberite **Microsoft Advertising** za konfiguracijo povezave.
+1. Izberite **Dodajte povezavo** in izberite **Microsoftovo oglaševanje**.
 
 1. Svoji povezavi dodelite prepoznavno ime v polju **Prikazno ime**. Ime in vrsta povezave opisujeta to povezavo. Priporočamo, da izberete ime, ki pojasnjuje namen in cilj povezave.
 
 1. Izberite, kdo lahko uporablja to povezavo. Privzeto so nastavljeni skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Izberite potrditveno polje **Strinjam se**, da potrdite **Zasebnost in skladnost podatkov**.
+1. Vnesite **ID stranke Microsoft Advertising**.
 
-1. Izberite **Poveži** za inicializiranje povezave s storitvijo Microsoft Advertising.
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
+
+1. Izberite **Povežite se** za inicializacijo povezave.
 
 1. Izberite **Preverjanje pristnosti s storitvijo Microsoft Advertising** in vnesite skrbniške poverilnice za Microsoft Advertising.
 
@@ -55,29 +58,24 @@ Izvozite segmente Customer Insights v Microsoft Advertising, da ustvarite ciljne
 
 ## <a name="configure-an-export"></a>Konfiguriranje izvoza
 
-Ta izvoz lahko konfigurirate, če imate dostop do tovrstne povezave. Za več informacij glejte razdelek [Dovoljenja, potrebna za konfiguriranje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 
-1. Za ustvarjanje novega izvoza izberite **Dodaj cilj**.
+1. Izberite **Dodaj izvoz**.
 
-1. V polju **Povezava za izvoz** izberite povezavo v razdelku Microsoft Advertising. Če imena tega razdelka ne vidite, za vas ni na voljo nobena tovrstna povezava.
+1. V polju **Povezava za izvoz** izberite povezavo v razdelku Microsoft Advertising. Če ni na voljo nobena povezava, se obrnite na skrbnika.
 
-1. Izberite segmente, ki jih želite izvoziti. Ciljne skupine storitve Customer Match v programu Microsoft Advertising se samodejno ustvarijo z imeni segmentov, ki so izbrani za izvoz. Vsak segment bo prikazal ločeno ciljno skupino za storitev Customer Match. 
+1. Vnesite ime za izvoz.
 
-1. Vpišite **ID stranke Microsoft Advertising in ID računa**. ID stranke (`cid`) in ID računa (`aid`) lahko najdete v parametrih URL-ja, ko ste prijavljeni v Microsoft Advertising.
+1. Izberite segmente, ki jih želite izvoziti. Ciljne skupine storitve Customer Match v programu Microsoft Advertising se samodejno ustvarijo z imeni segmentov, ki so izbrani za izvoz. Vsak segment bo prikazal ločeno ciljno skupino za storitev Customer Match.
 
-1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje z e-poštnim naslovom stranke. To je obvezno za izvoz segmentov Microsoft Advertising.
+1. Vpišite **ID stranke Microsoft Advertising in ID računa**.
+
+1. V razdelku **Ujemanje podatkov** v polju **E-poštni naslov** izberite polje z e-poštnim naslovom stranke.
 
 1. Izberite **Shrani**.
 
-S shranjevanjem izvoza se ta ne zažene takoj.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Izvoz se izvede z vsako [načrtovano osvežitvijo](system.md#schedule-tab). Lahko tudi [izvozite podatke na zahtevo](export-destinations.md#run-exports-on-demand). 
-
-
-## <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
-
-Ko omogočite, da Dynamics 365 Customer Insights prenese podatke v Microsoft Advertising, dovolite prenos podatkov zunaj meja zagotavljanja skladnosti za Dynamics 365 Customer Insights, vključno potencialno občutljivih podatkov, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da Microsoft Advertising izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti, ki jih morda imate. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-
-Vaš skrbnik Dynamics 365 Customer Insights lahko kadar koli odstrani ta cilj izvoza, da prenehate uporabljati to funkcijo.
+[!INCLUDE [footer-include](includes/footer-banner.md)]

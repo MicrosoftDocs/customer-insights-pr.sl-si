@@ -1,5 +1,5 @@
 ---
-title: Odtok naročnin predvidevanje (vsebuje video)
+title: Odliv naročnin predvidevanje (vsebuje video)
 description: Predvidite, ali za stranko obstaja tveganje, da ne bo več uporabljala izdelkov ali storitev naročnine vašega podjetja.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643820"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171069"
 ---
 # <a name="subscription-churn-prediction"></a>Predvidevanje odpovedi naročnin
 
@@ -107,7 +107,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
 
 ### <a name="set-schedule-and-review-configuration"></a>Nastavitev razporeda in pregled konfiguracije
 
-1. Nastavite frekvenco za prekvalifikacijo modela. Ta nastavitev je pomembna za posodabljanje natančnosti napovedi, ko se novi podatki vnesejo v Customer Insights. Večina podjetij se lahko prekvalificira enkrat na mesec in pridobi dobro natančnost svojih predvidevanj.
+1. Nastavite frekvenco za prekvalifikacijo modela. Ta nastavitev je pomembna za posodobitev točnosti napovedi, ko se v Customer Insights vnesejo novi podatki. Večina podjetij se lahko prekvalificira enkrat na mesec in pridobi dobro natančnost svojih predvidevanj.
 1. Izberite **Naprej**.
 1. Preglejte konfiguracijo. Na kateri koli del konfiguracije predvidevanja se lahko vrnete tako, da izberete možnost **Uredi** pod prikazano vrednostjo. Lahko pa izberete korak konfiguracije v prikazu napredovanja.
 1. Če so vse vrednosti pravilno konfigurirane, izberite **Shrani in zaženi** za začetek postopka predvidevanja. Na zavihku **Moja predvidevanja** si lahko ogledate stanje svojih predvidevanj. Postopek lahko traja več ur, odvisno od količine podatkov, uporabljenih v predvidevanju.
@@ -121,7 +121,7 @@ Predvidevanje izgube naročnine vam pomaga predvideti, ali za stranko obstaja tv
    - **Ime predvidevanja:** ime predvidevanja, navedeno pri ustvarjanju.
    - **Vrsta predvidevanja:** vrsta modela, uporabljenega za predvidevanje
    - **Izhodna entiteta:** ime entitete za shranjevanje rezultatov predvidevanja. Entiteto s tem imenom lahko najdete v razdelku **Podatki** > **Entitete**.    
-     V izhodni entiteti je vrednost *ChurnScore* predvidena verjetnost izgube, *IsChurn* pa binarna oznaka na podlagi vrednosti *ChurnScore* s pragom 0,5. Privzeti prag morda ne bo deloval za vaš scenarij. [Ustvarite nov segment](segments.md#create-a-new-segment) z želenim pragom.
+     V izhodni entiteti je vrednost *ChurnScore* predvidena verjetnost izgube, *IsChurn* pa binarna oznaka na podlagi vrednosti *ChurnScore* s pragom 0,5. Privzeti prag morda ne bo deloval za vaš scenarij. [Ustvarite nov segment](segments.md#create-a-segment) z želenim pragom.
    - **Predvideno polje:** to polje je izpolnjeno le za nekatere vrste predvidevanj in se ne uporablja pri predvidevanju izgube naročnine.
    - **Stanje:** trenutno stanje izvajanja predvidevanja.
         - **V čakalni vrsti:** predvidevanje trenutno čaka, da se začnejo izvajati drugi postopki.

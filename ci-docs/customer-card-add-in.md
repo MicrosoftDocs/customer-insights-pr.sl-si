@@ -1,6 +1,6 @@
 ---
-title: Dodatek za kartico stranke za aplikacije Dynamics 365 (predogled) (vsebuje video)
-description: Pokažite podatke o profilu stranke iz Customer Insights v aplikacijah Dynamics 365 s tem dodatkom.
+title: Dodatek kartice stranke za aplikacije Dynamics 365 (predogled) (vsebuje video)
+description: S tem dodatkom prikažite podatke o profilu stranke iz storitve Customer Insights v aplikacijah Dynamics 365.
 ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082144"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194943"
 ---
-# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dodatek za kartico stranke za aplikacije Dynamics 365 (predogled)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dodatek kartice stranke za aplikacije Dynamics 365 (predogled)
 
 Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 365. Če je v podprti aplikaciji Dynamics 365 nameščen dodatek za kartico stranke, lahko izberete prikaz polj profila strank, vpogledov in časovnice dejavnosti. Dodatek bo pridobil podatke iz Customer Insights, ne da bi to vplivalo na podatke v povezani aplikaciji Dynamics 365.
 
@@ -28,21 +28,25 @@ Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Dodatek deluje samo z aplikacijami Dynamics 365, ki temeljijo na modelu, na primer Sales ali Customer Service, različice 9.0 in novejše.
-- Za preslikavo vaših podatkov Dynamics 365 v profile strank Customer Insights priporočamo, da [vneseno iz aplikacije Dynamics 365 z uporabo Microsoft Dataverse priključek](connect-power-query.md). Če za vnos stikov (ali računov) Dynamics 365 uporabljate drugačen način, se morate prepričati,`contactid` (oz`accountid`) polje je nastavljeno kot [primarni ključ za ta vir podatkov v koraku zemljevida postopka združevanja podatkov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Aplikacije Dynamics 365, ki temeljijo na modelu, kot je Sales ali storitve za stranke, različica 9.0 in novejše.
+- Če želite, da se vaši podatki Dynamics 365 preslikajo v profile strank Customer Insights, priporočamo, da [zaužito iz aplikacije Dynamics 365 z uporabo Microsoft Dataverse priključek](connect-power-query.md). Če uporabljate drug način za vnos stikov (ali računov) Dynamics 365, se prepričajte, da je`contactid` (oz`accountid`) polje je nastavljeno kot [primarni ključ za ta vir podatkov med postopkom združevanja podatkov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Vsi uporabniki Dynamics 365 dodatka za kartico stranke morajo biti [dodani kot uporabniki](permissions.md) v Customer Insights, da si ogledate podatke.
-- [Konfigurirane zmožnosti iskanja in filtriranja](search-filter-index.md) v Customer Insights so potrebni za delovanje iskanja podatkov.
-- Vsak nadzor nad dodatki se opira na določene podatke v Customer Insights. Nekateri podatki in kontrolniki so na voljo samo v okoljih določenih vrst. Konfiguracija dodatka vas bo obvestila, če kontrolnik ni na voljo zaradi izbrane vrste okolja. Več informacij o [primerih uporabe okolja](work-with-business-accounts.md).
-  - **Nadzor meritev**: zahteva [konfigurirana merila](measures.md) za vrsto atributov stranke.
-  - **Nadzor inteligence** : Zahteva podatke, ustvarjene z uporabo [napovedi ali modeli po meri](predictions-overview.md).
-  - **Kontrolnik podrobnosti stranke**: vsa polja iz profila so na voljo v poenotenem profilu stranke.
-  - **Kontrolnik obogatitve**: zahteva, da so za profile strank uporabljene aktivne [obogatitve](enrichment-hub.md). Dodatek za kartice podpira te obogatitve: [Blagovne znamke](enrichment-microsoft.md) zagotavlja Microsoft, [Zanimanja](enrichment-microsoft.md) ki jih zagotavlja Microsoft, in [Podatki o poslovanju s pisarno](enrichment-office.md) zagotavlja Microsoft.
-  - **Kontrolnik stikov**: zahteva opredelitev pomenske entitete vrste stikov.
-  - **Kontrolnik časovnice**: zahteva [konfigurirane dejavnosti](activities.md).
+- [Konfigurirane zmogljivosti iskanja in filtriranja](search-filter-index.md) v storitvi Customer Insights.
+- Vsak kontrolnik dodatka se opira na določene podatke v Customer Insights. Nekateri podatki in kontrolniki so na voljo samo v okoljih določenih vrst. Konfiguracija dodatka vas bo obvestila, če kontrolnik ni na voljo zaradi izbrane vrste okolja. Več informacij o [primerih uporabe okolja](work-with-business-accounts.md).
+  - **Nadzor meritev** zahteva [konfigurirane mere atributov strank](measures.md).
+  - **Obveščevalni nadzor** zahteva podatke, ustvarjene z uporabo [napovedi ali modeli po meri](predictions-overview.md).
+  - **Nadzor podrobnosti o stranki** prikazuje vsa polja iz profila, ki so na voljo v enotnem profilu stranke.
+  - **Nadzor obogatitve** zahteva aktivno [obogatitve](enrichment-hub.md) uporabljeno za profile strank. Dodatek kartice podpira te obogatitve: [Blagovne znamke](enrichment-microsoft.md) zagotavlja Microsoft, [Zanimanja](enrichment-microsoft.md) ki jih zagotavlja Microsoft, in [Podatki o zaposlitvi v pisarni](enrichment-office.md) zagotavlja Microsoft.
+  - **Nadzor stikov** zahteva vrsto semantične entitete stika.
+  - **Nadzor časovnice** zahteva [konfigurirane dejavnosti](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Namestitev dodatka za kartice strank
 
-Dodatek za kartico stranke je rešitev za aplikacije za sodelovanje s strankami v rešitvi Dynamics 365. Če želite namestiti rešitev, odprite AppSource in poiščite možnost **Kartica za stranke Dynamics**. Izberite [dodatek za kartice strank v trgovini AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) in izberite **Prenesi zdaj**.
+Dodatek za kartico stranke je rešitev za aplikacije za sodelovanje s strankami v rešitvi Dynamics 365. Za namestitev rešitve:
+
+1. Pojdi do AppSource in iskati **Kartica stranke Dynamics**.
+
+1. Izberite [dodatek za kartice strank v trgovini AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) in izberite **Prenesi zdaj**.
 
 Morda se boste morali vpisati s svojimi skrbniškimi poverilnicami za aplikacijo Dynamics 365, da boste lahko namestili rešitev. Namestitev rešitve v vaše okolje lahko traja nekaj časa.
 
@@ -77,7 +81,7 @@ Morda se boste morali vpisati s svojimi skrbniškimi poverilnicami za aplikacijo
 
 ## <a name="add-customer-card-controls-to-forms"></a>Dodajanje kontrolnikov kartic strank v obrazce
 
-Glede na vaš primer se lahko odločite, da dodate kontrolnike v obrazec **Stik** ali obrazec **Račun**. Če je vaše okolje Customer Insights za poslovne račune, priporočamo, da dodate kontrolnike v obrazec Račun. V tem primeru »stik« v spodnjih korakih zamenjajte z »računom«
+Glede na vaš primer se lahko odločite, da dodate kontrolnike v obrazec **Stik** ali obrazec **Račun**. Če je vaše okolje Customer Insights za poslovne račune, priporočamo, da dodate kontrolnike v obrazec za račun. V tem primeru »stik« v spodnjih korakih zamenjajte z »računom«
 
 1. Če želite v obrazec za stik dodati kontrolnike kartice stranke, v storitvi Dynamics 365 odprite **Nastavitve** > **Prilagoditve**.
 
@@ -122,7 +126,7 @@ Dodatek za kartico stranke se ne nadgradi samodejno. Če želite nadgraditi na n
 
 ## <a name="troubleshooting"></a>Odpravljanje težav
 
-### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kontrolniki iz dodatka za kartico stranke ne najdejo podatkov
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kontrolniki iz dodatka kartice stranke ne najdejo podatkov
 
 **Težava:**
 
@@ -130,16 +134,16 @@ Tudi s pravilno konfiguriranimi ID polji kontrolniki ne najdejo podatkov za nobe
 
 **Rešitev:**
 
-1. Prepričajte se, da ste konfigurirali dodatek za kartice v skladu z navodili: [Konfigurirajte dodatek za kartico stranke](#configure-the-customer-card-add-in)
+1. Preverite, ali ste dodatek kartice konfigurirali v skladu z navodili: [Konfigurirajte dodatek kartice stranke](#configure-the-customer-card-add-in)
 
-1. Preglejte konfiguracijo vnosa podatkov. Uredite vir podatkov za sistem Dynamics 365, ki vsebuje GUID ID stika. Če je ID stika GUID prikazan z velikimi črkami v Power Query urejevalnika, poskusite z naslednjimi koraki:
+1. Preglejte konfiguracijo vnosa podatkov. Uredite vir podatkov za sistem Dynamics 365, ki vsebuje ID stika GUID. Če je ID stika GUID prikazan z velikimi črkami v Power Query urednik, poskusite naslednje korake:
     1. Uredite vir podatkov, da odprete vir podatkov v Power Query Urednik.
     1. Izberite stolpec ID stika.
-    1. Izberite **Preoblikovanje** v naslovni vrstici, da si ogledate razpoložljiva dejanja.
-    1. Izberite **male črke**. Preverite, ali so GUID-ji v tabeli zdaj male črke.
+    1. Izberite **Preoblikovanje** v naslovni vrstici, da vidite razpoložljiva dejanja.
+    1. Izberite **male črke**. Preverite, ali so GUID-ji v tabeli zdaj napisani z malimi črkami.
     1. Shranite vir podatkov.
-    1. Zaženite procese vnosa podatkov, poenotenja in nadaljnjih postopkov za širjenje sprememb v GUID.
+    1. Zaženite procese vnosa podatkov, poenotenja in nižje, da razširite spremembe v GUID.
 
-Ko sistem dokonča popolno osvežitev, morajo kontrolniki dodatka za kartico stranke prikazati pričakovane podatke.
+Ko je sistem dokončal popolno osvežitev, bi morali kontrolniki dodatka kartice stranke prikazati pričakovane podatke.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
