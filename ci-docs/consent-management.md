@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 6c951219410b55adc34691f677158b574cea1e01
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188068"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245715"
 ---
 # <a name="use-customer-consent"></a>Uporabite soglasje stranke
 
@@ -70,6 +70,6 @@ Pomembno je, da status soglasja za vaše stranke posodabljate. Načrtovana osve�
 
 Z drugimi besedami, zagotovite, da imajo izvorni podatki, ki se uvozijo v Customer Insights, vedno najnovejše informacije.
 
-Za več informacij glejte [Ročno osveži segmente](segments.md#refresh-segments) oz [konfigurirajte načrtovano osvežitev](system.md#schedule-tab).
+Za več informacij glejte [Ročno osveži segmente](segments.md#refresh-segments) oz [konfigurirajte načrtovano osvežitev](schedule-refresh.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

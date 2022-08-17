@@ -1,19 +1,19 @@
 ---
 title: Novosti v rešitvi Dynamics 365 Customer Insights
 description: Informacije o novih funkcijah, izboljšavah in popravkih napak.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114266"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246031"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novosti v rešitvi Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>Posodobitve za julij 2022
+
+Posodobitve v juliju 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="export-to-moengage"></a>Izvoz v MoEngage
+
+Izvozite segmente poenotenih profilov strank v MoEngage in jih uporabite za e-poštno trženje v MoEngage.
+
+Za več informacij glejte [Izvozite segmente v MoEngage](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>Podpora SSH za izvoze, ki temeljijo na SFTP
+
+Izberite, ali želite preverjanje pristnosti prek SSH ali uporabniškega imena/gesla za povezave do izvoznih ciljev SFTP.
+
+Za več informacij glejte [Izvoz podatkov na gostitelje SFTP](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizirajte izkušnje s podatki o znanih in neznanih uporabnikih
+
+Upravljanje podatkov o strankah ni nov izziv, vendar postaja vse težje, ko uporabniki krmarijo po različnih digitalnih kanalih, ki jih ponujajo blagovne znamke. Uporabnik, ki je znan (preverjen) na enem kanalu, postane neznan (nepreverjen) na drugem, če ni prijavljen. Pogosto je težava v tem, da nepreverjeni (neznani) uporabniki nimajo skupnega ID-ja. Lahko bi ga uporabili za povezovanje pomembnih atributov profilov in ustvarjanje enotnih profilov strank. Customer Insights pomaga rešiti to težavo tako, da zaužije podatke iz metod sledenja v vaših izvornih sistemih.
+
+Za več informacij glejte [Prilagodite svoje izkušnje s podatki o znanih in neznanih uporabnikih](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Posodobitve za junij 2022
 
@@ -44,13 +66,13 @@ Za več informacij glejte [Izvoz v InMobi (predogled)](export-inmobi.md)
 
 Customer Lockbox ponuja vmesnik za pregled in odobritev (ali zavrnitev) zahtev za dostop do podatkov. Te zahteve se pojavijo, ko je za razrešitev primera podpore potreben dostop do podatkov o strankah.
 
-Za več informacij glejte [Varno dostopajte do podatkov strank s Customer Lockbox (predogled)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+Za več informacij glejte [Varen dostop do podatkov strank s Customer Lockbox (predogled)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Povežite se s svojimi podatki prek zasebne povezave Azure
 
 Azure Private Link naj se Customer Insights poveže z vašim Azure Data Lake Storage računa prek zasebnega končna točka v vašem virtualnem omrežju. Za podatke v računu za shranjevanje, ki ni izpostavljen javnemu internetu, Zasebna povezava omogoča povezavo s tem omejenim omrežjem.
 
-Za več informacij glejte [Uporabite zasebno povezavo v storitvi Customer Insights](security-overview.md#private-links-tab).
+Za več informacij glejte [Uporabite zasebno povezavo v storitvi Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Posodobitve za maj 2022
 
@@ -58,7 +80,7 @@ Posodobitve maja 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in pop
 
 ### <a name="updated-data-unification-experience"></a>Posodobljena izkušnja poenotenja podatkov
 
- Poenotenje podatkov vam omogoča poenotenje nekdaj različnih podatkovnih virov v en sam glavni nabor podatkov, ki zagotavlja enoten pogled na te podatke. Podatki so lahko poenoteni na eni ali več entitetah. Najprej ti [izberite entitete in izvorna polja](map-entities.md),[odstranite podvojene zapise](remove-duplicates.md), navedite pravila za [ujemanje pogojev](match-entities.md), in določite kateri [polja za vključitev v poenotene profile strank](merge-entities.md).
+ Poenotenje podatkov vam omogoča poenotenje nekoč različnih podatkovnih virov v en sam glavni nabor podatkov, ki zagotavlja poenoten pogled na te podatke. Podatki so lahko poenoteni na eni ali več entitetah. Najprej ti [izberite entitete in izvorna polja](map-entities.md),[odstranite podvojene zapise](remove-duplicates.md), navedite pravila za [ujemanje pogojev](match-entities.md), in določite kateri [polja za vključitev v poenotene profile strank](merge-entities.md).
 
 Za več informacij glejte [Pregled poenotenja podatkov](data-unification.md).
 
@@ -118,7 +140,7 @@ Za več informacij glejte [Obogatite profile strank z identitetnimi podatki iz L
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organizirajte segmente in mere z oznakami in filtri
 
-Če vaša organizacija vzdržuje veliko segmentov ali ukrepov, je iskanje pravega včasih težko. Ta nova funkcija vam omogoča organiziranje seznamov z uporabo oznak in stolpcev. Pomaga pri hitrem in preprostem iskanju podatkov ter prilagajanju pogledov.
+Če vaša organizacija vzdržuje veliko segmentov ali ukrepov, je iskanje pravega včasih težko. Ta nova funkcija vam omogoča organiziranje seznamov z uporabo oznak in stolpcev. Pomaga hitro in enostavno najti podatke ter prilagoditi poglede.
 
 Za več informacij glejte [Delajte z oznakami in stolpci](work-with-tags-columns.md).
 
@@ -133,7 +155,7 @@ Za več informacij glejte [Omogoči skupno rabo podatkov z Dataverse od svojega 
 
 Še naprej širimo naš ekosistem izvoznih destinacij z novimi povezavami. Zdaj lahko izvozite segmente v Iterable in Braze za uporabo njunih aktivacijskih storitev.
 
-Za več informacij glejte [Izvozi segmente v Iterable (predogled)](export-iterable.md) in [Izvozi segmente v Braze (predogled)](export-braze.md).
+Za več informacij glejte [Izvozi segmente v Iterable (predogled)](export-iterable.md) in [Izvoz segmentov v Braze (predogled)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Izboljšave izvoza Marketo in Google Ads
 
@@ -198,7 +220,7 @@ V prehodnem obdobju imajo obstoječi udeleženci predogleda še vedno dostop do 
 - Izboljšajte poenotene profile z vnesenimi in izpopolnjenimi dogodki, da izkoristite celotno vrednost svojih podatkov o strankah
   
 V prehodnem obdobju se zajeti dogodki še vedno pretakajo v povezano Data Lake. Ko je ta funkcija izklopljena, se bo skupna raba podatkov ustavila in novi dogodki se ne pošiljajo v povezani pomnilnik.
-Če imate vprašanja o koncu predogleda zmožnosti, se neposredno obrnite na skupino za Microsoftov račun. Vaša skupina za račun vas bo obveščala o prihodnjih izdajah. 
+Če imate vprašanja o koncu predogleda zmogljivosti, se neposredno obrnite na skupino za Microsoftov račun. Vaša skupina za račun vas bo obveščala o prihodnjih izdajah. 
 
 ## <a name="january-2022-updates"></a>Posodobitve v januarju 2022
 

@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800440"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245823"
 ---
 # <a name="custom-machine-learning-models"></a>Modeli strojnega učenja po meri
 
 > [!NOTE]
-> Podpora za Strojno učenje Studio (klasični) bo prenehala 31. avgusta 2024. Priporočamo prehod na [Azure Strojno učenje](/azure/machine-learning/overview-what-is-azure-machine-learning) do tega datuma.
+> Podpora za Strojno učenje Studio (klasični) se bo končala 31. avgusta 2024. Priporočamo, da preidete na [Azure Strojno učenje](/azure/machine-learning/overview-what-is-azure-machine-learning) do tega datuma.
 >
-> Od 1. decembra 2021 ne boste mogli ustvarjati novih virov Strojno učenje Studio (klasičnih). Do 31. avgusta 2024 lahko še naprej uporabljate obstoječe vire Strojno učenje Studio (klasične). Za več informacij glejte [Preselite v Azure Strojno učenje](/azure/machine-learning/migrate-overview).
+> Od 1. decembra 2021 ne boste več mogli ustvarjati novih (klasičnih) virov Strojno učenje Studio. Do 31. avgusta 2024 lahko še naprej uporabljate obstoječe vire Strojno učenje Studio (klasični). Za več informacij glejte [Preselite se na Azure Strojno učenje](/azure/machine-learning/migrate-overview).
 
 
 Možnost **Obveščanje** > **Modeli po meri** vam omogoča upravljanje potekov dela v modelih storitve Strojno učenje Azure. Poteki dela vam pomagajo izbrati podatke, iz katerih želite ustvariti vpogled, in rezultate preslikati v vaše poenotene podatke o strankah. Za več informacij o izdelavi modelov strojnega učenja po meri glejte razdelek [Uporaba modelov, ki temeljijo na strojnem učenju Azure](azure-machine-learning-experiments.md).
@@ -34,7 +34,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Ta funkcija podpira spletne storitve, objavljene prek [Azure Strojno učenje paketni cevovodi](/azure/machine-learning/concept-ml-pipelines).
+- Ta funkcija podpira spletne storitve, objavljene prek [Paketni cevovodi Azure Strojno učenje](/azure/machine-learning/concept-ml-pipelines).
 
 - Za uporabo te funkcije potrebujete račun za shranjevanje Azure Data Lake Gen2, povezan z vašim primerkom studia Azure. Če želite več informacij, glejte [Ustvarjanje računa za shrambo Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -84,7 +84,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
    > ![Povezava rezultatov s podoknom podatkov o strankah.](media/intelligence-screen4-relatetocustomer.png "Povezava rezultatov s podoknom podatkov o strankah")
 
 1. Prikazal se bo zaslon **Potek dela shranjen** s podrobnostmi o poteku dela.    
-   Če ste konfigurirali potek dela za cevovod Azure Strojno učenje, se Customer Insights pripne delovnemu prostoru, ki vsebuje cevovod. Customer Insights bo dobil a **sodelavec** vlogo v delovnem prostoru Azure.
+   Če ste konfigurirali potek dela za Strojno učenje cevovod Azure, se Customer Insights poveže z delovnim prostorom, ki vsebuje cevovod. Customer Insights bo dobil a **sodelavec** vlogo v delovnem prostoru Azure.
 
 1. Izberite **Dokončano**.
 
@@ -92,7 +92,7 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 
 ## <a name="edit-a-workflow"></a>Urejanje poteka dela
 
-1. Na **Modeli po meri** strani, izberite navpično tritočko (&vellip;) v **Dejanja** stolpec poleg poteka dela, ki ste ga predhodno ustvarili in izbrali **Uredi**.
+1. Na **Modeli po meri** strani izberite navpično elipso (&vellip;) v **Dejanja** poleg poteka dela, ki ste ga predhodno ustvarili, in izberite **Uredi**.
 
 1. Prepoznavno ime poteka dela lahko posodobite v polju **Prikazno ime**, vendar ne morete spremeniti konfigurirane spletne storitve ali prodajnega lijaka. Izberite **Naprej**.
 
@@ -108,15 +108,15 @@ Predvidevanja ponujajo zmogljivosti za ustvarjanje boljših izkušenj strank, iz
 
 ## <a name="run-a-workflow"></a>Zagon poteka dela
 
-1. Na **Modeli po meri** strani, izberite navpično tritočko (&vellip;) v **Dejanja** stolpec poleg poteka dela, ki ste ga že ustvarili.
+1. Na **Modeli po meri** strani izberite navpično elipso (&vellip;) v **Dejanja** stolpec poleg poteka dela, ki ste ga predhodno ustvarili.
 
 1. Izberite **Zaženi**.
 
-Z vsakim načrtovanim osveževanjem se samodejno zažene tudi vaš potek dela. Preberite več o [nastavitvi načrtovanega osveževanja](system.md#schedule-tab).
+Z vsakim načrtovanim osveževanjem se samodejno zažene tudi vaš potek dela. Preberite več o [nastavitvi načrtovanega osveževanja](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Brisanje poteka dela
 
-1. Na **Modeli po meri** strani, izberite navpično tritočko (&vellip;) v **Dejanja** stolpec poleg poteka dela, ki ste ga že ustvarili.
+1. Na **Modeli po meri** strani izberite navpično elipso (&vellip;) v **Dejanja** stolpec poleg poteka dela, ki ste ga predhodno ustvarili.
 
 1. Izberite možnost **Izbriši** in nato potrdite izbris.
 

@@ -1,19 +1,19 @@
 ---
 title: Obogatite profile strank z identitetnimi podatki iz LiveRamp (predogled)
 description: Obogatite profile strank s podatki LiveRamp.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196368"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237833"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Obogatite profile strank z identitetnimi podatki iz LiveRamp (predogled)
 
@@ -25,7 +25,7 @@ Trenutno podpiramo obogatitev profilov strank s podatki LiveRamp samo v Združen
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Aktivna naročnina na LiveRamp. Če želite pridobiti naročnino, se obrnite na svojo ekipo za račun LiveRamp ali na [dynamics@liveramp.com](mailto:dynamics@liveramp.com) za več informacij.
+- Aktivna naročnina na LiveRamp. Če želite pridobiti naročnino, se obrnite na svojo skupino za račun LiveRamp ali na [dynamics@liveramp.com](mailto:dynamics@liveramp.com) za več informacij.
 
 - Aktivna naročnina na AbiliTec z ID-jem odjemalca in skrivnostjo za dostop do API-ja. Za več informacij glejte [Središče za razvijalce API-ja AbiliTec](https://developers.liveramp.com/abilitec-api/).
 
@@ -41,13 +41,9 @@ Morate biti [skrbnik](permissions.md#admin) v Customer Insights in imajo aktiven
 
 1. Vnesite ime za povezavo ter veljaven ID odjemalca LiveRamp in skrivnost.
 
-1. Preglejte in podajte soglasje, tako da v razdelku [Zasebnost in skladnost podatkov](#data-privacy-and-compliance) izberete možnost **Strinjam se**.
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
 
 1. Izberite **Preveri** za potrditev konfiguracije in nato izberite **Shrani**.
-
-### <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
-
-Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v LiveRamp dovolite prenos podatkov izven meje skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo prenesel take podatke po vaših navodilih, vendar ste odgovorni za zagotovitev, da LiveRamp izpolnjuje morebitne obveznosti glede zasebnosti ali varnosti. Za več informacij si oglejte [Microsoftova izjava o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732). Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli odstrani in s tem prekini uporabo te funkcije.
 
 ## <a name="configure-the-enrichment"></a>Konfiguriranje obogatitve
 

@@ -1,5 +1,5 @@
 ---
-title: Izvozi podatke v Azure Synapse Analytics (predogled)
+title: Izvoz podatkov v Azure Synapse Analytics (predogled)
 description: Naučite se konfigurirati povezavo z Azure Synapse Analytics.
 ms.date: 07/25/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196414"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259864"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvozi podatke v Azure Synapse Analytics (predogled)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podatkov v Azure Synapse Analytics (predogled)
 
 Azure Synapse je analitična storitev, ki pospeši čas za vpogled v podatkovna skladišča in sisteme masovnih podatkov. Podatke iz rešitve Customer Insights lahko uvozite in uporabite v storitvi [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -24,7 +24,7 @@ Azure Synapse je analitična storitev, ki pospeši čas za vpogled v podatkovna 
 > [!NOTE]
 > Prepričajte se, da ste nastavili vse **dodelitve vlog**, kot je opisano.
 
-- V Customer Insights, vaš Azure Active Directory (AD) uporabniški račun mora imeti [Vloga skrbnika](permissions.md#assign-roles-and-permissions).
+- V Customer Insights, vaš Azure Active Directory (AD) uporabniški račun mora imeti [Vloga skrbnika](permissions.md#add-users).
 
 V storitvi Azure:
 
@@ -39,6 +39,8 @@ V storitvi Azure:
 - The *[Azure Synapse upravljana identiteta delovnega prostora](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* ima **Podatki bloba za shranjevanje sodelavec** dovoljenja za Azure Data Lake Storage Račun Gen2, kjer se podatki nahajajo in so povezani z Azure Synapse delovni prostor. Preberite več o [uporabi portala Azure za dodelitev vloge Azure za dostop do zbirke dvojiških podatkov in podatkov o čakalni vrsti](/azure/storage/common/storage-auth-aad-rbac-portal) ter [sodelujočem v shrambi zbirke dvojiških podatkov](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - Na Azure Synapse delovni prostor, *vodja storitve za Customer Insights* ima **Skrbnik Synapse**[dodeljena vloga](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Če vaše okolje Customer Insights shranjuje podatke v vašem [lasten Azure Data Lake Storage](own-data-lake-storage.md), uporabnik, ki vzpostavi povezavo z Azure Synapse Analytics potrebuje vsaj vgrajeno **Uporabnik z dovoljenjem za branje** vlogo v računu Data Lake Storage. Če želite več informacij, glejte razdelek [Dodelitev vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Nastavite povezavo z Azure Synapse
 

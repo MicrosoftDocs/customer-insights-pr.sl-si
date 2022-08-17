@@ -14,22 +14,22 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170869"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245393"
 ---
 # <a name="measures-overview"></a>Pregled ukrepov
 
 Ukrepi vam pomagajo bolje razumeti vedenje strank in poslovno uspešnost. Upoštevajo relevantne vrednosti iz [poenotenih profilov](data-unification.md). Da bi podjetje razumelo zgodovino nakupov posamezne stranke, ga zanima, *koliko je določena stranka porabila*, za lažje razumevanje svojih svojega skupnega dohodka pa lahko izmeri *celotni obseg svoje prodaje*.
 
-Ustvarite ukrepe za načrtovanje poslovnih dejavnosti s poizvedovanjem po podatkih strank in pridobivanjem vpogledov. Na primer, ustvarite mero *skupna poraba na stranko* in *skupni donos na stranko* za pomoč pri identifikaciji skupine strank z visoko porabo, a visokim donosom. Potem, [ustvarite segment](segments.md) na podlagi teh ukrepov za spodbujanje naslednjih najboljših dejanj.
+Ustvarite ukrepe za načrtovanje poslovnih dejavnosti s poizvedovanjem po podatkih strank in pridobivanjem vpogledov. Na primer, ustvarite mero *skupna poraba na stranko* in *skupni donos na stranko* za pomoč pri prepoznavanju skupine strank z visoko porabo, a visokim donosom. Potem, [ustvarite segment](segments.md) na podlagi teh ukrepov za spodbujanje naslednjih najboljših dejanj.
 
 ## <a name="create-a-measure"></a>Ustvarjanje mere
 
-Izberite, kako ustvariti mero na podlagi cilja občinstvo.
+Izberite, kako ustvarite mero na podlagi cilja občinstvo.
 
 # <a name="individual-consumers-b-to-c"></a>[Posamezni potrošniki (prodaja strankam)](#tab/b2c)
 
@@ -53,7 +53,7 @@ Izberite zraven mere, da si ogledate razpoložljiva dejanja. Izberite ime mere z
 - **Uredi** ukrep za spremembo njegovih lastnosti.
 - **Osveži** ukrep za vključitev najnovejših podatkov.
 - Mero lahko preimenujete prek možnosti **Preimenuj**.
-- **Aktiviraj** oz **Deaktiviraj** ukrep. Neaktivni ukrepi se ne bodo osvežili med a [načrtovano osveževanje](system.md#schedule-tab) in imeti **Stanje** naveden kot **Preskočeno**, kar pomeni, da osvežitev sploh ni bila izvedena.
+- **Aktiviraj** oz **Deaktiviraj** ukrep. Neaktivni ukrepi se ne bodo osvežili med a [načrtovana osvežitev](schedule-refresh.md) in imeti **Stanje** naveden kot **Preskočeno**, kar pomeni, da osvežitev sploh ni bila izvedena.
 - **Oznaka** do [upravljanje oznak](work-with-tags-columns.md#manage-tags) za mero.
 - Za brisanje mere je na voljo **Izbriši**.
 - **Stolpci** do [prilagodite stolpce](work-with-tags-columns.md#customize-columns) ta zaslon.
@@ -62,7 +62,7 @@ Izberite zraven mere, da si ogledate razpoložljiva dejanja. Izberite ime mere z
 
 ## <a name="refresh-measures"></a>Osveži ukrepe
 
-Mere je mogoče osveževati po samodejnem urniku ali ročno na zahtevo. Če želite ročno osvežiti eno ali več mer, jih izberite in izberite **Osveži**. Za [načrtujte samodejno osveževanje](system.md#schedule-tab), Pojdi do **skrbnik** > **Sistem** > **Urnik**.
+Mere je mogoče osveževati po samodejnem urniku ali ročno na zahtevo. Če želite ročno osvežiti eno ali več mer, jih izberite in izberite **Osveži**. Za [načrtujte samodejno osveževanje](schedule-refresh.md), Pojdi do **skrbnik** > **Sistem** > **Urnik**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
-ms.translationtype: MT
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194988"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245347"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvozov (predogledna različica)
 
@@ -28,7 +28,7 @@ ms.locfileid: "9194988"
 Obstajata dve glavni vrsti izvoza:  
 
 - **Izvoz podatkov** : izvoz katere koli vrste entitete, ki je na voljo v Customer Insights. Entitete, ki jih izberete za izvoz, se izvozijo z vsemi podatkovnimi polji, metapodatki, shemami in podrobnostmi preslikave.
-- **Izvozi segmentov** : izvoz entitet segmenta iz storitve Customer Insights. Segmenti predstavljajo seznam profilov strank. Ko konfigurirate izvoz, izberete vključena podatkovna polja, odvisno od ciljnega sistema, v katerega izvažate podatke.
+- **Izvozi segmentov** : izvoz entitet segmenta iz storitve Customer Insights. Segmenti predstavljajo seznam profilov strank. Pri konfiguraciji izvoza izberete vključena podatkovna polja, odvisno od ciljnega sistema, v katerega izvažate podatke.
 
 ### <a name="export-segments"></a>Izvoz segmentov
 
@@ -79,7 +79,7 @@ Izberite izvoz za ogled razpoložljivih dejanj.
 
 ## <a name="schedule-and-run-exports"></a>Načrtovanje in zagon izvozov
 
-Vsak izvoz, ki ga konfigurirate, ima urnik osveževanja. Med osveževanjem sistem išče nove ali posodobljene podatke, ki jih bo vključil v izvoz. Izvozi se privzeto izvajajo kot del vsakega [načrtovanega osveževanja sistema](system.md#schedule-tab). Za ročni zagon izvozov lahko prilagodite urnik osveževanja ali ga izklopite.
+Vsak izvoz, ki ga konfigurirate, ima urnik osveževanja. Med osveževanjem sistem išče nove ali posodobljene podatke, ki jih bo vključil v izvoz. Izvozi se privzeto izvajajo kot del vsakega [načrtovanega osveževanja sistema](schedule-refresh.md). Za ročni zagon izvozov lahko prilagodite urnik osveževanja ali ga izklopite.
 
 Urniki izvoza so odvisni od stanja vašega okolja. Če so posodobitve v teku v [odvisnostih](system.md#refresh-processes), ko bi se moral načrtovani izvoz začeti, bo sistem najprej dokončal posodobitve, šele nato pa začel z izvozom. The **Osvežena** stolpec prikazuje, kdaj je bil izvoz nazadnje osvežen.
 

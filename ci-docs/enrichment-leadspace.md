@@ -1,19 +1,19 @@
 ---
 title: Obogatite profile podjetij z Leadspace (predogled)
 description: Splošne informacije o neodvisni obogatitvi Leadspace.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: f45fabc036775e11fc439f69513678d0607729d0
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196230"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237970"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Obogatite profile podjetij z Leadspace (predogled)
 
@@ -35,14 +35,9 @@ Morate biti [skrbnik](permissions.md#admin) v Customer Insights in imajo "večni
 
 1. Vnesite ime za povezavo in veljaven žeton Leadspace.
 
-1. Preglejte in podajte soglasje, tako da v razdelku [Zasebnost in skladnost podatkov](#data-privacy-and-compliance) izberete možnost **Strinjam se**.
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
 
 1. Izberite **Preveri** za potrditev konfiguracije in nato izberite **Shrani**.
-
-### <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
-
-Ko omogočite Dynamics 365 Customer Insights za prenos podatkov v Leadspace, dovoljujete prenos podatkov izven meje zagotavljanja skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vašem navodilu, vi pa ste odgovorni za to, da Leadspace izpolnjuje kakršne koli obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadarkoli odstrani, s čimer je uporaba te funkcije prekinjena.
 
 ## <a name="configure-the-enrichment"></a>Konfiguriranje obogatitve
 

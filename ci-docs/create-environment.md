@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142839"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245623"
 ---
 # <a name="how-to-create-a-new-environment"></a>Kako: Ustvarite novo okolje
 
@@ -48,7 +48,7 @@ V koraku **Osnovni podatki** izberite, ali želite ustvariti okolje od začetka 
 
 Navedite naslednje podrobnosti:
 
-- **Ime**: ime tega okolja. To polje je že izpolnjeno, če ste kopirali iz obstoječega okolja, lahko pa ga spremenite.
+- **Ime**: ime tega okolja. To polje je že izpolnjeno, če ste kopirali iz obstoječega okolja, lahko pa ga spremenite. Če imate več kot eno delovno okolje, vsakemu dajte preprosto prepoznavno ime.
 - **Izberite svoje podjetje**: izberite primarno občinstvo za novo okolje. Sodelujete lahko s posameznimi potrošniki (prodaja strankam) ali [poslovnimi kupci](work-with-business-accounts.md) (podjetja podjetjem). Če vaša organizacija večinoma posluje s posamezniki, kot je prodajalec na drobno ali kavarna, izberite posamezne potrošnike. Če so vaša glavna občinstvo druga podjetja, na primer proizvajalec avtomobilov ali papirnica, izberite poslovne račune.
 - **Vrsta**: izberite, ali želite ustvariti produkcijsko ali preizkusno okolje. Preizkusna okolja ne dovoljujejo načrtovanega osveževanja podatkov in so namenjena predhodni implementaciji in testiranju. Okolja peskovnika uporabljajo isto primarno občinstvo kot trenutno izbrano produkcijsko okolje.
 - **Območje**: območje, v katerem je storitev uvedena in gostovana. Za [uporabite svojega Azure Data Lake Storage račun](own-data-lake-storage.md) oz [povezati z obstoječim Microsoft Dataverse organizacija](customer-insights-dataverse.md), mora biti okolje Customer Insights v isti regiji.
@@ -72,7 +72,7 @@ Pustite to polje prazno, če nimate svojega Dataverse okolje in ustvarili ga bom
 
 Za več informacij glejte [Delajte s podatki Customer Insights v Microsoft Dataverse](customer-insights-dataverse.md).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podatkov z Microsoft Dataverse samodejno omogočeno za spletna nova okolja.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podatkov z Microsoft Dataverse samodejno omogočeno za nova mrežna okolja.":::
 
 ### <a name="step-4-finalize-the-settings"></a>4. korak: dokončanje nastavitev
 

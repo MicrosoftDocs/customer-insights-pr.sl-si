@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139631"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245614"
 ---
 # <a name="update-the-unification-settings"></a>Posodobite nastavitve združevanja
 
@@ -35,14 +35,14 @@ ms.locfileid: "9139631"
    - [Izvorna polja](#edit-source-fields) za dodajanje entitet ali atributov ali spreminjanje vrst atributov.
    - [Podvojeni zapisi](#manage-deduplication-rules) za upravljanje pravil za odstranjevanje podvojitev ali preferenc združevanja.
    - [Ujemanje pogojev](#manage-match-rules) za posodobitev pravil ujemanja v dveh ali več entitetah.
-   - [Poenotena polja za stranke](#manage-unified-fields) za združevanje ali izključitev polj. Povezane profile lahko tudi združite v gruče.
+   - [Enotna polja za stranke](#manage-unified-fields) za združevanje ali izključitev polj. Povezane profile lahko tudi združite v gruče.
 
 1. Po spremembah izberite naslednjo možnost:
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Posnetek zaslona strani Data Unify z označenimi možnostmi Unify.":::
 
    - [Izvedite pogoje ujemanja](#run-matching-conditions) za hitro oceno kakovosti vaših pogojev ujemanja (deduplikacija in pravila ujemanja) brez posodabljanja poenotenega profila. The **Zaženi samo pogoje, ki se ujemajo** možnost se ne prikaže za posamezno entiteto.
-   - [Poenotite profile strank](#run-updates-to-the-unified-customer-profile) za izvajanje pogojev ujemanja in posodobitev enote poenotenega profila stranke brez vplivanja na odvisnosti (kot so obogatitve, segmenti ali mere). Odvisni procesi se ne izvajajo, ampak bodo osveženi kot [določeno v urniku osveževanja](system.md#schedule-tab).
+   - [Poenotite profile strank](#run-updates-to-the-unified-customer-profile) za izvajanje pogojev ujemanja in posodobitev enote poenotenega profila stranke brez vplivanja na odvisnosti (kot so obogatitve, segmenti ali mere). Odvisni procesi se ne izvajajo, ampak bodo osveženi kot [določeno v urniku osveževanja](schedule-refresh.md).
    - [Poenotite profile strank in odvisnosti](#run-updates-to-the-unified-customer-profile) za izvajanje pogojev ujemanja in posodobitev enote poenotenega profila stranke in vseh odvisnosti (kot so obogatitve, segmenti ali mere). Vsi procesi se samodejno znova izvedejo.
 
 ## <a name="edit-source-fields"></a>Uredi izvorna polja
@@ -114,7 +114,7 @@ Večino parametrov ujemanja lahko znova konfigurirate in prilagodite. Entitet ne
 
 1. Za upravljanje pravil izberite katero koli od naslednjih možnosti:
    - **Ustvarite novo pravilo** : Izberite **Dodaj pravilo** pod ustreznim subjektom. Za več informacij glejte [Določite pravila za ujemanje parov](match-entities.md#define-rules-for-match-pairs).
-   - **Spremenite vrstni red svojih pravil** če ste določili več pravil: povlecite in spustite pravila v želenem vrstnem redu. Za več informacij glejte [Določite vrstni red ujemanja](match-entities.md#specify-the-match-order).
+   - **Spremenite vrstni red svojih pravil** če ste definirali več pravil: povlecite in spustite pravila v želenem vrstnem redu. Za več informacij glejte [Določite vrstni red ujemanja](match-entities.md#specify-the-match-order).
    - **Spremenite pogoje pravil** : Izberite pravilo in nato **Uredi**. Spremenite polja, dodajte ali odstranite pogoje ali dodajte ali odstranite izjeme.
    - **Deaktivirajte pravilo** : Izberite pravilo in nato **Deaktiviraj** da obdržite pravilo ujemanja in ga izključite iz postopka ujemanja.
    - **Podvoji pravilo** : Izberite pravilo in nato **Dvojnik** ustvariti podobno pravilo s spremembami.
@@ -124,7 +124,7 @@ Večino parametrov ujemanja lahko znova konfigurirate in prilagodite. Entitet ne
 
 ## <a name="manage-unified-fields"></a>Upravljajte poenotena polja
 
-1. Izberite **Uredi** na **Poenotena polja za stranke** ploščica.
+1. Izberite **Uredi** na **Enotna polja za stranke** ploščica.
 
     :::image type="content" source="media/m3_merge_edit.png" alt-text="Posnetek zaslona poenotenih polj strank":::
 
@@ -134,7 +134,7 @@ Večino parametrov ujemanja lahko znova konfigurirate in prilagodite. Entitet ne
 
 ## <a name="run-matching-conditions"></a>Izvedite pogoje ujemanja
 
-Zaženi pogoje ujemanja zažene samo pravila za odstranjevanje podvojitev in ujemanje ter posodobi *Deduplikacija_* * in *ConflationMatchPair* entitete.
+Zaženite samo odstranjevanje podvajanj za izvedbe pogojev ujemanja in pravila ujemanja ter posodobite entiteti *Deduplication_* in *ConflationMatchPair*.
 
 1. Iz **podatki** > **Poenotiti** stran, izberite **Zaženi samo pogoje, ki se ujemajo**.
 
@@ -154,11 +154,11 @@ Zaženi pogoje ujemanja zažene samo pravila za odstranjevanje podvojitev in uje
 
 1. Iz **podatki** > **Poenotiti** strani izberite:
 
-   - **Poenotite profile strank** : izvaja pogoje ujemanja in posodablja entiteto poenotenega profila stranke, ne da bi vplival na odvisnosti (kot so obogatitve, segmenti ali mere). Odvisni procesi se ne izvajajo, ampak bodo osveženi kot [določeno v urniku osveževanja](system.md#schedule-tab).
+   - **Poenotite profile strank** : izvaja pogoje ujemanja in posodablja entiteto poenotenega profila stranke, ne da bi vplival na odvisnosti (kot so obogatitve, segmenti ali mere). Odvisni procesi se ne izvajajo, ampak bodo osveženi kot [določeno v urniku osveževanja](schedule-refresh.md).
 
-   - **Poenotite profile strank in odvisnosti** : Zažene ujemajoče se pogoje in posodobi poenoten profil in vse odvisnosti. Vsi procesi se samodejno znova izvedejo. Ko so vsi nadaljnji procesi končani, profil stranke odraža posodobljene podatke.
+   - **Poenotite profile strank in odvisnosti** : Zažene ujemajoče se pogoje in posodobi poenoten profil in vse odvisnosti. Vsi procesi se samodejno znova izvedejo. Ko so zaključeni vsi nadaljnji procesi, profil stranke odraža posodobljene podatke.
 
-   The **Podvojeni zapisi**, **pogojev**, in **Poenotena polja za stranke** ploščice kažejo **V čakalni vrsti** oz **Osvežujoče** stanje.
+   The **Podvojeni zapisi**, **pogojev**, in **Enotna polja za stranke** ploščice kažejo **V čakalni vrsti** oz **Osvežujoče** stanje.
 
    [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 

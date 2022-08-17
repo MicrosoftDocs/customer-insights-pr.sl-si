@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195678"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246128"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Uvoz podatkov v realnem času (predogled)
 
 Funkcije v skoraj realnem času vam omogočajo, da si v nekaj sekundah ogledate najnovejše interakcije, ki so jih vaše stranke opravile z vašimi izdelki in storitvami.
 
-[Načrtovane osvežitve](system.md#schedule-tab) vključujejo veliko število zapisov in več zapletenih postopkov. Najprej se podatki izvlečejo iz vira podatkov. Nato se podatki poenotijo in obogatijo z dodatnimi informacijami. Vsak posamezen postopek lahko traja od nekaj minut do nekaj ur.
+[Načrtovane osvežitve](schedule-refresh.md) vključujejo veliko število zapisov in več zapletenih postopkov. Najprej se podatki izvlečejo iz vira podatkov. Nato se podatki poenotijo in obogatijo z dodatnimi informacijami. Vsak posamezen postopek lahko traja od nekaj minut do nekaj ur.
 
 Funkcija v realnem času zagotavlja podatke takoj za porabo, dokler naslednje načrtovano osveževanje ne izvleče teh podatkov iz vira podatkov.
 
@@ -85,7 +85,7 @@ Podrobnosti tega API-ja, vključno s parametri in odzivi, najdete v razdelku **E
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Razumevanje uporabe v realnem času s telemetrijo
 
-Pridobite pregled obsega zahtev za API v realnem času in informacije o težavah, s katerimi se sistem lahko srečuje. Lahko [dostopate do telemetrije v realnem času](system.md#api-usage-tab). 
+Pridobite pregled obsega zahtev za API v realnem času in informacije o težavah, s katerimi se sistem lahko srečuje. Lahko [dostopate do telemetrije v realnem času](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

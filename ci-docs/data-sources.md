@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207111"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245669"
 ---
 # <a name="data-sources-overview"></a>Pregled virov podatkov
 
@@ -67,7 +67,7 @@ Za ogled razpoložljivih dejanj izberite vir podatkov.
 
 Vire podatkov lahko osvežite po samodejnem urniku ali ročno na zahtevo. [Lokalni viri podatkov](connect-power-query.md#add-data-from-on-premises-data-sources) osvežujejo po svojih urnikih, ki so nastavljeni med vnosom podatkov. Za priložene vire podatkov vnos podatkov porabi najnovejše podatke, ki so na voljo iz tega vir podatkov.
 
-Pojdi do **skrbnik** > **Sistem** > [**Urnik**](system.md#schedule-tab) da konfigurirate sistemsko načrtovane osvežitve virov vnesenih podatkov.
+Pojdi do **skrbnik** > **Sistem** > [**Urnik**](schedule-refresh.md) da konfigurirate sistemsko načrtovane osvežitve virov vnesenih podatkov.
 
 Za osvežitev vir podatkov na zahtevo:
 

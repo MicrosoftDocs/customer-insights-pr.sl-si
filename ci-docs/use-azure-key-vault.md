@@ -1,7 +1,7 @@
 ---
 title: Uporaba lastne shrambe ključev Azure (predogledna različica)
-description: Naučite se, kako konfigurirati Customer Insights za uporabo lastnega trezorja ključev Azure za upravljanje skrivnosti.
-ms.date: 10/06/2021
+description: Naučite se konfigurirati Customer Insights za uporabo lastnega trezorja ključev Azure za upravljanje skrivnosti.
+ms.date: 08/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -11,58 +11,63 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 229fb5698a02d1d73c30442f61c7b1b5fce918bf
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082648"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246175"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Uporaba lastne shrambe ključev Azure (predogledna različica)
 
-Povezovanje namenskega [Azurni trezor ključev](/azure/key-vault/general/basic-concepts) v okolje Customer Insights pomaga organizacijam izpolnjevati zahteve skladnosti.
-Dodeljena shramba ključev se lahko uporablja za pripravo in uporabo skrivnosti na meji zagotavljanja skladnosti organizacije. Customer Insights lahko uporabi skrivnosti v Azure Key Vault za [vzpostaviti povezave](connections.md) na sisteme tretjih oseb.
+Povezovanje namenskega [Shramba ključev Azure](/azure/key-vault/general/basic-concepts) v okolje Customer Insights pomaga organizacijam pri izpolnjevanju zahtev glede skladnosti.
 
 ## <a name="link-the-key-vault-to-the-customer-insights-environment"></a>Povežite trezor ključev z okoljem Customer Insights
 
+Nastavite namenski trezor ključev za uprizarjanje in uporabo skrivnosti v meji skladnosti organizacije.
+
 ### <a name="prerequisites"></a>Zahteve
 
-Če želite konfigurirati trezor ključev v Customer Insights, morajo biti izpolnjeni naslednji predpogoji:
+- Aktivna naročnina na Azure.
 
-- Imate aktivno naročnino na Azure.
+- An [Administrator](permissions.md#admin) vlogo [dodeljena](permissions.md#add-users) v Customer Insights.
 
-- Imate [skrbnik](permissions.md#admin) vlogo v Customer Insights. Več o tem [uporabniška dovoljenja v Customer Insights](permissions.md#assign-roles-and-permissions).
+- [sodelavec](/azure/role-based-access-control/built-in-roles#contributor) in [Administrator uporabniškega dostopa](/azure/role-based-access-control/built-in-roles#user-access-administrator) vloge v trezorju ključev ali skupini virov, ki ji pripada trezor ključev. Za več informacij obiščite [Dodajanje ali odstranitev dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal). Če nimate vloge skrbnika uporabniškega dostopa v trezorju ključev, nastavite dovoljenja za nadzor dostopa na podlagi vloge za glavnega servisa Azure za Dynamics 365 Customer Insights ločeno. Upoštevajte postopke, da [uporabite glavno ime storitve Azure](connect-service-principal.md) za shrambo ključev, ki jo je treba povezati.
 
-- Imate vlogo [Sodelavec](/azure/role-based-access-control/built-in-roles#contributor) in [Skrbniški dostop uporabnika](/azure/role-based-access-control/built-in-roles#user-access-administrator) v shrambi ključev ali skupini virov, ki ji pripada shramba ključev. Za več informacij obiščite [Dodajanje ali odstranitev dodelitve vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal). Če nimate vloge Skrbniški dostop uporabnika v shrambi ključev, morate za glavno ime storitve Azure ločeno nastaviti dovoljenja za nadzor dostopa, ki temeljijo na vlogi, za storitev Dynamics 365 Customer Insights. Upoštevajte postopke, da [uporabite glavno ime storitve Azure](connect-service-principal.md) za shrambo ključev, ki jo je treba povezati.
+- Shramba ključev mora imeti požarni zid Key Vault **onemogočeno**.
 
-- Shramba ključev mora imeti **onemogočen** požarni zid za storitev Key Vault.
+- Trezor ključev je v istem [Azurna lokacija](https://azure.microsoft.com/global-infrastructure/geographies/#overview) kot okolje Customer Insights. V Customer Insights pojdite na **skrbnik** > **Sistem** in **O tem** zavihek za ogled regije okolja.
 
-- V istem je trezor za ključe [Azurna lokacija](https://azure.microsoft.com/global-infrastructure/geographies/#overview) kot okolje Customer Insights. Regija okolja v Customer Insights je navedena pod **Admin** > **sistem** > **O** > **Regija**.
+### <a name="recommendations"></a>Priporočila
+
+- [Uporabite ločen ali namenski trezor ključev](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults) ki vsebuje samo skrivnosti, potrebne za Customer Insights.
+
+- Upoštevajte [najboljše postopke za uporabo storitve Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) za možnosti nadzora dostopa, varnostnega kopiranja, spremljanja sprememb in obnovitve.
 
 ### <a name="link-a-key-vault-to-the-environment"></a>Povezava shrambe ključev z okoljem
 
-1. Pojdi do **Admin** > **Varnost**, nato pa izberite **Trezor ključev** zavihek.
+1. Pojdi do **skrbnik** > **Varnost** in nato izberite **Shramba ključev** zavihek.
 1. V ploščici **Key Vault** izberite **Nastavitev**.
 1. Izberite **Naročnina**.
-1. Izberite shrambo ključev v spustnem seznamu **Key Vault**. Če se prikaže preveč shramb ključev, izberite skupino virov, da omejite rezultate iskanja.
-1. Sprejmite izjavo **Zasebnost podatkov in skladnost**.
+1. Izberite shrambo ključev v spustnem seznamu **Key Vault**. Če je na voljo preveč trezorjev ključev, izberite skupino virov, da omejite rezultate iskanja.
+1. Preglejte [Zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **Strinjam se**.
 1. Izberite **Shrani**.
 
-:::image type="content" source="media/set-up-azure-key-vault.png" alt-text="Koraki za nastavitev povezanega trezorja ključev v storitvi Customer Insights.":::
-
-Ploščica **Key Vault** zdaj prikazuje povezano ime shrambe ključev, skupino virov in naročnino. Pripravljena je za uporabo v nastavitvah povezave.
-Za podrobnosti o tem, katera dovoljenja za trezor ključev so dodeljena Customer Insights, pojdite na [Dovoljenja, odobrena za trezor ključev](#permissions-granted-on-the-key-vault), kasneje v tem članku.
+The **Shramba ključev** ploščica prikazuje ime povezanega trezorja ključev, naročnino in skupino virov. Pripravljena je za uporabo v nastavitvah povezave.
+Za podrobnosti o tem, katera dovoljenja za trezor ključev so dodeljena Customer Insights, pojdite na [Dovoljenja, odobrena za trezor ključev](#permissions-granted-on-the-key-vault).
 
 ## <a name="use-the-key-vault-in-the-connection-setup"></a>Uporaba shrambe ključev v nastavitvah povezave
 
-Ko [vzpostavite povezave](connections.md) za sisteme drugih ponudnikov, lahko za konfiguracijo povezav uporabite skrivnosti iz povezane storitve Key Vault.
+Kdaj [vzpostavljanje povezav](connections.md) do [podprte tretje osebe](#supported-connection-types) sisteme, uporabite skrivnosti iz povezanega trezorja ključev za konfiguracijo povezav.
 
 1. Odprite razdelek **Skrbnik** > **Povezave**.
 1. Izberite **Dodaj povezavo**.
 1. Za podprte vrste povezav je na voljo preklop **Uporabi storitev Key Vault**, če ste povezali shrambo ključev.
-1. Namesto da ročno vnesete skrivnost, lahko izberete ime skrivnosti, ki kaže na skrivno vrednost v shrambi ključev.
+1. Namesto ročnega vnosa skrivnosti izberite ime skrivnosti, ki kaže na vrednost skrivnosti v trezorju ključev.
 
-:::image type="content" source="media/use-key-vault-secret.png" alt-text="Podokno za povezavo s povezavo SFTP, ki uporablja skrivnost storitve Key Vault.":::
+   :::image type="content" source="media/use-key-vault-secret.png" alt-text="Podokno za povezavo s povezavo SFTP, ki uporablja skrivnost storitve Key Vault.":::
+
+1. Izberite **Shrani** da ustvarite povezavo.
 
 ## <a name="supported-connection-types"></a>Podprte vrste povezav
 
@@ -83,7 +88,7 @@ Podprte so naslednje povezave za [izvoz](export-destinations.md):
 
 ## <a name="permissions-granted-on-the-key-vault"></a>Dovoljenja, odobrena za trezor ključev
 
-Naslednja dovoljenja so dodeljena Customer Insights na povezanem trezorju ključev, če obstaja [Politika dostopa do Key Vault](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) oz [Nadzor dostopa, ki temelji na vlogah Azure](/azure/key-vault/general/rbac-guide?tabs=azure-cli) je omogočeno.
+Naslednja dovoljenja so dodeljena aplikaciji Customer Insights v povezanem trezorju ključev [Politika dostopa do trezorja ključev](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) oz [Nadzor dostopa Azure na podlagi vlog](/azure/key-vault/general/rbac-guide?tabs=azure-cli) je omogočeno.
 
 ### <a name="key-vault-access-policy"></a>Pravilnik o dostopu za storitev Key Vault
 
@@ -97,19 +102,13 @@ Prejšnje vrednosti so minimalne za navedbo in branje med izvajanjem.
 
 ### <a name="azure-role-based-access-control"></a>Nadzor dostopa Azure, ki temelji na vlogi
 
-Uporabniški vlogi Key Vault Uporabnik z dovoljenjem za branje in Key Vault Secrets bosta dodani za Customer Insights. Za podrobnosti o teh vlogah obiščite [Vdelane vloge Azure za postopke podatkovne ravnine Key Vault](/azure/key-vault/general/rbac-guide?tabs=azure-cli).
-
-## <a name="recommendations"></a>Priporočila
-
-- Uporabite ločen ali namenski trezor ključev, ki vsebuje samo skrivnosti, potrebne za Customer Insights. Preberite več o tem, zakaj [priporočamo ločene shrambe ključev](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults).
-
-- Upoštevajte [najboljše postopke za uporabo storitve Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) za možnosti nadzora dostopa, varnostnega kopiranja, spremljanja sprememb in obnovitve.
+The [Key Vault Uporabnik z dovoljenjem za branje in uporabniške vloge Secret Vault](/azure/key-vault/general/rbac-guide?tabs=azure-cli) bo dodan za Customer Insights.
 
 ## <a name="frequently-asked-questions"></a>Pogosto zastavljena vprašanja
 
-### <a name="can-customer-insights-write-secrets-or-overwrite-secrets-into-the-key-vault"></a>Ali lahko Customer Insights zapiše skrivnosti ali prepiše skrivnosti v trezor ključev?
+### <a name="can-customer-insights-write-secrets-or-overwrite-secrets-into-the-key-vault"></a>Ali lahko Customer Insights zapiše skrivnosti ali prepiše skrivnosti v shrambo ključev?
 
-Ne. Samo dovoljenja za branje in seznam, opisana v [podeljena dovoljenja](#permissions-granted-on-the-key-vault) razdelku prej v tem članku so dodeljeni Customer Insights. Sistem ne more dodati, izbrisati ali prepisati skrivnosti v shrambo ključev. To je tudi razlog, zakaj ne morete vnesti poverilnic, ko povezava uporablja storitev Key Vault.
+Ne. Samo dovoljenja za branje in seznam, opisana v [podeljena dovoljenja](#permissions-granted-on-the-key-vault) so dodeljeni Customer Insights. Sistem ne more dodati, izbrisati ali prepisati skrivnosti v shrambo ključev. To je tudi razlog, zakaj ne morete vnesti poverilnic, ko povezava uporablja storitev Key Vault.
 
 ### <a name="can-i-change-a-connection-from-using-key-vault-secrets-to-default-authentication"></a>Ali lahko spremenim povezavo iz skrivnosti Key Vault v privzeto preverjanje pristnosti?
 
@@ -117,16 +116,16 @@ Ne. Ko jo konfigurirate z uporabo skrivnosti iz povezane shrambe ključev, se ne
 
 ### <a name="how-can-i-revoke-access-to-a-key-vault-for-customer-insights"></a>Kako lahko prekličem dostop do trezorja ključev za Customer Insights?
 
-Odvisno od tega, ali je omogočen [pravilnik o dostopu za storitev Key Vault](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) ali [nadzor dostopa Azure, ki temelji na vlogi](/azure/key-vault/general/rbac-guide?tabs=azure-cli), morate odstraniti dovoljenja za glavno ime storitve `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` z imenom `Dynamics 365 AI for Customer Insights`. Vse povezave, ki uporabljajo shrambo ključev, bodo prenehale delovati.
+Če je [Politika dostopa do trezorja ključev](/azure/key-vault/general/assign-access-policy?tabs=azure-portal) oz [Nadzor dostopa Azure na podlagi vlog](/azure/key-vault/general/rbac-guide?tabs=azure-cli) je omogočeno, odstranite dovoljenja za glavnega servisa`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` z imenom `Dynamics 365 AI for Customer Insights`. Vse povezave, ki uporabljajo shrambo ključev, bodo prenehale delovati.
 
 ### <a name="a-secret-thats-used-in-a-connection-got-removed-from-the-key-vault-what-can-i-do"></a>Skrivnost, ki se uporablja v povezavi, je bila odstranjena iz shrambe ključev. Kaj lahko storim?
 
-Obvestilo se prikaže v Customer Insights, ko konfigurirana skrivnost iz trezorja ključev ni več dostopna. Omogočite [začasno brisanje](/azure/key-vault/general/soft-delete-overview) v shrambi ključev za obnovitev skrivnosti, če so bile odstranjene po pomoti.
+Ko konfigurirana skrivnost iz trezorja ključev ni več dostopna, se v Customer Insights prikaže obvestilo. Omogočite [začasno brisanje](/azure/key-vault/general/soft-delete-overview) v shrambi ključev za obnovitev skrivnosti, če so bile odstranjene po pomoti.
 
 ### <a name="a-connection-doesnt-work-but-my-secret-is-in-the-key-vault-what-might-be-the-cause"></a>Povezava ne deluje, vendar je moja skrivnost v shrambi ključev. Kaj je lahko vzrok?
 
-Ko ne more dostopati do trezorja ključev, se v storitvi Customer Insights prikaže obvestilo. Vzrok je lahko:
+Ko ne more dostopati do trezorja ključev, se v Customer Insights prikaže obvestilo. Vzrok je lahko:
 
-- Dovoljenja za principal storitve Customer Insights so bila odstranjena. Obnoviti jih je treba ročno.
+- Dovoljenja za principala storitve Customer Insights so bila odstranjena. Obnoviti jih je treba ročno.
 
-- Požarni zid v shrambi ključev je omogočen. Požarni zid mora biti onemogočen, da bo trezor ključev ponovno dostopen za Customer Insights.
+- Požarni zid v shrambi ključev je omogočen. Požarni zid mora biti onemogočen, da bo shramba ključev ponovno dostopna za Customer Insights.

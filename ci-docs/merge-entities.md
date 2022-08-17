@@ -14,16 +14,16 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139677"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213602"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Poenotite polja strank za poenotenje podatkov
 
-V tem koraku postopka poenotenja izberite in izključite atribute, ki jih želite združiti znotraj entitete poenotenega profila. Če so na primer tri entitete imele e-poštne podatke, boste morda želeli obdržati vsa tri ločena e-poštna polja ali jih združiti v eno e-poštno polje za poenoten profil. Nekatere atribute sistem samodejno združi. Ustvarite lahko stabilne in edinstvene ID-je strank ter združite povezane profile v gručo.
+V tem koraku postopka poenotenja izberite in izključite atribute, ki jih želite združiti znotraj entitete poenotenega profila. Na primer, če so tri entitete imele e-poštne podatke, boste morda želeli obdržati vsa tri ločena e-poštna polja ali jih združiti v eno e-poštno polje za poenoten profil. Nekatere atribute sistem samodejno združi. Ustvarite lahko stabilne in edinstvene ID-je strank ter združite povezane profile v gručo.
 
 :::image type="content" source="media/m3_unify.png" alt-text="Stran za spajanje v postopku poenotenja podatkov, ki prikazuje tabelo s spojenimi polji, ki določajo poenoten profil kupca.":::
 
@@ -58,6 +58,9 @@ V tem koraku postopka poenotenja izberite in izključite atribute, ki jih želit
 
 1. Določite, kako združiti ali spojiti polja z eno od treh možnosti:
     - **Pomembnost**: Določi zmagovalno vrednost na podlagi uvrstitve pomembnosti, določene za vključena polja. To je privzeta možnost spajanja. Izberite **Premakni gor/dol**, da določite razvrstitev pomembnosti.
+
+      > [!NOTE]
+      > Customer Insights uporablja prvo neničelno vrednost. Če so na primer podane entitete A, B in C razvrščene v tem vrstnem redu, če sta A.Name in B.Name ničelna, se uporabi vrednost iz C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Možnost pomembnosti v dialogu za spajanje polj.":::
 
@@ -125,7 +128,7 @@ Združite ločena polja, da ustvarite združeni atribut.
 
 ### <a name="combine-a-group-of-fields"></a>Združite skupino polj
 
-Obravnavajte skupino polj kot eno samo enoto. Na primer, če naši zapisi vsebujejo polja Naslov1, Naslov2, Mesto, Država in Poštna številka, ne želimo združiti naslova2 drugega zapisa, saj menimo, da bodo naši podatki popolnejši.
+Obravnavajte skupino polj kot eno samo enoto. Na primer, če naši zapisi vsebujejo polja Naslov1, Naslov2, Mesto, Država in Poštna številka, ne želimo združiti naslova2 drugega zapisa, saj menimo, da bodo tako naši podatki popolnejši.
 
 1. Izberite **Združite** > **Skupina polj**.
 
@@ -139,7 +142,7 @@ Obravnavajte skupino polj kot eno samo enoto. Na primer, če naši zapisi vsebuj
 
 1. Če želite uporabiti spremembe, izberite **Dokončaj**.
 
-## <a name="configure-customer-id-generation"></a>Konfigurirajte ustvarjanje ID-ja stranke
+## <a name="configure-customer-id-generation"></a>Konfigurirajte generiranje ID-ja stranke
 
 Določite, kako ustvariti vrednosti ID-ja stranke, edinstvene identifikatorje profila stranke. Korak poenotenja polj v procesu poenotenja podatkov ustvari edinstven identifikator profila stranke. Identifikator je *Identifikacijska številka stranke* v *Stranka* entiteta, ki izhaja iz procesa poenotenja podatkov.
 
@@ -172,7 +175,7 @@ Določite lahko pravila za združevanje povezanih profilov v gručo. Trenutno st
 
 1. Določite pravila in pogoje za opredelitev gruče.
 
-1. Izberite **Dokončano**. Grozd je ustvarjen, ko je postopek združevanja končan. Identifikatorji gruče so dodani kot nova polja v *Stranka* entiteta.
+1. Izberite **Dokončano**. Grozd se ustvari, ko je postopek združevanja končan. Identifikatorji gruče so dodani kot nova polja v *Stranka* entiteta.
 
 > [!div class="nextstepaction"]
 > [Naslednji korak: Pregled poenotenja](review-unification.md)

@@ -2,7 +2,7 @@
 title: Pred poenotenjem podatkov odstranite dvojnike
 description: Drugi korak v procesu poenotenja je izbira, kateri zapis obdržati, ko so najdeni dvojniki.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139449"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213647"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Pred poenotenjem podatkov odstranite dvojnike
 
-Ta korak pri poenotenju vam po želji omogoča nastavitev pravil za obravnavanje podvojenih zapisov znotraj entitete. *Deduplikacija* identificira podvojene zapise in jih združi v en zapis. Izvorni zapisi se na združeni zapis povežejo z nadomestnimi ID-ji. Če pravila niso konfigurirana, se uporabijo sistemsko definirana pravila.
+Ta izbirni korak pri poenotenju vam omogoča nastavitev pravil za odpravo podvojenih zapisov **znotraj** subjekt. Deduplikacija prepozna več zapisov za stranko in izbere najboljši zapis za vodenje (na podlagi osnovnih nastavitev združevanja) ali združi zapise v enega (na podlagi naprednih nastavitev združevanja). Izvorni zapisi se na združeni zapis povežejo z nadomestnimi ID-ji. Če pravila niso konfigurirana, se uporabijo sistemsko definirana pravila.
+
+## <a name="default-deduplication"></a>Privzeta deduplikacija
+
+Sistemsko definirana pravila veljajo, če niso dodana pravila za odstranjevanje podvojitev.
+
+- Primarni ključ je dedupliciran.
+  Za vse zapise z istim primarnim ključem je **Najbolj napolnjena** zapis (tisti z najmanj ničelnimi vrednostmi) je zmagovalec.
+- Vsa pravila ujemanja med entitetami se uporabijo za entiteto.
+  Na primer: v koraku ujemanja, če se entiteta A ujema z entiteto B na *Polno ime* in *Datum rojstva*, potem je tudi entiteta A deduplicirana s strani *Polno ime* in *Datum rojstva*. Ker *Polno ime* in *Datum rojstva* so veljavni ključi za identifikacijo stranke v entiteti A, so ti ključi veljavni tudi za identifikacijo podvojenih strank v entiteti A.
 
 ## <a name="include-enriched-entities-preview"></a>Vključi obogatene entitete (predogled)
 
@@ -78,7 +87,7 @@ Ta korak pri poenotenju vam po želji omogoča nastavitev pravil za obravnavanje
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Podokno z naprednimi nastavitvami združevanja prikazuje nedavno e-pošto in celoten naslov":::
 
-   1. Izberite **Končano** da uporabite svoje nastavitve združevanja.
+   1. Izberite **Končano** da uporabite svoje nastavitve spajanja.
 
 1. Ko določite pravila za odstranjevanje podvojitev in nastavitve spajanja, izberite **Naslednji**.
   
@@ -95,7 +104,7 @@ Postopek deduplikacije ustvari novo deduplicirano entiteto za vsako od izvornih 
 Izhodna entiteta brez podvajanj vsebuje naslednje informacije:
 
 - ID-je/ključe
-  - Polji za primarni ključ in nadomestni ID. Polje z nadomestnim ID-jem je sestavljeno iz vseh nadomestnih ID-jev, identificiranih za zapis.
+  - Polja za primarni ključ in nadomestni ID. Polje z nadomestnim ID-jem je sestavljeno iz vseh nadomestnih ID-jev, identificiranih za zapis.
   - Polje Deduplication_GroupId prikazuje skupino ali gručo, identificirano znotraj entitete, ki združuje vse podobne zapise na podlagi določenih polj za odstranjevanje podvajanj. To se uporablja za namene sistemske obdelave. Če niso podana nobena pravila za ročno odstranjevanje podvajanj in veljajo sistemsko določena pravila za odstranjevanje podvajanj, tega polja v izhodni entiteti brez podvajanj morda ne boste našli.
   - Deduplication_WinnerId: to polje vsebuje ID zmagovalnega zapisa iz identificiranih skupin ali gruč. Če je vrednost Deduplication_WinnerId enaka vrednosti primarnega ključa za zapis, to pomeni, da gre za zmagovalni zapis.
 - Polja, ki se uporabljajo za določanje pravil za odstranjevanje podvajanj.

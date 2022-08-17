@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Skrbništvo
   items:
-    - name: Nastavitev konfiguracije sistema
-      href: system.md
-    - name: Konfigurirajte varnostne nastavitve
-      href: security-overview.md
     - name: Dodeljevanje uporabniških dovoljenj
       href: permissions.md
     - name: Prinesite svojo storitev Key Vault
       href: use-azure-key-vault.md
+    - name: Konfigurirajte varnostne nastavitve
+      href: security-overview.md
     - name: Izvoz diagnostičnih dnevnikov
       href: diagnostics.md
-    - name: Pregled povezav
+    - name: Upravljanje povezav
       href: connections.md
+    - name: Načrtujte osvežitev sistema
+      href: schedule-refresh.md
+    - name: Oglejte si konfiguracijo sistema
+      href: system.md
 - name: API-ji
   items:
     - name: Delo z API-ji

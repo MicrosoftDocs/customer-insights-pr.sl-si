@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207019"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245853"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Vzpostavljanje povezave s podatki v storitvi Azure Data Lake Storage
 
@@ -40,7 +40,7 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo vašega Azure Data La
   - Lastnik podatkov shrambe zbirke dvojiških podatkov
   - Sodelujoči v shrambi zbirke dvojiških podatkov
 
-- Podatki v vaši shrambi podatkovnega jezera bi morali slediti standardu skupnega podatkovnega modela za shranjevanje vaših podatkov in imeti manifest skupnega podatkovnega modela, ki predstavlja shemo podatkovnih datotek (*.csv ali *.parquet). Manifest mora vsebovati podrobnosti o entitetah, kot so stolpci entitet in tipi podatkov, ter lokacijo in vrsto podatkovne datoteke. Za več informacij glejte [Manifest skupnega podatkovnega modela](/common-data-model/sdk/manifest). Če manifest ni prisoten, lahko skrbniški uporabniki z dostopom lastnika podatkov bloba shranjevanja ali podatkov bloba shranjevanja sodelavec določijo shemo pri vnosu podatkov.
+- Podatki v vaši shrambi podatkovnega jezera bi morali slediti standardu skupnega podatkovnega modela za shranjevanje vaših podatkov in imeti manifest skupnega podatkovnega modela, ki predstavlja shemo podatkovnih datotek (*.csv ali *.parquet). Manifest mora vsebovati podrobnosti o entitetah, kot so stolpci entitet in tipi podatkov, ter lokacijo podatkovne datoteke in vrsto datoteke. Za več informacij glejte [Manifest skupnega podatkovnega modela](/common-data-model/sdk/manifest). Če manifest ni prisoten, lahko skrbniški uporabniki z dostopom lastnika podatkov bloba shranjevanja ali podatkov bloba shranjevanja sodelavec določijo shemo pri vnosu podatkov.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Vzpostavljanje povezave s storitvijo Azure Data Lake Storage
 
@@ -52,12 +52,12 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo vašega Azure Data La
 
    :::image type="content" source="media/data_sources_ADLS.png" alt-text="Pogovorno okno za vnos podrobnosti povezave za Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Vnesite a **Ime** za vir podatkov in neobvezno **Opis**. Ime enolično identificira vir podatkov in je navedeno v nadaljnjih procesih in ga ni mogoče spremeniti.
+1. Vnesite a **Ime** za vir podatkov in neobvezno **Opis**. Ime enolično identificira vir podatkov in se nanj sklicuje v nadaljnjih procesih in ga ni mogoče spremeniti.
 
 1. Izberite eno od naslednjih možnosti za **Povežite shrambo z uporabo**. Za več informacij glejte [Povežite Customer Insights z Azure Data Lake Storage Gen2 račun z glavnim servisom Azure](connect-service-principal.md).
 
-   - **Vir Azure** : Vnesite **ID vira** . Po želji izberite, če želite prenesti podatke iz računa za shranjevanje prek zasebne povezave Azure **Omogoči zasebno povezavo**. Za več informacij glejte [Zasebne povezave](security-overview.md#private-links-tab).
-   - **Naročnina na Azure** : izberite **Naročnina** in nato **Skupina virov** in **Račun za shranjevanje**. Po želji izberite, če želite prenesti podatke iz računa za shranjevanje prek zasebne povezave Azure **Omogoči zasebno povezavo**. Za več informacij glejte [Zasebne povezave](security-overview.md#private-links-tab).
+   - **Vir Azure** : Vnesite **ID vira** . Po želji izberite, če želite prenesti podatke iz računa za shranjevanje prek zasebne povezave Azure **Omogoči zasebno povezavo**. Za več informacij glejte [Zasebne povezave](security-overview.md#set-up-an-azure-private-link).
+   - **Naročnina na Azure** : izberite **Naročnina** in nato **Skupina virov** in **Račun za shranjevanje**. Po želji izberite, če želite prenesti podatke iz računa za shranjevanje prek zasebne povezave Azure **Omogoči zasebno povezavo**. Za več informacij glejte [Zasebne povezave](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Za ustvarjanje vir podatkov potrebujete eno od naslednjih vlog za vsebnik ali račun za shranjevanje:
@@ -82,9 +82,9 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo vašega Azure Data La
    :::image type="content" source="media/ADLS_required.png" alt-text="Pogovorno okno, ki prikazuje Zahtevano za primarni ključ":::
 
    > [!TIP]
-   > Če želite urediti entiteto v vmesniku za urejanje JSON, izberite entiteto in nato **Uredi datoteko sheme**. Spremenite in izberite **Shrani**.
+   > Če želite urediti entiteto v vmesniku za urejanje JSON, izberite entiteto in nato **Uredite datoteko sheme**. Spremenite in izberite **Shrani**.
 
-1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopna osvežitev**. Za vsako od teh entitet glejte [Konfigurirajte inkrementalno osvežitev za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
+1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopna osvežitev**. Za vsako od teh entitet glejte [Konfigurirajte postopno osvežitev za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
 
 1. Za izbrane entitete, kjer primarni ključ ni bil definiran, **Obvezno** prikaže pod **Primarni ključ**. Za vsako od teh entitet:
    1. Izberite **Obvezno**. The **Uredi entiteto** panelni zasloni.
@@ -142,7 +142,7 @@ Nalaganje podatkov lahko traja nekaj časa. Po uspešni osvežitvi lahko vnesene
 
    :::image type="content" source="media/ADLS_required.png" alt-text="Pogovorno okno, ki prikazuje Zahtevano za primarni ključ":::
 
-1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopna osvežitev**. Za vsako od teh entitet glejte [Konfigurirajte inkrementalno osvežitev za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
+1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopna osvežitev**. Za vsako od teh entitet glejte [Konfigurirajte postopno osvežitev za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
 
 1. Za izbrane entitete, kjer primarni ključ ni bil definiran, **Obvezno** prikaže pod **Primarni ključ**. Za vsako od teh entitet:
    1. Izberite **Obvezno**. The **Uredi entiteto** panelni zasloni.
@@ -176,7 +176,7 @@ Lahko posodobite *Povežite se z računom za shranjevanje z uporabo* možnost. Z
         > - Lastnik podatkov shrambe zbirke dvojiških podatkov
         > - Sodelujoči v shrambi zbirke dvojiških podatkov
 
-   - **Omogoči zasebno povezavo** če želite prenesti podatke iz računa za shranjevanje prek zasebne povezave Azure. Za več informacij glejte [Zasebne povezave](security-overview.md#private-links-tab).
+   - **Omogoči zasebno povezavo** če želite prenesti podatke iz računa za shranjevanje prek zasebne povezave Azure. Za več informacij glejte [Zasebne povezave](security-overview.md#set-up-an-azure-private-link).
 
 1. Izberite **Naprej**.
 1. Spremenite kar koli od naslednjega:

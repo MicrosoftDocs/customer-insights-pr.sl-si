@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082858"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245485"
 ---
 # <a name="manage-predictions"></a>Upravljanje predvidevanj
 
@@ -50,15 +50,15 @@ Naslednji stolpci poročila vsebujejo koristne informacije za izboljšanje podat
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Primer poročila o uporabnosti vhodnih podatkov, ki prikazuje tabelo z napakami, opozorili in priporočili.":::
 
 - **ime:** Opisno ime napake, opozorila ali priporočila.
-- **korak:** Model faza, vlak ali rezultat, se nanašajo informacije.
-- **Država:** Resnost informacij (napaka, opozorilo, priporočilo).
-- **Ime stolpca:** Stolpec v entiteti, ki jo je treba spremeniti za izboljšanje zmogljivosti modela.
+- **korak:** Faza modela, vlak ali rezultat, informacije se nanašajo na.
+- **Država:** Resnost informacije (napaka, opozorilo, priporočilo).
+- **Ime stolpca:** Stolpec v entiteti, ki ga je treba spremeniti za izboljšanje zmogljivosti modela.
 - **Ime subjekta:** Ime entitete, ki jo je treba spremeniti za izboljšanje zmogljivosti modela.
 - **podrobnosti:** Podrobnosti o napaki, opozorilu ali priporočilu.
 
 ## <a name="refresh-a-prediction"></a>Osveževanje predvidevanja
 
-Predvidevanja se bodo samodejno osvežila v istem [urniku, kot ga osvežijo vaši podatki](system.md#schedule-tab), ko se konfigurirajo v nastavitvah. Lahko jih osvežite tudi ročno.
+Predvidevanja se bodo samodejno osvežila v istem [urniku, kot ga osvežijo vaši podatki](schedule-refresh.md), ko se konfigurirajo v nastavitvah. Lahko jih osvežite tudi ročno.
 
 1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
 

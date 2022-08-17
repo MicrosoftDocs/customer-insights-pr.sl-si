@@ -1,7 +1,7 @@
 ---
-title: Upravljanje uporabniških dovoljenj
+title: Dodeljevanje uporabniških dovoljenj
 description: Preberite o dovoljenjih in uporabniških vlogah.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054910"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245439"
 ---
-# <a name="manage-user-permissions"></a>Upravljanje uporabniških dovoljenj
+# <a name="assign-user-permissions"></a>Dodeljevanje uporabniških dovoljenj
 
-The **Dovoljenja** stran, kjer boste nastavili vloge in dovoljenja za uporabo Customer Insights.
-
-Za ogled strani morate imeti skrbniška dovoljenja. Za dostop do strani z dovoljenji pojdite na **Admin** > **Varnost** > **Uporabniki**.
-
-Na voljo so tri vrste vlog:
+Dostop do Customer Insights je omejen na uporabnike v vaši organizaciji, ki jih v aplikacijo doda skrbnik. Skrbnik lahko dodaja, ureja ali odstranjuje uporabnike. Uporabnik je lahko en sam uporabnik, skupina ali aplikacija. Obstajajo tri vrste vlog, ki jih lahko ima uporabnik:
 
 ## <a name="viewer"></a>Gledalec
 
@@ -41,18 +37,18 @@ Na voljo so tri vrste vlog:
 
 - Vsa dovoljenja, ki so na voljo gledalcu.
 - Na strani **Viri podatkov** naložite in preoblikujte podatke.
-- Dokončano ***Poenotenje podatkov** kar ima za posledico enotno enoto profila stranke.
+- Popolna **Poenotenje podatkov** kar ima za posledico enotno entiteto profila stranke.
 - Določite **odnose** in **dejavnosti**.
 - Na strani **Segmenti** ustvarite segmente.
 - Na strani **Mere** ustvarite mere.
 - Upravljajte konfiguracijo in obogatite profile strank s strani **Obogatitev** (samo za obogatitve proizvajalca).
-- Upravljajte in ustvarjajte izvoze na podlagi povezav v skupni rabi s sodelavci. [Preberite več o tem, kako skrbniki dovolijo sodelavcem, da uporabljajo povezavo za izvoze](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Upravljajte in ustvarjajte izvoze na podlagi [povezave v skupni rabi s sodelavci](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="admin"></a>Admin
 
 - Vsa dovoljenja, ki so na voljo sodelavcu.
-- Spremenite nastavitve na strani **Sistem**, vključno z delovnim jezikom in urniki osveževanja za sistemske procese.
-- Na strani **Dovoljenja** si oglejte in dodajte dovoljenja..
+- Spremenite nastavitve na **Sistem** strani, vključno z delovnim jezikom, urniki osveževanja za vaše sistemske procese in izvozom diagnostičnih dnevnikov.
+- Spremenite nastavitve na **Varnost** strani, vključno z uporabniki, ključi API, zasebnimi povezavami in trezorjem ključev.
 - Na strani **Kazalo za iskanje in filtriranje** (dostopna prek strani **Stranke**) nastavite definiciji iskanja in filtriranja za stran »Stranke«.
 - Upravljajte povezave in jih dovolite za druge uporabniške vloge na strani **Povezave**.
 - Upravljajte konfiguracijo in obogatite profile strank s strani **Obogatitev** (za vse obogatitve).
@@ -60,31 +56,34 @@ Na voljo so tri vrste vlog:
 - Namestite in uporabite **dodatek za kartice strank**.
 - Dodajte in uporabite **povezovalnik Power Apps**.
 - Omogočite uporabo [API-jev za Customer Insights](apis.md).
-- [Dodeli lastništvo okolja](manage-environments.md#change-the-owner-of-an-environment) drugemu administratorju.
+- [Dodelite lastništvo okolja](manage-environments.md#change-the-owner-of-an-environment) drugemu adminu.
 
-## <a name="admin-owner"></a>Skrbnik (lastnik)
+## <a name="admin-owner"></a>Admin (lastnik)
 
-- Vsa dovoljenja, ki so na voljo skrbniku.
+- Vsa dovoljenja so na voljo skrbniku.
 - [Ponastavi in izbriši](manage-environments.md#reset-an-existing-environment-preview) okolje.
 
-## <a name="assign-roles-and-permissions"></a>Dodeljevanje vlog in dovoljenj
+## <a name="add-users"></a>Dodajanje uporabnikov
 
-1. Pojdi do **Admin** > **Varnost** > **Uporabniki***.
+1. Pojdi do **skrbnik** > **Varnost** in izberite **Uporabniki** zavihek.
 
 1. Izberite **Dodaj uporabnike**, da odprete podokno **Dodaj/uredi dovoljenja**.
 
-1. Uporabite polje **Iskanje**, da poiščete uporabnika ali skupino storitve Azure Active Directory, katere dovoljenja želite prilagoditi. Izberite možnost **Vloga**, da jo dodelite temu uporabniku ali skupini.
+1. Uporabi **Iskanje** polje za iskanje Azure Active Directory uporabnik ali skupina, ki jo želite dodati. Izberite možnost **Vloga**, da jo dodelite temu uporabniku ali skupini.
 
-1. Izberite **Shrani**. Trenutno okolje bo samodejno v skupni rabi z uporabnikom ali člani skupine, katerih dovoljenja ste spremenili. Uporabniki lahko dostopajo do aplikacije Customer Insights in delajo v skladu s svojo določeno vlogo.
+1. Izberite **Shrani**. Trenutno okolje se samodejno deli z uporabnikom ali člani skupine. Uporabniki lahko dostopajo do aplikacije Customer Insights in delajo v skladu s svojo določeno vlogo.
 
 ## <a name="view-current-permissions"></a>Prikaz trenutnih dovoljenj
 
-Pojdi do **Admin** > **Varnost** > **Uporabniki** da vidite, katere dodelitve vlog so trenutno aktivne.
+Pojdi do **skrbnik** > **Varnost** in izberite **Uporabniki** za ogled seznama aktivnih uporabnikov in njihovih dodelitev vlog. Seznam uporabnikov lahko razvrstite po katerem koli stolpcu ali uporabite iskalno polje, da poiščete določenega uporabnika.
 
-- Stolpec **Vrsta** določa uporabnika, skupino ali aplikacijo. Sistem podpira posamezne uporabnike in skupine.
-- Vloge so navedene pod stolpcem **Vloga**.
-- Izberite kateri koli naslov stolpca, da rezultate razvrstite glede na vrednost tega stolpca.
-- Za iskanje določenih uporabnikov uporabite polje **Iskanje** na vrhu strani.
+## <a name="manage-current-users"></a>Upravljanje trenutnih uporabnikov
 
+Pojdi do **skrbnik** > **Varnost** in izberite **Uporabniki** zavihek. Seznam uporabnikov lahko razvrstite po katerem koli stolpcu ali uporabite iskalno polje, da poiščete uporabnika, ki ga želite upravljati.
+
+Izberite uporabnika za ogled razpoložljivih dejanj.
+
+- **Uredi** za urejanje vloge uporabnika v Customer Insights. Izberite **Shrani** za potrditev spremembe.
+- **Odstrani** da uporabniku onemogočite dostop do Customer Insights. Izberite možnost **Izbriši**, da pordite izbris.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

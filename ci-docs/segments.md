@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170701"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246313"
 ---
 # <a name="segments-overview"></a>Pregled segmentov
 
@@ -58,7 +58,7 @@ Izberite segment za ogled razpoložljivih dejanj.
 - Za spreminjanje lastnosti segmenta lahko uporabite možnost **Uredi**.
 - **Ustvarjanje dvojnika** segmenta. Lahko se odločite za takojšnje urejanje njegovih lastnosti ali shranjevanje dvojnika.
 - [**Osveži**](#refresh-segments) segment za vključitev najnovejših podatkov.
-- Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Neaktivni segmenti se ne bodo osvežili med a [načrtovano osveževanje](system.md#schedule-tab) in imeti **Stanje** naveden kot **Preskočeno**, kar pomeni, da osvežitev sploh ni bila izvedena. Aktivni segmenti se osvežujejo glede na njihovo vrsto: statični ali dinamični.
+- Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Neaktivni segmenti se ne bodo osvežili med a [načrtovana osvežitev](schedule-refresh.md) in imeti **Stanje** naveden kot **Preskočeno**, kar pomeni, da osvežitev sploh ni bila izvedena. Aktivni segmenti se osvežujejo glede na njihovo vrsto: statični ali dinamični.
 - **Naredi statično** oz **Naredite dinamično** vrsto segmenta. Statične segmente je treba osvežiti ročno. Dinamični segmenti se med osveževanjem sistema samodejno osvežujejo.
 - [**Poiščite podobne stranke**](find-similar-customer-segments.md) iz segmenta.
 - Prek možnosti **Preimenuj** lahko segment preimenujete.
@@ -88,16 +88,16 @@ Spodnji del vsebuje seznam članov segmenta.
 
 Segmente je mogoče osveževati po samodejnem urniku ali ročno na zahtevo. Če želite ročno osvežiti enega ali več segmentov, jih izberite in izberite **Osveži**.
 
-Za [načrtujte samodejno osveževanje](system.md#schedule-tab), Pojdi do **skrbnik** > **Sistem** > **Urnik**. Veljajo naslednja pravila:
+Za [načrtujte samodejno osveževanje](schedule-refresh.md), Pojdi do **skrbnik** > **Sistem** > **Urnik**. Veljajo naslednja pravila:
 
 - Vsi segmenti z vrsto **Dinamično** oz **Razširitev** bo samodejno osveženo pri nastavljeni kadenci. Ko je osvežitev končana, se **Stanje** označuje, ali je prišlo do težav pri osveževanju segmenta. The **Nazadnje osveženo** prikazuje časovni žig zadnje uspešne osvežitve. Če pride do napake, izberite napako, da si ogledate podrobnosti o tem, kaj se je zgodilo.
-- Segmenti z vrsto **Statično** *ne bo* se samodejno osveži. The **Nazadnje osveženo** prikazuje časovni žig zadnjega ročnega zagona ali osveževanja statični segment.
+- Segmenti z vrsto **Statično** *ne bo* samodejno osvežiti. The **Nazadnje osveženo** prikazuje časovni žig zadnjega ročnega zagona ali osveževanja statični segment.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Izvoz segmentov
 
-Izvozite segmente v druge aplikacije za nadaljnjo uporabo podatkov. Izvozite segment s strani segmentov ali [izvozna stran](export-destinations.md).
+Izvozite segmente v druge aplikacije za nadaljnjo uporabo podatkov. Izvozite segment s strani segmentov ali iz [izvozna stran](export-destinations.md).
 
 1. Pojdi na **Segmenti** in izberite segment, ki ga želite izvoziti.
 

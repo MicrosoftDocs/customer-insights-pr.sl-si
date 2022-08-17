@@ -1,19 +1,19 @@
 ---
 title: Obogatite profile strank z podatki o lokaciji iz Azure Maps (predogled)
 description: Splošne informacije o obogatitvi proizvajalca storitve Zemljevidi Azure.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052627"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238062"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Obogatite profile strank z podatki o lokaciji iz Azure Maps (predogled)
 
@@ -21,13 +21,13 @@ Zemljevidi Azure zagotavljajo podatke in storitve, osredotočene na lokacijo, za
 
 ## <a name="prerequisites"></a>Zahteve
 
-- Aktivna naročnina na Azure Maps. Če želite dobiti naročnino, [prijavite se ali si zagotovite brezplačen preizkus](https://azure.microsoft.com/services/azure-maps/).
+- Aktivna naročnina na zemljevide Azure. Če želite pridobiti naročnino, [prijavite se ali pridobite brezplačen preizkus](https://azure.microsoft.com/services/azure-maps/).
 
-- Azurni zemljevidi [povezavo](connections.md) je [konfiguriran](#configure-the-connection-for-azure-maps) s strani skrbnika.
+- Zemljevidi Azure [povezava](connections.md) je [konfiguriran](#configure-the-connection-for-azure-maps) s strani skrbnika.
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Konfiguriranje povezave za storitev Zemljevidi Azure
 
-Moraš biti [skrbnik](permissions.md#admin) v Customer Insights in imeti aktiven ključ API-ja za zemljevide Azure.
+Morate biti [skrbnik](permissions.md#admin) v Customer Insights in imajo aktiven ključ API-ja za zemljevide Azure.
 
 1. Pri konfiguriranju obogatitve izberite možnost **Dodaj povezavo** ali pa odprite razdelek **Skrbnik** > **Povezave** ter v ploščici storitve Zemljevidi Azure izberite **Nastavitev**.
 
@@ -35,20 +35,15 @@ Moraš biti [skrbnik](permissions.md#admin) v Customer Insights in imeti aktiven
 
 1. Vnesite ime za povezavo in veljaven ključ API-ja za zemljevide Azure.
 
-1. Preglejte in podajte soglasje, tako da v razdelku [Zasebnost in skladnost podatkov](#data-privacy-and-compliance) izberete možnost **Strinjam se**.
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
 
-1. Izberite **Preverite** da preverite konfiguracijo in nato izberite **Shrani**.
-
-### <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
-
-S tem ko dovolite, da storitev Dynamics 365 Customer Insights podatke prenese storitvi Zemljevidi Azure, omogočite prenos podatkov zunaj omejitve skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo te podatke prenesel po vašem navodilu, vendar ste odgovorni za zagotovitev, da Azure Maps izpolnjujejo morebitne obveznosti glede zasebnosti ali varnosti. Za več informacij pojdite na [Microsoftova izjava o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli odstrani in s tem prekini uporabo te funkcije.
+1. Izberite **Preveri** za potrditev konfiguracije in nato izberite **Shrani**.
 
 ## <a name="configure-the-enrichment"></a>Konfiguriranje obogatitve
 
 1. Pojdite v **Podatki** > **Obogatitev** in izberite zavihek **Odkrivanje**.
 
-1. Izberite **Obogatite moje podatke** na **Lokacija** od Microsoft Azure Ploščica zemljevidov.
+1. Izberite **Obogati moje podatke** na **Lokacija** od Microsoft Azure Ploščica zemljevidov.
 
    :::image type="content" source="media/azure-maps-tile.png" alt-text="Ploščica za storitev Zemljevidi Azure.":::
 
@@ -58,35 +53,35 @@ Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadar koli od
 
 1. Izberite **Naprej**.
 
-1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki iz Microsofta. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati le profile strank, ki jih vsebuje ta segment.
+1. Izberite **Stranka nabor podatkov** in izberite profil ali segment, ki ga želite obogatiti s podatki Microsofta. The *Stranka* entiteta obogati vse vaše profile strank, medtem ko segment obogati samo profile strank v tem segmentu.
 
-1. Določite, katero vrsto polj iz vaših enotnih profilov želite uporabiti za ujemanje: primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj in obogatite profile za vsak naslov posebej. Na primer za domači in poslovni naslov. Izberite **Naprej**.
+1. Določite, katero vrsto polj iz vaših poenotenih profilov boste uporabili za ujemanje: primarni in/ali sekundarni naslov. Za oba naslova lahko določite preslikavo polj in obogatite profile za vsak naslov posebej. Na primer za domači in poslovni naslov. Izberite **Naprej**.
 
-1. Preslikajte svoja polja na podatki o lokaciji iz Azure Maps. Polji **Ulica 1** in **Poštna številka** sta obvezni za izbrani primarni in/ali sekundarni naslov. Za večjo natančnost ujemanja dodajte več polj.
+1. Preslikajte svoja polja v podatki o lokaciji iz Azure Maps. Polji **Ulica 1** in **Poštna številka** sta obvezni za izbrani primarni in/ali sekundarni naslov. Za večjo natančnost ujemanja dodajte več polj.
 
    :::image type="content" source="media/enrichment-azure-maps-attributes.png" alt-text="Preslikava atributov Azure Maps.":::
 
 1. Izberite možnost **Naprej**, da dokončate preslikavo polj.
 
-1. Pregled **Napredne nastavitve** ki nudijo največjo fleksibilnost za obravnavanje naprednih primerov uporabe. Vendar naslednjih privzetih vrednosti običajno ni treba spreminjati.
+1. Pregled **Napredne nastavitve** ki ponujajo največjo prilagodljivost za obravnavo naprednih primerov uporabe. Vendar naslednjih privzetih vrednosti običajno ni treba spreminjati.
 
-   - **Vrsta naslovov** : Vrne se najboljše ujemanje naslova, tudi če je nepopolno. Če želite pridobit samo popolne naslove, na primer naslove, ki vključujejo hišno številko, počistite vsa potrditvena polja razen **Naslovi točke**.
-   - **Jezik** : Naslovi se vrnejo v jeziku, ki temelji na naslovnem območju. Če želite uporabiti standardiziran jezik naslova, v spustnem meniju izberite jezik. Na primer, izbiranje **angleščina** vrne **Kopenhagen, Danska** namesto **København, Danska**.
+   - **Vrsta naslovov** : Najboljši naslov se vrne, tudi če je nepopoln. Če želite pridobit samo popolne naslove, na primer naslove, ki vključujejo hišno številko, počistite vsa potrditvena polja razen **Naslovi točke**.
+   - **Jezik** : naslovi se vrnejo v jeziku, ki temelji na območju naslova. Če želite uporabiti standardiziran jezik naslova, v spustnem meniju izberite jezik. Na primer izbiranje **angleščina** vrača **Kopenhagen, Danska** namesto **København, Danska**.
    - **Največje število rezultatov** : Število rezultatov na naslov.
 
 1. Izberite **Naprej**.
 
-1. Zagotovite a **ime** za obogatitev in **Ime izhodne entitete**.
+1. Zagotovite a **Ime** za obogatitev in **Ime izhodne entitete**.
 
 1. Po pregledu svoje izbire izberite možnost **Shrani obogatitev**.
 
-1. Izberite **teci** za začetek procesa obogatitve ali blizu vrnitve na **Obogatitve** stran.
+1. Izberite **Teči** za začetek procesa obogatitve ali zapiranje za vrnitev v **Obogatitve** strani.
 
 ## <a name="view-enrichment-results"></a>Oglejte si rezultate obogatitve
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-The **Število strank, obogatenih po področjih** zagotavlja pregled pokritosti vsakega obogatenega polja.
+The **Število strank, obogatenih po področjih** zagotavlja podrobno analizo pokritosti vsakega obogatenega polja.
 
 ## <a name="next-steps"></a>Naslednji koraki
 

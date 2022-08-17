@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206927"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259818"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Povežite an Azure Synapse Analytics vir podatkov (predogled)
 
@@ -24,26 +24,30 @@ Za več informacij glejte [Azure Synapse pregled](/azure/synapse-analytics/overv
 
 ## <a name="prerequisites"></a>Zahteve
 
+> [!NOTE]
+> Synapse Workspaces, ki imajo [omogočen požarni zid](/azure/synapse-analytics/security/synapse-workspace-ip-firewall) trenutno niso podprti.
 > [!IMPORTANT]
 > Prepričajte se, da ste nastavili vse **dodelitve vlog**, kot je opisano.  
 
 **V Customer Insights**:
 
-* Imate **Administrator** vlogo v Customer Insights. Izvedite več o [uporabniška dovoljenja v Customer Insights](permissions.md#assign-roles-and-permissions).
+* Imate **Administrator** vlogo v Customer Insights. Izvedite več o [uporabniška dovoljenja v Customer Insights](permissions.md#add-users).
 
 **V Azuru**:
 
 - Aktivna naročnina na Azure.
 
-- Če uporabljate novo Azure Data Lake Storage Račun Gen2, *vodja storitve za Customer Insights* potrebe **Podatki bloba za shranjevanje sodelavec** dovoljenja. Izvedite več o [povezovanje z an Azure Data Lake Storage z glavnim serviserjem za Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **mora imeti** omogočen [hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
+- Če uporabljate novo Azure Data Lake Storage Račun Gen2, *vodja storitve za Customer Insights* ki je potrebe "Dynamics 365 AI for Customer Insights".**Podatki bloba za shranjevanje sodelavec** dovoljenja. Izvedite več o [povezovanje z an Azure Data Lake Storage z glavnim serviserjem za Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **mora imeti** omogočen [hierarhičen imenski prostor](/azure/storage/blobs/data-lake-storage-namespace).
 
-- Na skupini virov the Azure Synapse delovni prostor se nahaja, v *glavni servis* in *uporabnik za Customer Insights* je treba dodeliti vsaj **Uporabnik z dovoljenjem za branje** dovoljenja. Če želite več informacij, glejte razdelek [Dodelitev vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal).
+- Na skupini virov the Azure Synapse delovni prostor se nahaja, v *glavni servis* ki je "Dynamics 365 AI for Customer Insights" in *uporabnik za Customer Insights* je treba dodeliti vsaj **Uporabnik z dovoljenjem za branje** dovoljenja. Če želite več informacij, glejte razdelek [Dodelitev vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal).
 
 - *Uporabnik* potrebuje dovoljenje **sodelujočega v shrambi zbirke dvojiških podatkov** za račun Azure Data Lake Storage Gen2, kjer se nahajajo podatki, ki so povezani z delovnim prostorom Azure Synapse. Preberite več o [uporabi portala Azure za dodelitev vloge Azure za dostop do zbirke dvojiških podatkov in podatkov o čakalni vrsti](/azure/storage/common/storage-auth-aad-rbac-portal) ter [sodelujočem v shrambi zbirke dvojiških podatkov](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Upravljana identiteta za delovni prostor Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* potrebuje dovoljenje **sodelujočega v shrambi zbirke dvojiških podatkov** za račun Azure Data Lake Storage Gen2, kjer se nahajajo podatki, ki so povezani z delovnim prostorom Azure Synapse. Preberite več o [uporabi portala Azure za dodelitev vloge Azure za dostop do zbirke dvojiških podatkov in podatkov o čakalni vrsti](/azure/storage/common/storage-auth-aad-rbac-portal) ter [sodelujočem v shrambi zbirke dvojiških podatkov](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Na Azure Synapse delovni prostor, *vodja storitve za Customer Insights* potrebe **Skrbnik Synapse** dodeljena vloga. Če želite več informacij, glejte razdelek [Kako nastaviti nadzor dostopa za delovni prostor Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Na Azure Synapse delovni prostor, *vodja storitve za Customer Insights* ki je potrebe "Dynamics 365 AI for Customer Insights".**Skrbnik Synapse** dodeljena vloga. Če želite več informacij, glejte razdelek [Kako nastaviti nadzor dostopa za delovni prostor Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Če vaše okolje Customer Insights shranjuje podatke v vašem [lasten Azure Data Lake Storage](own-data-lake-storage.md), uporabnik, ki vzpostavi povezavo z Azure Synapse Analytics potrebuje vsaj vgrajeno **Uporabnik z dovoljenjem za branje** vlogo v računu Data Lake Storage. Če želite več informacij, glejte razdelek [Dodelitev vlog Azure s portalom Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Povežite se z bazo podatkov podatkovnega jezera v Azure Synapse Analytics
 
@@ -57,7 +61,7 @@ Za več informacij glejte [Azure Synapse pregled](/azure/synapse-analytics/overv
   
 1. Vnesite a **Ime** za vir podatkov in neobvezno **Opis**.
 
-1. Izberite [razpoložljiva povezava](connections.md) do Azure Synapse Analytics ali ustvarite novo.
+1. Izberite [razpoložljiva povezava](connections.md) do Azure Synapse Analytics oz [ustvarite novo](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse).
 
 1. Izberite a **Baza podatkov** iz delovnega prostora, povezanega v izbranem Azure Synapse Analytics povezavo in izberite **Naslednji**. Trenutno podpiramo samo vrsto baze podatkov *Jezerska baza podatkov*.
 

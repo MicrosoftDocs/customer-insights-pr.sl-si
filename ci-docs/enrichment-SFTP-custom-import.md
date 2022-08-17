@@ -1,19 +1,19 @@
 ---
 title: Obogatite profile strank z uvozom po meri SFTP (predogled)
 description: Splošne informacije o obogatitvi uvoza po meri SFTP.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195816"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237786"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Obogatite profile strank z uvozom po meri SFTP (predogled)
 
@@ -85,14 +85,9 @@ Morate biti [skrbnik](permissions.md#admin) v Customer Insights in imejte uporab
 
 1. Vnesite veljavno uporabniško ime, geslo in URL gostitelja za strežnik SFTP, v katerem se nahajajo podatki, ki jih želite uvoziti.
 
-1. Preglejte in podajte soglasje, tako da v razdelku [Zasebnost in skladnost podatkov](#data-privacy-and-compliance) izberete možnost **Strinjam se**.
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
 
 1. Izberite **Preveri** za potrditev konfiguracije in nato izberite **Shrani**.
-
-### <a name="data-privacy-and-compliance"></a>Zasebnost podatkov in skladnost
-
-Ko omogočite Dynamics 365 Customer Insights za prenos podatkov z uporabo uvoza po meri dovolite prenos podatkov izven meje skladnosti za Dynamics 365 Customer Insights, vključno s potencialno občutljivimi podatki, kot so osebni podatki. Microsoft bo take podatke prenesel po vaših navodilih, vendar ste vi odgovorni za zagotovitev, da podatki izpolnjujejo morebitne obveznosti glede zasebnosti ali varnosti. Več informacij glejte [Microsoftovo izjavo o zasebnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš skrbnik za Dynamics 365 Customer Insights lahko to obogatitev kadarkoli odstrani, s čimer je uporaba te funkcije prekinjena.
 
 ## <a name="configure-the-import"></a>Konfiguriranje uvoza
 
