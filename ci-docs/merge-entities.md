@@ -2,7 +2,7 @@
 title: Poenotite polja strank za poenotenje podatkov
 description: Združite entitete za ustvarjanje poenotenih profilov strank.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213602"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304033"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Poenotite polja strank za poenotenje podatkov
+# <a name="unify-customer-fields"></a>Poenotite polja strank
 
-V tem koraku postopka poenotenja izberite in izključite atribute, ki jih želite združiti znotraj entitete poenotenega profila. Na primer, če so tri entitete imele e-poštne podatke, boste morda želeli obdržati vsa tri ločena e-poštna polja ali jih združiti v eno e-poštno polje za poenoten profil. Nekatere atribute sistem samodejno združi. Ustvarite lahko stabilne in edinstvene ID-je strank ter združite povezane profile v gručo.
+V tem koraku postopka poenotenja izberite in izključite atribute, ki jih želite združiti znotraj entitete poenotenega profila. Če so na primer tri entitete imele e-poštne podatke, boste morda želeli obdržati vsa tri ločena e-poštna polja ali jih združiti v eno e-poštno polje za poenoten profil. Nekatere atribute sistem samodejno združi. Ustvarite lahko stabilne in edinstvene ID-je strank. Za posamezne stranke lahko povezane profile združite v gručo.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Stran za spajanje v postopku poenotenja podatkov, ki prikazuje tabelo s spojenimi polji, ki določajo poenoten profil kupca.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Stran za poenotenje polj strank v procesu poenotenja podatkov prikazuje tabelo z združenimi polji, ki definirajo poenoten profil stranke.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Preglejte in posodobite polja strank
 
@@ -47,7 +47,7 @@ V tem koraku postopka poenotenja izberite in izključite atribute, ki jih želit
 
 1. Po želji, [ustvarite konfiguracijo ID-ja stranke](#configure-customer-id-generation).
 
-1. Po želji, [skupine profilov v gospodinjstva ali grozde](#group-profiles-into-households-or-clusters).
+1. Po želji za B-to-C, [skupine profilov v gospodinjstva ali grozde](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Naslednji korak: Pregled poenotenja](review-unification.md)
@@ -60,7 +60,7 @@ V tem koraku postopka poenotenja izberite in izključite atribute, ki jih želit
     - **Pomembnost**: Določi zmagovalno vrednost na podlagi uvrstitve pomembnosti, določene za vključena polja. To je privzeta možnost spajanja. Izberite **Premakni gor/dol**, da določite razvrstitev pomembnosti.
 
       > [!NOTE]
-      > Customer Insights uporablja prvo neničelno vrednost. Če so na primer podane entitete A, B in C razvrščene v tem vrstnem redu, če sta A.Name in B.Name ničelna, se uporabi vrednost iz C.Name.
+      > Customer Insights uporablja prvo neničelno vrednost. Če so na primer entitete A, B in C razvrščene v tem vrstnem redu, če sta A.Name in B.Name ničelna, se uporabi vrednost iz C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Možnost pomembnosti v dialogu za spajanje polj.":::
 
@@ -128,7 +128,7 @@ Združite ločena polja, da ustvarite združeni atribut.
 
 ### <a name="combine-a-group-of-fields"></a>Združite skupino polj
 
-Obravnavajte skupino polj kot eno samo enoto. Na primer, če naši zapisi vsebujejo polja Naslov1, Naslov2, Mesto, Država in Poštna številka, ne želimo združiti naslova2 drugega zapisa, saj menimo, da bodo tako naši podatki popolnejši.
+Obravnavajte skupino polj kot eno samo enoto. Na primer, če naši zapisi vsebujejo polja Naslov1, Naslov2, Mesto, Država in Poštna številka, ne želimo združiti naslova2 drugega zapisa, saj menimo, da bodo naši podatki popolnejši.
 
 1. Izberite **Združite** > **Skupina polj**.
 
@@ -142,7 +142,7 @@ Obravnavajte skupino polj kot eno samo enoto. Na primer, če naši zapisi vsebuj
 
 1. Če želite uporabiti spremembe, izberite **Dokončaj**.
 
-## <a name="configure-customer-id-generation"></a>Konfigurirajte generiranje ID-ja stranke
+## <a name="configure-customer-id-generation"></a>Konfigurirajte ustvarjanje ID-ja stranke
 
 Določite, kako ustvariti vrednosti ID-ja stranke, edinstvene identifikatorje profila stranke. Korak poenotenja polj v procesu poenotenja podatkov ustvari edinstven identifikator profila stranke. Identifikator je *Identifikacijska številka stranke* v *Stranka* entiteta, ki izhaja iz procesa poenotenja podatkov.
 
@@ -161,7 +161,7 @@ The *Identifikacijska številka stranke*  temelji na zgoščeni vrednosti prve
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Združevanje profilov v gospodinjstva ali gruče
 
-Določite lahko pravila za združevanje povezanih profilov v gručo. Trenutno sta na voljo dve vrsti gruč – gospodinjska in po meri. Sistem samodejno izbere gospodinjstvo z vnaprej določenimi pravili, če entiteta *Stranka* vsebuje semantični polji *Person.LastName* in *Location.Address*. Ustvarite lahko tudi gručo z lastnimi pravili in pogoji, ki so podobni [pravilom za ujemanje](match-entities.md#define-rules-for-match-pairs).
+Za posamezne stranke lahko določite pravila za združevanje povezanih profilov v gručo. Trenutno sta na voljo dve vrsti gruč – gospodinjska in po meri. Sistem samodejno izbere gospodinjstvo z vnaprej določenimi pravili, če entiteta *Stranka* vsebuje semantični polji *Person.LastName* in *Location.Address*. Ustvarite lahko tudi gručo z lastnimi pravili in pogoji, ki so podobni [pravilom za ujemanje](match-entities.md#define-rules-for-match-pairs).
 
 1. Izberite **Napredno** > **Ustvarite gručo**.
 
@@ -175,7 +175,7 @@ Določite lahko pravila za združevanje povezanih profilov v gručo. Trenutno st
 
 1. Določite pravila in pogoje za opredelitev gruče.
 
-1. Izberite **Dokončano**. Grozd se ustvari, ko je postopek združevanja končan. Identifikatorji gruče so dodani kot nova polja v *Stranka* entiteta.
+1. Izberite **Dokončano**. Grozd je ustvarjen, ko je postopek združevanja končan. Identifikatorji gruče so dodani kot nova polja v *Stranka* entiteta.
 
 > [!div class="nextstepaction"]
 > [Naslednji korak: Pregled poenotenja](review-unification.md)

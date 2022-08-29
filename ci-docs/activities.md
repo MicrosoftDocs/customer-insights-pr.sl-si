@@ -1,9 +1,9 @@
 ---
-title: Dejavnosti stranke
-description: Določitev dejavnosti strank in njihov ogled v časovnici v profilih strank.
-ms.date: 07/22/2022
+title: Dejavnosti stika s strankami ali podjetja
+description: Določite dejavnosti stika s stranko ali podjetjem in si jih oglejte na časovnici v profilih strank.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188159"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304125"
 ---
-# <a name="customer-activities"></a>Dejavnosti stranke
+# <a name="customer-or-business-contact-activities"></a>Dejavnosti stika s strankami ali podjetja
 
-Aktivnosti strank so dejanja ali dogodki, ki jih izvajajo stranke. Na primer transakcije, trajanje klicev podpore, pregledi spletnih mest, nakupi ali vračila. Te dejavnosti so vsebovane v enem ali več virih podatkov. Z Customers Insights konsolidirajte svoje dejavnosti strank iz teh [viri podatkov](data-sources.md) in jih povežite s profili strank. Te dejavnosti so prikazane kronološko na časovnici v profilu stranke. Vključite časovnico v aplikacije Dynamics 365 z [Dodatek za kartico stranke](customer-card-add-in.md) rešitev.
+Aktivnosti strank so dejanja ali dogodki, ki jih izvajajo stranke ali poslovni stiki. Na primer transakcije, trajanje klicev podpore, pregledi spletnih mest, nakupi ali vračila. Te dejavnosti so vsebovane v enem ali več virih podatkov. Z Customers Insights konsolidirajte svoje dejavnosti strank iz teh [viri podatkov](data-sources.md) in jih povežite s profili strank. Te dejavnosti so prikazane kronološko na časovnici v profilu stranke. Vključite časovnico v aplikacije Dynamics 365 z [Dodatek za kartico stranke](customer-card-add-in.md) rešitev.
 
-## <a name="define-an-activity"></a>Določanje dejavnosti
+## <a name="define-a-customer-activity"></a>Določite dejavnost stranke
 
 Entiteta mora imeti vsaj en atribut vrste **Datum** vključiti v časovnico stranke. Ukaz **Dodaj dejavnost** je onemogočen, če take entitete ni mogoče najti.
 
@@ -38,9 +38,9 @@ Entiteta mora imeti vsaj en atribut vrste **Datum** vključiti v časovnico stra
 
 1. V **Podatki o dejavnosti** koraku vnesite naslednje podatke:
 
-   - **Ime dejavnosti** : Ime vaše dejavnosti.
-   - **Subjekt dejavnosti** : Entiteta, ki vključuje transakcijske podatke ali podatke o dejavnosti.
-   - **Primarni ključ** : Polje, ki enolično identificira zapis. Ne sme vsebovati podvojenih, praznih ali manjkajočih vrednosti.
+   - **Ime dejavnosti**: izberite ime dejavnosti.
+   - **Subjekt dejavnosti** : izberite entiteto, ki vključuje podatke o transakcijah ali dejavnostih.
+   - **Primarni ključ**: izberite polje, ki edinstveno določi zapis. Ne sme vsebovati podvojenih, praznih ali manjkajočih vrednosti.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Nastavite podatke o dejavnosti za ime, entiteto in primarni ključ.":::
 
@@ -48,9 +48,9 @@ Entiteta mora imeti vsaj en atribut vrste **Datum** vključiti v časovnico stra
 
 1. V **Razmerje** korak, izberite **Dodajte razmerje** za povezavo vaših podatkov o dejavnosti z ustreznim zapisom stranke. V koraku so upodobljene povezave med entitetami.  
 
-   - **Tuji ključ iz entitete** : Polje v vaši entiteti dejavnosti, ki bo uporabljeno za vzpostavitev razmerja z drugo entiteto.
+   - **Tuji ključ** : Tuje polje v vaši entiteti dejavnosti, ki bo uporabljeno za vzpostavitev odnosa z drugo entiteto.
    - **Na ime subjekta** : Ustrezna izvorna entiteta stranke, s katero bo vaša entiteta dejavnosti v razmerju. Nanašate se lahko samo na izvorne entitete strank, ki se uporabljajo v postopku poenotenja podatkov.
-   - **Ime razmerja** : Ime, ki identificira odnos med entitetami. Če razmerje med to entiteto dejavnosti in izbrano izvorno entiteto stranke že obstaja, je ime razmerja samo za branje.
+   - **Ime razmerja** : Če razmerje med to entiteto dejavnosti in izbrano izvorno entiteto stranke že obstaja, bo ime razmerja v načinu samo za branje. Če takšen odnos ni na voljo, bo na podlagi imena, ki ste ga navedli v tem polju, ustvarjen nov.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Določite odnos entitete.":::
 
@@ -90,7 +90,7 @@ Entiteta mora imeti vsaj en atribut vrste **Datum** vključiti v časovnico stra
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Upravljanje obstoječih dejavnosti
+## <a name="manage-existing-customer-activities"></a>Upravljajte dejavnosti obstoječih strank
 
 Pojdi do **podatki** > **dejavnosti** da si ogledate svoje shranjene dejavnosti, njihovo izvorno entiteto, vrsto dejavnosti in ali so vključene v časovnico stranke. Seznam dejavnosti lahko razvrstite po katerem koli stolpcu ali uporabite iskalno polje, da poiščete dejavnost, ki jo želite upravljati.
 
@@ -116,9 +116,43 @@ Izberite dejavnost za ogled razpoložljivih dejanj.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="S ploščo filtrov konfigurirajte pogoje filtra.":::
 
-1. Če želite odstraniti filtre, izberite **Počisti filtre** ali izberite **Filter** in počistite potrditveno polje filtra.
-
 > [!NOTE]
 > Filtri dejavnosti se odstranijo, ko zapustite profil stranke. Uporabiti jih morate vsakič, ko odprete profil stranke.
+
+## <a name="define-a-contact-activity"></a>Določite dejavnost stika
+
+Za poslovne račune (B-to-B) uporabite a *ContactProfile* entiteta za zajemanje dejavnosti stikov. Na časovnici dejavnosti za račun lahko vidite, kateri stik je bil odgovoren za posamezno dejavnost. Večina korakov sledi konfiguraciji preslikave dejavnosti strank.
+
+   > [!NOTE]
+   > Če želite definirati dejavnost na ravni stika, a *ContactProfile* mora biti ustvarjena entiteta bodisi kot a [enoten kontaktni profil](data-unification-contacts.md) ali skozi [pomensko preslikavo](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Morate imeti oboje **AccountID** in **ContactID** atribute za vsak zapis v vaših podatkih o dejavnosti.
+  
+1. Pojdi do **podatki** > **dejavnosti**.
+
+1. Izberite **Dodaj dejavnost**.
+
+1. Poimenujte dejavnost, izberite izvorno entiteto dejavnosti in izberite primarni ključ entitete dejavnosti.
+
+1. V **Odnosi** koraku ustvarite posredno razmerje med podatki o izvoru dejavnosti in računi, pri čemer uporabite svoje kontaktne podatke kot posredniško entiteto. Za več informacij glejte [neposredne in posredne poti odnosov](relationships.md#relationship-paths).
+   - Primer razmerja za dejavnost, imenovano *Nakupi*:
+      - **Podatki o izvorni dejavnosti nakupov** > **Kontaktni podatki** na atributu **ContactID**
+      - **Kontaktni podatki** > **Podatki o računu** na atributu **AccountID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Primer postavitve razmerja.":::
+
+1. Po nastavitvi Odnosi izberite **Naslednji** in dokončajte konfiguracijo preslikave dejavnosti. Za podrobne korake o ustvarjanju dejavnosti glejte [določite dejavnost stranke](#define-a-customer-activity).
+
+1. Zaženite svoje preslikave dejavnosti.
+
+1. Vaše dejavnosti na ravni stika bodo zdaj vidne na časovnici vaše stranke.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Končni rezultat po konfiguraciji dejavnosti stika":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filtriranje časovne premice dejavnosti na ravni stika
+
+Ko konfigurirate preslikavo dejavnosti na ravni kontakta in jo zaženete, bo časovnica dejavnosti za vaše stranke posodobljena. Vključuje njihove ID-je ali imena, odvisno od vašega *ContactProfile* konfiguracijo, za dejavnosti, na katerih so ukrepali. Dejavnosti lahko filtrirate po stikih na časovnici, da si ogledate določene stike, ki vas zanimajo. Poleg tega si lahko z izbiro ogledate vse dejavnosti, ki niso dodeljene določenemu stiku **Dejavnosti niso preslikane v stik**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Možnosti filtriranja so na voljo za dejavnosti na ravni stika.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

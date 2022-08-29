@@ -1,9 +1,9 @@
 ---
 title: Semantične preslikave (predogledna različica)
 description: Pregled semantičnih preslikav in njihova uporaba.
-ms.date: 12/01/2021
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -11,18 +11,19 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: 8780c11c8b091717349f0fd75a36b99c3a63ab49
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183651"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303896"
 ---
 # <a name="semantic-mappings-preview"></a>Semantične preslikave (predogledna različica)
 
-Semantične preslikave vam omogočajo preslikavo podatkov o nedejavnosti v vnaprej določene sheme. Te sheme pomagajo Customer Insights bolje razumeti atribute vaših podatkov. Semantično preslikavo in posredovani podatki omogočajo nove vpoglede in funkcije v Customer Insights. Če želite podatke o dejavnosti preslikati v sheme, preglejte dokumentacijo [dejavnosti](activities.md).
+> [!NOTE]
+> The **Semantične preslikave** Stran je na voljo samo za poslovna okolja (B-to-B), kjer so kontaktni profili že ustvarjeni s to stranjo. Še naprej lahko ustvarjate in upravljate posamezne profile stikov z uporabo **Semantične preslikave** strani. Ali pa [poenotite svoje kontaktne podatke](data-unification-contacts.md) za odstranjevanje dvojnikov, prepoznavanje ujemanj med entitetami in ustvarjanje enega poenotenega kontaktnega profila. Nato lahko uporabite poenoten kontaktni profil za ustvarjanje dejavnosti na ravni stika.
 
-**Semantične preslikave so trenutno omogočene za okolja, ki temeljijo na poslovnih računih**. *ContactProfile* je edina vrsta semantične preslikave, ki je trenutno na voljo v Customer Insights.
+Semantične preslikave vam omogočajo preslikavo podatkov o nedejavnosti v vnaprej določene sheme. Te sheme pomagajo Customer Insights bolje razumeti atribute vaših podatkov. Semantično preslikavo in posredovani podatki omogočajo nove vpoglede in funkcije v Customer Insights. Če želite podatke o dejavnosti preslikati v sheme, preglejte dokumentacijo [dejavnosti](activities.md).
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Določitev preslikave za semantično entiteto »ContactProfile«
 
@@ -87,41 +88,5 @@ Za ogled razpoložljivih dejanj izberite semantično preslikavo.
 - **Osveži** semantično preslikavo, ki vključuje najnovejše podatke. Če osvežite katero koli semantično preslikavo, boste osvežili vse semantične preslikave iste vrste.
 - **Preimenuj** semantično preslikavo. Izberite **Shrani**.
 - **Izbriši** semantično preslikavo. Če želite izbrisati več kot eno semantično preslikavo hkrati, izberite semantično preslikavo in ikono za brisanje. Izberite možnost **Izbriši**, da pordite izbris.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Uporabite preslikavo semantične entitete ContactProfile za ustvarjanje dejavnosti na ravni stika
-
-Po ustvarjanju a *ContactProfile* semantično preslikavo entitet, lahko zajamete dejavnosti stikov. Omogoča vam, da na časovnici dejavnosti za račun vidite, kateri stik je bil odgovoren za posamezno dejavnost. Večina korakov sledi tipični konfiguraciji preslikave dejavnosti.
-
-   > [!NOTE]
-   > Da dejavnosti na ravni stika delujejo, morate imeti oboje **AccountID** in **ContactID** atribute za vsak zapis v vaših podatkih o dejavnosti.
-
-1. [Določite a *ContactProfile* semantično preslikavo entitet](#define-a-contactprofile-semantic-entity-mapping) in zaženite semantično preslikavo.
-
-1. Pojdi do **podatki** > **dejavnosti**.
-
-1. Izberite **Dodaj dejavnost** ustvariti novo dejavnost.
-
-1. Poimenujte dejavnost, izberite izvorno entiteto dejavnosti in izberite primarni ključ entitete dejavnosti.
-
-1. V **Odnosi** koraku ustvarite posredno razmerje med podatki o izvoru dejavnosti in računi, pri čemer uporabite svoje kontaktne podatke kot posredniško entiteto. Za več informacij glejte [neposredne in posredne poti odnosov](relationships.md#relationship-paths).
-   - Primer razmerja za dejavnost, imenovano *Nakupi*:
-      - **Podatki o izvorni dejavnosti nakupov** > **Kontaktni podatki** na atributu **ContactID**
-      - **Kontaktni podatki** > **Podatki o računu** na atributu **AccountID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Primer postavitve razmerja.":::
-
-1. Po nastavitvi Odnosi izberite **Naslednji** in dokončajte konfiguracijo preslikave dejavnosti. Za podrobne korake o ustvarjanju dejavnosti glejte [določite dejavnost](activities.md).
-
-1. Zaženite svoje preslikave dejavnosti.
-
-1. Ko se zažene preslikava dejavnosti na ravni stika, izberite **Stranke**. Aktivnosti na ravni stika so prikazane na časovnici vaše stranke.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Končni rezultat po konfiguraciji dejavnosti stika":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtriranje časovne premice dejavnosti na ravni stika
-
-Časovnica dejavnosti za vaše stranke vključuje njihove ID-je ali imena, odvisno od vašega *ContactProfile* konfiguracijo, za dejavnosti, na katerih so ukrepali. Filtrirajte dejavnosti po stikih na časovnici, da si ogledate določene stike, ki vas zanimajo. Za ogled vseh dejavnosti, ki niso dodeljene določenemu stiku, izberite **Dejavnosti niso preslikane v stik**.
-
-:::image type="content" source="media/Contact_Activities3.png" alt-text="Možnosti filtriranja so na voljo za dejavnosti na ravni stika.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

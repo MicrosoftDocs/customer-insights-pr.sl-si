@@ -1,7 +1,7 @@
 ---
-title: 'Kako: upravljati okolja'
+title: Upravljanje okolij
 description: Naučite se upravljati obstoječa okolja Customer Insights kot skrbnik."
-ms.date: 05/31/2022
+ms.date: 08/15/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,20 +11,20 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fc3b3f404cf0ac84c782778414494289c803babe
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b4a88bdb75c6e638a76c39d18647681ad4556d7
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083068"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304309"
 ---
-# <a name="how-to-manage-environments"></a>Kako: upravljati okolja
+# <a name="manage-environments"></a>Upravljanje okolij
 
-skrbniki [ustvariti](create-environment.md) in upravljati okolja. Lahko spremenijo nekatere nastavitve v obstoječih okoljih. Podjetje, vrsta, regija, možnost shranjevanja in Dataverse nastavitve so popravljene po ustvarjanju okolja. Če želite spremeniti te nastavitve, ponastavite okolje ali ustvarite novo okolje.
+Administratorji [ustvariti](create-environment.md) in upravljajte okolja. Lahko spremenijo nekatere nastavitve v obstoječih okoljih. Podjetje, vrsta, regija, možnost shranjevanja in Dataverse nastavitve se popravijo po ustvarjanju okolja. Če želite spremeniti te nastavitve, [ponastavite okolje](#reset-an-existing-environment-preview) oz [ustvariti novo okolje](create-environment.md).
 
 ## <a name="edit-an-existing-environment"></a>Urejanje obstoječega okolja
 
-Uredite lahko določene podatke obstoječih okolij.
+Uredite podrobnosti obstoječega okolja, kot je ime ali nastavitev privzetega okolja.
 
 1. V glavi aplikacije izberite izbirnik **Okolje**.
 
@@ -32,61 +32,61 @@ Uredite lahko določene podatke obstoječih okolij.
 
    :::image type="content" source="media/edit-environment.png" alt-text="Ikona za urejanje nastavitev okolja.":::
 
-1. V polju **Urejanje okolja**, lahko posodobite nastavitve okolja.
+1. V **Uredi okolje** podoknu posodobite nastavitve okolja.
 
-Za začetek s svežim okoljem, gl [Ustvarite novo okolje](create-environment.md).
+1. Izberite **Pregled in dokončanje**, potem **Nadgradnja** za uporabo sprememb.
 
 ## <a name="change-the-owner-of-an-environment"></a>Spremenite lastnika okolja
 
-Več uporabnikov ima lahko skrbniška dovoljenja, vendar je samo en uporabnik lastnik okolja. Privzeto je skrbnik tisti, ki prvotno ustvari okolje. Kot skrbnik okolja lahko dodelite lastništvo drugemu uporabniku s skrbniškimi dovoljenji.
+Več uporabnikov ima lahko skrbniška dovoljenja, vendar je samo en uporabnik lastnik okolja. Privzeto je skrbnik tisti, ki na začetku ustvari okolje. Kot skrbnik okolja lahko dodelite lastništvo drugemu uporabniku s skrbniškimi dovoljenji.
 
 1. V glavi aplikacije izberite izbirnik **Okolje**.
 
 1. Izberite ikono za **urejanje**.
 
-1. V **Uredi okolje** polje, pojdite na **Osnovni podatki** korak.
+1. V **Uredi okolje** podokno, pojdite na **Osnovni podatki** korak.
 
-1. V **Zamenjajte lastnika okolja** polje, izberite novega lastnika okolja.  
+1. V **Spremeni lastnika okolja** polje, izbere novega lastnika okolja.  
 
-1. Izberite **Preglejte in dokončajte**, potem **Nadgradnja** za uveljavitev sprememb.
+1. Izberite **Pregled in dokončanje**, potem **Nadgradnja** za uporabo sprememb.
 
 ## <a name="claim-ownership-of-an-environment"></a>Zahtevajte lastništvo okolja
 
-Če je uporabniški račun lastnika izbrisan ali onemogočen, okolje ne bo imelo lastnika. Vsak skrbniški uporabnik lahko zahteva lastništvo in postane novi lastnik. Še naprej si lahko lastijo okolje oz [spremeni lastništvo drugemu skrbniku](#change-the-owner-of-an-environment).
+Če je uporabniški račun lastnika izbrisan ali začasno ustavljen, okolje ne bo imelo lastnika. Vsak skrbniški uporabnik lahko prevzame lastništvo in postane novi lastnik. Lastnik admin si lahko še naprej lasti okolje oz [spremenite lastništvo na drugega skrbnika](#change-the-owner-of-an-environment).
 
 Če želite zahtevati lastništvo, izberite **Prevzemi lastništvo** gumb, ki se prikaže na vrhu vsake strani v Customer Insights, ko je prvotni lastnik zapustil organizacijo.
 
 ## <a name="reset-an-existing-environment-preview"></a>Ponastavi obstoječe okolje (predogled)
 
-Kot lastnik okolja lahko okolje ponastavite na prazno stanje, če želite izbrisati vse konfiguracije in odstraniti vnesene podatke.
+Kot lastnik okolja ponastavite okolje na prazno stanje, če želite izbrisati vse konfiguracije in odstraniti vnesene podatke.
 
 1. V glavi aplikacije izberite izbirnik **Okolje**.
 
-1. Izberite okolje, ki ga želite ponastaviti, in izberite navpično tritočko (&vellip;).
+1. Izberite okolje, ki ga želite ponastaviti, in izberite navpično elipso (&vellip;).
 
-1. Izberite možnost **Ponastavi**.
+1. Izberite **Ponastavi (predogled)**.
 
    :::image type="content" source="media/reset-environment.png" alt-text="Nadzor za ponastavitev okolja.":::
 
-1. Izberite, ali želite ponastaviti celotno okolje, vse razen podatkovnih virov ali karkoli, kar je konfigurirano na vrhu enotnega profila stranke.
+1. Izberite, ali želite ponastaviti celotno okolje, vse razen podatkovnih virov ali karkoli, kar je konfigurirano na vrhu poenotenega profila stranke.
 
 1. Za potrditev vnesite ime okolja in izberite **Ponastaviti**.
 
 ## <a name="delete-an-existing-environment"></a>Brisanje obstoječega okolja
 
-Kot lastnik okolja lahko izbrišete okolje, ki ga upravljate.
+Kot lastnik okolja ga lahko izbrišete.
+
+> [!IMPORTANT]
+> Brisanje okolja ne odstrani povezave z a Dataverse okolju. Če nameravate povezati isto Dataverse okolje v novo okolje Customer Insights v prihodnosti, morate [odstranite to povezavo z Dataverse okolju](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 1. V glavi aplikacije izberite izbirnik **Okolje**.
 
-1. Izberite okolje, ki ga želite ponastaviti, in izberite navpično tritočko (&vellip;). 
+1. Izberite okolje, ki ga želite izbrisati, in izberite navpično elipso (&vellip;). 
 
-1. Izberite možnost **Izbriši**.
+1. Izberite **Izbriši**.
 
    :::image type="content" source="media/delete-environment.png" alt-text="Nadzor za brisanje okolja.":::
 
 1. Če želite potrditi izbris, vnesite ime okolja in izberite **Izbriši**.
-
-> [!IMPORTANT]
-> Če izbrišete okolje, ne odstranite povezave z a Dataverse okolje. Če nameravate povezati isto Dataverse okolje v novo okolje Customer Insights v prihodnosti, morate odstraniti to povezavo Naučite se [odstranite obstoječo povezavo z a Dataverse okolje](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

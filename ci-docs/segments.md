@@ -1,7 +1,7 @@
 ---
 title: Pregled segmentov
 description: Pregled segmentov ter napotki, kako jih ustvariti in upravljati.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246313"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304815"
 ---
 # <a name="segments-overview"></a>Pregled segmentov
 
 Segmenti vam omogočajo, da svoje stranke razvrstite na podlagi demografskih, transakcijskih ali vedenjskih atributov. Segmente lahko uporabite za ciljanje promocijskih akcij, prodajnih dejavnosti in ukrepov za podporo strankam, da dosežete svoje poslovne cilje.
 
-Profili strank, ki se ujemajo s filtri definicije segmenta, se imenujejo *člani* segmenta. Veljajo nekatere [omejitve storitev](/dynamics365/customer-insights/service-limits).
+Profili strank ali kontaktov, ki ustrezajo filtrom definicije segmenta, se imenujejo *člani* segmenta. Veljajo nekatere [omejitve storitev](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-segment"></a>Ustvarjanje segmenta
 
@@ -41,13 +41,19 @@ Izberite, kako ustvariti segment na podlagi cilja občinstvo.
 
 # <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
 
-- Preprosti ali zapleteni segmenti z graditeljem segmentov: [Zgradite svojega](segment-builder.md)
+Segment računov ali segment stikov (predogled) z graditeljem segmentov: [Zgradite svojega](segment-builder.md)
+
+> [!NOTE]
+> Večina izvoznih destinacij zahteva kontaktne podatke za namene trženja. Zato ustvarite segmente stikov, ki jih boste uporabili za te izvoze.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Upravljanje obstoječih segmentov
 
-Pojdi na **Segmenti** strani za ogled segmentov, ki ste jih ustvarili, njihov status in stanje, število članov in čas zadnje osvežitve podatkov. Seznam segmentov lahko razvrstite po katerem koli stolpcu ali uporabite iskalno polje, da poiščete segment, ki ga želite upravljati.
+Pojdi na **Segmenti** stran za ogled segmentov, ki ste jih ustvarili, njihov status in stanje ter čas zadnje osvežitve podatkov. Seznam segmentov lahko razvrstite po katerem koli stolpcu ali uporabite iskalno polje, da poiščete segment, ki ga želite upravljati.
+
+> [!TIP]
+> V okoljih B-to-B je **občinstvo Vrsta** določa, ali segment temelji na računih ali stikih.
 
 Izberite segment za ogled razpoložljivih dejanj.
 
@@ -58,7 +64,7 @@ Izberite segment za ogled razpoložljivih dejanj.
 - Za spreminjanje lastnosti segmenta lahko uporabite možnost **Uredi**.
 - **Ustvarjanje dvojnika** segmenta. Lahko se odločite za takojšnje urejanje njegovih lastnosti ali shranjevanje dvojnika.
 - [**Osveži**](#refresh-segments) segment za vključitev najnovejših podatkov.
-- Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Neaktivni segmenti se ne bodo osvežili med a [načrtovana osvežitev](schedule-refresh.md) in imeti **Stanje** naveden kot **Preskočeno**, kar pomeni, da osvežitev sploh ni bila izvedena. Aktivni segmenti se osvežujejo glede na njihovo vrsto: statični ali dinamični.
+- Segment lahko aktivirate ali deaktivirate prek možnosti **Aktiviraj** ali **Deaktiviraj**. Neaktivni segmenti se ne bodo osvežili med a [načrtovano osveževanje](schedule-refresh.md) in imeti **Stanje** naveden kot **Preskočeno**, kar pomeni, da osvežitev sploh ni bila izvedena. Aktivni segmenti se osvežujejo glede na njihovo vrsto: statični ali dinamični.
 - **Naredi statično** oz **Naredite dinamično** vrsto segmenta. Statične segmente je treba osvežiti ročno. Dinamični segmenti se med osveževanjem sistema samodejno osvežujejo.
 - [**Poiščite podobne stranke**](find-similar-customer-segments.md) iz segmenta.
 - Prek možnosti **Preimenuj** lahko segment preimenujete.
@@ -82,7 +88,7 @@ Spodnji del vsebuje seznam članov segmenta.
 > [!NOTE]
 > Polja, ki se prikažejo na tem seznamu, temeljijo na atributih entitet vašega segmenta.
 >
->Seznam je predogled ujemajočih se članov segmenta in prikazuje prvih 100 zapisov vašega segmenta, tako da ga lahko po potrebi hitro ocenite in pregledate njegove definicije. Če želite videti vse ujemajoče se zapise, [izvozite segment](export-destinations.md).
+> Seznam je predogled ujemajočih se članov segmenta in prikazuje prvih 100 zapisov vašega segmenta, tako da ga lahko po potrebi hitro ocenite in pregledate njegove definicije. Za ogled vseh ujemajočih se zapisov izberite **Poglej več** ki odpre [**Entitete**](entities.md) stran oz [izvozite segment](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Osveževanje segmentov
 
@@ -91,19 +97,19 @@ Segmente je mogoče osveževati po samodejnem urniku ali ročno na zahtevo. Če 
 Za [načrtujte samodejno osveževanje](schedule-refresh.md), Pojdi do **skrbnik** > **Sistem** > **Urnik**. Veljajo naslednja pravila:
 
 - Vsi segmenti z vrsto **Dinamično** oz **Razširitev** bo samodejno osveženo pri nastavljeni kadenci. Ko je osvežitev končana, se **Stanje** označuje, ali je prišlo do težav pri osveževanju segmenta. The **Nazadnje osveženo** prikazuje časovni žig zadnje uspešne osvežitve. Če pride do napake, izberite napako, da si ogledate podrobnosti o tem, kaj se je zgodilo.
-- Segmenti z vrsto **Statično** *ne bo* samodejno osvežiti. The **Nazadnje osveženo** prikazuje časovni žig zadnjega ročnega zagona ali osveževanja statični segment.
+- Segmenti z vrsto **Statično** *ne bo* se samodejno osveži. The **Nazadnje osveženo** prikazuje časovni žig zadnjega ročnega zagona ali osveževanja statični segment.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="export-segments"></a>Izvoz segmentov
 
-Izvozite segmente v druge aplikacije za nadaljnjo uporabo podatkov. Izvozite segment s strani segmentov ali iz [izvozna stran](export-destinations.md).
+Izvozite segmente v druge aplikacije za nadaljnjo uporabo podatkov. Izvozite segment s strani segmentov ali [izvozna stran](export-destinations.md).
 
 1. Pojdi na **Segmenti** in izberite segment, ki ga želite izvoziti.
 
 1. Izberite **Upravljajte izvoze**. Odpre se stran **Izvozi (predogledna različica) za segment**. Oglejte si vse konfigurirane izvoze, razvrščene glede na to, ali vsebujejo trenutni segment ali ne.
 
-   1. Če želite izbranemu segmentu dodati izvoz, izberite **Uredi** za ta izvoz, da izberete ustrezen segment, nato pa ga shranite. V okoljih za posamezne stranke na seznamu izberite izvoz in izberite **Dodaj segment** da bi dosegli enak rezultat.
+   1. Če želite izbranemu segmentu dodati izvoz, izberite **Uredi** za ta izvoz, da izberete ustrezen segment, nato pa ga shranite. V okoljih za posamezne kupce na seznamu izberite izvoz in izberite **Dodaj segment** da bi dosegli enak rezultat.
 
    1. Če želite ustvariti nov izvoz z izbranim segmentom, izberite **Dodaj izvoz**. Za več informacij o ustvarjanju izvozov glejte [Nastavitev novega izvoza](export-destinations.md#set-up-a-new-export).
 

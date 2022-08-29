@@ -1,7 +1,7 @@
 ---
 title: Ustvarite zapletene segmente z graditeljem segmentov
-description: Uporabite graditelj segmentov, da ustvarite zapletene segmente strank tako, da jih razvrstite v skupine na podlagi različnih atributov.
-ms.date: 03/25/2022
+description: Uporabite graditelj segmentov za ustvarjanje kompleksnih segmentov strank tako, da jih razvrstite v skupine na podlagi različnih atributov.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170655"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304769"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Ustvarite zapletene segmente z graditeljem segmentov
 
-Določite zapletene filtre okoli poenotene entitete stranke in z njo povezanih entitet. Po obdelavi vsak segment ustvari niz zapisov strank, ki jih lahko izvozite in obdelate.
+Določite kompleksne filtre okoli poenotene stranke ali poenotenega stika in z njim povezanih entitet. Vsak segment po obdelavi ustvari niz zapisov strank ali kontaktov, ki jih lahko izvozite in ukrepate.
 
 > [!TIP]
-> Segmenti na podlagi **posameznih strank** samodejno vključijo razpoložljive podatke za stik za člane segmenta. V okoljih za **poslovne račune** segmenti temeljijo na računih (podjetja ali podružnice). Če želite v segment vključiti podatke za stik, uporabite funkcijo **Atributi projekta** v graditelju segmentov. Prepričajte se, da so viri podatkov za stik [semantično preslikani v entiteto ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> Segmenti na podlagi **posameznih strank** samodejno vključijo razpoložljive podatke za stik za člane segmenta. notri **poslovne račune**, če ti [poenoteno](data-unification.md) račune in kontakte, izberite, ali segment temelji na računih ali poslovnih stikih. Če želite izvoziti na cilj, ki pričakuje kontaktne podatke, uporabite segment stikov. Če želite izvoziti na cilj, ki pričakuje podatke o računu, uporabite segment računov.
 
 ## <a name="segment-builder"></a>Graditelj segmentov
 
@@ -57,6 +57,11 @@ Zgornji primer ponazarja zmogljivost segmentacije. Določili smo segment za stra
 
 1. Izberite **Novo** > **Ustvarite svojo**. Na strani graditelja segmentov določite ali sestavite pravila. Pravilo je sestavljeno iz enega ali več pogojev, ki določajo nabor strank.
 
+   > [!NOTE]
+   > Za okolja, ki temeljijo na poslovnih računih, izberite **Novo** > **Segment računov** oz **Segment stikov (predogled)** glede na vrsto segmenta, ki ga želite ustvariti. Če an [hierarhijo računa](relationships.md#set-up-account-hierarchies) je bilo definirano in želite ustvariti pravila za filtriranje podatkov na podlagi odnosa otroka in starša, izberite **Uporabiti hierarhijo? (predogled)**, izberite hierarhijo in nato **Prijavite se**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Podokno hierarhije računa za izbiro segmenta.":::
+
 1. Izberite **Uredi podrobnosti** poleg segmenta brez naslova. Vnesite ime za svoj segment in posodobite predlagano **Ime izhodne entitete** za segment. Po želji dodajte opis in [oznake](work-with-tags-columns.md#manage-tags) na segment.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="Pogovorno okno za urejanje podrobnosti.":::
@@ -65,11 +70,11 @@ Zgornji primer ponazarja zmogljivost segmentacije. Določili smo segment za stra
    - Preglejte seznam razpoložljivih entitet in atributov v podoknu **Dodaj v pravilo** in izberite ikono **+** zraven atributa, ki ga želite dodati. Izberite, ali želite atribut dodati obstoječemu pravilu ali ga uporabiti za ustvarjanje novega pravila.
    - V razdelku s pravili vnesite ime atributa, če si želite ogledati predloge za ujemanje.
 
-1. Izberite operatorje, da podate ujemajoče se vrednosti pogoja. Atribut ima lahko eno od štirih vrst podatkov kot vrednost: številsko, niz, datum ali logično. Odvisno od vrste podatkov atributa so na voljo različni operaterji za določitev pogoja. Za segmente s poslovnimi računi sta na voljo dva posebna operatorja za vključitev možnih hierarhij med uvoženimi računi. Uporabite operatorja *podrejeno* in *nadrejeno*, da vključite povezane račune.
+1. Izberite operatorje, da podate ujemajoče se vrednosti pogoja. Atribut ima lahko eno od štirih vrst podatkov kot vrednost: številsko, niz, datum ali logično. Odvisno od vrste podatkov atributa so na voljo različni operaterji za določitev pogoja.
 
 1. Izberite **Dodaj pogoj**, če želite pravilu dodati več pogojev. Če želite ustvariti pravilo po trenutnem pravilu, izberite **Dodajanje podpravila**.
 
-1. Če pravilo uporablja druge entitete kot *Stranka* subjekt, izberite **Nastavite pot odnosa** za preslikavo izbrane entitete v enotno strankino entiteto. Če obstaja le ena možna pot razmerja, jo sistem samodejno izbere. Drugačen [poti odnosov](relationships.md#relationship-paths) lahko prinese različne rezultate. Vsako pravilo ima lahko svojo pot odnosa.
+1. Če pravilo uporablja druge entitete kot *Stranka* subjekt (oz *ContactProfile* entiteta za B-to-B), izberite **Nastavite pot odnosa** za preslikavo izbrane entitete v enotno strankino entiteto. Če obstaja le ena možna pot razmerja, jo sistem samodejno izbere. Drugačen [poti odnosov](relationships.md#relationship-paths) lahko prinese različne rezultate. Vsako pravilo ima lahko svojo pot odnosa.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Potencialna pot odnosa pri ustvarjanju pravila na podlagi entitete, preslikane v poenoteno entiteto stranke.":::
 
@@ -92,24 +97,22 @@ Zgornji primer ponazarja zmogljivost segmentacije. Določili smo segment za stra
       - **Presek** prekriva obe skupini. Samo podatki, ki *so pogosti* za obe skupini, ostanejo v poenoteni skupini.
       - **Razen** združuje obe skupini. Samo podatki v skupini A, ki *niso pogosti* za podatke v skupini B, se ohranijo.
 
-1. Privzeto bo izhodna entiteta samodejno vsebovala vse atribute profilov strank, ki ustrezajo definiranim filtrom. Če segment temelji na drugih subjektih kot na *Stranka* subjekt, izberite **Atributi projekta** da dodate več atributov iz teh entitet v izhodno entiteto.
-
-   > [!IMPORTANT]
-   > Za segmente, ki temeljijo na poslovnih računih, podrobnosti o enem ali več stikih vsakega računa iz *ContactProfile* entiteta mora biti vključena v segment, da se ta segment lahko aktivira ali izvozi na cilje, ki zahtevajo kontaktne podatke. Za več informacij o entiteti *ContactProfile* glejte [Semantične preslikave](semantic-mappings.md).
-   > Vzorčni izhod za segment, ki temelji na poslovnih računih s predvidenimi atributi stikov, bi lahko izgledal takole:
-   >
-   > |ID  |Ime kupca  |Prihodki  |Ime stika  | Vloga stika|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [Izvršni direktor, vodja nabave]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Primer napovedanih atributov, izbranih v stranskem podoknu, za dodajanje izhodni entiteti.":::
-  
+1. Privzeto bo izhodna entiteta samodejno vsebovala vse atribute profilov strank, ki ustrezajo definiranim filtrom. V B-to-B pri uporabi *ContactProfile* subjekta, je ID računa samodejno vključen. Če segment temelji na drugih subjektih kot na *Stranka* ali vključiti več atributov iz *ContactProfile*, izberite **Atributi projekta** da dodate več atributov iz teh entitet v izhodno entiteto.
+ 
    Na primer: Segment temelji na entiteti, ki vsebuje podatke o nakupu, kar je povezano z entiteto *Stranka*. Segment išče vse kupce iz Španije, ki so kupili blago v tem letu. Izberete lahko, da dodate atribute, kot je cena blaga ali datum nakupa, vsem ujemajočim se zapisom strank v izhodni entiteti. Te informacije so lahko uporabne za analizo sezonskih korelacij s skupno porabo.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Primer napovedanih atributov, izbranih v stranskem podoknu, za dodajanje izhodni entiteti.":::
+ 
+   Vzorčni izhod za segment, ki temelji na poslovnih računih s predvidenimi atributi stikov, bi lahko izgledal takole:
+
+   |ID  |Ime kupca  |Prihodki  |Ime stika  | Vloga stika|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100.000 | [Abbie Moss, Ruth Soto]  | [Izvršni direktor, vodja nabave]
+
    > [!NOTE]
-   > - **Atributi projekta** deluje samo za entitete, ki imajo z entiteto stranke odnos »eden proti mnogo«. Ena stranka ima na primer lahko več naročnin.
-   > - Če je atribut, ki ga želite predvideti, od entitete *Stranka* oddaljen več kot en skok, kot je opredeljeno v odnosu, je treba ta atribut uporabiti pri vsakem pravilu poizvedbe segmenta, ki ga gradite.
-   > - Če je atribut, ki ga želite predvideti, od entitete *Stranka* oddaljen samo en skok, ni treba, da je atribut prisoten pri vsakem pravilu poizvedbe segmenta, ki ga gradite.
+   > - **Atributi projekta** deluje samo za subjekte, ki imajo razmerje ena proti mnogo z *Stranka* oz *ContactProfile* entiteta. Ena stranka ima na primer lahko več naročnin.
+   > - Če je atribut, ki ga želite projicirati, oddaljen več kot en skok od *Stranka* oz *ContactProfile* entiteto, kot jo definira razmerje, je treba ta atribut uporabiti v vsakem pravilu poizvedbe segmenta, ki ga gradite.
+   > - Če je atribut, ki ga želite projicirati, le en skok oddaljen od *Stranka* oz *ContactProfile* entitete, ni treba, da je ta atribut prisoten v vsakem pravilu segmentne poizvedbe, ki jo gradite.
    > - **Predvideni atributi** se upoštevajo pri uporabi operatorjev nabora.
 
 1. Izberite **Teči** ustvariti segment. Izberite **Shrani** če želite obdržati trenutno konfiguracijo in zagnati segment pozneje. The **Segmenti** prikazi strani.

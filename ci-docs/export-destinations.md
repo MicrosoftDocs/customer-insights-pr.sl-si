@@ -1,7 +1,7 @@
 ---
 title: Pregled izvozov (predogledna različica)
 description: Upravljajte izvoze za skupno rabo podatkov.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245347"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304079"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvozov (predogledna različica)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245347"
 
 Obstajata dve glavni vrsti izvoza:  
 
-- **Izvoz podatkov** : izvoz katere koli vrste entitete, ki je na voljo v Customer Insights. Entitete, ki jih izberete za izvoz, se izvozijo z vsemi podatkovnimi polji, metapodatki, shemami in podrobnostmi preslikave.
-- **Izvozi segmentov** : izvoz entitet segmenta iz storitve Customer Insights. Segmenti predstavljajo seznam profilov strank. Pri konfiguraciji izvoza izberete vključena podatkovna polja, odvisno od ciljnega sistema, v katerega izvažate podatke.
+- **Izvoz podatkov** omogočajo izvoz katere koli vrste entitete, ki je na voljo v Customer Insights. Entitete, ki jih izberete za izvoz, se izvozijo z vsemi podatkovnimi polji, metapodatki, shemami in podrobnostmi preslikave.
+- **Izvozi segmentov** omogočajo izvoz entitet segmentov iz Customer Insights. Za posamezne potrošnike (B-to-C) segmenti predstavljajo seznam profilov kupcev. Za podjetja (B-to-B), [segmenti lahko predstavljajo seznam računov ali stikov](segment-builder.md#create-a-new-segment-with-segment-builder). Ko konfigurirate izvoz, izberete vključena podatkovna polja, odvisno od ciljnega sistema, v katerega izvažate podatke.
 
 ### <a name="export-segments"></a>Izvoz segmentov
 
@@ -38,14 +38,15 @@ Večina možnosti izvoza podpira obe vrsti okolij. Izvoz segmentov v različne c
 **Izvozi segmenta v okoljih za posamezne potrošnike (prodaja strankam)**  
 - Segmenti v kontekstu okolij za posamezne stranke temeljijo na entiteti *poenotenega profila stranke*. Izvoziti je mogoče vsak segment, ki izpolnjuje zahteve ciljnih sistemov (na primer e-poštni naslov).
 
-**Izvozi segmenta v okoljih za poslovne kupce (podjetja podjetjem)**  
-- Segmenti v kontekstu okolij za poslovne račune temeljijo na entiteti *računa*. Če želite izvoziti segmente računov takšne, kot so, mora ciljni sistem podpirati čiste segmente računov. To velja za [LinkedIn](export-linkedin-ads.md), ko izberete možnost **podjetje** pri definiranju izvoza.
-- Vsi drugi ciljni sistemi zahtevajo polja iz entitete stika. Če želite zagotoviti, da lahko segmenti računa pridobivajo podatke iz povezanih stikov, mora vaša definicija segmenta projicirati atribute entitete stika. Preberite več o tem, kako [konfigurirati segmente in atribute projekta](segment-builder.md).
+**Izvozi segmentov v okoljih za poslovne račune (B-to-B)**  
+- Segmenti v okviru okolij za poslovne račune so zgrajeni na *račun* subjekt ali *stik* entiteta. Če želite izvoziti segmente računov takšne, kot so, mora ciljni sistem podpirati čiste segmente računov. To velja za [LinkedIn](export-linkedin-ads.md), ko izberete možnost **podjetje** pri definiranju izvoza.
+- Vsi drugi ciljni sistemi zahtevajo polja iz entitete stika.
+- Z dvema vrstama segmentov (stiki in računi) Customer Insights samodejno prepozna, katere vrste segmentov so primerne za izvoz na podlagi ciljnega sistema. Na primer, za ciljni sistem, osredotočen na stike, kot je Mailchimp, vam Customer Insights omogoča samo izbiro segmentov stikov za izvoz.
 
 **Omejitve pri izvozu segmentov**  
 - Ciljni sistemi neodvisnih izdelovalcev lahko omejijo število profilov strank, ki jih lahko izvozite. 
 - Za posamezne stranke boste ob izbiri segmenta za izvoz videli dejansko število članov segmenta. Če je segment prevelik, boste prejeli opozorilo. 
-- Pri poslovnih računih boste videli število računov v segmentu; vendar se število projiciranih stikov ne prikaže. V nekaterih primerih bi to lahko pripeljalo do tega, da izvoženi segment dejansko vsebuje več profilov strank, kot jih ciljni sistem sprejme. Če so omejitve ciljnega sistema presežene, se izvoz preskoči.
+- Za poslovne račune boste videli število računov ali stikov, odvisno od segmenta. Če je segment prevelik, boste prejeli opozorilo. Preseganje omejitev rezultatov ciljnih sistemov bo preskočilo izvoz.
 
 ## <a name="set-up-a-new-export"></a>Nastavitev novega izvoza
 
@@ -110,6 +111,20 @@ Za izvoz podatkov brez čakanja na načrtovano osvežitev, pojdite na **Podatki*
 
 - Če želite zagnati vse izvoze, izberite **Zaženi vse** v ukazni vrstici. Izvajajo se samo izvozi, ki imajo aktiven urnik. Če želite izvesti izvoz, ki ni aktiven, zaženite en izvoz.
 - Če želite zagnati en izvoz, ga izberite na seznamu in kliknite **Zaženi** v ukazni vrstici.
+
+## <a name="troubleshooting"></a>Odpravljanje težav
+
+### <a name="segment-not-eligible-for-export"></a>Segment ni primeren za izvoz
+
+**Težava** V okolju poslovnih računov vaši izvozi ne uspejo s sporočilom o napaki: »Naslednji segment ni primeren za ta cilj izvoza: '{ ime segmenta} '. Izberite samo segmente vrste ContactProfile in poskusite znova."
+
+**Resolucija** Okolja Customer Insights za poslovne račune so bila posodobljena tako, da poleg segmentov računov podpirajo tudi segmente stikov. Zaradi te spremembe izvozi, ki potrebujejo kontaktne podatke, delujejo samo s segmenti, ki temeljijo na stikih.
+
+1. [Ustvarite segment na podlagi kontaktov](segment-builder.md) ki ustreza vašemu prej uporabljenemu segmentu.
+
+1. Ko je ta segment stika zagnan, uredite ustrezni izvoz in izberite nov segment.
+
+1. Izberite **Shrani** da shranite konfiguracijo oz **Shrani in zaženi** da takoj preizkusite ta izvoz.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245899"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304539"
 ---
 # <a name="data-enrichment-preview-overview"></a>Pregled obogatitve podatkov (predogled).
 
@@ -76,7 +76,7 @@ Izberite obogatitev za ogled razpoložljivih dejanj.
 - **Pogled** podrobnosti o obogatitvi s številom obogatenih profilov kupcev.
 - **Urejanje** konfiguracije obogatitve.
 - [**Teči**](#run-or-refresh-enrichments) obogatitev za posodobitev profilov strank z najnovejšimi podatki. Zaženite več obogatitev hkrati, tako da jih izberete na seznamu.
-- **Aktiviraj** oz **Deaktiviraj** obogatitev. Neaktivne obogatitve se ne bodo osvežile med a [načrtovana osvežitev](schedule-refresh.md).
+- **Aktiviraj** oz **Deaktiviraj** obogatitev. Neaktivne obogatitve se ne bodo osvežile med a [načrtovano osveževanje](schedule-refresh.md).
 - **Izbriši** obogatitev.
 
 Lahko tudi ustvarjate [segmenti](segments.md) oz [ukrepe](measures.md) od obogatitev.
@@ -95,7 +95,7 @@ Ko se zaženejo, je mogoče obogatitve osvežiti po samodejnem urniku ali na zah
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Oglejte si napredek postopka obogatitve
 
-Podrobnosti o obdelavi obogatitve, vključno s stanjem in možnimi težavami, lahko najdete med osveževanjem ali po končani osvežitvi. Spoznajte, kateri postopki so potrebni za osvežitev obogatitve in koliko časa je trajalo, da so se postopki izvedli. Stanje obogatitve je podprto za družbe Experian, Leadspace, HERE Technologies, SFTP Import in storitev Zemljevidi Azure.
+Najdete lahko podrobnosti o obdelavi obogatitve, vključno z njenim statusom in morebitnimi težavami med osveževanjem ali po zaključku osveževanja. Spoznajte, kateri postopki so potrebni za osvežitev obogatitve in koliko časa je trajalo, da so se postopki izvedli. Stanje obogatitve je podprto za družbe Experian, Leadspace, HERE Technologies, SFTP Import in storitev Zemljevidi Azure.
 
 1. Pomaknite se na možnost **Podatki** > **Obogatitev**.
 1. V **Moje obogatitve** izberite status obogatitve, da odprete stransko podokno.

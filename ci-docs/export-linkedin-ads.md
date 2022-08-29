@@ -1,19 +1,19 @@
 ---
 title: Izvoz segmentov v LinkedIn Ads (predogledna različica)
 description: Naučite se, kako konfigurirati povezavo in izvažati v LinkedIn Ads.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d1a9ae985043398f4bc38163be26ecf0c3c8e2ba
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196828"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304723"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Izvoz segmentov v LinkedIn Ads (predogledna različica)
 
@@ -24,12 +24,12 @@ Izvozite segmente poenotenih profilov strank v LinkedIn Ads, da ustvarite ujemaj
 - A [LinkedIn Campaign Manager račun](https://business.linkedin.com/marketing-solutions/ads) in ustrezne skrbniške poverilnice.
 - A [LinkedIn Campaign Manager ID računa](https://www.linkedin.com/help/lms/answer/a424270).
 - [Konfigurirani segmenti](segments.md) v Customer Insights.
-- Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov.
+- Izvoženi segmenti potrebujejo vsaj eno posebno polje, odvisno od vaše izbire [ciljanje stikov](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) oz [ciljanje na podjetje](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) na LinkedInu. Možna polja so navedena v **Ujemanje podatkov** korak kdaj [konfiguracijo izvoza](#configure-an-export).
 
 ## <a name="known-limitations"></a>Znane omejitve
 
 - Do 100.000 profilov strank na izvoz v LinkedIn Ads, ki lahko traja do 10 minut.
-- Samo segmenti. Segment mora vsebovati najmanj 300 edinstvenih profilov.
+- Samo segmenti. Segment mora vsebovati vsaj 300 edinstvenih profilov.
 
 ## <a name="set-up-connection-to-linkedin-ads"></a>Nastavite povezavo z oglasi LinkedIn
 

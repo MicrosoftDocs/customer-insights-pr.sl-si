@@ -2,7 +2,7 @@
 title: Pogoji ujemanja za poenotenje podatkov
 description: Zagotovite ujemanje entitet za ustvarjanje poenotenih profilov strank.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139723"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304677"
 ---
 # <a name="match-conditions-for-data-unification"></a>Pogoji ujemanja za poenotenje podatkov
 
@@ -27,6 +27,8 @@ Ta korak pri poenotenju definira vrstni red ujemanja in pravila za ujemanje med 
 
 > [!NOTE]
 > Ko ustvarite pogoje ujemanja in izberete **Naslednji**, ne morete odstraniti izbrane entitete ali atributa. Po potrebi izberite **Nazaj** da pregledate izbrane entitete in atribute, preden nadaljujete.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Vključi obogatene entitete (predogled)
 
@@ -43,14 +45,14 @@ Ta korak pri poenotenju definira vrstni red ujemanja in pravila za ujemanje med 
 Vsako ujemanje združi dve ali več entitet v eno, konsolidirano entiteto. Hkrati skrbi za enolične zapise strank. Vrstni red ujemanja označuje vrstni red, v katerem sistem poskuša ujemati zapise.
 
 > [!IMPORTANT]
-> Prva entiteta na seznamu se imenuje primarna entiteta. Primarna entiteta služi kot osnova za vaš nabor podatkov o poenotenih profilih. Dodatne izbrane entitete bodo dodane tej entiteti.
+> Prva entiteta se imenuje primarna entiteta, ki služi kot osnova za vaše poenotene profile. Dodatne izbrane entitete bodo dodane tej entiteti.
 >
 > Pomembni vidiki:
 >
 > - Izberite subjekt z najbolj popolnimi in zanesljivimi profilnimi podatki o vaših strankah kot primarni subjekt.
 > - Za primarno entiteto izberite entiteto, ki ima več skupnih atributov z drugimi entitetami (na primer ime, telefonsko številko ali e-poštni naslov).
 
-1. Na **Ujemanje pogojev** stran, uporabite puščici za premikanje gor in dol, da premaknete entitete v želenem vrstnem redu, ali pa jih povlecite in spustite. Na primer izberite **Kontakti: e-trgovina** kot primarna entiteta in **CustomerLoyalty: Zvestoba** kot drugo entiteto.
+1. Na **Ujemanje pogojev** stran, uporabite puščici za premikanje gor in dol, da premaknete entitete v želenem vrstnem redu, ali pa jih povlecite in spustite. Na primer izberite **eCommerceCustomers** kot primarna entiteta in **loyCustomers** kot drugo entiteto.
 
 1. Če želite imeti vsak zapis v entiteti kot edinstveno stranko, ne glede na to, ali je ujemanje najdeno, izberite **Vključite vse zapise**. Vsi zapisi v tej entiteti, ki se ne ujemajo z zapisi v nobeni drugi entiteti, so vključeni v poenoten profil. Zapisi, ki se ne ujemajo, se imenujejo enojni zapisi.
   
@@ -70,7 +72,7 @@ Opozorilo poleg imena entitete pomeni, da za par ujemanja ni definirano nobeno p
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Posnetek zaslona podokna za dodajanje pravil.":::
 
-   - **Izberite entiteto/polje (prva vrstica)** : izberite povezano entiteto in atribut, da določite lastnost zapisa, ki je verjetno edinstvena za stranko. Na primer telefonska številka ali e-poštni naslov. Izogibajte se ujemanju po atributih vrste dejavnosti. Na primer ID nakupa verjetno ne bo imel ujemanja pri drugih vrstah zapisov.
+   - **Izberite entiteto/polje (prva vrstica)** : izberite entiteto in atribut, ki je verjetno edinstven za stranko. Na primer telefonska številka ali e-poštni naslov. Izogibajte se ujemanju po atributih vrste dejavnosti. Na primer ID nakupa verjetno ne bo imel ujemanja pri drugih vrstah zapisov.
 
    - **Izberite entiteto/polje (druga vrstica)** : Izberite atribut, ki se nanaša na atribut subjekta, navedenega v prvi vrstici.
 
@@ -116,7 +118,7 @@ Pravila ujemanja predstavljajo nabore pogojev. Za ujemanje entitet s pogoji na p
 
 ### <a name="add-exceptions-to-a-rule"></a>Dodajte izjeme pravilu
 
-V večini primerov ujemanje entitet vodi do edinstvenih profilov strank s konsolidiranimi podatki. Če želite dinamično obravnavati redke primere lažno pozitivnih in lažno negativnih rezultatov, lahko definirate izjeme za pravilo ujemanja. Izjeme se uporabijo po obdelavi pravil ujemanja in se izognejo ujemanju vseh zapisov, ki izpolnjujejo kriterije izjeme.
+V večini primerov ujemanje entitet vodi do edinstvenih profilov strank s konsolidiranimi podatki. Če želite obravnavati redke primere lažno pozitivnih in lažno negativnih rezultatov, definirajte izjeme za pravilo ujemanja. Izjeme se uporabijo po obdelavi pravil ujemanja in se izognejo ujemanju vseh zapisov, ki izpolnjujejo kriterije izjeme.
 
 Na primer, če vaše pravilo ujemanja združuje priimek, mesto in datum rojstva, bi sistem identificiral dvojčka z istim priimek, ki živita v istem mestu z istim profilom. Določite lahko izjemo, ki se ne ujema s profili, če ime v entitetah, ki jih združujete, niso enake.
 
@@ -134,7 +136,7 @@ Določite lahko pogoje, ki preglasijo privzeto logiko ujemanja. Na voljo so šti
 |---------|---------|---------|
 |Mora se ujemati     | Določa vrednosti, ki se vedno ujemajo.         |  Vedno se ujemajo *Mike* in *MikeR*.       |
 |Nikoli se ne sme ujemati     | Določa vrednosti, ki se nikoli ne ujemajo.        | Nikoli se ne ujemaj *Janez* in *Jonathan*.        |
-|Zaobitje po meri     | Določa vrednosti, ki naj jih sistem vedno prezre v fazi ujemanja. |  Ignorirajte vrednosti *11111* in *Neznano* med tekmo.        |
+|Zaobitje            | Določa vrednosti, ki naj jih sistem vedno prezre v fazi ujemanja. |  Ignorirajte vrednosti *11111* in *Neznano* med tekmo.        |
 |Preslikava vzdevka    | Definiranje vrednosti, ki naj jih sistem obravnava kot isto vrednost.         | Razmislite *Joe* biti enak *Jožef*.        |
 
 1. Izberite **Po meri**.

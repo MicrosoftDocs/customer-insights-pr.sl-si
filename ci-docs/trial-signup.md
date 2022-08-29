@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 73f12745f76ef65afcc565ffb972e755073a2834
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: fd32a3e37f4bbf57a5bd05f888fde39d32c02a82
+ms.sourcegitcommit: e5649ca0b3000cee0ca7c9eac7142cbd5f7dd2ac
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082501"
+ms.lasthandoff: 08/17/2022
+ms.locfileid: "9305624"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Prijava za brezplačno preskusno različico Dynamics 365 Customer Insights
 
@@ -21,7 +21,7 @@ Customer Insights ponuja brezplačno 30-dnevno preskusno različico. Po hitri pr
 
 **Če se želite prijaviti za preskusno različico**:
 
-1. Pojdite na [stran s pregledom preizkusa](https://dynamics.microsoft.com/ai/customer-insights/) in izberite **Brezplačno preizkusite Customer Insights**.
+1. Pojdi na [stran s pregledom preskušanja](https://dynamics.microsoft.com/ai/customer-insights/) in izberite **Brezplačno preizkusite Customer Insights**.
 1. Za vnos [e-poštnega naslova, povezanega z vašim Microsoftovim računom](https://support.microsoft.com/windows/what-is-a-microsoft-account-4a7c48e9-ff5a-e9c6-5a5c-1a57d66c3bfa), in podatkov o stiku sledite navodilom na zaslonu.
 1. Izberite zmogljivost, na katero se boste osredotočili, dokler ne pridete na začetno stran za izbrano zmogljivost.
 
@@ -31,7 +31,7 @@ Aplikacijo lahko začnete uporabljati, potem ko se preskusna različica naloži 
 
 V vašem preskusnem okolju so iste funkcije, ki so na voljo v plačljivi različici. Na spodnjih povezavah so predstavljene nekatere ključne funkcije.
 
-- [Začnite z vpogledi strank.](get-started.md)
+- [Začnite uporabljati Customer Insights.](get-started.md)
 - [Dodajte več uporabnikov in dodelite dovoljenja.](permissions.md)
 - [Uvozite svoje vire podatkov](data-sources.md) in jih vodite skozi [postopek poenotenja podatkov](data-unification.md), da nastanejo [enotni profili strank](customer-profiles.md).
 - [Obogatite poenotene profile strank](enrichment-hub.md) ali [zaženite modele predvidevanja](predictions-overview.md).
@@ -40,6 +40,6 @@ V vašem preskusnem okolju so iste funkcije, ki so na voljo v plačljivi različ
 
 ## <a name="additional-resources"></a>Dodatni viri
 
-- [Možnosti usposabljanja raziščite v Microsoft Learn](/learn/browse/?filter-products=dynamics-dynamics-cust-insights)
+- [Raziščite učne poti in module za Customer Insights](/learn/browse/?products=dynamics-cust-insights)
 - [Pogosta vprašanja o preskusni različici](trial-faq.md)
 - [Podrobnosti izdelka Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/)
