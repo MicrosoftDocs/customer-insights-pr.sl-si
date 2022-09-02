@@ -1,27 +1,27 @@
 ---
 title: Primeri poizvedb OData za API-je Customer Insights
 description: Pogosto uporabljeni primeri za protokol odprtih podatkov (OData) za poizvedovanje API-jev Customer Insights za pregled podatkov.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121582"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387222"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Primeri poizvedb OData za API-je Customer Insights
 
 Protokol odprtih podatkov (OData) je protokol za dostop do podatkov, ki temelji na osnovnih protokolih, kot je HTTP. Uporablja splošno sprejete metodologije, kot je REST za splet. Obstajajo različne vrste knjižnic in orodij, ki jih je mogoče uporabiti za uporabo storitev OData.
 
-Ta članek navaja nekaj pogosto zahtevanih primerov poizvedb, ki vam bodo v pomoč pri gradnji lastnih izvedb na podlagi [API-ji Customer Insights](apis.md).
+Za pomoč pri izdelavi lastnih implementacij na podlagi [API-ji Customer Insights](apis.md) , preglejte nekaj pogosto zahtevanih primerov poizvedb.
 
-Vzorce poizvedb morate spremeniti, da bodo delovali v ciljnih okoljih: 
+Spremenite vzorce poizvedb, da bodo delovali v ciljnih okoljih:
 
 - {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` kje{instanceId} je GUID okolja Customer Insights, po katerem želite poizvedovati. The [Operacija ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vam omogoča, da najdete{InstanceId} imate dostop do.
 - {CID}: GUID poenotenega zapisa stranke. Primer: `ce759201f786d590bf2134bff576c369`.
@@ -31,22 +31,22 @@ Vzorce poizvedb morate spremeniti, da bodo delovali v ciljnih okoljih:
 
 ## <a name="customer"></a>stranka
 
-Naslednja tabela vsebuje niz vzorčnih poizvedb za *Stranka* entiteta.
+Vzorčne poizvedbe za *Stranka* entiteta.
 
 |Vrsta poizvedbe |Primer  | opomba,  |
 |---------|---------|---------|
 |ID posamezne stranke     | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'`          |  |
-|Nadomestni ključ    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Nadomestni ključi ostajajo v enotni entiteti stranke       |
+|nadomestni ključ    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Nadomestni ključi ostajajo v enotni entiteti stranke       |
 |Izberi   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |v    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Nadomestni ključ + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|nadomestni ključ + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Poišči  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Vrne 10 najboljših rezultatov za iskalni niz      |
 |Članstvo v segmentu  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Vrne prednastavljeno število vrstic iz entitete segmentacije.      |
 |Članstvo v segmentu za stranko | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Vrne profil stranke, če je član danega segmenta     |
 
 ## <a name="unified-activity"></a>Enotna dejavnost
 
-Naslednja tabela vsebuje niz vzorčnih poizvedb za *UnifiedActivity* entiteta.
+Vzorčne poizvedbe za *UnifiedActivity* entiteta.
 
 |Vrsta poizvedbe |Primer  | opomba,  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Naslednja tabela vsebuje niz vzorčnih poizvedb za *UnifiedActivity* entiteta.
 
 ## <a name="other-examples"></a>Drugi primeri
 
-Naslednja tabela vsebuje niz vzorčnih poizvedb za druge entitete.
+Vzorčne poizvedbe za druge entitete.
 
 |Vrsta poizvedbe |Primer  | opomba,  |
 |---------|---------|---------|

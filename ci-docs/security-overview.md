@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d20d57e9b7724e9921f9341eeaa39141b4555ff1
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246082"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387278"
 ---
 # <a name="configure-security-settings"></a>Konfigurirajte varnostne nastavitve
 
@@ -23,9 +23,9 @@ Upravljajte ključe API, dostopajte do podatkov o strankah in nastavite zasebno 
 
 Ogled in upravljanje ključev za uporabo [API-ji Customer Insights](apis.md) s podatki v vašem okolju.
 
-1. Pojdi do **Sistem** > **Varnost** in izberite **API-ji** zavihek.
+1. Pojdi do **skrbnik** > **Varnost** in izberite **API-ji** zavihek.
 
-1. Če API dostop do okolja ni bil nastavljen, izberite **Omogoči**. Če želite blokirati dostop API-ja do okolja, izberite **Onemogoči** in potrdite.
+1. Če API dostop do okolja ni nastavljen, izberite **Omogoči** . Če želite blokirati dostop API-ja do okolja, izberite **Onemogoči** in potrdite.
 
 1. Upravljanje primarnih in sekundarnih ključev API:
 
@@ -33,11 +33,11 @@ Ogled in upravljanje ključev za uporabo [API-ji Customer Insights](apis.md) s p
 
    1. Če želite kopirati primarni ali sekundarni ključ API, izberite **Kopirati** simbol.
 
-   1. Če želite ustvariti nove primarne ali sekundarne ključe API, izberite **Regeneriraj primarno** oz **Regeneriraj sekundarno**.
+   1. Če želite ustvariti nove primarne ali sekundarne ključe API, izberite **Regeneriraj primarno** oz **Regeneriraj sekundarno** .
 
 ## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Varen dostop do podatkov strank s Customer Lockbox (predogled)
 
-Customer Insights uporablja Power Platform Zmogljivost Customer Lockbox. Customer Lockbox ponuja vmesnik za pregled in odobritev (ali zavrnitev) zahtev za dostop do podatkov. Te zahteve se pojavijo, ko je za razrešitev primera podpore potreben dostop do podatkov o strankah. Za uporabo te funkcije mora Customer Insights imeti obstoječo povezavo z a Microsoft Dataverse okolje v vašem najemniku.
+Customer Insights uporablja Power Platform Zmogljivost Customer Lockbox. Customer Lockbox ponuja vmesnik za pregled in odobritev (ali zavrnitev) zahtev za dostop do podatkov. Te zahteve se pojavijo, ko je za razrešitev primera podpore potreben dostop do podatkov o strankah. Za uporabo te funkcije mora imeti Customer Insights obstoječo povezavo z a Microsoft Dataverse okolje v vašem najemniku.
 
 Za več informacij o Customer Lockbox glejte [povzetek](/power-platform/admin/about-lockbox#summary) od Power Platform Ključavnica za stranke. Članek opisuje tudi [potek dela](/power-platform/admin/about-lockbox#workflow) in zahtevano [nastaviti](/power-platform/admin/about-lockbox#enable-the-lockbox-policy) da omogočite Customer Lockbox.
 
@@ -46,7 +46,7 @@ Za več informacij o Customer Lockbox glejte [povzetek](/power-platform/admin/ab
 
 ## <a name="set-up-an-azure-private-link"></a>Nastavite zasebno povezavo Azure
 
-[Zasebna povezava Azure](/azure/private-link/private-link-overview) naj se Customer Insights poveže z vašim Azure Data Lake Storage računa prek zasebnega končna točka v vašem virtualnem omrežju. Za podatke v računu za shranjevanje, ki ni izpostavljen javnemu internetu, Zasebna povezava omogoča povezavo s tem omejenim omrežjem.
+[Zasebna povezava Azure](/azure/private-link/private-link-overview) omogoča, da se Customer Insights poveže z vašim Azure Data Lake Storage računa prek zasebnega končna točka v vašem virtualnem omrežju. Za podatke v računu za shranjevanje, ki ni izpostavljen javnemu internetu, Zasebna povezava omogoča povezavo s tem omejenim omrežjem.
 
 > [!IMPORTANT]
 > Minimalne zahteve glede vloge za nastavitev povezave zasebne povezave:
@@ -57,13 +57,13 @@ Za več informacij o Customer Lockbox glejte [povzetek](/power-platform/admin/ab
 
 1. V Customer Insights pojdite na **skrbnik** > **Varnost** in izberite **Zasebne povezave** zavihek.
 
-1. Izberite **Dodaj zasebno povezavo**.
+1. Izberite **Dodaj zasebno povezavo** .
 
    The **Dodaj zasebno povezavo** v podoknu so navedeni računi za shranjevanje vašega najemnika, za ogled katerih imate dovoljenja.
 
 1. Izberite naročnino, skupino virov in račun za shranjevanje.
 
-1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se** .
 
 1. Izberite **Shrani**.
 
