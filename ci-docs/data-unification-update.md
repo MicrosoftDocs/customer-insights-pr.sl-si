@@ -1,7 +1,7 @@
 ---
 title: Posodobite nastavitve združevanja strank, računa ali stikov
 description: Posodobite podvojena pravila, pravila ujemanja ali poenotena polja v nastavitvah združevanja stranke ali računa.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304355"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392491"
 ---
 # <a name="update-unification-settings"></a>Posodobite nastavitve združevanja
 
@@ -38,7 +38,7 @@ ms.locfileid: "9304355"
    > The **Ujemanje pogojev** ploščica se prikaže le, če je izbranih več entitet.
 
 1. Izberite, kaj želite posodobiti:
-   - [Izvorna polja](#edit-source-fields) za dodajanje entitet ali atributov ali spreminjanje vrst atributov.
+   - [Izvorna polja](#edit-source-fields) za dodajanje atributov ali entitet ali spreminjanje vrst atributov. Če želite odstraniti atribut, glejte [Odstranite poenoteno polje](#remove-a-unified-field). Če želite odstraniti entiteto, glejte [Odstranite poenoteno entiteto](#remove-a-unified-entity).
    - [Podvojeni zapisi](#manage-deduplication-rules) za upravljanje pravil za odstranjevanje podvojitev ali preferenc združevanja.
    - [Ujemanje pogojev](#manage-match-rules) za posodobitev pravil ujemanja v dveh ali več entitetah.
    - [Poenotena polja za stranke](#manage-unified-fields) za združevanje ali izključitev polj. Povezane profile lahko tudi združite v gruče.
@@ -53,8 +53,6 @@ ms.locfileid: "9304355"
 
 ## <a name="edit-source-fields"></a>Uredi izvorna polja
 
-Atributa ali entitete ne morete odstraniti, če sta že poenotena.
-
 1. Izberite **Uredi** na **Izvorna polja** ploščica.
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Posnetek zaslona strani Source fields, ki prikazuje število primarnih ključev, preslikanih in nepreslikanih polj":::
@@ -66,6 +64,80 @@ Atributa ali entitete ne morete odstraniti, če sta že poenotena.
 1. Po želji lahko spremenite primarni ključ za entiteto, vrste atributov in preklop **Inteligentno kartiranje** vklop ali izklop. Za več informacij glejte [Izberite izvorna polja](map-entities.md).
 
 1. Izberite **Naslednji** če želite spremeniti pravila za odstranjevanje podvojitev, ali izberite **Shrani in zapri** in se vrniti k [Posodobite nastavitve združevanja](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Odstranite poenoteno polje
+
+Če želite odstraniti polje, ki je bilo poenoteno, je treba polje odstraniti iz vseh odvisnosti, kot so segmenti, mere, obogatitve ali Odnosi.
+
+1. Ko so vse odvisnosti za polje odstranjene, pojdite na **podatki** > **Poenotiti**.
+
+1. Izberite **Uredi** na **Poenotena polja za stranke** ploščica.
+
+1. Izberite vse pojavitve polja in nato izberite **Izključi**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Posnetek zaslona strani poenotenih polj, ki prikazuje izbrana polja in gumb Izključi":::
+
+1. Izberite **Končano** za potrditev in nato izberite **Shrani in zapri**.
+
+   > [!TIP]
+   > Če vidite sporočilo »Ni bilo mogoče shraniti unify. Podanega vira ni mogoče spremeniti ali izbrisati zaradi nadaljnjih odvisnosti", potem se polje še vedno uporablja v nadaljnji odvisnosti.
+
+1. Če je polje uporabljeno v pravilu za podvojene zapise ali pogoje ujemanja, izvedite naslednje korake. V nasprotnem primeru pojdite na naslednji korak.
+   1. Izberite **Uredi** na **Podvojeni zapisi** ploščica.
+   1. Odstranite polje iz vseh pravil, v katerih se uporablja, če obstajajo, in nato izberite **Naslednji**.
+   1. Na **Ujemanje pogojev** stran, odstranite polje iz vseh pravil, v katerih je uporabljeno, in nato izberite **Shrani in zapri**.
+   1. Izberite **Poenotiti** > **Poenotite profile strank in odvisnosti**. Preden nadaljujete z naslednjim korakom, počakajte, da se poenotenje konča.
+
+1. Izberite **Uredi** na **Izvorna polja** ploščica.
+
+1. Izberite **Izberite entitete in polja** in počistite potrditveno polje ob vsaki pojavitvi polja.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Posnetek zaslona pogovornega okna Izberi entitete in polja, ki prikazuje počiščena potrditvena polja":::
+
+1. Izberite **Uporabi**.
+
+1. Izberite **Shrani in zapri**.
+
+1. Izberite **Poenotiti** > **Poenotite profile strank in odvisnosti** za posodobitev enotnega profila.
+
+### <a name="remove-a-unified-entity"></a>Odstranite poenoteno entiteto
+
+Če želite odstraniti entiteto, ki je bila poenotena, je treba entiteto odstraniti iz vseh odvisnosti, kot so segmenti, mere, obogatitve ali Odnosi.
+
+1. Ko so vse odvisnosti za entiteto odstranjene, pojdite na **podatki** > **Poenotiti**.
+
+1. Izberite **Uredi** na **Poenotena polja za stranke** ploščica.
+
+1. Izberite vsa polja za entiteto in nato izberite **Izključi**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Posnetek zaslona poenotenih polj z vsemi izbranimi polji za entiteto in gumbom Izključi":::
+
+1. Izberite **Končano** za potrditev in nato izberite **Shrani in zapri**.
+
+   > [!TIP]
+   > Če vidite sporočilo »Ni bilo mogoče shraniti unify. Podanega vira ni mogoče spremeniti ali izbrisati zaradi nadaljnjih odvisnosti", potem se entiteta še vedno uporablja v nadaljnji odvisnosti.
+
+1. Izberite **Uredi** na **Podvojeni zapisi** ploščica.
+
+1. Odstranite vsa pravila iz entitete, če obstajajo, in nato izberite **Naslednji**.
+
+1. Na **Ujemanje pogojev** strani, izberite entiteto in nato izberite **Izbriši**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Posnetek zaslona pogojev ujemanja z izbrano entiteto in gumbom Izbriši":::
+
+1. Izberite **Shrani in zapri**.
+
+1. Izberite **Uredi** na **Izvorna polja** ploščica.
+
+1. Izberite **Izberite entitete in polja** in počistite potrditveno polje poleg entitete.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Posnetek zaslona pogovornega okna Izberi entitete in polja s počiščenim potrditvenim poljem entitete":::
+
+1. Izberite **Uporabi**.
+
+1. Izberite **Shrani in zapri**.
+
+1. Izberite **Poenotiti** > **Poenotite profile strank in odvisnosti** za posodobitev enotnega profila.
 
 ## <a name="manage-deduplication-rules"></a>Upravljajte pravila deduplikacije
 

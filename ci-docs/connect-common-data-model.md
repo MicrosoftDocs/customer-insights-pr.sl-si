@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245853"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396111"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Vzpostavljanje povezave s podatki v storitvi Azure Data Lake Storage
 
@@ -40,7 +40,9 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo vašega Azure Data La
   - Lastnik podatkov shrambe zbirke dvojiških podatkov
   - Sodelujoči v shrambi zbirke dvojiških podatkov
 
-- Podatki v vaši shrambi podatkovnega jezera bi morali slediti standardu skupnega podatkovnega modela za shranjevanje vaših podatkov in imeti manifest skupnega podatkovnega modela, ki predstavlja shemo podatkovnih datotek (*.csv ali *.parquet). Manifest mora vsebovati podrobnosti o entitetah, kot so stolpci entitet in tipi podatkov, ter lokacijo podatkovne datoteke in vrsto datoteke. Za več informacij glejte [Manifest skupnega podatkovnega modela](/common-data-model/sdk/manifest). Če manifest ni prisoten, lahko skrbniški uporabniki z dostopom lastnika podatkov bloba shranjevanja ali podatkov bloba shranjevanja sodelavec določijo shemo pri vnosu podatkov.
+- Uporabnik, ki vzpostavi povezavo vir podatkov, potrebuje najmanj dovoljenj sodelavec za podatke o shranjevalnem bloku za račun za shranjevanje.
+
+- Podatki v vašem Data Lake Storageu bi morali slediti standardu skupnega podatkovnega modela za shranjevanje vaših podatkov in imeti skupni manifest podatkovnega modela, ki predstavlja shemo podatkovnih datotek (*.csv ali *.parquet). Manifest mora vsebovati podrobnosti o entitetah, kot so stolpci entitet in tipi podatkov, ter lokacijo in vrsto podatkovne datoteke. Za več informacij glejte [Manifest skupnega podatkovnega modela](/common-data-model/sdk/manifest). Če manifest ni prisoten, lahko skrbniški uporabniki z dostopom lastnika podatkov bloba shrambe ali podatkov bloba shranjevanja sodelavec določijo shemo pri vnosu podatkov.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Vzpostavljanje povezave s storitvijo Azure Data Lake Storage
 
@@ -52,7 +54,7 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo vašega Azure Data La
 
    :::image type="content" source="media/data_sources_ADLS.png" alt-text="Pogovorno okno za vnos podrobnosti povezave za Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Vnesite a **Ime** za vir podatkov in neobvezno **Opis**. Ime enolično identificira vir podatkov in se nanj sklicuje v nadaljnjih procesih in ga ni mogoče spremeniti.
+1. Vnesite a **Ime** za vir podatkov in neobvezno **Opis**. Ime enolično identificira vir podatkov in je navedeno v nadaljnjih procesih in ga ni mogoče spremeniti.
 
 1. Izberite eno od naslednjih možnosti za **Povežite shrambo z uporabo**. Za več informacij glejte [Povežite Customer Insights z Azure Data Lake Storage Gen2 račun z glavnim servisom Azure](connect-service-principal.md).
 
@@ -62,7 +64,7 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo vašega Azure Data La
    > [!NOTE]
    > Za ustvarjanje vir podatkov potrebujete eno od naslednjih vlog za vsebnik ali račun za shranjevanje:
    >
-   >  - Storage Blob Data Uporabnik z dovoljenjem za branje zadostuje za branje iz računa za shranjevanje in vnos podatkov v Customer Insights. 
+   >  - Storage Blob Data Uporabnik z dovoljenjem za branje zadostuje za branje iz računa za shranjevanje in vnos podatkov v Customer Insights.
    >  - Podatki bloba za shranjevanje sodelavec ali Lastnik je potreben, če želite urejati datoteke manifesta neposredno v Customer Insights.  
   
 1. Izberite ime za **Posoda** ki vsebuje podatke in shemo (datoteka model.json ali manifest.json), iz katere želite uvoziti podatke, in izberite **Naslednji**.
@@ -82,9 +84,9 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo vašega Azure Data La
    :::image type="content" source="media/ADLS_required.png" alt-text="Pogovorno okno, ki prikazuje Zahtevano za primarni ključ":::
 
    > [!TIP]
-   > Če želite urediti entiteto v vmesniku za urejanje JSON, izberite entiteto in nato **Uredite datoteko sheme**. Spremenite in izberite **Shrani**.
+   > Če želite urediti entiteto v vmesniku za urejanje JSON, izberite entiteto in nato **Uredi datoteko sheme**. Spremenite in izberite **Shrani**.
 
-1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopna osvežitev**. Za vsako od teh entitet glejte [Konfigurirajte postopno osvežitev za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
+1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopna osvežitev**. Za vsako od teh entitet glejte [Konfigurirajte inkrementalno osvežitev za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
 
 1. Za izbrane entitete, kjer primarni ključ ni bil definiran, **Obvezno** prikaže pod **Primarni ključ**. Za vsako od teh entitet:
    1. Izberite **Obvezno**. The **Uredi entiteto** panelni zasloni.
@@ -142,7 +144,7 @@ Nalaganje podatkov lahko traja nekaj časa. Po uspešni osvežitvi lahko vnesene
 
    :::image type="content" source="media/ADLS_required.png" alt-text="Pogovorno okno, ki prikazuje Zahtevano za primarni ključ":::
 
-1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopna osvežitev**. Za vsako od teh entitet glejte [Konfigurirajte postopno osvežitev za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
+1. Za izbrane entitete, ki zahtevajo postopno zaužitje, **Obvezno** prikaže pod **Postopna osvežitev**. Za vsako od teh entitet glejte [Konfigurirajte inkrementalno osvežitev za vire podatkov Azure Data Lake](incremental-refresh-data-sources.md).
 
 1. Za izbrane entitete, kjer primarni ključ ni bil definiran, **Obvezno** prikaže pod **Primarni ključ**. Za vsako od teh entitet:
    1. Izberite **Obvezno**. The **Uredi entiteto** panelni zasloni.
@@ -180,7 +182,7 @@ Lahko posodobite *Povežite se z računom za shranjevanje z uporabo* možnost. Z
 
 1. Izberite **Naprej**.
 1. Spremenite kar koli od naslednjega:
-   - Pomaknite se do druge datoteke model.json ali manifest.json z drugačnim nizom entitet iz vsebnika.
+   - Pomaknite se do druge datoteke model.json ali manifest.json z drugačnim naborom entitet iz vsebnika.
    - Če želite dodati dodatne entitete za vnos, izberite **Nova entiteta**.
    - Če želite odstraniti vse že izbrane entitete, če ni odvisnosti, izberite entiteto in **Izbriši**.
       > [!IMPORTANT]
@@ -190,7 +192,7 @@ Lahko posodobite *Povežite se z računom za shranjevanje z uporabo* možnost. Z
    - Spremenite samo ime entitete, da se bo ujemalo z imenom entitete v datoteki .json.
 
      > [!NOTE]
-     > Ime entitete v Customer Insights naj bo vedno enako imenu entitete v datoteki model.json ali manifest.json po zaužitju. Customer Insights preveri vsa imena entitet z model.json ali manifest.json med vsako osvežitvijo sistema. Če je ime entitete spremenjeno v Customer Insights ali zunaj njega, pride do napake, ker Customer Insights ne najde novega imena entitete v datoteki .json. Če je bilo ime zaužite entitete pomotoma spremenjeno, uredite ime entitete v Customer Insights, da se bo ujemalo z imenom v datoteki .json.
+     > Ime entitete v Customer Insights naj bo vedno enako imenu entitete v datoteki model.json ali manifest.json po zaužitju. Customer Insights preveri vsa imena entitet z model.json ali manifest.json med vsako osvežitvijo sistema. Če je ime entitete spremenjeno v Customer Insights ali zunaj njega, pride do napake, ker Customer Insights ne najde novega imena entitete v datoteki .json. Če je bilo ime vstavljene entitete pomotoma spremenjeno, uredite ime entitete v Customer Insights, da se bo ujemalo z imenom v datoteki .json.
 
 1. Izberite **Lastnosti** za dodajanje ali spreminjanje atributov ali za omogočanje profiliranja podatkov. Nato izberite **Končano**.
 

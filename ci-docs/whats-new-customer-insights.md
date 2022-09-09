@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387314"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409377"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novosti v rešitvi Dynamics 365 Customer Insights
 
@@ -42,6 +42,14 @@ Zahvaljujoč novemu poenotenju stikov lahko ustvarite segmente stikov z uporabo 
 
 Za več informacij glejte [Pregled izvoza](export-destinations.md).
 
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Območja uvajanja so usklajena z Microsoft Dataverse
+
+Ko ustvarjate novo okolje Customer Insights, lahko izberete regijo, kjer želite, da se storitev uvede in gosti. Posodobili smo izbiro regije, da se uskladimo z njo Microsoft Dataverse in Power Platform.
+
+Sedaj lahko enostavno izberete isto regijo kot vaša obstoječa Microsoft Dataverse okolje ali vaš račun za shranjevanje podatkov Azure Data Lake (če izberete to možnost), odvisno od razpoložljivosti Customer Insights v tej regiji.
+
+Za več informacij glejte [Ustvari novo okolje](create-environment.md) in [Razpoložljivost izdelkov glede na geografsko območje](https://dynamics.microsoft.com/availability-reports/).
+
 ## <a name="july-2022-updates"></a>Posodobitve za julij 2022
 
 Posodobitve v juliju 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
@@ -60,9 +68,9 @@ Za več informacij glejte [Izvoz podatkov na gostitelje SFTP](export-sftp.md).
 
 ### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizirajte izkušnje s podatki o znanih in neznanih uporabnikih
 
-Upravljanje podatkov o strankah ni nov izziv, vendar postaja vse težje, ko uporabniki krmarijo po različnih digitalnih kanalih, ki jih ponujajo blagovne znamke. Uporabnik, ki je znan (preverjen) v enem kanalu, postane neznan (nepreverjen) v drugem, če ni prijavljen. Pogosto je težava v tem, da nepreverjeni (neznani) uporabniki nimajo skupnega ID-ja. Lahko bi ga uporabili za povezovanje pomembnih atributov profilov in ustvarjanje enotnih profilov strank. Customer Insights pomaga rešiti to težavo tako, da zaužije podatke iz metod sledenja v vaših izvornih sistemih.
+Upravljanje podatkov o strankah ni nov izziv, vendar postaja vse težje, ko uporabniki krmarijo po različnih digitalnih kanalih, ki jih ponujajo blagovne znamke. Uporabnik, ki je znan (preverjen) na enem kanalu, postane neznan (nepreverjen) na drugem, če ni prijavljen. Pogosto je težava v tem, da nepreverjeni (neznani) uporabniki nimajo skupnega ID-ja. Lahko bi ga uporabili za povezovanje pomembnih atributov profilov in ustvarjanje enotnih profilov strank. Customer Insights pomaga rešiti to težavo tako, da zaužije podatke iz metod sledenja v vaših izvornih sistemih.
 
-Za več informacij glejte [Prilagodite svoje izkušnje s podatki o znanih in neznanih uporabnikih](unknown-to-known.md) .
+Za več informacij glejte [Prilagodite svoje izkušnje s podatki o znanih in neznanih uporabnikih](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Posodobitve za junij 2022
 
@@ -70,9 +78,9 @@ Posodobitve v juniju 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in
 
 ### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Posodobljena uporabniška izkušnja za vire podatkov in vnos podatkov
 
-Uvoz podatkov iz širokega nabora podatkovnih virov je osnova za konsolidacijo vaših podatkov o strankah Dynamics 365 Customer Insights . Ponovno smo pregledali uporabniško izkušnjo za uvoz in povezovanje podatkovnih virov. Namen te posodobitve je olajšati vnašanje podatkov v Customer Insights.
+Uvoz podatkov iz širokega nabora podatkovnih virov je osnova za konsolidacijo vaših podatkov o strankah Dynamics 365 Customer Insights. Ponovno smo pregledali uporabniško izkušnjo za uvoz in povezovanje podatkovnih virov. Namen te posodobitve je olajšati vnašanje podatkov v Customer Insights.
 
-Za več informacij glejte [Pregled podatkovnih virov](data-sources.md) .
+Za več informacij glejte [Pregled podatkovnih virov](data-sources.md).
 
 ### <a name="export-to-inmobi"></a>Izvozi v InMobi
 
@@ -84,13 +92,13 @@ Za več informacij glejte [Izvoz v InMobi (predogled)](export-inmobi.md)
 
 Customer Lockbox ponuja vmesnik za pregled in odobritev (ali zavrnitev) zahtev za dostop do podatkov. Te zahteve se pojavijo, ko je za razrešitev primera podpore potreben dostop do podatkov o strankah.
 
-Za več informacij glejte [Varen dostop do podatkov strank s Customer Lockbox (predogled)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview) .
+Za več informacij glejte [Varen dostop do podatkov strank s Customer Lockbox (predogled)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Povežite se s svojimi podatki prek zasebne povezave Azure
 
-Azure Private Link omogoča, da se Customer Insights poveže z vašim Azure Data Lake Storage računa prek zasebnega končna točka v vašem virtualnem omrežju. Za podatke v računu za shranjevanje, ki ni izpostavljen javnemu internetu, Zasebna povezava omogoča povezavo s tem omejenim omrežjem.
+Azure Private Link naj se Customer Insights poveže z vašim Azure Data Lake Storage računa prek zasebnega končna točka v vašem virtualnem omrežju. Za podatke v računu za shranjevanje, ki ni izpostavljen javnemu internetu, Zasebna povezava omogoča povezavo s tem omejenim omrežjem.
 
-Za več informacij glejte [Uporabite zasebno povezavo v storitvi Customer Insights](security-overview.md#set-up-an-azure-private-link) .
+Za več informacij glejte [Uporabite zasebno povezavo v storitvi Customer Insights](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Posodobitve za maj 2022
 
@@ -98,41 +106,41 @@ Posodobitve maja 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in pop
 
 ### <a name="updated-data-unification-experience"></a>Posodobljena izkušnja poenotenja podatkov
 
- Poenotenje podatkov vam omogoča poenotenje nekoč različnih podatkovnih virov v en sam glavni nabor podatkov, ki zagotavlja poenoten pogled na te podatke. Podatki so lahko poenoteni na eni ali več entitetah. Najprej ti [izberite entitete in izvorna polja](map-entities.md) ,[odstranite podvojene zapise](remove-duplicates.md) , navedite pravila za [ujemanje pogojev](match-entities.md) , in določite kateri [polja za vključitev v poenotene profile strank](merge-entities.md) .
+ Poenotenje podatkov vam omogoča poenotenje nekoč različnih podatkovnih virov v en sam glavni nabor podatkov, ki zagotavlja poenoten pogled na te podatke. Podatki so lahko poenoteni na eni ali več entitetah. Najprej ti [izberite entitete in izvorna polja](map-entities.md),[odstranite podvojene zapise](remove-duplicates.md), navedite pravila za [ujemanje pogojev](match-entities.md), in določite kateri [polja za vključitev v poenotene profile strank](merge-entities.md).
 
-Za več informacij glejte [Pregled poenotenja podatkov](data-unification.md) .
+Za več informacij glejte [Pregled poenotenja podatkov](data-unification.md).
 
 ### <a name="refreshed-home-page-in-customer-insights"></a>Osvežena domača stran v storitvi Customer Insights
 
 **domov** vas vodi skozi postopek konfiguracije za ključne funkcije in nudi pregled segmentov, mer in podatkov o obogatitvi. Osvežili smo izkušnjo, da na prvi pogled zagotovimo ustreznejše informacije.
 
-Za več informacij glejte [Raziščite Customer Insights](home.md) .
+Za več informacij glejte [Raziščite Customer Insights](home.md).
 
 ### <a name="track-usage-of-a-segment"></a>Sledite uporabi segmenta
 
-Zdaj lahko [sledite uporabi segmenta](segments.md#track-usage-of-a-segment) v aplikacijah, ki temeljijo na Dataverse organizacija, ki je povezana s Customer Insights. Za [Segmenti Customer Insights, ki se uporabljajo na poti strank Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile) , vas sistem obvesti o uporabi tega segmenta.
+Zdaj lahko [sledite uporabi segmenta](segments.md#track-usage-of-a-segment) v aplikacijah, ki temeljijo na Dataverse organizacija, ki je povezana s Customer Insights. Za [Segmenti Customer Insights, ki se uporabljajo na poti strank Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), vas sistem obvesti o uporabi tega segmenta.
 
 ### <a name="export-to-criteo"></a>Izvoz v Criteo
 
 Criteo je spletna platforma, ki uporabnikom pomaga upravljati digitalno oglaševanje. Zdaj lahko izvozite segmente poenotenih profilov strank za ustvarjanje kampanj, zagotavljanje e-poštnega trženja in uporabo določenih skupin strank s Criteo.
 
-Za več informacij glejte [Izvoz segmentov v Criteo (predogled)](export-criteo.md) .
+Za več informacij glejte [Izvoz segmentov v Criteo (predogled)](export-criteo.md).
 
 ### <a name="refined-documentation-structure-for-environment-creation"></a>Izpopolnjena struktura dokumentacije za ustvarjanje okolja
 
 Ponovno smo pregledali dokumente za pomoč v zvezi z ustvarjanjem in upravljanjem okolij v Customer Insights. Članki so zdaj združeni pod vozliščem Okolja v kazalu vsebine. Prestrukturirani članki nudijo več smernic za različne načine nastavitve okolij in imajo jasnejšo strukturo. Če želite deliti povratne informacije, nam to sporočite prek kontrolnikov na koncu člankov s pomočjo.
 
-Za več informacij glejte [Kako: Ustvarite novo okolje](create-environment.md) .
+Za več informacij glejte [Kako: Ustvarite novo okolje](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Posodobitve iz aprila 2022
 
 Posodobitve v aprilu 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
 
-### <a name="dun--bradstreet-enrichment-preview"></a>Dun & Bradstreet enrichment (Preview)
+### <a name="dun--bradstreet-enrichment-preview"></a>Obogatitev Dun & Bradstreeta (predogled)
 
-Dun & Bradstreet provides commercial data, analytics, and insights for businesses. Strankam omogoča poenoten profil strank, s katerimi podjetja obogatijo svoje podatke. Obogatitve vključujejo atribute, kot so številka DUNS, velikost podjetja, lokacija, panoga in drugo.
+Dun & Bradstreet zagotavlja komercialne podatke, analitiko in vpoglede za podjetja. Strankam omogoča poenoten profil strank, s katerimi podjetja obogatijo svoje podatke. Obogatitve vključujejo atribute, kot so številka DUNS, velikost podjetja, lokacija, panoga in drugo.
 
-For more information, see [Enrichment of company profiles with Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Za več informacij glejte [Obogatitev profilov podjetij z Dun & Bradstreet (predogled)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Pri ustvarjanju nove mere določite vrsto mere
 
@@ -167,13 +175,13 @@ Za več informacij glejte [Delajte z oznakami in stolpci](work-with-tags-columns
 Če vaše okolje uporablja Azure Data Lake Storage za shranjevanje podatkov Customer Insights, deljenje podatkov s Microsoft Dataverse potrebuje dodatno konfiguracijo.
 Prej ste lahko omogočili le skupno rabo podatkov z Dataverse ko so bili vaši podatki shranjeni v našem upravljanem podatkovnem jezeru.
 
-Za več informacij glejte [Omogoči skupno rabo podatkov z Dataverse od svojega Azure Data Lake Storage (predogled)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview) .
+Za več informacij glejte [Omogoči skupno rabo podatkov z Dataverse od svojega Azure Data Lake Storage (predogled)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Nove izvozne destinacije: Iterable in Braze
 
 Še naprej širimo naš ekosistem izvoznih destinacij z novimi povezavami. Zdaj lahko izvozite segmente v Iterable in Braze za uporabo njunih aktivacijskih storitev.
 
-Za več informacij glejte [Izvozi segmente v Iterable (predogled)](export-iterable.md) in [Izvoz segmentov v Braze (predogled)](export-braze.md) .
+Za več informacij glejte [Izvozi segmente v Iterable (predogled)](export-iterable.md) in [Izvoz segmentov v Braze (predogled)](export-braze.md).
 
 ### <a name="improvements-to-marketo-and-google-ads-export"></a>Izboljšave izvoza Marketo in Google Ads
 
@@ -190,7 +198,7 @@ Posodobitve v februarju 2022 vključujejo nove funkcije, nadgradnje zmogljivosti
 
 Vključno z že pripravljenimi modeli predvidevanje **odliv naročnin**, **odliv**, in **življenjska vrednost stranke (CLV)** postanejo splošno dostopni kot del Customer Insights. 
 
-Za več informacij glejte [Pregled napovedi](predictions-overview.md) .
+Za več informacij glejte [Pregled napovedi](predictions-overview.md).
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Novo vir podatkov: integracija z Azure Synapse Analytics (predogled)
 
@@ -198,7 +206,7 @@ Azure Synapse Analytics je podjetniška analitična storitev, ki pospeši čas d
 
 Organizacije, ki že uporabljajo Azure Synapse Analytics lahko te podatke prenese v Customer Insights. 
 
-Za več informacij glejte [Povežite an Azure Synapse vir podatkov (predogled)](connect-synapse.md) .
+Za več informacij glejte [Povežite an Azure Synapse vir podatkov (predogled)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>Obogatitev LiveRamp (predogled)
 
@@ -208,28 +216,28 @@ Za več informacij glejte [Obogatite profile strank z identitetnimi podatki iz L
 
 ### <a name="enrichment-for-data-sources-preview"></a>Obogatitev za vire podatkov (predogled)
 
-Uporabite podatke iz virov, kot so Microsoft in drugi partnerji, da obogatite svoje podatke o strankah pred poenotenjem podatkov. vir podatkov obogatitve pomagajo ustvariti višjo popolnost in kakovost podatkov, kar lahko pomaga doseči boljše rezultate, ko poenotite podatke.
+Uporabite podatke iz virov, kot so Microsoft in drugi partnerji, da obogatite svoje podatke o strankah pred poenotenjem podatkov. Vir podatkov obogatitve pomagajo ustvariti višjo popolnost in kakovost podatkov, kar lahko pomaga doseči boljše rezultate, ko poenotite podatke.
 
-Za več informacij glejte [Obogatitev za vire podatkov (predogled)](data-sources-enrichment.md) .
+Za več informacij glejte [Obogatitev za vire podatkov (Predogled)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Sprememba lastnika okolja
 
 Medtem ko ima lahko več uporabnikov skrbniška dovoljenja v Customer Insights, je samo en uporabnik lastnik okolja. Izboljšana izkušnja vam omogoča, da spremenite lastnike okolja in zahtevate lastništvo, če prejšnji lastnik zapusti organizacijo. 
 
-Za več informacij glejte [Spremenite lastnika okolja](manage-environments.md#change-the-owner-of-an-environment) .
+Za več informacij glejte [Spremenite lastnika okolja](manage-environments.md#change-the-owner-of-an-environment).
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Postopek priprave podatkov navaja razloge za poškodovane zapise
 
 Priprava podatkov zdaj prikazuje vzrok za pokvarjenost za vsa polja s pokvarjenimi podatki. Informacije so na voljo na ravni posameznega zapisa za lažjo identifikacijo. 
 
-Za več informacij glejte [Poškodovani viri podatkov](entities.md#corrupted-data-sources) .
+Za več informacij glejte [Poškodovani viri podatkov](entities.md#corrupted-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Konec predogleda za funkcije poročanja v zmožnosti vpogledov v sodelovanje
 
 The Dynamics 365 Customer Insights Predogled zmogljivosti vpogledov v sodelovanje se je končal 15. februarja 2022.  
-Ta sprememba pomeni, da preskusna izkušnja Customer Insights ne vključuje več zmožnosti ustvarjanja tokov ali drugih funkcij poročanja.
+Ta sprememba pomeni, da preskusna izkušnja Customer Insights ne vključuje več možnosti ustvarjanja tokov ali drugih funkcij poročanja.
 
-Vabimo vas, da raziščete in ocenite številne druge funkcije [Vpogledi strank](https://dynamics.microsoft.com/ai/customer-insights/) , Microsoftova platforma za podatke o strankah (CDP).    
+Vabimo vas, da raziščete in ocenite številne druge funkcije [Vpogledi strank](https://dynamics.microsoft.com/ai/customer-insights/), Microsoftova platforma za podatke o strankah (CDP).    
  
 V prehodnem obdobju imajo obstoječi udeleženci predogleda še vedno dostop do nekaterih zmožnosti in funkcionalnosti predogleda:
 
@@ -238,7 +246,7 @@ V prehodnem obdobju imajo obstoječi udeleženci predogleda še vedno dostop do 
 - Izboljšajte poenotene profile z vnesenimi in izpopolnjenimi dogodki, da izkoristite celotno vrednost svojih podatkov o strankah
   
 V prehodnem obdobju se zajeti dogodki še vedno pretakajo v povezano Data Lake. Ko je ta funkcija izklopljena, se bo skupna raba podatkov ustavila in novi dogodki se ne pošiljajo v povezani pomnilnik.
-Če imate vprašanja o koncu predogleda zmožnosti, se neposredno obrnite na skupino za Microsoftov račun. Vaša ekipa za račun vas bo obveščala o prihodnjih izdajah. 
+Če imate vprašanja o koncu predogleda zmožnosti, se neposredno obrnite na skupino za Microsoftov račun. Vaša skupina za račun vas bo obveščala o prihodnjih izdajah. 
 
 ## <a name="january-2022-updates"></a>Posodobitve v januarju 2022
 

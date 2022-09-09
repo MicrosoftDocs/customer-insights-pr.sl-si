@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083110"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411851"
 ---
 # <a name="predictions-overview"></a>Pregled predvidevanj
 
@@ -29,7 +29,7 @@ Najlažji način za začetek napovedovanja podatkov predstavljajo vnaprej določ
 - [Priporočilo izdelka](predict-product-recommendation.md): predlaga nabore napovednih priporočil za izdelke, ki temeljijo na nakupnem vedenju in strankah s podobnimi vzorci nakupovanja.
 - [Izguba naročnin](predict-subscription-churn.md): predvidi, ali za stranko obstaja tveganje, če ne bo več uporabljala naročniških izdelkov ali storitev vašega podjetja.
 - [Izguba transakcij](predict-transactional-churn.md): predvidi, ali stranka ne bo več kupovala vaših izdelkov ali storitev v določenem časovnem okviru.
-- [Analiza občutkov](sentiment-analysis.md) : Analizirajte čustva povratnih informacij strank in prepoznajte poslovne vidike, ki so pogosto omenjeni.
+- [Analiza razpoloženja](sentiment-analysis.md) : analizirajte razpoloženje povratnih informacij strank in prepoznajte poslovne vidike, ki se pogosto omenjajo.
 
 # <a name="business-accounts-b-to-b"></a>[Poslovni računi (podjetja podjetjem)](#tab/b2b)
 
@@ -38,15 +38,12 @@ Najlažji način za začetek napovedovanja podatkov predstavljajo vnaprej določ
 ---
 
 > [!TIP]
-> Priporočamo, da redno posodabljate že pripravljene modele s posodobljenimi podatki, da zagotovite, da bodo natančno obveščali o vašem primeru poslovne uporabe. Podatki se osvežijo ad hoc, ko sistem zaužije nove ali posodobljene vire podatkov. Vendar pa bodo modeli samo v tem primeru ponovno ocenili in še naprej uporabljali obstoječe podatke o usposabljanju.
-> 
-> Konfigurirate lahko **Posodobitev urnika** z nastavitvijo urnika ponovnega usposabljanja modela v konfiguracijski izkušnji. Model se bo ponovno usposobil in ocenil po tem urniku, ki ga lahko kadar koli spremenite.
-
+> Priporočamo, da redno osvežujete že pripravljene modele s posodobljenimi podatki, da zagotovite, da bodo pravilno informirali vaš poslovni primer uporabe. Podatki se ad hoc osvežijo, ko sistem zaužije nove ali posodobljene vire podatkov. Vendar bodo modeli samo v tem primeru ponovno ocenili in še naprej uporabljali obstoječe podatke o usposabljanju.
+>
+> Konfigurirate lahko **Posodobi urnik** z nastavitvijo urnika preusposabljanja modela v konfiguracijski izkušnji. Model se bo znova usposobil in ponovno ocenil po tem urniku, ki ga lahko kadar koli spremenite.
 
 ## <a name="azure-machine-learning-integration"></a>Integracija strojnega učenja Azure
 
 Če organizacija že uporablja scenarije strojnega učenja, ki temeljijo na poskusih strojnega učenja Azure, bo funkcija modelov po meri v Customer Insights pomagala povezovati pike. Ustvarite poteke dela, ki vam pomagajo izbrati podatke, iz katerih želite ustvariti vpogled, in rezultate preslikajte v svoje poenotene profile strank. Za več informacij glejte [Modeli strojnega učenja po meri](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder predvidevanje
-
-Včasih so nabori podatkov nepopolni in nekatere vrednosti manjkajo. Customer Insights vam lahko pomaga napovedati manjkajoče vrednosti za entiteto in segmente stranke. Za več informacij glejte razdelek [Dopolnjevanje delnih podatkov s predvidevanji](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

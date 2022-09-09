@@ -14,18 +14,18 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246267"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396021"
 ---
 # <a name="view-system-configuration"></a>Oglejte si konfiguracijo sistema
 
 Oglejte si informacije o sistemu, stanje sistema in uporabo API-ja.
 
-## <a name="view-api-usage"></a>Ogled uporabe API-ja
+## <a name="view-api-usage"></a>Oglejte si uporabo API-ja
 
 Oglejte si podrobnosti o uporabi API-ja v realnem času in poglejte, kateri dogodki so se zgodili v danem časovni okvir.
 
@@ -38,12 +38,6 @@ Oglejte si podrobnosti o uporabi API-ja v realnem času in poglejte, kateri dogo
    - **Klici API** – grafikon, ki prikazuje skupno število klicev API-ja v izbranem časovnem okviru.
    - **Prenos podatkov** – grafikon, ki prikazuje količino podatkov, ki so bili preneseni prek API-ja v izbranem časovnem okviru.
    - **Postopki** – tabela z vrsticami za vsak razpoložljiv postopek API-ja in podrobnosti o uporabi postopkov. Izberite ime operacije, na katero želite iti [referenco API-ja](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operacije, ki uporabljajo [vnos podatkov v realnem času](real-time-data-ingestion.md) vsebujejo simbol daljnogleda za ogled uporabe API-ja v realnem času.
-
-   1. Izberite daljnogled, da ga odprete **Uporaba API-ja v realnem času** podokno s podrobnostmi o uporabi operacije.
-   1. **Izberite časovni okvir** za ogled.
-   1. Uporabi **Združi po** izberite, kako najbolje predstaviti svoje interakcije v realnem času. Združite podatke po API-ju **Metoda**, **ime subjekta** (zaužita entiteta), **Ustvaril** (vir dogodka), **Rezultat** (uspeh ali neuspeh) oz **Kode napak**. Podatki so na voljo kot grafikon zgodovine in kot tabela.
 
 ## <a name="view-system-information"></a>Ogled informacij o sistemu
 
@@ -96,7 +90,7 @@ Sistem uporablja naslednje statuse za naloge in procese:
 |Predelava  |Naloga ali proces je v teku.  |
 |Osveževanje    |Naloga ali proces je v teku. Za preklic te operacije izberite **Osvežujoče** in **Prekliči delo**. Če zaustavite osveževanje opravila ali procesa, se povrne v stanje zadnjega osveževanja.       |
 |Preskočeno  |Naloga ali proces je bil preskočen. Eden ali več nadaljnjih postopkov, od katerih je odvisno opravilo, ne uspe ali ste jih preskočili.|
-|Uspelo  |Opravilo ali proces je bil uspešno zaključen. Za vire podatkov označuje, da so bili podatki uspešno vneseni, če je čas omenjen v **Osvežena** stolpec.|
+|Uspelo  |Opravilo ali postopek je uspešno zaključen. Za vire podatkov označuje, da so bili podatki uspešno vneseni, če je čas omenjen v **Osvežena** stolpec.|
 |V čakalni vrsti | Obdelava je v čakalni vrsti in se bo začela, ko bodo končana vsa opravila in procesi navzgor. Za več informacij glejte [Osveži procese](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Osveži procese
@@ -108,7 +102,7 @@ Osvežitev za naloge in procese se izvaja v skladu z [nastavljen urnik](schedule
 |Dejavnost  |Zažene se ročno (enkratna osvežitev). Odvisno od postopka spajanja. Vpogledi so odvisni od njegove obdelave.|
 |Povezava analize |Zažene se ročno (enkratna osvežitev). Odvisno od segmentov.  |
 |Priprava analize |Zažene se ročno (enkratna osvežitev). Odvisno od segmentov.  |
-|Priprava podatkov   |Potrebuje entiteto za delovanje. Vir podatkov entitete so odvisne od zaužitja. Obogatene entitete so odvisne od obogatitev. Entiteta stranke je odvisna od združitve.  |
+|Priprava podatkov   |Potrebuje entiteto za delovanje. Vir podatkov entitete so odvisne od zaužitja. Obogatene entitete so odvisne od obogatitev. Entiteta Stranka je odvisna od združitve.  |
 |Viri podatkov   |Ni odvisno od nobenega drugega postopka. Ujemanje je odvisno od uspešnega dokončanja tega postopka.  |
 |Obogatitve   |Zažene se ročno (enkratna osvežitev). Odvisno od postopka spajanja. |
 |Izvozne destinacije |Zažene se ročno (enkratna osvežitev). Odvisno od segmentov.  |

@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Uporabite modele po meri iz Strojnega učenja Azure
           href: custom-models.md
-        - name: Izpolnite delno manjkajoče podatke
-          href: predictions.md
     - name: Vzorčni priročniki
       items:
         - name: Vzorčni priročnik za predvidevanje CLV
