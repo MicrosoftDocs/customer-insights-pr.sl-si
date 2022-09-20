@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304079"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460210"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvozov (predogledna različica)
 
@@ -81,6 +81,11 @@ Izberite izvoz za ogled razpoložljivih dejanj.
 ## <a name="schedule-and-run-exports"></a>Načrtovanje in zagon izvozov
 
 Vsak izvoz, ki ga konfigurirate, ima urnik osveževanja. Med osveževanjem sistem išče nove ali posodobljene podatke, ki jih bo vključil v izvoz. Izvozi se privzeto izvajajo kot del vsakega [načrtovanega osveževanja sistema](schedule-refresh.md). Za ročni zagon izvozov lahko prilagodite urnik osveževanja ali ga izklopite.
+
+> [!TIP]
+> Zmanjšajte čas obdelave izvozov segmentov z naslednjimi najboljšimi praksami:
+> - Entitete segmenta porazdelite med več izvozov.
+> - Izogibajte se načrtovanju vseh izvozov hkrati. Pustite 30 minut ali eno uro med načrtovanim časom vsakega izvoza.
 
 Urniki izvoza so odvisni od stanja vašega okolja. Če so posodobitve v teku v [odvisnostih](system.md#refresh-processes), ko bi se moral načrtovani izvoz začeti, bo sistem najprej dokončal posodobitve, šele nato pa začel z izvozom. The **Osvežena** stolpec prikazuje, kdaj je bil izvoz nazadnje osvežen.
 

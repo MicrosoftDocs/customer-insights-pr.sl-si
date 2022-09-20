@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411760"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463239"
 ---
 # <a name="service-limits-in-customer-insights"></a>Omejitve storitev v Customer Insights
 
@@ -23,8 +23,9 @@ ms.locfileid: "9411760"
 
 | Površina  | Omejitve  | Beležke |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenti, mere in napovedi | 300  | Skupno število [segmenti](segments.md),[ukrepe](measures.md), in [napovedi](predictions-overview.md) skupaj ne sme preseči 300.  |
+| Segmenti, mere in napovedi | 300  | Skupno število [segmente](segments.md),[ukrepe](measures.md), in [napovedi](predictions-overview.md) skupaj ne sme preseči 300.  |
 | Relacije | 20 stopenj globine v odnosih poti entitete. | Pri ustvarjanju [segmentov](segments.md) ali [ukrepov](measures.md) z uporabo vmesnika za gradnjo imajo lahko poti entitet do 20 povezav med začetno in ciljno entiteto.  |
+|Uvoz podatkov| Sočasne ocene za Power Query viri podatkov so omejeni. | Customer Insights ima enako [omejitve osveževanja, kot so tokovi podatkov v PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Pravično razporejanje delovnih mest
 

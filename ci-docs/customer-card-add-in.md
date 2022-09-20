@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194943"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473662"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Dodatek kartice stranke za aplikacije Dynamics 365 (predogled)
 
@@ -29,10 +29,11 @@ Pridobite 360-stopinjski pogled svojih strank neposredno v aplikacijah Dynamics 
 ## <a name="prerequisites"></a>Zahteve
 
 - Aplikacije Dynamics 365, ki temeljijo na modelu, kot je Sales ali storitve za stranke, različica 9.0 in novejše.
-- Če želite, da se vaši podatki Dynamics 365 preslikajo v profile strank Customer Insights, priporočamo, da [zaužito iz aplikacije Dynamics 365 z uporabo Microsoft Dataverse priključek](connect-power-query.md). Če uporabljate drug način za vnos stikov (ali računov) Dynamics 365, se prepričajte, da je`contactid` (oz`accountid`) polje je nastavljeno kot [primarni ključ za ta vir podatkov med postopkom združevanja podatkov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Če želite, da se vaši podatki Dynamics 365 preslikajo v profile strank Customer Insights, priporočamo, da [zaužito iz aplikacije Dynamics 365 z uporabo Microsoft Dataverse priključek](connect-power-query.md). Če uporabljate drug način za vnos stikov (ali računov) Dynamics 365, se prepričajte, da je`contactid` (oz. `accountid`) polje je nastavljeno kot [primarni ključ za ta vir podatkov med postopkom združevanja podatkov](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Vsi uporabniki Dynamics 365 dodatka za kartico stranke morajo biti [dodani kot uporabniki](permissions.md) v Customer Insights, da si ogledate podatke.
 - [Konfigurirane zmogljivosti iskanja in filtriranja](search-filter-index.md) v storitvi Customer Insights.
-- Vsak kontrolnik dodatka se opira na določene podatke v Customer Insights. Nekateri podatki in kontrolniki so na voljo samo v okoljih določenih vrst. Konfiguracija dodatka vas bo obvestila, če kontrolnik ni na voljo zaradi izbrane vrste okolja. Več informacij o [primerih uporabe okolja](work-with-business-accounts.md).
+- Nekateri podatki in kontrolniki so na voljo samo v okoljih določenih vrst. Konfiguracija dodatka vas bo obvestila, če kontrolnik ni na voljo zaradi izbrane vrste okolja. Ta napaka bo prikazana v kontrolniku pri upodabljanju. Več informacij o [primerih uporabe okolja](work-with-business-accounts.md).
+- Vsak kontrolnik dodatka se opira na določene podatke v Customer Insights.
   - **Nadzor meritev** zahteva [konfigurirane mere atributov strank](measures.md).
   - **Obveščevalni nadzor** zahteva podatke, ustvarjene z uporabo [napovedi ali modeli po meri](predictions-overview.md).
   - **Nadzor podrobnosti o stranki** prikazuje vsa polja iz profila, ki so na voljo v enotnem profilu stranke.
@@ -81,7 +82,7 @@ Morda se boste morali vpisati s svojimi skrbniškimi poverilnicami za aplikacijo
 
 ## <a name="add-customer-card-controls-to-forms"></a>Dodajanje kontrolnikov kartic strank v obrazce
 
-Glede na vaš primer se lahko odločite, da dodate kontrolnike v obrazec **Stik** ali obrazec **Račun**. Če je vaše okolje Customer Insights za poslovne račune, priporočamo, da dodate kontrolnike v obrazec za račun. V tem primeru »stik« v spodnjih korakih zamenjajte z »računom«
+Glede na vaš primer se lahko odločite, da dodate kontrolnike v obrazec **Stik** ali obrazec **Račun**. Če je vaše okolje Customer Insights namenjeno poslovnim računom, priporočamo, da dodate kontrolnike obrazcu Račun. V tem primeru »stik« v spodnjih korakih zamenjajte z »računom«
 
 1. Če želite v obrazec za stik dodati kontrolnike kartice stranke, v storitvi Dynamics 365 odprite **Nastavitve** > **Prilagoditve**.
 
@@ -139,7 +140,7 @@ Tudi s pravilno konfiguriranimi ID polji kontrolniki ne najdejo podatkov za nobe
 1. Preglejte konfiguracijo vnosa podatkov. Uredite vir podatkov za sistem Dynamics 365, ki vsebuje ID stika GUID. Če je ID stika GUID prikazan z velikimi črkami v Power Query urednik, poskusite naslednje korake:
     1. Uredite vir podatkov, da odprete vir podatkov v Power Query Urednik.
     1. Izberite stolpec ID stika.
-    1. Izberite **Preoblikovanje** v naslovni vrstici, da vidite razpoložljiva dejanja.
+    1. Izberite **Preobrazba** v naslovni vrstici, da vidite razpoložljiva dejanja.
     1. Izberite **male črke**. Preverite, ali so GUID-ji v tabeli zdaj napisani z malimi črkami.
     1. Shranite vir podatkov.
     1. Zaženite procese vnosa podatkov, poenotenja in nižje, da razširite spremembe v GUID.

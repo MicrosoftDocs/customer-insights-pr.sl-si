@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207065"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463285"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povežite se z a Power Query vir podatkov
 
@@ -63,7 +63,9 @@ Dodajanje podatkovnih virov na podlagi Power Query priključkov na splošno sled
 Nalaganje podatkov lahko traja nekaj časa. Po uspešni osvežitvi lahko vnesene podatke pregledate iz [**Entitete**](entities.md) strani.
 
 > [!CAUTION]
-> Vir podatkov temelji na Power Query ustvarja a [tok podatkov v Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ne spreminjajte imena toka podatkov v Power Platform skrbniško središče, ki se uporablja v Customer Insights. Preimenovanje toka podatkov povzroča težave s sklici med Customer Insights vir podatkov in Dataverse pretok podatkov.
+>
+> - Vir podatkov temelji na Power Query ustvarja a [tok podatkov v Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ne spreminjajte imena toka podatkov v Power Platform skrbniško središče, ki se uporablja v Customer Insights. Preimenovanje toka podatkov povzroča težave s sklici med Customer Insights vir podatkov in Dataverse pretok podatkov.
+> - Sočasne ocene za Power Query viri podatkov v Customer Insights imajo enako [omejitve osveževanja, kot so tokovi podatkov v PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Če osvežitev podatkov ne uspe, ker so dosegli omejitev vrednotenja, priporočamo, da prilagodite razpored osveževanja za vsak tok podatkov, da zagotovite, da se viri podatkov ne obdelujejo hkrati.
 
 ### <a name="available-power-query-data-sources"></a>Na voljo Power Query viri podatkov
 
@@ -77,10 +79,10 @@ Vnos podatkov iz podatkovnih virov na mestu uporabe je podprt na podlagi Microso
 
 Viri podatkov, ki so ustvarjeni po povezovanju a Dataverse okolje z uporabo Customer Insights [Power Platform podatkovnih tokov](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) privzeto. Za podatkovne tokove je prek prehoda za podatke podprta povezljivost na mestu uporabe. Lahko odstranite in znova ustvarite vire podatkov, ki so obstajali pred a Dataverse okolje je bilo povezano [z uporabo na mestu uporabe podatkovnih prehodov](/data-integration/gateway/service-gateway-app).
 
-Podatkovni prehodi iz obstoječega Power BI oz Power Apps bodo vidni in jih lahko znova uporabite v Customer Insights. Na strani z viri podatkov se nahajajo povezave do okolja Microsoft Power Platform, kjer si lahko ogledate prehode za podatke na mestu uporabe ter jih konfigurirate.
+Podatkovni prehodi iz obstoječega Power BI oz Power Apps okolje bodo vidni in jih lahko znova uporabite v Customer Insights, če sta podatkovni prehod in okolje Customer Insights v isti regiji Azure. Na strani z viri podatkov se nahajajo povezave do okolja Microsoft Power Platform, kjer si lahko ogledate prehode za podatke na mestu uporabe ter jih konfigurirate.
 
 > [!IMPORTANT]
-> Prepričajte se, da so vaši prehodi posodobljeni na najnovejšo različico. Namestite lahko posodobitev in znova konfigurirate prehod iz poziva, prikazanega na zaslonu prehoda, neposredno ali [prenesite najnovejšo različico](https://powerapps.microsoft.com/downloads/). Če ne uporabljate najnovejše različice prehoda, osvežitev toka podatkov ne uspe s sporočili o napakah, kot je **Ključna beseda ni podprta: lastnosti konfiguracije. Ime parametra: ključna beseda**.
+> Prepričajte se, da so vaši prehodi posodobljeni na najnovejšo različico. Namestite lahko posodobitev in znova konfigurirate prehod iz poziva, prikazanega na zaslonu prehoda, neposredno ali [prenesite najnovejšo različico](https://powerapps.microsoft.com/downloads/). Če ne uporabljate najnovejše različice prehoda, osvežitev podatkovnega toka ne uspe s sporočili o napakah, kot je **Ključna beseda ni podprta: lastnosti konfiguracije. Ime parametra: ključna beseda**.
 >
 > Napake s na mestu uporabe podatkovnimi prehodi v Customer Insights so pogosto posledica težav s konfiguracijo. Za več informacij o odpravljanju težav s podatkovnimi prehodi glejte [Odpravite težave s podatkovnim prehodom na mestu uporabe](/data-integration/gateway/service-gateway-tshoot).
 
