@@ -1,7 +1,7 @@
 ---
 title: Povežite se z a Power Query vir podatkov (vsebuje video)
 description: Vnos podatkov prek a Power Query priključek (vsebuje video).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463285"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609916"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povežite se z a Power Query vir podatkov
 
@@ -43,16 +43,17 @@ Dodajanje podatkovnih virov na podlagi Power Query priključkov na splošno sled
 
 1. Izberite **Pretvori podatke**.
 
-1. The **Power Query - Uredite poizvedbe** vam omogoča pregledovanje in izboljšanje podatkov. Entitete, ki jih sistemi, opredeljeni v izbranem viru podatkov, prikažejo v levem podoknu.
+1. Preglejte in izboljšajte svoje podatke v **Power Query - Uredite poizvedbe** strani. Entitete, ki jih sistemi, opredeljeni v izbranem viru podatkov, prikažejo v levem podoknu.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Pogovorno okno urejanja poizvedb":::
 
-1. Podatke pa lahko tudi preoblikujete. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v Power Query okno za uporabo transformacij. Vsaka transformacija je navedena pod **Uporabljeni koraki**. Power Query zagotavlja številne [vnaprej zgrajena transformacija](/power-query/power-query-what-is-power-query#transformations) opcije.
+1. Preoblikujte svoje podatke. Izberite entiteto, ki jo želite urediti ali preoblikovati. Uporabite možnosti v Power Query okno za uporabo transformacij. Vsaka transformacija je navedena pod **Uporabljeni koraki**. Power Query zagotavlja številne [vnaprej zgrajena transformacija](/power-query/power-query-what-is-power-query#transformations) opcije.
 
-   Priporočamo, da uporabite naslednje transformacije:
-
-   - Če vnašate podatke iz datoteke CSV, prva vrstica pogosto vsebuje glave. Pojdi do **Preobrazba** in izberite **Prvo vrstico uporabite kot glave**.
-   - Prepričajte se, da je vrsta podatkov pravilno nastavljena. Na primer, za datumska polja izberite vrsto datuma.
+   > [!IMPORTANT]
+   > Priporočamo, da uporabite naslednje transformacije:
+   >
+   > - Če vnašate podatke iz datoteke CSV, prva vrstica pogosto vsebuje glave. Pojdi do **Preobrazba** in izberite **Prvo vrstico uporabite kot glave**.
+   > - Prepričajte se, da je tip podatkov pravilno nastavljen in se ujema s podatki. Na primer, za datumska polja izberite vrsto datuma.
 
 1. Če želite dodati dodatne entitete v svoj vir podatkov v **Uredite poizvedbe** dialog, pojdi na **domov** in izberite **Pridobite podatke**. Ponavljajte korake 5–10, dokler ne dodate vseh entitet za ta vir podatkov. Če imate zbirko podatkov, ki vključuje več naborov podatkov, je vsak nabor podatkov svoja entiteta.
 
@@ -65,7 +66,7 @@ Nalaganje podatkov lahko traja nekaj časa. Po uspešni osvežitvi lahko vnesene
 > [!CAUTION]
 >
 > - Vir podatkov temelji na Power Query ustvarja a [tok podatkov v Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Ne spreminjajte imena toka podatkov v Power Platform skrbniško središče, ki se uporablja v Customer Insights. Preimenovanje toka podatkov povzroča težave s sklici med Customer Insights vir podatkov in Dataverse pretok podatkov.
-> - Sočasne ocene za Power Query viri podatkov v Customer Insights imajo enako [omejitve osveževanja, kot so tokovi podatkov v PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Če osvežitev podatkov ne uspe, ker so dosegli omejitev vrednotenja, priporočamo, da prilagodite razpored osveževanja za vsak tok podatkov, da zagotovite, da se viri podatkov ne obdelujejo hkrati.
+> - Sočasne ocene za Power Query viri podatkov v Customer Insights imajo enako [omejitve osveževanja, kot so tokovi podatkov v PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Če osvežitev podatkov ne uspe, ker so dosegli omejitev vrednotenja, priporočamo, da prilagodite razpored osveževanja za vsak podatkovni tok, da zagotovite, da se viri podatkov ne obdelujejo istočasno.
 
 ### <a name="available-power-query-data-sources"></a>Na voljo Power Query viri podatkov
 
@@ -102,5 +103,51 @@ Podatkovni prehodi iz obstoječega Power BI oz Power Apps okolje bodo vidni in j
 1. Izberite **Shrani** da uveljavite svoje spremembe in se vrnete na **Viri podatkov** strani.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Pogosti razlogi za napake pri vnosu ali poškodovane podatke
+
+### <a name="data-type-does-not-match-data"></a>Vrsta podatkov se ne ujema s podatki
+
+Najpogostejše neujemanje vrste podatkov se pojavi, ko datumsko polje ni nastavljeno na pravilno obliko datuma.
+
+Podatke je mogoče popraviti pri viru in jih ponovno zaužiti. Ali pa popravite transformacijo znotraj Customer Insights. Če želite popraviti transformacijo:
+
+1. Pojdite na **Podatki** > **Viri podatkov**.
+
+1. Poleg vir podatkov s poškodovanimi podatki izberite **Uredi**.
+
+1. Izberite **Naprej**.
+
+1. Izberite vsako od poizvedb in poiščite transformacije, uporabljene znotraj »Uporabljenih korakov«, ki so nepravilne, ali datumske stolpce, ki niso bili preoblikovani z obliko datuma.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Uredi, ki prikazuje napačno obliko datuma":::
+
+1. Spremenite vrsto podatkov, da se bodo pravilno ujemali s podatki.
+
+1. Izberite **Shrani**. Ta vir podatkov je osvežen.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Odpravite težave s PPDF Power Query na osnovi vir podatkov težave z osveževanjem
+
+Če so podatki zastareli ali prejmete napake po vir podatkov osvežitvi, izvedite naslednje korake:
+
+1. Obiščite spletno mesto [Power Platform](https://make.powerapps.com).
+
+1. Izberite **okolje** za vaš primerek Customer Insights.
+
+1. Pojdite na **Podatkovni tokovi**.
+
+1. Za tok podatkov, ki ustreza vir podatkov v Customer Insights, izberite navpično elipso (&vellip;) in nato izberite **Prikaži zgodovino osveževanja**.
+
+1. Če je **Stanje** podatkovnega toka je **Uspeh**, lastništvo nad Power Query na osnovi vir podatkov se je morda spremenilo:
+
+   1. Preglejte urnik osveževanja iz zgodovine osveževanja.
+   1. Nastavite urnik novega lastnika in shranite nastavitve.
+
+1. Če je **Stanje** podatkovnega toka je **Ni uspelo**:
+
+   1. Prenesite datoteko z zgodovino osveževanja.
+   1. Preglejte preneseno datoteko in poiščite razlog za napako.
+   1. Če napake ni mogoče odpraviti, izberite **?** Da odprete vstopnico za podporo. Vključite preneseno datoteko zgodovine osveževanja.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

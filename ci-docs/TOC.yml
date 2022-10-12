@@ -162,6 +162,8 @@
           href: sentiment-analysis.md
         - name: Uporabite modele po meri iz Strojnega učenja Azure
           href: custom-models.md
+        - name: Ustvarjanje segmentov na podlagi predvidevanja
+          href: prediction-based-segment.md
     - name: Vzorčni priročniki
       items:
         - name: Vzorčni priročnik za predvidevanje CLV
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Poskusi s strojnim učenjem Azure
           href: azure-machine-learning-experiments.md
-    - name: Upravljanje predvidevanj
-      href: manage-predictions.md
-    - name: Ustvarjanje segmentov na podlagi predvidevanja
-      href: prediction-based-segment.md
 - name: Možnosti izvoza
   items:
     - name: Izvozi

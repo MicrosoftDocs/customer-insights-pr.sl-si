@@ -1,7 +1,7 @@
 ---
-title: Predvidevanje življenjske vrednosti stranke (CLV)
+title: Predvidevanje skupne vrednosti stranke (CLV)
 description: Predvidevajte prihodnje potencialne prihodke za aktivne stranke.
-ms.date: 07/21/2022
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,74 +13,63 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
-ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
+ms.openlocfilehash: f27462ac327027e50e23387ac9f75a671db9a86d
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9186460"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610394"
 ---
-# <a name="customer-lifetime-value-clv-prediction"></a>Predvidevanje življenjske vrednosti stranke (CLV)
+# <a name="predict-customer-lifetime-value-clv"></a>Predvidevanje skupne vrednosti stranke (CLV)
 
-Predvidite potencialno vrednost (prihodek), ki jo bodo posamezne aktivne stranke prispevale vašemu podjetju v določenem prihodnjem časovnem obdobju. Ta funkcija vam lahko pomaga doseči različne cilje:
+Predvidite potencialno vrednost (prihodek), ki jo bodo posamezne aktivne stranke prispevale vašemu podjetju v določenem prihodnjem časovnem obdobju. Ta predvidevanje vam pomaga:
 
-- prepoznati stranke z visoko vrednostjo in obdelavo tega vpogleda,
-- ustvariti strateške segmente strank na podlagi njihove potencialne vrednosti za vodenje prilagojenih akcij s ciljno usmerjenimi prodajnimi, trženjskimi in podpornimi prizadevanji,
-- usmerjati razvoj izdelkov s poudarkom na funkcijah, ki povečujejo vrednost kupca,
-- optimizirati prodajno ali tržno strategijo in natančneje dodeliti proračun za doseganje strank,
-- prepoznati in nagraditi stranke z visoko vrednostjo s programi zvestobe ali nagrajevanja.
+- Prepoznajte stranke z visoko vrednostjo in obdelajte ta vpogled.
+- Ustvarite strateške segmente strank na podlagi njihove potencialne vrednosti za vodenje prilagojenih kampanj s ciljno usmerjeno prodajo, trženjem in podporo.
+- Vodite razvoj izdelka z osredotočanjem na funkcije, ki povečujejo vrednost za stranke.
+- Optimizirajte prodajno ali tržno strategijo in natančneje dodelite proračun za doseganje strank.
+- Prepoznajte in nagradite stranke z visoko vrednostjo prek programov zvestobe ali nagrajevanja.
+
+Ugotovite, kaj CLV pomeni za vaše podjetje. Podpiramo CLV, ki temelji na transakcijah predvidevanje. Predvidena vrednost stranke temelji na zgodovini poslovnih transakcij. Razmislite o ustvarjanju več modelov z različnimi preferencami vnosa in primerjajte rezultate modelov, da vidite, kateri scenarij modela najbolje ustreza vašim poslovnim potrebam.
+
+> [!TIP]
+> Preizkusite CLV predvidevanje z uporabo vzorčnih podatkov: [Doživljenjska vrednost stranke (CLV) predvidevanje vzorčni vodnik](sample-guide-predict-clv.md).
 
 ## <a name="prerequisites"></a>Zahteve
 
-Preden začnete, razmislite, kaj življenjska vrednost strank pomeni za vaše podjetje. Trenutno podpiramo predvidevanje življenjske vrednosti strank na podlagi transakcij. Predvidena vrednost stranke temelji na zgodovini poslovnih transakcij. Če želite ustvariti predvidevanje, potrebujete vsaj dovoljenja za [ sodelujočega](permissions.md).
-
-Ker konfiguracija in zagon modela CLV ne traja veliko časa, razmislite o ustvarjanju več modelov z različnimi vhodnimi nastavitvami ter primerjajte rezultate modelov, da ugotovite, kateri primer modela najbolje ustreza vašim poslovnim potrebam.
-
-### <a name="data-requirements"></a>Zahteve za podatke
-
-Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočljivi za večjo zmogljivost modela. Več podatkov ko model lahko obdela, bolj natančno bo predvidevanje. Zato vam priporočamo, da vključite več podatkov o dejavnostih strank, če so ti na voljo.
-
-- Identifikator stranke: enolični identifikator, ki ustreza transakcijam posamezni stranki
-
-- Zgodovina transakcij: dnevnik zgodovine transakcij s spodnjo semantično podatkovno shemo
-    - **ID transakcije**: enolični identifikator vsake transakcije
-    - **Datum transakcije**: datum, po možnosti časovni žig vsake transakcije
-    - **Transakcijski znesek**: denarna vrednost (na primer prihodek ali stopnja dobička) vsake transakcije
-    - **Oznaka, dodeljena vračilom** (neobvezno): logična vrednost, ki označuje, ali je transakcija vračilo 
-    - **ID izdelka** (neobvezno): ID izdelka, vključenega v transakcijo
-
-- Dodatni podatki (izbirno), na primer
-    - Spletne dejavnosti: zgodovina obiska spletnega mesta, zgodovina e-pošte
-    - Dejavnosti zvestobe: razmejitev nagradnih točk za zvestobo in zgodovina unovčenja
-    - Dnevnik storitev za stranke , servisni klic, pritožba ali zgodovina vračila
-    - Informacije o profilu stranke
-- Podatki o dejavnostih strank (neobvezno):
-    - Identifikatorji dejavnosti za razlikovanje med dejavnostmi iste vrste
-    - Identifikatorji strank za preslikavo dejavnosti v stranke
-    - Podatki o dejavnosti, ki vsebujejo ime in datum dejavnosti
-    - Semantična podatkovna shema za dejavnosti vključuje:
-        - **Primarni ključ**: enolični identifikator dejavnosti
-        - **Časovni žig**: datum in ura dogodka, ki ga je prepoznal primarni ključ
-        - **Dogodek (ime aktivnosti)**: ime dogodka, ki ga želite uporabiti
-        - **Podrobnosti (znesek ali vrednost)**: podrobnosti o dejavnosti stranke
-
-- Predlagane lastnosti podatkov:
-    - Zadostni zgodovinski podatki: vsaj eno leto transakcijskih podatkov. Po možnosti dve do tri leta transakcijskih podatkov za predvidevanje življenjske vrednostni strank za eno leto.
-    - Več nakupov na stranko: v idealnem primeru vsaj dve do tri transakcije na ID stranke, po možnosti na več datumov.
-    - Število strank: vsaj 100 enoličnih strank, po možnosti več kot 10.000 strank. Model bo propadel z manj kot 100 strankami in nezadostnimi zgodovinskimi podatki
-    - Popolnost podatkov: manj kot 20 % manjkajočih vrednosti v obveznih poljih vhodnih podatkov
+- Vsaj [sodelavec](permissions.md) dovoljenja
+- Vsaj 100 edinstvenih strank, po možnosti več kot 10.000 strank
+- Identifikator stranke, enolični identifikator za povezovanje transakcij s posamezno stranko
+- Vsaj eno leto zgodovine transakcij, po možnosti dve do tri leta. V idealnem primeru vsaj dve do tri transakcije na ID stranke, po možnosti na več datumov. Zgodovina transakcij mora vsebovati:
+  - **ID transakcije**: enolični identifikator vsake transakcije
+  - **Datum transakcije** : Datum ali časovni žig vsake transakcije
+  - **Transakcijski znesek**: denarna vrednost (na primer prihodek ali stopnja dobička) vsake transakcije
+  - **Oznaka, dodeljena vračilom** : Logična vrednost true/false, ki označuje, ali je transakcija vračilo
+  - **ID izdelka** : ID izdelka, vključenega v transakcijo
+- Podatki o dejavnostih strank:
+  - **Primarni ključ** : Enolični identifikator za dejavnost
+  - **Časovni žig** : Datum in čas dogodka, ki ga identificira primarni ključ
+  - **Dogodek (ime dejavnosti)** : ime dogodka, ki ga želite uporabiti
+  - **Podrobnosti (znesek ali vrednost)**: podrobnosti o dejavnosti stranke
+- Dodatni podatki, kot so:
+  - Spletne dejavnosti: zgodovina obiskov spletne strani ali zgodovina e-pošte
+  - Dejavnosti zvestobe: zgodovina zbiranja in unovčenja nagradnih točk zvestobe
+  - Dnevnik storitve za stranke: zgodovina klicev servisa, pritožb ali vračil
+  - Informacije o profilu stranke
+- Manj kot 20 % manjkajočih vrednosti v obveznih poljih
 
 > [!NOTE]
-> - Model potrebuje zgodovino transakcij vaših strank. Trenutno je mogoče konfigurirati samo eno entiteto zgodovine transakcij. Če obstaja več subjektov nakupa/transakcije, jih lahko združite Power Query pred vnosom podatkov.
-> - Za dodatne podatke o dejavnostih strank (neobvezno) pa lahko dodate toliko entitet dejavnosti strank, kolikor želite, da jih model upošteva.
+> Konfigurirati je mogoče samo eno entiteto zgodovine transakcij. Če obstaja več subjektov nakupa ali transakcije, jih združite Power Query pred vnosom podatkov.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Ustvarjanje predvidevanja življenjske vrednosti stranke
 
+Izberite **Shrani osnutek** kadar koli shranite predvidevanje kot osnutek. Osnutek predvidevanje se prikaže v **Moje napovedi** zavihek.
+
 1. Pojdi do **Inteligenca** > **Napovedi**.
 
-1. Izberite ploščico **Življenjska vrednost kupca** in izberite možnost **Uporabi model**. 
+1. Na **Ustvari** zavihek izberite **Uporabite model** na **Življenjska vrednost stranke** ploščica.
 
-1. V **Življenjska vrednost stranke** podoknu izberite **Začeti**.
+1. Izberite **Začetek**.
 
 1. **Poimenujte ta model** in **izhodno ime entitete**, da jih ločite od drugih modelov ali entitet.
 
@@ -88,159 +77,137 @@ Potrebni so naslednji podatki, če so označeni kot neobvezni, pa so priporočlj
 
 ### <a name="define-model-preferences"></a>Opredelitev nastavitev modela
 
-1. Nastavite **časovno obdobje predvidevanja** da določite, kako daleč v prihodnost želite napovedati življenjsko vrednost stranke.    
-   Privzeto je enota nastavljena na mesece. Spremenite jo lahko v leta, da pogledate dlje v prihodnost.
+1. Nastavite **časovno obdobje predvidevanja** da določite, kako daleč v prihodnost želite napovedati življenjsko vrednost stranke. Privzeto je enota nastavljena na mesece.
 
    > [!TIP]
-   > Če želite natančno napovedati življenjsko vrednost stranke za nastavljeno časovno obdobje, potrebujete zgodovinske podatke o primerljivem obdobju. Če želite na primer ustvariti predvidevanje življenjske vrednostni strank za naslednjih 12 mesecev, je priporočljivo, da imate vsaj 18–24 mesecev zgodovinskih podatkov.
+   > Za natančno napoved CLV za nastavljeno časovno obdobje je potrebno primerljivo obdobje preteklih podatkov. Na primer, če želite napovedati CLV za naslednjih 12 mesecev, imejte vsaj 18–24 mesecev zgodovinskih podatkov.
 
-1. Navedite, kaj **aktivne stranke** pomenijo v vašem podjetju. Nastavite časovni okvir, v katerem mora imeti stranka vsaj eno transakcijo, da se šteje za aktivno stranko. Model bo življenjsko vrednost stranke napovedal samo za aktivne stranke. 
-   - **Naj model izračuna interval nakupa (priporočljivo)**: model analizira podatke in določi časovno obdobje na podlagi preteklih nakupov.
-   - **Interval nastavite ročno** : če imate določeno poslovno definicijo aktivne stranke, izberite to možnost in ustrezno nastavite časovno obdobje.
+1. Nastavite časovni okvir, v katerem mora imeti stranka vsaj eno transakcijo, da se šteje za aktivno stranko. Model predvideva samo CLV za **Aktivne stranke**.
+   - **Naj model izračuna interval nakupa (priporočeno)** : Model analizira vaše podatke in določi časovno obdobje na podlagi preteklih nakupov.
+   - **Interval nastavite ročno** : Časovno obdobje za vašo definicijo aktivne stranke.
 
-1. Določite percentil **stranke visoke vrednosti**, da modelu omogočite zagotavljanje rezultatov, ki ustrezajo vaši poslovni definiciji.
-    - **Izračun modela (priporočeno)**: model analizira podatke in na podlagi zgodovine transakcij vaših strank določi, kakšna je stranka z visoko vrednostjo za vaše podjetje. Model uporablja hevristično pravilo (na podlagi pravila 80/20 ali Paretovega načela) za iskanje deleža strank z visoko vrednostjo. Delež strank, ki so v preteklem obdobju ustvarile 80-odstotni kumulativni prihodek za vaše podjetje, se šteje za stranke z visoko vrednostjo. Običajno manj kot 30–40 % kupcev prispeva k 80 % skupnega prihodka. Vendar se ta številka lahko razlikuje glede na vaše podjetje in panogo.    
-    - **Delež najbolj aktivnih strank**: določite stranke z visoko vrednostjo za svoje podjetje kot percentil najbolj aktivnih strank, ki porabljajo denar. S to možnostjo lahko na primer stranke z visoko vrednostjo opredelite kot 20 % najboljših strank, ki bodo v prihodnosti porabile denar.
+1. Določite percentil za **Stranka visoke vrednosti**.
+    - **Izračun modela (priporočeno)** : Model uporablja pravilo 80/20. Delež strank, ki so v preteklem obdobju ustvarile 80-odstotni kumulativni prihodek za vaše podjetje, se šteje za stranke z visoko vrednostjo. Običajno manj kot 30–40 % kupcev prispeva k 80 % skupnega prihodka. Vendar se ta številka lahko razlikuje glede na vaše podjetje in panogo.
+    - **Odstotek najboljših aktivnih strank** : Poseben percentil za stranko z visoko vrednostjo. Na primer, enter **25** opredeliti kupce z visoko vrednostjo kot 25 % najvišjih plačljivih strank v prihodnosti.
 
     Če vaše podjetje stranke z visoko vrednostjo opredeljuje na drugačen način, [nam to sporočite](https://go.microsoft.com/fwlink/?linkid=2074172).
 
-1. Za pomik na naslednji korak izberite možnost **Naprej**.
+1. Izberite **Naprej**.
 
 ### <a name="add-required-data"></a>Dodajanje zahtevanih podatkov
 
-1. Pri koraku **obveznih podatkov** izberite možnost **Dodaj podatke** za **zgodovino transakcij stranke** in izberite entiteto, ki zagotavlja podatke o zgodovini transakcij/nakupov, kot je opisano v [zahtevah](#prerequisites).
+1. Izberite **Dodajte podatke** za **Zgodovina transakcij strank**.
 
-1. Preslikajte semantična polja v atribute v entiteti vaše zgodovine nakupov in izberite **Naprej**.
+1. Izberite vrsto semantične dejavnosti, **Prodajni nalog** oz **SalesOrderLine**, ki vsebuje zgodovino transakcij. Če dejavnost ni nastavljena, izberite **tukaj** in ga ustvarite.
 
-   :::image type="content" source="media/clv-add-customer-data-mapping.png" alt-text="Slika konfiguracijskega koraka za preslikavo atributov podatkov za zahtevane podatke.":::
- 
-1. Če spodnja polja niso izpolnjena, konfigurirajte odnos iz entitete zgodovine nakupov z entiteto *stranke* in izberite možnost **Shrani**.
-    1. Izberite entiteto zgodovine transakcij.
-    1. Izberite polje, ki prepozna stranko v entiteti zgodovine nakupov. Povezovati se mora s primarnim ID-jem stranke vaše entitete stranke.
-    1. Izberite entiteto, ki se ujema z entiteto primarne stranke.
-    1. Vnesite ime, ki opisuje odnos.
+1. Spodaj **dejavnosti**, če so bili atributi dejavnosti semantično preslikani, ko je bila dejavnost ustvarjena, izberite določene atribute ali entiteto, na katero želite, da se osredotoči izračun. Če do semantične preslikave ni prišlo, izberite **Uredi** in preslikajte svoje podatke.
+  
+   :::image type="content" source="media/CLV-add-required.PNG" alt-text="Dodajte zahtevane podatke za model CLV":::
 
-      :::image type="content" source="media/clv-add-customer-data-relationship.png" alt-text="Slika koraka konfiguracije za določitev odnosa z entiteto stranke.":::
+1. Izberite **Naslednji** in preglejte atribute, potrebne za ta model.
 
-1. Izberite **Naprej**.
+1. Izberite **Shrani**.
+
+1. Dodajte več dejavnosti ali izberite **Naslednji**.
 
 ### <a name="add-optional-activity-data"></a>Dodajte neobvezne podatke o dejavnosti
 
 Podatki, ki odražajo interakcije ključnih strank (na primer dnevnike za splet, storitve za stranke in dogodke), dodajo kontekst zapisom transakcij. Dodatni vzorci, ki jih najdete v podatkih o dejavnostih vaših strank, lahko izboljšajo natančnost predvidevanja.
 
-1. V **Dodatni podatki (neobvezno)** korak, izberite **Dodajte podatke** Spodaj **Izboljšajte vpogled v model z dodatnimi podatki o dejavnosti**. Izberite entiteto dejavnosti strank, ki zagotavlja podatke o dejavnosti strank, kot je opisano v [zahtevah](#prerequisites).
+1. Izberite **Dodajte podatke** Spodaj **Izboljšajte vpogled v model z dodatnimi podatki o dejavnosti**.
 
-1. Preslikajte semantična polja v atribute v entiteti dejavnosti strank in izberite **Naprej**.
+1. Izberite vrsto dejavnosti, ki se ujema z vrsto dejavnosti stranke, ki jo dodajate. Če dejavnost ni nastavljena, izberite **tukaj** in ga ustvarite.
 
-   :::image type="content" source="media/clv-additional-data-mapping.png" alt-text="Slika konfiguracijskega koraka za preslikavo polj za dodatne podatke.":::
+1. Spodaj **dejavnosti**, če so bili atributi dejavnosti preslikani, ko je bila dejavnost ustvarjena, izberite določene atribute ali entiteto, na katero želite, da se osredotoči izračun. Če do preslikave ni prišlo, izberite **Uredi** in preslikajte svoje podatke.
 
-1. Izberite vrsto dejavnosti, ki se ujema z vrsto dejavnosti stranke, ki jo dodajate. Izberite med obstoječimi vrstami dejavnosti ali dodajte novo vrsto dejavnosti.
-
-1. Konfigurirajte odnos med entiteto dejavnosti kupca in entiteto *stranke*.
-
-    1. Izberite polje, ki prepozna stranko v tabeli dejavnosti strank. Lahko je neposredno povezano s primarnim ID-jem stranke za vašo entiteto *stranke*.
-    1. Izberite entiteto *stranke*, ki se ujema z vašo primarno entiteto *stranke*.
-    1. Vnesite ime, ki opisuje odnos.
-
-   :::image type="content" source="media/clv-additional-data.png" alt-text="Slika koraka v konfiguracijskem toku za dodajanje dodatnih podatkov in konfiguriranje dejavnosti z izpolnjenimi primeri.":::
+1. Izberite **Naslednji** in preglejte atribute, potrebne za ta model.
 
 1. Izberite **Shrani**.
-    Dodajte več podatkov, če želite vključiti še druge dejavnosti strank.
 
-1. Dodajte neobvezne podatke o strankah ali izberite **Naslednji**.
+1. Izberite **Naprej**.
+
+1. [Dodajte neobvezne podatke o strankah](#add-optional-customer-data) ali izberite **Naslednji** in pojdi na [Nastavite razpored posodabljanja](#set-update-schedule).
 
 ### <a name="add-optional-customer-data"></a>Dodajte neobvezne podatke o strankah
 
 Izberite med 18 pogosto uporabljenimi atributi profila strank, ki jih želite vključiti kot vhod v model. Ti atributi lahko vodijo do bolj prilagojenih, ustreznih in uporabnih rezultatov modela za primere vaše poslovne uporabe.
 
-Na primer: Contoso Coffee želi predvideti življenjsko vrednost kupca, da bi ciljal na stranke visoke vrednosti s prilagojeno ponudbo, povezano z lansiranjem njihovega novega aparata za espresso. Contoso uporablja model CLV in doda vseh 18 atributov profila strank, da vidi, kateri dejavniki vplivajo na njihove stranke z največjo vrednostjo. Ugotavljajo, da je lokacija stranke najvplivnejši dejavnik za te stranke.
-S temi informacijami organizirajo lokalni dogodek za lansiranje aparata za espresso in sodelujejo z lokalnimi prodajalci za prilagojene ponudbe in posebno izkušnjo na dogodku. Brez teh informacij bi Contoso morda pošiljal le splošna marketinška e-poštna sporočila in zamudil priložnost za prilagoditev za ta lokalni segment svojih strank z visoko vrednostjo.
+Na primer: Contoso Coffee želi predvideti življenjsko vrednost kupca, da cilja na stranke visoke vrednosti s prilagojeno ponudbo, povezano z lansiranjem njihovega novega aparata za espresso. Contoso uporablja model CLV in doda vseh 18 atributov profila strank, da vidi, kateri dejavniki vplivajo na njihove stranke z največjo vrednostjo. Ugotavljajo, da je lokacija stranke najvplivnejši dejavnik za te stranke.
+S temi informacijami organizirajo lokalni dogodek za lansiranje aparata za espresso in sodelujejo z lokalnimi prodajalci za prilagojene ponudbe in posebno izkušnjo na dogodku. Brez teh informacij bi Contoso morda pošiljal samo splošna marketinška e-poštna sporočila in zamudil priložnost za prilagoditev za ta lokalni segment svojih strank z visoko vrednostjo.
 
-1. V **Dodatni podatki (neobvezno)** korak, izberite **Dodajte podatke** Spodaj **Še bolj povečajte vpogled v model z dodatnimi podatki o strankah**.
+1. Izberite **Dodajte podatke** Spodaj **Še bolj izboljšajte vpogled v model z dodatnimi podatki o strankah**.
 
-1. Za **Entiteta**, izberite **Stranka: CustomerInsights** da izberete poenoteno tabelo profila stranke, ki se preslika v podatke atributov stranke. Za **identifikacijska številka stranke**, izberite **System.Customer.CustomerId**.
+1. Za **Entiteta**, izberite **Stranka: CustomerInsights** da izberete poenoten profil stranke, ki se preslika v podatke atributov stranke. Za **identifikacijska številka stranke**, izberite **System.Customer.CustomerId**.
 
 1. Preslikajte več polj, če so podatki na voljo v vaših poenotenih profilih strank.
 
    :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Primer preslikanih polj za podatke profila stranke.":::
 
-1. Izberite **Shrani** po preslikavi atributov, ki naj bi jih model uporabil za pomoč pri napovedovanju življenjske vrednosti stranke.
+1. Izberite **Shrani**.
 
 1. Izberite **Naprej**.
 
 ### <a name="set-update-schedule"></a>Nastavitev urnika posodobitev
 
-1. Pri koraku **Urnik posodobitev podatkov** izberite pogostost za prekvalificiranje modela na podlagi najnovejših podatkov. Ta nastavitev je pomembna za posodobitev točnosti napovedi, ko se v Customer Insights vnesejo novi podatki. Večina podjetij se lahko prekvalificira enkrat na mesec in pridobi dobro natančnost svojih predvidevanj.
+1. Izberite pogostost za ponovno usposabljanje vašega modela na podlagi najnovejših podatkov. Ta nastavitev je pomembna za posodobitev točnosti napovedi, ko se v Customer Insights vnesejo novi podatki. Večina podjetij se lahko prekvalificira enkrat na mesec in pridobi dobro natančnost svojih predvidevanj.
 
 1. Izberite **Naprej**.
 
 ### <a name="review-and-run-the-model-configuration"></a>Pregled in zagon konfiguracije modela
 
-1. Pri koraku **Pregled podrobnosti o modelu** preverite veljavnost konfiguracije predvidevanja. Na kateri koli del konfiguracije predvidevanja se lahko vrnete tako, da izberete možnost **Uredi** pod prikazano vrednostjo. Korak konfiguracije lahko izberete tudi s kazalnika napredka.
+The **Pregled in zagon** korak prikazuje povzetek konfiguracije in nudi možnost spreminjanja, preden ustvarite predvidevanje.
 
-1. Če so vse vrednosti pravilno konfigurirane, izberite možnost **Shrani in zaženi**, da se model začne izvajati. Na zavihku **Moja predvidevanja** lahko vidite stanje postopka predvidevanja. Postopek lahko traja več ur, odvisno od količine podatkov, uporabljenih v predvidevanju.
+1. Izberite **Uredi** na katerem koli od korakov za pregled in morebitne spremembe.
 
-## <a name="review-prediction-status-and-results"></a>Pregled stanja in rezultatov predvidevanja
+1. Če ste zadovoljni s svojo izbiro, izberite **Shrani in zaženi** da začnete izvajati model. Izberite **Dokončano**. The **Moje napovedi** zavihek se prikaže med ustvarjanjem predvidevanje. Postopek lahko traja več ur, odvisno od količine podatkov, uporabljenih v predvidevanju.
 
-### <a name="review-prediction-status"></a>Pregled stanja predvidevanja
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-1.  Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
-2.  Izberite predvidevanje, ki ga želite pregledati.
+## <a name="view-prediction-results"></a>Oglejte si predvidevanje rezultate
 
-- **Ime predvidevanja:** ime predvidevanja, navedeno ob ustvarjanju.
-- **Vrsta predvidevanja:** vrsta modela, uporabljena za predvidevanje
-- **Izhodna entiteta:** ime entitete za shranjevanje rezultatov predvidevanja. V razdelku **Podatki** > **Entitete** najdite entiteto s tem imenom.
-- **Predvideno polje:** to polje je zapolnjeno samo za nekatere vrste predvidevanj in se ne uporablja pri predvidevanju življenjske vrednosti stranke.
-- **Stanje:** stanje izvajanja predvidevanja.
-    - **V čakalni vrsti:** predvidevanje čaka, da se zaključijo drugi postopki.
-    - **Osveževanje:** predvidevanje se trenutno izvaja za ustvarjanje rezultatov, ki bodo združeni v izhodni entiteti.
-    - **Ni uspelo:** izvajanje predvidevanja ni uspelo. [Preglejte dnevniške datoteke](manage-predictions.md#troubleshoot-a-failed-prediction) za več podrobnosti.
-    - **Uspelo:** predvidevanje je uspelo. Pod navpičnimi tremi pikami izberite možnost **Pogled** za pregled rezultatov predvidevanja.
-- **Urejeno**: datum, ko je bila spremenjena konfiguracija predvidevanja.
-- **Nazadnje osveženo**: datum, ko je predvidevanje osvežilo rezultate v izhodni entiteti.
+1. Pojdi do **Inteligenca** > **Napovedi**.
 
-### <a name="review-prediction-results"></a>Pregled rezultatov predvidevanja
-
-1. Izberite **Obveščanje** > **Predvidevanja** in izberite zavihek **Moja predvidevanja**.
-
-1. Izberite predvidevanje, za katerega želite pregledati rezultate.
+1. V **Moje napovedi** izberite predvidevanje, ki si ga želite ogledati.
 
 Na strani z rezultati so trije primarni razdelki podatkov.
 
-- **Uspešnost modela usposabljanja** : A, B ali C so možne ocene. Ta ocena označuje uspešnost predvidevanja in vam lahko pomaga pri odločitvi za uporabo rezultatov, shranjenih v izhodni entiteti. Izberite možnost **Več o tem rezultatu** za boljše razumevanje osnovnih meritev uspešnosti modela in kako je pridobljena končna ocena uspešnosti modela.
+- **Učinkovitost modela usposabljanja** : Ocene A, B ali C označujejo uspešnost predvidevanje in vam lahko pomagajo pri odločitvi za uporabo rezultatov, shranjenih v izhodni entiteti.
   
   :::image type="content" source="media/clv-model-score.png" alt-text="Slika polja s podatki o oceni modela z oceno A":::
 
-  Na podlagi definicije strank z visoko vrednostjo, ki je bila podana med konfiguriranjem predvidevanja, sistem oceni, kako je model umetne inteligence deloval pri napovedovanju strank z visoko vrednostjo v primerjavi z osnovnim modelom.    
+  Customer Insights ocenjuje, kako je model AI uspel pri napovedovanju strank z visoko vrednostjo v primerjavi z osnovnim modelom.
 
   Ocene so določene na podlagi naslednjih pravil:
   - **A**, če model natančno napove vsaj 5 % več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
   - **B**, če model natančno napove 0–5 % več kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
   - **C**, če model natančno napove manj kupcev z visoko vrednostjo v primerjavi z osnovnim modelom.
-
-  Podokno **Ocena modela** prikazuje nadaljnje podrobnosti o zmogljivosti modela umetne inteligence in osnovnega modela. Osnovni model uporablja pristop, ki ne temelji na umetni inteligenci, za izračun življenjske vrednosti strank, ki temelji predvsem na preteklih nakupih, ki jih opravijo stranke.     
-  Standardna formula, ki se uporablja za izračun življenjske vrednosti strank v osnovnem modelu:    
-
-  _**Življenjska vrednost stranke za posamezno stranko** = povprečni znesek mesečnega nakupa, ki ga stranka opravi v oknu dejavnih strank * število mesecev v obdobju predvidevanja življenjske vrednostni strank * splošna stopnja ohranitve vseh strank_
-
-  Model umetne inteligence se primerja z osnovnim modelom na podlagi dveh meritev uspešnosti modela.
   
-  - **Uspešnost pri predvidevanju strank z visoko vrednostjo**
+  Izberite [**Več o tem rezultatu**](#learn-about-the-score) odpreti **Ocena modela** podokno, ki prikazuje dodatne podrobnosti o zmogljivosti modela AI in osnovnem modelu. Pomagal vam bo bolje razumeti osnovne meritve uspešnosti modela in kako je bila izpeljana končna ocena uspešnosti modela. Osnovni model uporablja pristop, ki ne temelji na umetni inteligenci, za izračun življenjske vrednosti strank, ki temelji predvsem na preteklih nakupih, ki jih opravijo stranke.
 
-    Oglejte si razliko pri napovedovanju kupcev z visoko vrednostjo z uporabo modela umetne inteligence v primerjavi z osnovnim modelom. 84-odstotna stopnja uspešnosti na primer pomeni, da je od vseh strank z visoko vrednostjo v podatkih za usposabljanje model umetne inteligence lahko natančno zajel 84 % strank. Nato to stopnjo uspešnosti primerjamo s stopnjo uspešnosti osnovnega modela, da poročamo o relativni spremembi. Ta vrednost se uporablja za dodelitev ocene modelu.
+- **Vrednost strank po percentilu** : Stranke z nizko in visoko vrednostjo so prikazane v grafikonu. Premaknite miškin kazalec nad stolpce v histogramu, da vidite število strank v vsaki skupini in povprečni CLV te skupine. Po želji, [ustvarite segmente strank](prediction-based-segment.md) na podlagi njihovih napovedi CLV.
+  
+   :::image type="content" source="media/CLV-value-percent.png" alt-text="Vrednost strank po percentilu za model CLV":::
 
-  - **Metrika napak**
-    
-    Druga meritev omogoča pregled splošne uspešnosti modela z vidika napak pri predvidevanju prihodnjih vrednosti. Za oceno te napake uporabljamo meritev korena povprečne kvadratne napake (RMSE). Meritev RMSE je standardni način merjenja napak modela pri predvidevanju kvantitativnih podatkov. Meritev RMSE modela umetne inteligence se primerja z meritvijo RMSE osnovnega modela, poročana pa je relativna razlika.
+- **Najvplivnejši dejavniki** : pri ustvarjanju predvidevanja življenjske vrednosti stranke upoštevamo različne dejavnike na podlagi vhodnih podatkov, posredovanih modelu umetne inteligence. Za vsakega od dejavnikov je izračunan pomen za združena predvidevanja, ki jih ustvari model. Uporabite te dejavnike za pomoč pri potrditvi rezultatov predvidevanje. Ti dejavniki omogočajo tudi večji vpogled v najvplivnejše dejavnike, ki so prispevali k predvidevanju življenjske vrednosti stranke za vse vaše stranke.
+  
+   :::image type="content" source="media/CLV-influence-factors.png" alt-text="Najvplivnejši dejavniki za model CLV":::
 
-  Model umetne inteligence daje prednost natančnemu razvrščanju strank glede na vrednost, ki jo prinašajo podjetju. Tako se za pridobitev končne ocene modela uporablja le stopnja uspešnosti predvidevanja strank z visoko vrednostjo. Meritev RMSE je občutljiva na odstopanja. V primerih, ko imate majhen delež strank z izjemno visokimi vrednostmi nakupa, splošna meritev RMSE morda ne zagotovi celotne slike o uspešnosti modela.   
+### <a name="learn-about-the-score"></a>Več o rezultatu
 
-- **Vrednost strank po percentilu**: z uporabo vaše definicije strank z visoko vrednostjo so stranke na podlagi predvidevane življenjske vrednosti stranke razvrščene v skupine z nizko in visoko vrednostjo ter prikazane v grafikonu. Če kazalec miške premaknete nad stolpce v histogramu, lahko vidite število strank v vsaki skupini in povprečno življenjsko vrednost stranke te skupine. Ti podatki lahko pomagajo, če želite [ustvariti segmente kupcev](segments.md) na podlagi predvidevanja življenjske vrednosti stranke.
+Standardna formula, ki se uporablja za izračun življenjske vrednosti strank v osnovnem modelu:
 
-- **Najvplivnejši dejavniki** : pri ustvarjanju predvidevanja življenjske vrednosti stranke upoštevamo različne dejavnike na podlagi vhodnih podatkov, posredovanih modelu umetne inteligence. Za vsakega od dejavnikov je izračunan pomen za združena predvidevanja, ki jih ustvari model. Te dejavnike lahko uporabite za pomoč pri preverjanju rezultatov predvidevanja. Ti dejavniki omogočajo tudi večji vpogled v najvplivnejše dejavnike, ki so prispevali k predvidevanju življenjske vrednosti stranke za vse vaše stranke.
+ _**CLV za vsako stranko** = Povprečni mesečni nakup stranke v oknu za aktivne stranke * Število mesecev v obdobju CLV predvidevanje * Skupna stopnja zadrževanja vseh strank_
 
-## <a name="manage-predictions"></a>Upravljanje predvidevanj
+Model umetne inteligence se primerja z osnovnim modelom na podlagi dveh meritev uspešnosti modela.
+  
+- **Uspešnost pri predvidevanju strank z visoko vrednostjo**
 
-Predvidevanja je mogoče optimizirati, zanje odpraviti napake, osvežiti ali izbrisati. Preglejte poročilo o uporabnosti vhodnih podatkov, če želite izvedeti, kako narediti predvidevanje hitrejše in zanesljivejše. Za več informacij glejte razdelek [Upravljanje predvidevanj](manage-predictions.md).
+  Oglejte si razliko pri napovedovanju kupcev z visoko vrednostjo z uporabo modela umetne inteligence v primerjavi z osnovnim modelom. 84-odstotna stopnja uspešnosti na primer pomeni, da je od vseh strank z visoko vrednostjo v podatkih za usposabljanje model umetne inteligence lahko natančno zajel 84 % strank. Nato to stopnjo uspešnosti primerjamo s stopnjo uspešnosti osnovnega modela, da poročamo o relativni spremembi. Ta vrednost se uporablja za dodelitev ocene modelu.
+
+- **Metrika napak**
+
+  Oglejte si splošno učinkovitost modela v smislu napake pri napovedovanju prihodnjih vrednosti. Za oceno te napake uporabljamo meritev korena povprečne kvadratne napake (RMSE). Meritev RMSE je standardni način merjenja napak modela pri predvidevanju kvantitativnih podatkov. Meritev RMSE modela umetne inteligence se primerja z meritvijo RMSE osnovnega modela, poročana pa je relativna razlika.
+
+Model umetne inteligence daje prednost natančnemu razvrščanju strank glede na vrednost, ki jo prinašajo podjetju. Tako se za pridobitev končne ocene modela uporablja le stopnja uspešnosti predvidevanja strank z visoko vrednostjo. Meritev RMSE je občutljiva na odstopanja. V primerih, ko imate majhen delež strank z izjemno visokimi vrednostmi nakupa, splošna meritev RMSE morda ne zagotovi celotne slike o uspešnosti modela.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

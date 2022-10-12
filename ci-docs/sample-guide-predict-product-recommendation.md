@@ -1,7 +1,7 @@
 ---
 title: Vzorčni vodnik za predvidevanje priporočil za izdelke
 description: Uporabite ta vzorčni vodnik, da preskusite model predvidevanja priporočil za vnaprej pripravljene izdelke.
-ms.date: 05/16/2022
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,37 +12,36 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
-ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
+ms.openlocfilehash: 2b42a89e3f4ec8cf4f0769128b8536973365f1cb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 05/16/2022
-ms.locfileid: "8762706"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610164"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Vzorčni vodnik za predvidevanje priporočil za izdelke
 
-S pomočjo spodnjih vzorčnih podatkov vas bomo vodili skozi celotni primer predvidevanja priporočil za izdelke.
+Ta vodnik vas vodi skozi primer priporočila izdelka predvidevanje od konca do konca z uporabo vzorčnih podatkov. Priporočamo, da preizkusite to predvidevanje [v novem okolju](manage-environments.md).
 
 ## <a name="scenario"></a>Scenarij
 
-Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne avtomate, ki jih prodaja prek njihovega spletnega mesta Contoso Coffee. Njihov cilj je razumeti, katere izdelke priporočiti svojim rednim strankam. Če vedo, katere izdelke stranke bolj **verjetno kupujejo**, si prihranijo tržna prizadevanja, saj se lahko osredotočijo na določene izdelke.
+Contoso je podjetje, ki proizvaja visokokakovostno kavo in kavne aparate. Izdelke prodajajo prek spletnega mesta Contoso Coffee. Njihov cilj je razumeti, katere izdelke priporočiti svojim rednim strankam. Vedeti, katere stranke so več **verjetno za nakup** jim lahko pomaga prihraniti trženjska prizadevanja z osredotočanjem na določene elemente.
 
 ## <a name="prerequisites"></a>Zahteve
 
 - Vsaj [dovoljenja sodelavcev](permissions.md) v storitvi Customer Insights.
-- Priporočamo, da izvedete naslednje korake [v novem okolju](manage-environments.md).
 
 ## <a name="task-1---ingest-data"></a>1. opravilo – vnos podatkov
 
-Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih virov z uporabo Power Query konektorji](connect-power-query.md) posebej. Z naslednjimi informacijami domnevamo, da ste na splošno seznanjeni z vnosom podatkov.
+Preglejte članke [o zaužitju podatkov](data-sources.md) in [povezovanje z a Power Query vir podatkov](connect-power-query.md). Naslednje informacije predvidevajo, da ste seznanjeni z zaužitjem podatkov na splošno.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Vnos podatkov o strankah s platforme elektronskega poslovanja
 
-1. Ustvarite vir podatkov z imenom **EPoslovanje**, izberite možnost uvoza in izberite povezovalnik **Besedilo/CSV**.
+1. Ustvari Power Query vir podatkov z imenom **e-trgovina** in izberite **Besedilo/CSV** priključek.
 
-1. Vnesite URL za stike e-trgovine: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
+1. Vnesite URL za stike e-trgovine:https://aka.ms/ciadclasscontacts.
 
-1. Med urejanjem podatkov izberite **Pretvori** in potem **Uporabi prvo vrstico kot glavo**.
+1. Med urejanjem podatkov izberite **Preobrazba** in potem **Prvo vrstico uporabite kot glave**.
 
 1. Posodobite vrsto podatkov za spodaj navedene stolpce:
    - **DateOfBirth**: datum
@@ -50,7 +49,7 @@ Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih v
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Pretvorite datum rojstva v datum.":::
 
-1. V polju »Ime« v desnem podoknu preimenujte vir podatkov iz **Poizvedba** v **StikiEPoslovanja**.
+1. V **Ime** polje v desnem podoknu preimenujte vir podatkov v **eCommerceContacts**.
 
 1. **Shranite** vir podatkov.
 
@@ -58,106 +57,109 @@ Preglejte članke [o zaužitju podatkov](data-sources.md) in [uvoz podatkovnih v
 
 1. Dodajte še nabor podatkov z istega vira podatkov **EPoslovanje**. Znova izberite povezovalnik **Besedilo/CSV**.
 
-1. Vnesite URL za **Spletni nakupi** podatki [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
+1. Vnesite URL za podatke o spletnih nakupih https://aka.ms/ciadclassonline.
 
-1. Med urejanjem podatkov izberite **Pretvori** in potem **Uporabi prvo vrstico kot glavo**.
+1. Med urejanjem podatkov izberite **Preobrazba** in potem **Prvo vrstico uporabite kot glave**.
 
 1. Posodobite vrsto podatkov za spodaj navedene stolpce:
    - **PurchasedOn**: datum/čas
    - **TotalPrice**: valuta
 
-1. V stranskem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **NakupiEPoslovanja**.
+1. V **Ime** polje v stranskem podoknu preimenujte vir podatkov v **eCommercePurchases**.
 
 1. **Shranite** vir podatkov.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Vnos podatkov o strankah iz sheme za zvestobo
 
-1. Ustvarite vir podatkov z imenom **ShemaZvestobe**, izberite možnost uvoza in izberite povezovalnik **Besedilo/CSV**.
+1. Ustvari vir podatkov z imenom **Shema zvestobe** in izberite **Besedilo/CSV** priključek.
 
-1. Vnesite URL za stike e-trgovine [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
+1. Vnesite URL za zveste stranke https://aka.ms/ciadclasscustomerloyalty.
 
-1. Med urejanjem podatkov izberite **Pretvori** in potem **Uporabi prvo vrstico kot glavo**.
+1. Med urejanjem podatkov izberite **Preobrazba** in potem **Prvo vrstico uporabite kot glave**.
 
 1. Posodobite vrsto podatkov za spodaj navedene stolpce:
    - **DateOfBirth**: datum
    - **RewardsPoints**: celo število
    - **CreatedOn**: datum/čas
 
-1. V desnem podoknu v polju **Ime** preimenujte svoj vir podatkov iz **Poizvedba** v **zvesteStranke**.
+1. V **Ime** polje v desnem podoknu preimenujte vir podatkov v **loyCustomers**.
 
 1. **Shranite** vir podatkov.
 
 ## <a name="task-2---data-unification"></a>2. opravilo – poenotenje podatkov
 
+Preglejte članek [o poenotenju podatkov](data-unification.md). Naslednje informacije predvidevajo, da poznate poenotenje podatkov na splošno.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-product-recommendation-prediction"></a>3. opravilo – konfiguracija predvidevanja priporočil za izdelke
+## <a name="task-3---create-transaction-history-activity"></a>Naloga 3 - Ustvarite dejavnost zgodovine transakcij
 
-Z vzpostavljenimi enotnimi profili strank lahko zdaj izvajamo priporočilo izdelka predvidevanje.
+Preglejte članek [o dejavnostih strank](activities.md). Naslednje informacije predvidevajo, da ste seznanjeni z ustvarjanjem dejavnosti na splošno.
 
-1. V razdelku **Obveščanje** > **Predvidevanje** izberite **Priporočilo za izdelke**.
+1. Ustvarite dejavnost, imenovano **eCommercePurchases** z *Nakupi e-trgovine: e-trgovina* entiteta in njen primarni ključ, **PurchaseId**.
+
+1. Ustvarite razmerje med *Nakupi e-trgovine: e-trgovina* in *eCommerceContacts:eCommerce* z **ContactID** kot tuji ključ za povezavo obeh entitet.
+
+1. Izberite **Skupna cena** za **EventActivity** in **PurchasedOn** za **Časovni žig**.
+
+1. Izberite **SalesOrderLine** za **Vrsta dejavnosti** in semantično preslika podatke o dejavnosti.
+
+1. Izvedite dejavnost.
+
+## <a name="task-4---configure-product-recommendation-prediction"></a>4. opravilo – konfiguracija predvidevanja priporočil za izdelke
+
+Z vzpostavljenimi poenotenimi profili strank in ustvarjeno dejavnostjo zaženite priporočilo za izdelek predvidevanje.
+
+1. Pojdi do **Inteligenca** > **Napovedi**.
+
+1. Na **Ustvari** zavihek izberite **Uporabite model** na **Priporočila za izdelke (predogled)** ploščica.
 
 1. Izberite **Začetek**.
 
 1. Poimenujte model **Model predvidevanja priporočil za vnaprej pripravljene izdelke** in izhodno entiteto **ModelPredvidevanjaPriporočilZaVnaprejPripravljeneIzdelke**.
 
-1. Določite tri pogoje za model:
+1. Izberite **Naprej**.
 
-   - **Število izdelkov**: nastavite to vrednost na **5**. Ta nastavitev določi, koliko izdelkov želite priporočiti svojim strankam.
-
-   - **Pričakovani ponovljeni nakupi**: izberite **Da**, če želite izdelke vključiti v priporočilo izdelkov, ki so jih vaše stranke že kupile.
-
-   - **Obdobje zajema podatkov:** izberite vsaj **365 dni**. Ta nastavitev določa obdobje zajema podatkov strankine dejavnosti, ki ga bo model upošteval pri vnosu priporočil.
+1. Določite nastavitve modela:
+   - **Število izdelkov** :**5** da določite, koliko izdelkov želite priporočiti svojim strankam.
+   - **Pričakovani ponovni nakupi** :**ja** da v priporočilo vključi že kupljene izdelke.
+   - **Okno za pogled nazaj:** **365 dni** da določite, kako daleč bo model pogledal nazaj, preden ponovno priporoči izdelek.
 
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Oblikujte nastavitve za model s priporočili za izdelke.":::
 
-1. V **Dodajte zahtevane podatke** korak, izberite **Dodajte podatke**.
+1. Izberite **Naprej**.
 
-1. V **Dodajte podatke** podoknu, izberite **SalesOrderLine** kot subjekt zgodovine nakupov. Na tej točki verjetno še ni konfiguriran. Odprite povezavo v podoknu, da ustvarite dejavnost z naslednjimi koraki:
-   1. Vnesite an **Ime dejavnosti** in izberite *Nakupi e-trgovine: e-trgovina* kot **Subjekt dejavnosti**. The **Primarni ključ** je *PurchaseId*.
-   1. Določite in poimenujte razmerje do *Kontakti e-trgovine: subjekt e-trgovine* in izberite **ContactId** kot tuji ključ.
-   1. Za poenotenje dejavnosti nastavite **Dejavnost dogodka** kot *Skupna cena* in časovni žig do *Kupljeno dne*. Določite lahko več polj, kot je opisano v [Aktivnosti strank](activities.md).
-   1. Za **Vrsta dejavnosti**, izberite *SalesOrderLine*. Preslikajte naslednja polja dejavnosti:
-      - ID vrstice naročila: PurchaseId
-      - ID naročila: PurchaseId
-      - Podatki o naročilu: PurchasedOn
-      - ID izdelka: ProductId
-      - Znesek: TotalPrice
-   1. Preglejte in dokončajte dejavnost, preden se vrnete na konfiguracijo modela.
+1. V **Dodajte zgodovino nakupov** korak, izberite **Dodajte podatke**.
 
-1. Nazaj v **Izberite dejavnosti** korak, izberite novo ustvarjeno dejavnost v **dejavnosti** oddelek. Izberite **Naslednji** in preslikava atributov je že izpolnjena. Izberite **Shrani**.
+1. Izberite **SalesOrderLine** in entiteto eCommercePurchases ter izberite **Naslednji**. Zahtevani podatki se samodejno izpolnijo iz aktivnosti. Izberite **Shrani** in potem **Naslednji**.
 
-1. V tem vzorčnem vodniku preskočimo **Dodajte informacije o izdelku** in **Filtri za izdelke** nastavljeno, ker nimamo podatkov o izdelku.
+1. Preskoči **Dodajte informacije o izdelku** in **Filtri izdelkov** korake, ker nimamo podatkov o izdelkih.
 
-1. V **Posodobitve podatkov** korak, nastavite urnik modela.
+1. V **Posodobitve podatkov** korak, izberite **Mesečno** za modelni urnik.
 
-   Model se mora redno usposabljati, da se nauči novih vzorcev, ko vnese nove podatke. V tem primeru izberite **Mesečno**.
+1. Izberite **Naprej**.
 
-1. Po pregledu vseh podrobnosti izberite **Shrani in zaženi**. Prvi zagon modela bo trajal nekaj minut.
+1. Po pregledu vseh podrobnosti izberite **Shrani in zaženi**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>4. opravilo – preglejte rezultate modela in razlage
+## <a name="task-5---review-model-results-and-explanations"></a>5. opravilo – preglejte rezultate modela in razlage
 
-Model naj dokonča usposabljanje in ocenjevanje podatkov. Zdaj lahko pregledate pojasnila modela s priporočili za izdelke. Za več informacij glejte [Pregled stanja in rezultatov predvidevanja](predict-transactional-churn.md#review-a-prediction-status-and-results).
+Model naj dokonča usposabljanje in ocenjevanje podatkov. Preglejte [razlage modelov priporočil za izdelke](predict-transactional-churn.md#view-prediction-results).
 
-## <a name="task-5---create-a-segment-of-high-purchased-products"></a>5. opravilo – ustvarjanje segmenta najbolj prodajanih izdelkov
+## <a name="task-6---create-a-segment-of-high-purchased-products"></a>6. opravilo – ustvarjanje segmenta najbolj prodajanih izdelkov
 
-Z zagonom produkcijskega modela ustvarite novo entiteto, ki jo lahko vidite v razdelku **Podatki** > **Entitete**.
+Z zagonom modela boste ustvarili novo entiteto, ki je navedena na zavihku **Podatki** > **Entitete**. Na podlagi entitete, ki jo je ustvaril model, lahko ustvarite nov segment.
 
-Na podlagi entitete, ki jo je ustvaril model, lahko ustvarite nov segment.
+1. Na strani z rezultati izberite **Ustvari segment**.
 
-1. Izberite **Segmenti**. Izberite **Novo** in izberite **Ustvarite iz inteligence**.
+1. Ustvarite pravilo z uporabo **OOBProductRecommendationModelPrediction** entiteto in definirajte segment:
+   - **Polje** : ID izdelka
+   - **Vrednost** : Izberite prve tri ID-je izdelkov
 
-   ![Ustvarjanje segmenta z izhodnimi podatki modela.](media/segment-intelligence.png)
+1. Izberite **Shrani** in **Teči** segment.
 
-1. Izberite končno točko **ModelPredvidevanjaPriporočilZaVnaprejPripravljeneIzdelke** in določite segment:
+Zdaj imate segment, ki se dinamično posodablja in identificira stranke, ki bi jih morda zanimal nakup petih najbolj priporočenih izdelkov. Za več informacij glejte [Ustvarjanje in upravljanje segmentov](segments.md).
 
-   - Polje: IDIzdelka
-   - Vrednost: izberite najboljše tri ID-je izdelka
-
-   :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Ustvarite segment iz rezultatov modela.":::
-
-Zdaj imate segment, ki se dinamično posodablja in identificira stranke, ki bi jih morda zanimale nakup treh najbolj priporočenih izdelkov.
-
-Za več informacij glejte [Ustvarjanje in upravljanje segmentov](segments.md).
+> [!TIP]
+> Ustvarite lahko tudi segment za model predvidevanje iz **Segmenti** stran z izbiro **Novo** in izbiranje **Ustvari iz** > **Inteligenca**. Za več informacij glejte [Ustvarite nov segment s hitrimi segmenti](segment-quick.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

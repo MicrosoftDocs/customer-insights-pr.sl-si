@@ -1,7 +1,7 @@
 ---
 title: Povezovanje s podatki v upravljanem jezeru podatkov Microsoft Dataverse
 description: Uvozite podatke iz upravljanega jezera podatkov Microsoft Dataverse.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206973"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609871"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povezovanje s podatki v upravljanem jezeru podatkov Microsoft Dataverse
 
@@ -39,7 +39,7 @@ Microsoft Dataverse uporabniki se lahko hitro povežejo z analitičnimi subjekti
 
 1. Izberite **Microsoft Dataverse**.
 
-1. Vnesite a **Ime** za vir podatkov in neobvezno **Opis**.
+1. Vnesite a **Ime** za vir podatkov in izbirno **Opis**.
 
 1. Navedite **Naslov strežnika** za organizacijo Dataverse in izberite **Vpis**.
 
@@ -70,5 +70,93 @@ Izbor entitet uredite šele po ustvarjanju vira podatkov. Če bi bili na primer 
 1. Kliknite **Shrani** da uveljavite svoje spremembe in se vrnete na **Viri podatkov** strani.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Pogosti razlogi za napake pri vnosu ali poškodovane podatke
+
+Za odkrivanje poškodovanih zapisov se izvajajo naslednja preverjanja uvoženih podatkov:
+
+- Vrednost polja se ne ujema z vrsto podatkov njegovega stolpca.
+- Polja vsebujejo znake, zaradi katerih se stolpci ne ujemajo s pričakovano shemo. Na primer: napačno oblikovani narekovaji, nespremenjeni narekovaji ali znaki nove vrstice.
+- Če obstajajo stolpci datetime/date/datetimeoffset, mora biti njihov format naveden v modelu, če ne sledi standardnemu formatu ISO.
+
+### <a name="schema-or-data-type-mismatch"></a>Neujemanje sheme ali vrste podatkov
+
+Če podatki niso v skladu s shemo, so zapisi razvrščeni kot poškodovani. Popravite izvorne podatke ali shemo in znova vnesite podatke.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Polja datuma in časa v napačni obliki
+
+Polja datuma in časa v entiteti niso v formatu ISO ali en-US. Privzeta oblika datuma in časa v Customer Insights je oblika en-US. Vsa polja datuma in časa v entiteti morajo biti v isti obliki. Customer Insights podpira druge oblike pod pogojem, da so opombe ali lastnosti narejene na ravni vira ali entitete v modelu ali manifest.json. Na primer:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  V datoteki manifest.json je oblika datuma in časa lahko podana na ravni entitete ali na ravni atributa. Na ravni entitete uporabite »exhibitsTraits« v entiteti v datoteki *.manifest.cdm.json, da definirate format datatime. Na ravni atributa uporabite »appliedTraits« v atributu v entiteti ime.cdm.json.
+
+**Manifest.json na ravni entitete**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json na ravni atributa**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

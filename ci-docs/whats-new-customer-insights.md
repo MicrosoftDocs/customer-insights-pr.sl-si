@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
-ms.translationtype: MT
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.translationtype: HT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409377"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609612"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novosti v rešitvi Dynamics 365 Customer Insights
 
@@ -228,14 +228,14 @@ Za več informacij glejte [Spremenite lastnika okolja](manage-environments.md#ch
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Postopek priprave podatkov navaja razloge za poškodovane zapise
 
-Priprava podatkov zdaj prikazuje vzrok za pokvarjenost za vsa polja s pokvarjenimi podatki. Informacije so na voljo na ravni posameznega zapisa za lažjo identifikacijo. 
+Priprava podatkov zdaj prikazuje vzrok za pokvarjenost za vsa polja s pokvarjenimi podatki. Informacije so na voljo na ravni posameznega zapisa za lažjo identifikacijo.
 
-Za več informacij glejte [Poškodovani viri podatkov](entities.md#corrupted-data-sources).
+Za več informacij glejte [Pokvarjeni viri podatkov](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Konec predogleda za funkcije poročanja v zmožnosti vpogledov v sodelovanje
 
 The Dynamics 365 Customer Insights Predogled zmogljivosti vpogledov v sodelovanje se je končal 15. februarja 2022.  
-Ta sprememba pomeni, da preskusna izkušnja Customer Insights ne vključuje več možnosti ustvarjanja tokov ali drugih funkcij poročanja.
+Ta sprememba pomeni, da preskusna izkušnja Customer Insights ne vključuje več zmožnosti ustvarjanja tokov ali drugih funkcij poročanja.
 
 Vabimo vas, da raziščete in ocenite številne druge funkcije [Vpogledi strank](https://dynamics.microsoft.com/ai/customer-insights/), Microsoftova platforma za podatke o strankah (CDP).    
  

@@ -1,19 +1,19 @@
 ---
 title: Uporaba modelov, ki temeljijo na strojnem učenju Azure
 description: Uporabite modele, ki temeljijo na strojnem učenju Azure, v storitvi Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082291"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609845"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Uporaba modelov, ki temeljijo na strojnem učenju Azure
 
@@ -34,8 +34,8 @@ Združeni podatki v storitvi Dynamics 365 Customer Insights so vir za gradnjo mo
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Delo z oblikovalnikom za strojno učenje Azure
 
-Oblikovalec Azure Strojno učenje ponuja vizualno platno, kamor lahko povlečete in spustite nabore podatkov in module. Prodajni lijak paketa, ustvarjen v oblikovalniku, je mogoče integrirati s storitvijo Customer Insights, če sta ustrezno konfigurirana. 
-   
+Oblikovalnik Azure Strojno učenje ponuja vizualno platno, kamor lahko povlečete in spustite nabore podatkov in module. Prodajni lijak paketa, ustvarjen v oblikovalniku, je mogoče integrirati s storitvijo Customer Insights, če sta ustrezno konfigurirana. 
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Delo s SDK-jem za strojno učenje Azure
 
 Podatkovni znanstveniki in razvijalci umetne inteligence uporabljajo [SDK za strojno učenje Azure](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) za ustvarjanje potekov dela za strojno učenje. Trenutno modelov, naučenih z uporabo SDK-ja, ni mogoče neposredno integrirati s storitvijo Customer Insights. Za integracijo s storitvijo Customer Insights je potreben prodajni lijak za sklepanje glede paketov, ki uporablja ta model.
@@ -44,17 +44,16 @@ Podatkovni znanstveniki in razvijalci umetne inteligence uporabljajo [SDK za str
 
 ### <a name="dataset-configuration"></a>Konfiguracija nabora podatkov
 
-Ustvariti morate nabore podatkov, da boste lahko uporabili podatke entitete iz storitve Customer Insights v prodajnem lijaku za sklepanje glede paketov. Te nabore podatkov je treba registrirati v delovnem prostoru. Trenutno podpiramo samo [tabelarične nabore podatkov](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) v obliki .csv. Nabore podatkov, ki ustrezajo podatkom entitete, je treba razvrstiti kot parametre prodajnega lijaka.
-   
-* Parametri nabora podatkov v oblikovalniku
-   
-     V oblikovalniku odprite možnost **Izbira stolpcev v naboru podatkov** in izberite **Nastavi kot parameter prodajnega lijaka**, pri čemer navedete ime parametra.
+Ustvarite nabore podatkov za uporabo podatkov subjektov iz Customer Insights za vaš cevovod za paketno sklepanje. Registrirajte te nize podatkov v delovnem prostoru. Trenutno podpiramo samo [tabelarične nabore podatkov](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) v obliki .csv. Parametrirajte nabore podatkov, ki ustrezajo podatkom entitete, kot parameter cevovoda.
 
-     > [!div class="mx-imgBorder"]
-     > ![Parametrizacija nabora podatkov v oblikovalniku.](media/intelligence-designer-dataset-parameters.png "Razvrstitev parametrov nabora podatkov v oblikovalniku")
-   
-* Parameter nabora podatkov v SDK-ju (Python)
-   
+- Parametri nabora podatkov v oblikovalniku
+
+  V oblikovalniku odprite možnost **Izbira stolpcev v naboru podatkov** in izberite **Nastavi kot parameter prodajnega lijaka**, pri čemer navedete ime parametra.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Parametrizacija nabora podatkov v oblikovalniku.":::
+
+- Parameter nabora podatkov v SDK-ju (Python)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Ustvariti morate nabore podatkov, da boste lahko uporabili podatke entitete iz s
 
 ### <a name="batch-inference-pipeline"></a>Prodajni lijak za sklepanje glede paketov
   
-* V oblikovalniku se lahko za ustvarjanje ali posodabljanje prodajnega lijaka za sklepanje uporablja prodajni lijak za usposabljanje. Trenutno so podprti samo prodajni lijaki za sklepanje glede paketov.
+- V oblikovalniku uporabite cevovod za usposabljanje, da ustvarite ali posodobite cevovod sklepanja. Trenutno so podprti samo prodajni lijaki za sklepanje glede paketov.
 
-* Z uporabo SDK-ja lahko objavite prodajni lijak pri končni točki. Trenutno se Customer Insights integrira s privzetim prodajnim lijakom pri končni točki prodajnega lijaka glede paketov v delovnem prostoru za strojno učenje.
-   
+- S SDK-jem objavite cevovod na končna točka. Trenutno se Customer Insights integrira s privzetim prodajnim lijakom pri končni točki prodajnega lijaka glede paketov v delovnem prostoru za strojno učenje.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Ustvariti morate nabore podatkov, da boste lahko uporabili podatke entitete iz s
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Uvoz podatkov prodajnega lijaka v Customer Insights
 
-* Oblikovalnik zagotavlja [modul za izvoz podatkov](/azure/machine-learning/algorithm-module-reference/export-data), ki omogoča izvoz izhoda prodajnega lijaka v shrambo Azure. Trenutno mora modul uporabljati vrsto shrambe podatkov **Shramba zbirke dvojiških podatkov Azure** in nastaviti parameter **Shramba podatkov** in relativno **pot**. Customer Insights preglasi oba parametra med izvajanjem prodajnega lijaka s shrambo podatkov in potjo, ki je dostopna izdelku.
-   > [!div class="mx-imgBorder"]
-   > ![Konfiguracija modula za izvoz podatkov.](media/intelligence-designer-importdata.png "Konfiguracija modula za izvoz podatkov")
-   
-* Ob zapisu izhodnih podatkov za sklepanje s kod, lahko izhodne podatke naložite v pot znotraj *registrirane shrambe podatkov* v delovnem prostoru. Če so določeni parametri poti in shrambe podatkov v prodajnem lijaku, bo lahko Customer Insights prebral in uvozil izhodne podatke za sklepanje. Trenutno je podprt en sam niz tabelaričnih izhodnih podatkov v obliki zapisa csv. Pot mora vsebovati imenik in ime datoteke.
+- Oblikovalnik zagotavlja [modul za izvoz podatkov](/azure/machine-learning/algorithm-module-reference/export-data), ki omogoča izvoz izhoda prodajnega lijaka v shrambo Azure. Trenutno mora modul uporabljati vrsto shrambe podatkov **Shramba zbirke dvojiških podatkov Azure** in nastaviti parameter **Shramba podatkov** in relativno **pot**. Customer Insights preglasi oba parametra med izvajanjem prodajnega lijaka s shrambo podatkov in potjo, ki je dostopna izdelku.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Konfiguracija modula za izvoz podatkov.":::
+
+- Ko pišete izhod sklepanja z uporabo kode, naložite izhod na pot znotraj a *registrirano shrambo podatkov* v delovnem prostoru. Če so določeni parametri poti in shrambe podatkov v prodajnem lijaku, bo lahko Customer Insights prebral in uvozil izhodne podatke za sklepanje. Trenutno je podprt en sam niz tabelaričnih izhodnih podatkov v obliki zapisa csv. Pot mora vsebovati imenik in ime datoteke.
 
    ```python
    # In Pipeline setup script

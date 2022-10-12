@@ -1,7 +1,7 @@
 ---
 title: Povezava z mapo Common Data Model z uporabo računa Azure Data Lake
 description: Delo s podatki Common Data Model z uporabo storitve Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396111"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609968"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Vzpostavljanje povezave s podatki v storitvi Azure Data Lake Storage
 
@@ -44,6 +44,10 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo vašega Azure Data La
 
 - Podatki v vašem Data Lake Storageu bi morali slediti standardu skupnega podatkovnega modela za shranjevanje vaših podatkov in imeti skupni manifest podatkovnega modela, ki predstavlja shemo podatkovnih datotek (*.csv ali *.parquet). Manifest mora vsebovati podrobnosti o entitetah, kot so stolpci entitet in tipi podatkov, ter lokacijo in vrsto podatkovne datoteke. Za več informacij glejte [Manifest skupnega podatkovnega modela](/common-data-model/sdk/manifest). Če manifest ni prisoten, lahko skrbniški uporabniki z dostopom lastnika podatkov bloba shrambe ali podatkov bloba shranjevanja sodelavec določijo shemo pri vnosu podatkov.
 
+## <a name="recommendations"></a>Priporočila
+
+Za optimalno delovanje Customer Insights priporoča, da je velikost particije 1 GB ali manj, število particijskih datotek v mapi pa ne sme presegati 1000.
+
 ## <a name="connect-to-azure-data-lake-storage"></a>Vzpostavljanje povezave s storitvijo Azure Data Lake Storage
 
 1. Pojdite na **Podatki** > **Viri podatkov**.
@@ -54,7 +58,7 @@ Vnesite podatke v Dynamics 365 Customer Insights z uporabo vašega Azure Data La
 
    :::image type="content" source="media/data_sources_ADLS.png" alt-text="Pogovorno okno za vnos podrobnosti povezave za Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
-1. Vnesite a **Ime** za vir podatkov in neobvezno **Opis**. Ime enolično identificira vir podatkov in je navedeno v nadaljnjih procesih in ga ni mogoče spremeniti.
+1. Vnesite a **Ime** za vir podatkov in izbirno **Opis**. Ime enolično identificira vir podatkov in je navedeno v nadaljnjih procesih in ga ni mogoče spremeniti.
 
 1. Izberite eno od naslednjih možnosti za **Povežite shrambo z uporabo**. Za več informacij glejte [Povežite Customer Insights z Azure Data Lake Storage Gen2 račun z glavnim servisom Azure](connect-service-principal.md).
 
@@ -199,5 +203,101 @@ Lahko posodobite *Povežite se z računom za shranjevanje z uporabo* možnost. Z
 1. Kliknite **Shrani** da uveljavite svoje spremembe in se vrnete na **Viri podatkov** strani.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Pogosti razlogi za napake pri vnosu ali poškodovane podatke
+
+Med zaužitjem podatkov nekateri najpogostejši razlogi, zaradi katerih se lahko šteje, da je zapis poškodovan, vključujejo:
+
+- Tipi podatkov in vrednosti polj se ne ujemajo med izvorno datoteko in shemo
+- Število stolpcev v izvorni datoteki se ne ujema s shemo
+- Polja vsebujejo znake, zaradi katerih so stolpci poševni v primerjavi s pričakovano shemo. Na primer: nepravilno oblikovani narekovaji, neubežni narekovaji, znaki za novo vrstico ali tabulatorji.
+- Manjkajo particijske datoteke
+- Če obstajajo stolpci datetime/date/datetimeoffset, mora biti njihov format naveden v shemi, če ne sledi standardni obliki.
+
+### <a name="schema-or-data-type-mismatch"></a>Neujemanje sheme ali vrste podatkov
+
+Če podatki niso v skladu s shemo, se postopek vnosa zaključi z napakami. Popravite izvorne podatke ali shemo in znova vnesite podatke.
+
+### <a name="partition-files-are-missing"></a>Manjkajo particijske datoteke
+
+- Če je bil vnos uspešen brez kakršnih koli poškodovanih zapisov, vendar ne vidite nobenih podatkov, uredite datoteko model.json ali manifest.json, da zagotovite, da so particije določene. Potem, [osveži vir podatkov](data-sources.md#refresh-data-sources).
+
+- Če pride do zaužitja podatkov hkrati z osveževanjem podatkovnih virov med samodejnim osveževanjem razporeda, so lahko particijske datoteke prazne ali niso na voljo za obdelavo v storitvi Customer Insights. Če želite uskladiti z razporedom osveževanja navzgor, spremenite [urnik osveževanja sistema](schedule-refresh.md) ali urnik osveževanja za vir podatkov. Uskladite časovni razpored tako, da se osvežitve ne zgodijo vse naenkrat, in zagotavlja najnovejše podatke, ki jih je treba obdelati v Customer Insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Polja datuma in časa v napačni obliki
+
+Polja datuma in časa v entiteti niso v formatu ISO 8601 ali en-US. Privzeta oblika datuma in časa v Customer Insights je oblika en-US. Vsa polja datuma in časa v entiteti morajo biti v isti obliki. Customer Insights podpira druge oblike pod pogojem, da so opombe ali lastnosti narejene na ravni vira ali entitete v modelu ali manifest.json. Na primer:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  V datoteki manifest.json je oblika datuma in časa lahko podana na ravni entitete ali na ravni atributa. Na ravni entitete uporabite »exhibitsTraits« v entiteti v *.manifest.cdm.json, da definirate obliko datuma in časa. Na ravni atributa uporabite »appliedTraits« v atributu v entiteti ime.cdm.json.
+
+**Manifest.json na ravni entitete**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json na ravni atributa**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

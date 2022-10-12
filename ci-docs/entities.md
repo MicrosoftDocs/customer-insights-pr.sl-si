@@ -1,7 +1,7 @@
 ---
 title: Entitete v storitvi Customer Insights
 description: Oglejte si podatke na strani Entitete.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183605"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610118"
 ---
 # <a name="entities-in-customer-insights"></a>Entitete v storitvi Customer Insights
 
@@ -54,34 +54,12 @@ Pojdi do **podatki** > **Entitete** za ogled seznama entitet. Za vsako entiteto 
 
    :::image type="content" source="media/data-manager-entities-data.png" alt-text="Izberite entiteto.":::
 
-- The **Poročila** zavihek (na voljo za nekatere subjekte) vam omogoča vizualizacijo podatkov z ustvarjanjem poročila, ki vključuje te stolpce:
+- The **Poročila** zavihek (na voljo za nekatere entitete) vam omogoča vizualizacijo podatkov z ustvarjanjem poročila, ki vključuje te stolpce:
 
   - **Ime poročila** : Ime poročila.
   - **Ustvaril** : ime osebe, ki je ustvarila entiteto.
   - **Ustvarjeno** : Datum in čas ustvarjanja entitete.
   - **Uredil** : ime osebe, ki je spremenila entiteto.
   - **Urejeno** : datum in čas spremembe entitete.
-
-## <a name="entity-specific-information"></a>Informacije o določeni entiteti
-
-V naslednjem razdelku najdete informacije o nekaterih entitetah, ki jih je ustvaril sistem.
-
-### <a name="corrupted-data-sources"></a>Poškodovani viri podatkov
-
-Polja iz uvoženega vira podatkov lahko vsebujejo poškodovane podatke. Zapisi s poškodovanimi polji so na voljo v entitetah, ki jih je ustvaril sistem. Poznavanje poškodovanih zapisov vam pomaga ugotoviti, katere podatke morate pregledati in posodobiti v izvornem sistemu. Po naslednji osvežitvi vira podatkov se popravljeni zapisi uvozijo v Customer Insights in posredujejo v postopke iz strežnika. 
-
-Na primer stolpec »rojstni dan« ima vrsto podatkov nastavljeno kot »datum«. V evidenci strank je njihov rojstni dan vpisan kot »01/01/19777«. Sistem bo ta zapis označil kot poškodovan. Nekdo lahko v izvornem sistemu zdaj spremeni rojstni dan na »1977«. Po samodejnem osveževanju virov podatkov ima polje zdaj veljavno obliko in zapis bo odstranjen iz poškodovane entitete.
-
-Pojdite na **Podatki** > **Entitete** in v razdelku **Sistem** poiščite poškodovane entitete. Shema poimenovanja poškodovanih entitet: »DataSourceName_EntityName_corrupt«. Izberite poškodovano entiteto, da prepoznate poškodovana polja in razlog na ravni posameznega zapisa.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Razlog za korupcijo.":::
-
-Customer Insights še vedno obdeluje poškodovane zapise. Lahko pa povzročijo težave pri delu s poenotenimi podatki.
-
-Za odkrivanje poškodovanih zapisov se izvajajo naslednja preverjanja uvoženih podatkov:
-
-- Vrednost polja se ne ujema z vrsto podatkov njegovega stolpca.
-- Polja vsebujejo znake, zaradi katerih se stolpci ne ujemajo s pričakovano shemo. Na primer: napačno oblikovani narekovaji, nespremenjeni narekovaji ali znaki nove vrstice.
-- Če obstajajo stolpci datetime/date/datetimeoffset, je treba v modelu določiti njihov format, če ne sledi standardnemu formatu ISO.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
