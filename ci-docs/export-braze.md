@@ -1,19 +1,19 @@
 ---
 title: Izvoz segmentov v Braze (predogled)
 description: Naučite se konfigurirati povezavo in izvoziti v Braze.
-ms.date: 07/25/2022
+ms.date: 10/06/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 84dc7f13f30e0334d431fe5b5866c7f87e82ab27
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
+ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195127"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9655307"
 ---
 # <a name="export-segments-to-braze-preview"></a>Izvoz segmentov v Braze (predogled)
 
@@ -23,6 +23,7 @@ Izvozite segmente poenotenih profilov strank v Braze in jih uporabite za marketi
 
 - A [Braze račun](https://www.braze.com/) in ustrezne skrbniške poverilnice.
 - A [Braze API ključ](https://www.braze.com/docs/api/basics/)
+- Vaš [Braze REST končna točka](https://www.braze.com/docs/api/basics/#api-definitions) 
 - [Konfigurirani segmenti](segments.md) v Customer Insights.
 - Poenoteni profili strank v izvoženih segmentih vsebujejo polje, ki predstavlja e-poštni naslov in ID stranke Braze.
 
@@ -30,6 +31,7 @@ Izvozite segmente poenotenih profilov strank v Braze in jih uporabite za marketi
 
 - Do 1 milijon profilov strank za Braze, ki lahko traja do 40 minut. Število profilov strank, ki jih lahko izvozite v Braze, je odvisno od vaše pogodbe z Braze.
 - Samo segmenti.
+- Azure Private Link ni podprt za izvoz Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Nastavite povezavo z Braze
 
@@ -62,6 +64,8 @@ Izvozite segmente poenotenih profilov strank v Braze in jih uporabite za marketi
 1. Izberite **Dodaj izvoz**.
 
 1. V **Povezava za izvoz** izberite povezavo v razdelku Braze. Če ni na voljo nobena povezava, se obrnite na skrbnika.
+
+1. Vnesite svoj REST končna točka v **Ime gostitelja** polje v naslednji obliki:`rest.iad-03.braze.com`.
 
 1. Vnesite ime za izvoz.
 

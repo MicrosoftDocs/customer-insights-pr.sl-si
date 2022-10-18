@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
-ms.translationtype: HT
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
+ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609612"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638371"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Novosti v rešitvi Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Posodobitve izdajamo po posameznih regijah. Tako lahko nekatere regije vidijo fu
 
 > [!TIP]
 > Če želite predložiti zahteve glede funkcij in predloge za izdelke ter glasovati o njih, pojdite na [portal zamisli za aplikacijo Dynamics 365](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Posodobitve v septembru 2022
+
+Posodobitve v septembru 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in popravke napak.
+
+### <a name="export-data-to-hubspot"></a>Izvoz podatkov v HubSpot
+
+Izvozite segmente poenotenih profilov strank v HubSpot in jih uporabite za e-poštno trženje.
+
+Za več informacij glejte [Izvozi segmente v HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Odstranite poenoteno polje ali entiteto iz poenotenja podatkov
+
+Polja in entitete lahko odstranite iz postopka poenotenja podatkov.
+
+Za več informacij glejte [Odstranite poenoteno polje](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Upravljajte profile neznanih strank
+
+Nepozabna personalizacija je odvisna od bogastva in popolnosti vaših podatkov o strankah in Customer Insights vam pomaga doseči te cilje. Upravljate lahko profile strank za uporabnike, za katere razen ID-ja nimate drugih podatkov.
+
+Za več informacij glejte [Upravljajte neznane profile s Customer Insights](manage-unknown-profiles.md).
 
 ## <a name="august-2022-updates"></a>Posodobitve v avgustu 2022
 
@@ -58,7 +80,7 @@ Posodobitve v juliju 2022 vključujejo nove funkcije, nadgradnje zmogljivosti in
 
 Izvozite segmente poenotenih profilov strank v MoEngage in jih uporabite za e-poštno trženje v MoEngage.
 
-Za več informacij glejte [Izvozite segmente v MoEngage](export-moengage.md).
+Za več informacij glejte [Izvozi segmente v MoEngage](export-moengage.md).
 
 ### <a name="ssh-support-for-sftp-based-exports"></a>Podpora SSH za izvoze, ki temeljijo na SFTP
 
@@ -218,7 +240,7 @@ Za več informacij glejte [Obogatite profile strank z identitetnimi podatki iz L
 
 Uporabite podatke iz virov, kot so Microsoft in drugi partnerji, da obogatite svoje podatke o strankah pred poenotenjem podatkov. Vir podatkov obogatitve pomagajo ustvariti višjo popolnost in kakovost podatkov, kar lahko pomaga doseči boljše rezultate, ko poenotite podatke.
 
-Za več informacij glejte [Obogatitev za vire podatkov (Predogled)](data-sources-enrichment.md).
+Za več informacij glejte [Obogatitev za vire podatkov (predogled)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Sprememba lastnika okolja
 
@@ -235,7 +257,7 @@ Za več informacij glejte [Pokvarjeni viri podatkov](data-sources.md#corrupt-dat
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Konec predogleda za funkcije poročanja v zmožnosti vpogledov v sodelovanje
 
 The Dynamics 365 Customer Insights Predogled zmogljivosti vpogledov v sodelovanje se je končal 15. februarja 2022.  
-Ta sprememba pomeni, da preskusna izkušnja Customer Insights ne vključuje več zmožnosti ustvarjanja tokov ali drugih funkcij poročanja.
+Ta sprememba pomeni, da preskusna izkušnja Customer Insights ne vključuje več možnosti ustvarjanja tokov ali drugih funkcij poročanja.
 
 Vabimo vas, da raziščete in ocenite številne druge funkcije [Vpogledi strank](https://dynamics.microsoft.com/ai/customer-insights/), Microsoftova platforma za podatke o strankah (CDP).    
  
