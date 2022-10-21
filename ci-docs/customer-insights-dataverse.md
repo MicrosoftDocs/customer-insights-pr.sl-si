@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424329"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671271"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Delo s podatki Customer Insights v okolju Microsoft Dataverse
 
@@ -58,11 +58,14 @@ The **Microsoft Dataverse** korak vam omogoča, da Customer Insights povežete s
 
 1. Če uporabljate svoj račun Data Lake Storage:
    1. Izberite **Omogoči skupno rabo podatkov** z Dataverse.
-   1. Vnesite **Identifikator dovoljenj**. Če želite pridobiti identifikator dovoljenja, [omogoči deljenje podatkov z Dataverse od svojega Azure Data Lake Storage](#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+   1. Vnesite **Identifikator dovoljenj**. Če želite pridobiti identifikator dovoljenja, [omogoči deljenje podatkov z Dataverse iz svojega lastnega Azure Data Lake Storage](#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Omogoči skupno rabo podatkov z Dataverse od svojega Azure Data Lake Storage (predogled)
 
 notri [lastne Azure Data Lake Storage račun](own-data-lake-storage.md), preverite, ali ima uporabnik, ki nastavlja okolje Customer Insights, vsaj **Podatki bloba za shranjevanje Uporabnik z dovoljenjem za branje** dovoljenja za`customerinsights` vsebnik v računu za shranjevanje.
+
+> [!NOTE]
+> Deljenje podatkov je možno le, če uporabljate svoje Azure Data Lake Storage račun. Ta nastavitev ni na voljo, če okolje Customer Insights uporablja privzeto Dataverse shranjevanje.
 
 ### <a name="limitations"></a>Omejitve
 
