@@ -2,7 +2,7 @@
 title: Pogoji ujemanja za poenotenje podatkov
 description: Zagotovite ujemanje entitet za ustvarjanje poenotenih profilov strank.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304677"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721541"
 ---
 # <a name="match-conditions-for-data-unification"></a>Pogoji ujemanja za poenotenje podatkov
 
@@ -112,7 +112,7 @@ Pravila ujemanja predstavljajo nabore pogojev. Za ujemanje entitet s pogoji na p
 1. Sledite korakom v [Določite pravila za pare ujemanja](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> Vrstni red pravil je pomemben. Algoritem za ujemanje se poskuša ujemati z danim zapisom stranke na podlagi vašega prvega pravila in nadaljuje z drugim pravilom le, če s prvim pravilom ni bilo ugotovljenih ujemanj.
+> Vrstni red pravil je pomemben. Algoritem za ujemanje se poskuša ujemati z danim zapisom stranke na podlagi vašega prvega pravila in nadaljuje z drugim pravilom samo, če s prvim pravilom ni bilo ugotovljenih ujemanj.
 
 ## <a name="advanced-options"></a>Dodatne možnosti
 
@@ -130,30 +130,31 @@ Na primer, če vaše pravilo ujemanja združuje priimek, mesto in datum rojstva,
 
 ### <a name="specify-custom-match-conditions"></a>Določanje pogojev ujemanja po meri
 
-Določite lahko pogoje, ki preglasijo privzeto logiko ujemanja. Na voljo so štiri možnosti:
+Podajte pogoje, ki preglasijo privzeto logiko ujemanja. Na voljo so štiri možnosti:
 
 |Možnost  |Description |Primer  |
 |---------|---------|---------|
-|Mora se ujemati     | Določa vrednosti, ki se vedno ujemajo.         |  Vedno se ujemajo *Mike* in *MikeR*.       |
-|Nikoli se ne sme ujemati     | Določa vrednosti, ki se nikoli ne ujemajo.        | Nikoli se ne ujemaj *Janez* in *Jonathan*.        |
+|Mora se ujemati     | Določa vrednosti za primarne ključe, ki se vedno ujemajo.         |  Vedno povežite vrstico s primarnim ključem *12345* v vrstico s primarnim ključem *54321*.       |
+|Nikoli se ne sme ujemati     | Določa vrednosti za primarne ključe, ki se nikoli ne ujemajo.        | Nikoli ne povežite vrstice s primarnim ključem *12345* v vrstico s primarnim ključem *54321*.        |
 |Zaobitje            | Določa vrednosti, ki naj jih sistem vedno prezre v fazi ujemanja. |  Ignorirajte vrednosti *11111* in *Neznano* med tekmo.        |
-|Preslikava vzdevka    | Definiranje vrednosti, ki naj jih sistem obravnava kot isto vrednost.         | Razmislite *Joe* biti enak *Jožef*.        |
+|Preslikava vzdevka    | Določitev vrednosti, ki naj jih sistem obravnava kot isto vrednost.         | Razmislite *Joe* biti enak *Jožef*.        |
 
 1. Izberite **Po meri**.
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Gumb po meri":::
 
-1. Izberite **Vrsta po meri** in izberite **Prenesi predlogo**. Za vsako možnost ujemanja potrebujete ločeno predlogo.
+1. Izberite **Vrsta po meri** in izberite **Prenesi predlogo**. Preimenujte predlogo brez uporabe presledkov. Za vsako možnost ujemanja uporabite ločeno predlogo.
 
-1. Odprite preneseno datoteko predloge in izpolnite podrobnosti. Predloga vsebuje polja, ki določajo entiteto in vrednosti primarnega ključa entitete, ki se uporabljajo v ujemanju po meri. Če želite, da se na primer primarni ključ *12345* iz entitete *Prodaja* vedno ujema s primarnim ključem *34567* iz entitete *Stik*, izpolnite predlogo:
-    - Entity1: prodaja
-    - Entity1Key: 12345
-    - Entity2: stik
-    - Entity2Key: 34567
+1. Odprite preneseno datoteko predloge in izpolnite podrobnosti. Predloga vsebuje polja, ki določajo entiteto in vrednosti primarnega ključa entitete, ki se uporabljajo v ujemanju po meri. Imena entitet razlikujejo med velikimi in malimi črkami. Če želite, da se na primer primarni ključ *12345* iz entitete *Prodaja* vedno ujema s primarnim ključem *34567* iz entitete *Stik*, izpolnite predlogo:
+   - Entity1: prodaja
+   - Entity1Key: 12345
+   - Entity2: stik
+   - Entity2Key: 34567
 
    Ista datoteka predloge lahko določa zapise ujemanja po meri iz več entitet.
 
-   Če želite za odpravljanje podvajanj iz entitete določiti iskanje ujemanja po meri, podajte isto entiteto kot Entity1 in Entity2 ter nastavite različne vrednosti primarnega ključa.
+   > [!NOTE]
+   > Če želite za odpravljanje podvajanj iz entitete določiti iskanje ujemanja po meri, podajte isto entiteto kot Entity1 in Entity2 ter nastavite različne vrednosti primarnega ključa. Za uporabo ujemanja po meri morate za entiteto definirati vsaj eno pravilo za odstranjevanje podvojitev.
 
 1. Ko dodate vse preglasitve, shranite datoteko predloge.
 
@@ -169,6 +170,8 @@ Določite lahko pogoje, ki preglasijo privzeto logiko ujemanja. Na voljo so šti
    - Za **Obvoznica** oz **Preslikava vzdevkov**, izberite **Uredi** na obstoječem pravilu ujemanja ali ustvarite novo pravilo. V spustnem meniju Normalizacije izberite **Obvod po meri** oz **Preslikava vzdevkov** možnost in izberite **Končano**.
 
 1. Izberite **Končano** na **Po meri** podokno za uporabo konfiguracije ujemanja po meri.
+
+   Vsaka zaužita datoteka predloge je svoj vir podatkov. Če so odkriti zapisi, ki potrebujejo posebno obravnavo ujemanja, posodobite ustrezen vir podatkov. Posodobitev bo uporabljena med naslednjim postopkom združevanja. Na primer, identificirate dvojčka s skoraj enakim imenom, ki živita na istem naslovu in sta bila združena kot ena oseba. Posodobite vir podatkov, da prepoznate dvojčke kot ločene, edinstvene zapise.
 
 > [!div class="nextstepaction"]
 > [Naslednji korak: Poenotite polja](merge-entities.md)
