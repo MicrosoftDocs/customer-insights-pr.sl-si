@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195449"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724624"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Izvozi segmente v Iterable (predogled)
 
@@ -28,6 +28,7 @@ Izvozite segmente poenotenih profilov strank v Iterable in jih uporabite za mark
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Zasebna povezava v kombinaciji z Bring your own storage (BYOS) ni podprta.
 - Do 1 milijon profilov strank v Iterable, kar lahko traja do 30 minut. Število profilov strank, ki jih lahko izvozite v Iterable, je odvisno od vaše pogodbe z Iterable.
 - Samo segmenti.
 

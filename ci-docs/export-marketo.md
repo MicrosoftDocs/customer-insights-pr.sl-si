@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f57cdfbb24df8a8ffa1670b426d50dbba2c5f40f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: cba40b74b86a40fc41db856760c9361b755a8864
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195264"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724960"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Izvoz segmentov v Marketo (predogledna različica)
 
@@ -29,6 +29,7 @@ Izvozite segmente poenotenih profilov strank, da akcije, zagotovite e-poštno tr
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Zasebna povezava v kombinaciji z Bring your own storage (BYOS) ni podprta.
 - Do 1 milijon profilov strank na izvoz v Marketo, kar lahko traja do 3 ure. Število profilov strank, ki jih lahko izvozite v Marketo, je odvisno od vaše pogodbe s Marketom.
 - Samo segmenti.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655307"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725236"
 ---
 # <a name="export-segments-to-braze-preview"></a>Izvoz segmentov v Braze (predogled)
 
@@ -29,6 +29,7 @@ Izvozite segmente poenotenih profilov strank v Braze in jih uporabite za marketi
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Zasebna povezava v kombinaciji z Bring your own storage (BYOS) ni podprta.
 - Do 1 milijon profilov strank za Braze, ki lahko traja do 40 minut. Število profilov strank, ki jih lahko izvozite v Braze, je odvisno od vaše pogodbe z Braze.
 - Samo segmenti.
 - Azure Private Link ni podprt za izvoz Braze.

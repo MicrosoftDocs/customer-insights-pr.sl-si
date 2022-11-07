@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f2990ad410dda0cbf952f82f3fc30b3a53a7bcd4
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 855e77055eeb24a2c6cff0d45cd23edf93cc0581
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9197012"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724868"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Izvoz segmentov v SendGrid (predogledna različica)
 
@@ -29,6 +29,7 @@ Izvozite segmente poenotenih profilov strank v seznam strank storitve SendGrid i
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Zasebna povezava v kombinaciji z Bring your own storage (BYOS) ni podprta.
 - Skupaj do 100.000 profilov strank v SendGrid, kar lahko traja do nekaj ur. Število profilov strank, ki jih lahko izvozite v SendGrid, je odvisno od vaše pogodbe s SendGrid.
 - Samo segmenti.
 

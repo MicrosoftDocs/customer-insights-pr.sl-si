@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c7a4b1be1c959d70fad929b56452169b40e5b592
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195034"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724636"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Izvozi segmente v Facebook Ads Manager (predogled)
 
@@ -25,11 +25,13 @@ Izvozite segmente poenotenih profilov strank v Upravitelja oglasov za Facebook z
 
 - A [Facebook Ads račun](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) ki vključuje a [Facebook Poslovni račun](https://business.facebook.com/).
 - Skrbniške pravice na [Facebook Ads račun](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Pogoje po meri občinstvo mora sprejeti uporabnik, ki nastavi povezavo v Customer Insights.
 
 ## <a name="known-limitations"></a>Znane omejitve
 
 - Do 10 milijonov profilov strank na izvoz v Facebook Ads Manager, kar lahko traja do 90 minut.
 - Samo segmenti.
+- Facebook Integracija oglasov ne podpira uporabnikov z več kot 25 računi za oglase.
 - Facebook *seznam strank* vtipkati [občinstva po meri](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) samo.
   > [!NOTE]
   > V nekaterih primerih boste na spustnem seznamu morda videli ciljne skupine po meri različnih vrst. Če izberete drugo vrsto, ki ni *seznam strank*, izvoz ne uspe.

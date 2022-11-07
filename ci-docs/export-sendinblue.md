@@ -8,12 +8,12 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 816a3b242fadaa5a75db878adf0a76baf638e41c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fc4ac34c1de096e25ba6c374fe17b1da6b2f745f
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196966"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724914"
 ---
 # <a name="export-segments-to-sendinblue-preview"></a>Izvoz segmentov v Sendinblue (predogledna različica)
 
@@ -29,6 +29,7 @@ Za ustvarjanje akcij, zagotovitev e-poštnega trženja in uporabo določenih sku
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Zasebna povezava v kombinaciji z Bring your own storage (BYOS) ni podprta.
 - Do 1 milijon profilov strank na izvoz v Sendinblue, ki lahko traja do 90 minut. Število profilov strank, ki jih lahko izvozite v Sendinblue, je odvisno od vaše pogodbe s Sendinblue.
 - Samo segmenti.
 

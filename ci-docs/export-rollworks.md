@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e13aeca4ee5309f85e7de2986cd1a2ba5d2992fb
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: d857bf5d11de86521c4a9d4fc665c020496d89d2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195632"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725145"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Izvoz segmentov v RollWorks (predogledna različica)
 
@@ -28,6 +28,7 @@ Izvozite segmente poenotenih profilov strank v RollWorks in jih uporabite za ogl
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Zasebna povezava v kombinaciji z Bring your own storage (BYOS) ni podprta.
 - Do 250.000 profilov strank na izvoz v RollWorks, ki lahko traja do 10 minut. Število profilov strank, ki jih lahko izvozite v RollWorks, je odvisno od vaše pogodbe z RollWorks.
 - Samo segmenti.
 

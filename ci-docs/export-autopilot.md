@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 449d2c5e32697e4a5d2c9dff4a5a1cbdb26aeb4d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: b4b14ba9de2c7e20175fac664a705f2212a411fd
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195080"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724822"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Izvoz segmentov v Autopilot (predogledna različica)
 
@@ -28,6 +28,7 @@ Izvozite segmente poenotenih profilov strank v storitev Autopilot in jih uporabi
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Zasebna povezava v kombinaciji z Bring your own storage (BYOS) ni podprta.
 - Do 100.000 profilov strank na izvoz v Autopilot, ki lahko traja do nekaj ur. Število profilov strank, ki jih lahko izvozite v Autopilot, je odvisno od vaše pogodbe z Autopilotom.
 - Samo segmenti.
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4c3928e05db0ebda262b4ad3e928ce85f70035b9
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 06eb915e352ad545f95e96e6108be0f81f43a451
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304723"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725328"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Izvoz segmentov v LinkedIn Ads (predogledna različica)
 
@@ -28,6 +28,7 @@ Izvozite segmente poenotenih profilov strank v LinkedIn Ads, da ustvarite ujemaj
 
 ## <a name="known-limitations"></a>Znane omejitve
 
+- Zasebna povezava v kombinaciji z Bring your own storage (BYOS) ni podprta.
 - Do 100.000 profilov strank na izvoz v LinkedIn Ads, ki lahko traja do 10 minut.
 - Samo segmenti. Segment mora vsebovati vsaj 300 edinstvenih profilov.
 
