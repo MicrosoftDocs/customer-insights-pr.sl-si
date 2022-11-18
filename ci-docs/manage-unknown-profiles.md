@@ -8,29 +8,29 @@ ms.topic: conceptual
 author: andtapia
 ms.author: andreatapia
 manager: shellyha
-ms.openlocfilehash: d7e5050ee5832df5ecf40a352f7ea8d42830fa45
-ms.sourcegitcommit: f6b6a4c4ce9cf12e449488b24aab80a2cbfe0c47
+ms.openlocfilehash: 0e12f64a22b93d117009fb8aee76d02a7583e699
+ms.sourcegitcommit: 24627d53dcdf607baaab1cc3c299a3584c386173
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "9556416"
+ms.lasthandoff: 11/15/2022
+ms.locfileid: "9776841"
 ---
 # <a name="manage-unknown-profiles-with-customer-insights"></a>Upravljajte neznane profile s Customer Insights
 
-Uporabniki interneta so na spletu pogosto neidentificirani in anonimni. Če niso prijavljeni, ker uporabljajo druge naprave ali kanale, velja celo za najbolj zveste stranke. Glede na to, da piškotkov tretjih oseb verjetno kmalu ne bo več, je upravljanje uporabniških nastavitev na podlagi podatkov prve osebe ključnega pomena za doseganje diferenciranih prilagojenih izkušenj. Pri številnih blagovnih znamkah so znani ali preverjeni uporabniki manjšina kljub naraščajočim pričakovanjem strank glede personalizacije. Za podjetja je super, da na podlagi zanesljivih, podrobnih in enotnih podatkov vedo, kdo so njihove stranke.
+Uporabniki interneta so na spletu pogosto neznani ali anonimni. Celo najbolj zvesti kupci se lahko zdijo "neznani", če niso prijavljeni v različnih napravah. Pri številnih blagovnih znamkah so znani ali preverjeni uporabniki manjšina kljub naraščajočim pričakovanjem strank glede personalizacije. Glede na to, da je prihodnost piškotkov tretjih oseb pod vprašajem, je upravljanje uporabniških nastavitev na podlagi podatkov prve osebe ključnega pomena za doseganje personaliziranih izkušenj.
 
-Nepozabna personalizacija je odvisna od bogastva in popolnosti vaših podatkov o strankah in Customer Insights vam pomaga doseči te cilje. Ni vam treba omejiti ali ustaviti uporabe podatkov, zbranih na začetku dejavnosti strank. Customer Insights vam omogoča, da prinesete svoje podatke, da ustvarite profil stranke za neznane uporabnike. Ta profil lahko nato uporabite za nadaljnja dejanja, kljub manjkajočim kontaktnim podatkom. Uvozite lastne podatke iz virov, kot so splet, mobilni ali sistemi CRM, v Customer Insights, da nenehno bogatite profile strank. Ko poenotite več interakcij, [obrnite *neznano* stranka v a *znan* stranka](unknown-to-known.md).
+Nepozabna personalizacija je odvisna od tega, kako dobro poznate svojo stranko in Customer Insights vam pri tem pomaga s sledenjem vsem strankam.  Ni vam treba omejiti ali ustaviti uporabe podatkov, zbranih na začetku dejavnosti strank. Customer Insights vam omogoča, da prinesete svoje podatke, da ustvarite profil stranke za neznane uporabnike. Ta profil lahko nato uporabite za nadaljnja dejanja, kljub manjkajočim kontaktnim podatkom. Uvozite lastne podatke iz virov, kot so splet, mobilni ali sistemi CRM, v Customer Insights, da nenehno bogatite profile strank. Ko poenotite več interakcij, [obrnite *neznano* stranka v a *znan* stranka](unknown-to-known.md).
 
 ## <a name="sample-scenario"></a>Vzorčni scenarij
 
-E-trgovina je najhitreje rastoči kanal v zadnjem desetletju. Recimo, da uporabnik uporablja svojo mobilno napravo za brskanje po vašem spletnem mestu e-trgovine. Spletno mesto dodeli obiskovalcu "mobile_guest123" kot edinstven identifikator in začnete zbirati vedenjske aktivnosti na podlagi njihove spletne dejavnosti. Na primer, katere strani so obiskali, koliko časa so preživeli na teh straneh ali katere povezave so kliknili. Ne poznate njihovega imena ali e-poštnega naslova, vendar ti podatki lahko pomagajo blagovnim znamkam pridobiti smiselne vpoglede v tega določenega uporabnika. Po drugi strani pa lahko te vpoglede uporabite naslednjič, ko uporabnik obišče spletno mesto. Izvedite poizvedbo Customer Insights za »mobile_guest123«, da pridobite seznam segmentov uporabnika, kot so »organsko«, »mobilne stranke prednaročila«, »stranke z visoko vrednostjo« itd., ali pridobite profil za ustvarjanje prilagojenih spletnih izkušenj. Podatke lahko tudi izvozite v kateri koli aktivacijski sistem, da storite enako.
+Recimo, da uporabnik uporablja svojo mobilno napravo za brskanje po vašem spletnem mestu e-trgovine. Spletno mesto dodeli obiskovalcu "mobile_guest123" kot edinstven identifikator in začnete zbirati vedenjske aktivnosti na podlagi njihove spletne dejavnosti. Na primer, katere strani so obiskali, koliko časa so preživeli na teh straneh ali katere povezave so kliknili. Ne poznate njihovega imena ali e-poštnega naslova, vendar ti podatki lahko pomagajo blagovnim znamkam pridobiti smiselne vpoglede v tega določenega uporabnika. Po drugi strani pa lahko te vpoglede uporabite naslednjič, ko uporabnik obišče spletno mesto. Izvedite poizvedbo Customer Insights za »mobile_guest123«, da pridobite seznam segmentov uporabnika, kot so »organsko«, »mobilne stranke prednaročila«, »stranke z visoko vrednostjo« itd., ali pridobite profil za ustvarjanje prilagojenih spletnih izkušenj. Podatke lahko tudi izvozite v kateri koli aktivacijski sistem, da storite enako.
 
 ## <a name="prerequisites"></a>Zahteve
 
 - Vnesite podatke prve osebe v Customer Insights
 - Vsaka entiteta ima edinstven ID, ki je nastavljen kot primarni ključ
 - Vsaka entiteta s primarnim ključem za personalizacijo je poenotena
-- Sistem za upravljanje vsebine vašega spletnega mesta je sposoben uporabljati API-je (za spletno personalizacijo na podlagi neposredne komunikacije s Customer Insights)
+- Sistem za upravljanje vsebine vašega spletnega mesta lahko uporablja API-je (za spletno personalizacijo na podlagi neposredne komunikacije s Customer Insights)
 
 Naslednja tabela prikazuje poenostavljen primer, kako bi lahko zajeli spletne dogodke z visoko vrednostjo.
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: MT
 ms.contentlocale: sl-SI
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724809"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760046"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Izvoz segmentov v Criteo (predogled)
 
@@ -27,7 +27,6 @@ Izvozite segmente poenotenih profilov strank za ustvarjanje kampanj, zagotavljan
 
 ## <a name="known-limitations"></a>Znane omejitve
 
-- Zasebna povezava v kombinaciji z Bring your own storage (BYOS) ni podprta.
 - Do 1 milijon profilov strank na izvoz v Criteo, ki lahko traja do 30 minut. Število profilov strank, ki jih lahko izvozite v Criteo, je odvisno od vaše pogodbe s Criteo.
 - Samo segmenti.
 
@@ -43,7 +42,7 @@ Izvozite segmente poenotenih profilov strank za ustvarjanje kampanj, zagotavljan
 
 1. Izberite, kdo lahko uporablja to povezavo. Privzeto jo lahko uporabljajo samo skrbniki. Za več informacij glejte razdelek [Omogočanje uporabe povezav za izvoze podatkov za sodelavce](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se**.
+1. Preglejte [zasebnost podatkov in skladnost](connections.md#data-privacy-and-compliance) in izberite **strinjam se** .
 
 1. Izberite **Povežite se** za inicializacijo povezave.
 
@@ -59,7 +58,7 @@ Izvozite segmente poenotenih profilov strank za ustvarjanje kampanj, zagotavljan
 
 1. Odprite razdelek **Podatki** > **Izvozi**.
 
-1. Izberite **Dodaj izvoz**.
+1. Izberite **Dodaj izvoz** .
 
 1. V **Povezava za izvoz** izberite povezavo v razdelku Criteo. Če ni na voljo nobena povezava, se obrnite na skrbnika.
 
